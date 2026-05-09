@@ -18,7 +18,8 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID || null;
 function sendTelegram(message) {
   return new Promise((resolve) => {
     if (!BOT_TOKEN || !CHAT_ID) {
-      console.log('  (Telegram no configurado — salta las alertas)');
+      console.log('  ⚠️ Telegram no configurado. Define TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID');
+      console.log('  📖 Ver: TELEGRAM_SETUP.md');
       return resolve(false);
     }
 
@@ -42,7 +43,7 @@ function sendTelegram(message) {
 }
 
 function buildMessage(ranked) {
-  const top = ranked.filter(r => r.score >= 40);
+  const top = ranked.filter(r => r.score >= 70);
   if (top.length === 0) return null;
 
   let msg = `<b>⚽ ALERTA GOL — ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}</b>\n\n`;

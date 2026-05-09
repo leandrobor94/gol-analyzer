@@ -312,26 +312,64 @@ async function main() {
               if (mm) { const c = parseInt(mm[1]); if (c > 0 && c <= 120) { minute = c; break; } }
             }
           }
-          // Extraer liga desde el breadcrumb en cabecera (primeros 300 chars)
-          const header = text.slice(0, 300);
+          // Extraer liga desde el DOM (breadcrumb, header, etc.)
           let league = 'Desconocida';
-          // Patrón: "FútbolPaísLiga, Jornada..." todo junto sin espacios
-          const bcRx = header.match(/(?:Fútbol|Football)([A-Z][a-záéíóúñ]+[A-Z][a-záéíóúñ\s,]+?)(?:,\s*Jornada|,\s*Round|\s*[-–]|\d{1,2}:\d{2}|en vivo)/);
-          if (bcRx) {
-            league = bcRx[1].trim();
+
+          // Estrategia 1: buscar selectores DOM específicos de Sofascore
+          const leagueEl = document.querySelector(
+            '[data-testid="breadcrumb"] a:last-of-type, ' +
+            '[class*="TournamentHeader"] span, ' +
+            '[class*="tournament"] a[href*="tournament"], ' +
+            'nav [class*="breadcrumb"] li:last-child, ' +
+            'a[href*="/tournament/"]'
+          );
+          if (leagueEl) {
+            const candidate = leagueEl.innerText?.trim();
+            if (candidate && candidate.length > 2 && candidate.length < 80) {
+              league = candidate;
+            }
           }
-          // Fallback: buscar línea específica con datos de liga
+
+          // Estrategia 2: buscar breadcrumb por patrón "Fútbol > País > Liga"
           if (league === 'Desconocida') {
-            const lines = text.slice(0, 500).split('\n').filter(l => l.trim());
+            const bcRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40}?)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{2,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
+            const bcMatch = text.match(bcRx);
+            if (bcMatch) {
+              const candidate = `${bcMatch[1].trim()} > ${bcMatch[2].trim()}`;
+              if (candidate.length < 80) league = candidate;
+            }
+          }
+
+          // Estrategia 3: buscar "Fútbol/Football" seguido del nombre de liga
+          if (league === 'Desconocida') {
+            const leagueRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{3,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
+            const lMatch = text.match(leagueRx);
+            if (lMatch) {
+              const candidate = lMatch[1].trim();
+              if (candidate.length > 3 && candidate.length < 60 && !/[¿¡!]/.test(candidate)) {
+                league = candidate;
+              }
+            }
+          }
+
+          // Estrategia 4: buscar líneas que empiecen con "Fútbol" o "Football"
+          if (league === 'Desconocida') {
+            const lines = text.split('\n').filter(l => l.trim());
             for (const line of lines) {
-              if (/^(?:Fútbol|Football)/.test(line) && /[A-Z]/.test(line)) {
-                const cleaned = line.replace(/^Fútbol|^Football/, '').trim();
-                if (cleaned.length > 3 && cleaned.length < 80) {
+              const m = line.match(/^(?:Fútbol|Football)(.+)/);
+              if (m) {
+                const cleaned = m[1].trim();
+                if (cleaned.length > 3 && cleaned.length < 60 && !/[¿¡!]/.test(cleaned)) {
                   league = cleaned.split(/[,;\d]/)[0].trim();
                   break;
                 }
               }
             }
+          }
+
+          // Validación final: descartar textos publicitarios
+          if (/domina|conquista|apuesta|gana|juega|suscríbete|registro|promo|publicidad/i.test(league)) {
+            league = 'Desconocida';
           }
           // Extraer matchId de la URL
           const urlMatch = window.location.href.match(/id:(\d+)/);
@@ -527,14 +565,14 @@ async function main() {
 
   } catch (err) {
     console.error('Error:', err.message);
-    // Notificación si hay alta probabilidad
-    if (ranked.length > 0 && ranked[0].score >= 40) {
-      const msg = notify.buildMessage(ranked);
-      if (msg) await notify.sendTelegram(msg);
+    try {
+      if (typeof ranked !== 'undefined' && ranked.length > 0 && ranked[0].score >= 70) {
+        const msg = notify.buildMessage(ranked);
+        if (msg) await notify.sendTelegram(msg);
+      }
+    } catch (notifyErr) {
+      console.error('Notification error:', notifyErr.message);
     }
-
-  } catch (err) {
-    console.error('Error:', err.message);
   } finally {
     await browser.close();
   }
