@@ -1,0 +1,29 @@
+name: Aprender de resultados
+
+on:
+  schedule:
+    # Cada 2h, 8pm-6am Colombia (UTC-5 = 1:00-11:00 UTC)
+    - cron: '0 1,3,5,7,9,11 * * *'
+  workflow_dispatch:
+
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Aprender de resultados
+        run: node learn.js

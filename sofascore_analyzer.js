@@ -315,51 +315,36 @@ async function main() {
           // Extraer liga desde el DOM (breadcrumb, header, etc.)
           let league = 'Desconocida';
 
-          // Estrategia 1: buscar selectores DOM específicos de Sofascore
-          const leagueEl = document.querySelector(
-            '[data-testid="breadcrumb"] a:last-of-type, ' +
-            '[class*="TournamentHeader"] span, ' +
-            '[class*="tournament"] a[href*="tournament"], ' +
-            'nav [class*="breadcrumb"] li:last-child, ' +
-            'a[href*="/tournament/"]'
-          );
-          if (leagueEl) {
-            const candidate = leagueEl.innerText?.trim();
-            if (candidate && candidate.length > 2 && candidate.length < 80) {
-              league = candidate;
-            }
+          // Extraer liga — primero buscar breadcrumb por patrón "Fútbol > País > Liga"
+          let league = 'Desconocida';
+
+          const bcRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40}?)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{2,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
+          const bcMatch = text.match(bcRx);
+          if (bcMatch) {
+            const candidate = `${bcMatch[1].trim()} > ${bcMatch[2].trim()}`;
+            if (candidate.length < 80 && candidate.length > 5) league = candidate;
           }
 
-          // Estrategia 2: buscar breadcrumb por patrón "Fútbol > País > Liga"
+          // Estrategia 2: buscar "Fútbol/Football" seguido del nombre de liga (nombres largos)
           if (league === 'Desconocida') {
-            const bcRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40}?)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{2,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
-            const bcMatch = text.match(bcRx);
-            if (bcMatch) {
-              const candidate = `${bcMatch[1].trim()} > ${bcMatch[2].trim()}`;
-              if (candidate.length < 80) league = candidate;
-            }
-          }
-
-          // Estrategia 3: buscar "Fútbol/Football" seguido del nombre de liga
-          if (league === 'Desconocida') {
-            const leagueRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{3,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
+            const leagueRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{5,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
             const lMatch = text.match(leagueRx);
             if (lMatch) {
               const candidate = lMatch[1].trim();
-              if (candidate.length > 3 && candidate.length < 60 && !/[¿¡!]/.test(candidate)) {
+              if (candidate.length > 5 && !/[¿¡!]/.test(candidate)) {
                 league = candidate;
               }
             }
           }
 
-          // Estrategia 4: buscar líneas que empiecen con "Fútbol" o "Football"
+          // Estrategia 3: buscar líneas que empiecen con "Fútbol" o "Football"
           if (league === 'Desconocida') {
             const lines = text.split('\n').filter(l => l.trim());
             for (const line of lines) {
               const m = line.match(/^(?:Fútbol|Football)(.+)/);
               if (m) {
                 const cleaned = m[1].trim();
-                if (cleaned.length > 3 && cleaned.length < 60 && !/[¿¡!]/.test(cleaned)) {
+                if (cleaned.length > 5 && cleaned.length < 60 && !/[¿¡!]/.test(cleaned)) {
                   league = cleaned.split(/[,;\d]/)[0].trim();
                   break;
                 }
@@ -367,8 +352,10 @@ async function main() {
             }
           }
 
-          // Validación final: descartar textos publicitarios
-          if (/domina|conquista|apuesta|gana|juega|suscríbete|registro|promo|publicidad/i.test(league)) {
+          // Validación final: descartar códigos cortos, publicidad y textos inválidos
+          const isCode = /^[A-Z0-9]{2,6}$/.test(league);
+          const isAd = /domina|conquista|apuesta|gana|juega|suscríbete|registro|promo|publicidad/i.test(league);
+          if (isCode || isAd || league.length < 5) {
             league = 'Desconocida';
           }
           // Extraer matchId de la URL
