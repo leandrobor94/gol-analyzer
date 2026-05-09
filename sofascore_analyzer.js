@@ -243,7 +243,10 @@ async function main() {
   const weights = loadWeights();
   const predictions = loadPredictions();
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   const context = await browser.newContext({ viewport: { width: 1920, height: 1080 }, locale: 'es-ES' });
   const page = await context.newPage();
   const analyzed = [];
@@ -312,9 +315,6 @@ async function main() {
               if (mm) { const c = parseInt(mm[1]); if (c > 0 && c <= 120) { minute = c; break; } }
             }
           }
-          // Extraer liga desde el DOM (breadcrumb, header, etc.)
-          let league = 'Desconocida';
-
           // Extraer liga — primero buscar breadcrumb por patrón "Fútbol > País > Liga"
           let league = 'Desconocida';
 

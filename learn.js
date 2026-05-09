@@ -291,7 +291,10 @@ async function main() {
   // Verificar resultados pendientes
   console.log(`\n🔍 Verificando ${Math.min(pending.length, 10)} partidos pendientes...`);
   
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, locale: 'es-ES' });
 
   let checked = 0;
