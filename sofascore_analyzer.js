@@ -551,17 +551,32 @@ async function main() {
     }
 
     // Enviar alerta Telegram si hay alta probabilidad
+    if (ranked.length > 0) {
+      console.log(`  -> Mejor score: ${ranked[0].score}% (umbral: 70%)`);
+      console.log(`  -> TELEGRAM_BOT_TOKEN ${process.env.TELEGRAM_BOT_TOKEN ? '✓ configurado' : '✗ no configurado'}`);
+    }
     if (ranked.length > 0 && ranked[0].score >= 70) {
       const msg = notify.buildMessage(ranked);
-      if (msg) await notify.sendTelegram(msg);
+      if (msg) {
+        console.log('  -> Enviando alerta Telegram...');
+        await notify.sendTelegram(msg);
+      } else {
+        console.log('  -> buildMessage devolvió null (ninguno ≥70%)');
+      }
     }
 
   } catch (err) {
     console.error('Error:', err.message);
     try {
+      if (typeof ranked !== 'undefined' && ranked.length > 0) {
+        console.log(`  -> (catch) Mejor score: ${ranked[0].score}%`);
+      }
       if (typeof ranked !== 'undefined' && ranked.length > 0 && ranked[0].score >= 70) {
         const msg = notify.buildMessage(ranked);
-        if (msg) await notify.sendTelegram(msg);
+        if (msg) {
+          console.log('  -> (catch) Enviando alerta Telegram...');
+          await notify.sendTelegram(msg);
+        }
       }
     } catch (notifyErr) {
       console.error('Notification error:', notifyErr.message);
