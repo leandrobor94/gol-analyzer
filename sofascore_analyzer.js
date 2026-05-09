@@ -550,6 +550,12 @@ async function main() {
       console.log('='.repeat(64));
     }
 
+    // Enviar alerta Telegram si hay alta probabilidad
+    if (ranked.length > 0 && ranked[0].score >= 70) {
+      const msg = notify.buildMessage(ranked);
+      if (msg) await notify.sendTelegram(msg);
+    }
+
   } catch (err) {
     console.error('Error:', err.message);
     try {
