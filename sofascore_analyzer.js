@@ -281,6 +281,18 @@ async function main() {
 
     if (matchLinks.length === 0) {
       console.log('  No hay partidos en vivo ahora.');
+      console.log('  Tomando screenshot para depuración...');
+      await page.screenshot({ path: 'debug_no_matches.png', fullPage: false });
+      const urlActual = page.url();
+      const titleActual = await page.title();
+      console.log(`  URL actual: ${urlActual}`);
+      console.log(`  Title: ${titleActual}`);
+      // Buscar texto que muestre qué hay en la página
+      const visibleText = await page.evaluate(() => {
+        const lines = document.body.innerText.split('\n').filter(l => l.trim()).slice(0, 30);
+        return lines.join(' | ');
+      });
+      console.log(`  Texto visible (primeros 30): ${visibleText.slice(0, 500)}`);
       await browser.close();
       return;
     }

@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "libsodium-wrappers": "^0.8.4",
     "playwright": "^1.59.1"
   }
 }
