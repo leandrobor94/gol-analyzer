@@ -243,11 +243,18 @@ async function main() {
   const weights = loadWeights();
   const predictions = loadPredictions();
 
+  const proxyServer = process.env.PROXY_SERVER;
+  if (proxyServer) console.log(`  Usando proxy: ${proxyServer}`);
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    proxy: proxyServer ? { server: proxyServer } : undefined
   });
-  const context = await browser.newContext({ viewport: { width: 1920, height: 1080 }, locale: 'es-ES' });
+  const context = await browser.newContext({
+    viewport: { width: 1920, height: 1080 },
+    locale: 'es-CO',
+    timezoneId: 'America/Bogota'
+  });
   const page = await context.newPage();
   const analyzed = [];
 

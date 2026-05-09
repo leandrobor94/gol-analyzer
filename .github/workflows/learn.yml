@@ -25,5 +25,17 @@ jobs:
       - name: Instalar Chromium
         run: npx playwright install chromium --with-deps
 
+      - name: Obtener proxy sudamericano (opcional)
+        run: |
+          for country in BR CO AR PE CL; do
+            PROXY=$(curl -s "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=10000&country=$country" | head -1 | tr -d '[:space:]')
+            if [ -n "$PROXY" ] && echo "$PROXY" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+$'; then
+              echo "PROXY_SERVER=http://$PROXY" >> $GITHUB_ENV
+              echo "Proxy encontrado: $country - $PROXY"
+              break
+            fi
+          done
+        continue-on-error: true
+
       - name: Aprender de resultados
         run: node learn.js
