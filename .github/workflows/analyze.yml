@@ -1,0 +1,32 @@
+name: Analizar partidos y alertar
+
+on:
+  schedule:
+    # Cada 30 min, 7am-10pm hora Colombia (UTC-5 = 12:00-03:00 UTC)
+    - cron: '*/30 12-23,0-3 * * *'
+  workflow_dispatch:  # Permite ejecución manual
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Ejecutar análisis
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node sofascore_analyzer.js
