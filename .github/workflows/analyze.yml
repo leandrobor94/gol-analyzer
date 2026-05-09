@@ -1,6 +1,8 @@
 name: Analizar partidos y alertar
 
 on:
+  push:
+    branches: [main]
   schedule:
     # Cada 30 min, 7am-10pm hora Colombia (UTC-5 = 12:00-03:00 UTC)
     - cron: '*/30 12-23,0-3 * * *'
