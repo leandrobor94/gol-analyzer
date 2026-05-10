@@ -319,22 +319,34 @@ function writeSummary(text) {
 }
 
 async function main() {
-  // Validar horario Colombia (7am-10pm)
-  const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
-  const coHour = new Date(co).getHours();
-  if (coHour < 7 || coHour >= 22) {
-    console.log('Fuera de horario Colombia (' + coHour + ':00). Próximo ciclo a las 7am.');
-    writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
-    return;
-  }
+  const MAX_LOOPS = 6;
+  const SLEEP_MS = 11 * 60 * 1000;
 
-  let weights = loadWeights();
-  let predictions = loadPredictions();
-  let teams = {};
-  try { if (fs.existsSync(TEAMS_FILE)) teams = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8')); } catch {}
-  const analyzed = [];
+  for (let loop = 0; loop < MAX_LOOPS; loop++) {
+    console.log('\n' + '='.repeat(64));
+    console.log('  CICLO ' + (loop + 1) + '/' + MAX_LOOPS + ' — ' + new Date().toISOString());
+    console.log('='.repeat(64));
 
-  console.log('[1/3] Obteniendo partidos en vivo desde Flashscore...');
+    // Validar horario Colombia (7am-10pm)
+    const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
+    const coHour = new Date(co).getHours();
+    if (coHour < 7 || coHour >= 22) {
+      console.log('Fuera de horario Colombia (' + coHour + ':00).');
+      writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
+      if (loop < MAX_LOOPS - 1) {
+        console.log('Esperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
+        await new Promise(r => setTimeout(r, SLEEP_MS));
+      }
+      continue;
+    }
+
+    let weights = loadWeights();
+    let predictions = loadPredictions();
+    let teams = {};
+    try { if (fs.existsSync(TEAMS_FILE)) teams = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8')); } catch {}
+    const analyzed = [];
+
+    console.log('[1/3] Obteniendo partidos en vivo desde Flashscore...');
   const liveData = await fetchAllLiveMatches();
   console.log('  -> ' + liveData.length + ' partidos en vivo\n');
 
@@ -447,6 +459,12 @@ async function main() {
     console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
   }
   writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
+
+  if (loop < MAX_LOOPS - 1) {
+    console.log('\nEsperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
+    await new Promise(r => setTimeout(r, SLEEP_MS));
+  }
+  }
 }
 
 main().catch(err => {
