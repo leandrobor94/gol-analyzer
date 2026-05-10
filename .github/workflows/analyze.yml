@@ -6,7 +6,7 @@ on:
   schedule:
     # Cada 10 min, 7am-10pm hora Colombia (UTC-5 = 12:00-03:00 UTC)
     - cron: '*/10 12-23,0-3 * * *'
-  workflow_dispatch:  # Permite ejecución manual
+  workflow_dispatch:
 
 jobs:
   analyze:
@@ -27,27 +27,8 @@ jobs:
       - name: Instalar Chromium
         run: npx playwright install chromium --with-deps
 
-      - name: Obtener proxy sudamericano (opcional)
-        run: |
-          for country in BR CO AR PE CL; do
-            PROXY=$(curl -s "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=10000&country=$country" | head -1 | tr -d '[:space:]')
-            if [ -n "$PROXY" ] && echo "$PROXY" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+$'; then
-              echo "PROXY_SERVER=http://$PROXY" >> $GITHUB_ENV
-              echo "Proxy encontrado: $country - $PROXY"
-              break
-            fi
-          done
-        continue-on-error: true
-
       - name: Ejecutar análisis
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: node sofascore_analyzer.js
-
-      - name: Subir screenshot de depuración
-        uses: actions/upload-artifact@v4
-        if: failure() || always()
-        with:
-          name: debug-screenshot
-          path: debug_no_matches.png

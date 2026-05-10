@@ -238,17 +238,120 @@ function analyzeGoal(match, w) {
   };
 }
 
+// ─── Extraer estadísticas del API de SofaScore ───
+function extractStatsFromApi(statisticsItems) {
+  const stats = {
+    xgHome: null, xgAway: null,
+    sotHome: null, sotAway: null,
+    totalShotsHome: null, totalShotsAway: null,
+    bigChancesHome: null, bigChancesAway: null,
+    cornersHome: null, cornersAway: null,
+    possessionHome: null, possessionAway: null,
+    savesHome: null, savesAway: null,
+    foulsHome: null, foulsAway: null,
+    yellowCardsHome: null, yellowCardsAway: null,
+    shotsInsideBoxHome: null, shotsInsideBoxAway: null
+  };
+  if (!statisticsItems) return stats;
+  for (const item of statisticsItems) {
+    const h = item.homeValue;
+    const a = item.awayValue;
+    if (h === undefined && a === undefined) continue;
+    switch (item.key) {
+      case 'expectedGoals':
+        stats.xgHome = typeof h === 'number' ? h : parseFloat(h);
+        stats.xgAway = typeof a === 'number' ? a : parseFloat(a);
+        break;
+      case 'shotsOnGoal':
+        stats.sotHome = typeof h === 'number' ? h : parseInt(h);
+        stats.sotAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'totalShotsOnGoal':
+        stats.totalShotsHome = typeof h === 'number' ? h : parseInt(h);
+        stats.totalShotsAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'bigChanceCreated':
+        stats.bigChancesHome = typeof h === 'number' ? h : parseInt(h);
+        stats.bigChancesAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'cornerKicks':
+        stats.cornersHome = typeof h === 'number' ? h : parseInt(h);
+        stats.cornersAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'ballPossession':
+        stats.possessionHome = typeof h === 'number' ? (h > 1 ? h / 100 : h) : parseFloat(h) / 100;
+        stats.possessionAway = typeof a === 'number' ? (a > 1 ? a / 100 : a) : parseFloat(a) / 100;
+        break;
+      case 'goalkeeperSaves':
+        if (stats.savesHome === null) {
+          stats.savesHome = typeof h === 'number' ? h : parseInt(h);
+          stats.savesAway = typeof a === 'number' ? a : parseInt(a);
+        }
+        break;
+      case 'fouls':
+        stats.foulsHome = typeof h === 'number' ? h : parseInt(h);
+        stats.foulsAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'yellowCards':
+        stats.yellowCardsHome = typeof h === 'number' ? h : parseInt(h);
+        stats.yellowCardsAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+      case 'totalShotsInsideBox':
+        stats.shotsInsideBoxHome = typeof h === 'number' ? h : parseInt(h);
+        stats.shotsInsideBoxAway = typeof a === 'number' ? a : parseInt(a);
+        break;
+    }
+  }
+  return stats;
+}
+
+// ─── Obtener partidos + estadísticas vía API (sesión del browser) ───
+async function fetchLiveMatchesViaApi(page, maxMatches) {
+  return await page.evaluate(async (max) => {
+    const liveResp = await fetch('https://api.sofascore.com/api/v1/sport/football/events/live');
+    const live = await liveResp.json();
+    const events = (live.events || []).slice(0, max);
+    const result = [];
+
+    for (const ev of events) {
+      // Estadísticas
+      const statsResp = await fetch(`https://api.sofascore.com/api/v1/event/${ev.id}/statistics`);
+      let allItems = [];
+      if (statsResp.ok) {
+        const statsData = await statsResp.json();
+        const allPeriod = (statsData.statistics || []).find(p => p.period === 'ALL');
+        if (allPeriod) {
+          for (const group of allPeriod.groups || []) {
+            allItems = allItems.concat(group.statisticsItems || []);
+          }
+        }
+      }
+
+      result.push({
+        id: ev.id,
+        slug: ev.slug,
+        homeTeam: ev.homeTeam.name,
+        awayTeam: ev.awayTeam.name,
+        homeScore: ev.homeScore.current || 0,
+        awayScore: ev.awayScore.current || 0,
+        minute: parseInt(ev.status.displayed) || (ev.status.code > 0 ? ev.status.code : 0),
+        tournament: ev.tournament.name,
+        category: ev.tournament.category.name,
+        statistics: allItems
+      });
+    }
+    return result;
+  }, maxMatches);
+}
+
 // ─── Flujo principal ───
 async function main() {
   const weights = loadWeights();
   const predictions = loadPredictions();
 
-  const proxyServer = process.env.PROXY_SERVER;
-  if (proxyServer) console.log(`  Usando proxy: ${proxyServer}`);
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    proxy: proxyServer ? { server: proxyServer } : undefined
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   const context = await browser.newContext({
     viewport: { width: 1920, height: 1080 },
@@ -259,238 +362,58 @@ async function main() {
   const analyzed = [];
 
   try {
-    console.log('[1/5] Navegando a SofaScore...');
+    console.log('[1/3] Iniciando sesión en SofaScore...');
     await page.goto('https://www.sofascore.com/es', { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(3000);
 
-    console.log('[2/5] Filtrando en vivo...');
-    const liveBtns = page.locator('button').filter({ hasText: /En Vivo/i });
-    for (let i = 0; i < await liveBtns.count(); i++) {
-      if (await liveBtns.nth(i).isVisible()) {
-        await liveBtns.nth(i).click();
-        console.log('  -> "En Vivo" seleccionado');
-        await page.waitForTimeout(3000);
-        break;
-      }
-    }
+    console.log('[2/3] Obteniendo partidos en vivo vía API...');
+    const liveData = await fetchLiveMatchesViaApi(page, 8);
+    console.log(`  -> ${liveData.length} partidos en vivo\n`);
 
-    console.log('[3/5] Buscando partidos...');
-    const matchLinks = await page.evaluate(() => {
-      const links = document.querySelectorAll('a[href*="/football/match/"]');
-      const seen = new Set();
-      return Array.from(links)
-        .map(a => ({ href: a.href, text: a.innerText?.trim()?.replace(/\s+/g, ' ') }))
-        .filter(l => l.href && !l.href.includes('tournament') && !seen.has(l.href) && seen.add(l.href))
-        .filter(l => /\d+['′]/.test(l.text));
-    });
-
-    console.log(`  -> ${matchLinks.length} partidos en vivo`);
-
-    if (matchLinks.length === 0) {
+    if (liveData.length === 0) {
       console.log('  No hay partidos en vivo ahora.');
-      console.log('  Tomando screenshot para depuración...');
-      await page.screenshot({ path: 'debug_no_matches.png', fullPage: false });
-      const urlActual = page.url();
-      const titleActual = await page.title();
-      console.log(`  URL actual: ${urlActual}`);
-      console.log(`  Title: ${titleActual}`);
-      // Buscar texto que muestre qué hay en la página
-      const visibleText = await page.evaluate(() => {
-        const lines = document.body.innerText.split('\n').filter(l => l.trim()).slice(0, 30);
-        return lines.join(' | ');
-      });
-      console.log(`  Texto visible (primeros 30): ${visibleText.slice(0, 500)}`);
       await browser.close();
       return;
     }
 
-    const maxMatches = Math.min(matchLinks.length, 8);
-    console.log(`[4/5] Analizando ${maxMatches} partidos...\n`);
+    console.log(`[3/3] Analizando ${liveData.length} partidos...\n`);
 
-    for (let i = 0; i < maxMatches; i++) {
-      const m = matchLinks[i];
-      const displayName = (m.text || '').replace(/\s+/g, ' ').trim().slice(0, 90);
-      console.log(`  [${i + 1}/${maxMatches}] ${displayName}`);
+    for (let i = 0; i < liveData.length; i++) {
+      const m = liveData[i];
+      const displayName = `${m.homeTeam} vs ${m.awayTeam}`;
+      console.log(`  [${i + 1}/${liveData.length}] ${displayName}`);
 
-      try {
-        await page.goto(m.href, { waitUntil: 'domcontentloaded', timeout: 25000 });
-        await page.waitForTimeout(3000);
+      const stats = extractStatsFromApi(m.statistics);
 
-        // Extraer info básica + liga + matchId
-        const basicInfo = await page.evaluate(() => {
-          const text = document.body.innerText;
-          const scoreRx = text.match(/(\d+)\s*[-–]\s*(\d+)/);
-          const score = scoreRx ? { h: parseInt(scoreRx[1]), a: parseInt(scoreRx[2]) } : { h: 0, a: 0 };
-          let minute = null;
-          const timeRx = text.match(/(\d{1,3}:\d{2})(?:\s|$)/);
-          if (timeRx) {
-            const p = timeRx[1].split(':');
-            minute = parseInt(p[0]);
-          }
-          if (!minute || minute > 120) {
-            const lines = text.split('\n').filter(l => l.trim());
-            for (let i = 0; i < Math.min(lines.length, 20); i++) {
-              const mm = lines[i].match(/(\d{1,3})['′]/);
-              if (mm) { const c = parseInt(mm[1]); if (c > 0 && c <= 120) { minute = c; break; } }
-            }
-          }
-          // Extraer liga — primero buscar breadcrumb por patrón "Fútbol > País > Liga"
-          let league = 'Desconocida';
+      const xgStr = stats.xgHome !== null ? `${stats.xgHome.toFixed(2)}-${stats.xgAway.toFixed(2)}` : '?-?';
+      const sotStr = stats.sotHome !== null ? `${stats.sotHome}-${stats.sotAway}` : '?-?';
+      console.log(`     -> ${m.category} | xG:${xgStr} SOT:${sotStr}`);
 
-          const bcRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40}?)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{2,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
-          const bcMatch = text.match(bcRx);
-          if (bcMatch) {
-            const candidate = `${bcMatch[1].trim()} > ${bcMatch[2].trim()}`;
-            if (candidate.length < 80 && candidate.length > 5) league = candidate;
-          }
-
-          // Estrategia 2: buscar "Fútbol/Football" seguido del nombre de liga (nombres largos)
-          if (league === 'Desconocida') {
-            const leagueRx = /(?:Fútbol|Football)\s*[>\/•]\s*([A-ZÁÉÍÓÚÑ][A-Za-záéíóúñ\s,]{5,60}?)(?:\s*[>\/•]|,?\s*(?:Jornada|Round|\d|$))/;
-            const lMatch = text.match(leagueRx);
-            if (lMatch) {
-              const candidate = lMatch[1].trim();
-              if (candidate.length > 5 && !/[¿¡!]/.test(candidate)) {
-                league = candidate;
-              }
-            }
-          }
-
-          // Estrategia 3: buscar líneas que empiecen con "Fútbol" o "Football"
-          if (league === 'Desconocida') {
-            const lines = text.split('\n').filter(l => l.trim());
-            for (const line of lines) {
-              const m = line.match(/^(?:Fútbol|Football)(.+)/);
-              if (m) {
-                const cleaned = m[1].trim();
-                if (cleaned.length > 5 && cleaned.length < 60 && !/[¿¡!]/.test(cleaned)) {
-                  league = cleaned.split(/[,;\d]/)[0].trim();
-                  break;
-                }
-              }
-            }
-          }
-
-          // Validación final: descartar códigos cortos, publicidad y textos inválidos
-          const isCode = /^[A-Z0-9]{2,6}$/.test(league);
-          const isAd = /domina|conquista|apuesta|gana|juega|suscríbete|registro|promo|publicidad/i.test(league);
-          if (isCode || isAd || league.length < 5) {
-            league = 'Desconocida';
-          }
-          // Extraer matchId de la URL
-          const urlMatch = window.location.href.match(/id:(\d+)/);
-          const matchId = urlMatch ? urlMatch[1] : 'unknown';
-          return { score, minute, league, matchId };
-        });
-
-        // Minuto desde el link
-        const linkMinuteRx = m.text.match(/(\d+)['′]/);
-        if (!basicInfo.minute && linkMinuteRx) basicInfo.minute = parseInt(linkMinuteRx[1]);
-
-        // Score desde el link
-        const linkScoreRx = m.text.match(/(\d+)\s*[-–]\s*(\d+)/);
-        if (linkScoreRx && basicInfo.score.h === 0 && basicInfo.score.a === 0) {
-          basicInfo.score = { h: parseInt(linkScoreRx[1]), a: parseInt(linkScoreRx[2]) };
-        }
-
-        // Click Estadísticas
-        let statsTab = page.getByTestId('tab-statistics');
-        if (await statsTab.count() === 0) {
-          const allTabs = page.getByRole('tab');
-          for (let ti = 0; ti < await allTabs.count(); ti++) {
-            if ((await allTabs.nth(ti).textContent())?.trim() === 'Estadísticas') {
-              statsTab = allTabs.nth(ti); break;
-            }
-          }
-        }
-
-        let stats = { xgHome: null, xgAway: null, sotHome: null, sotAway: null, totalShotsHome: null, totalShotsAway: null, bigChancesHome: null, bigChancesAway: null, cornersHome: null, cornersAway: null, possessionHome: null, possessionAway: null, savesHome: null, savesAway: null, foulsHome: null, foulsAway: null, yellowCardsHome: null, yellowCardsAway: null, shotsInsideBoxHome: null, shotsInsideBoxAway: null };
-
-        if (await statsTab.count() > 0) {
-          await statsTab.click();
-          await page.waitForTimeout(2000);
-          const statsText = await page.evaluate(() => {
-            const panel = document.querySelector('#tabpanel-statistics');
-            return panel ? panel.innerText : '';
-          });
-          const lines = statsText.split('\n').map(l => l.trim()).filter(l => l);
-
-          for (let i = 0; i < lines.length; i++) {
-            const l = lines[i];
-            if (l.includes('Goles esperados')) {
-              const p = parseFloat(lines[i - 1]), n = parseFloat(lines[i + 1]);
-              if (!isNaN(p) && p < 20) stats.xgHome = p;
-              if (!isNaN(n) && n < 20) stats.xgAway = n;
-            }
-            if (l === 'Tiros a puerta') {
-              const p = parseInt(lines[i - 1]), n = parseInt(lines[i + 1]);
-              if (!isNaN(p)) stats.sotHome = p;
-              if (!isNaN(n)) stats.sotAway = n;
-            }
-            if (l === 'Tiros totales' && stats.totalShotsHome === null) {
-              const p = parseInt(lines[i - 1]), n = parseInt(lines[i + 1]);
-              if (!isNaN(p)) stats.totalShotsHome = p;
-              if (!isNaN(n)) stats.totalShotsAway = n;
-            }
-            if (l.includes('Ocasiones claras') && !l.includes('falladas')) {
-              const p = parseInt(lines[i - 1]), n = parseInt(lines[i + 1]);
-              if (!isNaN(p)) stats.bigChancesHome = p;
-              if (!isNaN(n)) stats.bigChancesAway = n;
-            }
-            if (l.includes('Posesión de balón')) {
-              const p = parseFloat(lines[i - 1]?.replace('%', '')), n = parseFloat(lines[i + 1]?.replace('%', ''));
-              if (!isNaN(p)) stats.possessionHome = p;
-              if (!isNaN(n)) stats.possessionAway = n;
-            }
-            if (l.includes('Saques de esquina')) {
-              const p = parseInt(lines[i - 1]), n = parseInt(lines[i + 1]);
-              if (!isNaN(p)) stats.cornersHome = p;
-              if (!isNaN(n)) stats.cornersAway = n;
-            }
-            if (l === 'Paradas') {
-              const p = parseInt(lines[i - 1]), n = parseInt(lines[i + 1]);
-              if (!isNaN(p)) stats.savesHome = p;
-              if (!isNaN(n)) stats.savesAway = n;
-            }
-          }
-          console.log(`  -> ${basicInfo.league} | xG:${stats.xgHome??'?'}-${stats.xgAway??'?'} SOT:${stats.sotHome??'?'}-${stats.sotAway??'?'}`);
-        } else {
-          console.log(`  -> ${basicInfo.league} | Sin estadísticas`);
-        }
-
-        // Parsear equipos
-        const parts = displayName.split(' ').filter(p => !/^(\d{1,2}:\d{2}|\d{1,2}['′]|\d+)$/.test(p) && p.trim());
-        const mid = Math.ceil(parts.length / 2);
-        const teamHome = parts.slice(0, mid).join(' ');
-        const teamAway = parts.slice(mid).join(' ');
-
-        // Saltar partidos recién iniciados
-        const justStarted = (basicInfo.minute !== null && basicInfo.minute <= 5) ||
-          (!basicInfo.minute && (!stats.totalShotsHome || stats.totalShotsHome === 0));
-        if (justStarted && stats.totalShotsHome === 0 && stats.totalShotsAway === 0) {
-          console.log('  -> Recién iniciado, sin datos aún\n');
-          continue;
-        }
-
-        analyzed.push({
-          rawName: displayName, teamHome, teamAway,
-          league: basicInfo.league, matchId: basicInfo.matchId,
-          minute: basicInfo.minute,
-          scoreHome: basicInfo.score.h, scoreAway: basicInfo.score.a,
-          stats
-        });
-
-      } catch (err) {
-        console.log(`  -> Error: ${err.message.slice(0, 100)}`);
+      // Saltar partidos recién iniciados (sin datos)
+      const justStarted = m.minute <= 5 || (!stats.totalShotsHome && !stats.totalShotsAway);
+      if (justStarted && stats.totalShotsHome === null && stats.totalShotsAway === null) {
+        console.log('  -> Recién iniciado, sin datos aún\n');
+        continue;
       }
+
+      analyzed.push({
+        rawName: displayName,
+        teamHome: m.homeTeam,
+        teamAway: m.awayTeam,
+        league: `${m.category} > ${m.tournament}`,
+        matchId: String(m.id),
+        minute: m.minute,
+        scoreHome: m.homeScore,
+        scoreAway: m.awayScore,
+        stats
+      });
       console.log('');
     }
 
-    // === 5. Analizar y mostrar ===
-    console.log('[5/5] Analizando...');
+    // Análisis
     const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league))).sort((a, b) => b.score - a.score);
 
-    // Guardar predicciones para aprendizaje futuro
+    // Guardar predicciones
     const now = new Date().toISOString();
     const newPredictions = ranked.map(r => ({
       id: r.matchId,
@@ -503,8 +426,8 @@ async function main() {
       predictedProbability: r.score,
       predictedScorer: r.predictedScorer,
       predictedTimeWindow: r.timeWindow,
-      finalScore: null,    // se rellena después
-      goalAfterAnalysis: null, // true/false
+      finalScore: null,
+      goalAfterAnalysis: null,
       actualGoalMinute: null,
       actualScorer: null,
       predictionCorrect: null
@@ -513,10 +436,9 @@ async function main() {
     savePredictions(predictions);
     weights.stats.predictionsCount += newPredictions.length;
     saveWeights(weights);
-
     console.log(`  -> ${newPredictions.length} predicciones guardadas para aprendizaje\n`);
 
-    // === OUTPUT ===
+    // OUTPUT
     console.log('='.repeat(64));
     console.log('  📊 PRÓXIMO GOL — ANÁLISIS EN VIVO');
     console.log('='.repeat(64) + '\n');
@@ -539,7 +461,7 @@ async function main() {
         const bcS = r.stats.bigChancesHome !== null ? `${r.stats.bigChancesHome}-${r.stats.bigChancesAway}` : '?-?';
         const corS = r.stats.cornersHome !== null ? `${r.stats.cornersHome}-${r.stats.cornersAway}` : '?-?';
         const savS = r.stats.savesHome !== null ? `${r.stats.savesHome}-${r.stats.savesAway}` : '?-?';
-        const posS = r.stats.possessionHome !== null ? `${r.stats.possessionHome}%-${r.stats.possessionAway}%` : '?-?';
+        const posS = r.stats.possessionHome !== null ? `${Math.round(r.stats.possessionHome * 100)}%-${Math.round(r.stats.possessionAway * 100)}%` : '?-?';
         console.log(`     📊 xG:${xgS} SOT:${sotS} OC:${bcS} Esq:${corS} Par:${savS} Pos:${posS}`);
         if (r.reasons.length > 0) console.log(`     🔍 ${r.reasons.join(' | ')}`);
         console.log('');
@@ -569,7 +491,7 @@ async function main() {
       console.log('='.repeat(64));
     }
 
-    // Enviar alerta Telegram si hay alta probabilidad
+    // Enviar alerta Telegram
     if (ranked.length > 0) {
       console.log(`  -> Mejor score: ${ranked[0].score}% (umbral: 70%)`);
       console.log(`  -> TELEGRAM_BOT_TOKEN ${process.env.TELEGRAM_BOT_TOKEN ? '✓ configurado' : '✗ no configurado'}`);
