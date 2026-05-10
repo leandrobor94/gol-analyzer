@@ -319,6 +319,15 @@ function writeSummary(text) {
 }
 
 async function main() {
+  // Validar horario Colombia (7am-10pm)
+  const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
+  const coHour = new Date(co).getHours();
+  if (coHour < 7 || coHour >= 22) {
+    console.log('Fuera de horario Colombia (' + coHour + ':00). Próximo ciclo a las 7am.');
+    writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
+    return;
+  }
+
   let weights = loadWeights();
   let predictions = loadPredictions();
   let teams = {};
