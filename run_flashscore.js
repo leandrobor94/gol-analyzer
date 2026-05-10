@@ -319,8 +319,8 @@ function writeSummary(text) {
 }
 
 async function main() {
-  const MAX_LOOPS = 6;
-  const SLEEP_MS = 11 * 60 * 1000;
+const MAX_LOOPS = 4;
+const SLEEP_MS = 12 * 60 * 1000;
 
   for (let loop = 0; loop < MAX_LOOPS; loop++) {
     console.log('\n' + '='.repeat(64));
@@ -439,11 +439,28 @@ async function main() {
 
     // --- Telegram alert ---
     if (ranked.length > 0 && ranked[0].score >= 70) {
-      const msg = notify.buildMessage(ranked);
-      if (msg) {
-        console.log('\nEnviando alerta Telegram...');
-        await notify.sendTelegram(msg);
-        writeSummary('- Alerta: ENVIADA');
+      const alertKey = ranked[0].matchId;
+      const lastAlert = weights.alertedMatches?.[alertKey];
+      const minSinceLastAlert = lastAlert ? (Date.now() - lastAlert) / 60000 : 999;
+
+      if (minSinceLastAlert < 30) {
+        console.log('\nAlerta omitida: mismo partido alertado hace ' + Math.round(minSinceLastAlert) + ' min.');
+        writeSummary('- Alerta: Omitida (dedup)');
+      } else {
+        const msg = notify.buildMessage(ranked);
+        if (msg) {
+          console.log('\nEnviando alerta Telegram...');
+          await notify.sendTelegram(msg);
+          weights.alertedMatches = weights.alertedMatches || {};
+          weights.alertedMatches[alertKey] = Date.now();
+          // Limpiar entradas viejas (> 2h)
+          const cutoff = Date.now() - 2 * 60 * 60 * 1000;
+          for (const [k, v] of Object.entries(weights.alertedMatches)) {
+            if (v < cutoff) delete weights.alertedMatches[k];
+          }
+          saveWeights(weights);
+          writeSummary('- Alerta: ENVIADA');
+        }
       }
     } else if (ranked.length > 0) {
       console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
