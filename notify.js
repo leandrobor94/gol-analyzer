@@ -63,7 +63,7 @@ function buildMessage(ranked) {
     msg += '\n';
   });
 
-  msg += `<i>📊 sofascore-analyzer</i>`;
+  msg += `<i>📊 sofastats (Flashscore)</i>`;
   return msg;
 }
 

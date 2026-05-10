@@ -27,11 +27,11 @@ jobs:
       - name: Instalar Chromium
         run: npx playwright install chromium --with-deps
 
-      - name: Ejecutar análisis
+      - name: Ejecutar análisis (Flashscore)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: node sofascore_analyzer.js
+        run: node run_flashscore.js
 
       - name: Subir screenshot de depuración
         uses: actions/upload-artifact@v4
