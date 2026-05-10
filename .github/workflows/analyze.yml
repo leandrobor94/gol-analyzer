@@ -4,8 +4,11 @@ on:
   push:
     branches: [main]
   schedule:
-    # Cada 10 min, 7am-10pm hora Colombia (UTC-5 = 12:00-03:00 UTC)
-    - cron: '*/10 12-23,0-3 * * *'
+    # Cada 10 min, hora Colombia (UTC-5)
+    # Mañana/tarde: 12:00-23:59 UTC (7am-6:59pm Colombia)
+    - cron: '*/10 12-23 * * *'
+    # Noche: 00:00-02:50 UTC (7pm-9:50pm Colombia)
+    - cron: '*/10 0-2 * * *'
   workflow_dispatch:
 
 jobs:
