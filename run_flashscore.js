@@ -6,13 +6,15 @@ const notify = require('./notify');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
+const TEAMS_FILE = path.join(__dirname, 'teams.json');
 
 const DEFAULT_WEIGHTS = {
   version: 1, learningRate: 0.05,
   global: {
     xg: 30, shotsOnTarget: 25, shotsInsideBox: 18, bigChances: 15, totalShots: 10,
     xgot: 12, hitWoodwork: 10, xA: 8, touchesOppBox: 8,
-    scoreNeeds: 10, timePressure: 8, corners: 5, possession: 5, saves: 5, goalsScored: -10
+    scoreNeeds: 10, timePressure: 8, corners: 5, possession: 5, saves: 5, goalsScored: -10,
+    teamFactor: 8, leagueFactor: 5
   },
   byLeague: {},
   stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0 }
@@ -100,7 +102,7 @@ function flashscoreStatsToInternal(flashStats) {
   };
 }
 
-function analyzeGoal(match, w) {
+function analyzeGoal(match, w, teams) {
   let score = 0;
   let reasons = [];
   let predictedScorer = null;
@@ -245,6 +247,38 @@ function analyzeGoal(match, w) {
     else if (total >= 5) score += w.saves * 0.6;
   }
 
+  // --- Team factor (historial del equipo) ---
+  if (teams) {
+    const teamNames = Object.keys(teams);
+    if (teamNames.length > 0) {
+      // Buscar si tenemos datos de estos equipos (normalizado)
+      const normalize = (s) => s?.toLowerCase().replace(/[^a-z0-9]/g, '') || '';
+      const h = normalize(match.teamHome), a = normalize(match.teamAway);
+      let homeFactor = 1.0, awayFactor = 1.0;
+      for (const [name, data] of Object.entries(teams)) {
+        const n = normalize(name);
+        if (h.includes(n) || n.includes(h)) {
+          if (data.timesPredictedGoal >= 2) {
+            const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
+            homeFactor = rate > 0.7 ? 1 + (rate - 0.7) * 0.5 : rate < 0.3 ? 1 - (0.3 - rate) * 0.5 : 1.0;
+          }
+        }
+        if (a.includes(n) || n.includes(a)) {
+          if (data.timesPredictedGoal >= 2) {
+            const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
+            awayFactor = rate > 0.7 ? 1 + (rate - 0.7) * 0.5 : rate < 0.3 ? 1 - (0.3 - rate) * 0.5 : 1.0;
+          }
+        }
+      }
+      const teamBonus = Math.max(homeFactor, awayFactor);
+      if (teamBonus !== 1.0) {
+        const adj = Math.round((teamBonus - 1) * 100);
+        if (adj > 0) { score += (w.teamFactor || 8) * (adj / 20); reasons.push('Equipo con historial de gol (' + (adj > 0 ? '+' : '') + adj + '%)'); }
+        else { score += (w.teamFactor || 8) * (adj / 20); reasons.push('Equipo suele no concretar (' + adj + '%)'); }
+      }
+    }
+  }
+
   // --- Time window ---
   let timeWindow = '';
   if (minute < 25) { timeWindow = pressure >= 40 ? 'Gol inminente — antes del descanso' : pressure >= 25 ? 'Probable gol antes del descanso' : 'Temprano, revaluar en 15-20 min'; }
@@ -287,6 +321,8 @@ function writeSummary(text) {
 async function main() {
   let weights = loadWeights();
   let predictions = loadPredictions();
+  let teams = {};
+  try { if (fs.existsSync(TEAMS_FILE)) teams = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8')); } catch {}
   const analyzed = [];
 
   console.log('[1/3] Obteniendo partidos en vivo desde Flashscore...');
@@ -301,7 +337,10 @@ async function main() {
     for (let i = 0; i < liveData.length; i++) {
       const m = liveData[i];
       const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-      console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName);
+      const league = (() => {
+        try { const parts = m.url.split('/'); const idx = parts.indexOf('football'); return idx >= 0 && parts[idx + 1] ? decodeURIComponent(parts[idx + 1].replace(/-/g, ' ')) : ''; } catch { return ''; }
+      })();
+      console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
 
       const internalStats = flashscoreStatsToInternal(m.stats);
       const xgStr = internalStats.xgHome !== null ? internalStats.xgHome.toFixed(2) + '-' + internalStats.xgAway.toFixed(2) : '?-?';
@@ -317,13 +356,13 @@ async function main() {
 
       analyzed.push({
         rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
-        league: '', matchId: m.url, minute: m.minute || 0,
+        league, matchId: m.url, minute: m.minute || 0,
         scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
         stats: internalStats
       });
     }
 
-    const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league))).sort((a, b) => b.score - a.score);
+    const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league), teams)).sort((a, b) => b.score - a.score);
 
     const now = new Date().toISOString();
     const newPredictions = ranked.map(r => ({

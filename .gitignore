@@ -3,4 +3,5 @@ node_modules/
 *.zip
 predictions.json
 weights.json
+teams.json
 ejecutar.bat
