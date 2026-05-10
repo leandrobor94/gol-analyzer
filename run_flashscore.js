@@ -319,6 +319,16 @@ function writeSummary(text) {
 }
 
 function alertsEnabled() {
+  if (process.env.CI) {
+    // Nube: consultar GitHub directo (evita checkout desactualizado)
+    try {
+      const raw = require('child_process').execSync('curl -s https://raw.githubusercontent.com/leandrobor94/gol-analyzer/main/alertas.json', { timeout: 5000, stdio: 'pipe' }).toString();
+      const { enabled } = JSON.parse(raw);
+      return enabled !== false;
+    } catch {}
+    return true;
+  }
+  // Local: archivo
   try {
     if (fs.existsSync('alertas.json')) {
       const { enabled } = JSON.parse(fs.readFileSync('alertas.json', 'utf8'));
