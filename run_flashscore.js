@@ -319,8 +319,23 @@ function writeSummary(text) {
 }
 
 async function main() {
-const MAX_LOOPS = 4;
-const SLEEP_MS = 12 * 60 * 1000;
+  // Si es nube y hubo ejecución local hace < 10 min, saltar
+  if (process.env.CI) {
+    try {
+      if (fs.existsSync('last-local-run.json')) {
+        const { lastRun } = JSON.parse(fs.readFileSync('last-local-run.json', 'utf8'));
+        const minSince = (Date.now() - new Date(lastRun).getTime()) / 60000;
+        if (minSince < 10) {
+          console.log(`Ejecucion local hace ${Math.round(minSince)} min. Saltando ciclo en la nube.`);
+          writeSummary('## Skip ' + new Date().toISOString() + ' - ejecucion local reciente');
+          return;
+        }
+      }
+    } catch {}
+  }
+
+  const MAX_LOOPS = 4;
+  const SLEEP_MS = 12 * 60 * 1000;
 
   for (let loop = 0; loop < MAX_LOOPS; loop++) {
     console.log('\n' + '='.repeat(64));
@@ -493,6 +508,11 @@ const SLEEP_MS = 12 * 60 * 1000;
     console.log('\nEsperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
     await new Promise(r => setTimeout(r, SLEEP_MS));
   }
+  }
+  // Marcar ejecución local para que la nube la respete
+  if (!process.env.CI) {
+    fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
+    console.log('\nEjecucion local registrada. La nube respetara los proximos 10 min.');
   }
 }
 

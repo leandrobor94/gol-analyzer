@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "learningRate": 0.05,
+  "global": {
+    "xg": 30,
+    "shotsOnTarget": 25,
+    "shotsInsideBox": 18,
+    "bigChances": 15,
+    "totalShots": 10,
+    "xgot": 12,
+    "hitWoodwork": 10,
+    "xA": 8,
+    "touchesOppBox": 8,
+    "scoreNeeds": 10,
+    "timePressure": 8,
+    "corners": 5,
+    "possession": 5,
+    "saves": 5,
+    "goalsScored": -10,
+    "teamFactor": 8,
+    "leagueFactor": 5
+  },
+  "byLeague": {},
+  "stats": {
+    "predictionsCount": 22,
+    "correctScore": 0,
+    "correctScorer": 0
+  },
+  "lastUpdated": "2026-05-10T22:40:28.847Z"
+}
