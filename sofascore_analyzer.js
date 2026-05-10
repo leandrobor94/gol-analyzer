@@ -307,6 +307,12 @@ function extractStatsFromApi(statisticsItems) {
 
 // ─── Obtener partidos + estadísticas vía API (sesión del browser) ───
 async function fetchLiveMatchesViaApi(page, maxMatches) {
+  const apiStatus = await page.evaluate(async () => {
+    const resp = await fetch('https://www.sofascore.com/api/v1/sport/football/events/live');
+    return { status: resp.status, ok: resp.ok };
+  });
+  console.log(`  API /events/live -> status ${apiStatus.status} ok:${apiStatus.ok}`);
+
   return await page.evaluate(async (max) => {
     const liveResp = await fetch('https://www.sofascore.com/api/v1/sport/football/events/live');
     const live = await liveResp.json();
@@ -383,15 +389,52 @@ async function main() {
     if (liveData.length === 0) {
       console.log('  No hay partidos en vivo ahora.');
       writeSummary('- Estado: sin partidos en vivo');
-      const urlActual = page.url();
-      const titleActual = await page.title();
-      console.log(`  URL: ${urlActual}`);
-      console.log(`  Title: ${titleActual}`);
-      const visibleText = await page.evaluate(() => {
-        return document.body.innerText.split('\n').filter(l => l.trim()).slice(0, 15).join(' | ');
-      });
-      console.log(`  Texto visible: ${visibleText.slice(0, 300)}`);
-      await page.screenshot({ path: 'debug_no_matches.png', fullPage: false });
+    }
+
+    // Debug info — siempre, incluso si hay partidos (para comparar local vs GH)
+    const debugInfo = await page.evaluate(() => {
+      return {
+        url: window.location.href,
+        title: document.title,
+        visible: document.body.innerText.split('\n').filter(l => l.trim()).slice(0, 20).join(' | '),
+        hasCaptcha: document.querySelector('iframe[src*=\"recaptcha\"]') !== null,
+        apiLiveStatus: '',
+        fp: {
+          webdriver: navigator.webdriver,
+          userAgent: navigator.userAgent,
+          plugins: navigator.plugins.length,
+          languages: navigator.languages,
+          cookiesEnabled: navigator.cookieEnabled
+        }
+      };
+    });
+
+    // Intentar llamada directa a API y capturar respuesta
+    const apiDebug = await page.evaluate(async () => {
+      try {
+        const resp = await fetch('https://www.sofascore.com/api/v1/sport/football/events/live');
+        const text = await resp.text();
+        return { status: resp.status, length: text.length, preview: text.slice(0, 200) };
+      } catch (e) {
+        return { error: e.message };
+      }
+    });
+
+    console.log(`  Debug URL: ${debugInfo.url}`);
+    console.log(`  Debug Title: ${debugInfo.title}`);
+    console.log(`  Debug captcha: ${debugInfo.hasCaptcha}`);
+    console.log(`  Debug webdriver: ${debugInfo.fp.webdriver}`);
+    console.log(`  Debug userAgent: ${debugInfo.fp.userAgent}`);
+    console.log(`  Debug API: status=${apiDebug.status} len=${apiDebug.length} preview=${apiDebug.preview?.slice(0, 100)}`);
+    if (apiDebug.error) console.log(`  API error: ${apiDebug.error}`);
+    if (liveData.length === 0) {
+      console.log(`  Debug texto: ${debugInfo.visible.slice(0, 400)}`);
+    }
+
+    await page.screenshot({ path: 'debug_screenshot.png', fullPage: false });
+
+    if (liveData.length === 0) {
+      console.log('  Debug screenshot guardada.');
       await browser.close();
       return;
     }
