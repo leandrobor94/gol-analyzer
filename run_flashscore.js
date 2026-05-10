@@ -441,10 +441,15 @@ const SLEEP_MS = 12 * 60 * 1000;
     if (ranked.length > 0 && ranked[0].score >= 70) {
       const alertKey = ranked[0].matchId;
       const lastAlert = weights.alertedMatches?.[alertKey];
-      const minSinceLastAlert = lastAlert ? (Date.now() - lastAlert) / 60000 : 999;
+      let shouldAlert = true;
+      if (lastAlert) {
+        const realMin = (Date.now() - lastAlert.timestamp) / 60000;
+        const gameMinAdvance = (ranked[0].minute || 0) - (lastAlert.minute || 0);
+        if (realMin < 30 && gameMinAdvance < 20) shouldAlert = false;
+      }
 
-      if (minSinceLastAlert < 30) {
-        console.log('\nAlerta omitida: mismo partido alertado hace ' + Math.round(minSinceLastAlert) + ' min.');
+      if (!shouldAlert) {
+        console.log('\nAlerta omitida: mismo partido hace ' + Math.round((Date.now() - lastAlert.timestamp) / 60000) + ' min reales, ' + (ranked[0].minute - lastAlert.minute) + ' min de juego.');
         writeSummary('- Alerta: Omitida (dedup)');
       } else {
         const msg = notify.buildMessage(ranked);
@@ -452,11 +457,11 @@ const SLEEP_MS = 12 * 60 * 1000;
           console.log('\nEnviando alerta Telegram...');
           await notify.sendTelegram(msg);
           weights.alertedMatches = weights.alertedMatches || {};
-          weights.alertedMatches[alertKey] = Date.now();
+          weights.alertedMatches[alertKey] = { timestamp: Date.now(), minute: ranked[0].minute || 0 };
           // Limpiar entradas viejas (> 2h)
           const cutoff = Date.now() - 2 * 60 * 60 * 1000;
           for (const [k, v] of Object.entries(weights.alertedMatches)) {
-            if (v < cutoff) delete weights.alertedMatches[k];
+            if (v.timestamp < cutoff) delete weights.alertedMatches[k];
           }
           saveWeights(weights);
           writeSummary('- Alerta: ENVIADA');
@@ -466,6 +471,8 @@ const SLEEP_MS = 12 * 60 * 1000;
       console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
       writeSummary('- Alerta: No enviada (umbral no alcanzado)');
     }
+  } else {
+    console.log('  Sin partidos en vivo.');
   }
 
   // --- APRENDIZAJE: verificar predicciones anteriores contra datos actuales ---
@@ -476,6 +483,11 @@ const SLEEP_MS = 12 * 60 * 1000;
     console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
   }
   writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
+
+  if (liveData.length === 0) {
+    console.log('  Sin partidos — no se necesita seguir. Saliendo del self-loop.');
+    break;
+  }
 
   if (loop < MAX_LOOPS - 1) {
     console.log('\nEsperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
