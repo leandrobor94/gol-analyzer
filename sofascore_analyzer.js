@@ -370,8 +370,17 @@ async function main() {
     const liveData = await fetchLiveMatchesViaApi(page, 8);
     console.log(`  -> ${liveData.length} partidos en vivo\n`);
 
+    // Escribir resumen para GitHub Actions (si aplica)
+    function writeSummary(text) {
+      if (process.env.GITHUB_STEP_SUMMARY) {
+        try { fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, text + '\n'); } catch {}
+      }
+    }
+    writeSummary(`## Análisis ${new Date().toISOString()}\n- Partidos en vivo: ${liveData.length}`);
+
     if (liveData.length === 0) {
       console.log('  No hay partidos en vivo ahora.');
+      writeSummary('- Estado: sin partidos en vivo');
       await browser.close();
       return;
     }
@@ -489,6 +498,16 @@ async function main() {
         }
       }
       console.log('='.repeat(64));
+    }
+
+    // Resumen para GitHub Actions
+    if (ranked.length > 0) {
+      writeSummary(`- Mejor score: ${ranked[0].score}% (umbral: 70%)`);
+      writeSummary(`- Top: ${ranked[0].teamHome} vs ${ranked[0].teamAway}`);
+      if (ranked[0].score >= 70) writeSummary('- Alerta: ✅ ENVIADA');
+      else writeSummary('- Alerta: ❌ No enviada (umbral no alcanzado)');
+    } else {
+      writeSummary('- No se analizaron partidos');
     }
 
     // Enviar alerta Telegram
