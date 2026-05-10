@@ -318,7 +318,15 @@ function writeSummary(text) {
   }
 }
 
-async function main() {
+function alertsEnabled() {
+  try {
+    if (fs.existsSync('alertas.json')) {
+      const { enabled } = JSON.parse(fs.readFileSync('alertas.json', 'utf8'));
+      return enabled !== false;
+    }
+  } catch {}
+  return true;
+}
   // Si es nube y hubo ejecución local hace < 10 min, saltar
   if (process.env.CI) {
     try {
@@ -454,14 +462,43 @@ async function main() {
 
     // --- Telegram alert ---
     if (ranked.length > 0 && ranked[0].score >= 70) {
-      const alertKey = ranked[0].matchId;
-      const lastAlert = weights.alertedMatches?.[alertKey];
-      let shouldAlert = true;
-      if (lastAlert) {
-        const realMin = (Date.now() - lastAlert.timestamp) / 60000;
-        const gameMinAdvance = (ranked[0].minute || 0) - (lastAlert.minute || 0);
-        if (realMin < 30 && gameMinAdvance < 20) shouldAlert = false;
+      if (!alertsEnabled()) {
+        console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
+        writeSummary('- Alerta: Desactivada por usuario');
+      } else {
+        const alertKey = ranked[0].matchId;
+        const lastAlert = weights.alertedMatches?.[alertKey];
+        let shouldAlert = true;
+        if (lastAlert) {
+          const realMin = (Date.now() - lastAlert.timestamp) / 60000;
+          const gameMinAdvance = (ranked[0].minute || 0) - (lastAlert.minute || 0);
+          if (realMin < 30 && gameMinAdvance < 20) shouldAlert = false;
+        }
+
+        if (!shouldAlert) {
+          console.log('\nAlerta omitida: mismo partido hace ' + Math.round((Date.now() - lastAlert.timestamp) / 60000) + ' min reales, ' + (ranked[0].minute - lastAlert.minute) + ' min de juego.');
+          writeSummary('- Alerta: Omitida (dedup)');
+        } else {
+          const msg = notify.buildMessage(ranked);
+          if (msg) {
+            console.log('\nEnviando alerta Telegram...');
+            await notify.sendTelegram(msg);
+            weights.alertedMatches = weights.alertedMatches || {};
+            weights.alertedMatches[alertKey] = { timestamp: Date.now(), minute: ranked[0].minute || 0 };
+            // Limpiar entradas viejas (> 2h)
+            const cutoff = Date.now() - 2 * 60 * 60 * 1000;
+            for (const [k, v] of Object.entries(weights.alertedMatches)) {
+              if (v.timestamp < cutoff) delete weights.alertedMatches[k];
+            }
+            saveWeights(weights);
+            writeSummary('- Alerta: ENVIADA');
+          }
+        }
       }
+    } else if (ranked.length > 0) {
+      console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
+      writeSummary('- Alerta: No enviada (umbral no alcanzado)');
+    }
 
       if (!shouldAlert) {
         console.log('\nAlerta omitida: mismo partido hace ' + Math.round((Date.now() - lastAlert.timestamp) / 60000) + ' min reales, ' + (ranked[0].minute - lastAlert.minute) + ' min de juego.');
