@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { fetchAllLiveMatches } = require('./flashscore_fetcher');
+const { runLearning } = require('./learn');
 const notify = require('./notify');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
@@ -9,95 +10,93 @@ const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
 const DEFAULT_WEIGHTS = {
   version: 1, learningRate: 0.05,
   global: {
-    xg: 30, shotsOnTarget: 25, bigChances: 15, totalShots: 10,
+    xg: 30, shotsOnTarget: 25, shotsInsideBox: 18, bigChances: 15, totalShots: 10,
+    xgot: 12, hitWoodwork: 10, xA: 8, touchesOppBox: 8,
     scoreNeeds: 10, timePressure: 8, corners: 5, possession: 5, saves: 5, goalsScored: -10
   },
   byLeague: {},
   stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0 }
 };
 
+function deepMerge(defaults, loaded) {
+  const result = { ...defaults };
+  for (const key of Object.keys(loaded)) {
+    if (typeof defaults[key] === 'object' && defaults[key] !== null && !Array.isArray(defaults[key])) {
+      result[key] = deepMerge(defaults[key], loaded[key]);
+    } else if (loaded[key] !== undefined) {
+      result[key] = loaded[key];
+    }
+  }
+  return result;
+}
+
 function loadWeights() {
   try {
     if (fs.existsSync(WEIGHTS_FILE)) {
-      const data = JSON.parse(fs.readFileSync(WEIGHTS_FILE, 'utf8'));
-      return { ...DEFAULT_WEIGHTS, ...data };
+      const loaded = JSON.parse(fs.readFileSync(WEIGHTS_FILE, 'utf8'));
+      const merged = deepMerge(DEFAULT_WEIGHTS, loaded);
+      // Ensure all global keys exist
+      for (const k of Object.keys(DEFAULT_WEIGHTS.global)) {
+        if (merged.global[k] === undefined) merged.global[k] = DEFAULT_WEIGHTS.global[k];
+      }
+      return merged;
     }
   } catch {}
-  return { ...DEFAULT_WEIGHTS };
+  return { ...DEFAULT_WEIGHTS, global: { ...DEFAULT_WEIGHTS.global } };
 }
-
-function saveWeights(weights) {
-  weights.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(WEIGHTS_FILE, JSON.stringify(weights, null, 2));
-}
-
+function saveWeights(w) { w.lastUpdated = new Date().toISOString(); fs.writeFileSync(WEIGHTS_FILE, JSON.stringify(w, null, 2)); }
 function loadPredictions() {
-  try {
-    if (fs.existsSync(PREDICTIONS_FILE)) { return JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8')); }
-  } catch {}
+  try { if (fs.existsSync(PREDICTIONS_FILE)) return JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8')); } catch {}
   return [];
 }
-
-function savePredictions(predictions) {
-  fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(predictions, null, 2));
-}
-
+function savePredictions(p) { fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(p, null, 2)); }
 function getLeagueWeights(weights, league) {
   const w = { ...weights.global };
-  if (league && weights.byLeague[league]) {
-    for (const key of Object.keys(w)) {
-      if (weights.byLeague[league][key] !== undefined) w[key] = weights.byLeague[league][key];
-    }
-  }
+  if (league && weights.byLeague[league]) Object.keys(w).forEach(k => { if (weights.byLeague[league][k] !== undefined) w[k] = weights.byLeague[league][k]; });
   return w;
 }
-
 function parseNum(v) {
   if (v === null || v === undefined || v === '' || v === '-') return null;
-  const cleaned = String(v).replace(/[^0-9.\-]/g, '');
-  const n = parseFloat(cleaned);
+  const n = parseFloat(String(v).replace(/[^0-9.\-]/g, ''));
   return isNaN(n) ? null : n;
 }
-
 function parsePct(v) {
   if (v === null || v === undefined || v === '') return null;
   const s = String(v);
-  if (s.includes('%')) {
-    const n = parseFloat(s.replace('%', ''));
-    return isNaN(n) ? null : n / 100;
-  }
-  const n = parseNum(v);
-  return n !== null ? n : null;
+  return s.includes('%') ? (parseFloat(s.replace('%', '')) / 100) : parseNum(v);
 }
 
 function flashscoreStatsToInternal(flashStats) {
   const get = (name) => flashStats[name] || {};
-  const home = (name) => parseNum(get(name).home);
-  const away = (name) => parseNum(get(name).away);
-  const homePct = (name) => parsePct(get(name).home);
-  const awayPct = (name) => parsePct(get(name).away);
+  const h = (name) => parseNum(get(name).home);
+  const a = (name) => parseNum(get(name).away);
+  const hPct = (name) => parsePct(get(name).home);
+  const aPct = (name) => parsePct(get(name).away);
 
   return {
-    xgHome: home('Expected goals (xG)'),
-    xgAway: away('Expected goals (xG)'),
-    sotHome: home('Shots on target'),
-    sotAway: away('Shots on target'),
-    totalShotsHome: home('Total shots'),
-    totalShotsAway: away('Total shots'),
-    bigChancesHome: home('Big chances'),
-    bigChancesAway: away('Big chances'),
-    cornersHome: home('Corner kicks'),
-    cornersAway: away('Corner kicks'),
-    possessionHome: homePct('Ball possession'),
-    possessionAway: awayPct('Ball possession'),
-    savesHome: home('Goalkeeper saves'),
-    savesAway: away('Goalkeeper saves'),
-    foulsHome: home('Fouls'),
-    foulsAway: away('Fouls'),
-    yellowCardsHome: home('Yellow cards'),
-    yellowCardsAway: away('Yellow cards'),
-    shotsInsideBoxHome: home('Shots inside the box'),
-    shotsInsideBoxAway: away('Shots inside the box')
+    xgHome: h('Expected goals (xG)'), xgAway: h('Expected goals (xG)'),
+    xgotHome: h('xG on target (xGOT)'), xgotAway: h('xG on target (xGOT)'),
+    sotHome: h('Shots on target'), sotAway: h('Shots on target'),
+    totalShotsHome: h('Total shots'), totalShotsAway: h('Total shots'),
+    shotsInsideBoxHome: h('Shots inside the box'), shotsInsideBoxAway: h('Shots inside the box'),
+    shotsOutsideBoxHome: h('Shots outside the box'), shotsOutsideBoxAway: h('Shots outside the box'),
+    shotsOffTargetHome: h('Shots off target'), shotsOffTargetAway: h('Shots off target'),
+    blockedShotsHome: h('Blocked shots'), blockedShotsAway: h('Blocked shots'),
+    bigChancesHome: h('Big chances'), bigChancesAway: h('Big chances'),
+    hitWoodworkHome: h('Hit the woodwork'), hitWoodworkAway: h('Hit the woodwork'),
+    cornersHome: h('Corner kicks'), cornersAway: h('Corner kicks'),
+    possessionHome: hPct('Ball possession'), possessionAway: aPct('Ball possession'),
+    touchesOppBoxHome: h('Touches in opposition box'), touchesOppBoxAway: h('Touches in opposition box'),
+    savesHome: h('Goalkeeper saves'), savesAway: h('Goalkeeper saves'),
+    foulsHome: h('Fouls'), foulsAway: h('Fouls'),
+    yellowCardsHome: h('Yellow cards'), yellowCardsAway: h('Yellow cards'),
+    xgHomeA: h('Expected assists (xA)'), xgAwayA: h('Expected assists (xA)'),
+    passesFinalThirdHome: hPct('Passes in final third'), passesFinalThirdAway: aPct('Passes in final third'),
+    crossesHome: h('Crosses'), crossesAway: h('Crosses'),
+    tacklesHome: h('Tackles'), tacklesAway: h('Tackles'),
+    interceptionsHome: h('Interceptions'), interceptionsAway: h('Interceptions'),
+    errorsLeadingToShotHome: h('Errors leading to shot'), errorsLeadingToShotAway: h('Errors leading to shot'),
+    clearancesHome: h('Clearances'), clearancesAway: h('Clearances')
   };
 }
 
@@ -106,7 +105,6 @@ function analyzeGoal(match, w) {
   let reasons = [];
   let predictedScorer = null;
   let scorerReasons = [];
-
   const s = match.stats;
   const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
   const minute = match.minute || 0;
@@ -115,94 +113,149 @@ function analyzeGoal(match, w) {
   const draw = match.scoreHome === match.scoreAway;
   let pressure = 0;
 
-  const wXG = w.xg, wSOT = w.shotsOnTarget, wShots = w.totalShots, wBC = w.bigChances;
-  const wNeed = w.scoreNeeds, wTime = w.timePressure, wCorners = w.corners;
-  const wPoss = w.possession, wSaves = w.saves, wGoalsPenalty = w.goalsScored;
-
+  // --- xG ---
   if (s.xgHome !== null && s.xgAway !== null) {
-    const totalXG = s.xgHome + s.xgAway;
-    const xgRemaining = totalXG - goals;
-    if (xgRemaining > 1.5) { score += wXG * 1; pressure += 30; reasons.push('Alto xG restante (' + xgRemaining.toFixed(2) + ')'); }
-    else if (xgRemaining > 0.8) { score += wXG * 0.75; pressure += 20; reasons.push('xG restante ' + xgRemaining.toFixed(2)); }
-    else if (xgRemaining > 0.3) { score += wXG * 0.4; pressure += 10; }
-    if (totalXG > 1.5 && goals === 0) { score += wXG * 0.5; pressure += 15; reasons.push('0-0 con alto xG!'); }
-    if (totalXG > 1.0 && goals <= 1) { score += wXG * 0.25; }
+    const totalXG = s.xgHome + s.xgAway, remaining = totalXG - goals;
+    if (remaining > 1.5) { score += w.xg * 1; pressure += 30; reasons.push('Alto xG restante (' + remaining.toFixed(2) + ')'); }
+    else if (remaining > 0.8) { score += w.xg * 0.75; pressure += 20; reasons.push('xG restante ' + remaining.toFixed(2)); }
+    else if (remaining > 0.3) { score += w.xg * 0.4; pressure += 10; }
+    if (totalXG > 1.5 && goals === 0) { score += w.xg * 0.5; pressure += 15; reasons.push('0-0 con alto xG!'); }
+    if (totalXG > 1.0 && goals <= 1) score += w.xg * 0.25;
     if (s.xgHome > s.xgAway + 0.5) { predictedScorer = 'home'; scorerReasons.push('xG superior'); }
     else if (s.xgAway > s.xgHome + 0.5) { predictedScorer = 'away'; scorerReasons.push('xG superior'); }
   }
 
+  // --- xGOT (calidad real de tiros) ---
+  if (s.xgotHome !== null && s.xgotAway !== null) {
+    const total = s.xgotHome + s.xgotAway;
+    if (total > 2) { score += w.xgot * 1; pressure += 15; reasons.push('Alta calidad de tiro (xGOT ' + total.toFixed(2) + ')'); }
+    else if (total > 1) { score += w.xgot * 0.6; pressure += 8; }
+    if (s.xgotHome > s.xgotAway + 0.5 && !predictedScorer) { predictedScorer = 'home'; scorerReasons.push('mejores tiros'); }
+    else if (s.xgotAway > s.xgotHome + 0.5 && !predictedScorer) { predictedScorer = 'away'; scorerReasons.push('mejores tiros'); }
+  }
+
+  // --- Shots on target ---
   if (s.sotHome !== null && s.sotAway !== null) {
-    const totalSOT = s.sotHome + s.sotAway;
-    if (totalSOT >= 8) { score += wSOT * 1; pressure += 20; reasons.push(totalSOT + ' tiros a puerta!'); }
-    else if (totalSOT >= 5) { score += wSOT * 0.7; pressure += 15; reasons.push(totalSOT + ' a puerta'); }
-    else if (totalSOT >= 3) { score += wSOT * 0.4; pressure += 8; }
-    if (totalSOT >= 4 && goals === 0) { score += wSOT * 0.6; pressure += 10; reasons.push('Tiran a puerta pero no entran'); }
-    if (totalSOT >= 6 && goals <= 1) { score += wSOT * 0.4; }
+    const total = s.sotHome + s.sotAway;
+    if (total >= 8) { score += w.shotsOnTarget * 1; pressure += 20; reasons.push(total + ' tiros a puerta!'); }
+    else if (total >= 5) { score += w.shotsOnTarget * 0.7; pressure += 15; reasons.push(total + ' a puerta'); }
+    else if (total >= 3) { score += w.shotsOnTarget * 0.4; pressure += 8; }
+    if (total >= 4 && goals === 0) { score += w.shotsOnTarget * 0.6; pressure += 10; reasons.push('Tiran a puerta pero no entran'); }
+    if (total >= 6 && goals <= 1) score += w.shotsOnTarget * 0.4;
     if (!predictedScorer) {
       if (s.sotHome >= s.sotAway + 3) { predictedScorer = 'home'; scorerReasons.push('domina tiros a puerta'); }
       else if (s.sotAway >= s.sotHome + 3) { predictedScorer = 'away'; scorerReasons.push('domina tiros a puerta'); }
     }
   }
 
+  // --- Shots inside box (mucho mas peligrosos que fuera) ---
+  if (s.shotsInsideBoxHome !== null && s.shotsInsideBoxAway !== null) {
+    const total = s.shotsInsideBoxHome + s.shotsInsideBoxAway;
+    if (total >= 8) { score += w.shotsInsideBox * 1; pressure += 20; reasons.push(total + ' tiros dentro del area!'); }
+    else if (total >= 4) { score += w.shotsInsideBox * 0.7; pressure += 12; reasons.push(total + ' tiros dentro area'); }
+    else if (total >= 2) { score += w.shotsInsideBox * 0.4; pressure += 6; }
+
+    // Ratio inside/total: si la mayoria son dentro, mas peligro
+    if (s.totalShotsHome !== null && s.totalShotsAway !== null) {
+      const totalShots = s.totalShotsHome + s.totalShotsAway;
+      if (totalShots > 0 && total / totalShots > 0.5 && total >= 3) {
+        score += w.shotsInsideBox * 0.5;
+        reasons.push('Ataques penetrantes (' + Math.round(total / totalShots * 100) + '% dentro area)');
+      }
+    }
+    if (!predictedScorer) {
+      if (s.shotsInsideBoxHome >= s.shotsInsideBoxAway + 4) { predictedScorer = 'home'; scorerReasons.push('penetra el area'); }
+      else if (s.shotsInsideBoxAway >= s.shotsInsideBoxHome + 4) { predictedScorer = 'away'; scorerReasons.push('penetra el area'); }
+    }
+  }
+
+  // --- Hit the woodwork (casi-goles) ---
+  if (s.hitWoodworkHome !== null && s.hitWoodworkAway !== null) {
+    const total = s.hitWoodworkHome + s.hitWoodworkAway;
+    if (total >= 1) { score += w.hitWoodwork * total; pressure += 5 * total; reasons.push(total + ' palos!'); }
+  }
+
+  // --- xA (expected assists) ---
+  if (s.xgHomeA !== null && s.xgAwayA !== null) {
+    const total = s.xgHomeA + s.xgAwayA;
+    if (total > 0.8) { score += w.xA * 1; pressure += 10; reasons.push('Creacion de calidad (xA ' + total.toFixed(2) + ')'); }
+    else if (total > 0.4) { score += w.xA * 0.5; pressure += 5; }
+  }
+
+  // --- Touches in opposition box ---
+  if (s.touchesOppBoxHome !== null && s.touchesOppBoxAway !== null) {
+    const total = s.touchesOppBoxHome + s.touchesOppBoxAway;
+    if (total >= 20) { score += w.touchesOppBox * 1; pressure += 10; reasons.push('Constante presion (' + total + ' toques area rival)'); }
+    else if (total >= 10) { score += w.touchesOppBox * 0.5; pressure += 5; }
+  }
+
+  // --- Total shots ---
   if (s.totalShotsHome !== null && s.totalShotsAway !== null) {
-    const totalShots = s.totalShotsHome + s.totalShotsAway;
-    if (totalShots >= 25) { score += wShots * 1; pressure += 10; reasons.push('Alta frecuencia (' + totalShots + ')'); }
-    else if (totalShots >= 15) { score += wShots * 0.5; pressure += 5; }
+    const total = s.totalShotsHome + s.totalShotsAway;
+    if (total >= 25) { score += w.totalShots * 1; pressure += 10; reasons.push('Alta frecuencia (' + total + ')'); }
+    else if (total >= 15) { score += w.totalShots * 0.5; pressure += 5; }
     if (!predictedScorer) {
       if (s.totalShotsHome >= s.totalShotsAway + 8) { predictedScorer = 'home'; scorerReasons.push('domina tiros'); }
       else if (s.totalShotsAway >= s.totalShotsHome + 8) { predictedScorer = 'away'; scorerReasons.push('domina tiros'); }
     }
   }
 
+  // --- Big chances ---
   if (s.bigChancesHome !== null && s.bigChancesAway !== null) {
-    const totalBC = s.bigChancesHome + s.bigChancesAway;
-    if (totalBC >= 5) { score += wBC * 1; pressure += 15; reasons.push(totalBC + ' ocasiones claras!'); }
-    else if (totalBC >= 2) { score += wBC * 0.5; pressure += 8; }
+    const total = s.bigChancesHome + s.bigChancesAway;
+    if (total >= 5) { score += w.bigChances * 1; pressure += 15; reasons.push(total + ' ocasiones claras!'); }
+    else if (total >= 2) { score += w.bigChances * 0.5; pressure += 8; }
     if (!predictedScorer) {
-      if (s.bigChancesHome > s.bigChancesAway) { predictedScorer = 'home'; scorerReasons.push('m\u00e1s ocasiones claras'); }
-      else if (s.bigChancesAway > s.bigChancesHome) { predictedScorer = 'away'; scorerReasons.push('m\u00e1s ocasiones claras'); }
+      if (s.bigChancesHome > s.bigChancesAway) { predictedScorer = 'home'; scorerReasons.push('mas ocasiones claras'); }
+      else if (s.bigChancesAway > s.bigChancesHome) { predictedScorer = 'away'; scorerReasons.push('mas ocasiones claras'); }
     }
   }
 
-  if (draw && goals > 0) { score += wNeed * 0.5; reasons.push('Empate, ambos buscan el gol'); }
-  if (draw && goals === 0) { score += wNeed * 0.8; pressure += 5; reasons.push('0-0, cualquiera lo rompe'); }
-  if (homeNeeds) { score += wNeed * 0.8; pressure += 5; reasons.push('Local necesita el gol'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('necesita el gol'); } }
-  if (awayNeeds) { score += wNeed * 0.8; pressure += 5; reasons.push('Visitante necesita el gol'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('necesita el gol'); } }
-  if (goals >= 4) { score += wGoalsPenalty; reasons.push('Goleada, el ritmo baja'); }
+  // --- Score needs ---
+  if (draw && goals > 0) { score += w.scoreNeeds * 0.5; reasons.push('Empate, ambos buscan el gol'); }
+  if (draw && goals === 0) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('0-0, cualquiera lo rompe'); }
+  if (homeNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Local necesita el gol'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('necesita el gol'); } }
+  if (awayNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Visitante necesita el gol'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('necesita el gol'); } }
+  if (goals >= 4) { score += w.goalsScored; reasons.push('Goleada, el ritmo baja'); }
 
-  if (minute >= 80 && pressure >= 20) { score += wTime * 1; reasons.push('Min ' + minute + "' — presi\u00f3n final!"); }
-  else if (minute >= 70 && pressure >= 25) { score += wTime * 0.8; reasons.push('Min ' + minute + "' — definici\u00f3n"); }
-  else if (minute >= 60 && pressure >= 30) { score += wTime * 0.5; }
-  else if (minute < 20 && pressure >= 25) { score += wTime * 0.5; reasons.push('Presi\u00f3n desde el inicio'); }
+  // --- Time pressure ---
+  if (minute >= 80 && pressure >= 20) { score += w.timePressure * 1; reasons.push('Min ' + minute + "' — presion final!"); }
+  else if (minute >= 70 && pressure >= 25) { score += w.timePressure * 0.8; reasons.push('Min ' + minute + "' — definicion"); }
+  else if (minute >= 60 && pressure >= 30) { score += w.timePressure * 0.5; }
+  else if (minute < 20 && pressure >= 25) { score += w.timePressure * 0.5; reasons.push('Presion desde el inicio'); }
 
+  // --- Corners ---
   if (s.cornersHome !== null && s.cornersAway !== null) {
     const total = s.cornersHome + s.cornersAway;
-    if (total >= 12) { score += wCorners * 1; pressure += 5; reasons.push('Presi\u00f3n constante (' + total + ' corners)'); }
-    else if (total >= 8) { score += wCorners * 0.6; }
+    if (total >= 12) { score += w.corners * 1; pressure += 5; reasons.push('Presion constante (' + total + ' corners)'); }
+    else if (total >= 8) score += w.corners * 0.6;
   }
 
+  // --- Possession + need ---
   if (s.possessionHome !== null && s.possessionAway !== null) {
-    if (s.possessionAway > 0.58 && awayNeeds) { score += wPoss * 1; pressure += 5; reasons.push('Visitante domina y necesita'); }
-    if (s.possessionHome > 0.58 && homeNeeds) { score += wPoss * 1; pressure += 5; reasons.push('Local domina y necesita'); }
-    if (Math.abs(s.possessionHome - s.possessionAway) > 0.20 && goals === 0) { score += wPoss * 1; pressure += 5; reasons.push('Un equipo domina pero no concreta'); }
+    if (s.possessionAway > 0.58 && awayNeeds) { score += w.possession * 1; pressure += 5; reasons.push('Visitante domina y necesita'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('domina y necesita'); } }
+    if (s.possessionHome > 0.58 && homeNeeds) { score += w.possession * 1; pressure += 5; reasons.push('Local domina y necesita'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('domina y necesita'); } }
+    if (Math.abs(s.possessionHome - s.possessionAway) > 0.20 && goals === 0) { score += w.possession * 1; pressure += 5; reasons.push('Un equipo domina pero no concreta'); }
   }
 
+  // --- Saves ---
   if (s.savesHome !== null && s.savesAway !== null) {
     const total = s.savesHome + s.savesAway;
-    if (total >= 8) { score += wSaves * 1; reasons.push('Porteros muy exigidos'); }
-    else if (total >= 5) { score += wSaves * 0.6; }
+    if (total >= 8) { score += w.saves * 1; reasons.push('Porteros muy exigidos'); }
+    else if (total >= 5) score += w.saves * 0.6;
   }
 
+  // --- Time window ---
   let timeWindow = '';
   if (minute < 25) { timeWindow = pressure >= 40 ? 'Gol inminente — antes del descanso' : pressure >= 25 ? 'Probable gol antes del descanso' : 'Temprano, revaluar en 15-20 min'; }
   else if (minute < 40) { timeWindow = pressure >= 40 ? 'Gol antes del descanso (30-45)!' : pressure >= 25 ? 'Posible gol en minutos finales del 1T' : '1T tranquilo, probable gol en 2T'; }
-  else if (minute < 50) { timeWindow = pressure >= 40 ? 'Gol al inicio del 2T (45-60)' : pressure >= 25 ? 'Posible gol al inicio del 2T' : 'Descanso sin mucha acci\u00f3n'; }
-  else if (minute < 65) { timeWindow = pressure >= 40 ? 'Gol en pr\u00f3ximos 15 min!' : pressure >= 25 ? 'Posible gol en recta final (70-85)' : 'Partido t\u00e1cticamente cerrado'; }
-  else if (minute < 80) { timeWindow = pressure >= 40 ? 'Gol inminente — \u00faltimos 15 minutos!' : pressure >= 25 ? 'Posible gol en tramo final (75-90)' : 'Partido que se apaga'; }
-  else { timeWindow = pressure >= 25 ? 'Gol en cualquier momento — descuento!' : 'Partido pr\u00e1cticamente definido'; }
+  else if (minute < 50) { timeWindow = pressure >= 40 ? 'Gol al inicio del 2T (45-60)' : pressure >= 25 ? 'Posible gol al inicio del 2T' : 'Descanso sin mucha accion'; }
+  else if (minute < 65) { timeWindow = pressure >= 40 ? 'Gol en proximos 15 min!' : pressure >= 25 ? 'Posible gol en recta final (70-85)' : 'Partido tacticamente cerrado'; }
+  else if (minute < 80) { timeWindow = pressure >= 40 ? 'Gol inminente — ultimos 15 minutos!' : pressure >= 25 ? 'Posible gol en tramo final (75-90)' : 'Partido que se apaga'; }
+  else { timeWindow = pressure >= 25 ? 'Gol en cualquier momento — descuento!' : 'Partido practicamente definido'; }
 
   const cappedScore = Math.min(Math.max(score, 0), 100);
-  let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro pr\u00f3ximo gol'
+  let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro proximo gol'
     : cappedScore >= 45 ? 'PROBABLE — buenos indicios'
     : cappedScore >= 30 ? 'POSIBLE — atentos'
     : cappedScore >= 15 ? 'DUDOSO — poca actividad'
@@ -210,11 +263,9 @@ function analyzeGoal(match, w) {
 
   let whoText = '';
   if (predictedScorer && scorerReasons.length > 0 && cappedScore >= 30) {
-    const name = predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante');
-    whoText = '\n     Pr\u00f3ximo gol: ' + name + ' (' + scorerReasons.join(', ') + ')';
+    whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante')) + ' (' + scorerReasons.join(', ') + ')';
   } else if (predictedScorer && cappedScore >= 45) {
-    const name = predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante');
-    whoText = '\n     Pr\u00f3ximo gol: ' + name;
+    whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante'));
   }
 
   return {
@@ -234,120 +285,120 @@ function writeSummary(text) {
 }
 
 async function main() {
-  const weights = loadWeights();
-  const predictions = loadPredictions();
+  let weights = loadWeights();
+  let predictions = loadPredictions();
   const analyzed = [];
 
-  console.log('[1/2] Obteniendo partidos en vivo desde Flashscore...');
+  console.log('[1/3] Obteniendo partidos en vivo desde Flashscore...');
   const liveData = await fetchAllLiveMatches();
   console.log('  -> ' + liveData.length + ' partidos en vivo\n');
 
-  writeSummary('## An\u00e1lisis Flashscore ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
+  writeSummary('## Analisis Flashscore ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
 
-  if (liveData.length === 0) {
-    writeSummary('- Estado: sin partidos en vivo');
-    return;
-  }
+  if (liveData.length > 0) {
+    console.log('[2/3] Analizando ' + liveData.length + ' partidos...\n');
 
-  console.log('[2/2] Analizando ' + liveData.length + ' partidos...\n');
+    for (let i = 0; i < liveData.length; i++) {
+      const m = liveData[i];
+      const displayName = m.homeTeam + ' vs ' + m.awayTeam;
+      console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName);
 
-  for (let i = 0; i < liveData.length; i++) {
-    const m = liveData[i];
-    const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-    console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName);
+      const internalStats = flashscoreStatsToInternal(m.stats);
+      const xgStr = internalStats.xgHome !== null ? internalStats.xgHome.toFixed(2) + '-' + internalStats.xgAway.toFixed(2) : '?-?';
+      const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
+      const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
+      const woodStr = internalStats.hitWoodworkHome ? ' (!)' : '';
+      console.log('     -> ' + (m.status || m.minute + "'") + ' ' + (m.scoreHome ?? '?') + '-' + (m.scoreAway ?? '?') + ' | xG:' + xgStr + ' SOT:' + sotStr + (boxStr ? ' ' + boxStr : '') + woodStr);
 
-    const internalStats = flashscoreStatsToInternal(m.stats);
-    const xgStr = internalStats.xgHome !== null ? internalStats.xgHome.toFixed(2) + '-' + internalStats.xgAway.toFixed(2) : '?-?';
-    const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
-    console.log('     -> ' + (m.status || m.minute + "'") + ' ' + (m.scoreHome ?? '?') + '-' + (m.scoreAway ?? '?') + ' | xG:' + xgStr + ' SOT:' + sotStr);
+      if ((m.minute <= 5 || (!internalStats.totalShotsHome && !internalStats.totalShotsAway)) && internalStats.totalShotsHome === null && internalStats.totalShotsAway === null) {
+        console.log('  -> Recien iniciado, sin datos aun\n');
+        continue;
+      }
 
-    const justStarted = m.minute <= 5 || (!internalStats.totalShotsHome && !internalStats.totalShotsAway);
-    if (justStarted && internalStats.totalShotsHome === null && internalStats.totalShotsAway === null) {
-      console.log('  -> Reci\u00e9n iniciado, sin datos a\u00fan\n');
-      continue;
+      analyzed.push({
+        rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
+        league: '', matchId: m.url, minute: m.minute || 0,
+        scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
+        stats: internalStats
+      });
     }
 
-    analyzed.push({
-      rawName: displayName,
-      teamHome: m.homeTeam,
-      teamAway: m.awayTeam,
-      league: '',
-      matchId: m.url,
-      minute: m.minute || 0,
-      scoreHome: m.scoreHome ?? 0,
-      scoreAway: m.scoreAway ?? 0,
-      stats: internalStats
-    });
-  }
+    const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league))).sort((a, b) => b.score - a.score);
 
-  const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league))).sort((a, b) => b.score - a.score);
+    const now = new Date().toISOString();
+    const newPredictions = ranked.map(r => ({
+      id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
+      teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
+      analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
+      predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
+      finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null
+    }));
+    predictions.push(...newPredictions);
+    savePredictions(predictions);
+    weights.stats.predictionsCount += newPredictions.length;
+    saveWeights(weights);
+    console.log('  -> ' + newPredictions.length + ' predicciones guardadas\n');
 
-  const now = new Date().toISOString();
-  const newPredictions = ranked.map(r => ({
-    id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league, timestamp: now,
-    analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-    predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-    finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null
-  }));
-  predictions.push(...newPredictions);
-  savePredictions(predictions);
-  weights.stats.predictionsCount += newPredictions.length;
-  saveWeights(weights);
-  console.log('  -> ' + newPredictions.length + ' predicciones guardadas\n');
+    console.log('='.repeat(64));
+    console.log('  PROXIMO GOL — ANALISIS EN VIVO (Flashscore)');
+    console.log('='.repeat(64) + '\n');
 
-  console.log('='.repeat(64));
-  console.log('  PR\u00d3XIMO GOL — AN\u00c1LISIS EN VIVO (Flashscore)');
-  console.log('='.repeat(64) + '\n');
+    if (ranked.length > 0) {
+      ranked.forEach((r, i) => {
+        const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
+        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
+        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
+        console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
+        console.log('     ' + r.timeWindow);
+        console.log('     ' + r.verdict + r.whoText);
+        const xgS = r.stats.xgHome !== null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
+        const sotS = r.stats.sotHome !== null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
+        const bcS = r.stats.bigChancesHome !== null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
+        const boxS = r.stats.shotsInsideBoxHome !== null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
+        const woodS = r.stats.hitWoodworkHome !== null ? r.stats.hitWoodworkHome + '-' + r.stats.hitWoodworkAway : '';
+        const xgotS = r.stats.xgotHome !== null ? r.stats.xgotHome.toFixed(2) + '-' + r.stats.xgotAway.toFixed(2) : '';
+        const xaS = r.stats.xgHomeA !== null ? 'xA:' + r.stats.xgHomeA.toFixed(2) + '-' + r.stats.xgAwayA.toFixed(2) : '';
+        const touchesS = r.stats.touchesOppBoxHome !== null ? 'Touches:' + r.stats.touchesOppBoxHome + '-' + r.stats.touchesOppBoxAway : '';
+        const posS = r.stats.possessionHome !== null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
+        console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Box:' + boxS + (woodS ? ' Palo:' + woodS : '') + (xgotS ? ' xGOT:' + xgotS : '') + ' Pos:' + posS);
+        if (xaS || touchesS) console.log('     ' + [xaS, touchesS].filter(Boolean).join(' '));
+        if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
+      });
 
-  if (ranked.length === 0) {
-    console.log('  No se pudieron analizar partidos.\n');
-  } else {
-    ranked.forEach((r, i) => {
-      const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
-      const barLen = Math.round(r.score / 5);
-      const bar = '#'.repeat(barLen) + '-'.repeat(20 - barLen);
-      console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
-      console.log('     ' + r.teamHome + ' vs ' + r.teamAway);
-      console.log('     ' + (r.minute ? r.minute + "'" : '') + ' | ' + r.scoreHome + ' - ' + r.scoreAway);
-      console.log('     ' + r.timeWindow);
-      console.log('     ' + r.verdict + r.whoText);
-      const xgS = r.stats.xgHome !== null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
-      const sotS = r.stats.sotHome !== null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
-      const bcS = r.stats.bigChancesHome !== null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
-      const corS = r.stats.cornersHome !== null ? r.stats.cornersHome + '-' + r.stats.cornersAway : '?-?';
-      const posS = r.stats.possessionHome !== null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
-      console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Esq:' + corS + ' Pos:' + posS);
-      if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
-    });
+      const top = ranked[0];
+      if (top.score >= 40) {
+        console.log('\n  RECOMENDACION PRINCIPAL:');
+        console.log('     ' + top.teamHome + ' vs ' + top.teamAway);
+        console.log('     Confianza: ' + top.score + '% — ' + top.timeWindow);
+        console.log('     ' + top.verdict);
+        if (top.whoText) console.log('     ' + top.whoText.trim());
+      } else {
+        console.log('\n  Sin recomendaciones solidas ahora.');
+      }
+    }
 
-    const top = ranked[0];
-    if (top.score >= 40) {
-      console.log('\n  RECOMENDACI\u00d3N PRINCIPAL:');
-      console.log('     ' + top.teamHome + ' vs ' + top.teamAway);
-      console.log('     Confianza: ' + top.score + '% — ' + top.timeWindow);
-      console.log('     ' + top.verdict);
-      if (top.whoText) console.log('     ' + top.whoText.trim());
-    } else {
-      console.log('\n  Sin recomendaciones s\u00f3lidas ahora.');
+    // --- Telegram alert ---
+    if (ranked.length > 0 && ranked[0].score >= 70) {
+      const msg = notify.buildMessage(ranked);
+      if (msg) {
+        console.log('\nEnviando alerta Telegram...');
+        await notify.sendTelegram(msg);
+        writeSummary('- Alerta: ENVIADA');
+      }
+    } else if (ranked.length > 0) {
+      console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
+      writeSummary('- Alerta: No enviada (umbral no alcanzado)');
     }
   }
 
-  writeSummary('- Mejor score: ' + (ranked.length > 0 ? ranked[0].score + '%' : 'N/A'));
-  if (ranked.length > 0) writeSummary('- Top: ' + ranked[0].teamHome + ' vs ' + ranked[0].teamAway);
-
-  if (ranked.length > 0 && ranked[0].score >= 70) {
-    const msg = notify.buildMessage(ranked);
-    if (msg) {
-      console.log('\nEnviando alerta Telegram...');
-      await notify.sendTelegram(msg);
-      writeSummary('- Alerta: ENVIADA');
-    } else {
-      writeSummary('- Alerta: buildMessage null');
-    }
-  } else if (ranked.length > 0) {
-    console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
-    writeSummary('- Alerta: No enviada (umbral no alcanzado)');
+  // --- APRENDIZAJE: verificar predicciones anteriores contra datos actuales ---
+  console.log('\n[3/3] Aprendiendo de predicciones anteriores...');
+  const learningResult = await runLearning(liveData);
+  weights = learningResult.weights;
+  if (learningResult.adjustments > 0) {
+    console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
   }
+  writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
 }
 
 main().catch(err => {
