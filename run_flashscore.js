@@ -387,6 +387,11 @@ async function main() {
   const SLEEP_MS = 12 * 60 * 1000;
 
   for (let loop = 0; loop < MAX_LOOPS; loop++) {
+    // En la nube: traer ultimos cambios (alertas.json, pesos)
+    if (process.env.CI) {
+      try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 10000 }); } catch {}
+    }
+
     console.log('\n' + '='.repeat(64));
     console.log('  CICLO ' + (loop + 1) + '/' + MAX_LOOPS + ' — ' + new Date().toISOString());
     console.log('='.repeat(64));
