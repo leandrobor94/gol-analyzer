@@ -567,6 +567,15 @@ async function main() {
   if (!process.env.CI) {
     fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
     console.log('\nEjecucion local registrada. La nube respetara los proximos 10 min.');
+  } else {
+    // En la nube: subir pesos para que la próxima ejecución recuerde qué ya alertó
+    try {
+      const cp = require('child_process');
+      cp.execSync('git config user.email "bot@sofastats"', { stdio: 'ignore', timeout: 5000 });
+      cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
+      cp.execSync('git add weights.json alertas.json', { stdio: 'ignore', timeout: 5000 });
+      cp.execSync('git diff --cached --quiet || (git commit -m "sync pesos" && git push)', { stdio: 'ignore', timeout: 15000 });
+    } catch {}
   }
 }
 
