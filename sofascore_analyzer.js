@@ -308,7 +308,7 @@ function extractStatsFromApi(statisticsItems) {
 // ─── Obtener partidos + estadísticas vía API (sesión del browser) ───
 async function fetchLiveMatchesViaApi(page, maxMatches) {
   return await page.evaluate(async (max) => {
-    const liveResp = await fetch('https://api.sofascore.com/api/v1/sport/football/events/live');
+    const liveResp = await fetch('https://www.sofascore.com/api/v1/sport/football/events/live');
     const live = await liveResp.json();
     const events = (live.events || []).slice(0, max);
     const result = [];
@@ -351,14 +351,16 @@ async function main() {
 
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-blink-features=AutomationControlled']
   });
   const context = await browser.newContext({
     viewport: { width: 1920, height: 1080 },
     locale: 'es-CO',
-    timezoneId: 'America/Bogota'
+    timezoneId: 'America/Bogota',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
   });
   const page = await context.newPage();
+  await page.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => false }); });
   const analyzed = [];
 
   try {
@@ -381,6 +383,15 @@ async function main() {
     if (liveData.length === 0) {
       console.log('  No hay partidos en vivo ahora.');
       writeSummary('- Estado: sin partidos en vivo');
+      const urlActual = page.url();
+      const titleActual = await page.title();
+      console.log(`  URL: ${urlActual}`);
+      console.log(`  Title: ${titleActual}`);
+      const visibleText = await page.evaluate(() => {
+        return document.body.innerText.split('\n').filter(l => l.trim()).slice(0, 15).join(' | ');
+      });
+      console.log(`  Texto visible: ${visibleText.slice(0, 300)}`);
+      await page.screenshot({ path: 'debug_no_matches.png', fullPage: false });
       await browser.close();
       return;
     }
