@@ -574,7 +574,7 @@ async function main() {
       cp.execSync('git config user.email "bot@sofastats"', { stdio: 'ignore', timeout: 5000 });
       cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
       cp.execSync('git add weights.json alertas.json', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git diff --cached --quiet || (git commit -m "sync pesos" && git push)', { stdio: 'ignore', timeout: 15000 });
+      cp.execSync('git diff --cached --quiet || (git commit -m "sync pesos [skip ci]" && git push)', { stdio: 'ignore', timeout: 15000 });
     } catch {}
   }
 }

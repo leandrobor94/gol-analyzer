@@ -1,10 +1,7 @@
 name: Analizar partidos y alertar
 
 on:
-  push:
-    branches: [main]
   schedule:
-    # 1 vez por hora — el script它 mismo espera 10 min y repite 5 veces
     - cron: '0 * * * *'
   workflow_dispatch:
 

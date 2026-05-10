@@ -7,7 +7,7 @@ findstr "true" alertas.json >nul && goto :off || goto :on
 echo {"enabled":false}> alertas.json
 echo  ALERTAS APAGADAS
 git add alertas.json >nul 2>nul
-git commit -m "alertas off" >nul 2>nul
+git commit -m "alertas [skip ci]" >nul 2>nul
 git push >nul 2>nul
 goto :end
 
@@ -15,7 +15,7 @@ goto :end
 echo {"enabled":true}> alertas.json
 echo  ALERTAS ENCENDIDAS
 git add alertas.json >nul 2>nul
-git commit -m "alertas on" >nul 2>nul
+git commit -m "alertas [skip ci]" >nul 2>nul
 git push >nul 2>nul
 goto :end
 
