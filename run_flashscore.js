@@ -327,6 +327,8 @@ function alertsEnabled() {
   } catch {}
   return true;
 }
+
+async function main() {
   // Si es nube y hubo ejecución local hace < 10 min, saltar
   if (process.env.CI) {
     try {
@@ -493,30 +495,6 @@ function alertsEnabled() {
             saveWeights(weights);
             writeSummary('- Alerta: ENVIADA');
           }
-        }
-      }
-    } else if (ranked.length > 0) {
-      console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
-      writeSummary('- Alerta: No enviada (umbral no alcanzado)');
-    }
-
-      if (!shouldAlert) {
-        console.log('\nAlerta omitida: mismo partido hace ' + Math.round((Date.now() - lastAlert.timestamp) / 60000) + ' min reales, ' + (ranked[0].minute - lastAlert.minute) + ' min de juego.');
-        writeSummary('- Alerta: Omitida (dedup)');
-      } else {
-        const msg = notify.buildMessage(ranked);
-        if (msg) {
-          console.log('\nEnviando alerta Telegram...');
-          await notify.sendTelegram(msg);
-          weights.alertedMatches = weights.alertedMatches || {};
-          weights.alertedMatches[alertKey] = { timestamp: Date.now(), minute: ranked[0].minute || 0 };
-          // Limpiar entradas viejas (> 2h)
-          const cutoff = Date.now() - 2 * 60 * 60 * 1000;
-          for (const [k, v] of Object.entries(weights.alertedMatches)) {
-            if (v.timestamp < cutoff) delete weights.alertedMatches[k];
-          }
-          saveWeights(weights);
-          writeSummary('- Alerta: ENVIADA');
         }
       }
     } else if (ranked.length > 0) {
