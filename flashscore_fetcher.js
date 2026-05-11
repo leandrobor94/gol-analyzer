@@ -4,55 +4,38 @@ async function getLiveMatchLinks(page) {
   await page.goto('https://www.flashscore.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
   await page.waitForTimeout(5000);
 
-  const debug = await page.evaluate(() => {
-    const items = Array.from(document.querySelectorAll('a[href*="/match/"]'));
+  const items = await page.evaluate(() => {
+    const links = Array.from(document.querySelectorAll('a[href*="/match/"]'));
     const seen = new Set();
     const results = [];
-    items.forEach(a => {
+    links.forEach(a => {
       const href = a.href.split('?')[0];
       if (!seen.has(href)) {
         seen.add(href);
         const parent = a.closest('[class*="match"]');
         const parentText = parent ? parent.innerText : a.innerText;
         const teamLinks = parent ? Array.from(parent.querySelectorAll('a[href*="/team/"]')) : [];
-        const text = parentText?.replace(/\s+/g, ' ')?.trim();
         results.push({
           href: href,
-          text: text,
+          text: parentText?.replace(/\s+/g, ' ')?.trim(),
           homeTeam: teamLinks[0]?.textContent?.trim() || '',
           awayTeam: teamLinks[1]?.textContent?.trim() || ''
         });
       }
     });
-    const filtered = results.filter(r => /\d+[''\u2019]/.test(r.text) || r.text?.includes('Half Time'));
-    return { results, filtered, samples: results.slice(0, 8).map(r => r.text) };
+    return results;
   });
-  console.log('  Debug: ' + debug.results.length + ' items encontrados, ' + debug.filtered.length + ' pasaron el filtro');
-  console.log('  Primeros textos:\n' + debug.samples.map((t, i) => '    [' + i + '] ' + t).join('\n'));
 
-  // Live matches: empiezan con minuto 1-120 y tienen marcador numerico
-  const liveMatches = debug.results.filter(r => {
+  // Live: empieza con minuto y tiene marcador (Finished/Scheduled no)
+  const live = items.filter(r => {
     if (!r.text) return false;
-    // Terminado o futuro -> no
     if (/^Finished/i.test(r.text)) return false;
     if (/^\d{1,2}:\d{2}\s/.test(r.text)) return false;
-    // Empieza con minuto (1-180) seguido de espacio?
     if (!/^\d{1,3}\s/.test(r.text)) return false;
-    // Tiene marcador numerico (no "- -")?
-    const scoreMatch = r.text.match(/(\d+)\s+(\d+)$/);
-    if (!scoreMatch) return false;
-    // El primer numero no debe ser hora (debe ser < 24 o el texto no tiene :)
-    const firstToken = parseInt(r.text.match(/^(\d+)/)[1]);
-    if (firstToken > 0) return true;
-    return false;
+    return /\d+\s+\d+$/.test(r.text);
   });
-  if (liveMatches.length > 0) {
-    console.log('  -> Detectados ' + liveMatches.length + ' en vivo');
-    return liveMatches;
-  }
-  if (debug.filtered.length > 0) return debug.filtered;
-  console.log('  Flashscore cambio formato — intentando sin filtro');
-  return debug.results;
+  console.log('  -> ' + live.length + ' en vivo de ' + items.length + ' items');
+  return live;
 }
 
 async function extractMatchStats(page, matchUrl) {
@@ -91,8 +74,8 @@ async function extractMatchStats(page, matchUrl) {
       scoreAway = parseInt(scoreMatch[2]);
     }
 
-    // Find minute: look for patterns like "70'" or "HALF TIME" or "Half Time"
-    const minuteMatch = bodyText.match(/(\d+)[''\u2019]/);
+    // Find minute: busca (\d+) seguido de ', ', ', ′ (prime) o similar
+    const minuteMatch = bodyText.match(/(\d+)\s*[''\u2019\u2032]/);
     if (minuteMatch) {
       minute = parseInt(minuteMatch[1]);
       status = minute + "'";
