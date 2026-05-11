@@ -1,1 +1,58 @@
-{}
+{
+  "Nueva Chicago": {
+    "matchesTracked": 1,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 1,
+    "goalsWhenNotPredicted": 1,
+    "totalXgFor": 0,
+    "totalXgAgainst": 0,
+    "totalSotFor": 0,
+    "totalShotsInsideBoxFor": 0,
+    "goalsInLast15": 0,
+    "matchesOver70": 0,
+    "totalGoalsScored": 0
+  },
+  "Almagro": {
+    "matchesTracked": 1,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 1,
+    "goalsWhenNotPredicted": 1,
+    "totalXgFor": 0,
+    "totalXgAgainst": 0,
+    "totalSotFor": 0,
+    "totalShotsInsideBoxFor": 0,
+    "goalsInLast15": 0,
+    "matchesOver70": 0,
+    "totalGoalsScored": 0
+  },
+  "Flamengo W": {
+    "matchesTracked": 2,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 2,
+    "goalsWhenNotPredicted": 1,
+    "totalXgFor": 0,
+    "totalXgAgainst": 0,
+    "totalSotFor": 3,
+    "totalShotsInsideBoxFor": 0,
+    "goalsInLast15": 0,
+    "matchesOver70": 0,
+    "totalGoalsScored": 0
+  },
+  "Ferroviaria W": {
+    "matchesTracked": 2,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 2,
+    "goalsWhenNotPredicted": 1,
+    "totalXgFor": 0,
+    "totalXgAgainst": 0,
+    "totalSotFor": 3,
+    "totalShotsInsideBoxFor": 0,
+    "goalsInLast15": 0,
+    "matchesOver70": 0,
+    "totalGoalsScored": 0
+  }
+}
