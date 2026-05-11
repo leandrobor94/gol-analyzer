@@ -6,10 +6,9 @@ async function getLiveMatchLinks(page) {
 
   const debug = await page.evaluate(() => {
     const items = Array.from(document.querySelectorAll('a[href*="/match/"]'));
-    console.log('[DEBUG] Links con /match/ encontrados: ' + items.length);
     const seen = new Set();
     const results = [];
-    items.forEach((a, i) => {
+    items.forEach(a => {
       const href = a.href.split('?')[0];
       if (!seen.has(href)) {
         seen.add(href);
@@ -17,28 +16,27 @@ async function getLiveMatchLinks(page) {
         const parentText = parent ? parent.innerText : a.innerText;
         const teamLinks = parent ? Array.from(parent.querySelectorAll('a[href*="/team/"]')) : [];
         const text = parentText?.replace(/\s+/g, ' ')?.trim();
-        if (results.length < 8) {
-          const localTime = new Date().toLocaleString('es-CO', { hour: '2-digit', minute: '2-digit' });
-          console.log('[DEBUG] Item ' + results.length + ' texto=' + text);
-          if (teamLinks[0]) console.log('[DEBUG]   home=' + teamLinks[0]?.textContent?.trim());
-          if (teamLinks[1]) console.log('[DEBUG]   away=' + teamLinks[1]?.textContent?.trim());
-        }
         results.push({
           href: href,
-          text: text?.slice(0, 120),
-          fullText: text,
+          text: text,
           homeTeam: teamLinks[0]?.textContent?.trim() || '',
           awayTeam: teamLinks[1]?.textContent?.trim() || ''
         });
       }
     });
-    console.log('[DEBUG] Total items sin duplicar: ' + results.length);
     const filtered = results.filter(r => /\d+[''\u2019]/.test(r.text) || r.text?.includes('Half Time'));
-    console.log('[DEBUG] Items tras filtro minuto: ' + filtered.length);
-    return { results, filtered };
+    return { results, filtered, samples: results.slice(0, 8).map(r => r.text) };
   });
   console.log('  Debug: ' + debug.results.length + ' items encontrados, ' + debug.filtered.length + ' pasaron el filtro');
+  console.log('  Primeros textos:\n' + debug.samples.map((t, i) => '    [' + i + '] ' + t).join('\n'));
 
+  // Intentar detectar nuevo formato: buscar "min " o "’ " o "AP" (added time) o "LIVE"
+  const newLiveRegex = /\d+\s*(min|m\b|['\u2019\u2032])\s*|AP\b|added time|LIVE/i;
+  const newFiltered = debug.results.filter(r => newLiveRegex.test(r.text));
+  if (newFiltered.length > 0) {
+    console.log('  -> Usando nuevo filtro: ' + newFiltered.length + ' en vivo');
+    return newFiltered;
+  }
   if (debug.filtered.length > 0) return debug.filtered;
   console.log('  Flashscore cambio formato — intentando sin filtro');
   return debug.results;
