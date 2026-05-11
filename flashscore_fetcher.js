@@ -16,11 +16,17 @@ async function getLiveMatchLinks(page) {
         const parent = a.closest('[class*="match"]');
         const parentText = parent ? parent.innerText : a.innerText;
         const teamLinks = parent ? Array.from(parent.querySelectorAll('a[href*="/team/"]')) : [];
-        const text = parentText?.replace(/\s+/g, ' ')?.trim()?.slice(0, 120);
-        if (i < 5) console.log('[DEBUG] Link ' + i + ': href=' + href.slice(0, 60) + ' text=' + text);
+        const text = parentText?.replace(/\s+/g, ' ')?.trim();
+        if (results.length < 8) {
+          const localTime = new Date().toLocaleString('es-CO', { hour: '2-digit', minute: '2-digit' });
+          console.log('[DEBUG] Item ' + results.length + ' texto=' + text);
+          if (teamLinks[0]) console.log('[DEBUG]   home=' + teamLinks[0]?.textContent?.trim());
+          if (teamLinks[1]) console.log('[DEBUG]   away=' + teamLinks[1]?.textContent?.trim());
+        }
         results.push({
           href: href,
-          text: text,
+          text: text?.slice(0, 120),
+          fullText: text,
           homeTeam: teamLinks[0]?.textContent?.trim() || '',
           awayTeam: teamLinks[1]?.textContent?.trim() || ''
         });
@@ -32,7 +38,10 @@ async function getLiveMatchLinks(page) {
     return { results, filtered };
   });
   console.log('  Debug: ' + debug.results.length + ' items encontrados, ' + debug.filtered.length + ' pasaron el filtro');
-  return debug.filtered;
+
+  if (debug.filtered.length > 0) return debug.filtered;
+  console.log('  Flashscore cambio formato — intentando sin filtro');
+  return debug.results;
 }
 
 async function extractMatchStats(page, matchUrl) {
