@@ -176,30 +176,43 @@ function verifyPredictions(predictions, liveMatches, teams) {
     if (!isFlashscoreId(pred.id)) continue;
     if (!pred.analysisMinute || pred.analysisMinute < 10) continue;
 
+    let goalHappened, finalScore;
     const liveMatch = liveMatches.find(m =>
       teamsMatch(pred.teamHome, pred.teamAway, m.homeTeam, m.awayTeam)
     );
-    if (!liveMatch) continue;
 
-    const minutesElapsed = (liveMatch.minute || 0) - (pred.analysisMinute || 0);
-    const scoreChanged =
-      (liveMatch.scoreHome !== null && liveMatch.scoreAway !== null) &&
-      (liveMatch.scoreHome !== (pred.scoreAtAnalysis?.home ?? liveMatch.scoreHome) ||
-       liveMatch.scoreAway !== (pred.scoreAtAnalysis?.away ?? liveMatch.scoreAway));
+    if (liveMatch) {
+      const minutesElapsed = (liveMatch.minute || 0) - (pred.analysisMinute || 0);
+      const scoreChanged =
+        (liveMatch.scoreHome !== null && liveMatch.scoreAway !== null) &&
+        (liveMatch.scoreHome !== (pred.scoreAtAnalysis?.home ?? liveMatch.scoreHome) ||
+         liveMatch.scoreAway !== (pred.scoreAtAnalysis?.away ?? liveMatch.scoreAway));
 
-    if (!scoreChanged && minutesElapsed < 10) continue;
+      if (!scoreChanged && minutesElapsed < 10) continue;
 
-    const goalHappened = scoreChanged;
+      goalHappened = scoreChanged;
+      finalScore = { home: liveMatch.scoreHome ?? 0, away: liveMatch.scoreAway ?? 0 };
+    } else if (pred.lastSeenMinute && pred.lastSeenScore) {
+      // Partido ya terminó: usar último estado conocido
+      if (pred.lastSeenMinute < 80) continue; // muy temprano para saber si terminó
+      const scoreChanged =
+        (pred.lastSeenScore.home !== (pred.scoreAtAnalysis?.home ?? 0) ||
+         pred.lastSeenScore.away !== (pred.scoreAtAnalysis?.away ?? 0));
+      goalHappened = scoreChanged;
+      finalScore = pred.lastSeenScore;
+    } else {
+      continue;
+    }
     const prob = (pred.predictedProbability || 0) / 100;
     const predictedGoal = prob >= 0.7;
     const correct = (predictedGoal && goalHappened) || (!predictedGoal && !goalHappened);
 
-    pred.finalScore = { home: liveMatch.scoreHome ?? 0, away: liveMatch.scoreAway ?? 0 };
+    pred.finalScore = finalScore;
     pred.goalAfterAnalysis = goalHappened;
     pred.predictionCorrect = correct;
 
     // Actualizar stats de equipos
-    updateTeamStats(teams, pred, liveMatch);
+    updateTeamStats(teams, pred, liveMatch || { scoreHome: 0, scoreAway: 0 });
     // Actualizar perfil de liga (cargado desde weights)
     // Esto se hace fuera porque necesitamos los weights
 

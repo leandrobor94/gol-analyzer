@@ -470,13 +470,24 @@ async function main() {
       teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
       analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
       predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-      finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null
+      finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
+      lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
     }));
     predictions.push(...newPredictions);
     savePredictions(predictions);
     weights.stats.predictionsCount += newPredictions.length;
     saveWeights(weights);
     console.log('  -> ' + newPredictions.length + ' predicciones guardadas\n');
+
+    // Actualizar lastSeen de predicciones existentes con datos actuales
+    for (const pred of predictions) {
+      if (pred.predictionCorrect !== null) continue;
+      const lm = liveData.find(m => m.url === pred.id);
+      if (lm) {
+        pred.lastSeenMinute = lm.minute;
+        pred.lastSeenScore = { home: lm.scoreHome ?? 0, away: lm.scoreAway ?? 0 };
+      }
+    }
 
     console.log('='.repeat(64));
     console.log('  PROXIMO GOL — ANALISIS EN VIVO (Flashscore)');
