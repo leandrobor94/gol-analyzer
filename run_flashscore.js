@@ -516,9 +516,11 @@ async function main() {
       }
     }
 
-    // --- Telegram alert ---
+    // --- Telegram alert (solo en la nube) ---
     if (ranked.length > 0 && ranked[0].score >= 70) {
-      if (!alertsEnabled()) {
+      if (!process.env.CI) {
+        // Local: no mandar Telegram, ya ves la terminal
+      } else if (!alertsEnabled()) {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
