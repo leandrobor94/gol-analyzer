@@ -338,45 +338,7 @@ function alertsEnabled() {
   return true;
 }
 
-async function checkTelegramCommands() {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  if (!token) return;
-  const offsetFile = path.join(__dirname, 'telegram-offset.txt');
-  let offset = 0;
-  try { offset = parseInt(fs.readFileSync(offsetFile, 'utf8')); } catch {}
-  try {
-    const data = await new Promise((resolve, reject) => {
-      const u = `https://api.telegram.org/bot${token}/getUpdates?offset=${offset + 1}&timeout=5`;
-      require('https').get(u, r => { let d = ''; r.on('data', c => d += c); r.on('end', () => resolve(d)); }).on('error', reject);
-    });
-    const result = JSON.parse(data);
-    if (!result.ok) return;
-    let changed = false;
-    for (const update of result.result) {
-      const text = update.message?.text || '';
-      const chatId = update.message?.chat?.id;
-      if (!chatId) continue;
-      fs.writeFileSync(offsetFile, String(update.update_id));
-      if (text === '/pause') {
-        fs.writeFileSync('alertas.json', JSON.stringify({ enabled: false }));
-        console.log('  Comando Telegram: /pause — alertas desactivadas');
-        changed = true;
-        require('https').get(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=Alertas APAGADAS. Sigo analizando y aprendiendo.`);
-      } else if (text === '/resume') {
-        fs.writeFileSync('alertas.json', JSON.stringify({ enabled: true }));
-        console.log('  Comando Telegram: /resume — alertas activadas');
-        changed = true;
-        require('https').get(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=Alertas ENCENDIDAS.`);
-      } else if (text === '/status') {
-        const status = alertsEnabled() ? 'ENCENDIDAS' : 'APAGADAS';
-        require('https').get(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=Alertas: ${status}`);
-      }
-    }
-  } catch {}
-}
-
 async function main() {
-  await checkTelegramCommands();
 
   // Si es nube y hubo ejecución local hace < 10 min, saltar
   if (process.env.CI) {
