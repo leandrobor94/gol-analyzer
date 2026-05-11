@@ -1,6 +1,5 @@
 node_modules/
 *.png
 *.zip
-predictions.json
 ejecutar.bat
 telegram-offset.txt

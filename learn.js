@@ -26,7 +26,16 @@ function saveJSON(file, data) { fs.writeFileSync(file, JSON.stringify(data, null
 function loadWeights() { return loadJSON(WEIGHTS_FILE, JSON.parse(JSON.stringify(DEFAULT_WEIGHTS))); }
 function saveWeights(w) { w.lastUpdated = new Date().toISOString(); saveJSON(WEIGHTS_FILE, w); }
 function loadPredictions() { return loadJSON(PREDICTIONS_FILE, []); }
-function savePredictions(p) { saveJSON(PREDICTIONS_FILE, p); }
+function savePredictions(p) {
+  // Limpiar predicciones verificadas > 24h para evitar bloat
+  const cutoff = Date.now() - 24 * 60 * 60 * 1000;
+  const filtered = p.filter(pred => {
+    if (pred.predictionCorrect === null) return true; // no verificada, mantener
+    if (pred.timestamp) { const t = new Date(pred.timestamp).getTime(); if (t > cutoff) return true; } // reciente
+    return false; // verificada y vieja, descartar
+  });
+  saveJSON(PREDICTIONS_FILE, filtered);
+}
 function loadTeams() { return loadJSON(TEAMS_FILE, {}); }
 function saveTeams(t) { saveJSON(TEAMS_FILE, t); }
 
@@ -414,4 +423,4 @@ async function runLearning(liveMatches) {
   return { weights, adjustments: 0, insights: [], teams };
 }
 
-module.exports = { runLearning, loadWeights, loadPredictions };
+module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, saveWeights, saveTeams, savePredictions };

@@ -22,15 +22,10 @@
   },
   "byLeague": {},
   "stats": {
-    "predictionsCount": 30,
+    "predictionsCount": 0,
     "correctScore": 0,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-11T00:29:46.970Z",
-  "alertedMatches": {
-    "https://www.flashscore.com/match/football/athletico-pr-UoAxb1Tq/vasco-2RABlYFn/": {
-      "timestamp": 1778459386970,
-      "minute": 45
-    }
-  }
+  "lastUpdated": "2026-05-11T01:14:26.345Z",
+  "alertedMatches": {}
 }

@@ -76,29 +76,29 @@ function flashscoreStatsToInternal(flashStats) {
   const aPct = (name) => parsePct(get(name).away);
 
   return {
-    xgHome: h('Expected goals (xG)'), xgAway: h('Expected goals (xG)'),
-    xgotHome: h('xG on target (xGOT)'), xgotAway: h('xG on target (xGOT)'),
-    sotHome: h('Shots on target'), sotAway: h('Shots on target'),
-    totalShotsHome: h('Total shots'), totalShotsAway: h('Total shots'),
-    shotsInsideBoxHome: h('Shots inside the box'), shotsInsideBoxAway: h('Shots inside the box'),
-    shotsOutsideBoxHome: h('Shots outside the box'), shotsOutsideBoxAway: h('Shots outside the box'),
-    shotsOffTargetHome: h('Shots off target'), shotsOffTargetAway: h('Shots off target'),
-    blockedShotsHome: h('Blocked shots'), blockedShotsAway: h('Blocked shots'),
-    bigChancesHome: h('Big chances'), bigChancesAway: h('Big chances'),
-    hitWoodworkHome: h('Hit the woodwork'), hitWoodworkAway: h('Hit the woodwork'),
-    cornersHome: h('Corner kicks'), cornersAway: h('Corner kicks'),
+      xgHome: h('Expected goals (xG)'), xgAway: a('Expected goals (xG)'),
+    xgotHome: h('xG on target (xGOT)'), xgotAway: a('xG on target (xGOT)'),
+    sotHome: h('Shots on target'), sotAway: a('Shots on target'),
+    totalShotsHome: h('Total shots'), totalShotsAway: a('Total shots'),
+    shotsInsideBoxHome: h('Shots inside the box'), shotsInsideBoxAway: a('Shots inside the box'),
+    shotsOutsideBoxHome: h('Shots outside the box'), shotsOutsideBoxAway: a('Shots outside the box'),
+    shotsOffTargetHome: h('Shots off target'), shotsOffTargetAway: a('Shots off target'),
+    blockedShotsHome: h('Blocked shots'), blockedShotsAway: a('Blocked shots'),
+    bigChancesHome: h('Big chances'), bigChancesAway: a('Big chances'),
+    hitWoodworkHome: h('Hit the woodwork'), hitWoodworkAway: a('Hit the woodwork'),
+    cornersHome: h('Corner kicks'), cornersAway: a('Corner kicks'),
     possessionHome: hPct('Ball possession'), possessionAway: aPct('Ball possession'),
-    touchesOppBoxHome: h('Touches in opposition box'), touchesOppBoxAway: h('Touches in opposition box'),
-    savesHome: h('Goalkeeper saves'), savesAway: h('Goalkeeper saves'),
-    foulsHome: h('Fouls'), foulsAway: h('Fouls'),
-    yellowCardsHome: h('Yellow cards'), yellowCardsAway: h('Yellow cards'),
-    xgHomeA: h('Expected assists (xA)'), xgAwayA: h('Expected assists (xA)'),
+    touchesOppBoxHome: h('Touches in opposition box'), touchesOppBoxAway: a('Touches in opposition box'),
+    savesHome: h('Goalkeeper saves'), savesAway: a('Goalkeeper saves'),
+    foulsHome: h('Fouls'), foulsAway: a('Fouls'),
+    yellowCardsHome: h('Yellow cards'), yellowCardsAway: a('Yellow cards'),
+    xgHomeA: h('Expected assists (xA)'), xgAwayA: a('Expected assists (xA)'),
     passesFinalThirdHome: hPct('Passes in final third'), passesFinalThirdAway: aPct('Passes in final third'),
-    crossesHome: h('Crosses'), crossesAway: h('Crosses'),
-    tacklesHome: h('Tackles'), tacklesAway: h('Tackles'),
-    interceptionsHome: h('Interceptions'), interceptionsAway: h('Interceptions'),
-    errorsLeadingToShotHome: h('Errors leading to shot'), errorsLeadingToShotAway: h('Errors leading to shot'),
-    clearancesHome: h('Clearances'), clearancesAway: h('Clearances')
+    crossesHome: h('Crosses'), crossesAway: a('Crosses'),
+    tacklesHome: h('Tackles'), tacklesAway: a('Tackles'),
+    interceptionsHome: h('Interceptions'), interceptionsAway: a('Interceptions'),
+    errorsLeadingToShotHome: h('Errors leading to shot'), errorsLeadingToShotAway: a('Errors leading to shot'),
+    clearancesHome: h('Clearances'), clearancesAway: a('Clearances')
   };
 }
 
@@ -601,7 +601,7 @@ async function main() {
       const cp = require('child_process');
       cp.execSync('git config user.email "bot@sofastats"', { stdio: 'ignore', timeout: 5000 });
       cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git add weights.json', { stdio: 'ignore', timeout: 5000 });
+      cp.execSync('git add weights.json predictions.json teams.json', { stdio: 'ignore', timeout: 5000 });
       cp.execSync('git diff --cached --quiet || (git commit -m "sync pesos [skip ci]" && git push)', { stdio: 'ignore', timeout: 15000 });
     } catch {}
   }
