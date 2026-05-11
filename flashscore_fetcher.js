@@ -30,12 +30,25 @@ async function getLiveMatchLinks(page) {
   console.log('  Debug: ' + debug.results.length + ' items encontrados, ' + debug.filtered.length + ' pasaron el filtro');
   console.log('  Primeros textos:\n' + debug.samples.map((t, i) => '    [' + i + '] ' + t).join('\n'));
 
-  // Intentar detectar nuevo formato: buscar "min " o "’ " o "AP" (added time) o "LIVE"
-  const newLiveRegex = /\d+\s*(min|m\b|['\u2019\u2032])\s*|AP\b|added time|LIVE/i;
-  const newFiltered = debug.results.filter(r => newLiveRegex.test(r.text));
-  if (newFiltered.length > 0) {
-    console.log('  -> Usando nuevo filtro: ' + newFiltered.length + ' en vivo');
-    return newFiltered;
+  // Live matches: empiezan con minuto 1-120 y tienen marcador numerico
+  const liveMatches = debug.results.filter(r => {
+    if (!r.text) return false;
+    // Terminado o futuro -> no
+    if (/^Finished/i.test(r.text)) return false;
+    if (/^\d{1,2}:\d{2}\s/.test(r.text)) return false;
+    // Empieza con minuto (1-180) seguido de espacio?
+    if (!/^\d{1,3}\s/.test(r.text)) return false;
+    // Tiene marcador numerico (no "- -")?
+    const scoreMatch = r.text.match(/(\d+)\s+(\d+)$/);
+    if (!scoreMatch) return false;
+    // El primer numero no debe ser hora (debe ser < 24 o el texto no tiene :)
+    const firstToken = parseInt(r.text.match(/^(\d+)/)[1]);
+    if (firstToken > 0) return true;
+    return false;
+  });
+  if (liveMatches.length > 0) {
+    console.log('  -> Detectados ' + liveMatches.length + ' en vivo');
+    return liveMatches;
   }
   if (debug.filtered.length > 0) return debug.filtered;
   console.log('  Flashscore cambio formato — intentando sin filtro');
