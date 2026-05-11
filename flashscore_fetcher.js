@@ -75,7 +75,8 @@ async function extractMatchStats(page, matchUrl) {
     }
 
     // Find minute: busca (\d+) seguido de ', ', ', ′ (prime) o similar
-    const minuteMatch = bodyText.match(/(\d+)\s*[''\u2019\u2032]/);
+    let minuteMatch = bodyText.match(/(\d{1,3})\s*[''\u2019\u2032]/);
+    if (!minuteMatch) minuteMatch = bodyText.match(/(?:^|\n)\s*(\d{1,3})\s*[''\u2019\u2032]?\s/);
     if (minuteMatch) {
       minute = parseInt(minuteMatch[1]);
       status = minute + "'";
@@ -110,12 +111,15 @@ async function fetchAllLiveMatches() {
   for (const match of matches) {
     try {
       const result = await extractMatchStats(page, match.href);
+      // Fallback: minuto desde el texto del link (primer numero ej: "27 Ferro...")
+      const textMinute = (match.text?.match(/^(\d{1,3})\s/) || [])[1];
+      const minute = result.minute || (textMinute ? parseInt(textMinute) : 0);
       results.push({
         homeTeam: result.homeTeam || match.homeTeam,
         awayTeam: result.awayTeam || match.awayTeam,
         scoreHome: result.scoreHome,
         scoreAway: result.scoreAway,
-        minute: result.minute || 0,
+        minute: minute,
         status: result.status || '',
         url: match.href,
         stats: result.stats
