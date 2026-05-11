@@ -427,19 +427,28 @@ async function main() {
     const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league), teams)).sort((a, b) => b.score - a.score);
 
     const now = new Date().toISOString();
-    const newPredictions = ranked.map(r => ({
-      id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
-      teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
-      analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-      predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-      finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
-      lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
-    }));
-    predictions.push(...newPredictions);
+    let newCount = 0;
+    for (const r of ranked) {
+      const existing = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
+      if (existing) {
+        existing.lastSeenMinute = r.minute;
+        existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
+      } else {
+        predictions.push({
+          id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
+          teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
+          analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
+          predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
+          finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
+          lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
+        });
+        newCount++;
+      }
+    }
     savePredictions(predictions);
-    weights.stats.predictionsCount += newPredictions.length;
+    weights.stats.predictionsCount += newCount;
     saveWeights(weights);
-    console.log('  -> ' + newPredictions.length + ' predicciones guardadas\n');
+    console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
     // Actualizar lastSeen de predicciones existentes con datos actuales
     for (const pred of predictions) {
