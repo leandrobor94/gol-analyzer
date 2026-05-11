@@ -4,27 +4,35 @@ async function getLiveMatchLinks(page) {
   await page.goto('https://www.flashscore.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
   await page.waitForTimeout(5000);
 
-  return await page.evaluate(() => {
+  const debug = await page.evaluate(() => {
     const items = Array.from(document.querySelectorAll('a[href*="/match/"]'));
+    console.log('[DEBUG] Links con /match/ encontrados: ' + items.length);
     const seen = new Set();
     const results = [];
-    items.forEach(a => {
+    items.forEach((a, i) => {
       const href = a.href.split('?')[0];
       if (!seen.has(href)) {
         seen.add(href);
         const parent = a.closest('[class*="match"]');
         const parentText = parent ? parent.innerText : a.innerText;
         const teamLinks = parent ? Array.from(parent.querySelectorAll('a[href*="/team/"]')) : [];
+        const text = parentText?.replace(/\s+/g, ' ')?.trim()?.slice(0, 120);
+        if (i < 5) console.log('[DEBUG] Link ' + i + ': href=' + href.slice(0, 60) + ' text=' + text);
         results.push({
           href: href,
-          text: parentText?.replace(/\s+/g, ' ')?.trim()?.slice(0, 120),
+          text: text,
           homeTeam: teamLinks[0]?.textContent?.trim() || '',
           awayTeam: teamLinks[1]?.textContent?.trim() || ''
         });
       }
     });
-    return results.filter(r => /\d+[''\u2019]/.test(r.text) || r.text?.includes('Half Time'));
+    console.log('[DEBUG] Total items sin duplicar: ' + results.length);
+    const filtered = results.filter(r => /\d+[''\u2019]/.test(r.text) || r.text?.includes('Half Time'));
+    console.log('[DEBUG] Items tras filtro minuto: ' + filtered.length);
+    return { results, filtered };
   });
+  console.log('  Debug: ' + debug.results.length + ' items encontrados, ' + debug.filtered.length + ' pasaron el filtro');
+  return debug.filtered;
 }
 
 async function extractMatchStats(page, matchUrl) {
