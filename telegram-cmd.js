@@ -38,11 +38,16 @@ https.get('https://api.telegram.org/bot' + token + '/getUpdates?offset=' + (offs
           https.get('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chatId + '&text=Alertas: ' + (s.enabled ? 'ENCENDIDAS' : 'APAGADAS'));
         }
       }
+      // Confirmar updates en Telegram para que no se re-procesen aunque falle el push
+      if (r.result.length > 0) {
+        const lastId = r.result[r.result.length - 1].update_id;
+        https.get('https://api.telegram.org/bot' + token + '/getUpdates?offset=' + (lastId + 1) + '&timeout=1');
+      }
       if (changed) {
         cp.execSync('git config user.email "bot@sofastats"', { stdio: 'ignore' });
         cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore' });
-        cp.execSync('git add alertas.json telegram-offset.txt', { stdio: 'ignore' });
-        cp.execSync('git diff --cached --quiet || (git commit -m "telegram cmd [skip ci]" && git push)', { stdio: 'ignore', timeout: 15000 });
+        cp.execSync('git add -f alertas.json telegram-offset.txt', { stdio: 'ignore' });
+        cp.execSync('git diff --cached --quiet || (git commit -m "telegram cmd [skip ci]" && git push)', { stdio: 'ignore', timeout: 30000 });
       }
     } catch(e) { console.log('Error: ' + e.message); }
   });
