@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { fetchAllLiveMatches } = require('./flashscore_fetcher');
+const { fetchAllLiveMatches, verifyFinishedMatch } = require('./flashscore_fetcher');
 const { runLearning } = require('./learn');
 const notify = require('./notify');
 
@@ -551,6 +551,39 @@ async function main() {
     console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
   }
   writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
+
+  // --- VERIFICAR PARTIDOS TERMINADOS ---
+  const pendingVerify = predictions.filter(p =>
+    p.predictionCorrect === null &&
+    p.analysisMinute >= 10 &&
+    !liveData.find(m => m.url === p.id)
+  );
+  if (pendingVerify.length > 0) {
+    console.log('\n[4/4] Verificando ' + pendingVerify.length + ' partidos terminados...');
+    const { chromium } = require('playwright');
+    const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
+    const context = await browser.newContext({ locale: 'es-CO' });
+    const page = await context.newPage();
+    let verifiedCount = 0;
+    for (const pred of pendingVerify) {
+      const score = await verifyFinishedMatch(page, pred.id);
+      if (score) {
+        const scoreChanged = score.home !== (pred.scoreAtAnalysis?.home ?? 0) || score.away !== (pred.scoreAtAnalysis?.away ?? 0);
+        pred.finalScore = score;
+        pred.goalAfterAnalysis = scoreChanged;
+        const prob = (pred.predictedProbability || 0) / 100;
+        const predictedGoal = prob >= 0.7;
+        pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
+        console.log('  ' + (pred.predictionCorrect ? '✓' : '✗') + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
+        verifiedCount++;
+      } else {
+        console.log('  ? ' + pred.match + ' | no se pudo obtener resultado');
+      }
+    }
+    await browser.close();
+    if (verifiedCount > 0) savePredictions(predictions);
+    console.log('  Verificados: ' + verifiedCount);
+  }
 
   if (liveData.length === 0) {
     console.log('  Sin partidos — no se necesita seguir. Saliendo del self-loop.');

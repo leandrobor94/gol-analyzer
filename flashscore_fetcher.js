@@ -133,7 +133,24 @@ async function fetchAllLiveMatches() {
   return results;
 }
 
-module.exports = { fetchAllLiveMatches };
+async function verifyFinishedMatch(page, matchUrl) {
+  try {
+    await page.goto(matchUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    await page.waitForTimeout(3000);
+    return await page.evaluate(() => {
+      const title = document.title;
+      const titleScore = title.match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/);
+      if (titleScore) { const h=+titleScore[1], a=+titleScore[2]; if (h<50&&a<50) return {home:h,away:a}; }
+      const el = document.querySelector('[data-testid*="score"]') || document.querySelector('.detailScore__wrapper');
+      if (el) { const m = el.textContent.trim().match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/); if (m) { const h=+m[1],a=+m[2]; if (h<50&&a<50) return {home:h,away:a}; } }
+      const scores = [...document.body.innerText.matchAll(/(\d{1,2})\s*[-–]\s*(\d{1,2})/g)];
+      for (const s of scores) { const h=+s[1],a=+s[2]; if (h<50&&a<50) return {home:h,away:a}; }
+      return null;
+    });
+  } catch { return null; }
+}
+
+module.exports = { fetchAllLiveMatches, verifyFinishedMatch };
 
 if (require.main === module) {
   fetchAllLiveMatches().then(results => {
