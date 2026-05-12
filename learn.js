@@ -183,7 +183,12 @@ function verifyPredictions(predictions, liveMatches, teams) {
     if (pred.predictionCorrect !== null) continue;
     if (pred.finalScore !== null) continue;
     if (!isFlashscoreId(pred.id)) continue;
-    if (!pred.analysisMinute || pred.analysisMinute < 10) continue;
+    if (!pred.analysisMinute) continue;
+    // Si no han pasado 15 min reales, muy fresco para verificar
+    if (pred.timestamp) {
+      const elapsed = (Date.now() - new Date(pred.timestamp).getTime()) / 60000;
+      if (elapsed < 15) continue;
+    }
 
     let goalHappened, finalScore;
     const liveMatch = liveMatches.find(m =>

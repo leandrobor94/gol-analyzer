@@ -553,11 +553,17 @@ async function main() {
   writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
 
   // --- VERIFICAR PARTIDOS TERMINADOS ---
-  const pendingVerify = predictions.filter(p =>
-    p.predictionCorrect === null &&
-    p.analysisMinute >= 10 &&
-    !liveData.find(m => m.url === p.id)
-  );
+  const pendingVerify = predictions.filter(p => {
+    if (p.predictionCorrect !== null) return false;
+    if (liveData.find(m => m.url === p.id)) return false;
+    if (p.analysisMinute && p.analysisMinute >= 10) return true;
+    // Si analysisMinute < 10 pero pasaron > 30 min reales, verificar igual
+    if (p.timestamp) {
+      const elapsed = (Date.now() - new Date(p.timestamp).getTime()) / 60000;
+      return elapsed >= 30;
+    }
+    return false;
+  });
   if (pendingVerify.length > 0) {
     console.log('\n[4/4] Verificando ' + pendingVerify.length + ' partidos terminados...');
     const { chromium } = require('playwright');
