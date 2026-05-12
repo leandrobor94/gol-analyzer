@@ -433,6 +433,17 @@ async function main() {
       if (existing) {
         existing.lastSeenMinute = r.minute;
         existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
+        // Si la probabilidad cambio drasticamente (+-20pp) o cruzo el umbral 70%, 
+        // actualizar para no perder predicciones relevantes
+        const diff = Math.abs(r.score - existing.predictedProbability);
+        if (diff > 20 || (r.score >= 70) !== (existing.predictedProbability >= 70)) {
+          existing.predictedProbability = r.score;
+          existing.predictedScorer = r.predictedScorer;
+          existing.predictedTimeWindow = r.timeWindow;
+          existing.stats = r.stats;
+          existing.scoreAtAnalysis = { home: r.scoreHome, away: r.scoreAway };
+          existing.analysisMinute = r.minute;
+        }
       } else {
         predictions.push({
           id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
@@ -553,6 +564,8 @@ async function main() {
   writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
 
   // --- VERIFICAR PARTIDOS TERMINADOS ---
+  // Recargar predictions por si learn.js las modificó
+  predictions = loadPredictions();
   const pendingVerify = predictions.filter(p => {
     if (p.predictionCorrect !== null) return false;
     if (liveData.find(m => m.url === p.id)) return false;
