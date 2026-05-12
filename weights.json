@@ -2,21 +2,21 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 31.4,
-    "shotsOnTarget": 26.2,
-    "shotsInsideBox": 18.8,
-    "bigChances": 15.8,
-    "totalShots": 10.5,
-    "xgot": 12.5,
-    "hitWoodwork": 10.5,
-    "xA": 8.4,
-    "touchesOppBox": 8.4,
-    "scoreNeeds": 10.5,
-    "timePressure": 8.4,
-    "corners": 5.3,
-    "possession": 5.3,
-    "saves": 5.3,
-    "goalsScored": -10.4,
+    "xg": 33,
+    "shotsOnTarget": 27.5,
+    "shotsInsideBox": 19.7,
+    "bigChances": 16.6,
+    "totalShots": 11,
+    "xgot": 13.1,
+    "hitWoodwork": 11,
+    "xA": 8.8,
+    "touchesOppBox": 8.8,
+    "scoreNeeds": 11,
+    "timePressure": 8.8,
+    "corners": 5.6,
+    "possession": 5.6,
+    "saves": 5.6,
+    "goalsScored": -10.9,
     "teamFactor": 8,
     "leagueFactor": 5
   },
@@ -42,13 +42,24 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
+    },
+    "cerro largo jgsDvTBl": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.020000000000000018,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
     }
   },
   "stats": {
-    "predictionsCount": 37,
+    "predictionsCount": 43,
     "correctScore": 1,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-11T23:39:09.242Z",
+  "lastUpdated": "2026-05-12T02:22:46.280Z",
   "alertedMatches": {}
 }
