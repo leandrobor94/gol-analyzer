@@ -2,69 +2,25 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 34,
-    "shotsOnTarget": 28.3,
-    "shotsInsideBox": 20.2,
-    "bigChances": 17.3,
-    "totalShots": 11.6,
-    "xgot": 13.6,
-    "hitWoodwork": 11.6,
-    "xA": 9.2,
-    "touchesOppBox": 9.2,
-    "scoreNeeds": 11.6,
-    "timePressure": 9.2,
-    "corners": 5.9,
-    "possession": 5.9,
-    "saves": 5.9,
-    "goalsScored": -11.4,
+    "xg": 39.7,
+    "shotsOnTarget": 33.4,
+    "shotsInsideBox": 23.7,
+    "bigChances": 20.1,
+    "totalShots": 13.4,
+    "xgot": 16,
+    "hitWoodwork": 13.4,
+    "xA": 10.7,
+    "touchesOppBox": 10.7,
+    "scoreNeeds": 13.4,
+    "timePressure": 10.7,
+    "corners": 6.8,
+    "possession": 6.8,
+    "saves": 6.8,
+    "goalsScored": -13.3,
     "teamFactor": 8,
     "leagueFactor": 5
   },
   "byLeague": {
-    "almagro 002DshSN": {
-      "matchesTracked": 3,
-      "totalGoals": 5,
-      "totalXg": 0,
-      "totalSot": 0,
-      "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.98,
-      "correctAt70": 0,
-      "falsePositives": 0,
-      "falseNegatives": 3
-    },
-    "cr flamengo b18FMqgM": {
-      "matchesTracked": 4,
-      "totalGoals": 4,
-      "totalXg": 0,
-      "totalSot": 12,
-      "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.08000000000000007,
-      "correctAt70": 0,
-      "falsePositives": 0,
-      "falseNegatives": 2
-    },
-    "cerro largo jgsDvTBl": {
-      "matchesTracked": 2,
-      "totalGoals": 6,
-      "totalXg": 0,
-      "totalSot": 0,
-      "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.040000000000000036,
-      "correctAt70": 0,
-      "falsePositives": 0,
-      "falseNegatives": 2
-    },
-    "cerro porteno C4uAqERi": {
-      "matchesTracked": 4,
-      "totalGoals": 0,
-      "totalXg": 0,
-      "totalSot": 0,
-      "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.36000000000000015,
-      "correctAt70": 0,
-      "falsePositives": 4,
-      "falseNegatives": 0
-    },
     "botafogo rj 8InmcPIF": {
       "matchesTracked": 1,
       "totalGoals": 1,
@@ -87,6 +43,17 @@
       "falsePositives": 0,
       "falseNegatives": 0
     },
+    "almagro 002DshSN": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.58,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 2
+    },
     "bucaramanga I1DMa0eR": {
       "matchesTracked": 1,
       "totalGoals": 2,
@@ -94,6 +61,28 @@
       "totalSot": 0,
       "totalShotsInsideBox": 0,
       "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "cr flamengo b18FMqgM": {
+      "matchesTracked": 2,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.040000000000000036,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "cerro largo jgsDvTBl": {
+      "matchesTracked": 1,
+      "totalGoals": 5,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.020000000000000018,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -141,13 +130,56 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
+    },
+    "cerro porteno C4uAqERi": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.12000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "AFC U17 Asian Cup": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "La Liga": {
+      "matchesTracked": 1,
+      "totalGoals": 5,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Super League Greece": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
-    "predictionsCount": 43,
-    "correctScore": 3,
+    "predictionsCount": 0,
+    "correctScore": 5,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-13T00:13:30.346Z",
-  "alertedMatches": {}
+  "lastUpdated": "2026-05-13T00:18:35.336Z"
 }
