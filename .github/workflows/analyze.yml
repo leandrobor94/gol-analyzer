@@ -37,3 +37,16 @@ jobs:
           name: debug-screenshot
           path: debug_screenshot.png
           if-no-files-found: ignore
+
+      - name: Commit y push de cambios (aprendizaje persistente)
+        run: |
+          git config user.name "sofastats-bot"
+          git config user.email "sofastats-bot@users.noreply.github.com"
+          git add predictions.json weights.json teams.json last-local-run.json alertas.json telegram-offset.txt
+          if git diff --cached --quiet; then
+            echo "Sin cambios nuevos"
+          else
+            git commit -m "auto: aprendizaje ronda ${{ github.run_id }}"
+            git push
+          fi
+        shell: bash
