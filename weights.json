@@ -2,21 +2,21 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 39.7,
-    "shotsOnTarget": 33.4,
-    "shotsInsideBox": 23.7,
-    "bigChances": 20.1,
-    "totalShots": 13.4,
-    "xgot": 16,
-    "hitWoodwork": 13.4,
-    "xA": 10.7,
-    "touchesOppBox": 10.7,
-    "scoreNeeds": 13.4,
-    "timePressure": 10.7,
-    "corners": 6.8,
-    "possession": 6.8,
-    "saves": 6.8,
-    "goalsScored": -13.3,
+    "xg": 41.5,
+    "shotsOnTarget": 35.1,
+    "shotsInsideBox": 24.7,
+    "bigChances": 21.1,
+    "totalShots": 14.1,
+    "xgot": 16.6,
+    "hitWoodwork": 14.1,
+    "xA": 11.2,
+    "touchesOppBox": 11.2,
+    "scoreNeeds": 14.1,
+    "timePressure": 11.2,
+    "corners": 7.1,
+    "possession": 7.1,
+    "saves": 7.1,
+    "goalsScored": -14,
     "teamFactor": 8,
     "leagueFactor": 5
   },
@@ -174,12 +174,56 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 0
+    },
+    "boston legacy I7e4N6Na": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.19999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "fluminense EV9L3kU4": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0.03,
+      "totalSot": 3,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "argentinos jrs QuxS0ahA": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0.02,
+      "totalSot": 1,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.43999999999999995,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "motagua pzqly0S1": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 12,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.39999999999999997,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
     }
   },
   "stats": {
-    "predictionsCount": 0,
-    "correctScore": 5,
+    "predictionsCount": 20,
+    "correctScore": 6,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-13T00:18:35.336Z"
+  "lastUpdated": "2026-05-13T01:54:03.360Z"
 }
