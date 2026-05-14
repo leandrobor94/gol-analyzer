@@ -27,12 +27,12 @@ function loadWeights() { return loadJSON(WEIGHTS_FILE, JSON.parse(JSON.stringify
 function saveWeights(w) { w.lastUpdated = new Date().toISOString(); saveJSON(WEIGHTS_FILE, w); }
 function loadPredictions() { return loadJSON(PREDICTIONS_FILE, []); }
 function savePredictions(p) {
-  // Limpiar predicciones verificadas > 24h para evitar bloat
-  const cutoff = Date.now() - 24 * 60 * 60 * 1000;
+  // Limpiar predicciones verificadas > 7 dias para evitar bloat
+  const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
   const filtered = p.filter(pred => {
-    if (pred.predictionCorrect === null) return true; // no verificada, mantener
-    if (pred.timestamp) { const t = new Date(pred.timestamp).getTime(); if (t > cutoff) return true; } // reciente
-    return false; // verificada y vieja, descartar
+    if (pred.predictionCorrect === null) return true;
+    if (pred.timestamp) { const t = new Date(pred.timestamp).getTime(); if (t > cutoff) return true; }
+    return false;
   });
   saveJSON(PREDICTIONS_FILE, filtered);
 }

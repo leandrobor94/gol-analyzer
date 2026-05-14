@@ -2,12 +2,12 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 41.5,
+    "xg": 41.4,
     "shotsOnTarget": 35.1,
-    "shotsInsideBox": 24.7,
+    "shotsInsideBox": 24.6,
     "bigChances": 21.1,
     "totalShots": 14.1,
-    "xgot": 16.6,
+    "xgot": 16.5,
     "hitWoodwork": 14.1,
     "xA": 11.2,
     "touchesOppBox": 11.2,
@@ -198,14 +198,14 @@
       "falseNegatives": 1
     },
     "argentinos jrs QuxS0ahA": {
-      "matchesTracked": 1,
+      "matchesTracked": 2,
       "totalGoals": 0,
-      "totalXg": 0.02,
-      "totalSot": 1,
+      "totalXg": 0.04,
+      "totalSot": 7,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.43999999999999995,
+      "totalPossessionDiff": 0.78,
       "correctAt70": 0,
-      "falsePositives": 0,
+      "falsePositives": 1,
       "falseNegatives": 0
     },
     "motagua pzqly0S1": {
@@ -218,12 +218,23 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
+    },
+    "america de cali Oh9HQv4e": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.12000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
     }
   },
   "stats": {
-    "predictionsCount": 20,
+    "predictionsCount": 22,
     "correctScore": 6,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-13T01:54:03.360Z"
+  "lastUpdated": "2026-05-13T02:34:09.341Z"
 }

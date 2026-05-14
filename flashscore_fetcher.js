@@ -62,28 +62,64 @@ async function extractMatchStats(page, matchUrl) {
     const homeTeam = teamLinks[0]?.textContent?.trim() || '';
     const awayTeam = teamLinks[1]?.textContent?.trim() || '';
 
-    // Extract score and minute from page text
-    const bodyText = document.body.innerText;
+    // Extract score and minute - use reliable sources
+    const title = document.title;
     let scoreHome = null, scoreAway = null, minute = null, status = '';
 
-    // Look for patterns like: "TeamName 1 - 0 HALF TIME" or "TeamName 2 - 1 70'"
-    // The score is usually near the team names
-    const scoreMatch = bodyText.match(/(\d+)\s*-\s*(\d+)/);
-    if (scoreMatch) {
-      scoreHome = parseInt(scoreMatch[1]);
-      scoreAway = parseInt(scoreMatch[2]);
+    // 1) Score from page title: "Rosario Central 1-0 Racing Club Live - Flashscore"
+    const titleScore = title.match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/);
+    if (titleScore) {
+      const h = parseInt(titleScore[1]), a = parseInt(titleScore[2]);
+      if (h < 50 && a < 50) { scoreHome = h; scoreAway = a; }
     }
 
-    // Find minute: busca (\d+) seguido de ', ', ', ′ (prime) o similar
-    let minuteMatch = bodyText.match(/(\d{1,3})\s*[''\u2019\u2032]/);
-    if (!minuteMatch) minuteMatch = bodyText.match(/(?:^|\n)\s*(\d{1,3})\s*[''\u2019\u2032]?\s/);
-    if (minuteMatch) {
-      minute = parseInt(minuteMatch[1]);
-      status = minute + "'";
+    // 2) Fallback: specific score element
+    if (scoreHome === null) {
+      const scoreEl = document.querySelector('[data-testid*="score"]') || document.querySelector('.detailScore__wrapper');
+      if (scoreEl) {
+        const m = scoreEl.textContent.trim().match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/);
+        if (m) { const h = parseInt(m[1]), a = parseInt(m[2]); if (h < 50 && a < 50) { scoreHome = h; scoreAway = a; } }
+      }
     }
-    if (bodyText.includes('HALF TIME') || bodyText.includes('Half Time')) {
-      if (!minute) { minute = 45; status = 'HT'; }
-      else { status = 'HT'; }
+
+    // 3) Last resort: limited bodyText near team names
+    if (scoreHome === null) {
+      const bodyText = document.body.innerText;
+      const scores = [...bodyText.matchAll(/(\d{1,2})\s*[-–]\s*(\d{1,2})/g)];
+      // Prefer scores near team names
+      for (const s of scores) {
+        const h = parseInt(s[1]), a = parseInt(s[2]);
+        if (h < 50 && a < 50) {
+          const ctx = bodyText.substring(Math.max(0, s.index - 60), s.index + s[0].length + 60).toLowerCase();
+          if (ctx.includes(homeTeam.toLowerCase().slice(0, 8)) || ctx.includes(awayTeam.toLowerCase().slice(0, 8))) {
+            scoreHome = h; scoreAway = a; break;
+          }
+        }
+      }
+      // If still not found, take first plausible score
+      if (scoreHome === null) {
+        for (const s of scores) {
+          const h = parseInt(s[1]), a = parseInt(s[2]);
+          if (h < 50 && a < 50) { scoreHome = h; scoreAway = a; break; }
+        }
+      }
+    }
+
+    // Minute from page title or body (HT indicator)
+    if (title.includes('Half Time') || title.includes('HALF TIME')) {
+      minute = 45; status = 'HT';
+    } else {
+      const bodyText = document.body.innerText;
+      let mm = bodyText.match(/(?:^|\s)(\d{1,3})\s*[''\u2019\u2032]\s*(?:$|\s)/);
+      if (!mm) mm = bodyText.match(/(?:^|\n)\s*(\d{1,3})\s*[''\u2019\u2032]?\s/);
+      if (mm) {
+        const m = parseInt(mm[1]);
+        if (m >= 0 && m <= 120) { minute = m; status = minute + "'"; }
+      }
+      if (bodyText.includes('HALF TIME') || bodyText.includes('Half Time')) {
+        if (!minute) { minute = 45; status = 'HT'; }
+        else { status = 'HT'; }
+      }
     }
 
     return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status };
@@ -111,9 +147,22 @@ async function fetchAllLiveMatches() {
   for (const match of matches) {
     try {
       const result = await extractMatchStats(page, match.href);
-      // Fallback: minuto desde el texto del link (primer numero ej: "27 Ferro...")
+      // Minuto desde link text (mas fiable: "27 Ferro 1-0..." en homepage)
       const textMinute = (match.text?.match(/^(\d{1,3})\s/) || [])[1];
-      const minute = result.minute || (textMinute ? parseInt(textMinute) : 0);
+      const linkMinute = textMinute ? parseInt(textMinute) : null;
+      // Usar link minute como primario, stats page solo si es razonable
+      let minute = linkMinute || result.minute || 0;
+      if (result.minute && linkMinute && Math.abs(result.minute - linkMinute) <= 5) {
+        minute = result.minute; // stats page tiene dato mas actualizado
+      }
+      // Validacion basica: score imposible para el minuto
+      if (minute <= 5) {
+        const g = (result.scoreHome || 0) + (result.scoreAway || 0);
+        if (g >= 3) { // 3+ goles en 5 min = dato corrupto
+          console.log(`  Score sospechoso: ${result.scoreHome}-${result.scoreAway} en min ${minute}, ignorando score`);
+          result.scoreHome = null; result.scoreAway = null;
+        }
+      }
       results.push({
         homeTeam: result.homeTeam || match.homeTeam,
         awayTeam: result.awayTeam || match.awayTeam,

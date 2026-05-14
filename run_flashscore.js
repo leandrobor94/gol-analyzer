@@ -416,6 +416,17 @@ async function main() {
         continue;
       }
 
+      // Validar datos coherentes: si min<=10 y hay >=3 goles, el score esta corrupto
+      const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
+      if (m.minute <= 10 && totalGoals >= 3) {
+        console.log(`  -> Score imposible: ${m.scoreHome}-${m.scoreAway} en min ${m.minute}, saltando\n`);
+        continue;
+      }
+      if (m.minute <= 30 && totalGoals >= 6) {
+        console.log(`  -> Score imposible: ${m.scoreHome}-${m.scoreAway} en min ${m.minute}, saltando\n`);
+        continue;
+      }
+
       analyzed.push({
         rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
         league, matchId: m.url, minute: m.minute || 0,
