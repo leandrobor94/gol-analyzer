@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { fetchAllLiveMatches, verifyFinishedMatch } = require('./flashscore_fetcher');
 const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams } = require('./learn');
 const notify = require('./notify');
+const scores365 = require('./scores365');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
@@ -102,7 +102,7 @@ function flashscoreStatsToInternal(flashStats) {
   };
 }
 
-function analyzeGoal(match, w, teams) {
+function analyzeGoal(match, w, teams, leagueContext) {
   let score = 0;
   let reasons = [];
   let predictedScorer = null;
@@ -114,6 +114,32 @@ function analyzeGoal(match, w, teams) {
   const awayNeeds = match.scoreAway < match.scoreHome;
   const draw = match.scoreHome === match.scoreAway;
   let pressure = 0;
+
+  // --- League context normalization ---
+  if (leagueContext && leagueContext.goalsPerMatch) {
+    const matchXg = (s.xgHome || 0) + (s.xgAway || 0);
+    const xgVsAvg = matchXg > 0 && minute > 0 ? (matchXg / minute * 90) / leagueContext.goalsPerMatch : null;
+    if (xgVsAvg !== null) {
+      if (xgVsAvg > 1.5) {
+        score += 10; pressure += 15;
+        reasons.push('Partido muy superior a media liga (' + leagueContext.goalsPerMatch.toFixed(2) + ' g/p)');
+      } else if (xgVsAvg > 1.0) {
+        score += 5; pressure += 8;
+        reasons.push('Por encima de media liga (' + leagueContext.goalsPerMatch.toFixed(2) + ' g/p)');
+      }
+    }
+    // Corners context
+    if (leagueContext.cornersPerMatch && s.cornersHome !== null && s.cornersAway !== null) {
+      const cornersPerMin = (s.cornersHome + s.cornersAway) / minute * 90;
+      if (cornersPerMin > leagueContext.cornersPerMatch * 1.3) {
+        score += 5; pressure += 5;
+        reasons.push('Corners sobre media liga');
+      }
+    }
+  }
+  if (leagueContext && leagueContext.name) {
+    reasons.push(leagueContext.name);
+  }
 
   // --- xG ---
   if (s.xgHome !== null && s.xgAway !== null) {
@@ -408,55 +434,74 @@ async function main() {
     try { if (fs.existsSync(TEAMS_FILE)) teams = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8')); } catch {}
     const analyzed = [];
 
-    console.log('[1/3] Obteniendo partidos en vivo desde Flashscore...');
-  const liveData = await fetchAllLiveMatches();
+    console.log('[1/3] Obteniendo partidos en vivo desde 365scores...');
+  const liveData = await scores365.fetchLiveMatches();
   console.log('  -> ' + liveData.length + ' partidos en vivo\n');
 
-  writeSummary('## Analisis Flashscore ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
+  writeSummary('## Analisis 365scores ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
 
   if (liveData.length > 0) {
-    console.log('[2/3] Analizando ' + liveData.length + ' partidos...\n');
+    console.log('[2/3] Obteniendo stats y analizando ' + liveData.length + ' partidos...\n');
 
     for (let i = 0; i < liveData.length; i++) {
       const m = liveData[i];
       const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-      const league = m.league || (() => {
-        try { const parts = m.url.split('/'); const idx = parts.indexOf('football'); return idx >= 0 && parts[idx + 1] ? decodeURIComponent(parts[idx + 1].replace(/-/g, ' ')) : ''; } catch { return ''; }
-      })();
+      const league = m.league;
       console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
 
-      const internalStats = flashscoreStatsToInternal(m.stats);
-      const xgStr = internalStats.xgHome !== null ? internalStats.xgHome.toFixed(2) + '-' + internalStats.xgAway.toFixed(2) : '?-?';
-      const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
-      const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
-      const woodStr = internalStats.hitWoodworkHome ? ' (!)' : '';
-      console.log('     -> ' + (m.status || m.minute + "'") + ' ' + (m.scoreHome ?? '?') + '-' + (m.scoreAway ?? '?') + ' | xG:' + xgStr + ' SOT:' + sotStr + (boxStr ? ' ' + boxStr : '') + woodStr);
-
-      if ((m.minute <= 5 || (!internalStats.totalShotsHome && !internalStats.totalShotsAway)) && internalStats.totalShotsHome === null && internalStats.totalShotsAway === null) {
-        console.log('  -> Recien iniciado, sin datos aun\n');
+      // Fetch match stats from 365scores
+      const rawStats = await scores365.fetchMatchStats(m.gameId, m.homeId, m.awayId);
+      let internalStats;
+      if (rawStats) {
+        internalStats = scores365.toInternalFormat(rawStats, m);
+      } else {
+        console.log('     -> Sin datos de estadisticas aun\n');
         continue;
       }
 
-      // Validar datos coherentes: si min<=10 y hay >=3 goles, el score esta corrupto
+      const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
+      const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
+      console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
+
+      // Validar datos coherentes
       const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
       if (m.minute <= 10 && totalGoals >= 3) {
-        console.log(`  -> Score imposible: ${m.scoreHome}-${m.scoreAway} en min ${m.minute}, saltando\n`);
+        console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
         continue;
       }
       if (m.minute <= 30 && totalGoals >= 6) {
-        console.log(`  -> Score imposible: ${m.scoreHome}-${m.scoreAway} en min ${m.minute}, saltando\n`);
+        console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
         continue;
       }
 
       analyzed.push({
         rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
-        league, matchId: m.url, minute: m.minute || 0,
+        league, matchId: String(m.gameId), minute: m.minute || 0,
         scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
-        stats: internalStats
+        stats: internalStats,
+        competitionId: m.competitionId
       });
     }
 
-    const ranked = analyzed.map(m => analyzeGoal(m, getLeagueWeights(weights, m.league), teams)).sort((a, b) => b.score - a.score);
+    // Fetch league context from 365scores
+    const uniqueComps = [...new Set(analyzed.map(m => m.competitionId).filter(Boolean))];
+    const leagueContextMap = {};
+    for (const compId of uniqueComps) {
+      const ctx = await scores365.fetchLeagueContext(compId);
+      if (ctx) {
+        const leagueName = analyzed.find(m => m.competitionId === compId)?.league || '';
+        ctx.name = leagueName;
+        leagueContextMap[compId] = ctx;
+      }
+    }
+    if (Object.keys(leagueContextMap).length > 0) {
+      console.log('  -> Contexto 365scores para ' + Object.keys(leagueContextMap).length + ' ligas');
+    }
+
+    const ranked = analyzed.map(m => {
+      const compCtx = leagueContextMap[m.competitionId];
+      return analyzeGoal(m, getLeagueWeights(weights, m.league), teams, compCtx);
+    }).sort((a, b) => b.score - a.score);
 
     const now = new Date().toISOString();
     let newCount = 0;
@@ -610,17 +655,18 @@ async function main() {
     return false;
   });
   if (pendingVerify.length > 0) {
-    console.log('\n[4/4] Verificando ' + pendingVerify.length + ' partidos terminados...');
-    const { chromium } = require('playwright');
-    const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
-    const context = await browser.newContext({ locale: 'es-CO' });
-    const page = await context.newPage();
+    console.log('\n[4/4] Verificando ' + pendingVerify.length + ' partidos terminados (365scores)...');
     let verifiedCount = 0;
     const newlyVerified = [];
     const teamsData = loadTeams();
     const currentWeights = loadWeights();
     for (const pred of pendingVerify) {
-      const score = await verifyFinishedMatch(page, pred.id);
+      const gameId = parseInt(pred.id);
+      if (isNaN(gameId)) {
+        console.log('  ? ' + pred.match + ' | ID invalido: ' + pred.id);
+        continue;
+      }
+      const score = await scores365.verifyFinishedMatch(gameId);
       if (score) {
         const scoreChanged = score.home !== (pred.scoreAtAnalysis?.home ?? 0) || score.away !== (pred.scoreAtAnalysis?.away ?? 0);
         pred.finalScore = score;
@@ -628,17 +674,15 @@ async function main() {
         const prob = (pred.predictedProbability || 0) / 100;
         const predictedGoal = prob >= 0.7;
         pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
-        console.log('  ' + (pred.predictionCorrect ? '✓' : '✗') + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
+        console.log('  ' + (pred.predictionCorrect ? '\u2713' : '\u2717') + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
         verifiedCount++;
         newlyVerified.push(pred);
         if (teamsData) updateTeamStats(teamsData, pred, { scoreHome: score.home, scoreAway: score.away });
       } else {
-        console.log('  ? ' + pred.match + ' | no se pudo obtener resultado');
+        console.log('  ? ' + pred.match + ' | aun no finalizado o no encontrado en 365scores');
       }
     }
-    await browser.close();
     if (verifiedCount > 0) {
-      // Ajustar pesos con las nuevas verificaciones
       const adj = adjustWeights(currentWeights, newlyVerified, []);
       if (adj > 0) {
         saveWeights(currentWeights);
@@ -676,7 +720,11 @@ async function main() {
   }
 }
 
-main().catch(err => {
-  console.error('Error:', err.message);
-  process.exit(1);
-});
+module.exports = { analyzeGoal, flashscoreStatsToInternal, getLeagueWeights, loadWeights, loadPredictions, savePredictions, saveWeights };
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Error:', err.message);
+    process.exit(1);
+  });
+}
