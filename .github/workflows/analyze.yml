@@ -21,22 +21,12 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Instalar Chromium
-        run: npx playwright install chromium --with-deps
-
-      - name: Ejecutar análisis (Flashscore)
+      - name: Ejecutar análisis (365scores)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISABLE_XG: true
         run: node run_flashscore.js
-
-      - name: Subir screenshot de depuración
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: debug-screenshot
-          path: debug_screenshot.png
-          if-no-files-found: ignore
 
       - name: Commit y push de cambios (aprendizaje persistente)
         run: |
