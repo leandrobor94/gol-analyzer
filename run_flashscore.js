@@ -586,6 +586,38 @@ async function main() {
       }
     }
 
+    // --- Fetch real xG from Flashscore for top matches ---
+    const topForXg = ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5);
+    if (topForXg.length > 0 && !process.env.DISABLE_XG) {
+      console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
+      const { fetchXgBatch } = require('./flashscore_fetcher');
+      const targets = topForXg.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
+      const xgResults = await fetchXgBatch(targets);
+      let xgFound = 0;
+      for (const r of ranked) {
+        const key = r.teamHome + ' vs ' + r.teamAway;
+        const xg = xgResults[key];
+        if (xg && xg.home !== null && xg.away !== null) {
+          // Override estimated xG with real xG
+          const prevXgH = r.stats.xgHome;
+          const prevXgA = r.stats.xgAway;
+          if (Math.abs(xg.home - prevXgH) > 0.1 || Math.abs(xg.away - prevXgA) > 0.1) {
+            xgFound++;
+            // Store real xG (also store estimated as fallback)
+            r.stats.xgHome = xg.home;
+            r.stats.xgAway = xg.away;
+            console.log('  * xG actualizado: ' + r.teamHome + ' vs ' + r.teamAway + ' | estimado: ' + prevXgH.toFixed(2) + '-' + prevXgA.toFixed(2) + ' -> real: ' + xg.home.toFixed(2) + '-' + xg.away.toFixed(2));
+          }
+        }
+      }
+      // Re-analyze if we found real xG
+      if (xgFound > 0) {
+        ranked.forEach(r => { const updated = analyzeGoal(r, getLeagueWeights(weights, r.league), teams, null); r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons; });
+        ranked.sort((a, b) => b.score - a.score);
+      }
+      console.log('  xG real obtenido para ' + xgFound + ' partidos\n');
+    }
+
     // --- Telegram alert (solo en la nube) ---
     if (ranked.length > 0 && ranked[0].score >= 70) {
       if (!process.env.CI) {

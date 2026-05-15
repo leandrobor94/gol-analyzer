@@ -221,7 +221,76 @@ async function verifyFinishedMatch(page, matchUrl) {
   } catch { return null; }
 }
 
-module.exports = { fetchAllLiveMatches, verifyFinishedMatch };
+/**
+ * Fetch xG from Flashscore for specific matches by team names.
+ * Much faster than fetchAllLiveMatches - only opens match detail pages for the requested matches.
+ * @param {Array} targets - Array of {teamHome, teamAway} objects
+ * @returns {Object} Map of "teamHome vs teamAway" -> {xgHome, xgAway}
+ */
+async function fetchXgBatch(targets) {
+  if (!targets || targets.length === 0) return {};
+  
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-blink-features=AutomationControlled'] });
+  const context = await browser.newContext({
+    locale: 'es-CO',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+  });
+  const page = await context.newPage();
+  
+  // 1. Get all match links from live page
+  const allLinks = await getLiveMatchLinks(page);
+  
+  // 2. Match targets to links
+  const results = {};
+  const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  
+  for (const target of targets) {
+    const key = target.teamHome + ' vs ' + target.teamAway;
+    const hNorm = normalize(target.teamHome);
+    const aNorm = normalize(target.teamAway);
+    
+    // Find the link
+    const link = allLinks.find(l => {
+      const lh = normalize(l.homeTeam);
+      const la = normalize(l.awayTeam);
+      return (lh.includes(hNorm) || hNorm.includes(lh)) && (la.includes(aNorm) || aNorm.includes(la));
+    });
+    
+    if (!link) {
+      console.log('  [xG] No Flashscore link for ' + key);
+      results[key] = null;
+      continue;
+    }
+    
+    // 3. Open the match page and extract xG
+    try {
+      await page.goto(link.href, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      await page.waitForTimeout(3000);
+      
+      const xg = await page.evaluate(() => {
+        const text = document.body.innerText;
+        // xG usually appears as "Expected Goals (xG)" or "xG" with values
+        const matchXg = text.match(/(?:Expected Goals|xG|Goles esperados)[^0-9]*(\d+\.?\d*)\s*[-–:]\s*(\d+\.?\d*)/i);
+        if (matchXg) return { home: parseFloat(matchXg[1]), away: parseFloat(matchXg[2]) };
+        // Try alternative format: two decimal numbers near "xG" text
+        const xgBlocks = text.match(/xG[^0-9]*(\d+\.?\d*)[^0-9]*(\d+\.?\d*)/i);
+        if (xgBlocks) return { home: parseFloat(xgBlocks[1]), away: parseFloat(xgBlocks[2]) };
+        return null;
+      });
+      
+      results[key] = xg;
+      console.log('  [xG] ' + target.teamHome + ' vs ' + target.teamAway + ': ' + (xg ? xg.home + '-' + xg.away : 'no encontrado'));
+    } catch (e) {
+      console.log('  [xG] Error fetching ' + key + ': ' + e.message);
+      results[key] = null;
+    }
+  }
+  
+  await browser.close();
+  return results;
+}
+
+module.exports = { fetchAllLiveMatches, verifyFinishedMatch, fetchXgBatch, getLiveMatchLinks };
 
 if (require.main === module) {
   fetchAllLiveMatches().then(results => {
