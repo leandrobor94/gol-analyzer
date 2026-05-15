@@ -2,21 +2,21 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 41.4,
-    "shotsOnTarget": 35.1,
-    "shotsInsideBox": 24.6,
-    "bigChances": 21.1,
-    "totalShots": 14.1,
-    "xgot": 16.5,
-    "hitWoodwork": 14.1,
-    "xA": 11.2,
-    "touchesOppBox": 11.2,
-    "scoreNeeds": 14.1,
-    "timePressure": 11.2,
-    "corners": 7.1,
-    "possession": 7.1,
-    "saves": 7.1,
-    "goalsScored": -14,
+    "xg": 43.1,
+    "shotsOnTarget": 36.8,
+    "shotsInsideBox": 25.9,
+    "bigChances": 22.1,
+    "totalShots": 14.7,
+    "xgot": 17.5,
+    "hitWoodwork": 14.7,
+    "xA": 11.6,
+    "touchesOppBox": 11.6,
+    "scoreNeeds": 14.7,
+    "timePressure": 11.6,
+    "corners": 7.4,
+    "possession": 7.4,
+    "saves": 7.4,
+    "goalsScored": -14.6,
     "teamFactor": 8,
     "leagueFactor": 5
   },
@@ -175,25 +175,69 @@
       "falsePositives": 0,
       "falseNegatives": 0
     },
-    "boston legacy I7e4N6Na": {
+    "banos 4U6h46Ya": {
       "matchesTracked": 1,
       "totalGoals": 2,
       "totalXg": 0,
-      "totalSot": 0,
+      "totalSot": 10,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.19999999999999996,
+      "totalPossessionDiff": 0.06000000000000005,
       "correctAt70": 0,
       "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "aurora A3aRoJc3": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 0.73,
+      "totalSot": 11,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.37999999999999995,
+      "correctAt70": 0,
+      "falsePositives": 1,
       "falseNegatives": 1
     },
-    "fluminense EV9L3kU4": {
+    "boston legacy I7e4N6Na": {
+      "matchesTracked": 2,
+      "totalGoals": 5,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.41999999999999993,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 2
+    },
+    "gimnasia jujuy bsl9acxT": {
+      "matchesTracked": 2,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 19,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.040000000000000036,
+      "correctAt70": 1,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "deportivo la guaira 4SRaHjat": {
       "matchesTracked": 1,
       "totalGoals": 2,
-      "totalXg": 0.03,
-      "totalSot": 3,
+      "totalXg": 0.18,
+      "totalSot": 4,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.15999999999999998,
+      "totalPossessionDiff": 0.30000000000000004,
       "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "fluminense EV9L3kU4": {
+      "matchesTracked": 2,
+      "totalGoals": 5,
+      "totalXg": 0.06,
+      "totalSot": 11,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.2,
+      "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 1
     },
@@ -204,6 +248,17 @@
       "totalSot": 7,
       "totalShotsInsideBox": 0,
       "totalPossessionDiff": 0.78,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "cruzeiro 0SwtclaU": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.040000000000000036,
       "correctAt70": 0,
       "falsePositives": 1,
       "falseNegatives": 0
@@ -232,9 +287,9 @@
     }
   },
   "stats": {
-    "predictionsCount": 22,
-    "correctScore": 6,
+    "predictionsCount": 0,
+    "correctScore": 9,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-13T02:34:09.341Z"
+  "lastUpdated": "2026-05-15T22:11:12.668Z"
 }

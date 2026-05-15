@@ -62,6 +62,27 @@ async function extractMatchStats(page, matchUrl) {
     const homeTeam = teamLinks[0]?.textContent?.trim() || '';
     const awayTeam = teamLinks[1]?.textContent?.trim() || '';
 
+    // Extract league from breadcrumb or navigation
+    let league = '';
+    const breadcrumb = document.querySelector('[class*="breadcrumb"]') || document.querySelector('[data-testid*="breadcrumb"]');
+    if (breadcrumb) {
+      const items = breadcrumb.querySelectorAll('a, span, [class*="item"]');
+      const texts = Array.from(items).map(el => el.textContent?.trim()).filter(Boolean);
+      // Busca el penúltimo elemento antes de "Partido" o similar
+      const matchIdx = texts.findIndex(t => /partido|match|vs/i.test(t));
+      if (matchIdx >= 2) league = texts[matchIdx - 1];
+      else if (texts.length >= 3) league = texts[texts.length - 2];
+    }
+    // Fallback: buscar en el título de la página
+    if (!league) {
+      const titleParts = document.title.split(/[-–—|]/).map(s => s.trim()).filter(Boolean);
+      // Típicamente: "Team vs Team - League - Flashscore"
+      if (titleParts.length >= 2) {
+        const possible = titleParts[titleParts.length - 2];
+        if (possible && !possible.match(/^https?/) && possible.length < 40) league = possible;
+      }
+    }
+
     // Extract score and minute - use reliable sources
     const title = document.title;
     let scoreHome = null, scoreAway = null, minute = null, status = '';
@@ -122,7 +143,7 @@ async function extractMatchStats(page, matchUrl) {
       }
     }
 
-    return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status };
+    return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status, league };
   });
 }
 
@@ -171,6 +192,7 @@ async function fetchAllLiveMatches() {
         minute: minute,
         status: result.status || '',
         url: match.href,
+        league: result.league || '',
         stats: result.stats
       });
     } catch (err) {

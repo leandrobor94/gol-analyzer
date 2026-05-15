@@ -49,15 +49,16 @@ function teamsMatch(predHome, predAway, liveHome, liveAway) {
 }
 
 function extractLeague(match) {
-  // Try to extract from match URL: flashscore.com/match/football/league-name/...
+  // Usar league guardada en la predicción (viene scrapeada del breadcrumb)
+  if (match.league) return match.league;
+  // Fallback: extraer de la URL (no incluye liga real, solo team+ID)
   const url = match.url || match.id || '';
   const parts = url.split('/');
-  // URL pattern: .../football/league-name/team1-vs-team2/
   const leagueIdx = parts.indexOf('football');
   if (leagueIdx >= 0 && parts[leagueIdx + 1]) {
     return decodeURIComponent(parts[leagueIdx + 1].replace(/-/g, ' '));
   }
-  return match.league || '';
+  return '';
 }
 
 /**
@@ -66,24 +67,40 @@ function extractLeague(match) {
 function updateTeamStats(teams, pred, liveMatch) {
   const home = pred.teamHome;
   const away = pred.teamAway;
-  const goalHappened = pred.goalAfterAnalysis || false;
   const s = pred.stats || {};
+  // Normalizar score: pred.finalScore usa {home,away}, liveMatch usa {scoreHome,scoreAway}
+  const fs = pred.finalScore || {};
+  const lm = liveMatch || {};
+  const finalHome = fs.home ?? lm.scoreHome ?? 0;
+  const finalAway = fs.away ?? lm.scoreAway ?? 0;
+  const analysisHome = pred.scoreAtAnalysis?.home ?? 0;
+  const analysisAway = pred.scoreAtAnalysis?.away ?? 0;
+
+  const homeScored = finalHome > analysisHome;
+  const awayScored = finalAway > analysisAway;
 
   for (const team of [home, away]) {
     if (!team) continue;
     if (!teams[team]) {
-      teams[team] = { matchesTracked: 0, timesPredictedGoal: 0, goalsWhenPredicted: 0, timesPredictedNoGoal: 0, goalsWhenNotPredicted: 0, totalXgFor: 0, totalXgAgainst: 0, totalSotFor: 0, totalShotsInsideBoxFor: 0, goalsInLast15: 0, matchesOver70: 0, totalGoalsScored: 0 };
+      teams[team] = { matchesTracked: 0, timesPredictedGoal: 0, goalsWhenPredicted: 0, timesPredictedNoGoal: 0, goalsWhenNotPredicted: 0, totalXgFor: 0, totalXgAgainst: 0, totalSotFor: 0, totalShotsInsideBoxFor: 0, goalsInLast15: 0, matchesOver70: 0, totalGoalsScored: 0, totalXgEfficiency: 0 };
     }
     const t = teams[team];
-    t.matchesTracked++;
-    t.totalXgFor += (s.xgHome || 0);
-    t.totalXgAgainst += (s.xgAway || 0);
-    t.totalSotFor += (s.sotHome || 0);
-    t.totalShotsInsideBoxFor += (s.shotsInsideBoxHome || 0);
-
-    const prob = (pred.predictedProbability || 0) / 100;
     const isHome = (team === home);
-    const teamScored = isHome ? goalHappened : goalHappened;
+    t.matchesTracked++;
+    t.totalXgFor += isHome ? (s.xgHome || 0) : (s.xgAway || 0);
+    t.totalXgAgainst += isHome ? (s.xgAway || 0) : (s.xgHome || 0);
+    t.totalSotFor += isHome ? (s.sotHome || 0) : (s.sotAway || 0);
+    t.totalShotsInsideBoxFor += isHome ? (s.shotsInsideBoxHome || 0) : (s.shotsInsideBoxAway || 0);
+
+    const teamScored = isHome ? homeScored : awayScored;
+    const prob = (pred.predictedProbability || 0) / 100;
+
+    if (teamScored) {
+      t.totalGoalsScored++;
+      // xG efficiency: cuantos goles por unidad de xG
+      const xgFor = isHome ? (s.xgHome || 0) : (s.xgAway || 0);
+      if (xgFor > 0) t.totalXgEfficiency += (1 / xgFor); // 1 gol / xG
+    }
 
     if (prob >= 0.7) {
       t.timesPredictedGoal++;
@@ -147,28 +164,42 @@ function updateLeagueProfile(weights, pred, liveMatch) {
 
 /**
  * Ajusta los pesos por liga basado en estadísticas acumuladas.
+ * Liga con muchos goles → pesos altos. Liga con pocos → pesos bajos.
+ * Además ajusta por precisión: muchos FP → reduce pesos, muchos FN → aumenta.
  */
 function adjustLeagueWeights(weights) {
+  // Media global de goles por partido
+  let totalGoals = 0, totalMatches = 0;
+  for (const lp of Object.values(weights.byLeague)) {
+    totalGoals += lp.totalGoals;
+    totalMatches += lp.matchesTracked;
+  }
+  const globalAvgGoals = totalMatches > 0 ? totalGoals / totalMatches : 2.5;
+
   for (const [league, lp] of Object.entries(weights.byLeague)) {
     if (lp.matchesTracked < 5) continue;
 
     const avgGoals = lp.totalGoals / lp.matchesTracked;
-    const avgXg = lp.totalXg / lp.matchesTracked;
-    const avgSot = lp.totalSot / lp.matchesTracked;
-    const avgBox = lp.totalShotsInsideBox / lp.matchesTracked;
-    const totalPreds = lp.correctAt70 + lp.falsePositives + lp.falseNegatives;
 
-    // Calcular precisión de la liga
-    if (totalPreds > 0) {
-      const accuracy = (lp.correctAt70 + (lp.falseNegatives > 0 ? 0 : 0)) / totalPreds;
-      // Si la liga tiene más goles de lo normal, aumentar pesos ofensivos
-      if (avgGoals > 3.0) {
-        if (!weights.byLeague[league].xg) weights.byLeague[league].xg = weights.global.xg;
-        weights.byLeague[league].xg = Math.min(60, (weights.byLeague[league].xg || weights.global.xg) * 1.02);
-      }
-      if (avgGoals < 1.5) {
-        weights.byLeague[league].xg = Math.max(5, (weights.byLeague[league].xg || weights.global.xg) * 0.98);
-      }
+    // Ratio de goles: cuantos más goles, más peso ofensivo necesita
+    const goalRatio = Math.max(0.6, Math.min(1.5, avgGoals / globalAvgGoals));
+
+    // Ajuste por precisión de la liga
+    const total70 = lp.correctAt70 + lp.falsePositives;
+    let accuracyFactor = 1.0;
+    if (total70 >= 3) {
+      const fpRate = lp.falsePositives / total70;
+      // Muchos FP → el modelo sobreestima esta liga → reducir pesos
+      // Pocos FP → el modelo subestima → aumentar
+      accuracyFactor = fpRate > 0.5 ? (1 - (fpRate - 0.5)) : fpRate < 0.2 ? (1 + (0.2 - fpRate) * 0.5) : 1.0;
+    }
+
+    const multiplier = Math.max(0.5, Math.min(1.5, goalRatio * accuracyFactor));
+
+    // Aplicar a todos los pesos de la liga
+    for (const [key, val] of Object.entries(weights.global)) {
+      if (key === 'goalsScored' || key === 'teamFactor' || key === 'leagueFactor') continue;
+      weights.byLeague[league][key] = Math.round(Math.max(1, Math.min(60, val * multiplier)) * 10) / 10;
     }
   }
 }
@@ -428,4 +459,4 @@ async function runLearning(liveMatches) {
   return { weights, adjustments: 0, insights: [], teams };
 }
 
-module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, saveWeights, saveTeams, savePredictions };
+module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, updateTeamStats, saveWeights, saveTeams, savePredictions };

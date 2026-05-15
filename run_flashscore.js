@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { fetchAllLiveMatches, verifyFinishedMatch } = require('./flashscore_fetcher');
-const { runLearning } = require('./learn');
+const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams } = require('./learn');
 const notify = require('./notify');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
@@ -247,34 +247,55 @@ function analyzeGoal(match, w, teams) {
     else if (total >= 5) score += w.saves * 0.6;
   }
 
-  // --- Team factor (historial del equipo) ---
+  // --- Team factor (historial del equipo + eficiencia xG) ---
   if (teams) {
     const teamNames = Object.keys(teams);
     if (teamNames.length > 0) {
-      // Buscar si tenemos datos de estos equipos (normalizado)
       const normalize = (s) => s?.toLowerCase().replace(/[^a-z0-9]/g, '') || '';
       const h = normalize(match.teamHome), a = normalize(match.teamAway);
       let homeFactor = 1.0, awayFactor = 1.0;
+      let homeReasons = [], awayReasons = [];
       for (const [name, data] of Object.entries(teams)) {
         const n = normalize(name);
-        if (h.includes(n) || n.includes(h)) {
-          if (data.timesPredictedGoal >= 2) {
-            const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
-            homeFactor = rate > 0.7 ? 1 + (rate - 0.7) * 0.5 : rate < 0.3 ? 1 - (0.3 - rate) * 0.5 : 1.0;
+        const isHome = h.includes(n) || n.includes(h);
+        const isAway = a.includes(n) || n.includes(a);
+        if (!isHome && !isAway) continue;
+        // Factor por eficiencia xG: equipos que meten goles con poco xG
+        if (data.totalXgEfficiency > 0 && data.totalGoalsScored >= 2) {
+          const avgEff = data.totalXgEfficiency / data.totalGoalsScored;
+          // avgEff > 1 significa que rinden mejor que el xG predicho
+          // Ej: 2 goles con xG=1.0 → eff = 2 → factor boost
+          if (avgEff > 1.3) {
+            const bonus = Math.min(0.15, (avgEff - 1.3) * 0.1);
+            if (isHome) { homeFactor += bonus; homeReasons.push('+eficiente xG'); }
+            if (isAway) { awayFactor += bonus; awayReasons.push('+eficiente xG'); }
+          } else if (avgEff < 0.7) {
+            const penalty = Math.min(0.15, (0.7 - avgEff) * 0.1);
+            if (isHome) { homeFactor -= penalty; homeReasons.push('-eficiente xG'); }
+            if (isAway) { awayFactor -= penalty; awayReasons.push('-eficiente xG'); }
           }
         }
-        if (a.includes(n) || n.includes(a)) {
-          if (data.timesPredictedGoal >= 2) {
-            const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
-            awayFactor = rate > 0.7 ? 1 + (rate - 0.7) * 0.5 : rate < 0.3 ? 1 - (0.3 - rate) * 0.5 : 1.0;
+        // Factor por conversion rate historico
+        if (data.timesPredictedGoal >= 2) {
+          const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
+          if (rate > 0.7) {
+            const bonus = (rate - 0.7) * 0.5;
+            if (isHome) { homeFactor += bonus; homeReasons.push('historial+' + Math.round((rate - 0.7) * 100) + '%'); }
+            if (isAway) { awayFactor += bonus; awayReasons.push('historial+' + Math.round((rate - 0.7) * 100) + '%'); }
+          } else if (rate < 0.3) {
+            const penalty = (0.3 - rate) * 0.5;
+            if (isHome) { homeFactor -= penalty; homeReasons.push('historial-' + Math.round((0.3 - rate) * 100) + '%'); }
+            if (isAway) { awayFactor -= penalty; awayReasons.push('historial-' + Math.round((0.3 - rate) * 100) + '%'); }
           }
         }
       }
       const teamBonus = Math.max(homeFactor, awayFactor);
       if (teamBonus !== 1.0) {
         const adj = Math.round((teamBonus - 1) * 100);
-        if (adj > 0) { score += (w.teamFactor || 8) * (adj / 20); reasons.push('Equipo con historial de gol (' + (adj > 0 ? '+' : '') + adj + '%)'); }
-        else { score += (w.teamFactor || 8) * (adj / 20); reasons.push('Equipo suele no concretar (' + adj + '%)'); }
+        const extra = (w.teamFactor || 8) * (adj / 20);
+        score += extra;
+        const reasonsList = homeFactor > awayFactor ? homeReasons : awayReasons;
+        reasons.push('Equipo ' + (adj > 0 ? 'rinde+' : 'rinde-') + '(' + reasonsList.join(',') + ')');
       }
     }
   }
@@ -399,7 +420,7 @@ async function main() {
     for (let i = 0; i < liveData.length; i++) {
       const m = liveData[i];
       const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-      const league = (() => {
+      const league = m.league || (() => {
         try { const parts = m.url.split('/'); const idx = parts.indexOf('football'); return idx >= 0 && parts[idx + 1] ? decodeURIComponent(parts[idx + 1].replace(/-/g, ' ')) : ''; } catch { return ''; }
       })();
       console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
@@ -595,6 +616,9 @@ async function main() {
     const context = await browser.newContext({ locale: 'es-CO' });
     const page = await context.newPage();
     let verifiedCount = 0;
+    const newlyVerified = [];
+    const teamsData = loadTeams();
+    const currentWeights = loadWeights();
     for (const pred of pendingVerify) {
       const score = await verifyFinishedMatch(page, pred.id);
       if (score) {
@@ -606,12 +630,23 @@ async function main() {
         pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
         console.log('  ' + (pred.predictionCorrect ? '✓' : '✗') + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
         verifiedCount++;
+        newlyVerified.push(pred);
+        if (teamsData) updateTeamStats(teamsData, pred, { scoreHome: score.home, scoreAway: score.away });
       } else {
         console.log('  ? ' + pred.match + ' | no se pudo obtener resultado');
       }
     }
     await browser.close();
-    if (verifiedCount > 0) savePredictions(predictions);
+    if (verifiedCount > 0) {
+      // Ajustar pesos con las nuevas verificaciones
+      const adj = adjustWeights(currentWeights, newlyVerified, []);
+      if (adj > 0) {
+        saveWeights(currentWeights);
+        if (teamsData) saveTeams(teamsData);
+        console.log('  Pesos ajustados: ' + adj + ' cambios');
+      }
+      savePredictions(predictions);
+    }
     console.log('  Verificados: ' + verifiedCount);
   }
 
