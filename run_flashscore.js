@@ -244,7 +244,7 @@ function analyzeGoal(match, w, teams, leagueContext) {
   if (draw && goals === 0) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('0-0, cualquiera lo rompe'); }
   if (homeNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Local necesita el gol'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('necesita el gol'); } }
   if (awayNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Visitante necesita el gol'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('necesita el gol'); } }
-  if (goals >= 4) { score += w.goalsScored; reasons.push('Goleada, el ritmo baja'); }
+  if (goals >= 5) { score += w.goalsScored; }
 
   // --- Time pressure ---
   if (minute >= 80 && pressure >= 20) { score += w.timePressure * 1; reasons.push('Min ' + minute + "' — presion final!"); }
@@ -335,6 +335,22 @@ function analyzeGoal(match, w, teams, leagueContext) {
   else if (minute < 80) { timeWindow = pressure >= 40 ? 'Gol inminente — ultimos 15 minutos!' : pressure >= 25 ? 'Posible gol en tramo final (75-90)' : 'Partido que se apaga'; }
   else { timeWindow = pressure >= 25 ? 'Gol en cualquier momento — descuento!' : 'Partido practicamente definido'; }
 
+  // --- Penalties para evitar falsos positivos ---
+  const gd = Math.abs(match.scoreHome - match.scoreAway);
+  if (minute >= 70 && gd >= 2) {
+    score -= 25; reasons.push('Goleada decidida, ritmo bajo');
+  }
+  if (minute >= 70 && minute <= 85 && goals === 0 && ((s.sotHome ?? 0) + (s.sotAway ?? 0)) < 5) {
+    score -= 20; reasons.push('0-0 sin remates, partido estancado');
+  }
+  if (minute >= 75 && score >= 50) {
+    const bcH = s.bigChancesHome, bcA = s.bigChancesAway;
+    const noBigChances = (bcH !== null && bcA !== null && bcH + bcA < 2);
+    const noBigChanceData = (bcH === null || bcA === null);
+    if (noBigChances || (noBigChanceData && goals <= 1)) {
+      score -= 15; reasons.push('Sin oportunidades claras en etapa final');
+    }
+  }
   const cappedScore = Math.min(Math.max(score, 0), 100);
   let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro proximo gol'
     : cappedScore >= 45 ? 'PROBABLE — buenos indicios'
@@ -385,6 +401,30 @@ function alertsEnabled() {
   return true;
 }
 
+function doSync() {
+  if (process.env.NO_SYNC) return;
+  try {
+    const cp = require('child_process');
+    cp.execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 });
+  } catch {}
+  try {
+    const cp = require('child_process');
+    cp.execSync('git config user.email "sofastats-bot@users.noreply.github.com"', { stdio: 'ignore', timeout: 5000 });
+    cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
+    cp.execSync('git add predictions.json weights.json teams.json alertas.json telegram-offset.txt', { stdio: 'ignore', timeout: 5000 });
+    try {
+      cp.execSync('git diff --cached --quiet', { stdio: 'ignore', timeout: 5000 });
+      console.log('  Sync: sin cambios nuevos');
+    } catch {
+      cp.execSync('git commit -m "sync: datos ronda [skip ci]"', { stdio: 'ignore', timeout: 10000 });
+      cp.execSync('git push', { stdio: 'ignore', timeout: 30000 });
+      console.log('  Sync: datos sincronizados con la nube');
+    }
+  } catch (e) {
+    console.log('  Sync: ' + (e.message || 'error').split('\n')[0]);
+  }
+}
+
 async function main() {
 
   // Si es nube y hubo ejecución local hace < 10 min, saltar
@@ -406,10 +446,8 @@ async function main() {
   const SLEEP_MS = 12 * 60 * 1000;
 
   for (let loop = 0; loop < MAX_LOOPS; loop++) {
-    // En la nube: traer ultimos cambios (alertas.json, pesos)
-    if (process.env.CI) {
-      try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 10000 }); } catch {}
-    }
+    // Traer ultimos cambios de la nube (local y CI)
+    try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 }); } catch {} 
 
     console.log('\n' + '='.repeat(64));
     console.log('  CICLO ' + (loop + 1) + '/' + MAX_LOOPS + ' — ' + new Date().toISOString());
@@ -706,7 +744,24 @@ async function main() {
         const prob = (pred.predictedProbability || 0) / 100;
         const predictedGoal = prob >= 0.7;
         pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
-        console.log('  ' + (pred.predictionCorrect ? '\u2713' : '\u2717') + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
+        const icon = pred.predictionCorrect ? '\u2713' : '\u2717';
+        console.log('  ' + icon + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
+        // Analisis de fallos en predicciones >=70%
+        if (!pred.predictionCorrect && pred.predictedProbability >= 70) {
+          const dif = Math.abs((score.home - (pred.scoreAtAnalysis?.home ?? 0)) + (score.away - (pred.scoreAtAnalysis?.away ?? 0)));
+          const min = pred.analysisMinute || 0;
+          const estXg = (pred.stats?.xgHome ?? 0) + (pred.stats?.xgAway ?? 0);
+          const sot = (pred.stats?.sotHome ?? 0) + (pred.stats?.sotAway ?? 0);
+          const reasons = [];
+          if (min >= 75 && score.home !== undefined && score.away !== undefined) {
+            const gd = Math.abs(score.home - score.away);
+            if (gd >= 3) reasons.push('goleada ' + score.home + '-' + score.away + ', ritmo bajo');
+            if (score.home + score.away === 0 && estXg > 0) reasons.push('0-0 estancado pese a xG=' + estXg.toFixed(2));
+          }
+          if (estXg < 1) reasons.push('bajo xG=' + estXg.toFixed(2));
+          if (sot === 0) reasons.push('sin tiros a puerta');
+          if (reasons.length > 0) console.log('     fallo: ' + reasons.join(' | '));
+        }
         verifiedCount++;
         newlyVerified.push(pred);
         if (teamsData) updateTeamStats(teamsData, pred, { scoreHome: score.home, scoreAway: score.away });
@@ -726,6 +781,14 @@ async function main() {
     console.log('  Verificados: ' + verifiedCount);
   }
 
+  // Sync cada ciclo: sube datos a la nube para no perder si el script se corta
+  doSync();
+
+  // Guardar timestamp local DESPUES del sync
+  if (!process.env.CI && !module.parent) {
+    fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
+  }
+
   if (liveData.length === 0) {
     console.log('  Sin partidos — no se necesita seguir. Saliendo del self-loop.');
     break;
@@ -736,19 +799,12 @@ async function main() {
     await new Promise(r => setTimeout(r, SLEEP_MS));
   }
   }
-  // Marcar ejecución local para que la nube la respete
-  if (!process.env.CI) {
+  // Sync final
+  doSync();
+
+  // Guardar timestamp local DESPUES del sync
+  if (!process.env.CI && !module.parent) {
     fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
-    console.log('\nEjecucion local registrada. La nube respetara los proximos 10 min.');
-  } else {
-    // En la nube: subir pesos para que la próxima ejecución recuerde qué ya alertó
-    try {
-      const cp = require('child_process');
-      cp.execSync('git config user.email "bot@sofastats"', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git add weights.json predictions.json teams.json', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git diff --cached --quiet || (git commit -m "sync pesos [skip ci]" && git push)', { stdio: 'ignore', timeout: 15000 });
-    } catch {}
   }
 }
 
