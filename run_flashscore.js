@@ -588,7 +588,7 @@ async function main() {
 
     // --- Fetch real xG from Flashscore for top matches ---
     const topForXg = ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5);
-    if (topForXg.length > 0 && !process.env.DISABLE_XG) {
+    if (false) { // DISABLE_XG — Flashscore xG devuelve basura (0.02-51)
       console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
       const { fetchXgBatch } = require('./flashscore_fetcher');
       const targets = topForXg.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));

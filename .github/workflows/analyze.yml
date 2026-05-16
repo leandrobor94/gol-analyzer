@@ -25,8 +25,10 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          DISABLE_XG: true
         run: node run_flashscore.js
+
+      - name: Debug — ver cambios antes de commit
+        run: git status && git diff --stat
 
       - name: Commit y push de cambios (aprendizaje persistente)
         run: |

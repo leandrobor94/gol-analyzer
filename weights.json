@@ -2,21 +2,21 @@
   "version": 1,
   "learningRate": 0.05,
   "global": {
-    "xg": 43.1,
-    "shotsOnTarget": 36.8,
-    "shotsInsideBox": 25.9,
-    "bigChances": 22.1,
-    "totalShots": 14.7,
-    "xgot": 17.5,
-    "hitWoodwork": 14.7,
-    "xA": 11.6,
-    "touchesOppBox": 11.6,
-    "scoreNeeds": 14.7,
-    "timePressure": 11.6,
-    "corners": 7.4,
-    "possession": 7.4,
-    "saves": 7.4,
-    "goalsScored": -14.6,
+    "xg": 23.2,
+    "shotsOnTarget": 19.8,
+    "shotsInsideBox": 14,
+    "bigChances": 12,
+    "totalShots": 7.9,
+    "xgot": 9.5,
+    "hitWoodwork": 7.9,
+    "xA": 6.2,
+    "touchesOppBox": 6.2,
+    "scoreNeeds": 7.9,
+    "timePressure": 6.2,
+    "corners": 4.1,
+    "possession": 4.1,
+    "saves": 4.1,
+    "goalsScored": -7.8,
     "teamFactor": 8,
     "leagueFactor": 5
   },
@@ -284,12 +284,117 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
+    },
+    "Premier League": {
+      "matchesTracked": 3,
+      "totalGoals": 5,
+      "totalXg": 2.55,
+      "totalSot": 17,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 1.02,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Superliga Griega - Repechaje descenso": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 2.28,
+      "totalSot": 4,
+      "totalShotsInsideBox": 18,
+      "totalPossessionDiff": 0.13999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Superliga - Repechaje descenso": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 2.73,
+      "totalSot": 7,
+      "totalShotsInsideBox": 18,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Serie A Femenino": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.9000000000000001,
+      "totalSot": 6,
+      "totalShotsInsideBox": 11,
+      "totalPossessionDiff": 0.13999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Segunda división estonia": {
+      "matchesTracked": 3,
+      "totalGoals": 6,
+      "totalXg": 3.45,
+      "totalSot": 23,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.6400000000000001,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Veikkausliiga": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 1.24,
+      "totalSot": 4,
+      "totalShotsInsideBox": 8,
+      "totalPossessionDiff": 0.020000000000000018,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Segunda RFEF - Playoffs ascenso": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0.8999999999999999,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.24,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga de Bulgaria - Conference League Playoffs": {
+      "matchesTracked": 2,
+      "totalGoals": 9,
+      "totalXg": 2.4,
+      "totalSot": 16,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.42,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Jordan Cup - Final": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.05,
+      "totalSot": 7,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.32,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
-    "predictionsCount": 60,
-    "correctScore": 9,
+    "predictionsCount": 61,
+    "correctScore": 11,
     "correctScorer": 0
   },
-  "lastUpdated": "2026-05-16T17:43:50.162Z"
+  "lastUpdated": "2026-05-16T17:56:41.653Z",
+  "alertedMatches": {
+    "4452941": {
+      "timestamp": 1778954193673,
+      "minute": 79
+    }
+  }
 }
