@@ -12,8 +12,9 @@ function fetch(url) {
 
 /** Get all live matches from 365scores */
 async function fetchLiveMatches() {
-  const body = await fetch(`${API_BASE}/games/?${PARAMS}&sports=1`);
-  const j = JSON.parse(body);
+  let body, j;
+  try { body = await fetch(`${API_BASE}/games/?${PARAMS}&sports=1`); j = JSON.parse(body); } catch { return []; }
+  if (!j.games) return [];
   const live = j.games.filter(g => g.statusGroup === 3 && g.gameTime > 0 && g.gameTime < 90);
   
   return live.map(g => ({
@@ -41,8 +42,8 @@ async function fetchLiveMatches() {
  * @param {number} awayId - away competitor ID (from fetchLiveMatches)
  */
 async function fetchMatchStats(gameId, homeId, awayId) {
-  const body = await fetch(`${API_BASE}/game/stats/?${PARAMS}&games=${gameId}`);
-  const j = JSON.parse(body);
+  let body, j;
+  try { body = await fetch(`${API_BASE}/game/stats/?${PARAMS}&games=${gameId}`); j = JSON.parse(body); } catch { return null; }
   if (!j.statistics || j.statistics.length === 0) return null;
   
   const stats = { home: {}, away: {}, raw: j.statistics };
@@ -116,8 +117,8 @@ const internalToDisplay = {
 
 /** Verify finished match result */
 async function verifyFinishedMatch(gameId) {
-  const body = await fetch(`${API_BASE}/game/?${PARAMS}&gameId=${gameId}`);
-  const j = JSON.parse(body);
+  let body, j;
+  try { body = await fetch(`${API_BASE}/game/?${PARAMS}&gameId=${gameId}`); j = JSON.parse(body); } catch { return null; }
   if (!j.game) return null;
   const g = j.game;
   if (g.statusGroup !== 4 && g.statusText !== 'Finalizado') return null;
@@ -132,8 +133,8 @@ async function verifyFinishedMatch(gameId) {
 /** Fetch league context (averages for goals, corners, cards) */
 async function fetchLeagueContext(competitionId) {
   if (!competitionId) return null;
-  const body = await fetch(`${API_BASE}/stats/?${PARAMS}&competitions=${competitionId}&competitors=`);
-  const j = JSON.parse(body);
+  let body, j;
+  try { body = await fetch(`${API_BASE}/stats/?${PARAMS}&competitions=${competitionId}&competitors=`); j = JSON.parse(body); } catch { return null; }
   const stats = j.stats?.competitorsStats;
   if (!stats) return null;
 

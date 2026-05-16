@@ -466,6 +466,9 @@ async function main() {
       continue;
     }
 
+    let liveData = [];
+
+    try {
     let weights = loadWeights();
     let predictions = loadPredictions();
     let teams = {};
@@ -473,68 +476,78 @@ async function main() {
     const analyzed = [];
 
     console.log('[1/3] Obteniendo partidos en vivo desde 365scores...');
-  const liveData = await scores365.fetchLiveMatches();
-  console.log('  -> ' + liveData.length + ' partidos en vivo\n');
+    liveData = await scores365.fetchLiveMatches();
+    console.log('  -> ' + liveData.length + ' partidos en vivo\n');
 
-  writeSummary('## Analisis 365scores ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
+    writeSummary('## Analisis 365scores ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
 
-  if (liveData.length > 0) {
-    console.log('[2/3] Obteniendo stats y analizando ' + liveData.length + ' partidos...\n');
+    if (liveData.length > 0) {
+      console.log('[2/3] Obteniendo stats y analizando ' + liveData.length + ' partidos...\n');
 
-    for (let i = 0; i < liveData.length; i++) {
-      const m = liveData[i];
-      const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-      const league = m.league;
-      console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
+      for (let i = 0; i < liveData.length; i++) {
+        const m = liveData[i];
+        const displayName = m.homeTeam + ' vs ' + m.awayTeam;
+        const league = m.league;
+        console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
 
-      // Fetch match stats from 365scores
-      const rawStats = await scores365.fetchMatchStats(m.gameId, m.homeId, m.awayId);
-      let internalStats;
-      if (rawStats) {
-        internalStats = scores365.toInternalFormat(rawStats, m);
-      } else {
-        console.log('     -> Sin datos de estadisticas aun\n');
-        continue;
+        // Fetch match stats from 365scores
+        let rawStats;
+        try {
+          rawStats = await scores365.fetchMatchStats(m.gameId, m.homeId, m.awayId);
+        } catch (e) {
+          console.log('     -> Error al obtener stats: ' + (e.message || e) + '\n');
+          continue;
+        }
+        let internalStats;
+        if (rawStats) {
+          internalStats = scores365.toInternalFormat(rawStats, m);
+        } else {
+          console.log('     -> Sin datos de estadisticas aun\n');
+          continue;
+        }
+
+        const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
+        const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
+        console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
+
+        // Validar datos coherentes
+        const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
+        if (m.minute <= 10 && totalGoals >= 3) {
+          console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
+          continue;
+        }
+        if (m.minute <= 30 && totalGoals >= 6) {
+          console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
+          continue;
+        }
+
+        analyzed.push({
+          rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
+          league, matchId: String(m.gameId), minute: m.minute || 0,
+          scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
+          stats: internalStats,
+          competitionId: m.competitionId
+        });
       }
 
-      const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
-      const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
-      console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
-
-      // Validar datos coherentes
-      const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
-      if (m.minute <= 10 && totalGoals >= 3) {
-        console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
-        continue;
+      // Fetch league context from 365scores
+      const uniqueComps = [...new Set(analyzed.map(m => m.competitionId).filter(Boolean))];
+      const leagueContextMap = {};
+      for (const compId of uniqueComps) {
+        try {
+          const ctx = await scores365.fetchLeagueContext(compId);
+          if (ctx) {
+            const leagueName = analyzed.find(m => m.competitionId === compId)?.league || '';
+            ctx.name = leagueName;
+            leagueContextMap[compId] = ctx;
+          }
+        } catch (e) {
+          console.log('     -> Error contexto liga ' + compId + ': ' + (e.message || e));
+        }
       }
-      if (m.minute <= 30 && totalGoals >= 6) {
-        console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
-        continue;
+      if (Object.keys(leagueContextMap).length > 0) {
+        console.log('  -> Contexto 365scores para ' + Object.keys(leagueContextMap).length + ' ligas');
       }
-
-      analyzed.push({
-        rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
-        league, matchId: String(m.gameId), minute: m.minute || 0,
-        scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
-        stats: internalStats,
-        competitionId: m.competitionId
-      });
-    }
-
-    // Fetch league context from 365scores
-    const uniqueComps = [...new Set(analyzed.map(m => m.competitionId).filter(Boolean))];
-    const leagueContextMap = {};
-    for (const compId of uniqueComps) {
-      const ctx = await scores365.fetchLeagueContext(compId);
-      if (ctx) {
-        const leagueName = analyzed.find(m => m.competitionId === compId)?.league || '';
-        ctx.name = leagueName;
-        leagueContextMap[compId] = ctx;
-      }
-    }
-    if (Object.keys(leagueContextMap).length > 0) {
-      console.log('  -> Contexto 365scores para ' + Object.keys(leagueContextMap).length + ' ligas');
-    }
 
     const ranked = analyzed.map(m => {
       const compCtx = leagueContextMap[m.competitionId];
@@ -703,8 +716,13 @@ async function main() {
 
   // --- APRENDIZAJE: verificar predicciones anteriores contra datos actuales ---
   console.log('\n[3/3] Aprendiendo de predicciones anteriores...');
-  const learningResult = await runLearning(liveData);
-  weights = learningResult.weights;
+  let learningResult = { weights: null, adjustments: 0, insights: [] };
+  try {
+    learningResult = await runLearning(liveData);
+  } catch (e) {
+    console.log('  Error en aprendizaje: ' + (e.message || e));
+  }
+  weights = learningResult.weights || weights;
   if (learningResult.adjustments > 0) {
     console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
   }
@@ -736,7 +754,13 @@ async function main() {
         console.log('  ? ' + pred.match + ' | ID invalido: ' + pred.id);
         continue;
       }
-      const score = await scores365.verifyFinishedMatch(gameId);
+      let score;
+      try {
+        score = await scores365.verifyFinishedMatch(gameId);
+      } catch (e) {
+        console.log('  ? ' + pred.match + ' | error al verificar: ' + (e.message || e));
+        continue;
+      }
       if (score) {
         const scoreChanged = score.home !== (pred.scoreAtAnalysis?.home ?? 0) || score.away !== (pred.scoreAtAnalysis?.away ?? 0);
         pred.finalScore = score;
@@ -781,6 +805,11 @@ async function main() {
     console.log('  Verificados: ' + verifiedCount);
   }
 
+  } catch (e) {
+    console.log('\n!!! Error en ciclo: ' + (e.message || e));
+    writeSummary('- Error: ' + (e.message || e).substring(0, 200));
+  }
+
   // Sync cada ciclo: sube datos a la nube para no perder si el script se corta
   doSync();
 
@@ -812,7 +841,7 @@ module.exports = { analyzeGoal, flashscoreStatsToInternal, getLeagueWeights, loa
 
 if (require.main === module) {
   main().catch(err => {
-    console.error('Error:', err.message);
+    console.error('Error:', err.message, '\n' + err.stack);
     process.exit(1);
   });
 }
