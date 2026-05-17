@@ -317,16 +317,30 @@ function verifyPredictions(predictions, liveMatches, teams) {
 // ========== AJUSTE DE PESOS ==========
 
 function adjustWeights(weights, verified, insights) {
-  const lr = weights.learningRate;
   let adjustments = 0;
 
-  for (const pred of verified) {
-    if (pred.predictionCorrect === null) continue;
+  // Filtrar predicciones utiles para aprender:
+  // - error significativo (> 15pp)
+  // - el modelo mostraba minima confianza (>= 20%)
+  // Si no, es ruido (prediccion 5% donde hubo gol no dice nada util)
+  const useful = verified.filter(pred => {
+    if (pred.predictionCorrect === null) return false;
+    const prob = (pred.predictedProbability || 0) / 100;
+    if (prob < 0.20) return false;
+    const goalHappened = pred.goalAfterAnalysis || false;
+    const error = (goalHappened ? 1 : 0) - prob;
+    return Math.abs(error) >= 0.15;
+  });
+  if (useful.length === 0) return 0;
+
+  // Normalizar learning rate por lote: si hay muchas verificaciones juntas,
+  // cada una aporta menos para evitar sobre-ajuste masivo
+  const lr = weights.learningRate / Math.min(useful.length, 10);
+
+  for (const pred of useful) {
     const prob = (pred.predictedProbability || 0) / 100;
     const goalHappened = pred.goalAfterAnalysis || false;
     const error = (goalHappened ? 1 : 0) - prob;
-    if (Math.abs(error) < 0.15) continue;
-
     const direction = error > 0 ? 1 : -1;
     const adjust = lr * direction;
 
