@@ -335,23 +335,26 @@ function analyzeGoal(match, w, teams, leagueContext) {
   else if (minute < 80) { timeWindow = pressure >= 40 ? 'Gol inminente — ultimos 15 minutos!' : pressure >= 25 ? 'Posible gol en tramo final (75-90)' : 'Partido que se apaga'; }
   else { timeWindow = pressure >= 25 ? 'Gol en cualquier momento — descuento!' : 'Partido practicamente definido'; }
 
-  // --- Penalties para evitar falsos positivos ---
+  // CORTAR primero, luego penalizar — asi las penalidades siempre son efectivas
+  let cappedScore = Math.min(Math.max(score, 0), 100);
+
+  // --- Penalties sobre el score ya acotado ---
   const gd = Math.abs(match.scoreHome - match.scoreAway);
   if (minute >= 70 && gd >= 2) {
-    score -= 25; reasons.push('Goleada decidida, ritmo bajo');
+    cappedScore -= 30; reasons.push('Goleada decidida, ritmo bajo');
   }
-  if (minute >= 70 && minute <= 85 && goals === 0 && ((s.sotHome ?? 0) + (s.sotAway ?? 0)) < 5) {
-    score -= 20; reasons.push('0-0 sin remates, partido estancado');
+  if (minute >= 70 && goals === 0) {
+    cappedScore -= 35; reasons.push('0-0 estancado en etapa final');
   }
-  if (minute >= 75 && score >= 50) {
+  if (minute >= 75 && cappedScore >= 50) {
     const bcH = s.bigChancesHome, bcA = s.bigChancesAway;
     const noBigChances = (bcH !== null && bcA !== null && bcH + bcA < 2);
     const noBigChanceData = (bcH === null || bcA === null);
-    if (noBigChances || (noBigChanceData && goals <= 1)) {
-      score -= 15; reasons.push('Sin oportunidades claras en etapa final');
+    if (noBigChances || (noBigChanceData && goals <= 2)) {
+      cappedScore -= 30; reasons.push('Sin oportunidades claras en etapa final');
     }
   }
-  const cappedScore = Math.min(Math.max(score, 0), 100);
+  cappedScore = Math.max(0, cappedScore);
   let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro proximo gol'
     : cappedScore >= 45 ? 'PROBABLE — buenos indicios'
     : cappedScore >= 30 ? 'POSIBLE — atentos'
