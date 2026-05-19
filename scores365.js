@@ -112,15 +112,6 @@ function statNameToInternal(name) {
   return map[name] || null;
 }
 
-/** Map internal stat keys back to 365scores names (for display) */
-const internalToDisplay = {
-  possession: 'Posesión', totalShots: 'Total Remates', shotsOnTarget: 'Remates a Puerta',
-  shotsInsideBox: 'Remates dentro del área', bigChances: 'Grandes chances',
-  corners: 'Saques de Esquina', attacks: 'Ataques',
-  yellowCards: 'Tarjetas Amarillas', redCards: 'Tarjetas Rojas',
-  fouls: 'Faltas', offside: 'Fueras de Juego',
-};
-
 /** Verify finished match result */
 async function verifyFinishedMatch(gameId) {
   let body, j;
@@ -224,6 +215,5 @@ function toInternalFormat(stats, match) {
 
 module.exports = {
   fetchLiveMatches, fetchMatchStats, verifyFinishedMatch,
-  fetchLeagueContext, toInternalFormat, estimateXg,
-  statNameToInternal, internalToDisplay, sanitizeLeague
+  fetchLeagueContext, toInternalFormat, estimateXg
 };

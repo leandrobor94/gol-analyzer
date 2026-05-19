@@ -153,83 +153,10 @@ async function extractMatchStats(page, matchUrl) {
 
     return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status, league: league };
   });
-  // Sanitize league outside browser context
-  evalResult.league = sanitizeLeague(evalResult.league);
+  if (evalResult && evalResult.league) {
+    evalResult.league = sanitizeLeague(evalResult.league);
+  }
   return evalResult;
-}
-
-async function fetchAllLiveMatches() {
-  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-blink-features=AutomationControlled'] });
-  const context = await browser.newContext({
-    locale: 'es-CO',
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
-  });
-  const page = await context.newPage();
-  await page.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => false }); });
-
-  const matches = await getLiveMatchLinks(page);
-  console.log('Live matches found: ' + matches.length);
-
-  if (matches.length === 0) {
-    await browser.close();
-    return [];
-  }
-
-  const results = [];
-  for (const match of matches) {
-    try {
-      const result = await extractMatchStats(page, match.href);
-      // Minuto desde link text (mas fiable: "27 Ferro 1-0..." en homepage)
-      const textMinute = (match.text?.match(/^(\d{1,3})\s/) || [])[1];
-      const linkMinute = textMinute ? parseInt(textMinute) : null;
-      // Usar link minute como primario, stats page solo si es razonable
-      let minute = linkMinute || result.minute || 0;
-      if (result.minute && linkMinute && Math.abs(result.minute - linkMinute) <= 5) {
-        minute = result.minute; // stats page tiene dato mas actualizado
-      }
-      // Validacion basica: score imposible para el minuto
-      if (minute <= 5) {
-        const g = (result.scoreHome || 0) + (result.scoreAway || 0);
-        if (g >= 3) { // 3+ goles en 5 min = dato corrupto
-          console.log(`  Score sospechoso: ${result.scoreHome}-${result.scoreAway} en min ${minute}, ignorando score`);
-          result.scoreHome = null; result.scoreAway = null;
-        }
-      }
-      results.push({
-        homeTeam: result.homeTeam || match.homeTeam,
-        awayTeam: result.awayTeam || match.awayTeam,
-        scoreHome: result.scoreHome,
-        scoreAway: result.scoreAway,
-        minute: minute,
-        status: result.status || '',
-        url: match.href,
-        league: sanitizeLeague(result.league || ''),
-        stats: result.stats
-      });
-    } catch (err) {
-      console.log('Error on ' + match.text?.slice(0, 40) + ': ' + err.message);
-    }
-  }
-
-  await browser.close();
-  return results;
-}
-
-async function verifyFinishedMatch(page, matchUrl) {
-  try {
-    await page.goto(matchUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
-    await page.waitForTimeout(3000);
-  const evalResult = await page.evaluate(() => {
-      const title = document.title;
-      const titleScore = title.match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/);
-      if (titleScore) { const h=+titleScore[1], a=+titleScore[2]; if (h<50&&a<50) return {home:h,away:a}; }
-      const el = document.querySelector('[data-testid*="score"]') || document.querySelector('.detailScore__wrapper');
-      if (el) { const m = el.textContent.trim().match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/); if (m) { const h=+m[1],a=+m[2]; if (h<50&&a<50) return {home:h,away:a}; } }
-      const scores = [...document.body.innerText.matchAll(/(\d{1,2})\s*[-–]\s*(\d{1,2})/g)];
-      for (const s of scores) { const h=+s[1],a=+s[2]; if (h<50&&a<50) return {home:h,away:a}; }
-      return null;
-    });
-  } catch { return null; }
 }
 
 /**
@@ -358,15 +285,4 @@ async function fetchStatsBatch(targets) {
   return results;
 }
 
-module.exports = { fetchAllLiveMatches, verifyFinishedMatch, fetchXgBatch, getLiveMatchLinks, extractMatchStats, fetchStatsBatch, sanitizeLeague };
-
-if (require.main === module) {
-  fetchAllLiveMatches().then(results => {
-    console.log('\nTotal matches: ' + results.length);
-    results.forEach(m => {
-      console.log('\n' + m.homeTeam + ' vs ' + m.awayTeam + ' | ' + (m.status || m.minute + "'") + ' | ' + (m.scoreHome ?? '?') + '-' + (m.scoreAway ?? '?'));
-      const keys = ['Expected goals (xG)', 'Ball possession', 'Total shots', 'Shots on target', 'Big chances', 'Corner kicks'];
-      keys.forEach(k => { if (m.stats[k]) console.log('  ' + k + ': ' + m.stats[k].home + ' | ' + m.stats[k].away); });
-    });
-  }).catch(console.error);
-}
+module.exports = { fetchXgBatch, fetchStatsBatch };

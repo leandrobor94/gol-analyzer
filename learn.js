@@ -136,25 +136,6 @@ function updateTeamStats(teams, pred, liveMatch) {
 }
 
 /**
- * Obtiene factor de ajuste por equipo.
- * Retorna un multiplicador (ej: 1.1 = +10% a la probabilidad)
- */
-function getTeamFactor(teams, teamName, isHome) {
-  if (!teamName || !teams[teamName]) return 1.0;
-  const t = teams[teamName];
-  if (t.timesPredictedGoal < 2) return 1.0; // pocos datos
-
-  const conversionRate = t.goalsWhenPredicted / t.timesPredictedGoal;
-  // Si conversionRate > 0.7, el equipo suele cumplir cuando lo predecimos → bonificar
-  // Si conversionRate < 0.3, el equipo suele fallar cuando lo predecimos → castigar
-  let factor = 1.0;
-  if (conversionRate > 0.7) factor = 1.0 + (conversionRate - 0.7) * 0.5;
-  else if (conversionRate < 0.3) factor = 1.0 - (0.3 - conversionRate) * 0.5;
-
-  return Math.max(0.8, Math.min(1.2, factor));
-}
-
-/**
  * Actualiza perfil de liga basado en datos verificados.
  */
 function updateLeagueProfile(weights, pred, liveMatch) {
@@ -561,4 +542,4 @@ async function runLearning(liveMatches) {
   return { weights, adjustments: 0, insights: [], teams };
 }
 
-module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, updateTeamStats, saveWeights, saveTeams, savePredictions, getWindowWeights };
+module.exports = { runLearning, loadTeams, adjustWeights, updateTeamStats, saveTeams, getWindowWeights };

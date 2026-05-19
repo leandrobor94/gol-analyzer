@@ -59,51 +59,6 @@ function getLeagueWeights(weights, league, windowType) {
   if (league && weights.byLeague && weights.byLeague[league]) Object.keys(w).forEach(k => { if (weights.byLeague[league][k] !== undefined) w[k] = weights.byLeague[league][k]; });
   return w;
 }
-function parseNum(v) {
-  if (v === null || v === undefined || v === '' || v === '-') return null;
-  const n = parseFloat(String(v).replace(/[^0-9.\-]/g, ''));
-  return isNaN(n) ? null : n;
-}
-function parsePct(v) {
-  if (v === null || v === undefined || v === '') return null;
-  const s = String(v);
-  return s.includes('%') ? (parseFloat(s.replace('%', '')) / 100) : parseNum(v);
-}
-
-function flashscoreStatsToInternal(flashStats) {
-  const get = (name) => flashStats[name] || {};
-  const h = (name) => parseNum(get(name).home);
-  const a = (name) => parseNum(get(name).away);
-  const hPct = (name) => parsePct(get(name).home);
-  const aPct = (name) => parsePct(get(name).away);
-
-  return {
-      xgHome: h('Expected goals (xG)'), xgAway: a('Expected goals (xG)'),
-    xgotHome: h('xG on target (xGOT)'), xgotAway: a('xG on target (xGOT)'),
-    sotHome: h('Shots on target'), sotAway: a('Shots on target'),
-    totalShotsHome: h('Total shots'), totalShotsAway: a('Total shots'),
-    shotsInsideBoxHome: h('Shots inside the box'), shotsInsideBoxAway: a('Shots inside the box'),
-    shotsOutsideBoxHome: h('Shots outside the box'), shotsOutsideBoxAway: a('Shots outside the box'),
-    shotsOffTargetHome: h('Shots off target'), shotsOffTargetAway: a('Shots off target'),
-    blockedShotsHome: h('Blocked shots'), blockedShotsAway: a('Blocked shots'),
-    bigChancesHome: h('Big chances'), bigChancesAway: a('Big chances'),
-    hitWoodworkHome: h('Hit the woodwork'), hitWoodworkAway: a('Hit the woodwork'),
-    cornersHome: h('Corner kicks'), cornersAway: a('Corner kicks'),
-    possessionHome: hPct('Ball possession'), possessionAway: aPct('Ball possession'),
-    touchesOppBoxHome: h('Touches in opposition box'), touchesOppBoxAway: a('Touches in opposition box'),
-    savesHome: h('Goalkeeper saves'), savesAway: a('Goalkeeper saves'),
-    foulsHome: h('Fouls'), foulsAway: a('Fouls'),
-    yellowCardsHome: h('Yellow cards'), yellowCardsAway: a('Yellow cards'),
-    xgHomeA: h('Expected assists (xA)'), xgAwayA: a('Expected assists (xA)'),
-    passesFinalThirdHome: hPct('Passes in final third'), passesFinalThirdAway: aPct('Passes in final third'),
-    crossesHome: h('Crosses'), crossesAway: a('Crosses'),
-    tacklesHome: h('Tackles'), tacklesAway: a('Tackles'),
-    interceptionsHome: h('Interceptions'), interceptionsAway: a('Interceptions'),
-    errorsLeadingToShotHome: h('Errors leading to shot'), errorsLeadingToShotAway: a('Errors leading to shot'),
-    clearancesHome: h('Clearances'), clearancesAway: a('Clearances')
-  };
-}
-
 /** Window-specific estimated odds */
 const WINDOW_ODDS = {
   firstHalf: 3.0,
@@ -1088,7 +1043,7 @@ async function main() {
   }
 }
 
-module.exports = { analyzeGoal, flashscoreStatsToInternal, getLeagueWeights, getWindowType, loadWeights, loadPredictions, savePredictions, saveWeights };
+module.exports = { analyzeGoal, getLeagueWeights, getWindowType };
 
 if (require.main === module) {
   main().catch(err => {
