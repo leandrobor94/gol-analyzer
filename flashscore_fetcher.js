@@ -38,6 +38,14 @@ async function getLiveMatchLinks(page) {
   return live;
 }
 
+function sanitizeLeague(league) {
+  if (!league) return '';
+  // Remove trailing URL fragments / IDs like "8InmcPIF"
+  let clean = league.replace(/\s+[A-Z0-9]{6,}$/i, '').trim();
+  // If sanitization emptied it, keep original
+  return clean || league;
+}
+
 async function extractMatchStats(page, matchUrl) {
   const statsUrl = matchUrl.replace(/\/$/, '') + '/summary/stats/';
   await page.goto(statsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
@@ -143,8 +151,11 @@ async function extractMatchStats(page, matchUrl) {
       }
     }
 
-    return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status, league };
+    return { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute, status, league: league };
   });
+  // Sanitize league outside browser context
+  evalResult.league = sanitizeLeague(evalResult.league);
+  return evalResult;
 }
 
 async function fetchAllLiveMatches() {
@@ -192,7 +203,7 @@ async function fetchAllLiveMatches() {
         minute: minute,
         status: result.status || '',
         url: match.href,
-        league: result.league || '',
+        league: sanitizeLeague(result.league || ''),
         stats: result.stats
       });
     } catch (err) {
@@ -208,7 +219,7 @@ async function verifyFinishedMatch(page, matchUrl) {
   try {
     await page.goto(matchUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
     await page.waitForTimeout(3000);
-    return await page.evaluate(() => {
+  const evalResult = await page.evaluate(() => {
       const title = document.title;
       const titleScore = title.match(/(\d{1,2})\s*[-–:]\s*(\d{1,2})/);
       if (titleScore) { const h=+titleScore[1], a=+titleScore[2]; if (h<50&&a<50) return {home:h,away:a}; }
@@ -290,7 +301,64 @@ async function fetchXgBatch(targets) {
   return results;
 }
 
-module.exports = { fetchAllLiveMatches, verifyFinishedMatch, fetchXgBatch, getLiveMatchLinks };
+/**
+ * Fetch full match stats from Flashscore for specific targets.
+ * Much faster than fetchAllLiveMatches - only opens detail pages for requested matches.
+ * @param {Array} targets - Array of {teamHome, teamAway, matchId, minute} objects
+ * @returns {Object} Map of matchId -> { stats, homeTeam, awayTeam, scoreHome, scoreAway, minute }
+ */
+async function fetchStatsBatch(targets) {
+  if (!targets || targets.length === 0) return {};
+
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-blink-features=AutomationControlled'] });
+  const context = await browser.newContext({
+    locale: 'es-CO',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+  });
+  const page = await context.newPage();
+  await page.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => false }); });
+
+  // 1. Get all match links from live page
+  const allLinks = await getLiveMatchLinks(page);
+  console.log('  [FS] ' + allLinks.length + ' links en Flashscore');
+
+  // 2. Match targets to links
+  const results = {};
+  const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  for (const target of targets) {
+    const hNorm = normalize(target.teamHome);
+    const aNorm = normalize(target.teamAway);
+    const key = target.matchId || (target.teamHome + ' vs ' + target.teamAway);
+
+    const link = allLinks.find(l => {
+      const lh = normalize(l.homeTeam);
+      const la = normalize(l.awayTeam);
+      return (lh.includes(hNorm) || hNorm.includes(lh)) && (la.includes(aNorm) || aNorm.includes(la));
+    });
+
+    if (!link) {
+      console.log('  [FS] No link for ' + target.teamHome + ' vs ' + target.teamAway);
+      results[key] = null;
+      continue;
+    }
+
+    // 3. Open match stats page
+    try {
+      const stats = await extractMatchStats(page, link.href);
+      results[key] = stats;
+      console.log('  [FS] Stats for ' + target.teamHome + ' vs ' + target.teamAway + ': minute=' + stats.minute + ' score=' + (stats.scoreHome ?? '?') + '-' + (stats.scoreAway ?? '?'));
+    } catch (e) {
+      console.log('  [FS] Error for ' + target.teamHome + ' vs ' + target.teamAway + ': ' + e.message);
+      results[key] = null;
+    }
+  }
+
+  await browser.close();
+  return results;
+}
+
+module.exports = { fetchAllLiveMatches, verifyFinishedMatch, fetchXgBatch, getLiveMatchLinks, extractMatchStats, fetchStatsBatch, sanitizeLeague };
 
 if (require.main === module) {
   fetchAllLiveMatches().then(results => {

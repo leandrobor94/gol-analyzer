@@ -4856,7 +4856,17 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      61,
+      79,
+      81
+    ]
   },
   {
     "id": "4475513",
@@ -4941,7 +4951,17 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      36,
+      85,
+      89
+    ]
   },
   {
     "id": "4505497",
@@ -5196,7 +5216,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 2
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      6,
+      22,
+      59
+    ]
   },
   {
     "id": "4684616",
@@ -5536,7 +5566,18 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      20,
+      65,
+      77,
+      85
+    ]
   },
   {
     "id": "4643838",
@@ -5706,7 +5747,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      40,
+      60,
+      75
+    ]
   },
   {
     "id": "4711616",
@@ -5791,7 +5842,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      66
+    ]
   },
   {
     "id": "4474961",
@@ -5876,7 +5935,16 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      35,
+      52
+    ]
   },
   {
     "id": "4474964",
@@ -5961,7 +6029,18 @@
     "lastSeenScore": {
       "home": 1,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      5,
+      15,
+      90,
+      90
+    ]
   },
   {
     "id": "4710536",
@@ -6216,7 +6295,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      69,
+      86
+    ]
   },
   {
     "id": "4668716",
@@ -6896,7 +6984,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      51,
+      60,
+      80
+    ]
   },
   {
     "id": "4703455",
@@ -7831,7 +7929,15 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      45
+    ]
   },
   {
     "id": "4661182",
@@ -7916,7 +8022,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      34,
+      49,
+      83
+    ]
   },
   {
     "id": "4712868",
@@ -8001,7 +8117,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      77,
+      90
+    ]
   },
   {
     "id": "4713865",
@@ -8086,7 +8211,16 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      20,
+      55
+    ]
   },
   {
     "id": "4454382",
@@ -8171,7 +8305,19 @@
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      21,
+      45,
+      48,
+      77,
+      79
+    ]
   },
   {
     "id": "4454383",
@@ -8256,7 +8402,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      29,
+      90
+    ]
   },
   {
     "id": "4490776",
@@ -8341,7 +8496,20 @@
     "lastSeenScore": {
       "home": 0,
       "away": 2
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      9,
+      26,
+      41,
+      45,
+      59,
+      70
+    ]
   },
   {
     "id": "4712681",
@@ -8511,7 +8679,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      30
+    ]
   },
   {
     "id": "4704196",
@@ -8681,7 +8857,19 @@
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      6,
+      11,
+      20,
+      28,
+      90
+    ]
   },
   {
     "id": "4657870",
@@ -8766,7 +8954,19 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      21,
+      61,
+      71,
+      73,
+      77
+    ]
   },
   {
     "id": "4696037",
@@ -8851,7 +9051,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      75
+    ]
   },
   {
     "id": "4713918",
@@ -8936,7 +9144,18 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      57,
+      68,
+      77,
+      89
+    ]
   },
   {
     "id": "4675738",
@@ -9106,7 +9325,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      49
+    ]
   },
   {
     "id": "4700850",
@@ -9191,7 +9418,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      41,
+      61,
+      76
+    ]
   },
   {
     "id": "4641041",
@@ -9361,7 +9598,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      33
+    ]
   },
   {
     "id": "4645296",
@@ -9531,7 +9776,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      12,
+      38
+    ]
   },
   {
     "id": "4671770",
@@ -9616,7 +9870,19 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      20,
+      35,
+      76,
+      82,
+      85
+    ]
   },
   {
     "id": "4671774",
@@ -9701,7 +9967,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      30
+    ]
   },
   {
     "id": "4671776",
@@ -9786,7 +10060,18 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      33,
+      52,
+      66,
+      85
+    ]
   },
   {
     "id": "4675737",
@@ -9956,7 +10241,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      32
+    ]
   },
   {
     "id": "4685960",
@@ -10041,7 +10334,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      67
+    ]
   },
   {
     "id": "4696044",
@@ -10126,7 +10427,18 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      22,
+      38,
+      78,
+      90
+    ]
   },
   {
     "id": "4700849",
@@ -10211,7 +10523,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      7
+    ]
   },
   {
     "id": "4700851",
@@ -10296,7 +10616,20 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      19,
+      49,
+      53,
+      58,
+      78,
+      85
+    ]
   },
   {
     "id": "4700852",
@@ -10466,7 +10799,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      17,
+      34
+    ]
   },
   {
     "id": "4523458",
@@ -10551,7 +10893,17 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": false
+    },
+    "goalTimestamps": [
+      18,
+      20,
+      41
+    ]
   },
   {
     "id": "4639255",
@@ -10636,7 +10988,15 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      82
+    ]
   },
   {
     "id": "4641042",
@@ -10891,7 +11251,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      6,
+      90
+    ]
   },
   {
     "id": "4674152",
@@ -10976,7 +11345,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      23,
+      61
+    ]
   },
   {
     "id": "4675736",
@@ -11571,7 +11949,16 @@
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      60,
+      85
+    ]
   },
   {
     "id": "4689597",
@@ -11642,11 +12029,16 @@
     "predictedProbability": 66.11,
     "predictedScorer": "home",
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 1,
+      "homeTeam": "FC Barcelona (F)",
+      "awayTeam": "Atlético Madrid (F)"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 3,
@@ -11722,16 +12114,29 @@
     "predictedProbability": 59.21,
     "predictedScorer": "away",
     "predictedTimeWindow": "Gol en proximos 15 min!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "Famalicão",
+      "awayTeam": "Alverca"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 55,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      83
+    ]
   },
   {
     "id": "4474963",
@@ -11802,16 +12207,32 @@
     "predictedProbability": 55.51,
     "predictedScorer": "away",
     "predictedTimeWindow": "Gol en proximos 15 min!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 3,
+      "homeTeam": "Estoril",
+      "awayTeam": "Benfica"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 55,
     "lastSeenScore": {
       "home": 0,
       "away": 3
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      7,
+      15,
+      16,
+      90
+    ]
   },
   {
     "id": "4669758",
@@ -11882,11 +12303,16 @@
     "predictedProbability": 44.56,
     "predictedScorer": "home",
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 6,
+      "homeTeam": "Operário-PR",
+      "awayTeam": "Náutico"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
@@ -11962,11 +12388,16 @@
     "predictedProbability": 38.93,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Portuguesa",
+      "awayTeam": "Água Santa"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 0,
@@ -12042,16 +12473,31 @@
     "predictedProbability": 38.660000000000004,
     "predictedScorer": "home",
     "predictedTimeWindow": "Gol en proximos 15 min!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Sporting CP",
+      "awayTeam": "Gil Vicente FC"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 55,
     "lastSeenScore": {
       "home": 2,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      15,
+      34,
+      90
+    ]
   },
   {
     "id": "4696061",
@@ -12122,11 +12568,16 @@
     "predictedProbability": 37.5,
     "predictedScorer": "home",
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1,
+      "homeTeam": "Tirol",
+      "awayTeam": "Fluminense-PI"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 1,
@@ -12202,11 +12653,16 @@
     "predictedProbability": 34.96,
     "predictedScorer": "home",
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "CE Sabadell",
+      "awayTeam": "Antequera CF"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 0,
@@ -12282,16 +12738,30 @@
     "predictedProbability": 29.06,
     "predictedScorer": "away",
     "predictedTimeWindow": "Posible gol al inicio del 2T",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 0,
+      "homeTeam": "Operário-MS",
+      "awayTeam": "Ivinhema"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      44,
+      50
+    ]
   },
   {
     "id": "4469928",
@@ -12362,11 +12832,16 @@
     "predictedProbability": 27.66,
     "predictedScorer": "away",
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 1,
+      "homeTeam": "UD Ibiza",
+      "awayTeam": "Cartagena"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
@@ -12442,11 +12917,16 @@
     "predictedProbability": 24.66,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "CD Eldense",
+      "awayTeam": "Atlético Madrileño"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
@@ -12522,11 +13002,16 @@
     "predictedProbability": 17.349999999999998,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Gimnástic",
+      "awayTeam": "CE Europa"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 1,
@@ -12602,16 +13087,30 @@
     "predictedProbability": 17.259999999999998,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 0,
+      "homeTeam": "Santa Cruz",
+      "awayTeam": "Volta Redonda"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      8,
+      81
+    ]
   },
   {
     "id": "4696071",
@@ -12682,16 +13181,31 @@
     "predictedProbability": 17.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "Operário VG",
+      "awayTeam": "Union Rondonopolis"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      41,
+      69,
+      74
+    ]
   },
   {
     "id": "4657872",
@@ -12762,16 +13276,30 @@
     "predictedProbability": 13.66,
     "predictedScorer": null,
     "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "Juan Pablo II College",
+      "awayTeam": "Alianza Atletico"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 36,
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      16,
+      87
+    ]
   },
   {
     "id": "4696055",
@@ -12842,16 +13370,31 @@
     "predictedProbability": 12.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "Serra Branca",
+      "awayTeam": "Treze-PB"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 62,
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      51,
+      79,
+      83
+    ]
   },
   {
     "id": "4677834",
@@ -12922,16 +13465,33 @@
     "predictedProbability": 12.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 4,
+      "homeTeam": "Ypiranga-RS",
+      "awayTeam": "Maringá"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 2
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      13,
+      22,
+      45,
+      55,
+      84
+    ]
   },
   {
     "id": "4696065",
@@ -13002,16 +13562,32 @@
     "predictedProbability": 12.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 2,
+      "homeTeam": "Moto Club",
+      "awayTeam": "IAPE"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 2
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      7,
+      27,
+      45,
+      89
+    ]
   },
   {
     "id": "4712072",
@@ -13082,16 +13658,30 @@
     "predictedProbability": 12.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1,
+      "homeTeam": "Real Santander (F)",
+      "awayTeam": "Junior (F)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      34,
+      51
+    ]
   },
   {
     "id": "4712174",
@@ -13162,11 +13752,16 @@
     "predictedProbability": 12.16,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Comerciantes",
+      "awayTeam": "Binacional"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 3,
@@ -13242,11 +13837,16 @@
     "predictedProbability": 12.06,
     "predictedScorer": null,
     "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "Club Guaraní",
+      "awayTeam": "Sportivo Ameliano"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 36,
     "lastSeenScore": {
       "home": 1,
@@ -13322,11 +13922,16 @@
     "predictedProbability": 10.96,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "Lota Schwager",
+      "awayTeam": "Deportes Rengo"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
@@ -13402,16 +14007,31 @@
     "predictedProbability": 10.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Noroeste",
+      "awayTeam": "Velo Clube"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      61,
+      77,
+      89
+    ]
   },
   {
     "id": "4696052",
@@ -13482,11 +14102,16 @@
     "predictedProbability": 10.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "ASA-AL",
+      "awayTeam": "Juazeirense"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
@@ -13562,11 +14187,16 @@
     "predictedProbability": 10.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Cúcuta Deportivo",
+      "awayTeam": "Leones"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 0,
@@ -13642,16 +14272,32 @@
     "predictedProbability": 8.86,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 4,
+      "away": 0,
+      "homeTeam": "Boyacá Chicó",
+      "awayTeam": "Atlético FC"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 20,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      29,
+      52,
+      79,
+      87
+    ]
   },
   {
     "id": "4712074",
@@ -13722,16 +14368,29 @@
     "predictedProbability": 8.86,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "Atlético Nacional (F)",
+      "awayTeam": "Once Caldas (F)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      90
+    ]
   },
   {
     "id": "4467763",
@@ -13802,11 +14461,16 @@
     "predictedProbability": 8.11,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Betis Deportivo",
+      "awayTeam": "SD Tarazona"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
@@ -13882,11 +14546,16 @@
     "predictedProbability": 7.909999999999997,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 4,
+      "away": 1,
+      "homeTeam": "Colegiales",
+      "awayTeam": "Güemes"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 88,
     "lastSeenScore": {
       "home": 4,
@@ -13962,11 +14631,16 @@
     "predictedProbability": 5.45,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Libertad FC Cochabamba",
+      "awayTeam": "Olympic FC"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 62,
     "lastSeenScore": {
       "home": 1,
@@ -14042,11 +14716,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "Mineros De Guayana",
+      "awayTeam": "Deportivo Miranda FC"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 63,
     "lastSeenScore": {
       "home": 0,
@@ -14122,11 +14801,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "Yaracuyanos",
+      "awayTeam": "Puerto Cabello B"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 59,
     "lastSeenScore": {
       "home": 0,
@@ -14202,16 +14886,30 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1,
+      "homeTeam": "Atletico El Vigia",
+      "awayTeam": "Zamora FC B"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 64,
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      53,
+      66
+    ]
   },
   {
     "id": "4715418",
@@ -14282,11 +14980,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido que se apaga",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "Nacional La Pampa San Cayetano",
+      "awayTeam": "Universitario De Tarija"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 65,
     "lastSeenScore": {
       "home": 0,
@@ -14362,16 +15065,31 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "Maricá",
+      "awayTeam": "XV de Piracicaba"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 1
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      12,
+      52,
+      72
+    ]
   },
   {
     "id": "4696042",
@@ -14442,16 +15160,31 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Nova Iguaçu",
+      "awayTeam": "Sampaio Corrêa-RJ"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 50,
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": true
+    },
+    "goalTimestamps": [
+      8,
+      58,
+      90
+    ]
   },
   {
     "id": "4696047",
@@ -14522,11 +15255,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Real Noroeste",
+      "awayTeam": "Rio Branco-ES"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
@@ -14602,16 +15340,29 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "Nacional-AM",
+      "awayTeam": "Manauara"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      52
+    ]
   },
   {
     "id": "4712864",
@@ -14682,11 +15433,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Descanso sin mucha accion",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "CD Inca",
+      "awayTeam": "Atlético Balboa"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 44,
     "lastSeenScore": {
       "home": 1,
@@ -14762,11 +15518,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Santos FC",
+      "awayTeam": "Tacna Heroica"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 34,
     "lastSeenScore": {
       "home": 0,
@@ -14842,16 +15603,30 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "CF Montréal",
+      "awayTeam": "Chicago Fire"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 11,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": true,
+      "late": false
+    },
+    "goalTimestamps": [
+      14,
+      67
+    ]
   },
   {
     "id": "4677450",
@@ -14922,16 +15697,30 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1,
+      "homeTeam": "Gualaceo SC",
+      "awayTeam": "San Antonio"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 0,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": false,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      85,
+      90
+    ]
   },
   {
     "id": "4711483",
@@ -15002,16 +15791,31 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Alianza FC",
+      "awayTeam": "Real Santander"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 1,
       "away": 0
-    }
+    },
+    "goalWindows": {
+      "firstHalf": true,
+      "earlySecondHalf": false,
+      "late": true
+    },
+    "goalTimestamps": [
+      3,
+      38,
+      83
+    ]
   },
   {
     "id": "4714900",
@@ -15082,11 +15886,16 @@
     "predictedProbability": 5.36,
     "predictedScorer": null,
     "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "Espuce FC (F)",
+      "awayTeam": "Quito FC (F)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 0,
@@ -15162,11 +15971,16 @@
     "predictedProbability": 4.41,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "Algeciras CF",
+      "awayTeam": "Hércules"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 0,
@@ -15242,11 +16056,16 @@
     "predictedProbability": 3.35,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido tacticamente cerrado",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Club Atletico Barinas",
+      "awayTeam": "Barquisimeto SC"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 61,
     "lastSeenScore": {
       "home": 1,
@@ -15322,11 +16141,16 @@
     "predictedProbability": 1.5100000000000016,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 6,
+      "away": 2,
+      "homeTeam": "Alcorcón",
+      "awayTeam": "Marbella"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 5,
@@ -15402,11 +16226,16 @@
     "predictedProbability": 1.5100000000000016,
     "predictedScorer": null,
     "predictedTimeWindow": "Gol en cualquier momento — descuento!",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 4,
+      "away": 1,
+      "homeTeam": "Cobreloa",
+      "awayTeam": "Deportes Copiapó"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 4,
@@ -15482,11 +16311,16 @@
     "predictedProbability": 0.8600000000000008,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido que se apaga",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 4,
+      "homeTeam": "Sportivo 2 de Mayo (F)",
+      "awayTeam": "Sportivo Trinidense (F)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 79,
     "lastSeenScore": {
       "home": 2,
@@ -15562,11 +16396,16 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 0,
+      "homeTeam": "Villarreal B",
+      "awayTeam": "Sevilla Atlético"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
@@ -15642,11 +16481,16 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "CD Teruel",
+      "awayTeam": "Atletico Sanluqueno"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 85,
     "lastSeenScore": {
       "home": 0,
@@ -15722,11 +16566,16 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 3,
+      "homeTeam": "Juventud Torremolinos",
+      "awayTeam": "Real Murcia"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 0,
@@ -15802,11 +16651,16 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Bahia (F)",
+      "awayTeam": "Internacional (F)"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 3,
@@ -15882,11 +16736,16 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "Pouso Alegre FC",
+      "awayTeam": "Portuguesa-RJ"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 85,
     "lastSeenScore": {
       "home": 0,
@@ -15962,14 +16821,2669 @@
     "predictedProbability": 0,
     "predictedScorer": null,
     "predictedTimeWindow": "Partido practicamente definido",
+    "finalScore": {
+      "home": 2,
+      "away": 0,
+      "homeTeam": "ABC",
+      "awayTeam": "Sousa"
+    },
+    "goalAfterAnalysis": false,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": true,
+    "lastSeenMinute": 87,
+    "lastSeenScore": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "id": "4677452",
+    "match": "9 De Octubre vs El Nacional",
+    "league": "Serie B",
+    "teamHome": "9 De Octubre",
+    "teamAway": "El Nacional",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 74,
+    "scoreAtAnalysis": {
+      "home": 2,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.45,
+      "xgAway": 0.45,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 3,
+      "totalShotsHome": 8,
+      "totalShotsAway": 4,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 5,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 8,
+      "cornersAway": 2,
+      "possessionHome": 0.58,
+      "possessionAway": 0.42,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 2,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": 97,
+      "attacksAway": 61,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "Partido que se apaga",
     "finalScore": null,
     "goalAfterAnalysis": null,
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 87,
+    "lastSeenMinute": 88,
     "lastSeenScore": {
       "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "id": "4696057",
+    "match": "Retrô FC vs Decisão Futebol Clube",
+    "league": "Serie D - Grupo I",
+    "teamHome": "Retrô FC",
+    "teamAway": "Decisão Futebol Clube",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 71,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.6,
+      "xgAway": 0.3,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 4,
+      "sotAway": 2,
+      "totalShotsHome": 7,
+      "totalShotsAway": 2,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 7,
+      "cornersAway": 4,
+      "possessionHome": 0.65,
+      "possessionAway": 0.35,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": 78,
+      "attacksAway": 52,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Posible gol en tramo final (75-90)",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 85,
+    "lastSeenScore": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "id": "4664892",
+    "match": "Pacific vs Inter Toronto FC",
+    "league": "Canadian Premier League",
+    "teamHome": "Pacific",
+    "teamAway": "Inter Toronto FC",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 45,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.81,
+      "xgAway": 0.4,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 0,
+      "totalShotsHome": 4,
+      "totalShotsAway": 9,
+      "shotsInsideBoxHome": 3,
+      "shotsInsideBoxAway": 5,
+      "shotsOutsideBoxHome": 1,
+      "shotsOutsideBoxAway": 4,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 8,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 1,
+      "bigChancesHome": 1,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 1,
+      "cornersHome": 1,
+      "cornersAway": 2,
+      "possessionHome": 0.54,
+      "possessionAway": 0.46,
+      "foulsHome": 5,
+      "foulsAway": 9,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 3,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": 41,
+      "attacksAway": 42,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Gol al inicio del 2T (45-60)",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 51,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4669196",
+    "match": "Vila Nova vs Avai",
+    "league": "Brasileirão - Série B",
+    "teamHome": "Vila Nova",
+    "teamAway": "Avai",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 47,
+    "scoreAtAnalysis": {
+      "home": 2,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 1.54,
+      "xgAway": 0.15,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 6,
+      "sotAway": 1,
+      "totalShotsHome": 11,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": 5,
+      "shotsInsideBoxAway": 0,
+      "shotsOutsideBoxHome": 6,
+      "shotsOutsideBoxAway": 1,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": 2,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 2,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 2,
+      "cornersAway": 0,
+      "possessionHome": 0.57,
+      "possessionAway": 0.43,
+      "foulsHome": 8,
+      "foulsAway": 11,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 49,
+      "attacksAway": 23,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Gol al inicio del 2T (45-60)",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 61,
+    "lastSeenScore": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "id": "4677836",
+    "match": "Anápolis vs Barra FC",
+    "league": "Serie C",
+    "teamHome": "Anápolis",
+    "teamAway": "Barra FC",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 47,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.3,
+      "xgAway": 0.45,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 2,
+      "sotAway": 3,
+      "totalShotsHome": 11,
+      "totalShotsAway": 4,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 9,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 7,
+      "cornersAway": 1,
+      "possessionHome": 0.75,
+      "possessionAway": 0.25,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 3,
+      "offsideAway": 0,
+      "attacksHome": 63,
+      "attacksAway": 49,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Posible gol al inicio del 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 62,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "id": "4709191",
+    "match": "Estudiantes de Merida vs Carabobo FC",
+    "league": "Liga FUTVE - Cuadrangulares - Grupo B",
+    "teamHome": "Estudiantes de Merida",
+    "teamAway": "Carabobo FC",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 49,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.23,
+      "xgAway": 0.43,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 1,
+      "sotAway": 1,
+      "totalShotsHome": 4,
+      "totalShotsAway": 3,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 3,
+      "shotsOutsideBoxAway": 1,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 2,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 0,
+      "bigChancesAway": 1,
+      "hitWoodworkHome": 1,
+      "hitWoodworkAway": 0,
+      "cornersHome": 3,
+      "cornersAway": 1,
+      "possessionHome": 0.58,
+      "possessionAway": 0.42,
+      "foulsHome": 8,
+      "foulsAway": 7,
+      "yellowCardsHome": 2,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 2,
+      "offsideAway": 2,
+      "attacksHome": 48,
+      "attacksAway": 33,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "Posible gol al inicio del 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 63,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4632786",
+    "match": "Chapecoense vs Remo",
+    "league": "Brasileirão",
+    "teamHome": "Chapecoense",
+    "teamAway": "Remo",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 34,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.93,
+      "xgAway": 0.58,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 2,
+      "totalShotsHome": 5,
+      "totalShotsAway": 3,
+      "shotsInsideBoxHome": 3,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 2,
+      "shotsOutsideBoxAway": 1,
+      "shotsOffTargetHome": 2,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 1,
+      "bigChancesHome": 2,
+      "bigChancesAway": 1,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 3,
+      "possessionHome": 0.51,
+      "possessionAway": 0.49,
+      "foulsHome": 4,
+      "foulsAway": 2,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": null,
+      "redCardsAway": null,
+      "offsideHome": 3,
+      "offsideAway": 0,
+      "attacksHome": null,
+      "attacksAway": null,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Gol antes del descanso (30-45)!",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "id": "4632792",
+    "match": "Bragantino vs Vitória",
+    "league": "Brasileirão",
+    "teamHome": "Bragantino",
+    "teamAway": "Vitória",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 35,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.38,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 2,
+      "sotAway": 0,
+      "totalShotsHome": 7,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 0,
+      "shotsOutsideBoxHome": 6,
+      "shotsOutsideBoxAway": 1,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": 2,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 0,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 1,
+      "hitWoodworkAway": 0,
+      "cornersHome": 2,
+      "cornersAway": 1,
+      "possessionHome": 0.59,
+      "possessionAway": 0.41,
+      "foulsHome": 7,
+      "foulsAway": 5,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 1,
+      "redCardsHome": null,
+      "redCardsAway": null,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": null,
+      "attacksAway": null,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": null,
+    "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 50,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "id": "4650634",
+    "match": "Colo Colo vs Ñublense",
+    "league": "Liga de Primera",
+    "teamHome": "Colo Colo",
+    "teamAway": "Ñublense",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 34,
+    "scoreAtAnalysis": {
+      "home": 2,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.73,
+      "xgAway": 0.23,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 1,
+      "totalShotsHome": 4,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": 2,
+      "shotsInsideBoxAway": 1,
+      "shotsOutsideBoxHome": 2,
+      "shotsOutsideBoxAway": 0,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 1,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 2,
+      "cornersAway": 0,
+      "possessionHome": 0.69,
+      "possessionAway": 0.31,
+      "foulsHome": 3,
+      "foulsAway": 1,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 1,
+      "attacksHome": 51,
+      "attacksAway": 23,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "id": "4656691",
+    "match": "San Marcos vs Deportes Antofagasta",
+    "league": "Liga de Ascenso",
+    "teamHome": "San Marcos",
+    "teamAway": "Deportes Antofagasta",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 34,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.45,
+      "xgAway": 0.3,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 2,
+      "totalShotsHome": 4,
+      "totalShotsAway": 3,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 0,
+      "possessionHome": 0.62,
+      "possessionAway": 0.38,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 70,
+      "attacksAway": 41,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Gol antes del descanso (30-45)!",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4669198",
+    "match": "Criciúma vs Atlético Goianiense",
+    "league": "Brasileirão - Série B",
+    "teamHome": "Criciúma",
+    "teamAway": "Atlético Goianiense",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 33,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.24,
+      "xgAway": 0.24,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 4,
+      "totalShotsAway": 4,
+      "shotsInsideBoxHome": 3,
+      "shotsInsideBoxAway": 3,
+      "shotsOutsideBoxHome": 1,
+      "shotsOutsideBoxAway": 1,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 3,
+      "blockedShotsHome": 1,
+      "blockedShotsAway": 1,
+      "bigChancesHome": 0,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 1,
+      "hitWoodworkAway": 1,
+      "cornersHome": 2,
+      "cornersAway": 1,
+      "possessionHome": 0.58,
+      "possessionAway": 0.42,
+      "foulsHome": 3,
+      "foulsAway": 4,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 30,
+      "attacksAway": 23,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Posible gol en minutos finales del 1T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 48,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4669759",
+    "match": "Ceará vs Fortaleza",
+    "league": "Brasileirão - Série B",
+    "teamHome": "Ceará",
+    "teamAway": "Fortaleza",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 45,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.08,
+      "xgAway": 0.58,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 2,
+      "totalShotsHome": 3,
+      "totalShotsAway": 7,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 2,
+      "shotsOutsideBoxAway": 5,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 5,
+      "blockedShotsHome": 3,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 0,
+      "bigChancesAway": 1,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 1,
+      "cornersAway": 0,
+      "possessionHome": 0.57,
+      "possessionAway": 0.43,
+      "foulsHome": 7,
+      "foulsAway": 15,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 1,
+      "attacksHome": 46,
+      "attacksAway": 29,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 71.64000000000001,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "id": "4677840",
+    "match": "Guarani vs Ituano",
+    "league": "Serie C",
+    "teamHome": "Guarani",
+    "teamAway": "Ituano",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 35,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.6,
+      "xgAway": 0.3,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 4,
+      "sotAway": 2,
+      "totalShotsHome": 11,
+      "totalShotsAway": 6,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 7,
+      "shotsOffTargetAway": 4,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 4,
+      "possessionHome": 0.6,
+      "possessionAway": 0.4,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 2,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 1,
+      "attacksHome": 58,
+      "attacksAway": 34,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Posible gol en minutos finales del 1T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 49,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "id": "4660892",
+    "match": "Santos (F) vs RB Bragantino (F)",
+    "league": "Brasileirao Femenino",
+    "teamHome": "Santos (F)",
+    "teamAway": "RB Bragantino (F)",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 47,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.3,
+      "xgAway": 0.15,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 2,
+      "sotAway": 1,
+      "totalShotsHome": 5,
+      "totalShotsAway": 6,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 2,
+      "shotsOffTargetAway": 4,
+      "blockedShotsHome": 1,
+      "blockedShotsAway": 1,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 1,
+      "possessionHome": 0.52,
+      "possessionAway": 0.48,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 2,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 2,
+      "offsideAway": 0,
+      "attacksHome": 32,
+      "attacksAway": 49,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 96,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 61,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4682582",
+    "match": "Santamarina Tandil vs Olimpo",
+    "league": "Federal A",
+    "teamHome": "Santamarina Tandil",
+    "teamAway": "Olimpo",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 45,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0.45,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 3,
+      "totalShotsHome": 1,
+      "totalShotsAway": 4,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 2,
+      "possessionHome": 0.55,
+      "possessionAway": 0.45,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 6,
+      "offsideAway": 3,
+      "attacksHome": 56,
+      "attacksAway": 54,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 96,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 46,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4709187",
+    "match": "Portuguesa FC vs Puerto Cabello",
+    "league": "Liga FUTVE - Cuadrangulares - Grupo A",
+    "teamHome": "Portuguesa FC",
+    "teamAway": "Puerto Cabello",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 36,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.15,
+      "xgAway": 0.16,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 1,
+      "sotAway": 0,
+      "totalShotsHome": 3,
+      "totalShotsAway": 5,
+      "shotsInsideBoxHome": 0,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 3,
+      "shotsOutsideBoxAway": 3,
+      "shotsOffTargetHome": 2,
+      "shotsOffTargetAway": 4,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 1,
+      "bigChancesHome": 0,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 0,
+      "cornersAway": 1,
+      "possessionHome": 0.58,
+      "possessionAway": 0.42,
+      "foulsHome": 1,
+      "foulsAway": 8,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 0,
+      "attacksHome": 36,
+      "attacksAway": 25,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 96,
+    "predictedScorer": null,
+    "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 51,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4710322",
+    "match": "Alianza Lima (F) vs Universitario (F)",
+    "league": "Liga Femenina",
+    "teamHome": "Alianza Lima (F)",
+    "teamAway": "Universitario (F)",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 89,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 3
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 9,
+      "cornersAway": 7,
+      "possessionHome": null,
+      "possessionAway": null,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 2,
+      "offsideAway": 1,
+      "attacksHome": 89,
+      "attacksAway": 77,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 52.260000000000005,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Partido practicamente definido",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 89,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "id": "4712422",
+    "match": "Barranquilla FC vs Union Magdalena",
+    "league": "Torneo BetPlay Dimayor - Cuadrangulares",
+    "teamHome": "Barranquilla FC",
+    "teamAway": "Union Magdalena",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 6,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 0,
+      "totalShotsAway": 0,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 0,
+      "possessionHome": 0.22,
+      "possessionAway": 0.78,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 0,
+      "redCardsHome": 1,
+      "redCardsAway": 0,
+      "offsideHome": null,
+      "offsideAway": null,
+      "attacksHome": 4,
+      "attacksAway": 6,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 82.3,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 20,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4714375",
+    "match": "Cavalier FC vs Montego Bay Utd",
+    "league": "Premier League - Semifinales",
+    "teamHome": "Cavalier FC",
+    "teamAway": "Montego Bay Utd",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 6,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 0,
+      "totalShotsAway": 0,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 0,
+      "possessionHome": 0.28,
+      "possessionAway": 0.72,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 0,
+      "attacksHome": 0,
+      "attacksAway": 0,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 82.3,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 20,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4696078",
+    "match": "Independência vs Araguaína",
+    "league": "Serie D - Grupo 2",
+    "teamHome": "Independência",
+    "teamAway": "Araguaína",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 58,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.15,
+      "xgAway": 0.3,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 1,
+      "sotAway": 2,
+      "totalShotsHome": 6,
+      "totalShotsAway": 15,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 5,
+      "shotsOffTargetAway": 13,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 3,
+      "possessionHome": 0.45,
+      "possessionAway": 0.55,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 3,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 64,
+      "attacksAway": 60,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "Partido tacticamente cerrado",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 58,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "id": "4657865",
+    "match": "Los Chankas vs Deportivo Moquegua",
+    "league": "Liga 1 - Apertura",
+    "teamHome": "Los Chankas",
+    "teamAway": "Deportivo Moquegua",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 75,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 1.05,
+      "xgAway": 0.31,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 3,
+      "sotAway": 1,
+      "totalShotsHome": 13,
+      "totalShotsAway": 8,
+      "shotsInsideBoxHome": 6,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 7,
+      "shotsOutsideBoxAway": 6,
+      "shotsOffTargetHome": 5,
+      "shotsOffTargetAway": 5,
+      "blockedShotsHome": 5,
+      "blockedShotsAway": 2,
+      "bigChancesHome": 1,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 1,
+      "cornersHome": 4,
+      "cornersAway": 5,
+      "possessionHome": 0.6,
+      "possessionAway": 0.4,
+      "foulsHome": 7,
+      "foulsAway": 9,
+      "yellowCardsHome": 3,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": 59,
+      "attacksAway": 76,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 70,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Gol inminente — ultimos 15 minutos!",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 75,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "id": "4711486",
+    "match": "Deportivo Pereira vs Real Cundinamarca",
+    "league": "Copa BetPlay Dimayor",
+    "teamHome": "Deportivo Pereira",
+    "teamAway": "Real Cundinamarca",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 78,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 1.2,
+      "xgAway": 0.3,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 8,
+      "sotAway": 2,
+      "totalShotsHome": 16,
+      "totalShotsAway": 5,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 8,
+      "shotsOffTargetAway": 3,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 4,
+      "cornersAway": 5,
+      "possessionHome": 0.57,
+      "possessionAway": 0.43,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 1,
+      "attacksHome": 65,
+      "attacksAway": 53,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 70,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Gol inminente — ultimos 15 minutos!",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 78,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "id": "4709188",
+    "match": "Metropolitanos FC vs Deportivo Táchira",
+    "league": "Liga FUTVE - Cuadrangulares - Grupo B",
+    "teamHome": "Metropolitanos FC",
+    "teamAway": "Deportivo Táchira",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 20,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0.2,
+      "xgAway": 0.31,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 1,
+      "totalShotsHome": 1,
+      "totalShotsAway": 2,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": 1,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 1,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 1,
+      "cornersAway": 1,
+      "possessionHome": 0.47,
+      "possessionAway": 0.53,
+      "foulsHome": 1,
+      "foulsAway": 3,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 11,
+      "attacksAway": 16,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 100,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 20,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "id": "4677496",
+    "match": "Barcelona SC (F) vs LDU Quito (F)",
+    "league": "Superliga Femenina de Ecuador",
+    "teamHome": "Barcelona SC (F)",
+    "teamAway": "LDU Quito (F)",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 45,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 2,
+      "cornersAway": 2,
+      "possessionHome": 0.53,
+      "possessionAway": 0.47,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 34,
+      "attacksAway": 32,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 48,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 60,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4696079",
+    "match": "São Raimundo RR vs Manaus",
+    "league": "Serie D - Grupo 1",
+    "teamHome": "São Raimundo RR",
+    "teamAway": "Manaus",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 45,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 3,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 3,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 2,
+      "cornersAway": 2,
+      "possessionHome": 0.58,
+      "possessionAway": 0.42,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 2,
+      "offsideAway": 0,
+      "attacksHome": 46,
+      "attacksAway": 49,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 48,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 58,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4713649",
+    "match": "Albion vs Montevideo Wanderers",
+    "league": "Liga AUF Uruguaya - Intermedio",
+    "teamHome": "Albion",
+    "teamAway": "Montevideo Wanderers",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 48,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.15,
+      "xgAway": 0.15,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 1,
+      "sotAway": 1,
+      "totalShotsHome": 3,
+      "totalShotsAway": 4,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 2,
+      "shotsOffTargetAway": 3,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 4,
+      "possessionHome": 0.47,
+      "possessionAway": 0.53,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 57,
+      "attacksAway": 71,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 48,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 62,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4713625",
+    "match": "Cacahuatique Reserva vs Metapán Reserva",
+    "league": "Torneo Reservas - Semifinales",
+    "teamHome": "Cacahuatique Reserva",
+    "teamAway": "Metapán Reserva",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 31,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 2,
+      "possessionHome": 0.39,
+      "possessionAway": 0.61,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 29,
+      "attacksAway": 47,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 48,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "id": "4711671",
+    "match": "Unión Comercio vs Club Deportivo Llacuabamba",
+    "league": "Liga 2",
+    "teamHome": "Unión Comercio",
+    "teamAway": "Club Deportivo Llacuabamba",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 89,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 5,
+      "totalShotsAway": 2,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 5,
+      "shotsOffTargetAway": 2,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 12,
+      "cornersAway": 2,
+      "possessionHome": 0.57,
+      "possessionAway": 0.43,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 2,
+      "yellowCardsAway": 8,
+      "redCardsHome": 0,
+      "redCardsAway": 1,
+      "offsideHome": 2,
+      "offsideAway": 0,
+      "attacksHome": 85,
+      "attacksAway": 42,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 47.3,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Partido practicamente definido",
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Unión Comercio",
+      "awayTeam": "Club Deportivo Llacuabamba"
+    },
+    "goalAfterAnalysis": false,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": true,
+    "lastSeenMinute": 89,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4714483",
+    "match": "Deportivo Italiano vs Bella Vista",
+    "league": "Divisional C - Torneo Inicial",
+    "teamHome": "Deportivo Italiano",
+    "teamAway": "Bella Vista",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 48,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 1
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 3,
+      "cornersAway": 1,
+      "possessionHome": 0.5,
+      "possessionAway": 0.5,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 0,
+      "attacksHome": 46,
+      "attacksAway": 54,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 30,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Descanso sin mucha accion",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 48,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "id": "4713870",
+    "match": "Sportivo Ameliano (F) vs Olimpia (F)",
+    "league": "Campeonato Anual FEM",
+    "teamHome": "Sportivo Ameliano (F)",
+    "teamAway": "Olimpia (F)",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 36,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 5
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 2,
+      "possessionHome": 0.35,
+      "possessionAway": 0.65,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 41,
+      "attacksAway": 41,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 28,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "1T tranquilo, probable gol en 2T",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 45,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 5
+    }
+  },
+  {
+    "id": "4712073",
+    "match": "Independiente Santa Fe (F) vs Independiente Medellín (F)",
+    "league": "Liga Femenina BetPlay Dimayor",
+    "teamHome": "Independiente Santa Fe (F)",
+    "teamAway": "Independiente Medellín (F)",
+    "timestamp": "2026-05-17T22:05:34.342Z",
+    "analysisMinute": 81,
+    "scoreAtAnalysis": {
+      "home": 2,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 5,
+      "cornersAway": 2,
+      "possessionHome": 0.57,
+      "possessionAway": 0.43,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 2,
+      "yellowCardsAway": 1,
+      "redCardsHome": 0,
+      "redCardsAway": 2,
+      "offsideHome": 3,
+      "offsideAway": 2,
+      "attacksHome": 92,
+      "attacksAway": 65,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 18,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Partido practicamente definido",
+    "finalScore": {
+      "home": 2,
+      "away": 0,
+      "homeTeam": "Independiente Santa Fe (F)",
+      "awayTeam": "Independiente Medellín (F)"
+    },
+    "goalAfterAnalysis": false,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": true,
+    "lastSeenMinute": 81,
+    "lastSeenScore": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "id": "4621525",
+    "match": "Inter Miami vs Portland Timbers",
+    "league": "MLS",
+    "teamHome": "Inter Miami",
+    "teamAway": "Portland Timbers",
+    "timestamp": "2026-05-17T22:19:56.494Z",
+    "analysisMinute": 7,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0.35,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 1,
+      "sotAway": 0,
+      "totalShotsHome": 1,
+      "totalShotsAway": 0,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 0,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 1,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 0,
+      "cornersAway": 0,
+      "possessionHome": 0.51,
+      "possessionAway": 0.49,
+      "foulsHome": 1,
+      "foulsAway": 0,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 0,
+      "attacksHome": 3,
+      "attacksAway": 7,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 76.64000000000001,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 7,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4653853",
+    "match": "Portland Thorns vs Angel City",
+    "league": "NWSL",
+    "teamHome": "Portland Thorns",
+    "teamAway": "Angel City",
+    "timestamp": "2026-05-17T22:19:56.494Z",
+    "analysisMinute": 12,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0.23,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 1,
+      "totalShotsHome": 1,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": 0,
+      "shotsInsideBoxAway": 1,
+      "shotsOutsideBoxHome": 1,
+      "shotsOutsideBoxAway": 0,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": 0,
+      "blockedShotsAway": 0,
+      "bigChancesHome": 0,
+      "bigChancesAway": 0,
+      "hitWoodworkHome": 0,
+      "hitWoodworkAway": 0,
+      "cornersHome": 1,
+      "cornersAway": 0,
+      "possessionHome": 0.52,
+      "possessionAway": 0.48,
+      "foulsHome": 0,
+      "foulsAway": 1,
+      "yellowCardsHome": 0,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 1,
+      "offsideAway": 0,
+      "attacksHome": 14,
+      "attacksAway": 12,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 47.760000000000005,
+    "predictedScorer": null,
+    "predictedTimeWindow": "Temprano, revaluar en 15-20 min",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 12,
+    "lastSeenScore": {
+      "home": 0,
       "away": 0
     }
   }

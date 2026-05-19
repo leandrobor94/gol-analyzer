@@ -6,12 +6,32 @@ const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
 const TEAMS_FILE = path.join(__dirname, 'teams.json');
 
 const DEFAULT_WEIGHTS = {
-  version: 1, learningRate: 0.05,
-  global: {
-    xg: 30, shotsOnTarget: 25, shotsInsideBox: 18, bigChances: 15, totalShots: 10,
-    xgot: 12, hitWoodwork: 10, xA: 8, touchesOppBox: 8,
-    scoreNeeds: 10, timePressure: 8, corners: 5, possession: 5, saves: 5, goalsScored: -10,
-    teamFactor: 8, leagueFactor: 5
+  version: 3, learningRate: 0.05,
+  windows: {
+    firstHalf: {
+      xg: 35, shotsOnTarget: 20, shotsInsideBox: 15, bigChances: 14, totalShots: 5,
+      xgot: 10, hitWoodwork: 6, xA: 7, touchesOppBox: 7,
+      scoreNeeds: 6, timePressure: 4, corners: 6, possession: 3, saves: 2, goalsScored: -3,
+      redCard: 15, teamHistory: 8, matchContext: 5
+    },
+    earlySecondHalf: {
+      xg: 30, shotsOnTarget: 18, shotsInsideBox: 14, bigChances: 12, totalShots: 5,
+      xgot: 10, hitWoodwork: 5, xA: 6, touchesOppBox: 6,
+      scoreNeeds: 10, timePressure: 8, corners: 4, possession: 3, saves: 2, goalsScored: -4,
+      redCard: 20, teamHistory: 8, matchContext: 5
+    },
+    late: {
+      xg: 25, shotsOnTarget: 15, shotsInsideBox: 12, bigChances: 10, totalShots: 4,
+      xgot: 8, hitWoodwork: 4, xA: 5, touchesOppBox: 5,
+      scoreNeeds: 14, timePressure: 16, corners: 5, possession: 2, saves: 2, goalsScored: -5,
+      redCard: 25, teamHistory: 10, matchContext: 6
+    }
+  },
+  globalFallback: {
+    xg: 30, shotsOnTarget: 18, shotsInsideBox: 14, bigChances: 12, totalShots: 5,
+    xgot: 10, hitWoodwork: 5, xA: 6, touchesOppBox: 6,
+    scoreNeeds: 10, timePressure: 8, corners: 4, possession: 3, saves: 2, goalsScored: -4,
+    redCard: 20, teamHistory: 8, matchContext: 5
   },
   byLeague: {},
   stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0 }
@@ -27,8 +47,8 @@ function loadWeights() { return loadJSON(WEIGHTS_FILE, JSON.parse(JSON.stringify
 function saveWeights(w) { w.lastUpdated = new Date().toISOString(); saveJSON(WEIGHTS_FILE, w); }
 function loadPredictions() { return loadJSON(PREDICTIONS_FILE, []); }
 function savePredictions(p) {
-  // Limpiar predicciones verificadas > 7 dias para evitar bloat
-  const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  // Limpiar predicciones verificadas > 30 dias para evitar bloat (balance entre datos de entrenamiento y tamaño)
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
   const filtered = p.filter(pred => {
     if (pred.predictionCorrect === null) return true;
     if (pred.timestamp) { const t = new Date(pred.timestamp).getTime(); if (t > cutoff) return true; }
@@ -197,8 +217,9 @@ function adjustLeagueWeights(weights) {
     const multiplier = Math.max(0.5, Math.min(1.5, goalRatio * accuracyFactor));
 
     // Aplicar a todos los pesos de la liga
-    for (const [key, val] of Object.entries(weights.global)) {
-      if (key === 'goalsScored' || key === 'teamFactor' || key === 'leagueFactor') continue;
+    const baseWeights = weights.globalFallback || weights.windows?.late || {};
+    for (const [key, val] of Object.entries(baseWeights)) {
+      if (key === 'goalsScored' || key === 'redCard' || key === 'teamHistory' || key === 'matchContext') continue;
       weights.byLeague[league][key] = Math.round(Math.max(1, Math.min(60, val * multiplier)) * 10) / 10;
     }
   }
@@ -250,11 +271,47 @@ function verifyPredictions(predictions, liveMatches, teams) {
     }
     const prob = (pred.predictedProbability || 0) / 100;
     const predictedGoal = prob >= 0.7;
-    const correct = (predictedGoal && goalHappened) || (!predictedGoal && !goalHappened);
+
+    // Window-specific correctness
+    let correct;
+    if (pred.windowType === 'firstHalf' && pred.goalWindows?.firstHalf !== undefined) {
+      correct = (predictedGoal && pred.goalWindows.firstHalf) || (!predictedGoal && !pred.goalWindows.firstHalf);
+    } else if (pred.windowType === 'earlySecondHalf' && pred.goalWindows?.earlySecondHalf !== undefined) {
+      correct = (predictedGoal && pred.goalWindows.earlySecondHalf) || (!predictedGoal && !pred.goalWindows.earlySecondHalf);
+    } else {
+      correct = (predictedGoal && goalHappened) || (!predictedGoal && !goalHappened);
+    }
 
     pred.finalScore = finalScore;
     pred.goalAfterAnalysis = goalHappened;
     pred.predictionCorrect = correct;
+
+    // Determine actual scorer and approximate minute for training
+    if (goalHappened) {
+      const prevHome = pred.scoreAtAnalysis?.home ?? 0;
+      const prevAway = pred.scoreAtAnalysis?.away ?? 0;
+      if (finalScore.home > prevHome && finalScore.away > prevAway) {
+        pred.actualScorer = null;
+      } else if (finalScore.home > prevHome) {
+        pred.actualScorer = 'home';
+      } else if (finalScore.away > prevAway) {
+        pred.actualScorer = 'away';
+      } else {
+        pred.actualScorer = null;
+      }
+      if (pred.lastSeenMinute && pred.lastSeenMinute > (pred.analysisMinute || 0)) {
+        pred.actualGoalMinute = pred.lastSeenMinute;
+      } else if (liveMatch && liveMatch.minute && liveMatch.minute > (pred.analysisMinute || 0)) {
+        pred.actualGoalMinute = liveMatch.minute;
+      } else {
+        pred.actualGoalMinute = null;
+      }
+    } else {
+      pred.actualScorer = null;
+      pred.actualGoalMinute = null;
+    }
+
+    // Update stats counters
 
     // Actualizar stats de equipos
     updateTeamStats(teams, pred, liveMatch || { scoreHome: 0, scoreAway: 0 });
@@ -314,6 +371,16 @@ function verifyPredictions(predictions, liveMatches, teams) {
   return { verified, insights };
 }
 
+/**
+ * Obtiene el set de pesos para una ventana específica.
+ */
+function getWindowWeights(weights, windowType) {
+  if (windowType && weights.windows && weights.windows[windowType]) {
+    return weights.windows[windowType];
+  }
+  return weights.globalFallback || weights.global || {};
+}
+
 // ========== AJUSTE DE PESOS ==========
 
 function adjustWeights(weights, verified, insights) {
@@ -337,28 +404,44 @@ function adjustWeights(weights, verified, insights) {
   // cada una aporta menos para evitar sobre-ajuste masivo
   const lr = weights.learningRate / Math.min(useful.length, 10);
 
+  // Agrupar por ventana para ajustar pesos específicos
+  const byWindow = {};
   for (const pred of useful) {
-    const prob = (pred.predictedProbability || 0) / 100;
-    const goalHappened = pred.goalAfterAnalysis || false;
-    const error = (goalHappened ? 1 : 0) - prob;
-    const direction = error > 0 ? 1 : -1;
-    const adjust = lr * direction;
+    const wt = pred.windowType || 'late';
+    if (!byWindow[wt]) byWindow[wt] = [];
+    byWindow[wt].push(pred);
+  }
 
-    const globalKeys = ['xg', 'shotsOnTarget', 'shotsInsideBox', 'bigChances', 'totalShots', 'xgot', 'hitWoodwork', 'xA', 'touchesOppBox', 'scoreNeeds', 'timePressure', 'corners', 'possession', 'saves', 'goalsScored'];
-    for (const key of globalKeys) {
-      if (key === 'goalsScored') {
-        weights.global[key] = Math.round(Math.max(-20, Math.min(0, weights.global[key] * (1 + adjust))) * 10) / 10;
-      } else {
-        weights.global[key] = Math.round(Math.max(1, Math.min(60, weights.global[key] * (1 + adjust))) * 10) / 10;
+  const globalKeys = ['xg', 'shotsOnTarget', 'shotsInsideBox', 'bigChances', 'totalShots', 'xgot', 'hitWoodwork', 'xA', 'touchesOppBox', 'scoreNeeds', 'timePressure', 'corners', 'possession', 'saves', 'goalsScored', 'redCard', 'teamHistory', 'matchContext'];
+
+  for (const [windowType, preds] of Object.entries(byWindow)) {
+    const w = getWindowWeights(weights, windowType);
+    const windowLr = lr / Math.min(preds.length, 5); // más datos por ventana = menos ajuste agresivo
+
+    for (const pred of preds) {
+      const prob = (pred.predictedProbability || 0) / 100;
+      const goalHappened = pred.goalAfterAnalysis || false;
+      const error = (goalHappened ? 1 : 0) - prob;
+      const direction = error > 0 ? 1 : -1;
+      const adjust = windowLr * direction;
+
+      for (const key of globalKeys) {
+        if (!(key in w)) continue;
+        if (key === 'goalsScored') {
+          w[key] = Math.round(Math.max(-20, Math.min(0, w[key] * (1 + adjust))) * 10) / 10;
+        } else {
+          w[key] = Math.round(Math.max(1, Math.min(60, w[key] * (1 + adjust))) * 10) / 10;
+        }
+        adjustments++;
       }
-      adjustments++;
+
+      if (goalHappened && prob >= 0.4) weights.stats.correctScore++;
+      else if (!goalHappened && prob < 0.4) weights.stats.correctScore++;
+      weights.stats.predictionsCount = (weights.stats.predictionsCount || 0) + 1;
+
+      // Ajuste por liga
+      updateLeagueProfile(weights, pred, pred.finalScore ? { scoreHome: pred.finalScore.home, scoreAway: pred.finalScore.away } : { scoreHome: 0, scoreAway: 0 });
     }
-
-    if (goalHappened && prob >= 0.4) weights.stats.correctScore++;
-    else if (!goalHappened && prob < 0.4) weights.stats.correctScore++;
-
-    // Ajuste por liga
-    updateLeagueProfile(weights, pred, pred.finalScore ? { scoreHome: pred.finalScore.home, scoreAway: pred.finalScore.away } : { scoreHome: 0, scoreAway: 0 });
   }
 
   // Ajustar pesos de liga basado en estadísticas
@@ -406,14 +489,19 @@ function printLearningReport(weights, predictions, insights, teams) {
     if (fn.length > 5) console.log('  ... y ' + (fn.length - 5) + ' mas');
   }
 
-  // Pesos globales
-  console.log('\n  --- PESOS GLOBALES ---');
-  const sorted = Object.entries(weights.global).sort((a, b) => b[1] - a[1]);
-  sorted.forEach(([k, v]) => {
-    if (k === 'goalsScored' || k === 'teamFactor' || k === 'leagueFactor') return;
-    const bar = '\u2588'.repeat(Math.round(v / 3)) + '\u2591'.repeat(20 - Math.round(v / 3));
-    console.log('  ' + k.padEnd(18) + v.toString().padStart(5) + '  ' + bar);
-  });
+  // Pesos por ventana
+  const windowLabels = { firstHalf: '1T (0-44\')', earlySecondHalf: '46-70\'', late: '71+\'' };
+  for (const [wt, label] of Object.entries(windowLabels)) {
+    const w = getWindowWeights(weights, wt);
+    if (!w) continue;
+    console.log('\n  --- PESOS ' + label + ' ---');
+    const sorted = Object.entries(w).sort((a, b) => b[1] - a[1]);
+    sorted.forEach(([k, v]) => {
+      if (k === 'goalsScored') return;
+      const bar = '\u2588'.repeat(Math.round(Math.abs(v) / 3)) + '\u2591'.repeat(20 - Math.round(Math.abs(v) / 3));
+      console.log('  ' + k.padEnd(18) + v.toString().padStart(5) + '  ' + bar);
+    });
+  }
 
   // Ligas con datos
   const leagues = Object.entries(weights.byLeague).filter(([, v]) => v.matchesTracked > 0);
@@ -473,4 +561,4 @@ async function runLearning(liveMatches) {
   return { weights, adjustments: 0, insights: [], teams };
 }
 
-module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, updateTeamStats, saveWeights, saveTeams, savePredictions };
+module.exports = { runLearning, loadWeights, loadPredictions, loadTeams, verifyPredictions, adjustWeights, updateTeamStats, saveWeights, saveTeams, savePredictions, getWindowWeights };

@@ -43,18 +43,16 @@ function sendTelegram(message) {
 }
 
 function buildMessage(ranked) {
-  const top = ranked.filter(r => r.score >= 70);
-  if (top.length === 0) return null;
+  if (ranked.length === 0) return null;
 
   let msg = `<b>⚽ ALERTA GOL — ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}</b>\n\n`;
 
-  top.forEach((r, i) => {
+  ranked.slice(0, 5).forEach((r, i) => {
     const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
     msg += `${medal} <b>${r.teamHome} vs ${r.teamAway}</b>\n`;
-    msg += `   🔥 ${r.score}% de probabilidad\n`;
+    msg += `   🔥 ${r.score}% | ${r.timeWindow}\n`;
     if (r.league) msg += `   🏆 ${r.league}\n`;
     if (r.minute) msg += `   ⏱ ${r.minute}' | ${r.scoreHome}-${r.scoreAway}\n`;
-    msg += `   ${r.timeWindow}\n`;
     msg += `   ${r.verdict}\n`;
     if (r.whoText) {
       const who = r.whoText.replace('\n     ', '');
@@ -63,7 +61,7 @@ function buildMessage(ranked) {
     msg += '\n';
   });
 
-  msg += `<i>📊 sofastats (Flashscore)</i>`;
+  msg += `<i>📊 sofastats</i>`;
   return msg;
 }
 

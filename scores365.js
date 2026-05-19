@@ -10,6 +10,12 @@ function fetch(url) {
   });
 }
 
+function sanitizeLeague(league) {
+  if (!league) return '';
+  let clean = league.replace(/\s+[A-Z0-9]{6,}$/i, '').trim();
+  return clean || league;
+}
+
 /** Get all live matches from 365scores */
 async function fetchLiveMatches() {
   let body, j;
@@ -26,7 +32,7 @@ async function fetchLiveMatches() {
     scoreHome: g.homeCompetitor?.score ?? 0,
     scoreAway: g.awayCompetitor?.score ?? 0,
     minute: g.gameTime || 0,
-    league: g.competitionDisplayName || '',
+    league: sanitizeLeague(g.competitionDisplayName || ''),
     competitionId: g.competitionId,
     statusText: g.statusText || '',
     hasStats: g.hasStats,
@@ -219,5 +225,5 @@ function toInternalFormat(stats, match) {
 module.exports = {
   fetchLiveMatches, fetchMatchStats, verifyFinishedMatch,
   fetchLeagueContext, toInternalFormat, estimateXg,
-  statNameToInternal, internalToDisplay
+  statNameToInternal, internalToDisplay, sanitizeLeague
 };

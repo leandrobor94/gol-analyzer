@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams } = require('./learn');
+const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWindowWeights } = require('./learn');
 const notify = require('./notify');
 const scores365 = require('./scores365');
+const { fetchStatsBatch } = require('./flashscore_fetcher');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
@@ -52,9 +53,10 @@ function loadPredictions() {
   return [];
 }
 function savePredictions(p) { fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(p, null, 2)); }
-function getLeagueWeights(weights, league) {
-  const w = { ...weights.global };
-  if (league && weights.byLeague[league]) Object.keys(w).forEach(k => { if (weights.byLeague[league][k] !== undefined) w[k] = weights.byLeague[league][k]; });
+function getLeagueWeights(weights, league, windowType) {
+  const base = windowType ? getWindowWeights(weights, windowType) : (weights.globalFallback || weights.global || {});
+  const w = { ...base };
+  if (league && weights.byLeague && weights.byLeague[league]) Object.keys(w).forEach(k => { if (weights.byLeague[league][k] !== undefined) w[k] = weights.byLeague[league][k]; });
   return w;
 }
 function parseNum(v) {
@@ -102,7 +104,61 @@ function flashscoreStatsToInternal(flashStats) {
   };
 }
 
-function analyzeGoal(match, w, teams, leagueContext) {
+/** Window-specific estimated odds */
+const WINDOW_ODDS = {
+  firstHalf: 3.0,
+  earlySecondHalf: 2.5,
+  late: 3.5,
+};
+
+/** Determine window type from minute */
+function getWindowType(minute) {
+  if (minute <= 44) return 'firstHalf';
+  if (minute <= 70) return 'earlySecondHalf';
+  return 'late';
+}
+
+/** Get fallback score when stats are mostly null */
+function getFallbackScore(minute, scoreHome, scoreAway, league, match) {
+  let base = 20;
+  const gd = Math.abs(scoreHome - scoreAway);
+  
+  if (minute <= 44) {
+    base = 30;
+    if (gd === 0 && minute >= 25) base += 10;
+    if (gd <= 1 && minute >= 30) base += 5;
+    if (match.stats?.possessionHome !== null && match.stats?.possessionAway !== null) {
+      const diff = Math.abs(match.stats.possessionHome - match.stats.possessionAway);
+      if (diff > 15) base += 10;
+    }
+    if (match.stats?.attacksHome !== null || match.stats?.attacksAway !== null) {
+      const total = (match.stats.attacksHome||0) + (match.stats.attacksAway||0);
+      if (total > 60) base += 10;
+    }
+    if (match.stats?.cornersHome !== null || match.stats?.cornersAway !== null) {
+      const total = (match.stats.cornersHome||0) + (match.stats.cornersAway||0);
+      if (total >= 4) base += 10;
+    }
+  } else if (minute <= 70) {
+    base = 25;
+    if (gd === 0) base += 10;
+  }
+  
+  return Math.min(80, base);
+}
+
+/** Check if match has meaningful stats for scoring */
+function hasMeaningfulStats(stats) {
+  if (!stats) return false;
+  const xgTotal = (stats.xgHome||0) + (stats.xgAway||0);
+  const sotTotal = (stats.sotHome||0) + (stats.sotAway||0);
+  const shotsBoxTotal = (stats.shotsInsideBoxHome||0) + (stats.shotsInsideBoxAway||0);
+  const bigChancesTotal = (stats.bigChancesHome||0) + (stats.bigChancesAway||0);
+  const atkTotal = (stats.attacksHome||0) + (stats.attacksAway||0);
+  return (xgTotal > 0.3 || sotTotal >= 3 || shotsBoxTotal >= 3 || bigChancesTotal >= 1 || atkTotal >= 50);
+}
+
+function analyzeGoal(match, w, teams, leagueContext, windowType) {
   let score = 0;
   let reasons = [];
   let predictedScorer = null;
@@ -114,6 +170,24 @@ function analyzeGoal(match, w, teams, leagueContext) {
   const awayNeeds = match.scoreAway < match.scoreHome;
   const draw = match.scoreHome === match.scoreAway;
   let pressure = 0;
+
+  // --- Match context detection (playoffs, derbys, cup finals) ---
+  if (match.league) {
+    const ctx = match.league.toLowerCase();
+    const highStakes = /final|copa|playoff|play.off|derby|derbi|descenso|repechaje|promoci[oó]n|champions|eliminatoria|semifinal|cuartos/i.test(ctx);
+    if (highStakes) {
+      const ctxBonus = (w.matchContext || 5);
+      if (/final/i.test(ctx) || /derby|derbi/i.test(ctx)) {
+        score += ctxBonus * 1.5;
+        pressure += 15;
+        reasons.push('Partido de alta tension');
+      } else {
+        score += ctxBonus;
+        pressure += 8;
+        reasons.push('Partido decisivo');
+      }
+    }
+  }
 
   // --- League context normalization ---
   if (leagueContext && leagueContext.goalsPerMatch) {
@@ -244,13 +318,50 @@ function analyzeGoal(match, w, teams, leagueContext) {
   if (draw && goals === 0) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('0-0, cualquiera lo rompe'); }
   if (homeNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Local necesita el gol'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('necesita el gol'); } }
   if (awayNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Visitante necesita el gol'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('necesita el gol'); } }
-  if (goals >= 5) { score += w.goalsScored; }
+  // --- Goals scored penalty (escalado, no plano) ---
+  if (goals > 0) {
+    const gsPenalty = w.goalsScored || -4;
+    score += gsPenalty * Math.min(goals, 4);
+    if (goals >= 3 && minute >= 70) {
+      score += gsPenalty * 0.5;
+      reasons.push('Partido definido (' + goals + ' goles)');
+    }
+  }
+  if (goals >= 2 && minute >= 80) {
+    score -= 10;
+    reasons.push('Ventaja doble, pocas opciones');
+  }
+
+  // --- Red card detection ---
+  const redTotal = (s.redCardsHome || 0) + (s.redCardsAway || 0);
+  if (redTotal > 0) {
+    const rcWeight = w.redCard || 18;
+    const rcBonus = rcWeight * redTotal * (minute >= 65 ? 1.5 : 1);
+    score += rcBonus;
+    pressure += 12 * redTotal;
+    const which = (s.redCardsHome || 0) > 0 ? (s.redCardsAway || 0) > 0 ? 'ambos equipos' : 'el local' : 'el visitante';
+    reasons.push(redTotal + ' roja(s) (' + which + ') — partido roto!');
+  }
 
   // --- Time pressure ---
   if (minute >= 80 && pressure >= 20) { score += w.timePressure * 1; reasons.push('Min ' + minute + "' — presion final!"); }
   else if (minute >= 70 && pressure >= 25) { score += w.timePressure * 0.8; reasons.push('Min ' + minute + "' — definicion"); }
   else if (minute >= 60 && pressure >= 30) { score += w.timePressure * 0.5; }
   else if (minute < 20 && pressure >= 25) { score += w.timePressure * 0.5; reasons.push('Presion desde el inicio'); }
+
+  // --- Minute decay (tiempo corriendo, gol no llega) ---
+  // En descuento (90+) los goles son mas probables — reseteamos decay
+  if (minute >= 90) {
+    // No decay — stoppage time es cuando mas goles llegan
+  } else if (minute >= 85 && score >= 60) {
+    score -= 15;
+    reasons.push('Agotando tiempo sin gol');
+  } else if (minute >= 78 && score >= 75) {
+    const decay = Math.min(25, (minute - 75) * 3);
+    score -= decay;
+    reasons.push('Gol no llega (min ' + minute + "')");
+  }
+  score = Math.max(0, score);
 
   // --- Corners ---
   if (s.cornersHome !== null && s.cornersAway !== null) {
@@ -318,7 +429,7 @@ function analyzeGoal(match, w, teams, leagueContext) {
       const teamBonus = Math.max(homeFactor, awayFactor);
       if (teamBonus !== 1.0) {
         const adj = Math.round((teamBonus - 1) * 100);
-        const extra = (w.teamFactor || 8) * (adj / 20);
+        const extra = (w.teamHistory || 8) * (adj / 20);
         score += extra;
         const reasonsList = homeFactor > awayFactor ? homeReasons : awayReasons;
         reasons.push('Equipo ' + (adj > 0 ? 'rinde+' : 'rinde-') + '(' + reasonsList.join(',') + ')');
@@ -502,16 +613,25 @@ async function main() {
           continue;
         }
         let internalStats;
+        let statsAvailable = false;
         if (rawStats) {
           internalStats = scores365.toInternalFormat(rawStats, m);
-        } else {
-          console.log('     -> Sin datos de estadisticas aun\n');
-          continue;
+          statsAvailable = hasMeaningfulStats(internalStats);
         }
-
-        const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
-        const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
-        console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
+        if (!rawStats || !statsAvailable) {
+          internalStats = internalStats || {
+            xgHome: null, xgAway: null, sotHome: null, sotAway: null,
+            shotsInsideBoxHome: null, shotsInsideBoxAway: null, bigChancesHome: null, bigChancesAway: null,
+            cornersHome: null, cornersAway: null, possessionHome: null, possessionAway: null,
+            attacksHome: null, attacksAway: null, foulsHome: null, foulsAway: null,
+            totalShotsHome: null, totalShotsAway: null, savesHome: null, savesAway: null,
+          };
+          console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | Stats no disponibles, usando fallback');
+        } else {
+          const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
+          const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
+          console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
+        }
 
         // Validar datos coherentes
         const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
@@ -531,6 +651,57 @@ async function main() {
           stats: internalStats,
           competitionId: m.competitionId
         });
+      }
+
+      // Flashscore: stats enriquecidas (siempre para minutos tempranos, complementa 365scores)
+      const needFlashscore = loop === 0 ? analyzed.filter(m => m.minute < 71) : [];
+      if (needFlashscore.length > 0) {
+        console.log('\n  -> ' + needFlashscore.length + ' partidos sin stats, buscando en Flashscore...');
+        const fsTargets = needFlashscore.map(m => ({ teamHome: m.teamHome, teamAway: m.teamAway, matchId: m.matchId, minute: m.minute }));
+        try {
+          const fsStats = await fetchStatsBatch(fsTargets);
+          let merged = 0;
+          for (const match of analyzed) {
+            const key = match.matchId;
+            const fs = fsStats[key];
+            if (!fs || !fs.stats || Object.keys(fs.stats).length === 0) continue;
+            const s = match.stats;
+            // Map Flashscore stat names to internal format
+            const fsm = {
+              'Expected goals (xG)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xg' },
+              'Ball possession': { h: v => parseInt(v)/100, a: v => parseInt(v)/100, k: 'possession' },
+              'Total shots': { h: parseInt, a: parseInt, k: 'totalShots' },
+              'Shots on target': { h: parseInt, a: parseInt, k: 'shotsOnTarget' },
+              'Big chances': { h: parseInt, a: parseInt, k: 'bigChances' },
+              'Corner kicks': { h: parseInt, a: parseInt, k: 'corners' },
+              'Fouls': { h: parseInt, a: parseInt, k: 'fouls' },
+              'Yellow cards': { h: parseInt, a: parseInt, k: 'yellowCards' },
+              'Shots off target': { h: parseInt, a: parseInt, k: 'shotsOffTarget' },
+              'Shots inside box': { h: parseInt, a: parseInt, k: 'shotsInsideBox' },
+              'Saves': { h: parseInt, a: parseInt, k: 'saves' },
+            };
+            let anyNew = false;
+            for (const [fsName, mapping] of Object.entries(fsm)) {
+              if (fs.stats[fsName]) {
+                const hVal = mapping.h(fs.stats[fsName].home);
+                const aVal = mapping.a(fs.stats[fsName].away);
+                const existing = s[mapping.k + 'Home'];
+                if ((existing === null || existing === undefined) && !isNaN(hVal) && !isNaN(aVal)) {
+                  s[mapping.k + 'Home'] = hVal;
+                  s[mapping.k + 'Away'] = aVal;
+                  anyNew = true;
+                }
+              }
+            }
+            if (anyNew) {
+              merged++;
+              console.log('     -> Stats Flashscore mergeadas para ' + match.teamHome + ' vs ' + match.teamAway);
+            }
+          }
+          console.log('  -> Flashscore: stats mergeadas para ' + merged + '/' + needFlashscore.length + ' partidos');
+        } catch (e) {
+          console.log('  -> Error Flashscore: ' + (e.message || e));
+        }
       }
 
       // Fetch league context from 365scores
@@ -554,7 +725,43 @@ async function main() {
 
     const ranked = analyzed.map(m => {
       const compCtx = leagueContextMap[m.competitionId];
-      return analyzeGoal(m, getLeagueWeights(weights, m.league), teams, compCtx);
+      const windowType = getWindowType(m.minute);
+      const w = getLeagueWeights(weights, m.league, windowType);
+      let result;
+
+      if (hasMeaningfulStats(m.stats)) {
+        result = analyzeGoal(m, w, teams, compCtx, windowType);
+      } else {
+        const fallbackScore = getFallbackScore(m.minute, m.scoreHome, m.scoreAway, m.league, m);
+        result = {
+          score: fallbackScore,
+          timeWindow: windowType === 'firstHalf' ? 'Gol en 1T (fallback)' : windowType === 'earlySecondHalf' ? 'Gol 46-70 (fallback)' : 'Gol tarde (fallback)',
+          verdict: fallbackScore >= 50 ? 'POSIBLE (stats insuficientes)' : 'DUDOSO (stats insuficientes)',
+          whoText: '', reasons: ['Stats no disponibles, score basado en contexto'],
+          teamHome: m.teamHome, teamAway: m.teamAway, league: m.league, matchId: m.matchId,
+          minute: m.minute, scoreHome: m.scoreHome, scoreAway: m.scoreAway,
+          stats: m.stats, predictedScorer: null, pressure: 0,
+        };
+      }
+
+      // Save base score (pre-window) for training
+      const baseScore = Math.min(100, Math.max(0, result.score));
+
+      // Window classification (solo etiqueta, no modifica el score)
+      if (windowType === 'firstHalf') {
+        result.timeWindow = 'GOL 1T';
+      } else if (windowType === 'earlySecondHalf') {
+        result.timeWindow = 'GOL 46-70';
+      } else {
+        result.timeWindow = 'GOL TARDE';
+      }
+
+      result.score = baseScore;
+      result.windowType = windowType;
+      result.windowOdds = WINDOW_ODDS[windowType];
+      result.ev = (baseScore / 100) * result.windowOdds - 1;
+
+      return result;
     }).sort((a, b) => b.score - a.score);
 
     const now = new Date().toISOString();
@@ -564,11 +771,11 @@ async function main() {
       if (existing) {
         existing.lastSeenMinute = r.minute;
         existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
-        // Si la probabilidad cambio drasticamente (+-20pp) o cruzo el umbral 70%, 
-        // actualizar para no perder predicciones relevantes
-        const diff = Math.abs(r.score - existing.predictedProbability);
-        if (diff > 20 || (r.score >= 70) !== (existing.predictedProbability >= 70)) {
+        const compScore = existing.predictedProbability;
+        const diff = Math.abs(r.score - compScore);
+        if (diff > 20 || (r.score >= 80) !== (compScore >= 80)) {
           existing.predictedProbability = r.score;
+          existing.windowType = r.windowType;
           existing.predictedScorer = r.predictedScorer;
           existing.predictedTimeWindow = r.timeWindow;
           existing.stats = r.stats;
@@ -581,6 +788,7 @@ async function main() {
           teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
           analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
           predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
+          windowType: r.windowType,
           finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
           lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
         });
@@ -609,8 +817,8 @@ async function main() {
     if (ranked.length > 0) {
       ranked.forEach((r, i) => {
         const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
-        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
-        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
+        const bar = '#'.repeat(Math.round(r.baseScore / 5)) + '-'.repeat(20 - Math.round(r.baseScore / 5));
+        console.log('  ' + medal + ' [' + r.baseScore + '%] ' + bar);
         console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
         console.log('     ' + r.timeWindow);
         console.log('     ' + r.verdict + r.whoText);
@@ -642,7 +850,7 @@ async function main() {
 
     // --- Fetch real xG from Flashscore for top matches ---
     const topForXg = ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5);
-    if (false) { // DISABLE_XG — Flashscore xG devuelve basura (0.02-51)
+    if (topForXg.length > 0) {
       console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
       const { fetchXgBatch } = require('./flashscore_fetcher');
       const targets = topForXg.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
@@ -652,66 +860,78 @@ async function main() {
         const key = r.teamHome + ' vs ' + r.teamAway;
         const xg = xgResults[key];
         if (xg && xg.home !== null && xg.away !== null) {
-          // Override estimated xG with real xG
+          // Filter outliers: Flashscore a veces devuelve xG > 5.0 (datos corruptos)
+          if (xg.home > 5.0 || xg.away > 5.0) {
+            console.log('  * xG outlier ignorado: ' + r.teamHome + ' vs ' + r.teamAway + ' = ' + xg.home + '-' + xg.away);
+            continue;
+          }
           const prevXgH = r.stats.xgHome;
           const prevXgA = r.stats.xgAway;
           if (Math.abs(xg.home - prevXgH) > 0.1 || Math.abs(xg.away - prevXgA) > 0.1) {
             xgFound++;
-            // Store real xG (also store estimated as fallback)
             r.stats.xgHome = xg.home;
             r.stats.xgAway = xg.away;
             console.log('  * xG actualizado: ' + r.teamHome + ' vs ' + r.teamAway + ' | estimado: ' + prevXgH.toFixed(2) + '-' + prevXgA.toFixed(2) + ' -> real: ' + xg.home.toFixed(2) + '-' + xg.away.toFixed(2));
           }
         }
       }
-      // Re-analyze if we found real xG
       if (xgFound > 0) {
-        ranked.forEach(r => { const updated = analyzeGoal(r, getLeagueWeights(weights, r.league), teams, null); r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons; });
+        ranked.forEach(r => { const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, getWindowType(r.minute)), teams, null, getWindowType(r.minute)); r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons; });
         ranked.sort((a, b) => b.score - a.score);
       }
       console.log('  xG real obtenido para ' + xgFound + ' partidos\n');
     }
 
-    // --- Telegram alert (solo en la nube) ---
-    if (ranked.length > 0 && ranked[0].score >= 70) {
+    // --- Telegram alert (probabilidad > 80%, top 5) ---
+    const topByScore = ranked.filter(r => r.score >= 80);
+    if (topByScore.length > 0) {
       if (!process.env.CI) {
         // Local: no mandar Telegram, ya ves la terminal
       } else if (!alertsEnabled()) {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
-        const alertKey = ranked[0].matchId;
-        const lastAlert = weights.alertedMatches?.[alertKey];
-        let shouldAlert = true;
-        if (lastAlert) {
-          const realMin = (Date.now() - lastAlert.timestamp) / 60000;
-          const gameMinAdvance = (ranked[0].minute || 0) - (lastAlert.minute || 0);
-          if (realMin < 30 && gameMinAdvance < 20) shouldAlert = false;
+        // Dedup: deducir partidos ya alertados en misma ventana
+        const filtered = [];
+        for (const r of topByScore) {
+          const key = r.matchId + '_' + r.windowType;
+          const lastAlert = weights.alertedMatches?.[key];
+          let skip = false;
+          if (lastAlert) {
+            const realMin = (Date.now() - lastAlert.timestamp) / 60000;
+            const gameMinAdvance = (r.minute || 0) - (lastAlert.minute || 0);
+            if (realMin < 30 && gameMinAdvance < 20) skip = true;
+          }
+          if (!skip) filtered.push(r);
+          if (filtered.length >= 5) break;
         }
 
-        if (!shouldAlert) {
-          console.log('\nAlerta omitida: mismo partido hace ' + Math.round((Date.now() - lastAlert.timestamp) / 60000) + ' min reales, ' + (ranked[0].minute - lastAlert.minute) + ' min de juego.');
-          writeSummary('- Alerta: Omitida (dedup)');
+        if (filtered.length === 0) {
+          console.log('\nAlertas: todos los partidos ya alertados (dedup)');
+          writeSummary('- Alerta: Todos dedup');
         } else {
-          const msg = notify.buildMessage(ranked);
+          const msg = notify.buildMessage(filtered);
           if (msg) {
-            console.log('\nEnviando alerta Telegram...');
+            console.log('\nEnviando alerta Telegram con ' + filtered.length + ' partidos (prob>80%)...');
             await notify.sendTelegram(msg);
             weights.alertedMatches = weights.alertedMatches || {};
-            weights.alertedMatches[alertKey] = { timestamp: Date.now(), minute: ranked[0].minute || 0 };
+            for (const r of filtered) {
+              const key = r.matchId + '_' + r.windowType;
+              weights.alertedMatches[key] = { timestamp: Date.now(), minute: r.minute || 0 };
+            }
             // Limpiar entradas viejas (> 2h)
             const cutoff = Date.now() - 2 * 60 * 60 * 1000;
             for (const [k, v] of Object.entries(weights.alertedMatches)) {
               if (v.timestamp < cutoff) delete weights.alertedMatches[k];
             }
             saveWeights(weights);
-            writeSummary('- Alerta: ENVIADA');
+            writeSummary('- Alerta: ENVIADA (' + filtered.length + ' partidos)');
           }
         }
       }
     } else if (ranked.length > 0) {
-      console.log('\nMejor score: ' + ranked[0].score + '% (umbral: 70%)');
-      writeSummary('- Alerta: No enviada (umbral no alcanzado)');
+      console.log('\nMejor probabilidad: ' + ranked[0].score + '% (umbral: 80%)');
+      writeSummary('- Alerta: No enviada (mejor prob=' + ranked[0].score + '%)');
     }
   } else {
     console.log('  Sin partidos en vivo.');
@@ -768,9 +988,37 @@ async function main() {
         const scoreChanged = score.home !== (pred.scoreAtAnalysis?.home ?? 0) || score.away !== (pred.scoreAtAnalysis?.away ?? 0);
         pred.finalScore = score;
         pred.goalAfterAnalysis = scoreChanged;
+        // Determine who scored (actual scorer for training)
+        if (scoreChanged) {
+          const prevHome = pred.scoreAtAnalysis?.home ?? 0;
+          const prevAway = pred.scoreAtAnalysis?.away ?? 0;
+          if (score.home > prevHome && score.away > prevAway) {
+            pred.actualScorer = null; // ambos
+          } else if (score.home > prevHome) {
+            pred.actualScorer = 'home';
+          } else if (score.away > prevAway) {
+            pred.actualScorer = 'away';
+          } else {
+            pred.actualScorer = null;
+          }
+          // Use lastSeenMinute as rough goal minute if available
+          if (pred.lastSeenMinute && pred.lastSeenMinute > (pred.analysisMinute || 0)) {
+            pred.actualGoalMinute = pred.lastSeenMinute;
+          } else {
+            pred.actualGoalMinute = null;
+          }
+        } else {
+          pred.actualScorer = null;
+          pred.actualGoalMinute = null;
+        }
         const prob = (pred.predictedProbability || 0) / 100;
         const predictedGoal = prob >= 0.7;
         pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
+        // Update stats counters
+        if (pred.predictionCorrect !== null) {
+          currentWeights.stats.predictionsCount = (currentWeights.stats.predictionsCount || 0) + 1;
+          if (pred.predictionCorrect) currentWeights.stats.correctScore = (currentWeights.stats.correctScore || 0) + 1;
+        }
         const icon = pred.predictionCorrect ? '\u2713' : '\u2717';
         console.log('  ' + icon + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
         // Analisis de fallos en predicciones >=70%
@@ -840,7 +1088,7 @@ async function main() {
   }
 }
 
-module.exports = { analyzeGoal, flashscoreStatsToInternal, getLeagueWeights, loadWeights, loadPredictions, savePredictions, saveWeights };
+module.exports = { analyzeGoal, flashscoreStatsToInternal, getLeagueWeights, getWindowType, loadWeights, loadPredictions, savePredictions, saveWeights };
 
 if (require.main === module) {
   main().catch(err => {
