@@ -728,7 +728,7 @@ async function main() {
         existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
         const compScore = existing.predictedProbability;
         const diff = Math.abs(r.score - compScore);
-        if (diff > 20 || (r.score >= 80) !== (compScore >= 80)) {
+        if (diff > 20 || (r.score >= 75) !== (compScore >= 80)) {
           existing.predictedProbability = r.score;
           existing.windowType = r.windowType;
           existing.predictedScorer = r.predictedScorer;
@@ -838,7 +838,7 @@ async function main() {
     }
 
     // --- Telegram alert (probabilidad > 80%, top 5) ---
-    const topByScore = ranked.filter(r => r.score >= 80);
+    const topByScore = ranked.filter(r => r.score >= 75);
     if (topByScore.length > 0) {
       if (!process.env.CI) {
         // Local: no mandar Telegram, ya ves la terminal
@@ -885,7 +885,7 @@ async function main() {
         }
       }
     } else if (ranked.length > 0) {
-      console.log('\nMejor probabilidad: ' + ranked[0].score + '% (umbral: 80%)');
+      console.log('\nMejor probabilidad: ' + ranked[0].score + '% (umbral: 75%)');
       writeSummary('- Alerta: No enviada (mejor prob=' + ranked[0].score + '%)');
     }
   } else {
