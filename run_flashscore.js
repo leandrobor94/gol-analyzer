@@ -772,20 +772,20 @@ async function main() {
     if (ranked.length > 0) {
       ranked.forEach((r, i) => {
         const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
-        const bar = '#'.repeat(Math.round(r.baseScore / 5)) + '-'.repeat(20 - Math.round(r.baseScore / 5));
-        console.log('  ' + medal + ' [' + r.baseScore + '%] ' + bar);
+        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
+        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
         console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
         console.log('     ' + r.timeWindow);
         console.log('     ' + r.verdict + r.whoText);
-        const xgS = r.stats.xgHome !== null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
-        const sotS = r.stats.sotHome !== null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
-        const bcS = r.stats.bigChancesHome !== null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
-        const boxS = r.stats.shotsInsideBoxHome !== null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
-        const woodS = r.stats.hitWoodworkHome !== null ? r.stats.hitWoodworkHome + '-' + r.stats.hitWoodworkAway : '';
-        const xgotS = r.stats.xgotHome !== null ? r.stats.xgotHome.toFixed(2) + '-' + r.stats.xgotAway.toFixed(2) : '';
-        const xaS = r.stats.xgHomeA !== null ? 'xA:' + r.stats.xgHomeA.toFixed(2) + '-' + r.stats.xgAwayA.toFixed(2) : '';
-        const touchesS = r.stats.touchesOppBoxHome !== null ? 'Touches:' + r.stats.touchesOppBoxHome + '-' + r.stats.touchesOppBoxAway : '';
-        const posS = r.stats.possessionHome !== null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
+        const xgS = r.stats.xgHome != null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
+        const sotS = r.stats.sotHome != null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
+        const bcS = r.stats.bigChancesHome != null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
+        const boxS = r.stats.shotsInsideBoxHome != null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
+        const woodS = r.stats.hitWoodworkHome != null ? r.stats.hitWoodworkHome + '-' + r.stats.hitWoodworkAway : '';
+        const xgotS = r.stats.xgotHome != null ? r.stats.xgotHome.toFixed(2) + '-' + r.stats.xgotAway.toFixed(2) : '';
+        const xaS = r.stats.xgHomeA != null ? 'xA:' + r.stats.xgHomeA.toFixed(2) + '-' + r.stats.xgAwayA.toFixed(2) : '';
+        const touchesS = r.stats.touchesOppBoxHome != null ? 'Touches:' + r.stats.touchesOppBoxHome + '-' + r.stats.touchesOppBoxAway : '';
+        const posS = r.stats.possessionHome != null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
         console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Box:' + boxS + (woodS ? ' Palo:' + woodS : '') + (xgotS ? ' xGOT:' + xgotS : '') + ' Pos:' + posS);
         if (xaS || touchesS) console.log('     ' + [xaS, touchesS].filter(Boolean).join(' '));
         if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
