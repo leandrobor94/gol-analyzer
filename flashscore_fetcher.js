@@ -200,19 +200,24 @@ async function fetchXgBatch(targets) {
       continue;
     }
     
-    // 3. Open the match page and extract xG
+    // 3. Open the stats page and extract xG from the stats table
     try {
-      await page.goto(link.href, { waitUntil: 'domcontentloaded', timeout: 20000 });
-      await page.waitForTimeout(3000);
+      const statsUrl = link.href.replace(/\/$/, '') + '/summary/stats/';
+      await page.goto(statsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      await page.waitForTimeout(5000);
       
       const xg = await page.evaluate(() => {
-        const text = document.body.innerText;
-        // xG usually appears as "Expected Goals (xG)" or "xG" with values
-        const matchXg = text.match(/(?:Expected Goals|xG|Goles esperados)[^0-9]*(\d+\.?\d*)\s*[-–:]\s*(\d+\.?\d*)/i);
-        if (matchXg) return { home: parseFloat(matchXg[1]), away: parseFloat(matchXg[2]) };
-        // Try alternative format: two decimal numbers near "xG" text
-        const xgBlocks = text.match(/xG[^0-9]*(\d+\.?\d*)[^0-9]*(\d+\.?\d*)/i);
-        if (xgBlocks) return { home: parseFloat(xgBlocks[1]), away: parseFloat(xgBlocks[2]) };
+        const rows = document.querySelectorAll('[data-testid="wcl-statistics"]');
+        for (const row of rows) {
+          const name = row.querySelector('[data-testid="wcl-statistics-category"]')?.textContent?.trim() || '';
+          if (/xG|expected goals|goles esperados/i.test(name)) {
+            const homeEl = row.querySelector('.wcl-homeValue_3Q-7P');
+            const awayEl = row.querySelector('.wcl-awayValue_Y-QR1');
+            const home = homeEl?.textContent?.trim();
+            const away = awayEl?.textContent?.trim();
+            if (home && away) return { home: parseFloat(home), away: parseFloat(away) };
+          }
+        }
         return null;
       });
       
