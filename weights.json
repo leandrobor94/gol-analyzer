@@ -1,36 +1,113 @@
 {
   "version": 3,
   "learningRate": 0.05,
-  "windows": {
-    "firstHalf": {
-      "xg": 35, "shotsOnTarget": 20, "shotsInsideBox": 15, "bigChances": 14, "totalShots": 5,
-      "xgot": 10, "hitWoodwork": 6, "xA": 7, "touchesOppBox": 7,
-      "scoreNeeds": 6, "timePressure": 4, "corners": 6, "possession": 3, "saves": 2, "goalsScored": -3,
-      "redCard": 15, "teamHistory": 8, "matchContext": 5
-    },
-    "earlySecondHalf": {
-      "xg": 30, "shotsOnTarget": 18, "shotsInsideBox": 14, "bigChances": 12, "totalShots": 5,
-      "xgot": 10, "hitWoodwork": 5, "xA": 6, "touchesOppBox": 6,
-      "scoreNeeds": 10, "timePressure": 8, "corners": 4, "possession": 3, "saves": 2, "goalsScored": -4,
-      "redCard": 20, "teamHistory": 8, "matchContext": 5
-    },
-    "late": {
-      "xg": 25, "shotsOnTarget": 15, "shotsInsideBox": 12, "bigChances": 10, "totalShots": 4,
-      "xgot": 8, "hitWoodwork": 4, "xA": 5, "touchesOppBox": 5,
-      "scoreNeeds": 14, "timePressure": 16, "corners": 5, "possession": 2, "saves": 2, "goalsScored": -5,
-      "redCard": 25, "teamHistory": 10, "matchContext": 6
-    }
-  },
-  "globalFallback": {
-    "xg": 30, "shotsOnTarget": 18, "shotsInsideBox": 14, "bigChances": 12, "totalShots": 5,
-    "xgot": 10, "hitWoodwork": 5, "xA": 6, "touchesOppBox": 6,
-    "scoreNeeds": 10, "timePressure": 8, "corners": 4, "possession": 3, "saves": 2, "goalsScored": -4,
-    "redCard": 20, "teamHistory": 8, "matchContext": 5
+  "global": {
+    "xg": 30,
+    "shotsOnTarget": 25,
+    "shotsInsideBox": 18,
+    "bigChances": 15,
+    "totalShots": 10,
+    "xgot": 12,
+    "hitWoodwork": 10,
+    "xA": 8,
+    "touchesOppBox": 8,
+    "scoreNeeds": 10,
+    "timePressure": 8,
+    "corners": 5,
+    "possession": 5,
+    "saves": 5,
+    "goalsScored": -10,
+    "teamFactor": 8,
+    "leagueFactor": 5
   },
   "byLeague": {},
   "stats": {
-    "predictionsCount": 0, "correctScore": 0, "correctScorer": 0
+    "predictionsCount": 61,
+    "correctScore": 0,
+    "correctScorer": 0
   },
-  "lastUpdated": "2026-05-17T23:00:00.000Z",
+  "windows": {
+    "firstHalf": {
+      "xg": 35,
+      "shotsOnTarget": 20,
+      "shotsInsideBox": 15,
+      "bigChances": 14,
+      "totalShots": 5,
+      "xgot": 10,
+      "hitWoodwork": 6,
+      "xA": 7,
+      "touchesOppBox": 7,
+      "scoreNeeds": 6,
+      "timePressure": 4,
+      "corners": 6,
+      "possession": 3,
+      "saves": 2,
+      "goalsScored": -3,
+      "redCard": 15,
+      "teamHistory": 8,
+      "matchContext": 5
+    },
+    "earlySecondHalf": {
+      "xg": 30,
+      "shotsOnTarget": 18,
+      "shotsInsideBox": 14,
+      "bigChances": 12,
+      "totalShots": 5,
+      "xgot": 10,
+      "hitWoodwork": 5,
+      "xA": 6,
+      "touchesOppBox": 6,
+      "scoreNeeds": 10,
+      "timePressure": 8,
+      "corners": 4,
+      "possession": 3,
+      "saves": 2,
+      "goalsScored": -4,
+      "redCard": 20,
+      "teamHistory": 8,
+      "matchContext": 5
+    },
+    "late": {
+      "xg": 25,
+      "shotsOnTarget": 15,
+      "shotsInsideBox": 12,
+      "bigChances": 10,
+      "totalShots": 4,
+      "xgot": 8,
+      "hitWoodwork": 4,
+      "xA": 5,
+      "touchesOppBox": 5,
+      "scoreNeeds": 14,
+      "timePressure": 16,
+      "corners": 5,
+      "possession": 2,
+      "saves": 2,
+      "goalsScored": -5,
+      "redCard": 25,
+      "teamHistory": 10,
+      "matchContext": 6
+    }
+  },
+  "globalFallback": {
+    "xg": 30,
+    "shotsOnTarget": 18,
+    "shotsInsideBox": 14,
+    "bigChances": 12,
+    "totalShots": 5,
+    "xgot": 10,
+    "hitWoodwork": 5,
+    "xA": 6,
+    "touchesOppBox": 6,
+    "scoreNeeds": 10,
+    "timePressure": 8,
+    "corners": 4,
+    "possession": 3,
+    "saves": 2,
+    "goalsScored": -4,
+    "redCard": 20,
+    "teamHistory": 8,
+    "matchContext": 5
+  },
+  "lastUpdated": "2026-05-23T20:38:20.462Z",
   "alertedMatches": {}
 }
