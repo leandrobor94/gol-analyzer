@@ -21,6 +21,9 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Instalar Chromium para Playwright
+        run: npx playwright install --with-deps chromium
+
       - name: Ejecutar análisis (365scores)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

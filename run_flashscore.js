@@ -809,8 +809,13 @@ async function main() {
       console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
       const { fetchXgBatch } = require('./flashscore_fetcher');
       const targets = topForXg.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
-      const xgResults = await fetchXgBatch(targets);
+      let xgResults = {};
       let xgFound = 0;
+      try {
+        xgResults = await fetchXgBatch(targets);
+      } catch (e) {
+        console.log('  -> Error xG Flashscore: ' + (e.message || e));
+      }
       for (const r of ranked) {
         const key = r.teamHome + ' vs ' + r.teamAway;
         const xg = xgResults[key];
@@ -840,7 +845,9 @@ async function main() {
     // --- Telegram alert (probabilidad > 80%, top 5) ---
     const topByScore = ranked.filter(r => r.score >= 75);
     if (topByScore.length > 0) {
-      if (!alertsEnabled()) {
+      if (!process.env.CI) {
+        // Local: no mandar Telegram, ya ves la terminal
+      } else if (!alertsEnabled()) {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
