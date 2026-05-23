@@ -840,9 +840,7 @@ async function main() {
     // --- Telegram alert (probabilidad > 80%, top 5) ---
     const topByScore = ranked.filter(r => r.score >= 75);
     if (topByScore.length > 0) {
-      if (!process.env.CI) {
-        // Local: no mandar Telegram, ya ves la terminal
-      } else if (!alertsEnabled()) {
+      if (!alertsEnabled()) {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
