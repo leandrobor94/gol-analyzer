@@ -20,10 +20,209 @@
     "teamFactor": 8,
     "leagueFactor": 5
   },
-  "byLeague": {},
+  "byLeague": {
+    "Brasileirão - Série B": {
+      "matchesTracked": 2,
+      "totalGoals": 5,
+      "totalXg": 2.3499999999999996,
+      "totalSot": 9,
+      "totalShotsInsideBox": 8,
+      "totalPossessionDiff": 0.2799999999999999,
+      "correctAt70": 1,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Federal A": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0.45,
+      "totalSot": 3,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.10000000000000003,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Liga Femenina": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Torneo BetPlay Dimayor - Cuadrangulares": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.56,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Premier League - Semifinales": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.43999999999999995,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Serie D - Grupo 2": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0.44999999999999996,
+      "totalSot": 3,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.10000000000000003,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Liga 1 - Apertura": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 1.36,
+      "totalSot": 4,
+      "totalShotsInsideBox": 8,
+      "totalPossessionDiff": 0.19999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Copa BetPlay Dimayor": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 1.5,
+      "totalSot": 10,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.13999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Liga FUTVE - Cuadrangulares - Grupo B": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0.51,
+      "totalSot": 1,
+      "totalShotsInsideBox": 3,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0
+    },
+    "Superliga Femenina de Ecuador": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Serie D - Grupo 1": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga AUF Uruguaya - Intermedio": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0.3,
+      "totalSot": 2,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Torneo Reservas - Semifinales": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.21999999999999997,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Divisional C - Torneo Inicial": {
+      "matchesTracked": 1,
+      "totalGoals": 5,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Campeonato Anual FEM": {
+      "matchesTracked": 1,
+      "totalGoals": 10,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.30000000000000004,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "MLS": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0.35,
+      "totalSot": 1,
+      "totalShotsInsideBox": 1,
+      "totalPossessionDiff": 0.020000000000000018,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "NWSL": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0.23,
+      "totalSot": 1,
+      "totalShotsInsideBox": 1,
+      "totalPossessionDiff": 0.040000000000000036,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Jupiler Pro League - Playoff - Conference League Group": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 5.949999999999999,
+      "totalSot": 17,
+      "totalShotsInsideBox": 32,
+      "totalPossessionDiff": 0.18,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    }
+  },
   "stats": {
-    "predictionsCount": 61,
-    "correctScore": 0,
+    "predictionsCount": 119,
+    "correctScore": 33,
     "correctScorer": 0
   },
   "windows": {
@@ -108,6 +307,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-23T20:38:20.462Z",
+  "lastUpdated": "2026-05-23T20:51:20.895Z",
   "alertedMatches": {}
 }
