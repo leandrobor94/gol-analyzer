@@ -36698,11 +36698,16 @@
     "predictedScorer": "away",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 2,
+      "homeTeam": "Hellas Verona",
+      "awayTeam": "AS Roma"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 0,
@@ -37053,11 +37058,16 @@
     "predictedScorer": "home",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 0,
+      "homeTeam": "Lecce",
+      "awayTeam": "Genoa"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 1,
@@ -37134,11 +37144,16 @@
     "predictedScorer": "away",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 4,
+      "homeTeam": "Cremonese",
+      "awayTeam": "Como"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 1,
@@ -37462,11 +37477,16 @@
     "predictedScorer": "away",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "AC Milan",
+      "awayTeam": "Cagliari"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 1,
@@ -39440,11 +39460,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Agropecuario",
+      "awayTeam": "Quilmes"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 76,
     "lastSeenScore": {
       "home": 0,
@@ -39521,11 +39546,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 4,
+      "homeTeam": "Costa de Marfil Sub17",
+      "awayTeam": "Egipto Sub17"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "lastSeenMinute": 82,
     "lastSeenScore": {
       "home": 1,
@@ -40098,11 +40128,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "São-Joseense",
+      "awayTeam": "Brasil Pelotas (RS)"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 77,
     "lastSeenScore": {
       "home": 0,
@@ -40586,11 +40621,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1,
+      "homeTeam": "Salernitana",
+      "awayTeam": "Union Brescia"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "lastSeenMinute": 79,
     "lastSeenScore": {
       "home": 1,
@@ -40748,11 +40788,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 5,
+      "away": 1,
+      "homeTeam": "Villarreal CF",
+      "awayTeam": "Atlético de Madrid"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 76,
     "lastSeenScore": {
       "home": 5,
@@ -41560,11 +41605,16 @@
     "predictedScorer": null,
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 1,
+      "homeTeam": "CR Belouizdad",
+      "awayTeam": "Es Ben Aknoun"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 79,
     "lastSeenScore": {
       "home": 3,

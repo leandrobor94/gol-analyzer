@@ -199,7 +199,7 @@
       "xg": 34.9,
       "shotsOnTarget": 20.9,
       "shotsInsideBox": 16.3,
-      "bigChances": 14,
+      "bigChances": 13.9,
       "totalShots": 5.8,
       "xgot": 11.6,
       "hitWoodwork": 5.8,
@@ -207,7 +207,7 @@
       "touchesOppBox": 7,
       "scoreNeeds": 11.6,
       "timePressure": 9.3,
-      "corners": 4.7,
+      "corners": 4.6,
       "possession": 3.5,
       "saves": 2.3
     },
@@ -246,7 +246,7 @@
       "xg": 19.9,
       "shotsOnTarget": 11.9,
       "shotsInsideBox": 9.3,
-      "bigChances": 8,
+      "bigChances": 7.9,
       "totalShots": 3.3,
       "xgot": 6.6,
       "hitWoodwork": 3.3,
@@ -254,7 +254,7 @@
       "touchesOppBox": 4,
       "scoreNeeds": 6.6,
       "timePressure": 5.3,
-      "corners": 2.7,
+      "corners": 2.6,
       "possession": 2,
       "saves": 1.3
     },
@@ -314,12 +314,12 @@
       "falseNegatives": 0
     },
     "Primera": {
-      "matchesTracked": 1,
+      "matchesTracked": 2,
       "totalGoals": 2,
-      "totalXg": 1.05,
-      "totalSot": 7,
+      "totalXg": 1.65,
+      "totalSot": 11,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.12000000000000005,
+      "totalPossessionDiff": 0.14000000000000007,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -559,14 +559,14 @@
       "falseNegatives": 0
     },
     "Serie A": {
-      "matchesTracked": 1,
-      "totalGoals": 1,
-      "totalXg": 2.04,
-      "totalSot": 4,
-      "totalShotsInsideBox": 12,
-      "totalPossessionDiff": 0.08000000000000002,
+      "matchesTracked": 4,
+      "totalGoals": 10,
+      "totalXg": 11.719999999999999,
+      "totalSot": 28,
+      "totalShotsInsideBox": 64,
+      "totalPossessionDiff": 0.8400000000000001,
       "correctAt70": 0,
-      "falsePositives": 0,
+      "falsePositives": 2,
       "falseNegatives": 0
     },
     "Vysshaya Liga": {
@@ -656,7 +656,7 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 3,
-      "xg": 31,
+      "xg": 30.9,
       "shotsOnTarget": 18.6,
       "shotsInsideBox": 14.4,
       "bigChances": 12.4,
@@ -666,7 +666,7 @@
       "xA": 6.2,
       "touchesOppBox": 6.2,
       "scoreNeeds": 10.3,
-      "timePressure": 8.3,
+      "timePressure": 8.2,
       "corners": 4.1,
       "possession": 3.1,
       "saves": 2.1
@@ -716,15 +716,15 @@
       "falseNegatives": 1
     },
     "Copa Africana de Naciones Sub17 - Cuartos de Final": {
-      "matchesTracked": 1,
-      "totalGoals": 6,
-      "totalXg": 4.0200000000000005,
-      "totalSot": 10,
-      "totalShotsInsideBox": 18,
-      "totalPossessionDiff": 0.30000000000000004,
+      "matchesTracked": 2,
+      "totalGoals": 11,
+      "totalXg": 6.460000000000001,
+      "totalSot": 18,
+      "totalShotsInsideBox": 26,
+      "totalPossessionDiff": 0.3600000000000001,
       "correctAt70": 0,
       "falsePositives": 0,
-      "falseNegatives": 0
+      "falseNegatives": 1
     },
     "LaLiga 2": {
       "matchesTracked": 2,
@@ -1006,8 +1006,8 @@
     }
   },
   "stats": {
-    "predictionsCount": 679,
-    "correctScore": 127,
+    "predictionsCount": 694,
+    "correctScore": 134,
     "correctScorer": 0
   },
   "windows": {
@@ -1092,6 +1092,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-24T20:41:54.958Z",
+  "lastUpdated": "2026-05-24T20:55:33.594Z",
   "alertedMatches": {}
 }
