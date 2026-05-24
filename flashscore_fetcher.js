@@ -47,9 +47,16 @@ function sanitizeLeague(league) {
 }
 
 async function extractMatchStats(page, matchUrl) {
-  const statsUrl = matchUrl.replace(/\/$/, '') + '/summary/stats/';
+  const statsUrl = matchUrl.replace(/\/+$/, '') + '/summary/stats/';
+  // Force fresh load every time to avoid SPA stale cache
   await page.goto(statsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await page.waitForTimeout(5000);
+  try {
+    await page.waitForSelector('[data-testid="wcl-statistics"]', { timeout: 8000 });
+  } catch {
+    // Stats table not found, page probably redirected or stats not available
+  }
+  // Extra wait for JS to render dynamic content
+  await page.waitForTimeout(3000);
 
   return await page.evaluate(() => {
     const rows = document.querySelectorAll('[data-testid="wcl-statistics"]');
@@ -200,13 +207,16 @@ async function fetchXgBatch(targets) {
       continue;
     }
     
-    // 3. Open the stats page and extract xG from the stats table
+    // 3. Use a fresh tab per match to avoid SPA stale data
+    const tab = await context.newPage();
+    await tab.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => false }); });
     try {
-      const statsUrl = link.href.replace(/\/$/, '') + '/summary/stats/';
-      await page.goto(statsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
-      await page.waitForTimeout(5000);
+      const statsUrl = link.href.replace(/\/+$/, '') + '/summary/stats/';
+      await tab.goto(statsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      try { await tab.waitForSelector('[data-testid="wcl-statistics"]', { timeout: 8000 }); } catch {}
+      await tab.waitForTimeout(3000);
       
-      const xg = await page.evaluate(() => {
+      const xg = await tab.evaluate(() => {
         const rows = document.querySelectorAll('[data-testid="wcl-statistics"]');
         for (const row of rows) {
           const name = row.querySelector('[data-testid="wcl-statistics-category"]')?.textContent?.trim() || '';
@@ -226,6 +236,8 @@ async function fetchXgBatch(targets) {
     } catch (e) {
       console.log('  [xG] Error fetching ' + key + ': ' + e.message);
       results[key] = null;
+    } finally {
+      await tab.close();
     }
   }
   
@@ -275,14 +287,18 @@ async function fetchStatsBatch(targets) {
       continue;
     }
 
-    // 3. Open match stats page
+    // 3. Use a fresh tab per match to avoid SPA stale data
+    const tab = await context.newPage();
+    await tab.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => false }); });
     try {
-      const stats = await extractMatchStats(page, link.href);
+      const stats = await extractMatchStats(tab, link.href);
       results[key] = stats;
       console.log('  [FS] Stats for ' + target.teamHome + ' vs ' + target.teamAway + ': minute=' + stats.minute + ' score=' + (stats.scoreHome ?? '?') + '-' + (stats.scoreAway ?? '?'));
     } catch (e) {
       console.log('  [FS] Error for ' + target.teamHome + ' vs ' + target.teamAway + ': ' + e.message);
       results[key] = null;
+    } finally {
+      await tab.close();
     }
   }
 

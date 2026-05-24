@@ -69,7 +69,7 @@ const WINDOW_ODDS = {
 /** Determine window type from minute */
 function getWindowType(minute) {
   if (minute <= 44) return 'firstHalf';
-  if (minute <= 70) return 'earlySecondHalf';
+  if (minute <= 65) return 'earlySecondHalf';
   return 'late';
 }
 

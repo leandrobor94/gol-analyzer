@@ -19,7 +19,12 @@ function sanitizeLeague(league) {
 /** Get all live matches from 365scores */
 async function fetchLiveMatches() {
   let body, j;
-  try { body = await fetch(`${API_BASE}/games/?${PARAMS}&sports=1`); j = JSON.parse(body); } catch { return []; }
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const yyyy = today.getFullYear();
+  const dateStr = `${dd}/${mm}/${yyyy}`;
+  try { body = await fetch(`${API_BASE}/games/allscores/?${PARAMS}&sports=1&startDate=${dateStr}&endDate=${dateStr}&showOdds=true&onlyLiveGames=true&withTop=true&topBookmaker=4`); j = JSON.parse(body); } catch { return []; }
   if (!j.games) return [];
   const live = j.games.filter(g => g.statusGroup === 3 && g.gameTime > 0 && g.gameTime < 90);
   
