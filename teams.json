@@ -8809,5 +8809,35 @@
     "matchesOver70": 1,
     "totalGoalsScored": 1,
     "totalXgEfficiency": 0
+  },
+  "Tanzania Sub17": {
+    "matchesTracked": 1,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 1,
+    "goalsWhenNotPredicted": 0,
+    "totalXgFor": 2.66,
+    "totalXgAgainst": 1.36,
+    "totalSotFor": 6,
+    "totalShotsInsideBoxFor": 13,
+    "goalsInLast15": 0,
+    "matchesOver70": 1,
+    "totalGoalsScored": 0,
+    "totalXgEfficiency": 0
+  },
+  "Algeria U17": {
+    "matchesTracked": 1,
+    "timesPredictedGoal": 0,
+    "goalsWhenPredicted": 0,
+    "timesPredictedNoGoal": 1,
+    "goalsWhenNotPredicted": 0,
+    "totalXgFor": 1.36,
+    "totalXgAgainst": 2.66,
+    "totalSotFor": 4,
+    "totalShotsInsideBoxFor": 5,
+    "goalsInLast15": 0,
+    "matchesOver70": 1,
+    "totalGoalsScored": 0,
+    "totalXgEfficiency": 0
   }
 }

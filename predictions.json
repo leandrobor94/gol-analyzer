@@ -28217,7 +28217,7 @@
     "teamHome": "Albacete",
     "teamAway": "Real Sociedad B",
     "timestamp": "2026-05-24T14:49:52.030Z",
-    "analysisMinute": 45,
+    "analysisMinute": 46,
     "scoreAtAnalysis": {
       "home": 2,
       "away": 0
@@ -28285,7 +28285,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 45,
+    "lastSeenMinute": 46,
     "lastSeenScore": {
       "home": 2,
       "away": 0
@@ -28334,7 +28334,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -28383,7 +28383,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 27,
+    "lastSeenMinute": 40,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -28432,7 +28432,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 51,
+    "lastSeenMinute": 64,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -28481,7 +28481,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 38,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -28530,9 +28530,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 48,
+    "lastSeenMinute": 61,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 1
     }
   },
@@ -28671,7 +28671,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 53,
+    "lastSeenMinute": 66,
     "lastSeenScore": {
       "home": 2,
       "away": 1
@@ -28720,10 +28720,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 53,
+    "lastSeenMinute": 66,
     "lastSeenScore": {
       "home": 1,
-      "away": 0
+      "away": 2
     }
   },
   {
@@ -28733,10 +28733,10 @@
     "teamHome": "Santamarina Tandil",
     "teamAway": "Guillermo Brown",
     "timestamp": "2026-05-24T14:49:52.030Z",
-    "analysisMinute": 41,
+    "analysisMinute": 62,
     "scoreAtAnalysis": {
       "home": 0,
-      "away": 0
+      "away": 1
     },
     "stats": {
       "xgHome": 0,
@@ -28755,24 +28755,24 @@
       "shotsOffTargetAway": 0,
       "blockedShotsHome": null,
       "blockedShotsAway": null,
-      "bigChancesHome": 6,
-      "bigChancesAway": 0,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
       "hitWoodworkHome": null,
       "hitWoodworkAway": null,
-      "cornersHome": 0,
+      "cornersHome": 1,
       "cornersAway": 1,
-      "possessionHome": 0.55,
-      "possessionAway": 0.45,
-      "foulsHome": 9,
-      "foulsAway": 0,
+      "possessionHome": 0.47,
+      "possessionAway": 0.53,
+      "foulsHome": null,
+      "foulsAway": null,
       "yellowCardsHome": 1,
-      "yellowCardsAway": 0,
+      "yellowCardsAway": 1,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 1,
       "offsideAway": 1,
-      "attacksHome": 41,
-      "attacksAway": 33,
+      "attacksHome": 62,
+      "attacksAway": 57,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -28790,23 +28790,21 @@
       "errorsLeadingToShotHome": null,
       "errorsLeadingToShotAway": null,
       "clearancesHome": null,
-      "clearancesAway": null,
-      "shotsOnTargetHome": 6,
-      "shotsOnTargetAway": 0
+      "clearancesAway": null
     },
-    "predictedProbability": 59.14,
-    "predictedScorer": "away",
-    "predictedTimeWindow": "GOL 1T",
-    "windowType": "firstHalf",
+    "predictedProbability": 16.330000000000002,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 46-70",
+    "windowType": "earlySecondHalf",
     "finalScore": null,
     "goalAfterAnalysis": null,
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 49,
+    "lastSeenMinute": 62,
     "lastSeenScore": {
       "home": 0,
-      "away": 0
+      "away": 1
     }
   },
   {
@@ -28879,11 +28877,16 @@
     "predictedScorer": "home",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 3,
+      "homeTeam": "Tanzania Sub17",
+      "awayTeam": "Algeria U17"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "lastSeenMinute": 89,
     "lastSeenScore": {
       "home": 3,
@@ -29053,7 +29056,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 47,
+    "lastSeenMinute": 60,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -29480,7 +29483,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 48,
+    "lastSeenMinute": 61,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -29649,7 +29652,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 45,
+    "lastSeenMinute": 49,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -29904,10 +29907,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
-      "away": 1
+      "away": 2
     }
   },
   {
@@ -29917,46 +29920,46 @@
     "teamHome": "AFC Hermannstadt",
     "teamAway": "FC Voluntari",
     "timestamp": "2026-05-24T14:49:52.030Z",
-    "analysisMinute": 21,
+    "analysisMinute": 45,
     "scoreAtAnalysis": {
-      "home": 0,
+      "home": 2,
       "away": 0
     },
     "stats": {
-      "xgHome": 0,
-      "xgAway": 0.08,
+      "xgHome": 1.82,
+      "xgAway": 0.31,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 0,
-      "sotAway": 0,
-      "totalShotsHome": 0,
-      "totalShotsAway": 3,
-      "shotsInsideBoxHome": 0,
-      "shotsInsideBoxAway": 1,
-      "shotsOutsideBoxHome": 0,
-      "shotsOutsideBoxAway": 2,
-      "shotsOffTargetHome": 0,
+      "sotHome": 6,
+      "sotAway": 1,
+      "totalShotsHome": 10,
+      "totalShotsAway": 5,
+      "shotsInsideBoxHome": 7,
+      "shotsInsideBoxAway": 2,
+      "shotsOutsideBoxHome": 3,
+      "shotsOutsideBoxAway": 3,
+      "shotsOffTargetHome": 1,
       "shotsOffTargetAway": 1,
-      "blockedShotsHome": 0,
-      "blockedShotsAway": 2,
-      "bigChancesHome": 0,
+      "blockedShotsHome": 3,
+      "blockedShotsAway": 3,
+      "bigChancesHome": 3,
       "bigChancesAway": 0,
       "hitWoodworkHome": 0,
       "hitWoodworkAway": 0,
-      "cornersHome": 0,
-      "cornersAway": 1,
-      "possessionHome": 0.45,
-      "possessionAway": 0.55,
-      "foulsHome": 3,
-      "foulsAway": 2,
-      "yellowCardsHome": 0,
-      "yellowCardsAway": 0,
+      "cornersHome": 2,
+      "cornersAway": 4,
+      "possessionHome": 0.49,
+      "possessionAway": 0.51,
+      "foulsHome": 6,
+      "foulsAway": 8,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 2,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 0,
-      "offsideAway": 1,
-      "attacksHome": 26,
-      "attacksAway": 36,
+      "offsideAway": 2,
+      "attacksHome": 58,
+      "attacksAway": 55,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -29974,22 +29977,20 @@
       "errorsLeadingToShotHome": null,
       "errorsLeadingToShotAway": null,
       "clearancesHome": null,
-      "clearancesAway": null,
-      "shotsOnTargetHome": 7,
-      "shotsOnTargetAway": 4
+      "clearancesAway": null
     },
-    "predictedProbability": 4.800000000000001,
-    "predictedScorer": null,
-    "predictedTimeWindow": "GOL 1T",
-    "windowType": "firstHalf",
+    "predictedProbability": 51.480000000000004,
+    "predictedScorer": "home",
+    "predictedTimeWindow": "GOL 46-70",
+    "windowType": "earlySecondHalf",
     "finalScore": null,
     "goalAfterAnalysis": null,
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 40,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
-      "home": 1,
+      "home": 2,
       "away": 0
     }
   },
@@ -30042,7 +30043,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 53,
+    "lastSeenMinute": 66,
     "lastSeenScore": {
       "home": 3,
       "away": 1
@@ -30097,7 +30098,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 52,
+    "lastSeenMinute": 65,
     "lastSeenScore": {
       "home": 4,
       "away": 0
@@ -30180,9 +30181,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
-      "home": 1,
+      "home": 2,
       "away": 1
     }
   },
@@ -30193,9 +30194,9 @@
     "teamHome": "FC Tomina",
     "teamAway": "Fancesa",
     "timestamp": "2026-05-24T14:49:52.030Z",
-    "analysisMinute": 44,
+    "analysisMinute": 64,
     "scoreAtAnalysis": {
-      "home": 0,
+      "home": 1,
       "away": 1
     },
     "stats": {
@@ -30205,34 +30206,34 @@
       "xgotAway": null,
       "sotHome": null,
       "sotAway": null,
-      "totalShotsHome": 19,
-      "totalShotsAway": 0,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
       "shotsInsideBoxHome": null,
       "shotsInsideBoxAway": null,
       "shotsOutsideBoxHome": null,
       "shotsOutsideBoxAway": null,
-      "shotsOffTargetHome": 6,
-      "shotsOffTargetAway": 0,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
       "blockedShotsHome": null,
       "blockedShotsAway": null,
-      "bigChancesHome": 6,
-      "bigChancesAway": 0,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
       "hitWoodworkHome": null,
       "hitWoodworkAway": null,
-      "cornersHome": 2,
-      "cornersAway": 1,
-      "possessionHome": 1,
-      "possessionAway": 0,
-      "foulsHome": 9,
-      "foulsAway": 0,
+      "cornersHome": 4,
+      "cornersAway": 3,
+      "possessionHome": null,
+      "possessionAway": null,
+      "foulsHome": null,
+      "foulsAway": null,
       "yellowCardsHome": 1,
-      "yellowCardsAway": 1,
+      "yellowCardsAway": 3,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 0,
       "offsideAway": 0,
-      "attacksHome": 36,
-      "attacksAway": 41,
+      "attacksHome": 53,
+      "attacksAway": 64,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -30250,22 +30251,20 @@
       "errorsLeadingToShotHome": null,
       "errorsLeadingToShotAway": null,
       "clearancesHome": null,
-      "clearancesAway": null,
-      "shotsOnTargetHome": 6,
-      "shotsOnTargetAway": 0
+      "clearancesAway": null
     },
-    "predictedProbability": 26.3,
-    "predictedScorer": "home",
-    "predictedTimeWindow": "GOL 1T",
-    "windowType": "firstHalf",
+    "predictedProbability": 2.000000000000001,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 46-70",
+    "windowType": "earlySecondHalf",
     "finalScore": null,
     "goalAfterAnalysis": null,
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 51,
+    "lastSeenMinute": 64,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 1
     }
   },
@@ -30346,10 +30345,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 55,
+    "lastSeenMinute": 68,
     "lastSeenScore": {
       "home": 1,
-      "away": 4
+      "away": 5
     }
   },
   {
@@ -30429,7 +30428,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -30512,7 +30511,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 48,
+    "lastSeenMinute": 61,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -30595,10 +30594,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 48,
+    "lastSeenMinute": 61,
     "lastSeenScore": {
       "home": 1,
-      "away": 1
+      "away": 2
     }
   },
   {
@@ -30676,9 +30675,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 51,
+    "lastSeenMinute": 63,
     "lastSeenScore": {
-      "home": 2,
+      "home": 3,
       "away": 0
     }
   },
@@ -30759,7 +30758,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 55,
+    "lastSeenMinute": 68,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -30842,7 +30841,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -30925,7 +30924,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -31008,7 +31007,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -31091,10 +31090,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 53,
+    "lastSeenMinute": 66,
     "lastSeenScore": {
       "home": 0,
-      "away": 1
+      "away": 2
     }
   },
   {
@@ -31174,7 +31173,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 51,
+    "lastSeenMinute": 64,
     "lastSeenScore": {
       "home": 3,
       "away": 0
@@ -31699,7 +31698,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -31782,7 +31781,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -31865,10 +31864,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
-      "away": 0
+      "away": 1
     }
   },
   {
@@ -31948,7 +31947,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -32031,7 +32030,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -32114,7 +32113,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 41,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -32197,7 +32196,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 38,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -32280,7 +32279,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 53,
+    "lastSeenMinute": 66,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -32363,7 +32362,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 2,
       "away": 0
@@ -32446,7 +32445,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 52,
+    "lastSeenMinute": 65,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -32527,7 +32526,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 54,
+    "lastSeenMinute": 67,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -32884,38 +32883,38 @@
     "teamHome": "Crystal Palace",
     "teamAway": "Arsenal",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 10,
+    "analysisMinute": 22,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
     },
     "stats": {
-      "xgHome": 0,
-      "xgAway": 0.43,
+      "xgHome": 0.35,
+      "xgAway": 1.21,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 0,
-      "sotAway": 1,
-      "totalShotsHome": 0,
-      "totalShotsAway": 2,
-      "shotsInsideBoxHome": 0,
-      "shotsInsideBoxAway": 2,
-      "shotsOutsideBoxHome": null,
-      "shotsOutsideBoxAway": null,
+      "sotHome": 1,
+      "sotAway": 3,
+      "totalShotsHome": 1,
+      "totalShotsAway": 5,
+      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxAway": 5,
+      "shotsOutsideBoxHome": 0,
+      "shotsOutsideBoxAway": 1,
       "shotsOffTargetHome": 0,
-      "shotsOffTargetAway": 1,
+      "shotsOffTargetAway": 2,
       "blockedShotsHome": 0,
-      "blockedShotsAway": 0,
-      "bigChancesHome": 0,
-      "bigChancesAway": 1,
+      "blockedShotsAway": 1,
+      "bigChancesHome": 1,
+      "bigChancesAway": 3,
       "hitWoodworkHome": 0,
       "hitWoodworkAway": 1,
-      "cornersHome": 0,
+      "cornersHome": 1,
       "cornersAway": 0,
-      "possessionHome": 0.23,
-      "possessionAway": 0.77,
-      "foulsHome": 0,
-      "foulsAway": 1,
+      "possessionHome": 0.31,
+      "possessionAway": 0.69,
+      "foulsHome": 2,
+      "foulsAway": 2,
       "yellowCardsHome": 0,
       "yellowCardsAway": 0,
       "redCardsHome": 0,
@@ -32943,7 +32942,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 40.88,
+    "predictedProbability": 100,
     "predictedScorer": "away",
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
@@ -32952,7 +32951,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33033,7 +33032,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33046,38 +33045,38 @@
     "teamHome": "Sunderland",
     "teamAway": "Chelsea",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 11,
+    "analysisMinute": 23,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
     },
     "stats": {
-      "xgHome": 0.23,
-      "xgAway": 0.23,
+      "xgHome": 0.54,
+      "xgAway": 0.39,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 1,
+      "sotHome": 2,
       "sotAway": 1,
-      "totalShotsHome": 1,
-      "totalShotsAway": 1,
-      "shotsInsideBoxHome": 1,
-      "shotsInsideBoxAway": 1,
-      "shotsOutsideBoxHome": null,
-      "shotsOutsideBoxAway": null,
-      "shotsOffTargetHome": 0,
-      "shotsOffTargetAway": 0,
-      "blockedShotsHome": 0,
-      "blockedShotsAway": 0,
+      "totalShotsHome": 5,
+      "totalShotsAway": 3,
+      "shotsInsideBoxHome": 3,
+      "shotsInsideBoxAway": 3,
+      "shotsOutsideBoxHome": 2,
+      "shotsOutsideBoxAway": 0,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": 2,
+      "blockedShotsAway": 1,
       "bigChancesHome": 0,
       "bigChancesAway": 0,
       "hitWoodworkHome": null,
       "hitWoodworkAway": null,
-      "cornersHome": 2,
+      "cornersHome": 3,
       "cornersAway": 0,
-      "possessionHome": 0.53,
-      "possessionAway": 0.47,
-      "foulsHome": 2,
-      "foulsAway": 0,
+      "possessionHome": 0.62,
+      "possessionAway": 0.38,
+      "foulsHome": 5,
+      "foulsAway": 1,
       "yellowCardsHome": 0,
       "yellowCardsAway": 0,
       "redCardsHome": 0,
@@ -33105,7 +33104,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 36.88,
+    "predictedProbability": 65.28,
     "predictedScorer": null,
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
@@ -33114,7 +33113,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33195,7 +33194,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33208,38 +33207,38 @@
     "teamHome": "Liverpool",
     "teamAway": "Brentford",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 11,
+    "analysisMinute": 24,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
     },
     "stats": {
-      "xgHome": 0.23,
+      "xgHome": 0.7,
       "xgAway": 0.08,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 1,
+      "sotHome": 2,
       "sotAway": 0,
-      "totalShotsHome": 2,
+      "totalShotsHome": 8,
       "totalShotsAway": 1,
-      "shotsInsideBoxHome": 1,
+      "shotsInsideBoxHome": 5,
       "shotsInsideBoxAway": 1,
-      "shotsOutsideBoxHome": 1,
+      "shotsOutsideBoxHome": 2,
       "shotsOutsideBoxAway": 0,
-      "shotsOffTargetHome": 0,
+      "shotsOffTargetHome": 4,
       "shotsOffTargetAway": 1,
-      "blockedShotsHome": 1,
+      "blockedShotsHome": 2,
       "blockedShotsAway": 0,
       "bigChancesHome": 0,
       "bigChancesAway": 0,
-      "hitWoodworkHome": null,
-      "hitWoodworkAway": null,
-      "cornersHome": 2,
+      "hitWoodworkHome": 1,
+      "hitWoodworkAway": 0,
+      "cornersHome": 4,
       "cornersAway": 0,
-      "possessionHome": 0.52,
-      "possessionAway": 0.48,
-      "foulsHome": 1,
-      "foulsAway": 0,
+      "possessionHome": 0.63,
+      "possessionAway": 0.37,
+      "foulsHome": 2,
+      "foulsAway": 1,
       "yellowCardsHome": 0,
       "yellowCardsAway": 0,
       "redCardsHome": 0,
@@ -33267,8 +33266,8 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 31.880000000000003,
-    "predictedScorer": null,
+    "predictedProbability": 55.879999999999995,
+    "predictedScorer": "home",
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "finalScore": null,
@@ -33276,7 +33275,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33357,7 +33356,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33438,9 +33437,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -33519,7 +33518,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33600,9 +33599,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -33681,7 +33680,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33730,7 +33729,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 6,
+    "lastSeenMinute": 19,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33779,7 +33778,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 9,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -33828,7 +33827,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 8,
+    "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -33909,7 +33908,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 9,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -33958,7 +33957,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 7,
+    "lastSeenMinute": 20,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34039,7 +34038,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 7,
+    "lastSeenMinute": 20,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34088,7 +34087,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 9,
+    "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -34137,7 +34136,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 5,
+    "lastSeenMinute": 18,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34186,10 +34185,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 8,
+    "lastSeenMinute": 20,
     "lastSeenScore": {
       "home": 0,
-      "away": 0
+      "away": 1
     }
   },
   {
@@ -34235,7 +34234,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34284,7 +34283,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34333,7 +34332,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 7,
+    "lastSeenMinute": 20,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34382,7 +34381,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34431,7 +34430,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34512,7 +34511,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34593,7 +34592,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34674,9 +34673,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 8,
+    "lastSeenMinute": 21,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -34687,46 +34686,46 @@
     "teamHome": "Dinamo Minsk",
     "teamAway": "Dnepr Mogilev",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 11,
+    "analysisMinute": 24,
     "scoreAtAnalysis": {
       "home": 0,
-      "away": 0
+      "away": 1
     },
     "stats": {
-      "xgHome": 0,
-      "xgAway": 0,
+      "xgHome": 0.15,
+      "xgAway": 0.15,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 0,
-      "sotAway": 0,
-      "totalShotsHome": 1,
-      "totalShotsAway": 0,
+      "sotHome": 1,
+      "sotAway": 1,
+      "totalShotsHome": 4,
+      "totalShotsAway": 3,
       "shotsInsideBoxHome": null,
       "shotsInsideBoxAway": null,
       "shotsOutsideBoxHome": null,
       "shotsOutsideBoxAway": null,
-      "shotsOffTargetHome": 0,
+      "shotsOffTargetHome": 1,
       "shotsOffTargetAway": 0,
-      "blockedShotsHome": 1,
-      "blockedShotsAway": 0,
+      "blockedShotsHome": 2,
+      "blockedShotsAway": 2,
       "bigChancesHome": null,
       "bigChancesAway": null,
       "hitWoodworkHome": 0,
       "hitWoodworkAway": 0,
-      "cornersHome": 0,
-      "cornersAway": 0,
-      "possessionHome": 0.65,
-      "possessionAway": 0.35,
+      "cornersHome": 1,
+      "cornersAway": 3,
+      "possessionHome": 0.64,
+      "possessionAway": 0.36,
       "foulsHome": null,
       "foulsAway": null,
       "yellowCardsHome": 0,
-      "yellowCardsAway": 1,
+      "yellowCardsAway": 2,
       "redCardsHome": 0,
       "redCardsAway": 0,
-      "offsideHome": 1,
+      "offsideHome": 2,
       "offsideAway": 0,
-      "attacksHome": 21,
-      "attacksAway": 13,
+      "attacksHome": 42,
+      "attacksAway": 20,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -34746,7 +34745,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 30,
+    "predictedProbability": 9.8,
     "predictedScorer": null,
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
@@ -34755,10 +34754,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
-      "away": 0
+      "away": 1
     }
   },
   {
@@ -34836,7 +34835,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -34917,7 +34916,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 12,
+    "lastSeenMinute": 25,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -34998,7 +34997,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35079,7 +35078,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 9,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35128,7 +35127,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 7,
+    "lastSeenMinute": 19,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35177,7 +35176,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 6,
+    "lastSeenMinute": 19,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35226,9 +35225,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -35275,7 +35274,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 11,
+    "lastSeenMinute": 24,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35288,7 +35287,7 @@
     "teamHome": "Defensores (F)",
     "teamAway": "Killas (F)",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 10,
+    "analysisMinute": 22,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
@@ -35326,8 +35325,8 @@
       "redCardsAway": null,
       "offsideHome": null,
       "offsideAway": null,
-      "attacksHome": 9,
-      "attacksAway": 12,
+      "attacksHome": 26,
+      "attacksAway": 27,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -35347,7 +35346,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 30,
+    "predictedProbability": 4.800000000000001,
     "predictedScorer": null,
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
@@ -35356,7 +35355,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35437,7 +35436,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35518,7 +35517,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 8,
+    "lastSeenMinute": 21,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35599,7 +35598,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 9,
+    "lastSeenMinute": 22,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35648,7 +35647,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -35729,7 +35728,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 23,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -35742,40 +35741,40 @@
     "teamHome": "West Ham United",
     "teamAway": "Leeds United",
     "timestamp": "2026-05-24T15:11:23.496Z",
-    "analysisMinute": 10,
+    "analysisMinute": 23,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
     },
     "stats": {
-      "xgHome": 0,
+      "xgHome": 0.31,
       "xgAway": 0.28,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 0,
+      "sotHome": 1,
       "sotAway": 0,
-      "totalShotsHome": 0,
+      "totalShotsHome": 2,
       "totalShotsAway": 2,
-      "shotsInsideBoxHome": 0,
+      "shotsInsideBoxHome": 2,
       "shotsInsideBoxAway": 2,
       "shotsOutsideBoxHome": null,
       "shotsOutsideBoxAway": null,
-      "shotsOffTargetHome": 0,
+      "shotsOffTargetHome": 1,
       "shotsOffTargetAway": 2,
-      "blockedShotsHome": 0,
+      "blockedShotsHome": 1,
       "blockedShotsAway": 0,
       "bigChancesHome": 0,
       "bigChancesAway": 1,
       "hitWoodworkHome": null,
       "hitWoodworkAway": null,
-      "cornersHome": 0,
+      "cornersHome": 1,
       "cornersAway": 0,
-      "possessionHome": 0.48,
-      "possessionAway": 0.52,
-      "foulsHome": 1,
-      "foulsAway": 3,
+      "possessionHome": 0.56,
+      "possessionAway": 0.44,
+      "foulsHome": 3,
+      "foulsAway": 6,
       "yellowCardsHome": 0,
-      "yellowCardsAway": 0,
+      "yellowCardsAway": 1,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 0,
@@ -35801,7 +35800,88 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 10.8,
+    "predictedProbability": 36.879999999999995,
+    "predictedScorer": "away",
+    "predictedTimeWindow": "GOL 1T",
+    "windowType": "firstHalf",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 23,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4516701",
+    "match": "Karela vs Nations FC",
+    "league": "Premier",
+    "teamHome": "Karela",
+    "teamAway": "Nations FC",
+    "timestamp": "2026-05-24T15:24:32.817Z",
+    "analysisMinute": 11,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0.15,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 1,
+      "totalShotsHome": 0,
+      "totalShotsAway": 2,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 0,
+      "possessionHome": 0.37,
+      "possessionAway": 0.63,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": null,
+      "yellowCardsAway": null,
+      "redCardsHome": null,
+      "redCardsAway": null,
+      "offsideHome": null,
+      "offsideAway": null,
+      "attacksHome": null,
+      "attacksAway": null,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 30,
     "predictedScorer": null,
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
@@ -35810,7 +35890,299 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 10,
+    "lastSeenMinute": 11,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4532969",
+    "match": "Barau vs Nasarawa United",
+    "league": "NPFL - Temporada",
+    "teamHome": "Barau",
+    "teamAway": "Nasarawa United",
+    "timestamp": "2026-05-24T15:24:32.817Z",
+    "analysisMinute": 16,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": null,
+      "xgAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "cornersHome": null,
+      "cornersAway": null,
+      "possessionHome": null,
+      "possessionAway": null,
+      "attacksHome": null,
+      "attacksAway": null,
+      "foulsHome": null,
+      "foulsAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "savesHome": null,
+      "savesAway": null
+    },
+    "predictedProbability": 30,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 1T",
+    "windowType": "firstHalf",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 16,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4702597",
+    "match": "Coton Sport Garoua vs Stade Renard",
+    "league": "Premier",
+    "teamHome": "Coton Sport Garoua",
+    "teamAway": "Stade Renard",
+    "timestamp": "2026-05-24T15:24:32.817Z",
+    "analysisMinute": 14,
+    "scoreAtAnalysis": {
+      "home": 1,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 1,
+      "totalShotsAway": 1,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 1,
+      "shotsOffTargetAway": 1,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 2,
+      "cornersAway": 0,
+      "possessionHome": 0.63,
+      "possessionAway": 0.37,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": null,
+      "yellowCardsAway": null,
+      "redCardsHome": null,
+      "redCardsAway": null,
+      "offsideHome": null,
+      "offsideAway": null,
+      "attacksHome": null,
+      "attacksAway": null,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 30,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 1T",
+    "windowType": "firstHalf",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 14,
+    "lastSeenScore": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "id": "4647054",
+    "match": "Simba SC vs Dodoma Jiji",
+    "league": "Ligi Kuu Bara",
+    "teamHome": "Simba SC",
+    "teamAway": "Dodoma Jiji",
+    "timestamp": "2026-05-24T15:24:32.817Z",
+    "analysisMinute": 9,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": 0,
+      "sotAway": 0,
+      "totalShotsHome": 0,
+      "totalShotsAway": 0,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": 0,
+      "shotsOffTargetAway": 0,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 1,
+      "cornersAway": 0,
+      "possessionHome": 0.71,
+      "possessionAway": 0.29,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": null,
+      "yellowCardsAway": null,
+      "redCardsHome": null,
+      "redCardsAway": null,
+      "offsideHome": null,
+      "offsideAway": null,
+      "attacksHome": 9,
+      "attacksAway": 9,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 30,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 1T",
+    "windowType": "firstHalf",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 9,
+    "lastSeenScore": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "4682602",
+    "match": "Alvarado vs Olimpo",
+    "league": "Federal A",
+    "teamHome": "Alvarado",
+    "teamAway": "Olimpo",
+    "timestamp": "2026-05-24T15:24:32.817Z",
+    "analysisMinute": 2,
+    "scoreAtAnalysis": {
+      "home": 0,
+      "away": 0
+    },
+    "stats": {
+      "xgHome": 0,
+      "xgAway": 0,
+      "xgotHome": null,
+      "xgotAway": null,
+      "sotHome": null,
+      "sotAway": null,
+      "totalShotsHome": null,
+      "totalShotsAway": null,
+      "shotsInsideBoxHome": null,
+      "shotsInsideBoxAway": null,
+      "shotsOutsideBoxHome": null,
+      "shotsOutsideBoxAway": null,
+      "shotsOffTargetHome": null,
+      "shotsOffTargetAway": null,
+      "blockedShotsHome": null,
+      "blockedShotsAway": null,
+      "bigChancesHome": null,
+      "bigChancesAway": null,
+      "hitWoodworkHome": null,
+      "hitWoodworkAway": null,
+      "cornersHome": 0,
+      "cornersAway": 0,
+      "possessionHome": 0.51,
+      "possessionAway": 0.49,
+      "foulsHome": null,
+      "foulsAway": null,
+      "yellowCardsHome": 1,
+      "yellowCardsAway": 0,
+      "redCardsHome": 0,
+      "redCardsAway": 0,
+      "offsideHome": 0,
+      "offsideAway": 1,
+      "attacksHome": 1,
+      "attacksAway": 1,
+      "xgHomeA": null,
+      "xgAwayA": null,
+      "touchesOppBoxHome": null,
+      "touchesOppBoxAway": null,
+      "savesHome": null,
+      "savesAway": null,
+      "passesFinalThirdHome": null,
+      "passesFinalThirdAway": null,
+      "crossesHome": null,
+      "crossesAway": null,
+      "tacklesHome": null,
+      "tacklesAway": null,
+      "interceptionsHome": null,
+      "interceptionsAway": null,
+      "errorsLeadingToShotHome": null,
+      "errorsLeadingToShotAway": null,
+      "clearancesHome": null,
+      "clearancesAway": null
+    },
+    "predictedProbability": 30,
+    "predictedScorer": null,
+    "predictedTimeWindow": "GOL 1T",
+    "windowType": "firstHalf",
+    "finalScore": null,
+    "goalAfterAnalysis": null,
+    "actualGoalMinute": null,
+    "actualScorer": null,
+    "predictionCorrect": null,
+    "lastSeenMinute": 2,
     "lastSeenScore": {
       "home": 0,
       "away": 0
