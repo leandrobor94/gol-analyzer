@@ -22,12 +22,12 @@
   },
   "byLeague": {
     "Brasileirão - Série B": {
-      "matchesTracked": 2,
-      "totalGoals": 5,
-      "totalXg": 2.3499999999999996,
-      "totalSot": 9,
-      "totalShotsInsideBox": 8,
-      "totalPossessionDiff": 0.2799999999999999,
+      "matchesTracked": 3,
+      "totalGoals": 8,
+      "totalXg": 3.6999999999999997,
+      "totalSot": 14,
+      "totalShotsInsideBox": 14,
+      "totalPossessionDiff": 0.35999999999999993,
       "correctAt70": 1,
       "falsePositives": 1,
       "falseNegatives": 0
@@ -187,12 +187,12 @@
       "falseNegatives": 1
     },
     "MLS": {
-      "matchesTracked": 1,
-      "totalGoals": 2,
+      "matchesTracked": 2,
+      "totalGoals": 4,
       "totalXg": 0.35,
       "totalSot": 1,
       "totalShotsInsideBox": 1,
-      "totalPossessionDiff": 0.020000000000000018,
+      "totalPossessionDiff": 0.08000000000000007,
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 0
@@ -218,11 +218,245 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
+    },
+    "LaLiga": {
+      "matchesTracked": 8,
+      "totalGoals": 19,
+      "totalXg": 21.72,
+      "totalSot": 64,
+      "totalShotsInsideBox": 102,
+      "totalPossessionDiff": 1.38,
+      "correctAt70": 1,
+      "falsePositives": 3,
+      "falseNegatives": 1,
+      "xg": 23.1,
+      "shotsOnTarget": 13.9,
+      "shotsInsideBox": 10.8,
+      "bigChances": 9.2,
+      "totalShots": 3.8,
+      "xgot": 7.7,
+      "hitWoodwork": 3.8,
+      "xA": 4.6,
+      "touchesOppBox": 4.6,
+      "scoreNeeds": 7.7,
+      "timePressure": 6.2,
+      "corners": 3.1,
+      "possession": 2.3,
+      "saves": 1.5
+    },
+    "MLS Next Pro": {
+      "matchesTracked": 2,
+      "totalGoals": 7,
+      "totalXg": 5.609999999999999,
+      "totalSot": 19,
+      "totalShotsInsideBox": 21,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Copa Africana de Naciones Sub17 - World Cup": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 2.24,
+      "totalSot": 8,
+      "totalShotsInsideBox": 10,
+      "totalPossessionDiff": 0.28,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Serie D - Group 13": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 1.2,
+      "totalSot": 8,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga de": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 2.14,
+      "totalSot": 6,
+      "totalShotsInsideBox": 14,
+      "totalPossessionDiff": 0.34,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Copa de Primera -": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 0.75,
+      "totalSot": 5,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.19999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Primera": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 1.05,
+      "totalSot": 7,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.12000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Campeonato": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga Femenina BetPlay": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0.9,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.19999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Brasileirão": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 2.5,
+      "totalSot": 6,
+      "totalShotsInsideBox": 14,
+      "totalPossessionDiff": 0.6599999999999999,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Serie D - Group 14": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0.6,
+      "totalSot": 4,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.10000000000000003,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Segunda División": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.2,
+      "totalSot": 8,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.13999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Botola Pro": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0.75,
+      "totalSot": 5,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.12000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Liga 2": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga Pro": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 2.2199999999999998,
+      "totalSot": 6,
+      "totalShotsInsideBox": 9,
+      "totalPossessionDiff": 0.040000000000000036,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Serie D - Grupo I": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 0.75,
+      "totalSot": 5,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.12000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Canadian Premier": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 1.56,
+      "totalSot": 4,
+      "totalShotsInsideBox": 9,
+      "totalPossessionDiff": 0.19999999999999996,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Segunda división de Portugal - Descenso/Ascenso": {
+      "matchesTracked": 1,
+      "totalGoals": 1,
+      "totalXg": 1.05,
+      "totalSot": 7,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.040000000000000036,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Copa Simón Bolívar -": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 1,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga 1 -": {
+      "matchesTracked": 1,
+      "totalGoals": 0,
+      "totalXg": 0.45999999999999996,
+      "totalSot": 2,
+      "totalShotsInsideBox": 2,
+      "totalPossessionDiff": 0.21999999999999997,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
-    "predictionsCount": 119,
-    "correctScore": 33,
+    "predictionsCount": 208,
+    "correctScore": 67,
     "correctScorer": 0
   },
   "windows": {
@@ -307,6 +541,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-23T20:51:20.895Z",
+  "lastUpdated": "2026-05-24T01:11:56.978Z",
   "alertedMatches": {}
 }
