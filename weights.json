@@ -455,7 +455,7 @@
     }
   },
   "stats": {
-    "predictionsCount": 208,
+    "predictionsCount": 232,
     "correctScore": 67,
     "correctScorer": 0
   },
@@ -541,6 +541,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-24T01:11:56.978Z",
+  "lastUpdated": "2026-05-24T01:22:55.316Z",
   "alertedMatches": {}
 }
