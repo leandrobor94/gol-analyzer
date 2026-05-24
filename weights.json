@@ -244,7 +244,7 @@
       "falsePositives": 3,
       "falseNegatives": 1,
       "xg": 20.6,
-      "shotsOnTarget": 12.3,
+      "shotsOnTarget": 12.4,
       "shotsInsideBox": 9.6,
       "bigChances": 8.2,
       "totalShots": 3.4,
@@ -347,13 +347,13 @@
       "falseNegatives": 0
     },
     "Brasileirão": {
-      "matchesTracked": 2,
-      "totalGoals": 4,
-      "totalXg": 2.5,
-      "totalSot": 6,
-      "totalShotsInsideBox": 14,
-      "totalPossessionDiff": 0.6599999999999999,
-      "correctAt70": 1,
+      "matchesTracked": 3,
+      "totalGoals": 7,
+      "totalXg": 5.2,
+      "totalSot": 12,
+      "totalShotsInsideBox": 32,
+      "totalPossessionDiff": 0.72,
+      "correctAt70": 2,
       "falsePositives": 0,
       "falseNegatives": 0
     },
@@ -402,12 +402,12 @@
       "falseNegatives": 0
     },
     "Liga Pro": {
-      "matchesTracked": 1,
-      "totalGoals": 4,
-      "totalXg": 2.2199999999999998,
-      "totalSot": 6,
-      "totalShotsInsideBox": 9,
-      "totalPossessionDiff": 0.040000000000000036,
+      "matchesTracked": 2,
+      "totalGoals": 6,
+      "totalXg": 4.92,
+      "totalSot": 16,
+      "totalShotsInsideBox": 21,
+      "totalPossessionDiff": 0.2,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
@@ -480,8 +480,8 @@
     }
   },
   "stats": {
-    "predictionsCount": 253,
-    "correctScore": 73,
+    "predictionsCount": 262,
+    "correctScore": 77,
     "correctScorer": 0
   },
   "windows": {
@@ -530,9 +530,9 @@
       "shotsOnTarget": 14.9,
       "shotsInsideBox": 11.9,
       "bigChances": 9.9,
-      "totalShots": 4,
+      "totalShots": 4.1,
       "xgot": 7.8,
-      "hitWoodwork": 4,
+      "hitWoodwork": 4.1,
       "xA": 5,
       "touchesOppBox": 5,
       "scoreNeeds": 13.9,
@@ -566,6 +566,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-24T01:59:59.607Z",
+  "lastUpdated": "2026-05-24T02:13:17.174Z",
   "alertedMatches": {}
 }
