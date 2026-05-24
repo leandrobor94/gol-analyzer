@@ -25537,7 +25537,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 45,
+    "lastSeenMinute": 57,
     "lastSeenScore": {
       "home": 0,
       "away": 1
@@ -25719,27 +25719,27 @@
     "teamHome": "Chicago Fire",
     "teamAway": "Toronto FC",
     "timestamp": "2026-05-24T01:22:55.295Z",
-    "analysisMinute": 75,
+    "analysisMinute": 88,
     "scoreAtAnalysis": {
       "home": 2,
       "away": 1
     },
     "stats": {
-      "xgHome": 1.55,
+      "xgHome": 1.7,
       "xgAway": 1.36,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 5,
+      "sotHome": 6,
       "sotAway": 4,
-      "totalShotsHome": 12,
+      "totalShotsHome": 14,
       "totalShotsAway": 10,
       "shotsInsideBoxHome": 7,
       "shotsInsideBoxAway": 8,
-      "shotsOutsideBoxHome": 5,
+      "shotsOutsideBoxHome": 7,
       "shotsOutsideBoxAway": 2,
       "shotsOffTargetHome": 4,
       "shotsOffTargetAway": 5,
-      "blockedShotsHome": 3,
+      "blockedShotsHome": 4,
       "blockedShotsAway": 1,
       "bigChancesHome": 2,
       "bigChancesAway": 1,
@@ -25747,18 +25747,18 @@
       "hitWoodworkAway": 0,
       "cornersHome": 3,
       "cornersAway": 2,
-      "possessionHome": 0.56,
-      "possessionAway": 0.44,
-      "foulsHome": 7,
-      "foulsAway": 7,
+      "possessionHome": 0.55,
+      "possessionAway": 0.45,
+      "foulsHome": 10,
+      "foulsAway": 10,
       "yellowCardsHome": 2,
-      "yellowCardsAway": 1,
+      "yellowCardsAway": 2,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 0,
       "offsideAway": 0,
-      "attacksHome": 65,
-      "attacksAway": 63,
+      "attacksHome": 80,
+      "attacksAway": 76,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -25778,7 +25778,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 80.35,
+    "predictedProbability": 52.75,
     "predictedScorer": "home",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
@@ -25787,7 +25787,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 75,
+    "lastSeenMinute": 88,
     "lastSeenScore": {
       "home": 2,
       "away": 1
@@ -25868,7 +25868,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 69,
+    "lastSeenMinute": 83,
     "lastSeenScore": {
       "home": 1,
       "away": 2
@@ -25881,7 +25881,7 @@
     "teamHome": "Nashville SC",
     "teamAway": "New York City FC",
     "timestamp": "2026-05-24T01:22:55.295Z",
-    "analysisMinute": 70,
+    "analysisMinute": 84,
     "scoreAtAnalysis": {
       "home": 2,
       "away": 1
@@ -25909,18 +25909,18 @@
       "hitWoodworkAway": 0,
       "cornersHome": 6,
       "cornersAway": 0,
-      "possessionHome": 0.61,
-      "possessionAway": 0.39,
-      "foulsHome": 8,
-      "foulsAway": 8,
+      "possessionHome": 0.53,
+      "possessionAway": 0.47,
+      "foulsHome": 9,
+      "foulsAway": 10,
       "yellowCardsHome": 1,
       "yellowCardsAway": 1,
       "redCardsHome": 0,
       "redCardsAway": 0,
       "offsideHome": 2,
       "offsideAway": 0,
-      "attacksHome": 64,
-      "attacksAway": 45,
+      "attacksHome": 70,
+      "attacksAway": 65,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -25940,7 +25940,7 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 89.35,
+    "predictedProbability": 51.75,
     "predictedScorer": "home",
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
@@ -25949,7 +25949,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 70,
+    "lastSeenMinute": 84,
     "lastSeenScore": {
       "home": 2,
       "away": 1
@@ -26032,7 +26032,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 65,
+    "lastSeenMinute": 78,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -26113,7 +26113,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 45,
+    "lastSeenMinute": 59,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -26627,7 +26627,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 47,
+    "lastSeenMinute": 61,
     "lastSeenScore": {
       "home": 1,
       "away": 1
@@ -26879,7 +26879,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 67,
+    "lastSeenMinute": 80,
     "lastSeenScore": {
       "home": 1,
       "away": 0
@@ -27064,37 +27064,37 @@
     "teamHome": "Junior FC",
     "teamAway": "Independiente Santa Fe",
     "timestamp": "2026-05-24T01:46:27.943Z",
-    "analysisMinute": 42,
+    "analysisMinute": 45,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
     },
     "stats": {
-      "xgHome": 0.76,
+      "xgHome": 1.23,
       "xgAway": 0.23,
       "xgotHome": null,
       "xgotAway": null,
-      "sotHome": 4,
+      "sotHome": 5,
       "sotAway": 1,
-      "totalShotsHome": 9,
+      "totalShotsHome": 16,
       "totalShotsAway": 1,
-      "shotsInsideBoxHome": 2,
+      "shotsInsideBoxHome": 6,
       "shotsInsideBoxAway": 1,
-      "shotsOutsideBoxHome": 6,
+      "shotsOutsideBoxHome": 10,
       "shotsOutsideBoxAway": 0,
-      "shotsOffTargetHome": 4,
+      "shotsOffTargetHome": 6,
       "shotsOffTargetAway": 0,
-      "blockedShotsHome": 1,
+      "blockedShotsHome": 5,
       "blockedShotsAway": 0,
       "bigChancesHome": 0,
       "bigChancesAway": 0,
       "hitWoodworkHome": 0,
       "hitWoodworkAway": 0,
-      "cornersHome": 3,
+      "cornersHome": 5,
       "cornersAway": 0,
-      "possessionHome": 0.66,
-      "possessionAway": 0.34,
-      "foulsHome": 6,
+      "possessionHome": 0.68,
+      "possessionAway": 0.32,
+      "foulsHome": 7,
       "foulsAway": 7,
       "yellowCardsHome": 2,
       "yellowCardsAway": 1,
@@ -27123,16 +27123,16 @@
       "clearancesHome": null,
       "clearancesAway": null
     },
-    "predictedProbability": 66.05,
+    "predictedProbability": 87.44000000000001,
     "predictedScorer": "home",
-    "predictedTimeWindow": "GOL 1T",
-    "windowType": "firstHalf",
+    "predictedTimeWindow": "GOL 46-70",
+    "windowType": "earlySecondHalf",
     "finalScore": null,
     "goalAfterAnalysis": null,
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 42,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -27215,10 +27215,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 32,
+    "lastSeenMinute": 46,
     "lastSeenScore": {
       "home": 0,
-      "away": 1
+      "away": 2
     }
   },
   {
@@ -27296,7 +27296,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 32,
+    "lastSeenMinute": 46,
     "lastSeenScore": {
       "home": 1,
       "away": 3
@@ -27377,10 +27377,10 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 32,
+    "lastSeenMinute": 46,
     "lastSeenScore": {
       "home": 1,
-      "away": 1
+      "away": 2
     }
   },
   {
@@ -27460,7 +27460,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 38,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 2,
       "away": 0
@@ -27543,7 +27543,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 36,
+    "lastSeenMinute": 45,
     "lastSeenScore": {
       "home": 2,
       "away": 1
@@ -27592,9 +27592,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 55,
+    "lastSeenMinute": 68,
     "lastSeenScore": {
-      "home": 2,
+      "home": 4,
       "away": 1
     }
   },
@@ -27673,9 +27673,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 5,
+    "lastSeenMinute": 18,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -27754,7 +27754,7 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 6,
+    "lastSeenMinute": 19,
     "lastSeenScore": {
       "home": 0,
       "away": 0
@@ -27835,9 +27835,9 @@
     "actualGoalMinute": null,
     "actualScorer": null,
     "predictionCorrect": null,
-    "lastSeenMinute": 12,
+    "lastSeenMinute": 25,
     "lastSeenScore": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   }
