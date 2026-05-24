@@ -187,15 +187,29 @@
       "falseNegatives": 1
     },
     "MLS": {
-      "matchesTracked": 2,
-      "totalGoals": 4,
-      "totalXg": 0.35,
-      "totalSot": 1,
-      "totalShotsInsideBox": 1,
-      "totalPossessionDiff": 0.08000000000000007,
+      "matchesTracked": 5,
+      "totalGoals": 21,
+      "totalXg": 12.23,
+      "totalSot": 37,
+      "totalShotsInsideBox": 61,
+      "totalPossessionDiff": 0.40000000000000013,
       "correctAt70": 1,
-      "falsePositives": 0,
-      "falseNegatives": 0
+      "falsePositives": 1,
+      "falseNegatives": 2,
+      "xg": 45,
+      "shotsOnTarget": 27,
+      "shotsInsideBox": 21,
+      "bigChances": 18,
+      "totalShots": 7.5,
+      "xgot": 15,
+      "hitWoodwork": 7.5,
+      "xA": 9,
+      "touchesOppBox": 9,
+      "scoreNeeds": 15,
+      "timePressure": 12,
+      "corners": 6,
+      "possession": 4.5,
+      "saves": 3
     },
     "NWSL": {
       "matchesTracked": 1,
@@ -229,20 +243,20 @@
       "correctAt70": 1,
       "falsePositives": 3,
       "falseNegatives": 1,
-      "xg": 23.1,
-      "shotsOnTarget": 13.9,
-      "shotsInsideBox": 10.8,
-      "bigChances": 9.2,
-      "totalShots": 3.8,
-      "xgot": 7.7,
-      "hitWoodwork": 3.8,
-      "xA": 4.6,
-      "touchesOppBox": 4.6,
-      "scoreNeeds": 7.7,
-      "timePressure": 6.2,
-      "corners": 3.1,
-      "possession": 2.3,
-      "saves": 1.5
+      "xg": 21.4,
+      "shotsOnTarget": 12.8,
+      "shotsInsideBox": 10,
+      "bigChances": 8.5,
+      "totalShots": 3.6,
+      "xgot": 7.1,
+      "hitWoodwork": 3.6,
+      "xA": 4.3,
+      "touchesOppBox": 4.3,
+      "scoreNeeds": 7.1,
+      "timePressure": 5.7,
+      "corners": 2.8,
+      "possession": 2.1,
+      "saves": 1.4
     },
     "MLS Next Pro": {
       "matchesTracked": 2,
@@ -455,8 +469,8 @@
     }
   },
   "stats": {
-    "predictionsCount": 232,
-    "correctScore": 67,
+    "predictionsCount": 245,
+    "correctScore": 68,
     "correctScorer": 0
   },
   "windows": {
@@ -501,23 +515,23 @@
       "matchContext": 5
     },
     "late": {
-      "xg": 25,
-      "shotsOnTarget": 15,
-      "shotsInsideBox": 12,
-      "bigChances": 10,
+      "xg": 25.1,
+      "shotsOnTarget": 15.1,
+      "shotsInsideBox": 12.1,
+      "bigChances": 10.1,
       "totalShots": 4,
       "xgot": 8,
       "hitWoodwork": 4,
       "xA": 5,
       "touchesOppBox": 5,
-      "scoreNeeds": 14,
-      "timePressure": 16,
+      "scoreNeeds": 14.1,
+      "timePressure": 16.1,
       "corners": 5,
       "possession": 2,
       "saves": 2,
       "goalsScored": -5,
-      "redCard": 25,
-      "teamHistory": 10,
+      "redCard": 25.1,
+      "teamHistory": 10.1,
       "matchContext": 6
     }
   },
@@ -541,6 +555,6 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-05-24T01:32:46.521Z",
+  "lastUpdated": "2026-05-24T01:47:06.585Z",
   "alertedMatches": {}
 }
