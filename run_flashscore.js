@@ -421,6 +421,26 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
     }
   }
   cappedScore = Math.max(0, cappedScore);
+
+  // Suppress firstHalf alerts unless the predicted team dominates AND needs a goal
+  if (windowType === 'firstHalf' && predictedScorer) {
+    const needsGoal = predictedScorer === 'home'
+      ? match.scoreHome < match.scoreAway
+      : match.scoreAway < match.scoreHome;
+    const stats = match.stats || {};
+    const dominates = predictedScorer === 'home'
+      ? (stats.xgHome || 0) > (stats.xgAway || 0) + 0.3
+        && (stats.sotHome || 0) >= (stats.sotAway || 0) + 2
+        && (stats.possessionHome || 0) > 0.58
+      : (stats.xgAway || 0) > (stats.xgHome || 0) + 0.3
+        && (stats.sotAway || 0) >= (stats.sotHome || 0) + 2
+        && (stats.possessionAway || 0) > 0.58;
+    if (!needsGoal || !dominates) {
+      cappedScore = Math.min(cappedScore, 74);
+      reasons.push('1T: necesita dominar y estar abajo para alertar');
+    }
+  }
+
   let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro proximo gol'
     : cappedScore >= 45 ? 'PROBABLE — buenos indicios'
     : cappedScore >= 30 ? 'POSIBLE — atentos'
