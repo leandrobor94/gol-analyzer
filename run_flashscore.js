@@ -406,11 +406,29 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
 
   // --- Penalties sobre el score ya acotado ---
   const gd = Math.abs(match.scoreHome - match.scoreAway);
-  if (minute >= 70 && gd >= 2) {
-    cappedScore -= 30; reasons.push('Goleada decidida, ritmo bajo');
+  if (minute >= 60 && gd >= 2) {
+    const loserHasNoStats = (match.scoreHome - match.scoreAway >= 2)
+      ? (s.xgAway || 0) < 0.3 && (s.sotAway || 0) < 2
+      : (s.xgHome || 0) < 0.3 && (s.sotHome || 0) < 2;
+    if (gd >= 3 || (minute >= 70 && gd >= 2)) {
+      cappedScore -= 50;
+      reasons.push('Goleada decidida, ritmo bajo');
+    } else if (minute >= 60) {
+      cappedScore -= 30;
+      reasons.push('Ventaja de 2 goles, ritmo baja');
+    }
+    if (loserHasNoStats) { cappedScore -= 15; reasons.push('Perdedor sin reaccion'); }
   }
   if (minute >= 70 && goals === 0) {
-    cappedScore -= 35; reasons.push('0-0 estancado en etapa final');
+    const bothHadChances = (s.bigChancesHome || 0) + (s.bigChancesAway || 0) >= 2;
+    if (bothHadChances) {
+      cappedScore -= 25; reasons.push('0-0 con ocasiones sin concretar');
+    } else {
+      cappedScore -= 50; reasons.push('0-0 sin ocasiones claras');
+    }
+  }
+  if (minute >= 75 && goals === 0 && (s.bigChancesHome || 0) + (s.bigChancesAway || 0) >= 2) {
+    cappedScore -= 15; reasons.push('Minutos finales sin acierto');
   }
   if (minute >= 75 && cappedScore >= 50) {
     const bcH = s.bigChancesHome, bcA = s.bigChancesAway;
@@ -439,6 +457,28 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
       cappedScore = Math.min(cappedScore, 74);
       reasons.push('1T: necesita dominar y estar abajo para alertar');
     }
+  }
+
+  // Early minutes: muy temprano para predecir con confianza
+  if (minute < 25) {
+    cappedScore = Math.min(cappedScore, 74);
+    reasons.push('Demasiado temprano (< 25 min)');
+  }
+
+  // Low xG override: si el equipo pronosticado tiene xG bajo, baja la confianza
+  if (predictedScorer) {
+    const predXg = predictedScorer === 'home' ? (s.xgHome || 0) : (s.xgAway || 0);
+    if (predXg < 0.5 && cappedScore >= 65) {
+      const reduction = Math.min(25, (0.5 - predXg) * 40);
+      cappedScore -= reduction;
+      reasons.push('xG bajo (' + predXg.toFixed(2) + ') del equipo pronosticado');
+    }
+  }
+
+  // Overconfidence damping: comprime scores altos para evitar falsos 100%
+  if (cappedScore > 70) {
+    cappedScore = Math.round(70 + (cappedScore - 70) * 0.45);
+    reasons.push('Ajuste de confianza aplicado');
   }
 
   let verdict = cappedScore >= 60 ? 'MUY PROBABLE — casi seguro proximo gol'
