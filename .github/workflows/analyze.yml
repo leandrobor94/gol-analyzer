@@ -2,7 +2,7 @@ name: Analizar partidos y alertar
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 jobs:
