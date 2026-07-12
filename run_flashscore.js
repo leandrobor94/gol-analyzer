@@ -541,13 +541,14 @@ function doSync() {
     cp.execSync('git config user.email "sofastats-bot@users.noreply.github.com"', { stdio: 'ignore', timeout: 5000 });
     cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
     cp.execSync('git add predictions.json weights.json teams.json alertas.json telegram-offset.txt', { stdio: 'ignore', timeout: 5000 });
-    try {
-      cp.execSync('git diff --cached --quiet', { stdio: 'ignore', timeout: 5000 });
+    // Solo commit y push si hay algo que commitear
+    const hasChanges = cp.execSync('git status --porcelain', { encoding: 'utf8', timeout: 5000 }).trim();
+    if (hasChanges) {
+      cp.execSync('git commit -m "sync: datos ronda [skip ci]"', { stdio: 'ignore', timeout: 5000 });
+      cp.execSync('git push', { stdio: 'ignore', timeout: 15000 });
+      console.log('  Sync: commit + push exitoso');
+    } else {
       console.log('  Sync: sin cambios nuevos');
-    } catch {
-      cp.execSync('git commit -m "sync: datos ronda [skip ci]"', { stdio: 'ignore', timeout: 10000 });
-      cp.execSync('git push', { stdio: 'ignore', timeout: 30000 });
-      console.log('  Sync: datos sincronizados con la nube');
     }
   } catch (e) {
     console.log('  Sync: ' + (e.message || 'error').split('\n')[0]);
