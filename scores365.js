@@ -26,7 +26,28 @@ async function fetchLiveMatches() {
   const dateStr = `${dd}/${mm}/${yyyy}`;
   try { body = await fetch(`${API_BASE}/games/allscores/?${PARAMS}&sports=1&startDate=${dateStr}&endDate=${dateStr}&showOdds=true&onlyLiveGames=true&withTop=true&topBookmaker=4`); j = JSON.parse(body); } catch { return []; }
   if (!j.games) return [];
-  const live = j.games.filter(g => g.statusGroup === 3 && g.gameTime > 0 && g.gameTime < 90);
+  const now = new Date();
+  const live = j.games.filter(g => {
+    if (g.statusGroup !== 3 || !g.gameTime || g.gameTime <= 0) return false;
+    // Calcular minuto real desde startTime para detectar datos stale
+    if (g.startTime) {
+      const start = new Date(g.startTime);
+      const elapsedMin = (now - start) / 60000;
+      // 1T: 0-47, descanso: 47-62, 2T: 62-110, terminado: >110
+      let realMin;
+      if (elapsedMin <= 47) realMin = elapsedMin;
+      else if (elapsedMin <= 62) realMin = 45;
+      else realMin = 45 + (elapsedMin - 62);
+      // Si el minuto real calculado es >100, el partido ya deberia haber terminado
+      if (realMin > 100) return false;
+      // Si el minuto real es significativamente mayor que gameTime, el dato esta stale
+      // Usar el minuto real calculado (mas confiable que gameTime congelado)
+      if (realMin > g.gameTime + 5) {
+        g.gameTime = Math.min(95, Math.round(realMin));
+      }
+    }
+    return g.gameTime < 90;
+  });
   
   return live.map(g => ({
     gameId: g.id,
@@ -205,16 +226,22 @@ function toInternalFormat(stats, match) {
     redCardsHome: h('redCards'), redCardsAway: a('redCards'),
     offsideHome: h('offside'), offsideAway: a('offside'),
     attacksHome: h('attacks'), attacksAway: a('attacks'),
-    // Not available from 365:
-    xgHomeA: null, xgAwayA: null,
-    touchesOppBoxHome: null, touchesOppBoxAway: null,
-    savesHome: null, savesAway: null,
-    passesFinalThirdHome: null, passesFinalThirdAway: null,
-    crossesHome: null, crossesAway: null,
-    tacklesHome: null, tacklesAway: null,
-    interceptionsHome: null, interceptionsAway: null,
+    // Ahora SI mapeadas desde 365scores:
+    xgHomeA: null, xgAwayA: null, // xA no disponible directamente
+    touchesOppBoxHome: null, touchesOppBoxAway: null, // No disponible en 365scores
+    savesHome: null, savesAway: null, // 365scores no expone atajadas directamente
+    passesFinalThirdHome: h('passesFinalThird'), passesFinalThirdAway: a('passesFinalThird'),
+    crossesHome: h('crosses'), crossesAway: a('crosses'),
+    keyPassesHome: h('keyPasses'), keyPassesAway: a('keyPasses'),
+    tacklesHome: h('tacklesWon'), tacklesAway: a('tacklesWon'),
+    interceptionsHome: h('interceptions'), interceptionsAway: a('interceptions'),
     errorsLeadingToShotHome: null, errorsLeadingToShotAway: null,
-    clearancesHome: null, clearancesAway: null,
+    clearancesHome: h('clearances'), clearancesAway: a('clearances'),
+    possessionLostHome: h('possessionLost'), possessionLostAway: a('possessionLost'),
+    possessionWonFinalThirdHome: h('possessionWonFinalThird'), possessionWonFinalThirdAway: a('possessionWonFinalThird'),
+    dribblesHome: h('dribbles'), dribblesAway: a('dribbles'),
+    duelsWonHome: h('duelsWon'), duelsWonAway: a('duelsWon'),
+    aerialDuelsWonHome: h('aerialDuelsWon'), aerialDuelsWonAway: a('aerialDuelsWon'),
   };
 }
 

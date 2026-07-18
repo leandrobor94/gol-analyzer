@@ -246,6 +246,120 @@ async function fetchXgBatch(targets) {
 }
 
 /**
+ * Extract Match Momentum from Flashscore match page.
+ * Flashscore has a momentum graph showing pressure per minute.
+ * Returns: { homeMomentum: 0-100, awayMomentum: 0-100, last15Home: 0-100, last15Away: 0-100, trend: 'home'|'away'|'neutral' }
+ */
+async function extractMatchMomentum(page, matchUrl) {
+  // Momentum esta en la pestana de estadisticas o directamente en /summary/
+  const momentumUrl = matchUrl.replace(/\/+$/, '') + '/summary/';
+  await page.goto(momentumUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+  await page.waitForTimeout(3000);
+
+  return await page.evaluate(() => {
+    // Buscar el grafico de momentum - Flashscore usa varios selectores posibles
+    // El momentum graph tiene barras rojas (local) y azules (visitante)
+    let homeMom = 0, awayMom = 0;
+    let last15Home = 0, last15Away = 0;
+    let momentumFound = false;
+
+    // Selector 1: data-testid para momentum
+    const momentumEl = document.querySelector('[data-testid*="momentum"]') ||
+                       document.querySelector('.momentumChart') ||
+                       document.querySelector('[class*="momentum"]');
+
+    if (momentumEl) {
+      momentumFound = true;
+      // Buscar barras del grafico
+      const bars = momentumEl.querySelectorAll('div[class*="bar"], rect, [class*="Bar"]');
+      let homeSum = 0, awaySum = 0, count = 0;
+      bars.forEach(b => {
+        const height = parseFloat(b.style?.height || b.getAttribute('height') || 0);
+        const isHome = b.className?.includes('home') || b.getAttribute('data-side') === 'home';
+        const isAway = b.className?.includes('away') || b.getAttribute('data-side') === 'away';
+        if (isHome && height > 0) { homeSum += height; count++; }
+        if (isAway && height > 0) { awaySum += height; count++; }
+      });
+      if (count > 0) {
+        homeMom = Math.min(100, Math.round(homeSum / count * 2));
+        awayMom = Math.min(100, Math.round(awaySum / count * 2));
+      }
+    }
+
+    // Selector 2: buscar "Match Momentum" o "Momentum" como texto
+    if (!momentumFound) {
+      const allElements = document.querySelectorAll('*');
+      for (const el of allElements) {
+        const text = el.textContent?.trim().toLowerCase() || '';
+        if (text === 'match momentum' || text === 'momentum' || text.includes('momentum del partido')) {
+          momentumFound = true;
+          // Buscar barras cercanas
+          const parent = el.closest('[class*="section"], [class*="card"], [class*="container"]') || el.parentElement;
+          if (parent) {
+            const bars = parent.querySelectorAll('div[style*="height"], rect, [class*="bar"]');
+            let hSum = 0, aSum = 0, c = 0;
+            bars.forEach(b => {
+              const h = parseFloat(b.style?.height || b.getAttribute('height') || 0);
+              if (h > 0) {
+                const cls = b.className || '';
+                if (cls.includes('home') || cls.includes('Home')) hSum += h;
+                else if (cls.includes('away') || cls.includes('Away')) aSum += h;
+                c++;
+              }
+            });
+            if (c > 0) {
+              homeMom = Math.min(100, Math.round(hSum / c * 2));
+              awayMom = Math.min(100, Math.round(aSum / c * 2));
+            }
+          }
+          break;
+        }
+      }
+    }
+
+    // Selector 3: SVG path para el grafico de momentum
+    if (!momentumFound) {
+      const svg = document.querySelector('svg[class*="momentum"], svg[class*="Momentum"]');
+      if (svg) {
+        momentumFound = true;
+        const paths = svg.querySelectorAll('path, rect, line');
+        let hArea = 0, aArea = 0;
+        paths.forEach(p => {
+          const fill = p.getAttribute('fill') || '';
+          const stroke = p.getAttribute('stroke') || '';
+          if (fill.includes('home') || stroke.includes('home') || fill.match(/#[eE]0|red|#[cC]0/)) hArea++;
+          else if (fill.includes('away') || stroke.includes('away') || fill.match(/#[0-9a-fA-F]{2}[eE]|blue/)) aArea++;
+        });
+        if (hArea + aArea > 0) {
+          homeMom = Math.min(100, Math.round(hArea / (hArea + aArea) * 100));
+          awayMom = Math.min(100, Math.round(aArea / (hArea + aArea) * 100));
+        }
+      }
+    }
+
+    // Calcular tendencia (ultimos 15 min)
+    // Sin acceso al detalle por minuto, usamos el momentum total como proxy
+    last15Home = homeMom;
+    last15Away = awayMom;
+
+    const trend = homeMom > awayMom + 15 ? 'home' : awayMom > homeMom + 15 ? 'away' : 'neutral';
+    const momentumDiff = Math.abs(homeMom - awayMom);
+    const dominantSide = homeMom > awayMom ? 'home' : 'away';
+
+    return {
+      homeMomentum: homeMom,
+      awayMomentum: awayMom,
+      last15Home,
+      last15Away,
+      trend,
+      momentumDiff,
+      dominantSide,
+      momentumFound
+    };
+  });
+}
+
+/**
  * Fetch full match stats from Flashscore for specific targets.
  * Much faster than fetchAllLiveMatches - only opens detail pages for requested matches.
  * @param {Array} targets - Array of {teamHome, teamAway, matchId, minute} objects
@@ -306,4 +420,4 @@ async function fetchStatsBatch(targets) {
   return results;
 }
 
-module.exports = { fetchXgBatch, fetchStatsBatch };
+module.exports = { fetchXgBatch, fetchStatsBatch, extractMatchMomentum };

@@ -267,6 +267,32 @@ function verifyPredictions(predictions, liveMatches, teams) {
     pred.goalAfterAnalysis = goalHappened;
     pred.predictionCorrect = correct;
 
+    // Log alerta verificada si fue alerta (>=80%)
+    if ((pred.predictedProbability || 0) >= 80) {
+      try {
+        const ALERTAS_LOG_FILE = path.join(__dirname, 'alertas_log.json');
+        let log = [];
+        if (fs.existsSync(ALERTAS_LOG_FILE)) {
+          log = JSON.parse(fs.readFileSync(ALERTAS_LOG_FILE, 'utf8'));
+        }
+        log.push({
+          match: pred.match || (pred.teamHome + ' vs ' + pred.teamAway),
+          league: pred.league,
+          probability: pred.predictedProbability,
+          minute: pred.analysisMinute,
+          scoreAtAlert: pred.scoreAtAnalysis ? (pred.scoreAtAnalysis.home + '-' + pred.scoreAtAnalysis.away) : null,
+          finalScore: finalScore ? (finalScore.home + '-' + finalScore.away) : null,
+          goalAfterAlert: goalHappened,
+          correct: correct,
+          windowType: pred.windowType,
+          timestamp: new Date().toISOString(),
+          alertTimestamp: pred.timestamp
+        });
+        if (log.length > 500) log = log.slice(-500);
+        fs.writeFileSync(ALERTAS_LOG_FILE, JSON.stringify(log, null, 2));
+      } catch {}
+    }
+
     // Determine actual scorer and approximate minute for training
     if (goalHappened) {
       const prevHome = pred.scoreAtAnalysis?.home ?? 0;
