@@ -19,7 +19,7 @@ const DEFAULT_WEIGHTS = {
     teamFactor: 8, leagueFactor: 5
   },
   byLeague: {},
-  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0 }
+  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 }
 };
 
 function deepMerge(defaults, loaded) {
@@ -132,7 +132,8 @@ function getFallbackScore(minute, scoreHome, scoreAway, league, match) {
     if (gd === 0) base += 10;
   }
   
-  return Math.min(80, base);
+  // Cap 70: sin stats reales NUNCA debe acercarse al umbral de alerta (80%)
+  return Math.min(70, base);
 }
 
 /** Check if match has meaningful stats for scoring */
@@ -473,11 +474,12 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
         const isHome = h.includes(n) || n.includes(h);
         const isAway = a.includes(n) || n.includes(a);
         if (!isHome && !isAway) continue;
-        // Factor por eficiencia xG: equipos que meten goles con poco xG
-        if (data.totalXgEfficiency > 0 && data.totalGoalsScored >= 2) {
-          const avgEff = data.totalXgEfficiency / data.totalGoalsScored;
-          // avgEff > 1 significa que rinden mejor que el xG predicho
-          // Ej: 2 goles con xG=1.0 → eff = 2 → factor boost
+        // Factor por eficiencia xG: goles reales / xG acumulado.
+        // BUG FIX: antes usaba totalXgEfficiency (suma de 1/xG por partido con gol)
+        // que penalizaba a equipos goleadores (3 goles con xG 1.0 daba eff BAJA).
+        // Ahora: eff = goles / xG — >1.3 rinde sobre lo esperado, <0.7 rinde bajo.
+        if ((data.totalXgFor || 0) >= 1 && (data.totalGoalsScored || 0) >= 2) {
+          const avgEff = data.totalGoalsScored / Math.max(0.1, data.totalXgFor);
           if (avgEff > 1.3) {
             const bonus = Math.min(0.15, (avgEff - 1.3) * 0.1);
             if (isHome) { homeFactor += bonus; homeReasons.push('+eficiente xG'); }
@@ -668,9 +670,12 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
     }
   }
 
-  // Overconfidence damping: comprime scores altos para evitar falsos 100%
+  // Overconfidence damping: comprime scores altos para evitar falsos 100%.
+  // CALIBRACION: con factor 0.45 el umbral de alerta (80) exigia score crudo ~92
+  // — practicamente inalcanzable y el sistema quedaba mudo. Con 0.6 solo
+  // partidos verdaderamente excepcionales (score crudo >= 87) superan el 80%.
   if (cappedScore > 70) {
-    cappedScore = Math.round(70 + (cappedScore - 70) * 0.45);
+    cappedScore = Math.round(70 + (cappedScore - 70) * 0.6);
     reasons.push('Ajuste de confianza aplicado');
   }
 
@@ -789,15 +794,26 @@ function alertsEnabled() {
 
 function doSync() {
   if (process.env.NO_SYNC) return;
+  const cp = require('child_process');
   try {
-    const cp = require('child_process');
-    cp.execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 });
+    // pull --rebase para auto-resolver divergencias; si falla, abortar rebase
+    // para no dejar el repo en estado roto (antes: pull --ff-only fallaba para siempre)
+    try {
+      cp.execSync('git pull --rebase', { stdio: 'ignore', timeout: 20000 });
+    } catch {
+      try { cp.execSync('git rebase --abort', { stdio: 'ignore', timeout: 5000 }); } catch {}
+    }
   } catch {}
   try {
-    const cp = require('child_process');
     cp.execSync('git config user.email "sofastats-bot@users.noreply.github.com"', { stdio: 'ignore', timeout: 5000 });
     cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
-    cp.execSync('git add predictions.json weights.json teams.json alertas.json telegram-offset.txt', { stdio: 'ignore', timeout: 5000 });
+    // Solo agregar archivos que existen (antes: git add de archivo inexistente
+    // lanzaba error y el sync completo fallaba silenciosamente en local)
+    const files = ['predictions.json', 'weights.json', 'teams.json', 'alertas.json', 'alertas_log.json', 'telegram-offset.txt', 'last-local-run.json']
+      .filter(f => fs.existsSync(f));
+    if (files.length > 0) {
+      cp.execSync('git add ' + files.join(' '), { stdio: 'ignore', timeout: 5000 });
+    }
     // Solo commit y push si hay algo que commitear
     const hasChanges = cp.execSync('git status --porcelain', { encoding: 'utf8', timeout: 5000 }).trim();
     if (hasChanges) {
@@ -831,8 +847,16 @@ async function main() {
 
   const MAX_LOOPS = 4;
   const SLEEP_MS = 5 * 60 * 1000;
+  // Limite duro de runtime: el cron corre cada 20 min — cortar antes de solapar
+  // con el proximo job (que haria commits en race condition)
+  const MAX_RUNTIME_MS = (process.env.CI ? 17 : 60) * 60 * 1000;
+  const startedAt = Date.now();
 
   for (let loop = 0; loop < MAX_LOOPS; loop++) {
+    if (Date.now() - startedAt > MAX_RUNTIME_MS) {
+      console.log('Runtime limite alcanzado (' + Math.round((Date.now() - startedAt) / 60000) + ' min). Cortando para no solapar proximo cron.');
+      break;
+    }
     // Traer ultimos cambios de la nube (local y CI)
     try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 }); } catch {} 
 
@@ -892,13 +916,9 @@ async function main() {
           statsAvailable = hasMeaningfulStats(internalStats);
         }
         if (!rawStats || !statsAvailable) {
-          internalStats = internalStats || {
-            xgHome: null, xgAway: null, sotHome: null, sotAway: null,
-            shotsInsideBoxHome: null, shotsInsideBoxAway: null, bigChancesHome: null, bigChancesAway: null,
-            cornersHome: null, cornersAway: null, possessionHome: null, possessionAway: null,
-            attacksHome: null, attacksAway: null, foulsHome: null, foulsAway: null,
-            totalShotsHome: null, totalShotsAway: null, savesHome: null, savesAway: null,
-          };
+          // NULL_STATS tiene TODAS las claves en null — evita que `undefined !== null`
+          // pase como true en analyzeGoal (bug que dejaba entrar NaN a los calculos)
+          internalStats = { ...scores365.NULL_STATS, ...(internalStats || {}) };
           console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | Stats no disponibles, usando fallback');
         } else {
           const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
@@ -926,22 +946,31 @@ async function main() {
         });
       }
 
-      // Flashscore: stats enriquecidas (siempre para minutos tempranos, complementa 365scores)
-      const needFlashscore = loop === 0 ? analyzed.filter(m => m.minute < 71) : [];
+      // Flashscore: enriquecimiento en loop 0 para (a) partidos sin stats de 365scores
+      // y (b) hasta 8 partidos en ventana de alerta (25-70) — reciben xG REAL, xA,
+      // touchesOppBox y saves que 365scores no provee.
+      const noStats = analyzed.filter(m => !hasMeaningfulStats(m.stats));
+      const enrichable = analyzed.filter(m => hasMeaningfulStats(m.stats) && m.minute >= 25 && m.minute <= 70).slice(0, 8);
+      const needFlashscore = loop === 0 ? [...noStats, ...enrichable.filter(m => !noStats.includes(m))] : [];
       if (needFlashscore.length > 0) {
-        console.log('\n  -> ' + needFlashscore.length + ' partidos sin stats, buscando en Flashscore...');
+        console.log('\n  -> ' + needFlashscore.length + ' partidos a enriquecer en Flashscore (' + noStats.length + ' sin stats)...');
         const fsTargets = needFlashscore.map(m => ({ teamHome: m.teamHome, teamAway: m.teamAway, matchId: m.matchId, minute: m.minute }));
         try {
           const fsStats = await fetchStatsBatch(fsTargets);
           let merged = 0;
-          for (const match of analyzed) {
+          for (const match of needFlashscore) {
             const key = match.matchId;
             const fs = fsStats[key];
             if (!fs || !fs.stats || Object.keys(fs.stats).length === 0) continue;
             const s = match.stats;
-            // Map Flashscore stat names to internal format
+            // Map Flashscore stat names to internal format.
+            // overwrite:true => el dato real de Flashscore REEMPLAZA el estimado de 365scores
             const fsm = {
-              'Expected goals (xG)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xg' },
+              'Expected goals (xG)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xg', overwrite: true },
+              'Expected goals on target (xGOT)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xgot', overwrite: true },
+              'Expected assists (xA)': { h: v => parseFloat(v), a: v => parseFloat(v), kh: 'xgHomeA', ka: 'xgAwayA', overwrite: true },
+              'Touches in opposition box': { h: parseInt, a: parseInt, k: 'touchesOppBox' },
+              'Goalkeeper saves': { h: parseInt, a: parseInt, k: 'saves' },
               'Ball possession': { h: v => parseInt(v)/100, a: v => parseInt(v)/100, k: 'possession' },
               'Total shots': { h: parseInt, a: parseInt, k: 'totalShots' },
               'Shots on target': { h: parseInt, a: parseInt, k: 'shotsOnTarget' },
@@ -949,8 +978,11 @@ async function main() {
               'Corner kicks': { h: parseInt, a: parseInt, k: 'corners' },
               'Fouls': { h: parseInt, a: parseInt, k: 'fouls' },
               'Yellow cards': { h: parseInt, a: parseInt, k: 'yellowCards' },
+              'Red cards': { h: parseInt, a: parseInt, k: 'redCards' },
               'Shots off target': { h: parseInt, a: parseInt, k: 'shotsOffTarget' },
               'Shots inside box': { h: parseInt, a: parseInt, k: 'shotsInsideBox' },
+              'Blocked shots': { h: parseInt, a: parseInt, k: 'blockedShots' },
+              'Hit woodwork': { h: parseInt, a: parseInt, k: 'hitWoodwork' },
               'Saves': { h: parseInt, a: parseInt, k: 'saves' },
             };
             let anyNew = false;
@@ -958,10 +990,15 @@ async function main() {
               if (fs.stats[fsName]) {
                 const hVal = mapping.h(fs.stats[fsName].home);
                 const aVal = mapping.a(fs.stats[fsName].away);
-                const existing = s[mapping.k + 'Home'];
-                if ((existing === null || existing === undefined) && !isNaN(hVal) && !isNaN(aVal)) {
-                  s[mapping.k + 'Home'] = hVal;
-                  s[mapping.k + 'Away'] = aVal;
+                if (isNaN(hVal) || isNaN(aVal)) continue;
+                // Filtro de outliers: xG/xGOT/xA > 6 son datos corruptos
+                if (/xG|xg|xA/.test(mapping.k || mapping.kh) && (hVal > 6 || aVal > 6)) continue;
+                const kh = mapping.kh || (mapping.k + 'Home');
+                const ka = mapping.ka || (mapping.k + 'Away');
+                const existing = s[kh];
+                if (mapping.overwrite || existing === null || existing === undefined) {
+                  s[kh] = hVal;
+                  s[ka] = aVal;
                   anyNew = true;
                 }
               }
@@ -1033,6 +1070,7 @@ async function main() {
       result.windowType = windowType;
       result.windowOdds = WINDOW_ODDS[windowType];
       result.ev = (baseScore / 100) * result.windowOdds - 1;
+      result.competitionId = m.competitionId;
 
       return result;
     }).sort((a, b) => b.score - a.score);
@@ -1089,14 +1127,16 @@ async function main() {
       }
     }
     savePredictions(predictions);
-    weights.stats.predictionsCount += newCount;
+    weights.stats.createdCount = (weights.stats.createdCount || 0) + newCount;
     saveWeights(weights);
     console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
     // Actualizar lastSeen de predicciones existentes con datos actuales
+    // BUG FIX: liveData tiene gameId (no url) — antes nunca encontraba el partido
+    // y lastSeenMinute jamas se actualizaba
     for (const pred of predictions) {
       if (pred.predictionCorrect !== null) continue;
-      const lm = liveData.find(m => m.url === pred.id);
+      const lm = liveData.find(m => String(m.gameId) === String(pred.id));
       if (lm) {
         pred.lastSeenMinute = lm.minute;
         pred.lastSeenScore = { home: lm.scoreHome ?? 0, away: lm.scoreAway ?? 0 };
@@ -1141,8 +1181,8 @@ async function main() {
       }
     }
 
-    // --- Fetch real xG from Flashscore for top matches ---
-    const topForXg = ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5);
+    // --- Fetch real xG from Flashscore for top matches (solo loops 0-1: Playwright es caro) ---
+    const topForXg = loop <= 1 ? ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5) : [];
     if (topForXg.length > 0) {
       console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
       const { fetchXgBatch } = require('./flashscore_fetcher');
@@ -1174,7 +1214,13 @@ async function main() {
         }
       }
       if (xgFound > 0) {
-        ranked.forEach(r => { const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, getWindowType(r.minute)), teams, null, getWindowType(r.minute)); r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons; });
+        // BUG FIX: el re-analisis pasaba leagueContext=null, perdiendo la normalizacion
+        // por liga y haciendo el score inconsistente con el analisis original
+        ranked.forEach(r => {
+          const wt = getWindowType(r.minute);
+          const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt);
+          r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons;
+        });
         ranked.sort((a, b) => b.score - a.score);
       }
       console.log('  xG real obtenido para ' + xgFound + ' partidos\n');
@@ -1266,7 +1312,8 @@ async function main() {
   predictions = loadPredictions();
   const pendingVerify = predictions.filter(p => {
     if (p.predictionCorrect !== null) return false;
-    if (liveData.find(m => m.url === p.id)) return false;
+    // BUG FIX: excluir partidos AUN EN VIVO (antes usaba m.url que no existe)
+    if (liveData.find(m => String(m.gameId) === String(p.id))) return false;
     if (p.analysisMinute && p.analysisMinute >= 10) return true;
     // Si analysisMinute < 10 pero pasaron > 30 min reales, verificar igual
     if (p.timestamp) {
@@ -1324,9 +1371,9 @@ async function main() {
         const prob = (pred.predictedProbability || 0) / 100;
         const predictedGoal = prob >= 0.7;
         pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
-        // Update stats counters
+        // Update stats counters (verifiedCount = verificadas, correctScore = acertadas)
         if (pred.predictionCorrect !== null) {
-          currentWeights.stats.predictionsCount = (currentWeights.stats.predictionsCount || 0) + 1;
+          currentWeights.stats.verifiedCount = (currentWeights.stats.verifiedCount || 0) + 1;
           if (pred.predictionCorrect) currentWeights.stats.correctScore = (currentWeights.stats.correctScore || 0) + 1;
         }
         const icon = pred.predictionCorrect ? '\u2713' : '\u2717';

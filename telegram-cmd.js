@@ -5,6 +5,10 @@ const cp = require('child_process');
 const token = process.env.TELEGRAM_BOT_TOKEN;
 if (!token) { console.log('Sin token'); process.exit(0); }
 
+// Solo obedecer comandos del chat autorizado (cualquiera que hable con el bot
+// podia pausar las alertas). Si no esta definido, se acepta todo (compat).
+const AUTHORIZED_CHAT = process.env.TELEGRAM_CHAT_ID || null;
+
 const offsetFile = 'telegram-offset.txt';
 let offset = 0;
 try { offset = parseInt(fs.readFileSync(offsetFile, 'utf8')); } catch {}
@@ -22,6 +26,11 @@ https.get('https://api.telegram.org/bot' + token + '/getUpdates?offset=' + (offs
         const chatId = u.message?.chat?.id;
         if (!chatId) continue;
         fs.writeFileSync(offsetFile, String(u.update_id));
+        // Ignorar comandos de chats no autorizados
+        if (AUTHORIZED_CHAT && String(chatId) !== String(AUTHORIZED_CHAT)) {
+          console.log('Comando ignorado de chat no autorizado: ' + chatId);
+          continue;
+        }
 
         if (text === '/pause') {
           fs.writeFileSync('alertas.json', JSON.stringify({ enabled: false }));

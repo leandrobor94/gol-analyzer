@@ -48,7 +48,8 @@ function buildMessage(ranked) {
   let msg = `<b>⚽ ALERTA GOL — ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}</b>\n\n`;
 
   ranked.slice(0, 5).forEach((r, i) => {
-    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
+    const medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
+    const medal = medals[i] || '▫️';
     msg += `${medal} <b>${r.teamHome} vs ${r.teamAway}</b>\n`;
     msg += `   🔥 ${r.score}% | ${r.timeWindow}\n`;
     if (r.league) msg += `   🏆 ${r.league}\n`;

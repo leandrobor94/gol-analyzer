@@ -2,12 +2,24 @@ const https = require('https');
 const API_BASE = 'https://webws.365scores.com/web';
 const PARAMS = 'appTypeId=5&langId=14&timezoneName=America/Bogota&userCountryId=109';
 
-function fetch(url) {
+function fetchOnce(url) {
   return new Promise((ok, fail) => {
-    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } }, res => {
+    const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } }, res => {
       let d = ''; res.on('data', c => d += c); res.on('end', () => ok(d));
-    }).on('error', fail);
+    });
+    req.setTimeout(15000, () => { req.destroy(new Error('timeout')); });
+    req.on('error', fail);
   });
+}
+
+/** fetch con reintento (1 retry con backoff) — un fallo de red no debe matar el ciclo */
+async function fetch(url) {
+  try {
+    return await fetchOnce(url);
+  } catch (e) {
+    await new Promise(r => setTimeout(r, 2000));
+    return fetchOnce(url);
+  }
 }
 
 function sanitizeLeague(league) {
@@ -245,7 +257,45 @@ function toInternalFormat(stats, match) {
   };
 }
 
+/**
+ * Template con TODAS las claves de stats en null.
+ * Usar como base del objeto fallback para que los checks `!== null`
+ * en analyzeGoal no pasen con `undefined` (undefined !== null === true).
+ */
+const NULL_STATS = {
+  xgHome: null, xgAway: null, xgotHome: null, xgotAway: null,
+  sotHome: null, sotAway: null, totalShotsHome: null, totalShotsAway: null,
+  shotsInsideBoxHome: null, shotsInsideBoxAway: null,
+  shotsOutsideBoxHome: null, shotsOutsideBoxAway: null,
+  shotsOffTargetHome: null, shotsOffTargetAway: null,
+  blockedShotsHome: null, blockedShotsAway: null,
+  bigChancesHome: null, bigChancesAway: null,
+  hitWoodworkHome: null, hitWoodworkAway: null,
+  cornersHome: null, cornersAway: null,
+  possessionHome: null, possessionAway: null,
+  foulsHome: null, foulsAway: null,
+  yellowCardsHome: null, yellowCardsAway: null,
+  redCardsHome: null, redCardsAway: null,
+  offsideHome: null, offsideAway: null,
+  attacksHome: null, attacksAway: null,
+  xgHomeA: null, xgAwayA: null,
+  touchesOppBoxHome: null, touchesOppBoxAway: null,
+  savesHome: null, savesAway: null,
+  passesFinalThirdHome: null, passesFinalThirdAway: null,
+  crossesHome: null, crossesAway: null,
+  keyPassesHome: null, keyPassesAway: null,
+  tacklesHome: null, tacklesAway: null,
+  interceptionsHome: null, interceptionsAway: null,
+  errorsLeadingToShotHome: null, errorsLeadingToShotAway: null,
+  clearancesHome: null, clearancesAway: null,
+  possessionLostHome: null, possessionLostAway: null,
+  possessionWonFinalThirdHome: null, possessionWonFinalThirdAway: null,
+  dribblesHome: null, dribblesAway: null,
+  duelsWonHome: null, duelsWonAway: null,
+  aerialDuelsWonHome: null, aerialDuelsWonAway: null,
+};
+
 module.exports = {
   fetchLiveMatches, fetchMatchStats, verifyFinishedMatch,
-  fetchLeagueContext, toInternalFormat, estimateXg
+  fetchLeagueContext, toInternalFormat, estimateXg, NULL_STATS
 };

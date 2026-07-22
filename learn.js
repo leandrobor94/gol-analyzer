@@ -59,8 +59,6 @@ function savePredictions(p) {
 function loadTeams() { return loadJSON(TEAMS_FILE, {}); }
 function saveTeams(t) { saveJSON(TEAMS_FILE, t); }
 
-function isFlashscoreId(id) { return typeof id === 'string' && id.startsWith('https://www.flashscore.com/'); }
-
 function teamsMatch(predHome, predAway, liveHome, liveAway) {
   if (!predHome || !predAway || !liveHome || !liveAway) return false;
   const n = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -117,9 +115,8 @@ function updateTeamStats(teams, pred, liveMatch) {
 
     if (teamScored) {
       t.totalGoalsScored++;
-      // xG efficiency: cuantos goles por unidad de xG
-      const xgFor = isHome ? (s.xgHome || 0) : (s.xgAway || 0);
-      if (xgFor > 0) t.totalXgEfficiency += (1 / xgFor); // 1 gol / xG
+      // La eficiencia xG se calcula en analyzeGoal como totalGoalsScored/totalXgFor
+      // (totalXgEfficiency con suma de 1/xG estaba mal planteada — ya no se acumula)
     }
 
     if (prob >= 0.7) {
@@ -138,7 +135,7 @@ function updateTeamStats(teams, pred, liveMatch) {
 /**
  * Actualiza perfil de liga basado en datos verificados.
  */
-function updateLeagueProfile(weights, pred, liveMatch) {
+function updateLeagueProfile(weights, pred, liveMatch, isFinal = true) {
   const league = extractLeague(pred);
   if (!league) return;
 
@@ -146,8 +143,12 @@ function updateLeagueProfile(weights, pred, liveMatch) {
     weights.byLeague[league] = { matchesTracked: 0, totalGoals: 0, totalXg: 0, totalSot: 0, totalShotsInsideBox: 0, totalPossessionDiff: 0, correctAt70: 0, falsePositives: 0, falseNegatives: 0 };
   }
   const lp = weights.byLeague[league];
-  lp.matchesTracked++;
-  lp.totalGoals += (liveMatch.scoreHome || 0) + (liveMatch.scoreAway || 0);
+  // matchesTracked y totalGoals solo con partidos TERMINADOS — un score parcial
+  // de verificacion en vivo sesgaria el promedio de goles de la liga
+  if (isFinal) {
+    lp.matchesTracked++;
+    lp.totalGoals += (liveMatch.scoreHome || 0) + (liveMatch.scoreAway || 0);
+  }
 
   const s = pred.stats || {};
   if (s.xgHome !== null && s.xgAway !== null) lp.totalXg += s.xgHome + s.xgAway;
@@ -215,7 +216,7 @@ function verifyPredictions(predictions, liveMatches, teams) {
   for (const pred of predictions) {
     if (pred.predictionCorrect !== null) continue;
     if (pred.finalScore !== null) continue;
-    if (!isFlashscoreId(pred.id)) continue;
+    if (!pred.id) continue;
     if (!pred.analysisMinute) continue;
     // Si no han pasado 15 min reales, muy fresco para verificar
     if (pred.timestamp) {
@@ -229,19 +230,25 @@ function verifyPredictions(predictions, liveMatches, teams) {
     );
 
     if (liveMatch) {
-      const minutesElapsed = (liveMatch.minute || 0) - (pred.analysisMinute || 0);
       const scoreChanged =
         (liveMatch.scoreHome !== null && liveMatch.scoreAway !== null) &&
         (liveMatch.scoreHome !== (pred.scoreAtAnalysis?.home ?? liveMatch.scoreHome) ||
          liveMatch.scoreAway !== (pred.scoreAtAnalysis?.away ?? liveMatch.scoreAway));
 
-      if (!scoreChanged && minutesElapsed < 10) continue;
+      // BUG FIX: antes marcaba "sin gol" como fallo DEFINITIVO con el partido
+      // aun en vivo (si pasaban 10 min sin gol) — falso negativo permanente que
+      // el bloque [4/4] ya no podia corregir. En vivo SOLO verificamos cuando el
+      // gol ya ocurrio (hecho irreversible). El "sin gol" definitivo lo determina
+      // verifyFinishedMatch en run_flashscore.js con el partido TERMINADO.
+      if (!scoreChanged) continue;
 
-      goalHappened = scoreChanged;
+      goalHappened = true;
       finalScore = { home: liveMatch.scoreHome ?? 0, away: liveMatch.scoreAway ?? 0 };
+      pred._verifiedLive = true; // score parcial — no usar para perfiles de liga
     } else if (pred.lastSeenMinute && pred.lastSeenScore) {
-      // Partido ya terminó: usar último estado conocido
-      if (pred.lastSeenMinute < 80) continue; // muy temprano para saber si terminó
+      // Partido desaparecido del feed live: solo aceptar como terminado si el
+      // ultimo minuto visto es >=88 (un gol puede llegar en el 85-90+)
+      if (pred.lastSeenMinute < 88) continue;
       const scoreChanged =
         (pred.lastSeenScore.home !== (pred.scoreAtAnalysis?.home ?? 0) ||
          pred.lastSeenScore.away !== (pred.scoreAtAnalysis?.away ?? 0));
@@ -390,6 +397,34 @@ function getWindowWeights(weights, windowType) {
 
 // ========== AJUSTE DE PESOS ==========
 
+/**
+ * Presencia de cada feature en las stats de una prediccion.
+ * Se usa para escalar el ajuste de cada peso: si un partido no tenia corners,
+ * el error de ese partido NO debe mover el peso de corners (antes TODOS los
+ * pesos se movian igual con cada error — gradiente ciego).
+ */
+const FEATURE_PRESENCE = {
+  xg: s => (s.xgHome || 0) + (s.xgAway || 0) > 0.3,
+  shotsOnTarget: s => (s.sotHome || 0) + (s.sotAway || 0) >= 2,
+  shotsInsideBox: s => (s.shotsInsideBoxHome || 0) + (s.shotsInsideBoxAway || 0) >= 2,
+  bigChances: s => (s.bigChancesHome || 0) + (s.bigChancesAway || 0) >= 1,
+  totalShots: s => (s.totalShotsHome || 0) + (s.totalShotsAway || 0) >= 6,
+  xgot: s => (s.xgotHome || 0) + (s.xgotAway || 0) > 0.3,
+  hitWoodwork: s => (s.hitWoodworkHome || 0) + (s.hitWoodworkAway || 0) >= 1,
+  xA: s => (s.xgHomeA || 0) + (s.xgAwayA || 0) > 0.2,
+  touchesOppBox: s => (s.touchesOppBoxHome || 0) + (s.touchesOppBoxAway || 0) >= 5,
+  corners: s => (s.cornersHome || 0) + (s.cornersAway || 0) >= 3,
+  saves: s => (s.savesHome || 0) + (s.savesAway || 0) >= 2,
+  redCard: s => (s.redCardsHome || 0) + (s.redCardsAway || 0) >= 1,
+  // Features contextuales siempre presentes (aplican a todo partido)
+  scoreNeeds: () => true,
+  timePressure: () => true,
+  possession: s => (s.possessionHome || 0) > 0 || (s.possessionAway || 0) > 0,
+  goalsScored: () => true,
+  teamHistory: () => true,
+  matchContext: () => true,
+};
+
 function adjustWeights(weights, verified, insights) {
   let adjustments = 0;
 
@@ -434,20 +469,24 @@ function adjustWeights(weights, verified, insights) {
 
       for (const key of globalKeys) {
         if (!(key in w)) continue;
+        // Escalar por presencia de la feature: si el partido no tenia esa
+        // estadistica, el ajuste se reduce al 30% (evita gradiente ciego)
+        const presence = FEATURE_PRESENCE[key] ? FEATURE_PRESENCE[key](pred.stats || {}) : true;
+        const scaledAdjust = adjust * (presence ? 1 : 0.3);
         if (key === 'goalsScored') {
-          w[key] = Math.round(Math.max(-20, Math.min(0, w[key] * (1 + adjust))) * 10) / 10;
+          w[key] = Math.round(Math.max(-20, Math.min(0, w[key] * (1 + scaledAdjust))) * 10) / 10;
         } else {
-          w[key] = Math.round(Math.max(1, Math.min(60, w[key] * (1 + adjust))) * 10) / 10;
+          w[key] = Math.round(Math.max(1, Math.min(60, w[key] * (1 + scaledAdjust))) * 10) / 10;
         }
         adjustments++;
       }
 
-      if (goalHappened && prob >= 0.4) weights.stats.correctScore++;
-      else if (!goalHappened && prob < 0.4) weights.stats.correctScore++;
-      weights.stats.predictionsCount = (weights.stats.predictionsCount || 0) + 1;
+      // Contadores coherentes: verifiedCount/correctScore segun resultado real
+      weights.stats.verifiedCount = (weights.stats.verifiedCount || 0) + 1;
+      if (pred.predictionCorrect) weights.stats.correctScore = (weights.stats.correctScore || 0) + 1;
 
-      // Ajuste por liga
-      updateLeagueProfile(weights, pred, pred.finalScore ? { scoreHome: pred.finalScore.home, scoreAway: pred.finalScore.away } : { scoreHome: 0, scoreAway: 0 });
+      // Ajuste por liga (isFinal=false si la verificacion fue en vivo con score parcial)
+      updateLeagueProfile(weights, pred, pred.finalScore ? { scoreHome: pred.finalScore.home, scoreAway: pred.finalScore.away } : { scoreHome: 0, scoreAway: 0 }, !pred._verifiedLive);
     }
   }
 

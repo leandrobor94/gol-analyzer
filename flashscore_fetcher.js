@@ -58,7 +58,7 @@ async function extractMatchStats(page, matchUrl) {
   // Extra wait for JS to render dynamic content
   await page.waitForTimeout(3000);
 
-  return await page.evaluate(() => {
+  const evalResult = await page.evaluate(() => {
     const rows = document.querySelectorAll('[data-testid="wcl-statistics"]');
     const stats = {};
     rows.forEach(row => {
@@ -163,7 +163,7 @@ async function extractMatchStats(page, matchUrl) {
   if (evalResult && evalResult.league) {
     evalResult.league = sanitizeLeague(evalResult.league);
   }
-  return evalResult;
+  return evalResult || { stats: {}, homeTeam: '', awayTeam: '', scoreHome: null, scoreAway: null, minute: null, status: '', league: '' };
 }
 
 /**
