@@ -5,10 +5,16 @@ on:
     - cron: '*/20 * * * *'
   workflow_dispatch:
 
+# Evitar jobs solapados: dos instancias corriendo a la vez generan race
+# conditions en git push y podrian duplicar alertas
+concurrency:
+  group: gol-analyzer
+  cancel-in-progress: false
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
