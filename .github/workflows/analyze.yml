@@ -2,7 +2,7 @@ name: Analizar partidos y alertar
 
 on:
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 # Evitar jobs solapados: dos instancias corriendo a la vez generan race
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 5
 
     steps:
       - uses: actions/checkout@v4

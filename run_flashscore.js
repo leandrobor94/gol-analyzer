@@ -845,37 +845,25 @@ async function main() {
     } catch {}
   }
 
-  const MAX_LOOPS = 4;
-  const SLEEP_MS = 5 * 60 * 1000;
-  // Limite duro de runtime: el cron corre cada 20 min — cortar antes de solapar
-  // con el proximo job (que haria commits en race condition)
-  const MAX_RUNTIME_MS = (process.env.CI ? 17 : 60) * 60 * 1000;
-  const startedAt = Date.now();
+  // Traer ultimos cambios de la nube
+  try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 }); } catch {}
 
-  for (let loop = 0; loop < MAX_LOOPS; loop++) {
-    if (Date.now() - startedAt > MAX_RUNTIME_MS) {
-      console.log('Runtime limite alcanzado (' + Math.round((Date.now() - startedAt) / 60000) + ' min). Cortando para no solapar proximo cron.');
-      break;
-    }
-    // Traer ultimos cambios de la nube (local y CI)
-    try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 }); } catch {} 
+  console.log('\n' + '='.repeat(64));
+  console.log('  ANALISIS — ' + new Date().toISOString());
+  console.log('='.repeat(64));
 
-    console.log('\n' + '='.repeat(64));
-    console.log('  CICLO ' + (loop + 1) + '/' + MAX_LOOPS + ' — ' + new Date().toISOString());
-    console.log('='.repeat(64));
+  // Validar horario Colombia (7am-10pm)
+  const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
+  const coHour = new Date(co).getHours();
+  if (coHour < 7 || coHour >= 22) {
+    console.log('Fuera de horario Colombia (' + coHour + ':00).');
+    writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
+    return;
+  }
 
-    // Validar horario Colombia (7am-10pm)
-    const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
-    const coHour = new Date(co).getHours();
-    if (coHour < 7 || coHour >= 22) {
-      console.log('Fuera de horario Colombia (' + coHour + ':00).');
-      writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
-      if (loop < MAX_LOOPS - 1) {
-        console.log('Esperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
-        await new Promise(r => setTimeout(r, SLEEP_MS));
-      }
-      continue;
-    }
+  // Flashscore enrichment solo cada 4 ciclos (cada ~20 min) — Playwright es caro
+  // Cron */5 corre a :00 :05 :10 :15 :20... → :00, :20, :40 → minuto % 20 === 0
+  const fsCycle = new Date().getUTCMinutes() % 20 === 0;
 
     let liveData = [];
 
@@ -946,12 +934,11 @@ async function main() {
         });
       }
 
-      // Flashscore: enriquecimiento en loop 0 para (a) partidos sin stats de 365scores
-      // y (b) hasta 8 partidos en ventana de alerta (25-70) — reciben xG REAL, xA,
-      // touchesOppBox y saves que 365scores no provee.
+      // Flashscore: enriquecimiento solo en ciclos cada 20 min para ahorrar Playwright
+      // (a) partidos sin stats de 365scores y (b) hasta 8 partidos en ventana de alerta
       const noStats = analyzed.filter(m => !hasMeaningfulStats(m.stats));
       const enrichable = analyzed.filter(m => hasMeaningfulStats(m.stats) && m.minute >= 25 && m.minute <= 70).slice(0, 8);
-      const needFlashscore = loop === 0 ? [...noStats, ...enrichable.filter(m => !noStats.includes(m))] : [];
+      const needFlashscore = fsCycle ? [...noStats, ...enrichable.filter(m => !noStats.includes(m))] : [];
       if (needFlashscore.length > 0) {
         console.log('\n  -> ' + needFlashscore.length + ' partidos a enriquecer en Flashscore (' + noStats.length + ' sin stats)...');
         const fsTargets = needFlashscore.map(m => ({ teamHome: m.teamHome, teamAway: m.teamAway, matchId: m.matchId, minute: m.minute }));
@@ -1181,8 +1168,8 @@ async function main() {
       }
     }
 
-    // --- Fetch real xG from Flashscore for top matches (solo loops 0-1: Playwright es caro) ---
-    const topForXg = loop <= 1 ? ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5) : [];
+    // --- Fetch real xG from Flashscore for top matches (solo ciclos cada 20 min) ---
+    const topForXg = fsCycle ? ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5) : [];
     if (topForXg.length > 0) {
       console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
       const { fetchXgBatch } = require('./flashscore_fetcher');
@@ -1418,29 +1405,10 @@ async function main() {
   }
 
   } catch (e) {
-    console.log('\n!!! Error en ciclo: ' + (e.message || e));
+    console.log('\n!!! Error: ' + (e.message || e));
     writeSummary('- Error: ' + (e.message || e).substring(0, 200));
   }
 
-  // Sync cada ciclo: sube datos a la nube para no perder si el script se corta
-  doSync();
-
-  // Guardar timestamp local DESPUES del sync
-  if (!process.env.CI && !module.parent) {
-    fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
-  }
-
-  if (liveData.length === 0) {
-    console.log('  Sin partidos — no se necesita seguir. Saliendo del self-loop.');
-    break;
-  }
-
-  if (loop < MAX_LOOPS - 1) {
-    console.log('\nEsperando ' + (SLEEP_MS / 60000) + ' min hasta el proximo ciclo...');
-    await new Promise(r => setTimeout(r, SLEEP_MS));
-  }
-  }
-  // Sync final
   doSync();
 
   // Guardar timestamp local DESPUES del sync
