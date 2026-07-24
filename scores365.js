@@ -31,10 +31,14 @@ function sanitizeLeague(league) {
 /** Get all live matches from 365scores */
 async function fetchLiveMatches() {
   let body, j;
-  const today = new Date();
-  const dd = String(today.getDate()).padStart(2, '0');
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const yyyy = today.getFullYear();
+  // Usar la fecha de Colombia, no UTC — en GitHub Actions el runner esta en UTC
+  // y pasada la medianoche UTC la fecha adelanta un dia mientras en Colombia
+  // sigue siendo ayer, y la API de 365scores devuelve 0 partidos para fecha futura.
+  const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
+  const d = new Date(co);
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const yyyy = d.getFullYear();
   const dateStr = `${dd}/${mm}/${yyyy}`;
   try { body = await fetch(`${API_BASE}/games/allscores/?${PARAMS}&sports=1&startDate=${dateStr}&endDate=${dateStr}&showOdds=true&onlyLiveGames=true&withTop=true&topBookmaker=4`); j = JSON.parse(body); } catch { return []; }
   if (!j.games) return [];
