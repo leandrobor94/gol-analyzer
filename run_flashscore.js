@@ -149,11 +149,12 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
 
   // ─── LAMBDA: intensidad de gol por minuto ───
   // Betas calibrados por aprendizaje (o defaults si no hay datos)
-  const B = w?.betas || { baseline: 0.030, xgWeight: 1.5, bcWeight: 2.0, sotWeight: 0.8, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
+  const B = w?.betas || { baseline: 0.025, xgWeight: 1.5, bcWeight: 2.0, sotWeight: 0.8, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
   let lambda = B.baseline;
   if (leagueContext && leagueContext.goalsPerMatch) {
     const leagueAvg = leagueContext.goalsPerMatch;
-    if (leagueAvg > 0) lambda = B.baseline * (leagueAvg / 2.7);
+    // Ajustar baseline por liga: ligas goleadoras suben, secas bajan
+    if (leagueAvg > 0) lambda = B.baseline * Math.max(0.7, Math.min(1.3, leagueAvg / 2.5));
   }
 
   // 1. xG — EL predictor. Peso 1.5 sobre baseline
