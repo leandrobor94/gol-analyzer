@@ -122,12 +122,21 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const minute = match.minute || 0;
   const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
   const gd = Math.abs(match.scoreHome - match.scoreAway);
-  const minsLeft = Math.max(1, 90 - minute);
-  // Halftime: el partido no ha arrancado el 2T. Los stats son solo del 1T.
-  // Reducir minutos efectivos (el descanso + incertidumbre del 2T)
-  // y castigar lambda porque el 2T puede ser completamente distinto.
-  const isHalftime = minute >= 44 && minute <= 47;
-  const effectiveMins = isHalftime ? Math.max(5, Math.round(minsLeft * 0.65)) : minsLeft;
+  
+  // ─── MINUTOS EFECTIVOS ───
+  // Halftime: 44-48 = partido parado o recién arrancado 2T.
+  // Min 85+: sumar 3-5 min extra por descuento típico.
+  // Min 90+: no vale la pena alertar (queda muy poco, salvo descuento largo).
+  const isHalftime = minute >= 44 && minute <= 48;
+  let minsRemaining = 90 - minute;
+  if (minute >= 85 && minute < 90) minsRemaining += 4; // descuento estimado
+  else if (minute >= 90) minsRemaining = Math.max(1, 98 - minute); // descuento real
+  const effectiveMins = isHalftime ? Math.max(5, Math.round(minsRemaining * 0.65)) : minsRemaining;
+  
+  // Ventanas: pre-entretiempo (40-44) y pre-final (85-89) = máxima urgencia
+  const preHT = minute >= 40 && minute <= 44;
+  const preFT = minute >= 85 && minute <= 89;
+  const veryEarly = minute < 20;
   const reasons = [];
   const toRate = (v) => minute > 0 ? v / minute : 0;
 
@@ -197,18 +206,31 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
     if (awayTrails && homeDone) lambda *= 0.85; // Local domina, visitante necesita → menos probable
   }
 
-  // 6. SCORE STATE — urgencia real según marcador y minuto
+  // 6. SCORE STATE — urgencia real basada en datos de StatsBomb/Opta
+  // Local trailing > visitante trailing (local empujado por su gente)
+  // 40-44' y 85-89' = picos de urgencia pre-descanso/pre-final
   const trailing = homeTrails || awayTrails;
   
   if (trailing) {
-    const urgency = minute >= 75 ? B.urgency75 : minute >= 60 ? B.urgency60 : minute >= 40 ? 1.15 : 1.05;
+    let urgency;
+    if (homeTrails) {
+      // Local abajo: más urgente que visitante
+      urgency = preFT ? 2.10 : (minute >= 75 ? 2.00 : minute >= 60 ? 1.60 : preHT ? 1.40 : minute >= 40 ? 1.25 : 1.05);
+    } else {
+      // Visitante abajo: menos urgente (juega fuera de casa)
+      urgency = preFT ? 1.60 : (minute >= 75 ? 1.50 : minute >= 60 ? 1.30 : preHT ? 1.20 : minute >= 40 ? 1.15 : 1.05);
+    }
     lambda *= urgency;
     reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
   }
+  // 0-0 llegando al final: ambos arriesgan (solo aplicar el boost mas fuerte)
+  if (goals === 0 && preFT) lambda *= 1.20;
+  else if (goals === 0 && minute >= 77) lambda *= 1.12;
+  
   if (gd >= 2) {
     lambda *= B.lead2Mult;
     reasons.push('Ventaja c\u00f3moda (\u00d7' + B.lead2Mult.toFixed(2) + ')');
-  } else if (gd === 1 && minute >= 75 && !trailing) {
+  } else if (gd === 1 && !trailing && minute >= 75) {
     lambda *= B.lead1LateMult;
     reasons.push('Cuidando resultado');
   }
@@ -218,8 +240,18 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   else if (goals >= 3 && minute >= 70) lambda *= 0.40;
   else if (goals >= 2 && minute >= 80) lambda *= 0.50;
 
-  // 8. S\u00edndrome del 0-0: si llegamos a 80' sin goles, la presi\u00f3n sube
-  if (goals === 0 && minute >= 80) lambda *= 1.15;
+  // 8. Ventanas temporales
+  // Demasiado temprano: sin datos suficientes, cualquier predicción es ruido
+  if (veryEarly) lambda *= 0.45;
+  // Halftime: los stats del 1T no garantizan nada en el 2T
+  if (isHalftime) lambda *= 0.55;
+  // Transición post-HT (45-52): incertidumbre post-descanso
+  if (minute >= 44 && minute <= 52) lambda *= 0.85;
+  // Pre-entretiempo (40-44'): equipos apuran antes del descanso
+  if (preHT && !trailing && gd < 2) lambda *= 1.10;
+  // Pre-final (85-89'): máxima urgencia con tiempo de descuento por delante
+  if (preFT && gd <= 1) lambda *= 1.12;
+  // 0-0 llegando al final: presión en ambos lados
   if (goals === 0 && minute >= 70 && bcTotal === 0 && xgTotal < 1.0) lambda *= 0.70;
 
   // Halftime: los stats del 1T no garantizan nada en el 2T
@@ -229,6 +261,14 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   // ─── PROBABILIDAD POISSON ───
   const prob = 1 - Math.exp(-lambda * effectiveMins);
   let score = Math.round(Math.min(100, prob * 100));
+
+  // ─── CAPS DUROS POR VENTANA (basados en datos reales) ───
+  // < 20 min: muy temprano, datos insuficientes. No alertar.
+  if (veryEarly) score = Math.min(score, 60);
+  // 44-48 min: entretiempo. Partido parado. No alertar.
+  if (isHalftime) score = Math.min(score, 70);
+  // 90+ min: queda muy poco tiempo. Solo alertar si es MUY probable.
+  if (minute >= 90 && score < 75) score = Math.min(score, 60);
 
   // ─── SCORER PREDICTION ───
   // PRIORIDAD: el que va perdiendo > xG superior > nadie
