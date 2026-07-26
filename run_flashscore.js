@@ -124,19 +124,26 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const gd = Math.abs(match.scoreHome - match.scoreAway);
   
   // ─── MINUTOS EFECTIVOS ───
-  // Halftime: 44-48 = partido parado o recién arrancado 2T.
-  // Min 85+: sumar 3-5 min extra por descuento típico.
-  // Min 90+: no vale la pena alertar (queda muy poco, salvo descuento largo).
+  // Si predecimos "GOL 1T", el tiempo real que queda es hasta el min 45.
+  // Si predecimos 2T/tarde, es hasta el 90 + descuento.
+  // Esto evita que a los 41' el modelo calcule con 49 min cuando solo quedan 4+desc.
   const isHalftime = minute >= 44 && minute <= 48;
-  let minsRemaining = 90 - minute;
-  if (minute >= 85 && minute < 90) minsRemaining += 4; // descuento estimado
-  else if (minute >= 90) minsRemaining = Math.max(1, 98 - minute); // descuento real
+  const veryEarly = minute < 20;
+  let minsRemaining;
+  if (windowType === 'firstHalf') {
+    minsRemaining = Math.max(1, 45 - minute) + 2; // +2 min descuento 1T típico
+  } else if (minute >= 85 && minute < 90) {
+    minsRemaining = (90 - minute) + 4; // descuento estimado
+  } else if (minute >= 90) {
+    minsRemaining = Math.max(1, 98 - minute); // descuento real
+  } else {
+    minsRemaining = 90 - minute;
+  }
   const effectiveMins = isHalftime ? Math.max(5, Math.round(minsRemaining * 0.65)) : minsRemaining;
   
-  // Ventanas: pre-entretiempo (40-44) y pre-final (85-89) = máxima urgencia
-  const preHT = minute >= 40 && minute <= 44;
+  // Ventanas
+  const preHT = minute >= 40 && minute <= 44 && windowType === 'firstHalf';
   const preFT = minute >= 85 && minute <= 89;
-  const veryEarly = minute < 20;
   const reasons = [];
   const toRate = (v) => minute > 0 ? v / minute : 0;
 
@@ -260,7 +267,8 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
 
   // ─── PROBABILIDAD POISSON ───
   const prob = 1 - Math.exp(-lambda * effectiveMins);
-  let score = Math.round(Math.min(100, prob * 100));
+  // Cap máximo 95%: ningún evento en fútbol es 100% seguro
+  let score = Math.round(Math.min(95, prob * 100));
 
   // ─── CAPS DUROS POR VENTANA (basados en datos reales) ───
   // < 20 min: muy temprano, datos insuficientes. No alertar.
