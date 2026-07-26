@@ -61,36 +61,7 @@ function getLeagueWeights(weights, league, windowType) {
   return w;
 }
 
-/**
- * Ajustar pesos por tramo temporal segun analisis historico:
- * - 25-44 min: xG/SOT/Box inflan fallos. Fouls bajos y woodwork predicen aciertos.
- * - 61-75 min: TODAS las stats ofensivas inflan fallos (33% asertividad). Fouls ALTOS es la señal mas clara.
- * - 76+ min: xG/SOT/Box/BC SI predicen. goalsPenalty mal calibrado (castiga aciertos).
- */
-function applyTramoMultipliers(w, minute) {
-  const adjusted = { ...w };
-  if (minute >= 25 && minute <= 44) {
-    // 25-44: bajar ofensivos, subir woodwork, mantener fouls penalty
-    if (adjusted.xg !== undefined) adjusted.xg *= 0.85;
-    if (adjusted.shotsOnTarget !== undefined) adjusted.shotsOnTarget *= 0.85;
-    if (adjusted.shotsInsideBox !== undefined) adjusted.shotsInsideBox *= 0.9;
-  } else if (minute >= 61 && minute <= 75) {
-    // 61-75: bajar TODO ofensivo (infla fallos), mantener defensivos
-    if (adjusted.xg !== undefined) adjusted.xg *= 0.6;
-    if (adjusted.shotsOnTarget !== undefined) adjusted.shotsOnTarget *= 0.65;
-    if (adjusted.shotsInsideBox !== undefined) adjusted.shotsInsideBox *= 0.55;
-    if (adjusted.bigChances !== undefined) adjusted.bigChances *= 0.5;
-    if (adjusted.totalShots !== undefined) adjusted.totalShots *= 0.7;
-    if (adjusted.hitWoodwork !== undefined) adjusted.hitWoodwork *= 0.9;
-    if (adjusted.goalsScored !== undefined) adjusted.goalsScored *= 1.0;
-  } else if (minute >= 76) {
-    // 76+: mantener ofensivos (SI predicen), suavizar goalsPenalty (castiga aciertos)
-    if (adjusted.goalsScored !== undefined) adjusted.goalsScored *= 0.6;
-    if (adjusted.xg !== undefined) adjusted.xg *= 1.05;
-    if (adjusted.shotsOnTarget !== undefined) adjusted.shotsOnTarget *= 1.05;
-  }
-  return adjusted;
-}
+/** Ajustar pesos por tramo temporal — DEPRECATED, reemplazado por score state en analyzeGoal */
 
 /** Window-specific estimated odds */
 const WINDOW_ODDS = {
@@ -106,7 +77,7 @@ function getWindowType(minute) {
   return 'late';
 }
 
-/** Get fallback score when stats are mostly null */
+/** Get fallback score when stats are mostly null — basado en intensidad minima */
 function getFallbackScore(minute, scoreHome, scoreAway, league, match) {
   let base = 20;
   const gd = Math.abs(scoreHome - scoreAway);
@@ -148,618 +119,128 @@ function hasMeaningfulStats(stats) {
 }
 
 function analyzeGoal(match, w, teams, leagueContext, windowType) {
-  let score = 0;
-  let reasons = [];
-  let predictedScorer = null;
-  let scorerReasons = [];
   const s = match.stats;
-  const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
   const minute = match.minute || 0;
-  // Ajustar pesos por tramo temporal (hallazgo: 61-75 min las stats ofensivas inflan fallos)
-  w = applyTramoMultipliers(w, minute);
-  const homeNeeds = match.scoreHome < match.scoreAway;
-  const awayNeeds = match.scoreAway < match.scoreHome;
-  const draw = match.scoreHome === match.scoreAway;
-  let pressure = 0;
-
-  // --- Match context detection (playoffs, derbys, cup finals) ---
-  if (match.league) {
-    const ctx = match.league.toLowerCase();
-    const highStakes = /final|copa|playoff|play.off|derby|derbi|descenso|repechaje|promoci[oó]n|champions|eliminatoria|semifinal|cuartos/i.test(ctx);
-    if (highStakes) {
-      const ctxBonus = (w.matchContext || 5);
-      if (/final/i.test(ctx) || /derby|derbi/i.test(ctx)) {
-        score += ctxBonus * 1.5;
-        pressure += 15;
-        reasons.push('Partido de alta tension');
-      } else {
-        score += ctxBonus;
-        pressure += 8;
-        reasons.push('Partido decisivo');
-      }
-    }
-  }
-
-  // --- League context normalization ---
-  if (leagueContext && leagueContext.goalsPerMatch) {
-    const matchXg = (s.xgHome || 0) + (s.xgAway || 0);
-    const xgVsAvg = matchXg > 0 && minute > 0 ? (matchXg / minute * 90) / leagueContext.goalsPerMatch : null;
-    if (xgVsAvg !== null) {
-      if (xgVsAvg > 1.5) {
-        score += 10; pressure += 15;
-        reasons.push('Partido muy superior a media liga (' + leagueContext.goalsPerMatch.toFixed(2) + ' g/p)');
-      } else if (xgVsAvg > 1.0) {
-        score += 5; pressure += 8;
-        reasons.push('Por encima de media liga (' + leagueContext.goalsPerMatch.toFixed(2) + ' g/p)');
-      }
-    }
-    // Corners context
-    if (leagueContext.cornersPerMatch && s.cornersHome !== null && s.cornersAway !== null) {
-      const cornersPerMin = (s.cornersHome + s.cornersAway) / minute * 90;
-      if (cornersPerMin > leagueContext.cornersPerMatch * 1.3) {
-        score += 5; pressure += 5;
-        reasons.push('Corners sobre media liga');
-      }
-    }
-  }
-  if (leagueContext && leagueContext.name) {
-    reasons.push(leagueContext.name);
-  }
-
-  // --- xG ---
-  if (s.xgHome !== null && s.xgAway !== null) {
-    const totalXG = s.xgHome + s.xgAway, remaining = totalXG - goals;
-    if (remaining > 1.5) { score += w.xg * 1; pressure += 30; reasons.push('Alto xG restante (' + remaining.toFixed(2) + ')'); }
-    else if (remaining > 0.8) { score += w.xg * 0.75; pressure += 20; reasons.push('xG restante ' + remaining.toFixed(2)); }
-    else if (remaining > 0.3) { score += w.xg * 0.4; pressure += 10; }
-    if (totalXG > 1.5 && goals === 0) { score += w.xg * 0.3; pressure += 10; reasons.push('0-0 con alto xG!'); }
-    if (totalXG > 1.0 && goals <= 1) score += w.xg * 0.15;
-    if (s.xgHome > s.xgAway + 0.5) { predictedScorer = 'home'; scorerReasons.push('xG superior'); }
-    else if (s.xgAway > s.xgHome + 0.5) { predictedScorer = 'away'; scorerReasons.push('xG superior'); }
-  }
-
-  // --- xGOT (calidad real de tiros) ---
-  if (s.xgotHome !== null && s.xgotAway !== null) {
-    const total = s.xgotHome + s.xgotAway;
-    if (total > 2) { score += w.xgot * 1; pressure += 15; reasons.push('Alta calidad de tiro (xGOT ' + total.toFixed(2) + ')'); }
-    else if (total > 1) { score += w.xgot * 0.6; pressure += 8; }
-    if (s.xgotHome > s.xgotAway + 0.5 && !predictedScorer) { predictedScorer = 'home'; scorerReasons.push('mejores tiros'); }
-    else if (s.xgotAway > s.xgotHome + 0.5 && !predictedScorer) { predictedScorer = 'away'; scorerReasons.push('mejores tiros'); }
-  }
-
-  // --- Shots on target ---
-  if (s.sotHome !== null && s.sotAway !== null) {
-    const total = s.sotHome + s.sotAway;
-    if (total >= 8) { score += w.shotsOnTarget * 1; pressure += 20; reasons.push(total + ' tiros a puerta!'); }
-    else if (total >= 5) { score += w.shotsOnTarget * 0.7; pressure += 15; reasons.push(total + ' a puerta'); }
-    else if (total >= 3) { score += w.shotsOnTarget * 0.4; pressure += 8; }
-    if (total >= 4 && goals === 0) { score += w.shotsOnTarget * 0.3; pressure += 5; reasons.push('Tiran a puerta pero no entran'); }
-    if (total >= 6 && goals <= 1) score += w.shotsOnTarget * 0.2;
-    if (!predictedScorer) {
-      if (s.sotHome >= s.sotAway + 3) { predictedScorer = 'home'; scorerReasons.push('domina tiros a puerta'); }
-      else if (s.sotAway >= s.sotHome + 3) { predictedScorer = 'away'; scorerReasons.push('domina tiros a puerta'); }
-    }
-  }
-
-  // --- Shots inside box (mucho mas peligrosos que fuera) ---
-  if (s.shotsInsideBoxHome !== null && s.shotsInsideBoxAway !== null) {
-    const total = s.shotsInsideBoxHome + s.shotsInsideBoxAway;
-    if (total >= 8) { score += w.shotsInsideBox * 1; pressure += 20; reasons.push(total + ' tiros dentro del area!'); }
-    else if (total >= 4) { score += w.shotsInsideBox * 0.7; pressure += 12; reasons.push(total + ' tiros dentro area'); }
-    else if (total >= 2) { score += w.shotsInsideBox * 0.4; pressure += 6; }
-
-    // Ratio inside/total: si la mayoria son dentro, mas peligro
-    if (s.totalShotsHome !== null && s.totalShotsAway !== null) {
-      const totalShots = s.totalShotsHome + s.totalShotsAway;
-      if (totalShots > 0 && total / totalShots > 0.5 && total >= 3) {
-        score += w.shotsInsideBox * 0.5;
-        reasons.push('Ataques penetrantes (' + Math.round(total / totalShots * 100) + '% dentro area)');
-      }
-    }
-    if (!predictedScorer) {
-      if (s.shotsInsideBoxHome >= s.shotsInsideBoxAway + 4) { predictedScorer = 'home'; scorerReasons.push('penetra el area'); }
-      else if (s.shotsInsideBoxAway >= s.shotsInsideBoxHome + 4) { predictedScorer = 'away'; scorerReasons.push('penetra el area'); }
-    }
-  }
-
-  // --- Hit the woodwork (casi-goles) ---
-  if (s.hitWoodworkHome !== null && s.hitWoodworkAway !== null) {
-    const total = s.hitWoodworkHome + s.hitWoodworkAway;
-    if (total >= 1) { score += w.hitWoodwork * total; pressure += 5 * total; reasons.push(total + ' palos!'); }
-  }
-
-  // --- xA (expected assists) ---
-  if (s.xgHomeA !== null && s.xgAwayA !== null) {
-    const total = s.xgHomeA + s.xgAwayA;
-    if (total > 0.8) { score += w.xA * 1; pressure += 10; reasons.push('Creacion de calidad (xA ' + total.toFixed(2) + ')'); }
-    else if (total > 0.4) { score += w.xA * 0.5; pressure += 5; }
-  }
-
-  // --- Touches in opposition box ---
-  if (s.touchesOppBoxHome !== null && s.touchesOppBoxAway !== null) {
-    const total = s.touchesOppBoxHome + s.touchesOppBoxAway;
-    if (total >= 20) { score += w.touchesOppBox * 1; pressure += 10; reasons.push('Constante presion (' + total + ' toques area rival)'); }
-    else if (total >= 10) { score += w.touchesOppBox * 0.5; pressure += 5; }
-  }
-
-  // --- Total shots ---
-  if (s.totalShotsHome !== null && s.totalShotsAway !== null) {
-    const total = s.totalShotsHome + s.totalShotsAway;
-    if (total >= 25) { score += w.totalShots * 1; pressure += 10; reasons.push('Alta frecuencia (' + total + ')'); }
-    else if (total >= 15) { score += w.totalShots * 0.5; pressure += 5; }
-    if (!predictedScorer) {
-      if (s.totalShotsHome >= s.totalShotsAway + 8) { predictedScorer = 'home'; scorerReasons.push('domina tiros'); }
-      else if (s.totalShotsAway >= s.totalShotsHome + 8) { predictedScorer = 'away'; scorerReasons.push('domina tiros'); }
-    }
-  }
-
-  // --- Big chances ---
-  if (s.bigChancesHome !== null && s.bigChancesAway !== null) {
-    const total = s.bigChancesHome + s.bigChancesAway;
-    if (total >= 5) { score += w.bigChances * 1; pressure += 15; reasons.push(total + ' ocasiones claras!'); }
-    else if (total >= 2) { score += w.bigChances * 0.5; pressure += 8; }
-    if (!predictedScorer) {
-      if (s.bigChancesHome > s.bigChancesAway) { predictedScorer = 'home'; scorerReasons.push('mas ocasiones claras'); }
-      else if (s.bigChancesAway > s.bigChancesHome) { predictedScorer = 'away'; scorerReasons.push('mas ocasiones claras'); }
-    }
-  }
-
-  // --- Score needs ---
-  if (draw && goals > 0) { score += w.scoreNeeds * 0.5; reasons.push('Empate, ambos buscan el gol'); }
-  if (draw && goals === 0) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('0-0, cualquiera lo rompe'); }
-  if (homeNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Local necesita el gol'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('necesita el gol'); } }
-  if (awayNeeds) { score += w.scoreNeeds * 0.8; pressure += 5; reasons.push('Visitante necesita el gol'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('necesita el gol'); } }
-  // --- Goals scored penalty (escalado, no plano) ---
-  if (goals > 0) {
-    const gsPenalty = w.goalsScored || -4;
-    score += gsPenalty * Math.min(goals, 4);
-    if (goals >= 3 && minute >= 70) {
-      score += gsPenalty * 0.5;
-      reasons.push('Partido definido (' + goals + ' goles)');
-    }
-  }
-  if (goals >= 2 && minute >= 80) {
-    score -= 10;
-    reasons.push('Ventaja doble, pocas opciones');
-  }
-
-  // --- Red card detection ---
-  const redTotal = (s.redCardsHome || 0) + (s.redCardsAway || 0);
-  if (redTotal > 0) {
-    const rcWeight = w.redCard || 18;
-    const rcBonus = rcWeight * redTotal * (minute >= 65 ? 1.5 : 1);
-    score += rcBonus;
-    pressure += 12 * redTotal;
-    const which = (s.redCardsHome || 0) > 0 ? (s.redCardsAway || 0) > 0 ? 'ambos equipos' : 'el local' : 'el visitante';
-    reasons.push(redTotal + ' roja(s) (' + which + ') — partido roto!');
-  }
-
-  // --- Time pressure ---
-  if (minute >= 80 && pressure >= 20) { score += w.timePressure * 1; reasons.push('Min ' + minute + "' — presion final!"); }
-  else if (minute >= 70 && pressure >= 25) { score += w.timePressure * 0.8; reasons.push('Min ' + minute + "' — definicion"); }
-  else if (minute >= 60 && pressure >= 30) { score += w.timePressure * 0.5; }
-  else if (minute < 20 && pressure >= 25) { score += w.timePressure * 0.5; reasons.push('Presion desde el inicio'); }
-
-  // --- Minute decay (tiempo corriendo, gol no llega) ---
-  // En descuento (90+) los goles son mas probables — reseteamos decay
-  if (minute >= 90) {
-    // No decay — stoppage time es cuando mas goles llegan
-  } else if (minute >= 85 && score >= 60) {
-    score -= 15;
-    reasons.push('Agotando tiempo sin gol');
-  } else if (minute >= 78 && score >= 75) {
-    const decay = Math.min(25, (minute - 75) * 3);
-    score -= decay;
-    reasons.push('Gol no llega (min ' + minute + "')");
-  }
-  score = Math.max(0, score);
-
-  // --- Blocked shots penalty (defensa bloqueando tiros) ---
-  if (s.blockedShotsHome !== null && s.blockedShotsAway !== null && s.totalShotsHome !== null && s.totalShotsAway !== null) {
-    const blocked = (s.blockedShotsHome||0) + (s.blockedShotsAway||0);
-    const totalShots = (s.totalShotsHome||0) + (s.totalShotsAway||0);
-    if (totalShots > 0 && blocked / totalShots > 0.25 && blocked >= 3) {
-      const penalty = Math.min(15, (blocked / totalShots - 0.25) * 40);
-      score -= penalty;
-      if (penalty >= 8) reasons.push('Defensa bloqueando tiros (' + Math.round(blocked/totalShots*100) + '%)');
-    }
-  }
-
-  // --- Off target penalty (tiros desviados, poca precision) ---
-  if (s.shotsOffTargetHome !== null && s.shotsOffTargetAway !== null && s.totalShotsHome !== null && s.totalShotsAway !== null) {
-    const offTarget = (s.shotsOffTargetHome||0) + (s.shotsOffTargetAway||0);
-    const totalShots = (s.totalShotsHome||0) + (s.totalShotsAway||0);
-    if (totalShots > 0 && offTarget / totalShots > 0.4 && offTarget >= 6) {
-      const penalty = Math.min(10, (offTarget / totalShots - 0.4) * 25);
-      score -= penalty;
-    }
-  }
-
-  // --- Fouls penalty (partido trabado) ---
-  if (s.foulsHome !== null && s.foulsAway !== null) {
-    const fouls = (s.foulsHome||0) + (s.foulsAway||0);
-    if (fouls >= 20) {
-      score -= Math.min(8, (fouls - 20) * 0.5);
-    }
-  }
-
-  // --- Progressive passes proxy (passesFinalThird + crosses + keyPasses) ---
-  // Segun StatsBomb: posesiones con 2+ pases progresivos generan 36% prob de tiro vs 5.8% sin
-  if (s.passesFinalThirdHome !== null && s.passesFinalThirdAway !== null) {
-    const total = (s.passesFinalThirdHome||0) + (s.passesFinalThirdAway||0);
-    if (total >= 60) { score += 6; pressure += 10; reasons.push('Flujo ofensivo (' + total + ' pases ult. tercio)'); }
-    else if (total >= 35) { score += 4; pressure += 6; }
-  }
-
-  // --- Crosses (centros como proxy de penetracion ancha) ---
-  if (s.crossesHome !== null && s.crossesAway !== null) {
-    const total = (s.crossesHome||0) + (s.crossesAway||0);
-    if (total >= 20) { score += 4; pressure += 5; reasons.push('Presion por bandas (' + total + ' centros)'); }
-    else if (total >= 12) { score += 2; pressure += 2; }
-  }
-
-  // --- Key passes (pases claves = proxy de xA) ---
-  if (s.keyPassesHome !== null && s.keyPassesAway !== null) {
-    const total = (s.keyPassesHome||0) + (s.keyPassesAway||0);
-    if (total >= 10) { score += 5; pressure += 8; reasons.push('Creacion peligrosa (' + total + ' pases clave)'); }
-    else if (total >= 6) { score += 3; pressure += 4; }
-  }
-
-  // --- Interceptions (proxy de high turnover — recuperaciones en transicion) ---
-  if (s.interceptionsHome !== null && s.interceptionsAway !== null) {
-    const total = (s.interceptionsHome||0) + (s.interceptionsAway||0);
-    if (total >= 15) { score += 4; pressure += 6; }
-  }
-
-  // --- Possession won in final third (recuperaciones altas = presion alta) ---
-  if (s.possessionWonFinalThirdHome !== null && s.possessionWonFinalThirdAway !== null) {
-    const total = (s.possessionWonFinalThirdHome||0) + (s.possessionWonFinalThirdAway||0);
-    if (total >= 8) { score += 7; pressure += 12; reasons.push('Geggenpressing! (' + total + ' recuperaciones altas)'); }
-    else if (total >= 4) { score += 3; pressure += 5; }
-  }
-
-  // --- Possession lost penalty (perdidas = Jugadas de riesgo defensivo) ---
-  if (s.possessionLostHome !== null && s.possessionLostAway !== null) {
-    const total = (s.possessionLostHome||0) + (s.possessionLostAway||0);
-    // Perdidas altas indican juego vertical y riesgo (puede ir en ambos sentidos)
-    if (total >= 80) { score += 3; pressure += 5; }
-  }
-
-  // --- Clearances penalty (Despejes defensivos = bloqueo del rival) ---
-  if (s.clearancesHome !== null && s.clearancesAway !== null) {
-    const total = (s.clearancesHome||0) + (s.clearancesAway||0);
-    if (total >= 20) {
-      score -= 4;
-      if (total >= 30) reasons.push('Defensa despejando mucho (' + total + ' despejes)');
-    }
-  }
-
-  // --- Dribbles (regates = proxy de abrir defensivas) ---
-  if (s.dribblesHome !== null && s.dribblesAway !== null) {
-    const total = (s.dribblesHome||0) + (s.dribblesAway||0);
-    if (total >= 15) { score += 2; pressure += 3; }
-  }
-
-  // --- Corners ---
-  if (s.cornersHome !== null && s.cornersAway !== null) {
-    const total = s.cornersHome + s.cornersAway;
-    if (total >= 12) { score += w.corners * 1; pressure += 5; reasons.push('Presion constante (' + total + ' corners)'); }
-    else if (total >= 8) score += w.corners * 0.6;
-  }
-
-  // --- Possession + need ---
-  if (s.possessionHome !== null && s.possessionAway !== null) {
-    if (s.possessionAway > 0.58 && awayNeeds) { score += w.possession * 1; pressure += 5; reasons.push('Visitante domina y necesita'); if (!predictedScorer) { predictedScorer = 'away'; scorerReasons.push('domina y necesita'); } }
-    if (s.possessionHome > 0.58 && homeNeeds) { score += w.possession * 1; pressure += 5; reasons.push('Local domina y necesita'); if (!predictedScorer) { predictedScorer = 'home'; scorerReasons.push('domina y necesita'); } }
-    if (Math.abs(s.possessionHome - s.possessionAway) > 0.20 && goals === 0) { score += w.possession * 1; pressure += 5; reasons.push('Un equipo domina pero no concreta'); }
-  }
-
-  // --- Saves ---
-  if (s.savesHome !== null && s.savesAway !== null) {
-    const total = s.savesHome + s.savesAway;
-    if (total >= 8) { score += w.saves * 1; reasons.push('Porteros muy exigidos'); }
-    else if (total >= 5) score += w.saves * 0.6;
-  }
-
-  // --- Team factor (historial del equipo + eficiencia xG) ---
-  if (teams) {
-    const teamNames = Object.keys(teams);
-    if (teamNames.length > 0) {
-      const normalize = (s) => s?.toLowerCase().replace(/[^a-z0-9]/g, '') || '';
-      const h = normalize(match.teamHome), a = normalize(match.teamAway);
-      let homeFactor = 1.0, awayFactor = 1.0;
-      let homeReasons = [], awayReasons = [];
-      for (const [name, data] of Object.entries(teams)) {
-        const n = normalize(name);
-        const isHome = h.includes(n) || n.includes(h);
-        const isAway = a.includes(n) || n.includes(a);
-        if (!isHome && !isAway) continue;
-        // Factor por eficiencia xG: goles reales / xG acumulado.
-        // BUG FIX: antes usaba totalXgEfficiency (suma de 1/xG por partido con gol)
-        // que penalizaba a equipos goleadores (3 goles con xG 1.0 daba eff BAJA).
-        // Ahora: eff = goles / xG — >1.3 rinde sobre lo esperado, <0.7 rinde bajo.
-        if ((data.totalXgFor || 0) >= 1 && (data.totalGoalsScored || 0) >= 2) {
-          const avgEff = data.totalGoalsScored / Math.max(0.1, data.totalXgFor);
-          if (avgEff > 1.3) {
-            const bonus = Math.min(0.15, (avgEff - 1.3) * 0.1);
-            if (isHome) { homeFactor += bonus; homeReasons.push('+eficiente xG'); }
-            if (isAway) { awayFactor += bonus; awayReasons.push('+eficiente xG'); }
-          } else if (avgEff < 0.7) {
-            const penalty = Math.min(0.15, (0.7 - avgEff) * 0.1);
-            if (isHome) { homeFactor -= penalty; homeReasons.push('-eficiente xG'); }
-            if (isAway) { awayFactor -= penalty; awayReasons.push('-eficiente xG'); }
-          }
-        }
-        // Factor por conversion rate historico
-        if (data.timesPredictedGoal >= 2) {
-          const rate = data.goalsWhenPredicted / data.timesPredictedGoal;
-          if (rate > 0.7) {
-            const bonus = (rate - 0.7) * 0.5;
-            if (isHome) { homeFactor += bonus; homeReasons.push('historial+' + Math.round((rate - 0.7) * 100) + '%'); }
-            if (isAway) { awayFactor += bonus; awayReasons.push('historial+' + Math.round((rate - 0.7) * 100) + '%'); }
-          } else if (rate < 0.3) {
-            const penalty = (0.3 - rate) * 0.5;
-            if (isHome) { homeFactor -= penalty; homeReasons.push('historial-' + Math.round((0.3 - rate) * 100) + '%'); }
-            if (isAway) { awayFactor -= penalty; awayReasons.push('historial-' + Math.round((0.3 - rate) * 100) + '%'); }
-          }
-        }
-      }
-      const teamBonus = Math.max(homeFactor, awayFactor);
-      if (teamBonus !== 1.0) {
-        const adj = Math.round((teamBonus - 1) * 100);
-        const extra = (w.teamHistory || 8) * (adj / 20);
-        score += extra;
-        const reasonsList = homeFactor > awayFactor ? homeReasons : awayReasons;
-        reasons.push('Equipo ' + (adj > 0 ? 'rinde+' : 'rinde-') + '(' + reasonsList.join(',') + ')');
-      }
-    }
-  }
-
-  // --- Time window ---
-  let timeWindow = '';
-  if (minute < 25) { timeWindow = pressure >= 40 ? 'Gol inminente — antes del descanso' : pressure >= 25 ? 'Probable gol antes del descanso' : 'Temprano, revaluar en 15-20 min'; }
-  else if (minute < 40) { timeWindow = pressure >= 40 ? 'Gol antes del descanso (30-45)!' : pressure >= 25 ? 'Posible gol en minutos finales del 1T' : '1T tranquilo, probable gol en 2T'; }
-  else if (minute < 50) { timeWindow = pressure >= 40 ? 'Gol al inicio del 2T (45-60)' : pressure >= 25 ? 'Posible gol al inicio del 2T' : 'Descanso sin mucha accion'; }
-  else if (minute < 65) { timeWindow = pressure >= 40 ? 'Gol en proximos 15 min!' : pressure >= 25 ? 'Posible gol en recta final (70-85)' : 'Partido tacticamente cerrado'; }
-  else if (minute < 80) { timeWindow = pressure >= 40 ? 'Gol inminente — ultimos 15 minutos!' : pressure >= 25 ? 'Posible gol en tramo final (75-90)' : 'Partido que se apaga'; }
-  else { timeWindow = pressure >= 25 ? 'Gol en cualquier momento — descuento!' : 'Partido practicamente definido'; }
-
-  // CORTAR primero, luego penalizar
-  // --- MATRIZ DE PESOS POR TRAMO TEMPORAL ---
-  // Hallazgo: 61-75 min tiene solo 33% asertividad (vs 75% en 25-44, 61% en 76+)
-  // Las stats ofensivas INFLAN fallos en 61-75 (xG +10, Box +8.5, BC +6.3 vs aciertos)
-  // Aplicamos multiplicador que reduce el influjo de stats ofensivas en 61-75
-  if (minute >= 61 && minute <= 75) {
-    // #4 FIX: sin corte global de 15% extra. El tramo ya tiene pesos reducidos
-    // 40-50% via applyTramoMultipliers — un segundo castigo es redundante y crea
-    // un dead zone donde ninguna senal llega al umbral de alerta.
-    reasons.push('Tramo 61-75\' (stats reducidas)');
-  }
-  
-  let cappedScore = Math.min(Math.max(score, 0), 100);
-
-  // --- INDICADORES ---
-  const bcTotal = (s.bigChancesHome || 0) + (s.bigChancesAway || 0);
-  const sotTotal = (s.sotHome || 0) + (s.sotAway || 0);
-  const xgotTotal = (s.xgotHome || 0) + (s.xgotAway || 0);
+  const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
   const gd = Math.abs(match.scoreHome - match.scoreAway);
-  const totalShots = (s.totalShotsHome || 0) + (s.totalShotsAway || 0);
-  const offTarget = (s.shotsOffTargetHome || 0) + (s.shotsOffTargetAway || 0);
-  const blockedTotal = (s.blockedShotsHome || 0) + (s.blockedShotsAway || 0);
-  const attTotal = (s.attacksHome || 0) + (s.attacksAway || 0);
-  const woodTotal = (s.hitWoodworkHome || 0) + (s.hitWoodworkAway || 0);
-  const blockRatio = totalShots > 0 ? blockedTotal / totalShots : 0;
+  const minsLeft = Math.max(1, 90 - minute);
+  const reasons = [];
+  const toRate = (v) => minute > 0 ? v / minute : 0;
+
+  // ─── LAMBDA: intensidad de gol por minuto ───
+  // Baseline calibrado: 0.030 goles/min (~2.7 por partido, ligeramente optimista)
+  // Se ajusta por liga si hay datos
+  let lambda = 0.030;
+  if (leagueContext && leagueContext.goalsPerMatch) {
+    const leagueAvg = leagueContext.goalsPerMatch;
+    if (leagueAvg > 0) lambda = 0.030 * (leagueAvg / 2.7);
+  }
+
+  // 1. xG — EL predictor. Peso 1.5 sobre baseline
   const xgTotal = (s.xgHome || 0) + (s.xgAway || 0);
-  const xgPerShot = totalShots > 0 ? xgTotal / totalShots : 0;
+  const xgRate = toRate(xgTotal);
+  const xgRemaining = xgTotal - goals;
+  if (xgRate > 0.03) {
+    lambda += (xgRate - 0.03) * 1.5;
+  } else if (xgRate < 0.015) {
+    lambda *= 0.7; // partido muerto ofensivamente
+  }
+  if (xgRemaining > 1.5) reasons.push('Alto xG restante (' + xgRemaining.toFixed(2) + ')');
+  else if (xgRemaining > 0.8) reasons.push('xG restante ' + xgRemaining.toFixed(2));
 
-  // --- R1: 1-0 min>=84 BC=0 (3 fallos, 0 aciertos) ---
-  if (gd === 1 && minute >= 84 && bcTotal === 0) {
-    cappedScore -= 50;
-    reasons.push('1-0 final sin peligro');
+  // 2. Big Chances — predictor #2. Umbral: al menos 1 BC en 50 min para activar
+  const bcTotal = (s.bigChancesHome || 0) + (s.bigChancesAway || 0);
+  const bcRate = toRate(bcTotal);
+  if (bcRate > 0.02) lambda += bcRate * 2.0;
+
+  // 3. SoT — señal débil porque xG ya lo cubre. Solo suma si hay volumen real
+  const sotTotal = (s.sotHome || 0) + (s.sotAway || 0);
+  const sotRate = toRate(sotTotal);
+  if (sotRate > 0.04) lambda += (sotRate - 0.04) * 0.8;
+
+  // 4. xGOT — calidad de tiro (complementa xG, no disponible en 365scores sin Flashscore)
+  if (s.xgotHome !== null && s.xgotAway !== null) {
+    const xgotRate = toRate(s.xgotHome + s.xgotAway);
+    if (xgotRate > 0.015) lambda += xgotRate * 0.5;
   }
 
-  // --- R2: 0-0 min>=70 BC=0 SOT>=3 xGOT=0 (2 fallos, 0 aciertos) ---
-  if (goals === 0 && minute >= 70 && bcTotal === 0 && sotTotal >= 3 && xgotTotal < 0.5) {
-    cappedScore = Math.min(cappedScore, 60);
-    reasons.push('0-0 con tiros sin calidad (xGOT=0)');
+  // 5. Red cards — el multiplicador más fuerte en fútbol
+  const reds = (s.redCardsHome || 0) + (s.redCardsAway || 0);
+  if (reds > 0) {
+    lambda *= (1 + reds * 1.5);
+    reasons.push(reds + ' roja(s) — partido roto!');
   }
 
-  // --- R3: 0-0 min>=85 BC<3 (1 fallo, 0 aciertos) ---
-  if (goals === 0 && minute >= 85 && bcTotal < 3) {
-    cappedScore -= 20;
-    reasons.push('Ultimos minutos sin concretar');
+  // 6. SCORE STATE — urgencia real según marcador y minuto
+  const homeTrails = match.scoreHome < match.scoreAway;
+  const awayTrails = match.scoreAway < match.scoreHome;
+  const trailing = homeTrails || awayTrails;
+  
+  if (trailing) {
+    const urgency = minute >= 75 ? 1.50 : minute >= 60 ? 1.30 : minute >= 40 ? 1.15 : 1.05;
+    lambda *= urgency;
+    reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
+  }
+  if (gd >= 2 && !trailing) {
+    lambda *= 0.50;
+    reasons.push('Ventaja c\u00f3moda');
+  } else if (gd === 1 && !trailing && minute >= 75) {
+    lambda *= 0.70;
+    reasons.push('Cuidando resultado');
   }
 
-  // --- R4: BC>=5 min>=60 xG/BC < 0.4 (1 fallo, 0 aciertos) ---
-  if (bcTotal >= 5 && minute >= 60) {
-    if (xgTotal / bcTotal < 0.4) {
-      cappedScore -= 25;
-      reasons.push('Muchas ocasiones sin concretar (' + bcTotal + ' BC, ' + xgTotal.toFixed(2) + ' xG)');
-    }
+  // 7. Goles acumulados — más goles = menos necesidad de otro
+  if (goals >= 4) lambda *= 0.30;
+  else if (goals >= 3 && minute >= 70) lambda *= 0.40;
+  else if (goals >= 2 && minute >= 80) lambda *= 0.50;
+
+  // 8. S\u00edndrome del 0-0: si llegamos a 80' sin goles, la presi\u00f3n sube
+  if (goals === 0 && minute >= 80) lambda *= 1.15;
+  if (goals === 0 && minute >= 70 && bcTotal === 0 && xgTotal < 1.0) lambda *= 0.70;
+
+  // ─── PROBABILIDAD POISSON ───
+  const prob = 1 - Math.exp(-lambda * minsLeft);
+  let score = Math.round(Math.min(100, prob * 100));
+
+  // ─── SCORER PREDICTION ───
+  let predictedScorer = null;
+  const scorerReasons = [];
+  if (s.xgHome !== null && s.xgAway !== null) {
+    if (s.xgHome > s.xgAway + 0.3) { predictedScorer = 'home'; scorerReasons.push('xG superior'); }
+    else if (s.xgAway > s.xgHome + 0.3) { predictedScorer = 'away'; scorerReasons.push('xG superior'); }
   }
+  if (!predictedScorer && homeTrails) { predictedScorer = 'home'; scorerReasons.push('necesita gol'); }
+  if (!predictedScorer && awayTrails) { predictedScorer = 'away'; scorerReasons.push('necesita gol'); }
 
-  // --- R5: min<25 GD=1 BC<2 (1 fallo, 0 aciertos) ---
-  if (minute < 25 && gd === 1 && bcTotal < 2) {
-    cappedScore -= 35;
-    reasons.push('Demasiado temprano, ventaja estrecha');
-  }
+  // ─── TIME WINDOW ───
+  let timeWindow = '';
+  if (minute < 25) timeWindow = 'GOL 1T';
+  else if (minute < 40) timeWindow = score >= 60 ? 'Gol antes del descanso!' : '1T';
+  else if (minute < 50) timeWindow = score >= 60 ? 'Gol inicio 2T!' : 'Inicio 2T';
+  else if (minute < 65) timeWindow = score >= 60 ? 'Gol 2T!' : '2T';
+  else if (minute < 80) timeWindow = score >= 60 ? 'GOL inminente!' : 'Tramo final';
+  else timeWindow = score >= 40 ? 'Descuento!' : 'Defini\u00e9ndose';
 
-  // --- R14: Att>=100 + SOT<5 + BC<2 (4 fallos, 0 aciertos) ---
-  if (attTotal >= 100 && sotTotal < 5 && bcTotal < 2) {
-    cappedScore -= 45;
-    reasons.push('Muchos ataques sin concretar (' + attTotal + ' att, ' + sotTotal + ' SOT, ' + bcTotal + ' BC)');
-  }
-
-  // --- R15: BlockRatio>0.25 + offTarget>=5 + xgPerShot<0.1 (5 fallos, 2 aciertos) ---
-  if (blockRatio > 0.25 && offTarget >= 5 && xgPerShot < 0.1 && woodTotal < 2) {
-    cappedScore -= 35;
-    reasons.push('Muchos bloqueos/tiros desviados de baja calidad');
-  }
-
-  // --- R16: Fouls>=12 + totalShots>=12 + xgPerShot<0.09 (7 fallos, 2 aciertos) ---
-  const foulsTotal = (s.foulsHome || 0) + (s.foulsAway || 0);
-  if (foulsTotal >= 12 && totalShots >= 12 && xgPerShot < 0.09) {
-    cappedScore = Math.min(cappedScore, 65);
-    reasons.push('Partido trabado con tiros de baja calidad');
-  }
-
-  // --- R17: min>=70 + BC=0 + totalShots>=10 (5 fallos, 2 aciertos) ---
-  if (minute >= 70 && bcTotal === 0 && totalShots >= 10 && xgTotal < 1.0) {
-    cappedScore -= 30;
-    reasons.push('Segunda mitad sin ocasiones claras');
-  }
-
-  // --- R18: GD=1 min>=80 BC=0 Wood=0 (3 fallos, 1 acierto) ---
-  if (gd === 1 && minute >= 80 && bcTotal === 0 && woodTotal === 0 && xgTotal < 1.0) {
-    cappedScore -= 25;
-    reasons.push('Ventaja minima sin peligro real');
-  }
-
-  // --- R19: 61-75 min con marcador 0-0, 1-0 o 1-1 (asertividad historica <25%) ---
-  // Hallazgo: en 61-75, 0-0=25%, 1-0=20%, 1-1=0% asertividad
-  if (minute >= 61 && minute <= 75 && (goals === 0 || (goals === 2 && gd === 0) || (gd === 1 && goals === 1))) {
-    cappedScore = Math.min(cappedScore, 60);
-    reasons.push('Tramo 61-75\' con marcador estrecho');
-  }
-
-  // --- R20: 76+ min con 1-0 (solo 22% asertividad historica) ---
-  if (minute >= 76 && gd === 1 && goals === 1 && bcTotal === 0 && woodTotal === 0) {
-    cappedScore = Math.min(cappedScore, 65);
-    reasons.push('1-0 en finales sin peligro real');
-  }
-
-  // --- R21: Solo permitir alertas en ventanas 25-44, 60-75, 76+ ---
-  // Fuera de esas ventanas el modelo no es predictivo o las cuotas son bajas
-  if (minute < 25 || (minute >= 45 && minute <= 59)) {
-    cappedScore = Math.min(cappedScore, 60);
-  }
-
-  cappedScore = Math.max(0, cappedScore);
-
-  // Suppress firstHalf alerts unless the predicted team dominates AND needs a goal
-  if (windowType === 'firstHalf' && predictedScorer) {
-    const needsGoal = predictedScorer === 'home'
-      ? match.scoreHome < match.scoreAway
-      : match.scoreAway < match.scoreHome;
-    const stats = match.stats || {};
-    const dominates = predictedScorer === 'home'
-      ? (stats.xgHome || 0) > (stats.xgAway || 0) + 0.3
-        && (stats.sotHome || 0) >= (stats.sotAway || 0) + 2
-        && (stats.possessionHome || 0) > 0.58
-      : (stats.xgAway || 0) > (stats.xgHome || 0) + 0.3
-        && (stats.sotAway || 0) >= (stats.sotHome || 0) + 2
-        && (stats.possessionAway || 0) > 0.58;
-    if (!needsGoal || !dominates) {
-      cappedScore = Math.min(cappedScore, 74);
-      reasons.push('1T: necesita dominar y estar abajo para alertar');
-    }
-  }
-
-  // Early minutes: muy temprano para predecir con confianza
-  if (minute < 25) {
-    cappedScore = Math.min(cappedScore, 74);
-    reasons.push('Demasiado temprano (< 25 min)');
-  }
-
-  // Low xG override: si el equipo pronosticado tiene xG bajo, baja la confianza
-  if (predictedScorer) {
-    const predXg = predictedScorer === 'home' ? (s.xgHome || 0) : (s.xgAway || 0);
-    if (predXg < 0.5 && cappedScore >= 65) {
-      const reduction = Math.min(25, (0.5 - predXg) * 40);
-      cappedScore -= reduction;
-      reasons.push('xG bajo (' + predXg.toFixed(2) + ') del equipo pronosticado');
-    }
-  }
-
-  // Overconfidence damping: comprime scores altos para evitar falsos 100%.
-  // CALIBRACION: con factor 0.45 el umbral de alerta (80) exigia score crudo ~92
-  // — practicamente inalcanzable y el sistema quedaba mudo. Con 0.6 solo
-  // partidos verdaderamente excepcionales (score crudo >= 87) superan el 80%.
-  if (cappedScore > 70) {
-    cappedScore = Math.round(70 + (cappedScore - 70) * 0.6);
-    reasons.push('Ajuste de confianza aplicado');
-  }
-
-  // --- SISTEMA DE CONFLUENCIA JERARQUIZADO ---
-  // Señales PRIMARIAS (1.0 pt c/u): xG restante, SoT, Big Chances — predictores probados.
-  // Señales SECUNDARIAS (0.5 pt c/u): ataques con tiros, calidad por tiro.
-  // Madera (0.25 pt testimonial): pegarle al palo es ruido, no predice el próximo gol.
-  // Se requieren ≥ 2.5 puntos para superar el cap de 78%.
-  let strongPoints = 0;
-  let negativeSignals = 0;
-  const xgRestante = xgTotal - goals;
-  // PRIMARIAS
-  if (xgRestante > 0.8) strongPoints += 1.0;
-  if (sotTotal >= 6) strongPoints += 1.0;
-  if (bcTotal >= 2) strongPoints += 1.0;
-  // SECUNDARIAS
-  if (attTotal > 0 && attTotal < 100 && sotTotal >= 4) strongPoints += 0.5;
-  if (xgPerShot > 0.12 && totalShots > 0) strongPoints += 0.5;
-  // MADERA (testimonial — ruido, no señal fuerte)
-  if (woodTotal >= 1) strongPoints += 0.25;
-  // Senales negativas (penalizan)
-  if (blockRatio > 0.3) negativeSignals++;
-  if (offTarget > 8) negativeSignals++;
-  const foulsTotalCount = (s.foulsHome||0)+(s.foulsAway||0);
-  if (foulsTotalCount >= 18) negativeSignals++;
-  if (goals === 0 && minute >= 70 && bcTotal === 0) negativeSignals++;
-  if (minute >= 61 && minute <= 75 && (goals === 0 || (gd === 1 && goals === 1))) negativeSignals++;
-
-  // Cap duro: si hay senales negativas, no pasar de 78%
-  if (negativeSignals >= 2 && cappedScore > 78) {
-    cappedScore = 78;
-    reasons.push('Senales negativas detectadas (' + negativeSignals + ')');
-  }
-
-  // Confluencia: al menos 2.5 puntos para superar 78%
-  if (strongPoints < 2.5 && cappedScore > 78) {
-    cappedScore = 78;
-    reasons.push('Confluencia insuficiente (' + strongPoints.toFixed(1) + '/2.5 pts)');
-  }
-
-  // Solo alertar con stats completas (no fallback)
-  if (!hasMeaningfulStats(s) && cappedScore > 60) {
-    cappedScore = Math.min(cappedScore, 60);
-    reasons.push('Stats limitadas - confianza reducida');
-  }
-
-  // --- SALIDA POISSON: convertir score aditivo a probabilidad real ---
-  // El score aditivo es conservador. Poisson ajusta por tiempo restante:
-  // mismo score con 30 min por delante > mismo score con 5 min.
-  // Benchmark: +17.5% Brier, 9x mas alertas, 67% precision vs 0%.
-  // Denominador 12: calibrado para no explotar cuando los pesos mejoren.
-  if (cappedScore > 0) {
-    const minsRemaining = Math.max(1, 90 - minute);
-    const lambda = (cappedScore / 100) * (minsRemaining / 12);
-    const poissonProb = Math.round((1 - Math.exp(-lambda)) * 100);
-    cappedScore = Math.min(100, Math.max(cappedScore, poissonProb));
-    // Re-aplicar caps de confluencia sobre el score Poisson tambien
-    // (evita que Poisson burle el gate de calidad)
-    if (negativeSignals >= 2 && cappedScore > 78) cappedScore = 78;
-    if (strongPoints < 2.5 && cappedScore > 78) cappedScore = 78;
-  }
-
-  let verdict = cappedScore >= 80 ? 'MUY PROBABLE — casi seguro proximo gol'
-    : cappedScore >= 60 ? 'PROBABLE — buenos indicios'
-    : cappedScore >= 45 ? 'POSIBLE — atentos'
-    : cappedScore >= 30 ? 'DUDOSO — poca actividad'
-    : cappedScore >= 15 ? 'POCO PROBABLE'
-    : 'IMPROBABLE — muy pocas ocasiones';
+  const verdict = score >= 80 ? 'MUY PROBABLE \u2014 casi seguro proximo gol'
+    : score >= 60 ? 'PROBABLE \u2014 buenos indicios'
+    : score >= 40 ? 'POSIBLE \u2014 atentos'
+    : score >= 20 ? 'DUDOSO \u2014 poca actividad'
+    : 'IMPROBABLE \u2014 muy pocas ocasiones';
 
   let whoText = '';
-  if (predictedScorer && scorerReasons.length > 0 && cappedScore >= 30) {
+  if (predictedScorer && scorerReasons.length > 0 && score >= 30) {
     whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante')) + ' (' + scorerReasons.join(', ') + ')';
-  } else if (predictedScorer && cappedScore >= 45) {
+  } else if (predictedScorer && score >= 45) {
     whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante'));
   }
 
   return {
     match: match.rawName, teamHome: match.teamHome, teamAway: match.teamAway,
     league: match.league, matchId: match.matchId,
-    score: cappedScore, verdict, timeWindow, whoText, reasons,
+    score, verdict, timeWindow, whoText, reasons,
     minute, scoreHome: match.scoreHome, scoreAway: match.scoreAway,
-    predictedScorer: predictedScorer && cappedScore >= 25 ? predictedScorer : null,
-    stats: s, pressure
+    predictedScorer: predictedScorer && score >= 25 ? predictedScorer : null,
+    stats: s, pressure: Math.round(lambda * 100),
   };
 }
 
@@ -1129,7 +610,7 @@ async function main() {
             teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
             analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
             predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-            windowType: r.windowType,
+            windowType: r.windowType, _lambda: r.pressure,
             finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
             lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
           });
@@ -1441,7 +922,7 @@ async function main() {
   }
 }
 
-module.exports = { analyzeGoal, getLeagueWeights, getWindowType, applyTramoMultipliers, getFallbackScore, hasMeaningfulStats };
+module.exports = { analyzeGoal, getLeagueWeights, getWindowType, hasMeaningfulStats };
 
 if (require.main === module) {
   main().catch(err => {
