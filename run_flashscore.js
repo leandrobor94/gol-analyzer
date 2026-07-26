@@ -530,9 +530,10 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
   // Las stats ofensivas INFLAN fallos en 61-75 (xG +10, Box +8.5, BC +6.3 vs aciertos)
   // Aplicamos multiplicador que reduce el influjo de stats ofensivas en 61-75
   if (minute >= 61 && minute <= 75) {
-    // En 61-75, reducir el score base por 15% (stats son menos predictivas aqui)
-    score = score * 0.85;
-    reasons.push('Tramo 61-75\' (stats menos predictivas)');
+    // #4 FIX: sin corte global de 15% extra. El tramo ya tiene pesos reducidos
+    // 40-50% via applyTramoMultipliers — un segundo castigo es redundante y crea
+    // un dead zone donde ninguna senal llega al umbral de alerta.
+    reasons.push('Tramo 61-75\' (stats reducidas)');
   }
   
   let cappedScore = Math.min(Math.max(score, 0), 100);
@@ -679,16 +680,23 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
     reasons.push('Ajuste de confianza aplicado');
   }
 
-  // --- SISTEMA DE CONFLUENCIA (requiere minimas senales fuertes para alta confianza) ---
-  // Contar senales fuertes positivas
-  let strongSignals = 0;
+  // --- SISTEMA DE CONFLUENCIA JERARQUIZADO ---
+  // Señales PRIMARIAS (1.0 pt c/u): xG restante, SoT, Big Chances — predictores probados.
+  // Señales SECUNDARIAS (0.5 pt c/u): ataques con tiros, calidad por tiro.
+  // Madera (0.25 pt testimonial): pegarle al palo es ruido, no predice el próximo gol.
+  // Se requieren ≥ 2.5 puntos para superar el cap de 78%.
+  let strongPoints = 0;
   let negativeSignals = 0;
   const xgRestante = xgTotal - goals;
-  if (xgRestante > 1.0) strongSignals++;
-  if (sotTotal >= 6) strongSignals++;
-  if (bcTotal >= 2) strongSignals++;
-  if (woodTotal >= 1) strongSignals++;
-  if (attTotal > 0 && attTotal < 100 && sotTotal >= 4) strongSignals++; // ataques moderados con tiros
+  // PRIMARIAS
+  if (xgRestante > 0.8) strongPoints += 1.0;
+  if (sotTotal >= 6) strongPoints += 1.0;
+  if (bcTotal >= 2) strongPoints += 1.0;
+  // SECUNDARIAS
+  if (attTotal > 0 && attTotal < 100 && sotTotal >= 4) strongPoints += 0.5;
+  if (xgPerShot > 0.12 && totalShots > 0) strongPoints += 0.5;
+  // MADERA (testimonial — ruido, no señal fuerte)
+  if (woodTotal >= 1) strongPoints += 0.25;
   // Senales negativas (penalizan)
   if (blockRatio > 0.3) negativeSignals++;
   if (offTarget > 8) negativeSignals++;
@@ -703,10 +711,10 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
     reasons.push('Senales negativas detectadas (' + negativeSignals + ')');
   }
 
-  // Cap duro: si hay menos de 3 senales fuertes, no pasar de 78%
-  if (strongSignals < 3 && cappedScore > 78) {
+  // Confluencia: al menos 2.5 puntos para superar 78%
+  if (strongPoints < 2.5 && cappedScore > 78) {
     cappedScore = 78;
-    reasons.push('Confluencia insuficiente (' + strongSignals + '/3 senales)');
+    reasons.push('Confluencia insuficiente (' + strongPoints.toFixed(1) + '/2.5 pts)');
   }
 
   // Solo alertar con stats completas (no fallback)
@@ -1417,7 +1425,7 @@ async function main() {
   }
 }
 
-module.exports = { analyzeGoal, getLeagueWeights, getWindowType };
+module.exports = { analyzeGoal, getLeagueWeights, getWindowType, applyTramoMultipliers, getFallbackScore, hasMeaningfulStats };
 
 if (require.main === module) {
   main().catch(err => {
