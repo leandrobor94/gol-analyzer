@@ -123,6 +123,11 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
   const gd = Math.abs(match.scoreHome - match.scoreAway);
   const minsLeft = Math.max(1, 90 - minute);
+  // Halftime: el partido no ha arrancado el 2T. Los stats son solo del 1T.
+  // Reducir minutos efectivos (el descanso + incertidumbre del 2T)
+  // y castigar lambda porque el 2T puede ser completamente distinto.
+  const isHalftime = minute >= 44 && minute <= 47;
+  const effectiveMins = isHalftime ? Math.max(5, Math.round(minsLeft * 0.65)) : minsLeft;
   const reasons = [];
   const toRate = (v) => minute > 0 ? v / minute : 0;
 
@@ -200,10 +205,10 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
     lambda *= urgency;
     reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
   }
-  if (gd >= 2 && !trailing) {
+  if (gd >= 2) {
     lambda *= B.lead2Mult;
-    reasons.push('Ventaja c\u00f3moda');
-  } else if (gd === 1 && !trailing && minute >= 75) {
+    reasons.push('Ventaja c\u00f3moda (\u00d7' + B.lead2Mult.toFixed(2) + ')');
+  } else if (gd === 1 && minute >= 75 && !trailing) {
     lambda *= B.lead1LateMult;
     reasons.push('Cuidando resultado');
   }
@@ -217,23 +222,32 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   if (goals === 0 && minute >= 80) lambda *= 1.15;
   if (goals === 0 && minute >= 70 && bcTotal === 0 && xgTotal < 1.0) lambda *= 0.70;
 
+  // Halftime: los stats del 1T no garantizan nada en el 2T
+  if (isHalftime) lambda *= 0.55;
+  if (minute >= 44 && minute <= 55) lambda *= 0.85; // transicion HT suave
+
   // ─── PROBABILIDAD POISSON ───
-  const prob = 1 - Math.exp(-lambda * minsLeft);
+  const prob = 1 - Math.exp(-lambda * effectiveMins);
   let score = Math.round(Math.min(100, prob * 100));
 
   // ─── SCORER PREDICTION ───
+  // PRIORIDAD: el que va perdiendo > xG superior > nadie
+  // Si vas ganando 2-0, no eres el proximo anotador aunque tengas mas xG
   let predictedScorer = null;
   const scorerReasons = [];
-  if (s.xgHome !== null && s.xgAway !== null) {
+  if (homeTrails) {
+    predictedScorer = 'home'; scorerReasons.push('necesita gol');
+  } else if (awayTrails) {
+    predictedScorer = 'away'; scorerReasons.push('necesita gol');
+  } else if (s.xgHome !== null && s.xgAway !== null) {
     if (s.xgHome > s.xgAway + 0.3) { predictedScorer = 'home'; scorerReasons.push('xG superior'); }
     else if (s.xgAway > s.xgHome + 0.3) { predictedScorer = 'away'; scorerReasons.push('xG superior'); }
   }
-  if (!predictedScorer && homeTrails) { predictedScorer = 'home'; scorerReasons.push('necesita gol'); }
-  if (!predictedScorer && awayTrails) { predictedScorer = 'away'; scorerReasons.push('necesita gol'); }
 
   // ─── TIME WINDOW ───
   let timeWindow = '';
-  if (minute < 25) timeWindow = 'GOL 1T';
+  if (isHalftime) timeWindow = 'Entretiempo — 2T por arrancar';
+  else if (minute < 25) timeWindow = 'GOL 1T';
   else if (minute < 40) timeWindow = score >= 60 ? 'Gol antes del descanso!' : '1T';
   else if (minute < 50) timeWindow = score >= 60 ? 'Gol inicio 2T!' : 'Inicio 2T';
   else if (minute < 65) timeWindow = score >= 60 ? 'Gol 2T!' : '2T';
