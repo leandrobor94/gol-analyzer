@@ -9,7 +9,7 @@ on:
 # conditions en git push y podrian duplicar alertas
 concurrency:
   group: gol-analyzer
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   analyze:
