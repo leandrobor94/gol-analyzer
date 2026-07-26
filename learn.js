@@ -6,35 +6,22 @@ const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
 const TEAMS_FILE = path.join(__dirname, 'teams.json');
 
 const DEFAULT_WEIGHTS = {
-  version: 3, learningRate: 0.05,
-  windows: {
-    firstHalf: {
-      xg: 35, shotsOnTarget: 20, shotsInsideBox: 15, bigChances: 14, totalShots: 5,
-      xgot: 10, hitWoodwork: 6, xA: 7, touchesOppBox: 7,
-      scoreNeeds: 6, timePressure: 4, corners: 6, possession: 3, saves: 2, goalsScored: -3,
-      redCard: 15, teamHistory: 8, matchContext: 5
-    },
-    earlySecondHalf: {
-      xg: 30, shotsOnTarget: 18, shotsInsideBox: 14, bigChances: 12, totalShots: 5,
-      xgot: 10, hitWoodwork: 5, xA: 6, touchesOppBox: 6,
-      scoreNeeds: 10, timePressure: 8, corners: 4, possession: 3, saves: 2, goalsScored: -4,
-      redCard: 20, teamHistory: 8, matchContext: 5
-    },
-    late: {
-      xg: 25, shotsOnTarget: 15, shotsInsideBox: 12, bigChances: 10, totalShots: 4,
-      xgot: 8, hitWoodwork: 4, xA: 5, touchesOppBox: 5,
-      scoreNeeds: 14, timePressure: 16, corners: 5, possession: 2, saves: 2, goalsScored: -5,
-      redCard: 25, teamHistory: 10, matchContext: 6
-    }
+  version: 4, learningRate: 0.03,
+  // Betas del modelo de intensidad lambda (v4)
+  betas: {
+    baseline: 0.030,        // λ base (goles/minuto)
+    xgWeight: 1.5,          // peso de xG por minuto sobre baseline
+    bcWeight: 2.0,          // peso de Big Chances por minuto
+    sotWeight: 0.8,         // peso de tiros al arco (señal débil)
+    redCardMult: 1.5,       // multiplicador por roja
+    urgency60: 1.30,        // urgencia al ir perdiendo min 60-74
+    urgency75: 1.50,        // urgencia al ir perdiendo min 75+
+    lead2Mult: 0.50,        // multiplicador ventaja ≥2 goles
+    lead1LateMult: 0.70,    // multiplicador ventaja 1 gol min 75+
   },
-  globalFallback: {
-    xg: 30, shotsOnTarget: 18, shotsInsideBox: 14, bigChances: 12, totalShots: 5,
-    xgot: 10, hitWoodwork: 5, xA: 6, touchesOppBox: 6,
-    scoreNeeds: 10, timePressure: 8, corners: 4, possession: 3, saves: 2, goalsScored: -4,
-    redCard: 20, teamHistory: 8, matchContext: 5
-  },
+  perLeagueBetas: {},       // overrides de betas por liga
   byLeague: {},
-  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0 }
+  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 }
 };
 
 function loadJSON(file, def) {
@@ -386,13 +373,80 @@ function verifyPredictions(predictions, liveMatches, teams) {
 }
 
 /**
- * Obtiene el set de pesos para una ventana específica.
+ * Obtiene el set de pesos para una ventana específica — DEPRECATED para v4.
+ * Mantenido por compatibilidad con getLeagueWeights en run_flashscore.js
  */
 function getWindowWeights(weights, windowType) {
   if (windowType && weights.windows && weights.windows[windowType]) {
     return weights.windows[windowType];
   }
-  return weights.globalFallback || weights.global || {};
+  return weights.globalFallback || {};
+}
+
+/**
+ * Obtiene los betas del modelo lambda para una liga específica.
+ * Si la liga tiene overrides en perLeagueBetas, los mergea sobre los defaults.
+ */
+function getBetas(weights, league) {
+  const base = weights.betas || DEFAULT_WEIGHTS.betas;
+  if (!league || !weights.perLeagueBetas || !weights.perLeagueBetas[league]) {
+    return { ...base };
+  }
+  return { ...base, ...weights.perLeagueBetas[league] };
+}
+
+/**
+ * Ajusta los betas del modelo lambda basado en predicciones verificadas.
+ * Aprende: si lambda fue muy alto (falsos positivos) → reducir betas.
+ *          Si lambda fue muy bajo (falsos negativos) → aumentar betas.
+ * Learning rate bajo (0.03) para adaptación gradual sin oscillación.
+ */
+function adjustBetas(weights, verified) {
+  if (!verified || verified.length === 0) return 0;
+  
+  const betas = weights.betas || DEFAULT_WEIGHTS.betas;
+  const lr = (weights.learningRate || 0.03) / Math.min(verified.length, 5);
+  let adjustments = 0;
+  
+  for (const pred of verified) {
+    if (pred.predictionCorrect === null) continue;
+    const prob = (pred.predictedProbability || 0) / 100;
+    const goalHappened = pred.goalAfterAnalysis || false;
+    const error = (goalHappened ? 1 : 0) - prob;
+    
+    // Solo aprender de predicciones con error significativo (>10pp)
+    if (Math.abs(error) < 0.10) continue;
+    
+    const direction = error > 0 ? 1 : -1; // +1 = subir betas, -1 = bajar
+    const scale = lr * direction;
+    
+    // Ajustar cada beta. Los betas grandes (baseline) se ajustan con factor menor.
+    betas.baseline = Math.max(0.015, Math.min(0.050, betas.baseline * (1 + scale * 0.5)));
+    betas.xgWeight = Math.max(0.5, Math.min(3.0, betas.xgWeight * (1 + scale)));
+    betas.bcWeight = Math.max(0.5, Math.min(5.0, betas.bcWeight * (1 + scale)));
+    betas.sotWeight = Math.max(0.1, Math.min(2.0, betas.sotWeight * (1 + scale)));
+    betas.urgency60 = Math.max(1.05, Math.min(1.80, betas.urgency60 * (1 + scale * 0.3)));
+    betas.urgency75 = Math.max(1.10, Math.min(2.00, betas.urgency75 * (1 + scale * 0.3)));
+    adjustments++;
+    
+    // Per-league: ajustar baseline de la liga
+    if (pred.league && pred._lambda) {
+      const league = pred.league;
+      if (!weights.perLeagueBetas[league]) {
+        weights.perLeagueBetas[league] = {};
+      }
+      const lb = weights.perLeagueBetas[league];
+      const currentBl = lb.baseline || betas.baseline;
+      lb.baseline = Math.max(0.015, Math.min(0.050, currentBl * (1 + scale * 0.3)));
+    }
+  }
+  
+  // Redondear betas a 3 decimales
+  for (const k of Object.keys(betas)) {
+    if (typeof betas[k] === 'number') betas[k] = Math.round(betas[k] * 1000) / 1000;
+  }
+  
+  return adjustments;
 }
 
 // ========== AJUSTE DE PESOS ==========
@@ -607,4 +661,4 @@ async function runLearning(liveMatches) {
   return { weights, adjustments: 0, insights: [], teams };
 }
 
-module.exports = { runLearning, loadTeams, adjustWeights, updateTeamStats, saveTeams, getWindowWeights };
+module.exports = { runLearning, loadTeams, adjustWeights, updateTeamStats, saveTeams, getWindowWeights, getBetas, adjustBetas };

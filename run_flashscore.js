@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWindowWeights } = require('./learn');
+const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWindowWeights, getBetas, adjustBetas } = require('./learn');
 const notify = require('./notify');
 const scores365 = require('./scores365');
 const { fetchStatsBatch, extractMatchMomentum } = require('./flashscore_fetcher');
@@ -55,10 +55,9 @@ function loadPredictions() {
 }
 function savePredictions(p) { fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(p, null, 2)); }
 function getLeagueWeights(weights, league, windowType) {
-  const base = windowType ? getWindowWeights(weights, windowType) : (weights.globalFallback || weights.global || {});
-  const w = { ...base };
-  if (league && weights.byLeague && weights.byLeague[league]) Object.keys(w).forEach(k => { if (weights.byLeague[league][k] !== undefined) w[k] = weights.byLeague[league][k]; });
-  return w;
+  // v4: devolver betas del modelo lambda (con overrides por liga si existen)
+  const { getBetas } = require('./learn');
+  return { betas: getBetas(weights, league) };
 }
 
 /** Ajustar pesos por tramo temporal — DEPRECATED, reemplazado por score state en analyzeGoal */
@@ -118,7 +117,7 @@ function hasMeaningfulStats(stats) {
   return (xgTotal > 0.3 || sotTotal >= 3 || shotsBoxTotal >= 3 || bigChancesTotal >= 1 || atkTotal >= 50);
 }
 
-function analyzeGoal(match, w, teams, leagueContext, windowType) {
+function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const s = match.stats;
   const minute = match.minute || 0;
   const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
@@ -128,12 +127,12 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
   const toRate = (v) => minute > 0 ? v / minute : 0;
 
   // ─── LAMBDA: intensidad de gol por minuto ───
-  // Baseline calibrado: 0.030 goles/min (~2.7 por partido, ligeramente optimista)
-  // Se ajusta por liga si hay datos
-  let lambda = 0.030;
+  // Betas calibrados por aprendizaje (o defaults si no hay datos)
+  const B = w?.betas || { baseline: 0.030, xgWeight: 1.5, bcWeight: 2.0, sotWeight: 0.8, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
+  let lambda = B.baseline;
   if (leagueContext && leagueContext.goalsPerMatch) {
     const leagueAvg = leagueContext.goalsPerMatch;
-    if (leagueAvg > 0) lambda = 0.030 * (leagueAvg / 2.7);
+    if (leagueAvg > 0) lambda = B.baseline * (leagueAvg / 2.7);
   }
 
   // 1. xG — EL predictor. Peso 1.5 sobre baseline
@@ -141,7 +140,7 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
   const xgRate = toRate(xgTotal);
   const xgRemaining = xgTotal - goals;
   if (xgRate > 0.03) {
-    lambda += (xgRate - 0.03) * 1.5;
+    lambda += (xgRate - 0.03) * B.xgWeight;
   } else if (xgRate < 0.015) {
     lambda *= 0.7; // partido muerto ofensivamente
   }
@@ -151,12 +150,12 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
   // 2. Big Chances — predictor #2. Umbral: al menos 1 BC en 50 min para activar
   const bcTotal = (s.bigChancesHome || 0) + (s.bigChancesAway || 0);
   const bcRate = toRate(bcTotal);
-  if (bcRate > 0.02) lambda += bcRate * 2.0;
+  if (bcRate > 0.02) lambda += bcRate * B.bcWeight;
 
   // 3. SoT — señal débil porque xG ya lo cubre. Solo suma si hay volumen real
   const sotTotal = (s.sotHome || 0) + (s.sotAway || 0);
   const sotRate = toRate(sotTotal);
-  if (sotRate > 0.04) lambda += (sotRate - 0.04) * 0.8;
+  if (sotRate > 0.04) lambda += (sotRate - 0.04) * B.sotWeight;
 
   // 4. xGOT — calidad de tiro (complementa xG, no disponible en 365scores sin Flashscore)
   if (s.xgotHome !== null && s.xgotAway !== null) {
@@ -167,25 +166,45 @@ function analyzeGoal(match, w, teams, leagueContext, windowType) {
   // 5. Red cards — el multiplicador más fuerte en fútbol
   const reds = (s.redCardsHome || 0) + (s.redCardsAway || 0);
   if (reds > 0) {
-    lambda *= (1 + reds * 1.5);
+    lambda *= (1 + reds * B.redCardMult);
     reasons.push(reds + ' roja(s) — partido roto!');
   }
 
-  // 6. SCORE STATE — urgencia real según marcador y minuto
+  // 5b. MOMENTUM — tendencia reciente (Flashscore, ultimos 15 min)
   const homeTrails = match.scoreHome < match.scoreAway;
   const awayTrails = match.scoreAway < match.scoreHome;
+  if (momentum && momentum.momentumFound) {
+    const domSide = momentum.dominantSide;
+    const momDiff = momentum.momentumDiff || 0;
+    if (momDiff > 20) {
+      // Un equipo claramente dominando el momento reciente
+      const boost = Math.min(0.3, momDiff / 200);
+      lambda *= (1 + boost);
+      reasons.push('Momentum ' + domSide + ' (+' + Math.round(boost*100) + '%)');
+    } else if (momDiff > 10) {
+      lambda *= 1.08;
+      reasons.push('Ligero momentum ' + domSide);
+    }
+    // Si el momentum contradice al trailing (quien necesita gol NO esta dominando)
+    const homeDone = domSide === 'home';
+    const awayDone = domSide === 'away';
+    if (homeTrails && awayDone) lambda *= 0.85; // Visitante domina, local necesita → menos probable
+    if (awayTrails && homeDone) lambda *= 0.85; // Local domina, visitante necesita → menos probable
+  }
+
+  // 6. SCORE STATE — urgencia real según marcador y minuto
   const trailing = homeTrails || awayTrails;
   
   if (trailing) {
-    const urgency = minute >= 75 ? 1.50 : minute >= 60 ? 1.30 : minute >= 40 ? 1.15 : 1.05;
+    const urgency = minute >= 75 ? B.urgency75 : minute >= 60 ? B.urgency60 : minute >= 40 ? 1.15 : 1.05;
     lambda *= urgency;
     reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
   }
   if (gd >= 2 && !trailing) {
-    lambda *= 0.50;
+    lambda *= B.lead2Mult;
     reasons.push('Ventaja c\u00f3moda');
   } else if (gd === 1 && !trailing && minute >= 75) {
-    lambda *= 0.70;
+    lambda *= B.lead1LateMult;
     reasons.push('Cuidando resultado');
   }
 
@@ -899,10 +918,11 @@ async function main() {
     }
     if (verifiedCount > 0) {
       const adj = adjustWeights(currentWeights, newlyVerified, []);
-      if (adj > 0) {
+      const adjB = adjustBetas(currentWeights, newlyVerified);
+      if (adj > 0 || adjB > 0) {
         saveWeights(currentWeights);
         if (teamsData) saveTeams(teamsData);
-        console.log('  Pesos ajustados: ' + adj + ' cambios');
+        console.log('  Pesos ajustados: ' + adj + ' (legacy) + ' + adjB + ' betas');
       }
       savePredictions(predictions);
     }
