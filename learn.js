@@ -404,8 +404,16 @@ function getBetas(weights, league) {
 function adjustBetas(weights, verified) {
   if (!verified || verified.length === 0) return 0;
   
-  const betas = weights.betas || DEFAULT_WEIGHTS.betas;
-  const lr = (weights.learningRate || 0.03) / Math.min(verified.length, 5);
+  // Inicializar betas y perLeagueBetas si no existen (compatibilidad con weights v3)
+  if (!weights.betas) {
+    weights.betas = JSON.parse(JSON.stringify(DEFAULT_WEIGHTS.betas));
+  }
+  if (!weights.perLeagueBetas) {
+    weights.perLeagueBetas = {};
+  }
+  
+  const betas = weights.betas;
+  const lr = (weights.learningRate || 0.03) / Math.min(verified.length, 3);
   let adjustments = 0;
   
   for (const pred of verified) {
