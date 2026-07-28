@@ -685,7 +685,7 @@ async function main() {
       } else {
         // Solo guardar predicciones con potencial de alerta o stats completas
         const hasStats = r.stats && (hasMeaningfulStats(r.stats) || Object.keys(r.stats).filter(k => r.stats[k] !== null).length >= 15);
-        const isAlertCandidate = r.score >= 60;
+        const isAlertCandidate = r.score >= 30;
         if (hasStats || isAlertCandidate) {
           predictions.push({
             id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
