@@ -221,15 +221,21 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   
   if (trailing) {
     let urgency;
-    if (homeTrails) {
-      // Local abajo: más urgente que visitante
+    if (gd >= 3) {
+      // Abajo por 3+ goles = partido definido, no hay urgencia real
+      urgency = 0.65;
+      reasons.push('Goleada en contra — partido definido');
+    } else if (homeTrails) {
       urgency = preFT ? 2.10 : (minute >= 75 ? 2.00 : minute >= 60 ? 1.60 : preHT ? 1.40 : minute >= 40 ? 1.25 : 1.05);
     } else {
-      // Visitante abajo: menos urgente (juega fuera de casa)
       urgency = preFT ? 1.60 : (minute >= 75 ? 1.50 : minute >= 60 ? 1.30 : preHT ? 1.20 : minute >= 40 ? 1.15 : 1.05);
     }
-    lambda *= urgency;
-    reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
+    if (gd < 3) {
+      lambda *= urgency;
+      reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
+    } else {
+      lambda *= urgency;
+    }
   }
   // 0-0 llegando al final: ambos arriesgan (solo aplicar el boost mas fuerte)
   if (goals === 0 && preFT) lambda *= 1.20;
