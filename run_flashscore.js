@@ -128,7 +128,7 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   // Si predecimos 2T/tarde, es hasta el 90 + descuento.
   // Esto evita que a los 41' el modelo calcule con 49 min cuando solo quedan 4+desc.
   const isHalftime = minute >= 44 && minute <= 48;
-  const veryEarly = minute < 20;
+  const veryEarly = minute < 30;
   let minsRemaining;
   if (windowType === 'firstHalf') {
     minsRemaining = Math.max(1, 45 - minute) + 2; // +2 min descuento 1T típico
@@ -149,7 +149,7 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
 
   // ─── LAMBDA: intensidad de gol por minuto ───
   // Betas calibrados por aprendizaje (o defaults si no hay datos)
-  const B = w?.betas || { baseline: 0.025, xgWeight: 1.5, bcWeight: 2.0, sotWeight: 0.8, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
+  const B = w?.betas || { baseline: 0.022, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
   let lambda = B.baseline;
   if (leagueContext && leagueContext.goalsPerMatch) {
     const leagueAvg = leagueContext.goalsPerMatch;
@@ -272,7 +272,7 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   let score = Math.round(Math.min(95, prob * 100));
 
   // ─── CAPS DUROS POR VENTANA (basados en datos reales) ───
-  // < 20 min: muy temprano, datos insuficientes. No alertar.
+  // < 30 min: muy temprano, datos insuficientes. No alertar.
   if (veryEarly) score = Math.min(score, 60);
   // 44-48 min: entretiempo. Partido parado. No alertar.
   if (isHalftime) score = Math.min(score, 70);

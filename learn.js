@@ -9,10 +9,10 @@ const DEFAULT_WEIGHTS = {
   version: 4, learningRate: 0.03,
   // Betas del modelo de intensidad lambda (v4)
   betas: {
-    baseline: 0.025,        // λ base (goles/minuto). Conservador: solo ligas goleadoras lo suben
-    xgWeight: 1.5,          // peso de xG por minuto sobre baseline
-    bcWeight: 2.0,          // peso de Big Chances por minuto
-    sotWeight: 0.8,         // peso de tiros al arco (señal débil)
+    baseline: 0.022,        // λ base (goles/minuto). Conservador: solo ligas goleadoras lo suben
+    xgWeight: 0.8,          // peso de xG por minuto sobre baseline
+    bcWeight: 1.2,          // peso de Big Chances por minuto
+    sotWeight: 0.4,         // peso de tiros al arco (señal débil)
     redCardMult: 1.5,       // multiplicador por roja
     urgency60: 1.30,        // urgencia al ir perdiendo min 60-74
     urgency75: 1.50,        // urgencia al ir perdiendo min 75+
@@ -429,10 +429,10 @@ function adjustBetas(weights, verified) {
     const scale = lr * direction;
     
     // Ajustar cada beta. Los betas grandes (baseline) se ajustan con factor menor.
-    betas.baseline = Math.max(0.015, Math.min(0.045, betas.baseline * (1 + scale * 0.5)));
-    betas.xgWeight = Math.max(0.5, Math.min(3.0, betas.xgWeight * (1 + scale)));
-    betas.bcWeight = Math.max(0.5, Math.min(5.0, betas.bcWeight * (1 + scale)));
-    betas.sotWeight = Math.max(0.1, Math.min(2.0, betas.sotWeight * (1 + scale)));
+    betas.baseline = Math.max(0.012, Math.min(0.040, betas.baseline * (1 + scale * 0.5)));
+    betas.xgWeight = Math.max(0.3, Math.min(2.5, betas.xgWeight * (1 + scale)));
+    betas.bcWeight = Math.max(0.3, Math.min(4.0, betas.bcWeight * (1 + scale)));
+    betas.sotWeight = Math.max(0.05, Math.min(1.5, betas.sotWeight * (1 + scale)));
     betas.urgency60 = Math.max(1.05, Math.min(1.80, betas.urgency60 * (1 + scale * 0.3)));
     betas.urgency75 = Math.max(1.10, Math.min(2.00, betas.urgency75 * (1 + scale * 0.3)));
     adjustments++;
@@ -445,7 +445,7 @@ function adjustBetas(weights, verified) {
       }
       const lb = weights.perLeagueBetas[league];
       const currentBl = lb.baseline || betas.baseline;
-      lb.baseline = Math.max(0.015, Math.min(0.045, currentBl * (1 + scale * 0.3)));
+      lb.baseline = Math.max(0.012, Math.min(0.040, currentBl * (1 + scale * 0.3)));
     }
   }
   
