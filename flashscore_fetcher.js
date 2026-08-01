@@ -420,4 +420,44 @@ async function fetchStatsBatch(targets) {
   return results;
 }
 
-module.exports = { fetchXgBatch, fetchStatsBatch, extractMatchMomentum };
+/**
+ * Fetch Match Momentum for specific targets. One browser, multiple tabs.
+ */
+async function fetchMomentumBatch(targets) {
+  if (!targets || targets.length === 0) return {};
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
+  const context = await browser.newContext({
+    locale: 'es-CO',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+  });
+  const page = await context.newPage();
+  const allLinks = await getLiveMatchLinks(page);
+  const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const results = {};
+  
+  for (const target of targets) {
+    const hn = normalize(target.teamHome), an = normalize(target.teamAway);
+    const link = allLinks.find(l => {
+      const lh = normalize(l.homeTeam), la = normalize(l.awayTeam);
+      return (lh.includes(hn) || hn.includes(lh)) && (la.includes(an) || an.includes(la));
+    });
+    if (!link) continue;
+    
+    const tab = await context.newPage();
+    try {
+      const mom = await extractMatchMomentum(tab, link.href);
+      if (mom && mom.momentumFound) {
+        results[target.teamHome + ' vs ' + target.teamAway] = mom;
+      }
+    } catch (e) {
+      // skip failed momentum fetch
+    } finally {
+      await tab.close();
+    }
+  }
+  
+  await browser.close();
+  return results;
+}
+
+module.exports = { fetchXgBatch, fetchStatsBatch, extractMatchMomentum, fetchMomentumBatch };

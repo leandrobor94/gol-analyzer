@@ -3,7 +3,7 @@ const path = require('path');
 const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWindowWeights, getBetas, adjustBetas } = require('./learn');
 const notify = require('./notify');
 const scores365 = require('./scores365');
-const { fetchStatsBatch, extractMatchMomentum } = require('./flashscore_fetcher');
+const { fetchStatsBatch, extractMatchMomentum, fetchMomentumBatch } = require('./flashscore_fetcher');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
@@ -806,6 +806,32 @@ async function main() {
         ranked.sort((a, b) => b.score - a.score);
       }
       console.log('  xG real obtenido para ' + xgFound + ' partidos\n');
+    }
+
+    // --- Fetch momentum from Flashscore for alert candidates (cada 20 min) ---
+    if (fsCycle) {
+      const momentumCandidates = ranked.filter(r => r.score >= 60).slice(0, 8);
+      if (momentumCandidates.length > 0) {
+        console.log('\n  -> Buscando momentum para ' + momentumCandidates.length + ' candidatos...');
+        try {
+          const momTargets = momentumCandidates.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
+          const momResults = await fetchMomentumBatch(momTargets);
+          let momFound = 0;
+          ranked.forEach(r => {
+            const key = r.teamHome + ' vs ' + r.teamAway;
+            if (momResults[key]) {
+              momFound++;
+              const wt = getWindowType(r.minute);
+              const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt, momResults[key]);
+              r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons;
+            }
+          });
+          ranked.sort((a, b) => b.score - a.score);
+          console.log('  -> Momentum aplicado en ' + momFound + ' partidos');
+        } catch (e) {
+          console.log('  -> Error momentum: ' + (e.message || e));
+        }
+      }
     }
 
     // --- Telegram alert (probabilidad > 80%, top 5) - UMBRAL SUBIDO A 80% ---

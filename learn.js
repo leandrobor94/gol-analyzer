@@ -21,7 +21,7 @@ const DEFAULT_WEIGHTS = {
   },
   perLeagueBetas: {},       // overrides de betas por liga
   byLeague: {},
-  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 }
+  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0, brierScore: null, brierCount: 0 }
 };
 
 function loadJSON(file, def) {
@@ -452,6 +452,24 @@ function adjustBetas(weights, verified) {
   // Redondear betas a 3 decimales
   for (const k of Object.keys(betas)) {
     if (typeof betas[k] === 'number') betas[k] = Math.round(betas[k] * 1000) / 1000;
+  }
+  
+  // Brier Score: métrica objetiva de calibración (0=perfecto, 0.25=aleatorio)
+  if (verified.length > 0) {
+    let brierSum = 0;
+    let brierCount = 0;
+    for (const pred of verified) {
+      if (pred.predictionCorrect !== null) {
+        const p = (pred.predictedProbability || 0) / 100;
+        const y = pred.goalAfterAnalysis ? 1 : 0;
+        brierSum += Math.pow(p - y, 2);
+        brierCount++;
+      }
+    }
+    if (brierCount > 0) {
+      weights.stats.brierScore = Math.round(brierSum / brierCount * 10000) / 10000;
+      weights.stats.brierCount = brierCount;
+    }
   }
   
   return adjustments;
