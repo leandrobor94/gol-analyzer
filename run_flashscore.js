@@ -677,9 +677,11 @@ async function main() {
         }
         existing.lastSeenMinute = r.minute;
         existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
-        const compScore = existing.predictedProbability;
-        const diff = Math.abs(r.score - compScore);
-        if (diff > 20 || (r.score >= 80) !== (compScore >= 80)) {
+        // Siempre actualizar si el minuto avanzo (datos frescos para aprendizaje)
+        const minuteAdvanced = (r.minute || 0) > (existing.analysisMinute || 0);
+        const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
+        const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
+        if (minuteAdvanced || scoreChanged || crossed80) {
           existing.predictedProbability = r.score;
           existing.windowType = r.windowType;
           existing.predictedScorer = r.predictedScorer;
