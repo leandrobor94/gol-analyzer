@@ -277,6 +277,17 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   // Cap máximo 95%: ningún evento en fútbol es 100% seguro
   let score = Math.round(Math.min(95, prob * 100));
 
+  // ─── ANCLA DE LIGA: calibrar contra el promedio real de la liga ───
+  // Mismo efecto que usar odds de mercado: si el modelo dice 90% pero
+  // la liga promedia 2.0 goles/partido, el modelo está sobreconfiado.
+  if (leagueContext && leagueContext.goalsPerMatch) {
+    const leagueRate = leagueContext.goalsPerMatch / 90;
+    const leagueProb = 1 - Math.exp(-leagueRate * effectiveMins);
+    const leagueScore = Math.round(Math.min(95, leagueProb * 100));
+    // Blend 70% modelo + 30% ancla de liga
+    score = Math.round(score * 0.70 + leagueScore * 0.30);
+  }
+
   // ─── CAPS DUROS POR VENTANA (basados en datos reales) ───
   // < 30 min: muy temprano, datos insuficientes. No alertar.
   if (veryEarly) score = Math.min(score, 60);
