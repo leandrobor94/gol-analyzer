@@ -408,39 +408,42 @@ function adjustBetas(weights, verified) {
   }
   
   const betas = weights.betas;
-  const lr = (weights.learningRate || 0.03) / Math.min(verified.length, 3);
+  // Solo aprender de predicciones del modelo lambda actual (_lambda presente)
+  // y con confianza minima (evitar que preds al 5% con gol-until-FT empujen betas al techo)
+  const learnable = verified.filter(pred => {
+    if (pred.predictionCorrect === null) return false;
+    if (pred._lambda == null && pred.predictedProbability15 == null) return false;
+    const prob = (pred.predictedProbability || 0) / 100;
+    if (prob < 0.30 || prob > 0.95) return false;
+    const error = (pred.goalAfterAnalysis ? 1 : 0) - prob;
+    return Math.abs(error) >= 0.15;
+  });
+  // Cap por ciclo: max 5 ajustes, lr bajo → no explotar betas en un batch grande
+  const batch = learnable.slice(0, 5);
+  const lr = Math.min(0.02, (weights.learningRate || 0.03) / Math.max(batch.length, 1));
   let adjustments = 0;
-  
-  for (const pred of verified) {
-    if (pred.predictionCorrect === null) continue;
+
+  for (const pred of batch) {
     const prob = (pred.predictedProbability || 0) / 100;
     const goalHappened = pred.goalAfterAnalysis || false;
     const error = (goalHappened ? 1 : 0) - prob;
-    
-    // Solo aprender de predicciones con error significativo (>10pp)
-    if (Math.abs(error) < 0.10) continue;
-    
-    const direction = error > 0 ? 1 : -1; // +1 = subir betas, -1 = bajar
-    const scale = lr * direction;
-    
-    // Ajustar cada beta. Los betas grandes (baseline) se ajustan con factor menor.
-    betas.baseline = Math.max(0.012, Math.min(0.040, betas.baseline * (1 + scale * 0.5)));
-    betas.xgWeight = Math.max(0.3, Math.min(2.5, betas.xgWeight * (1 + scale)));
-    betas.bcWeight = Math.max(0.3, Math.min(4.0, betas.bcWeight * (1 + scale)));
-    betas.sotWeight = Math.max(0.05, Math.min(1.5, betas.sotWeight * (1 + scale)));
-    betas.urgency60 = Math.max(1.05, Math.min(1.80, betas.urgency60 * (1 + scale * 0.3)));
-    betas.urgency75 = Math.max(1.10, Math.min(2.00, betas.urgency75 * (1 + scale * 0.3)));
+    const direction = error > 0 ? 1 : -1;
+    const scale = lr * direction * Math.min(1, Math.abs(error));
+
+    betas.baseline = Math.max(0.015, Math.min(0.038, betas.baseline * (1 + scale * 0.35)));
+    betas.xgWeight = Math.max(0.4, Math.min(1.8, betas.xgWeight * (1 + scale * 0.6)));
+    betas.bcWeight = Math.max(0.5, Math.min(2.5, betas.bcWeight * (1 + scale * 0.6)));
+    betas.sotWeight = Math.max(0.1, Math.min(1.0, betas.sotWeight * (1 + scale * 0.5)));
+    betas.urgency60 = Math.max(1.10, Math.min(1.70, betas.urgency60 * (1 + scale * 0.25)));
+    betas.urgency75 = Math.max(1.15, Math.min(1.90, betas.urgency75 * (1 + scale * 0.25)));
     adjustments++;
-    
-    // Per-league: ajustar baseline de la liga
-    if (pred.league && pred._lambda) {
+
+    if (pred.league) {
       const league = pred.league;
-      if (!weights.perLeagueBetas[league]) {
-        weights.perLeagueBetas[league] = {};
-      }
+      if (!weights.perLeagueBetas[league]) weights.perLeagueBetas[league] = {};
       const lb = weights.perLeagueBetas[league];
       const currentBl = lb.baseline || betas.baseline;
-      lb.baseline = Math.max(0.012, Math.min(0.040, currentBl * (1 + scale * 0.3)));
+      lb.baseline = Math.max(0.015, Math.min(0.038, currentBl * (1 + scale * 0.25)));
     }
   }
   
