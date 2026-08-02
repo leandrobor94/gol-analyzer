@@ -719,10 +719,6 @@ async function main() {
         }
       }
     }
-    savePredictions(predictions);
-    weights.stats.createdCount = (weights.stats.createdCount || 0) + newCount;
-    saveWeights(weights);
-    console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
     // Actualizar lastSeen de predicciones existentes con datos actuales
     // BUG FIX: liveData tiene gameId (no url) — antes nunca encontraba el partido
@@ -844,6 +840,13 @@ async function main() {
         }
       }
     }
+
+    // Guardar predicciones DESPUES de todos los re-analisis (xG, momentum)
+    // para que el score guardado sea el mismo que se usa en las alertas
+    savePredictions(predictions);
+    weights.stats.createdCount = (weights.stats.createdCount || 0) + newCount;
+    saveWeights(weights);
+    console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
     // --- Telegram alert (probabilidad > 80%, top 5) - UMBRAL SUBIDO A 80% ---
     const topByScore = ranked.filter(r => r.score >= 80);
