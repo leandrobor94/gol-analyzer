@@ -76,5 +76,18 @@
     "windowType": "earlySecondHalf",
     "timestamp": "2026-08-02T20:38:08.001Z",
     "alertTimestamp": "2026-08-02T18:35:45.096Z"
+  },
+  {
+    "match": "Washington Spirit vs San Diego Wave",
+    "league": "NWSL",
+    "probability": 92,
+    "minute": 75,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "late",
+    "timestamp": "2026-08-02T22:31:06.022Z",
+    "alertTimestamp": "2026-08-02T20:38:06.532Z"
   }
 ]
