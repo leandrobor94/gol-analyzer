@@ -39,10 +39,20 @@ function loadWeights() {
     if (fs.existsSync(WEIGHTS_FILE)) {
       const loaded = JSON.parse(fs.readFileSync(WEIGHTS_FILE, 'utf8'));
       const merged = deepMerge(DEFAULT_WEIGHTS, loaded);
-      // Ensure all global keys exist
       for (const k of Object.keys(DEFAULT_WEIGHTS.global)) {
         if (merged.global[k] === undefined) merged.global[k] = DEFAULT_WEIGHTS.global[k];
       }
+      // v4 lambda: garantizar betas aunque weights.json sea v3 legacy
+      if (!merged.betas) {
+        merged.betas = {
+          baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4,
+          redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70
+        };
+      }
+      if (!merged.perLeagueBetas) merged.perLeagueBetas = {};
+      if (!merged.stats) merged.stats = { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 };
+      if (merged.stats.brierScore === undefined) merged.stats.brierScore = null;
+      if (merged.stats.brierCount === undefined) merged.stats.brierCount = 0;
       return merged;
     }
   } catch {}
@@ -149,7 +159,7 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
 
   // ─── LAMBDA: intensidad de gol por minuto ───
   // Betas calibrados por aprendizaje (o defaults si no hay datos)
-  const B = w?.betas || { baseline: 0.022, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
+  const B = w?.betas || { baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
   let lambda = B.baseline;
   if (leagueContext && leagueContext.goalsPerMatch) {
     const leagueAvg = leagueContext.goalsPerMatch;
@@ -254,23 +264,18 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   else if (goals >= 3 && minute >= 70) lambda *= 0.40;
   else if (goals >= 2 && minute >= 80) lambda *= 0.50;
 
-  // 8. Ventanas temporales
-  // Demasiado temprano: sin datos suficientes, cualquier predicción es ruido
+  // 8. Ventanas temporales (cada factor UNA sola vez)
   if (veryEarly) lambda *= 0.45;
-  // Halftime: los stats del 1T no garantizan nada en el 2T
+  // Halftime: stats del 1T no garantizan 2T
   if (isHalftime) lambda *= 0.55;
-  // Transición post-HT (45-52): incertidumbre post-descanso
-  if (minute >= 44 && minute <= 52) lambda *= 0.85;
+  // Transicion post-HT (45-55): incertidumbre post-descanso (no apilar con isHalftime)
+  else if (minute >= 45 && minute <= 55) lambda *= 0.85;
   // Pre-entretiempo (40-44'): equipos apuran antes del descanso
   if (preHT && !trailing && gd < 2) lambda *= 1.10;
-  // Pre-final (85-89'): máxima urgencia con tiempo de descuento por delante
+  // Pre-final (85-89'): maxima urgencia con descuento por delante
   if (preFT && gd <= 1) lambda *= 1.12;
-  // 0-0 llegando al final: presión en ambos lados
+  // 0-0 llegando al final sin ocasiones: partido trabado
   if (goals === 0 && minute >= 70 && bcTotal === 0 && xgTotal < 1.0) lambda *= 0.70;
-
-  // Halftime: los stats del 1T no garantizan nada en el 2T
-  if (isHalftime) lambda *= 0.55;
-  if (minute >= 44 && minute <= 55) lambda *= 0.85; // transicion HT suave
 
   // ─── PROBABILIDAD POISSON ───
   const prob = 1 - Math.exp(-lambda * effectiveMins);
@@ -353,7 +358,9 @@ function logAlertVerification(pred, correct) {
   try {
     let log = [];
     if (fs.existsSync(ALERTAS_LOG_FILE)) {
-      log = JSON.parse(fs.readFileSync(ALERTAS_LOG_FILE, 'utf8'));
+      // strip BOM si el archivo se edito en Windows
+      const raw = fs.readFileSync(ALERTAS_LOG_FILE, 'utf8').replace(/^\uFEFF/, '');
+      log = JSON.parse(raw);
     }
     log.push({
       match: pred.match || (pred.teamHome + ' vs ' + pred.teamAway),
@@ -666,110 +673,6 @@ async function main() {
       return result;
     }).sort((a, b) => b.score - a.score);
 
-    const now = new Date().toISOString();
-    let newCount = 0;
-    for (const r of ranked) {
-      const existing = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
-      if (existing) {
-        // Validar consistencia: el marcador no puede retroceder (goles no se borran)
-        const prevGoals = (existing.lastSeenScore?.home || 0) + (existing.lastSeenScore?.away || 0);
-        const newGoals = (r.scoreHome || 0) + (r.scoreAway || 0);
-        const prevMin = existing.lastSeenMinute || 0;
-        const newMin = r.minute || 0;
-        // Si el minuto avanza pero el marcador retrocede, datos corruptos - no actualizar
-        if (newMin > prevMin && newGoals < prevGoals) {
-          console.log('  [SKIP] ' + r.match + ' - marcador inconsistente (prev=' + existing.lastSeenScore?.home + '-' + existing.lastSeenScore?.away + ' new=' + r.scoreHome + '-' + r.scoreAway + ')');
-          continue;
-        }
-        // Si el minuto retrocede, datos stale - no actualizar
-        if (newMin < prevMin - 2) {
-          console.log('  [SKIP] ' + r.match + ' - minuto retrocede (prev=' + prevMin + ' new=' + newMin + ')');
-          continue;
-        }
-        existing.lastSeenMinute = r.minute;
-        existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
-        // Siempre actualizar si el minuto avanzo (datos frescos para aprendizaje)
-        const minuteAdvanced = (r.minute || 0) > (existing.analysisMinute || 0);
-        const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
-        const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
-        if (minuteAdvanced || scoreChanged || crossed80) {
-          existing.predictedProbability = r.score;
-          existing.windowType = r.windowType;
-          existing.predictedScorer = r.predictedScorer;
-          existing.predictedTimeWindow = r.timeWindow;
-          existing.stats = r.stats;
-          existing.scoreAtAnalysis = { home: r.scoreHome, away: r.scoreAway };
-          existing.analysisMinute = r.minute;
-        }
-      } else {
-        // Solo guardar predicciones con potencial de alerta o stats completas
-        const hasStats = r.stats && (hasMeaningfulStats(r.stats) || Object.keys(r.stats).filter(k => r.stats[k] !== null).length >= 15);
-        const isAlertCandidate = r.score >= 30;
-        if (hasStats || isAlertCandidate) {
-          predictions.push({
-            id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
-            teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now,
-            analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-            predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-            windowType: r.windowType, _lambda: r.pressure,
-            finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
-            lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
-          });
-          newCount++;
-        }
-      }
-    }
-
-    // Actualizar lastSeen de predicciones existentes con datos actuales
-    // BUG FIX: liveData tiene gameId (no url) — antes nunca encontraba el partido
-    // y lastSeenMinute jamas se actualizaba
-    for (const pred of predictions) {
-      if (pred.predictionCorrect !== null) continue;
-      const lm = liveData.find(m => String(m.gameId) === String(pred.id));
-      if (lm) {
-        pred.lastSeenMinute = lm.minute;
-        pred.lastSeenScore = { home: lm.scoreHome ?? 0, away: lm.scoreAway ?? 0 };
-      }
-    }
-
-    console.log('='.repeat(64));
-    console.log('  PROXIMO GOL — ANALISIS EN VIVO (Flashscore)');
-    console.log('='.repeat(64) + '\n');
-
-    if (ranked.length > 0) {
-      ranked.forEach((r, i) => {
-        const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
-        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
-        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
-        console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
-        console.log('     ' + r.timeWindow);
-        console.log('     ' + r.verdict + r.whoText);
-        const xgS = r.stats.xgHome != null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
-        const sotS = r.stats.sotHome != null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
-        const bcS = r.stats.bigChancesHome != null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
-        const boxS = r.stats.shotsInsideBoxHome != null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
-        const woodS = r.stats.hitWoodworkHome != null ? r.stats.hitWoodworkHome + '-' + r.stats.hitWoodworkAway : '';
-        const xgotS = r.stats.xgotHome != null ? r.stats.xgotHome.toFixed(2) + '-' + r.stats.xgotAway.toFixed(2) : '';
-        const xaS = r.stats.xgHomeA != null ? 'xA:' + r.stats.xgHomeA.toFixed(2) + '-' + r.stats.xgAwayA.toFixed(2) : '';
-        const touchesS = r.stats.touchesOppBoxHome != null ? 'Touches:' + r.stats.touchesOppBoxHome + '-' + r.stats.touchesOppBoxAway : '';
-        const posS = r.stats.possessionHome != null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
-        console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Box:' + boxS + (woodS ? ' Palo:' + woodS : '') + (xgotS ? ' xGOT:' + xgotS : '') + ' Pos:' + posS);
-        if (xaS || touchesS) console.log('     ' + [xaS, touchesS].filter(Boolean).join(' '));
-        if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
-      });
-
-      const top = ranked[0];
-      if (top.score >= 40) {
-        console.log('\n  RECOMENDACION PRINCIPAL:');
-        console.log('     ' + top.teamHome + ' vs ' + top.teamAway);
-        console.log('     Confianza: ' + top.score + '% — ' + top.timeWindow);
-        console.log('     ' + top.verdict);
-        if (top.whoText) console.log('     ' + top.whoText.trim());
-      } else {
-        console.log('\n  Sin recomendaciones solidas ahora.');
-      }
-    }
-
     // --- Fetch real xG from Flashscore for top matches (solo ciclos cada 20 min) ---
     const topForXg = fsCycle ? ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5) : [];
     if (topForXg.length > 0) {
@@ -841,14 +744,101 @@ async function main() {
       }
     }
 
-    // Guardar predicciones DESPUES de todos los re-analisis (xG, momentum)
-    // para que el score guardado sea el mismo que se usa en las alertas
+    // ─── LOG FINAL (scores post xG/momentum = mismos que se guardan y alertan) ───
+    console.log('='.repeat(64));
+    console.log('  PROXIMO GOL — ANALISIS EN VIVO');
+    console.log('='.repeat(64) + '\n');
+    if (ranked.length > 0) {
+      ranked.forEach((r, i) => {
+        const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
+        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
+        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
+        console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
+        console.log('     ' + r.timeWindow);
+        console.log('     ' + r.verdict + r.whoText);
+        const xgS = r.stats.xgHome != null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
+        const sotS = r.stats.sotHome != null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
+        const bcS = r.stats.bigChancesHome != null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
+        const boxS = r.stats.shotsInsideBoxHome != null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
+        const posS = r.stats.possessionHome != null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
+        console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Box:' + boxS + ' Pos:' + posS);
+        if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
+      });
+      const top = ranked[0];
+      if (top.score >= 40) {
+        console.log('\n  RECOMENDACION PRINCIPAL: ' + top.teamHome + ' vs ' + top.teamAway + ' | ' + top.score + '% — ' + top.timeWindow);
+      } else {
+        console.log('\n  Sin recomendaciones solidas ahora.');
+      }
+    }
+
+    // ─── PERSISTIR PREDICCIONES (scores FINALES post xG/momentum) ───
+    // Critico: este bloque DEBE ir despues de todo re-analisis y ANTES de alertas.
+    // Asi lo guardado === lo alertado.
+    const now = new Date().toISOString();
+    let newCount = 0;
+    for (const r of ranked) {
+      const existing = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
+      if (existing) {
+        const prevGoals = (existing.lastSeenScore?.home || 0) + (existing.lastSeenScore?.away || 0);
+        const newGoals = (r.scoreHome || 0) + (r.scoreAway || 0);
+        const prevMin = existing.lastSeenMinute || 0;
+        const newMin = r.minute || 0;
+        if (newMin > prevMin && newGoals < prevGoals) {
+          console.log('  [SKIP] ' + (r.teamHome + ' vs ' + r.teamAway) + ' - marcador inconsistente');
+          continue;
+        }
+        if (newMin < prevMin - 2) {
+          console.log('  [SKIP] ' + (r.teamHome + ' vs ' + r.teamAway) + ' - minuto retrocede');
+          continue;
+        }
+        existing.lastSeenMinute = r.minute;
+        existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
+        const minuteAdvanced = (r.minute || 0) > (existing.analysisMinute || 0);
+        const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
+        const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
+        if (minuteAdvanced || scoreChanged || crossed80) {
+          existing.predictedProbability = r.score;
+          existing.windowType = r.windowType;
+          existing.predictedScorer = r.predictedScorer;
+          existing.predictedTimeWindow = r.timeWindow;
+          existing.stats = r.stats;
+          existing.scoreAtAnalysis = { home: r.scoreHome, away: r.scoreAway };
+          existing.analysisMinute = r.minute;
+          existing._lambda = r.pressure;
+          existing.lastAnalyzedAt = now;
+        }
+      } else {
+        const hasStats = r.stats && (hasMeaningfulStats(r.stats) || Object.keys(r.stats).filter(k => r.stats[k] !== null).length >= 15);
+        if (hasStats || r.score >= 30) {
+          predictions.push({
+            id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
+            teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now, lastAnalyzedAt: now,
+            analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
+            predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
+            windowType: r.windowType, _lambda: r.pressure,
+            finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
+            lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
+          });
+          newCount++;
+        }
+      }
+    }
+    // lastSeen de pendientes aun en vivo (aunque no se re-analicen por score)
+    for (const pred of predictions) {
+      if (pred.predictionCorrect !== null) continue;
+      const lm = liveData.find(m => String(m.gameId) === String(pred.id));
+      if (lm) {
+        pred.lastSeenMinute = lm.minute;
+        pred.lastSeenScore = { home: lm.scoreHome ?? 0, away: lm.scoreAway ?? 0 };
+      }
+    }
     savePredictions(predictions);
     weights.stats.createdCount = (weights.stats.createdCount || 0) + newCount;
     saveWeights(weights);
     console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
-    // --- Telegram alert (probabilidad > 80%, top 5) - UMBRAL SUBIDO A 80% ---
+    // --- Telegram alert (probabilidad > 80%, top 5) ---
     const topByScore = ranked.filter(r => r.score >= 80);
     if (topByScore.length > 0) {
       if (!process.env.CI) {
@@ -857,17 +847,16 @@ async function main() {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
-        // Dedup: deducir partidos ya alertados en misma ventana
         const filtered = [];
         for (const r of topByScore) {
-          // Validacion de frescura: si el minuto del partido no avanzo en los ultimos 10 min, skip (datos stale)
-          const predEntry = predictions.find(p => p.id === r.matchId);
-          if (predEntry) {
-            const realMinSinceAnalysis = (Date.now() - new Date(predEntry.timestamp).getTime()) / 60000;
-            const minuteAdvance = (r.minute || 0) - (predEntry.analysisMinute || 0);
-            // Si pasaron mas de 10 min reales y el minuto del partido no avanza, datos stale
-            if (realMinSinceAnalysis > 10 && minuteAdvance < 2) {
-              console.log('\n  [SKIP] ' + r.match + ' - datos stale (min=' + r.minute + ', sin avance en ' + realMinSinceAnalysis.toFixed(0) + ' min reales)');
+          // Frescura: comparar minuto actual vs lastSeen previo al ciclo, NO vs analysisMinute
+          // recien actualizado (ese bug bloqueaba TODAS las alertas tras 10 min de la 1ra pred).
+          const predEntry = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
+          if (predEntry && predEntry.lastAnalyzedAt) {
+            const realMin = (Date.now() - new Date(predEntry.lastAnalyzedAt).getTime()) / 60000;
+            // Si el ultimo analisis fue hace >15 min reales, el feed esta stale
+            if (realMin > 15) {
+              console.log('\n  [SKIP] ' + r.teamHome + ' vs ' + r.teamAway + ' - analisis viejo (' + realMin.toFixed(0) + ' min)');
               continue;
             }
           }
@@ -877,7 +866,6 @@ async function main() {
           if (lastAlert) {
             const realMin = (Date.now() - lastAlert.timestamp) / 60000;
             const gameMinAdvance = (r.minute || 0) - (lastAlert.minute || 0);
-            // Dedup mas estricto: no reenviar si menos de 45 min reales O menos de 25 min de partido
             if (realMin < 45 && gameMinAdvance < 25) skip = true;
           }
           if (!skip) filtered.push(r);

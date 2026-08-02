@@ -14,7 +14,7 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     permissions:
       contents: write
 
@@ -29,8 +29,20 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: pw-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
       - name: Instalar Chromium para Playwright
+        if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
+
+      - name: Instalar deps sistema Playwright (si hay cache de browser)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
 
       - name: Ejecutar análisis (365scores)
         env:
@@ -39,18 +51,20 @@ jobs:
         run: node run_flashscore.js
 
       - name: Debug — ver cambios antes de commit
+        if: always()
         run: git status && git diff --stat
 
       - name: Commit y push de cambios (aprendizaje persistente)
+        if: always()
         run: |
           git config user.name "sofastats-bot"
           git config user.email "sofastats-bot@users.noreply.github.com"
-          git add predictions.json weights.json teams.json last-local-run.json alertas.json telegram-offset.txt 2>/dev/null || true
-          if git diff --cached --quiet && git diff --quiet; then
+          git add predictions.json weights.json teams.json last-local-run.json alertas.json alertas_log.json telegram-offset.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
             echo "Sin cambios nuevos"
           else
-            git diff --cached --quiet || git commit -m "auto: aprendizaje ronda ${{ github.run_id }}"
+            git commit -m "auto: aprendizaje ronda ${{ github.run_id }}" || true
           fi
           git pull --rebase 2>/dev/null || true
-          git push 2>/dev/null || true
+          git push || echo "WARN: git push fallo (exit $?)"
         shell: bash

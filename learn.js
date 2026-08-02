@@ -9,7 +9,7 @@ const DEFAULT_WEIGHTS = {
   version: 4, learningRate: 0.03,
   // Betas del modelo de intensidad lambda (v4)
   betas: {
-    baseline: 0.022,        // λ base (goles/minuto). Conservador: solo ligas goleadoras lo suben
+    baseline: 0.030,        // λ base (goles/minuto). Backtest n=82: 0.022→0.030 baja Brier 0.36→0.33 sin perder hit-rate alertas
     xgWeight: 0.8,          // peso de xG por minuto sobre baseline
     bcWeight: 1.2,          // peso de Big Chances por minuto
     sotWeight: 0.4,         // peso de tiros al arco (señal débil)
@@ -25,7 +25,12 @@ const DEFAULT_WEIGHTS = {
 };
 
 function loadJSON(file, def) {
-  try { if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8')); } catch {}
+  try {
+    if (fs.existsSync(file)) {
+      const raw = fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
+      return JSON.parse(raw);
+    }
+  } catch {}
   return def;
 }
 function saveJSON(file, data) { fs.writeFileSync(file, JSON.stringify(data, null, 2)); }
@@ -267,7 +272,7 @@ function verifyPredictions(predictions, liveMatches, teams) {
         const ALERTAS_LOG_FILE = path.join(__dirname, 'alertas_log.json');
         let log = [];
         if (fs.existsSync(ALERTAS_LOG_FILE)) {
-          log = JSON.parse(fs.readFileSync(ALERTAS_LOG_FILE, 'utf8'));
+          log = JSON.parse(fs.readFileSync(ALERTAS_LOG_FILE, 'utf8').replace(/^\uFEFF/, ''));
         }
         log.push({
           match: pred.match || (pred.teamHome + ' vs ' + pred.teamAway),
@@ -675,13 +680,14 @@ async function runLearning(liveMatches) {
 
   if (verified.length > 0) {
     const adjustments = adjustWeights(weights, verified, insights);
+    const betaAdj = adjustBetas(weights, verified);
     saveTeams(teams);
     saveWeights(weights);
     savePredictions(predictions);
-    console.log('  Pesos ajustados: ' + adjustments + ' cambios');
+    console.log('  Pesos ajustados: ' + adjustments + ' legacy + ' + betaAdj + ' betas');
 
     printLearningReport(weights, predictions, insights, teams);
-    return { weights, adjustments, insights, teams };
+    return { weights, adjustments: adjustments + betaAdj, insights, teams };
   }
 
   return { weights, adjustments: 0, insights: [], teams };

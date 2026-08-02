@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "learningRate": 0.05,
   "global": {
     "xg": 30,
@@ -1448,7 +1448,11 @@
   "stats": {
     "predictionsCount": 1200,
     "correctScore": 217,
-    "correctScorer": 0
+    "correctScorer": 0,
+    "brierScore": null,
+    "brierCount": 0,
+    "createdCount": 0,
+    "verifiedCount": 0
   },
   "windows": {
     "firstHalf": {
@@ -1532,6 +1536,18 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-07-18T18:03:24.029Z",
-  "alertedMatches": {}
+  "lastUpdated": "2026-08-02T14:54:26.460Z",
+  "alertedMatches": {},
+  "betas": {
+    "baseline": 0.03,
+    "xgWeight": 0.8,
+    "bcWeight": 1.2,
+    "sotWeight": 0.4,
+    "redCardMult": 1.5,
+    "urgency60": 1.3,
+    "urgency75": 1.5,
+    "lead2Mult": 0.5,
+    "lead1LateMult": 0.7
+  },
+  "perLeagueBetas": {}
 }

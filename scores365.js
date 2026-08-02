@@ -59,10 +59,11 @@ async function fetchLiveMatches() {
       // Si el minuto real es significativamente mayor que gameTime, el dato esta stale
       // Usar el minuto real calculado (mas confiable que gameTime congelado)
       if (realMin > g.gameTime + 5) {
-        g.gameTime = Math.min(95, Math.round(realMin));
+        g.gameTime = Math.min(98, Math.round(realMin));
       }
     }
-    return g.gameTime < 90;
+    // Incluir descuento (90-98): ahi se marcan muchos goles de alta conviccion
+    return g.gameTime < 98;
   });
   
   return live.map(g => ({
