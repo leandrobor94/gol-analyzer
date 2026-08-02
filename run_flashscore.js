@@ -11,7 +11,12 @@ const TEAMS_FILE = path.join(__dirname, 'teams.json');
 const ALERTAS_LOG_FILE = path.join(__dirname, 'alertas_log.json');
 
 const DEFAULT_WEIGHTS = {
-  version: 1, learningRate: 0.05,
+  version: 4, learningRate: 0.03,
+  betas: {
+    baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4,
+    redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70
+  },
+  perLeagueBetas: {},
   global: {
     xg: 30, shotsOnTarget: 25, shotsInsideBox: 18, bigChances: 15, totalShots: 10,
     xgot: 12, hitWoodwork: 10, xA: 8, touchesOppBox: 8,
@@ -19,7 +24,7 @@ const DEFAULT_WEIGHTS = {
     teamFactor: 8, leagueFactor: 5
   },
   byLeague: {},
-  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 }
+  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0, brierScore: null, brierCount: 0, alertCount: 0, alertHits: 0 }
 };
 
 function deepMerge(defaults, loaded) {
@@ -56,14 +61,30 @@ function loadWeights() {
       return merged;
     }
   } catch {}
-  return { ...DEFAULT_WEIGHTS, global: { ...DEFAULT_WEIGHTS.global } };
+  return JSON.parse(JSON.stringify(DEFAULT_WEIGHTS));
 }
 function saveWeights(w) { w.lastUpdated = new Date().toISOString(); fs.writeFileSync(WEIGHTS_FILE, JSON.stringify(w, null, 2)); }
 function loadPredictions() {
-  try { if (fs.existsSync(PREDICTIONS_FILE)) return JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8')); } catch {}
+  try {
+    if (fs.existsSync(PREDICTIONS_FILE)) {
+      return JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8').replace(/^\uFEFF/, ''));
+    }
+  } catch {}
   return [];
 }
-function savePredictions(p) { fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(p, null, 2)); }
+function savePredictions(p) {
+  // Misma politica que learn.js: no bloat eterno de verificadas viejas
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  const filtered = (p || []).filter(pred => {
+    if (pred.predictionCorrect === null) return true;
+    if (pred.timestamp) {
+      const t = new Date(pred.timestamp).getTime();
+      if (t > cutoff) return true;
+    }
+    return false;
+  });
+  fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(filtered, null, 2));
+}
 function getLeagueWeights(weights, league, windowType) {
   // v4: devolver betas del modelo lambda (con overrides por liga si existen)
   const { getBetas } = require('./learn');
@@ -338,13 +359,16 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
     whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante'));
   }
 
+  // Probabilidad en ventana corta (15 min) — util para decidir "inminente"
+  const score15 = Math.round(Math.min(95, (1 - Math.exp(-lambda * 15)) * 100));
+
   return {
     match: match.rawName, teamHome: match.teamHome, teamAway: match.teamAway,
     league: match.league, matchId: match.matchId,
-    score, verdict, timeWindow, whoText, reasons,
+    score, score15, verdict, timeWindow, whoText, reasons,
     minute, scoreHome: match.scoreHome, scoreAway: match.scoreAway,
     predictedScorer: predictedScorer && score >= 25 ? predictedScorer : null,
-    stats: s, pressure: Math.round(lambda * 100),
+    stats: s, pressure: Math.round(lambda * 100), lambda,
   };
 }
 
@@ -405,10 +429,14 @@ function alertsEnabled() {
 
 function doSync() {
   if (process.env.NO_SYNC) return;
+  // En CI el workflow hace commit/push al final. Si doSync tambien pushea,
+  // hay race (dos pushes concurrentes → datos perdidos). Solo git-sync en local.
+  if (process.env.CI) {
+    console.log('  Sync: CI — archivos en disco; commit lo hace el workflow');
+    return;
+  }
   const cp = require('child_process');
   try {
-    // pull --rebase para auto-resolver divergencias; si falla, abortar rebase
-    // para no dejar el repo en estado roto (antes: pull --ff-only fallaba para siempre)
     try {
       cp.execSync('git pull --rebase', { stdio: 'ignore', timeout: 20000 });
     } catch {
@@ -418,14 +446,11 @@ function doSync() {
   try {
     cp.execSync('git config user.email "sofastats-bot@users.noreply.github.com"', { stdio: 'ignore', timeout: 5000 });
     cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
-    // Solo agregar archivos que existen (antes: git add de archivo inexistente
-    // lanzaba error y el sync completo fallaba silenciosamente en local)
     const files = ['predictions.json', 'weights.json', 'teams.json', 'alertas.json', 'alertas_log.json', 'telegram-offset.txt', 'last-local-run.json']
       .filter(f => fs.existsSync(f));
     if (files.length > 0) {
       cp.execSync('git add ' + files.join(' '), { stdio: 'ignore', timeout: 5000 });
     }
-    // Solo commit y push si hay algo que commitear
     const hasChanges = cp.execSync('git status --porcelain', { encoding: 'utf8', timeout: 5000 }).trim();
     if (hasChanges) {
       cp.execSync('git commit -m "sync: datos ronda [skip ci]"', { stdio: 'ignore', timeout: 5000 });
@@ -794,19 +819,20 @@ async function main() {
         }
         existing.lastSeenMinute = r.minute;
         existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
+        existing.lastAnalyzedAt = now; // siempre: este ciclo lo analizamos
         const minuteAdvanced = (r.minute || 0) > (existing.analysisMinute || 0);
         const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
         const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
         if (minuteAdvanced || scoreChanged || crossed80) {
           existing.predictedProbability = r.score;
+          existing.predictedProbability15 = r.score15 || null;
           existing.windowType = r.windowType;
           existing.predictedScorer = r.predictedScorer;
           existing.predictedTimeWindow = r.timeWindow;
           existing.stats = r.stats;
           existing.scoreAtAnalysis = { home: r.scoreHome, away: r.scoreAway };
           existing.analysisMinute = r.minute;
-          existing._lambda = r.pressure;
-          existing.lastAnalyzedAt = now;
+          existing._lambda = r.lambda != null ? r.lambda : (r.pressure || 0) / 100;
         }
       } else {
         const hasStats = r.stats && (hasMeaningfulStats(r.stats) || Object.keys(r.stats).filter(k => r.stats[k] !== null).length >= 15);
@@ -815,9 +841,11 @@ async function main() {
             id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
             teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now, lastAnalyzedAt: now,
             analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-            predictedProbability: r.score, predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-            windowType: r.windowType, _lambda: r.pressure,
-            finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null, predictionCorrect: null,
+            predictedProbability: r.score, predictedProbability15: r.score15 || null,
+            predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
+            windowType: r.windowType, _lambda: r.lambda != null ? r.lambda : (r.pressure || 0) / 100,
+            finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null,
+            predictionCorrect: null, alertCorrect: null,
             lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
           });
           newCount++;
@@ -838,8 +866,14 @@ async function main() {
     saveWeights(weights);
     console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
-    // --- Telegram alert (probabilidad > 80%, top 5) ---
-    const topByScore = ranked.filter(r => r.score >= 80);
+    // --- Telegram alert ---
+    // Gate: score>=80 (P gol resto del partido) + stats reales (nunca fallback)
+    // + minuto>=30 (early cap ya limita, pero no alertamos basura temprana)
+    const topByScore = ranked.filter(r =>
+      r.score >= 80 &&
+      r.minute >= 30 &&
+      hasMeaningfulStats(r.stats)
+    );
     if (topByScore.length > 0) {
       if (!process.env.CI) {
         // Local: no mandar Telegram, ya ves la terminal
@@ -849,17 +883,6 @@ async function main() {
       } else {
         const filtered = [];
         for (const r of topByScore) {
-          // Frescura: comparar minuto actual vs lastSeen previo al ciclo, NO vs analysisMinute
-          // recien actualizado (ese bug bloqueaba TODAS las alertas tras 10 min de la 1ra pred).
-          const predEntry = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
-          if (predEntry && predEntry.lastAnalyzedAt) {
-            const realMin = (Date.now() - new Date(predEntry.lastAnalyzedAt).getTime()) / 60000;
-            // Si el ultimo analisis fue hace >15 min reales, el feed esta stale
-            if (realMin > 15) {
-              console.log('\n  [SKIP] ' + r.teamHome + ' vs ' + r.teamAway + ' - analisis viejo (' + realMin.toFixed(0) + ' min)');
-              continue;
-            }
-          }
           const key = r.matchId + '_' + r.windowType;
           const lastAlert = weights.alertedMatches?.[key];
           let skip = false;
@@ -979,21 +1002,21 @@ async function main() {
           pred.actualGoalMinute = null;
         }
         const prob = (pred.predictedProbability || 0) / 100;
-        const predictedGoal = prob >= 0.7;
-        pred.predictionCorrect = (predictedGoal && scoreChanged) || (!predictedGoal && !scoreChanged);
-        // Update stats counters (verifiedCount = verificadas, correctScore = acertadas)
-        if (pred.predictionCorrect !== null) {
-          currentWeights.stats.verifiedCount = (currentWeights.stats.verifiedCount || 0) + 1;
-          if (pred.predictionCorrect) currentWeights.stats.correctScore = (currentWeights.stats.correctScore || 0) + 1;
-        }
-        const icon = pred.predictionCorrect ? '\u2713' : '\u2717';
-        console.log('  ' + icon + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%');
-        // Log alerta verificada si fue alerta (>=80%)
+        // Binario calibrado en 50% (metricas generales). Alertas usan alertCorrect aparte.
+        pred.predictionCorrect = scoreChanged ? (prob >= 0.5) : (prob < 0.5);
+        // Metricas de ALERTA (umbral operativo 80%). Contadores alert* los actualiza adjustBetas.
         if ((pred.predictedProbability || 0) >= 80) {
-          logAlertVerification(pred, pred.predictionCorrect);
+          pred.alertCorrect = scoreChanged;
+          logAlertVerification(pred, scoreChanged);
         }
+        // Contadores generales UNA sola vez aqui (adjustWeights ya no re-cuenta)
+        currentWeights.stats.verifiedCount = (currentWeights.stats.verifiedCount || 0) + 1;
+        if (pred.predictionCorrect) currentWeights.stats.correctScore = (currentWeights.stats.correctScore || 0) + 1;
+        const icon = pred.predictionCorrect ? '\u2713' : '\u2717';
+        const aIcon = pred.alertCorrect === true ? ' ALERT-HIT' : pred.alertCorrect === false ? ' ALERT-MISS' : '';
+        console.log('  ' + icon + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%' + aIcon);
         // Analisis de fallos en predicciones >=70%
-        if (!pred.predictionCorrect && pred.predictedProbability >= 70) {
+        if (!scoreChanged && pred.predictedProbability >= 70) {
           const dif = Math.abs((score.home - (pred.scoreAtAnalysis?.home ?? 0)) + (score.away - (pred.scoreAtAnalysis?.away ?? 0)));
           const min = pred.analysisMinute || 0;
           const estXg = (pred.stats?.xgHome ?? 0) + (pred.stats?.xgAway ?? 0);

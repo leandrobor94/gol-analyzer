@@ -250,24 +250,14 @@ function verifyPredictions(predictions, liveMatches, teams) {
       continue;
     }
     const prob = (pred.predictedProbability || 0) / 100;
-    const predictedGoal = prob >= 0.7;
-
-    // Window-specific correctness
-    let correct;
-    if (pred.windowType === 'firstHalf' && pred.goalWindows?.firstHalf !== undefined) {
-      correct = (predictedGoal && pred.goalWindows.firstHalf) || (!predictedGoal && !pred.goalWindows.firstHalf);
-    } else if (pred.windowType === 'earlySecondHalf' && pred.goalWindows?.earlySecondHalf !== undefined) {
-      correct = (predictedGoal && pred.goalWindows.earlySecondHalf) || (!predictedGoal && !pred.goalWindows.earlySecondHalf);
-    } else {
-      correct = (predictedGoal && goalHappened) || (!predictedGoal && !goalHappened);
-    }
+    // Binario en 50% (calibracion general). Alertas: alertCorrect en umbral 80%.
+    const correct = goalHappened ? (prob >= 0.5) : (prob < 0.5);
 
     pred.finalScore = finalScore;
     pred.goalAfterAnalysis = goalHappened;
     pred.predictionCorrect = correct;
-
-    // Log alerta verificada si fue alerta (>=80%)
     if ((pred.predictedProbability || 0) >= 80) {
+      pred.alertCorrect = goalHappened;
       try {
         const ALERTAS_LOG_FILE = path.join(__dirname, 'alertas_log.json');
         let log = [];
@@ -282,7 +272,7 @@ function verifyPredictions(predictions, liveMatches, teams) {
           scoreAtAlert: pred.scoreAtAnalysis ? (pred.scoreAtAnalysis.home + '-' + pred.scoreAtAnalysis.away) : null,
           finalScore: finalScore ? (finalScore.home + '-' + finalScore.away) : null,
           goalAfterAlert: goalHappened,
-          correct: correct,
+          correct: goalHappened,
           windowType: pred.windowType,
           timestamp: new Date().toISOString(),
           alertTimestamp: pred.timestamp
@@ -459,21 +449,29 @@ function adjustBetas(weights, verified) {
     if (typeof betas[k] === 'number') betas[k] = Math.round(betas[k] * 1000) / 1000;
   }
   
-  // Brier Score: métrica objetiva de calibración (0=perfecto, 0.25=aleatorio)
+  // Brier Score acumulativo (no solo del lote actual)
   if (verified.length > 0) {
-    let brierSum = 0;
-    let brierCount = 0;
+    let batchSum = 0;
+    let batchCount = 0;
     for (const pred of verified) {
       if (pred.predictionCorrect !== null) {
         const p = (pred.predictedProbability || 0) / 100;
         const y = pred.goalAfterAnalysis ? 1 : 0;
-        brierSum += Math.pow(p - y, 2);
-        brierCount++;
+        batchSum += Math.pow(p - y, 2);
+        batchCount++;
+      }
+      if ((pred.predictedProbability || 0) >= 80 && pred.alertCorrect !== undefined && pred.alertCorrect !== null) {
+        weights.stats.alertCount = (weights.stats.alertCount || 0) + 1;
+        if (pred.alertCorrect) weights.stats.alertHits = (weights.stats.alertHits || 0) + 1;
       }
     }
-    if (brierCount > 0) {
-      weights.stats.brierScore = Math.round(brierSum / brierCount * 10000) / 10000;
-      weights.stats.brierCount = brierCount;
+    if (batchCount > 0) {
+      const prevN = weights.stats.brierCount || 0;
+      const prevAvg = weights.stats.brierScore || 0;
+      const totalN = prevN + batchCount;
+      const newAvg = totalN > 0 ? ((prevAvg * prevN) + batchSum) / totalN : batchSum / batchCount;
+      weights.stats.brierScore = Math.round(newAvg * 10000) / 10000;
+      weights.stats.brierCount = totalN;
     }
   }
   
@@ -566,9 +564,8 @@ function adjustWeights(weights, verified, insights) {
         adjustments++;
       }
 
-      // Contadores coherentes: verifiedCount/correctScore segun resultado real
-      weights.stats.verifiedCount = (weights.stats.verifiedCount || 0) + 1;
-      if (pred.predictionCorrect) weights.stats.correctScore = (weights.stats.correctScore || 0) + 1;
+      // NO incrementar verifiedCount aqui: lo hace el caller ([4/4] o runLearning)
+      // para evitar doble conteo.
 
       // Ajuste por liga (isFinal=false si la verificacion fue en vivo con score parcial)
       updateLeagueProfile(weights, pred, pred.finalScore ? { scoreHome: pred.finalScore.home, scoreAway: pred.finalScore.away } : { scoreHome: 0, scoreAway: 0 }, !pred._verifiedLive);
@@ -679,6 +676,11 @@ async function runLearning(liveMatches) {
   console.log('  Verificadas: ' + verified.length + ' (' + insights.length + ' fallos)');
 
   if (verified.length > 0) {
+    // Contadores una sola vez por prediccion verificada en este path
+    for (const pred of verified) {
+      weights.stats.verifiedCount = (weights.stats.verifiedCount || 0) + 1;
+      if (pred.predictionCorrect) weights.stats.correctScore = (weights.stats.correctScore || 0) + 1;
+    }
     const adjustments = adjustWeights(weights, verified, insights);
     const betaAdj = adjustBetas(weights, verified);
     saveTeams(teams);

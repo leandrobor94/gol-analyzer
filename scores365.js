@@ -199,8 +199,7 @@ async function fetchLeagueContext(competitionId) {
 
 /** Estimate xG from available stats (365scores doesn't provide per-match xG) */
 function estimateXg(stats) {
-  // Rough estimation based on shot quality metrics
-  // shotsInsideBox * 0.08 + shotsOnTarget * 0.15 + bigChances * 0.12
+  // Formula estable (backtest: variante "Opta-like" empeoro Brier 0.330→0.336 → revertida)
   const h = (k) => stats.home[k] !== undefined ? stats.home[k] : 0;
   const a = (k) => stats.away[k] !== undefined ? stats.away[k] : 0;
   const homeXg = h('shotsInsideBox') * 0.08 + h('shotsOnTarget') * 0.15 + h('bigChances') * 0.12;
