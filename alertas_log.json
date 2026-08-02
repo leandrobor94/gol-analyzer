@@ -50,5 +50,31 @@
     "windowType": "earlySecondHalf",
     "timestamp": "2026-08-02T19:48:09.896Z",
     "alertTimestamp": "2026-08-02T17:33:48.474Z"
+  },
+  {
+    "match": "Lajeadense vs EC Pelotas",
+    "league": "Gaucho A2",
+    "probability": 83,
+    "minute": 59,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-02T20:38:07.972Z",
+    "alertTimestamp": "2026-08-02T18:35:45.096Z"
+  },
+  {
+    "match": "Defensores Belgrano (VR) vs Bartolomé Mitre (Posadas)",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "probability": 95,
+    "minute": 56,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-02T20:38:08.001Z",
+    "alertTimestamp": "2026-08-02T18:35:45.096Z"
   }
 ]
