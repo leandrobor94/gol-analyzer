@@ -3,12 +3,12 @@
   "learningRate": 0.05,
   "betas": {
     "baseline": 0.03,
-    "xgWeight": 0.798,
-    "bcWeight": 1.197,
-    "sotWeight": 0.399,
+    "xgWeight": 0.8,
+    "bcWeight": 1.2,
+    "sotWeight": 0.4,
     "redCardMult": 1.5,
-    "urgency60": 1.299,
-    "urgency75": 1.498,
+    "urgency60": 1.3,
+    "urgency75": 1.5,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
@@ -2086,25 +2086,14 @@
     }
   },
   "stats": {
-<<<<<<< HEAD
-    "predictionsCount": 1200,
-    "correctScore": 360,
-    "correctScorer": 0,
-    "createdCount": 211,
-    "verifiedCount": 308,
-    "brierScore": 0.2621,
-    "brierCount": 49,
-    "alertCount": 2,
-=======
     "predictionsCount": 0,
     "correctScore": 0,
     "correctScorer": 0,
-    "createdCount": 192,
+    "createdCount": 211,
     "verifiedCount": 0,
     "brierScore": null,
     "brierCount": 0,
     "alertCount": 0,
->>>>>>> de357d2 (fix: re-auditoria de lo entregado — bugs reales cerrados)
     "alertHits": 0
   },
   "windows": {
@@ -2189,11 +2178,7 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-<<<<<<< HEAD
-  "lastUpdated": "2026-08-02T20:38:08.386Z",
-=======
-  "lastUpdated": "2026-08-02T20:38:05.600Z",
->>>>>>> de357d2 (fix: re-auditoria de lo entregado — bugs reales cerrados)
+  "lastUpdated": "2026-08-02T20:43:17.167Z",
   "alertedMatches": {
     "4782374_firstHalf": {
       "timestamp": 1785695745711,
