@@ -1023,10 +1023,13 @@ async function main() {
         const prob = (pred.predictedProbability || 0) / 100;
         // Binario calibrado en 50% (metricas generales). Alertas usan alertCorrect aparte.
         pred.predictionCorrect = scoreChanged ? (prob >= 0.5) : (prob < 0.5);
-        // Metricas de ALERTA: usar firstAlertProbability si existe (score al momento del aviso)
+        // Metricas de ALERTA: firstAlertProbability = score al aviso.
+        // alertCorrect = hubo gol despues del analisis (label actual del sistema).
+        // Nota: no es "gol en 10 min" — el modelo predice gol en el resto del partido.
         const alertP = pred.firstAlertProbability != null ? pred.firstAlertProbability : pred.predictedProbability;
         if ((alertP || 0) >= 80) {
           pred.alertCorrect = scoreChanged;
+          pred.alertHorizon = 'until_ft';
           logAlertVerification(pred, scoreChanged);
         }
         // Contadores generales UNA sola vez aqui (adjustWeights ya no re-cuenta)
@@ -1079,7 +1082,7 @@ async function main() {
   doSync();
 
   // Guardar timestamp local DESPUES del sync
-  if (!process.env.CI && !module.parent) {
+  if (!process.env.CI && require.main === module) {
     fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
   }
 }

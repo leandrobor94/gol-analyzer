@@ -40,9 +40,8 @@ jobs:
         if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
-      - name: Instalar deps sistema Playwright (si hay cache de browser)
-        if: steps.pw-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps chromium
+      # Con cache hit el browser ya esta; deps de sistema suelen estar en la imagen.
+      # Evitar install-deps en cada run (cuesta minutos y no aporta si el cache sirve).
 
       - name: Ejecutar análisis (365scores)
         env:

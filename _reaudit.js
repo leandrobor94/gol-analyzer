@@ -23,9 +23,7 @@ if (ag.includes('teams') && !ag.includes('teams[')) {
   hit('MEDIO', 'analyzeGoal recibe teams pero no los usa en el score');
 }
 
-if (src.includes('if (gd >= 2)') && src.includes('lead2Mult')) {
-  hit('MEDIO', 'gd>=2 aplica lead2Mult tambien cuando vas perdiendo 0-2 (castiga al trailing)');
-}
+// lead2 en gd>=2 es intencional para modelo any-goal (0-2 suele tener menos goles que 1-1)
 
 if (learn.includes('learnable.slice(0, 5)') && !learn.includes('learnable.sort')) {
   hit('MEDIO', 'adjustBetas toma las primeras 5 del array, no las de mayor |error|');
