@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "match": "Komarno vs Spartak Trnava",
+    "league": "Niké liga",
+    "probability": 81,
+    "minute": 74,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "late",
+    "timestamp": "2026-08-02T19:48:08.705Z",
+    "alertTimestamp": "2026-08-02T17:33:48.474Z"
+  },
+  {
+    "match": "Brann vs Rosenborg",
+    "league": "Eliteserien",
+    "probability": 85,
+    "minute": 61,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-02T19:48:08.871Z",
+    "alertTimestamp": "2026-08-02T17:33:48.474Z"
+  },
+  {
+    "match": "Napredak Krusevac vs Graficar Beograd",
+    "league": "Prva Liga",
+    "probability": 85,
+    "minute": 73,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "late",
+    "timestamp": "2026-08-02T19:48:08.954Z",
+    "alertTimestamp": "2026-08-02T17:33:48.474Z"
+  },
+  {
+    "match": "Deportivo Riestra vs Barracas Central",
+    "league": "Liga Profesional Argentina -",
+    "probability": 83,
+    "minute": 49,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-02T19:48:09.896Z",
+    "alertTimestamp": "2026-08-02T17:33:48.474Z"
+  }
+]
