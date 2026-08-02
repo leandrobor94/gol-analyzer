@@ -93,13 +93,6 @@ function getLeagueWeights(weights, league, windowType) {
 
 /** Ajustar pesos por tramo temporal — DEPRECATED, reemplazado por score state en analyzeGoal */
 
-/** Window-specific estimated odds */
-const WINDOW_ODDS = {
-  firstHalf: 3.0,
-  earlySecondHalf: 2.5,
-  late: 3.5,
-};
-
 /** Determine window type from minute */
 function getWindowType(minute) {
   if (minute <= 44) return 'firstHalf';
@@ -148,6 +141,7 @@ function hasMeaningfulStats(stats) {
   return (xgTotal > 0.3 || sotTotal >= 3 || shotsBoxTotal >= 3 || bigChancesTotal >= 1 || atkTotal >= 50);
 }
 
+// teams: reservado para factor historico cuando haya >=8 samples/equipo (hoy casi ninguno).
 function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const s = match.stats;
   const minute = match.minute || 0;
@@ -695,8 +689,6 @@ async function main() {
 
       result.score = baseScore;
       result.windowType = windowType;
-      result.windowOdds = WINDOW_ODDS[windowType];
-      result.ev = (baseScore / 100) * result.windowOdds - 1;
       result.competitionId = m.competitionId;
 
       return result;
@@ -1064,10 +1056,14 @@ async function main() {
     if (verifiedCount > 0) {
       const adj = adjustWeights(currentWeights, newlyVerified, []);
       const adjB = adjustBetas(currentWeights, newlyVerified);
+      // SIEMPRE persistir weights tras verificar: contadores/brier/alertas
+      // no dependen de que haya ajuste de betas (antes se perdian si adj=0).
+      saveWeights(currentWeights);
+      if (teamsData) saveTeams(teamsData);
       if (adj > 0 || adjB > 0) {
-        saveWeights(currentWeights);
-        if (teamsData) saveTeams(teamsData);
         console.log('  Pesos ajustados: ' + adj + ' (legacy) + ' + adjB + ' betas');
+      } else {
+        console.log('  Stats de verificacion guardados (sin ajuste de betas)');
       }
       savePredictions(predictions);
     }

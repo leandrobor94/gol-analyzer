@@ -2087,14 +2087,14 @@
   },
   "stats": {
     "predictionsCount": 0,
-    "correctScore": 0,
+    "correctScore": 88,
     "correctScorer": 0,
     "createdCount": 211,
-    "verifiedCount": 0,
-    "brierScore": null,
-    "brierCount": 0,
-    "alertCount": 0,
-    "alertHits": 0
+    "verifiedCount": 170,
+    "brierScore": 0.2736,
+    "brierCount": 170,
+    "alertCount": 6,
+    "alertHits": 4
   },
   "windows": {
     "firstHalf": {
@@ -2178,7 +2178,7 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-02T20:43:17.167Z",
+  "lastUpdated": "2026-08-02T21:07:23.074Z",
   "alertedMatches": {
     "4782374_firstHalf": {
       "timestamp": 1785695745711,

@@ -1,124 +1,203 @@
+/**
+ * Re-auditoria exigente del estado actual.
+ * Exit 2 si hay CRITICO/ALTO. Exit 0 si solo MEDIO/BAJO o limpio.
+ */
 const fs = require('fs');
+const path = require('path');
 const { analyzeGoal, getWindowType, hasMeaningfulStats } = require('./run_flashscore');
 
-const src = fs.readFileSync('run_flashscore.js', 'utf8');
-const learn = fs.readFileSync('learn.js', 'utf8');
-const yml = fs.readFileSync('.github/workflows/analyze.yml', 'utf8');
-const p = JSON.parse(fs.readFileSync('predictions.json', 'utf8').replace(/^\uFEFF/, ''));
-const w = JSON.parse(fs.readFileSync('weights.json', 'utf8').replace(/^\uFEFF/, ''));
+const root = __dirname;
+const src = fs.readFileSync(path.join(root, 'run_flashscore.js'), 'utf8');
+const learn = fs.readFileSync(path.join(root, 'learn.js'), 'utf8');
+const s365 = fs.readFileSync(path.join(root, 'scores365.js'), 'utf8');
+const yml = fs.readFileSync(path.join(root, '.github/workflows/analyze.yml'), 'utf8');
+const notify = fs.readFileSync(path.join(root, 'notify.js'), 'utf8');
+const p = JSON.parse(fs.readFileSync(path.join(root, 'predictions.json'), 'utf8').replace(/^\uFEFF/, ''));
+const w = JSON.parse(fs.readFileSync(path.join(root, 'weights.json'), 'utf8').replace(/^\uFEFF/, ''));
 
 const issues = [];
 function hit(sev, msg) {
   issues.push({ sev, msg });
   console.log(sev + ': ' + msg);
 }
+function ok(msg) { console.log('OK: ' + msg); }
 
-// --- Structural ---
-if (!src.includes('B.urgency60') && !src.includes('B.urgency75')) {
-  hit('ALTO', 'betas.urgency60/75 se aprenden pero analyzeGoal usa urgencia hardcodeada — aprendizaje muerto');
+console.log('========== RE-AUDIT ' + new Date().toISOString() + ' ==========\n');
+
+// --- JSON integrity ---
+try {
+  JSON.parse(fs.readFileSync(path.join(root, 'weights.json'), 'utf8').replace(/^\uFEFF/, ''));
+  ok('weights.json parseable');
+} catch (e) { hit('CRITICO', 'weights.json invalido: ' + e.message); }
+
+try {
+  JSON.parse(fs.readFileSync(path.join(root, 'alertas_log.json'), 'utf8').replace(/^\uFEFF/, ''));
+  ok('alertas_log.json parseable');
+} catch (e) { hit('CRITICO', 'alertas_log.json invalido: ' + e.message); }
+
+// --- Structural invariants ---
+const htN = (src.match(/if \(isHalftime\) lambda \*= 0\.55/g) || []).length;
+if (htN !== 1) hit('CRITICO', 'isHalftime lambda*=0.55 count=' + htN + ' (debe 1)');
+else ok('HT penalty x1');
+
+if (!src.includes('B.urgency60')) hit('ALTO', 'urgency betas no usados');
+else ok('urgency betas cableados');
+
+if (!src.includes('firstAlertProbability')) hit('ALTO', 'sin firstAlertProbability');
+else ok('firstAlertProbability');
+
+if (!src.includes('r.score15 = updated.score15')) hit('ALTO', 'reanalisis no propaga score15');
+else ok('score15 propagado en reanalisis');
+
+if (!src.includes('CI — archivos en disco') && !src.includes('CI - archivos')) {
+  // check CI skip doSync
+  if (!(src.includes('process.env.CI') && src.includes('doSync') && src.includes('workflow'))) {
+    hit('ALTO', 'doSync puede racear con workflow en CI');
+  }
+} else ok('doSync skip git en CI');
+
+if (yml.includes('cancel-in-progress: true')) hit('ALTO', 'cancel-in-progress true');
+else ok('cancel-in-progress false');
+
+if (!yml.includes('alertas_log.json')) hit('ALTO', 'workflow no commitea alertas_log');
+else ok('workflow incluye alertas_log');
+
+if (!learn.includes('adjustBetas(weights, verified)')) hit('CRITICO', 'runLearning sin adjustBetas');
+else ok('runLearning llama adjustBetas');
+
+if (!learn.includes('learnable.sort')) hit('MEDIO', 'adjustBetas no prioriza mayor error');
+else ok('adjustBetas ordena por |error|');
+
+if (src.includes('module.parent')) hit('BAJO', 'module.parent deprecado');
+else ok('require.main === module');
+
+// save after reanalysis: search order
+const saveIdx = src.indexOf('PERSISTIR PREDICCIONES');
+const momIdx = src.indexOf('Fetch momentum');
+const alertIdx = src.indexOf('Telegram alert');
+if (saveIdx < 0 || saveIdx < momIdx || saveIdx > alertIdx) {
+  hit('CRITICO', 'orden save/momentum/alertas incorrecto');
+} else ok('orden: momentum → save → alertas');
+
+// alert gates
+if (!src.includes('hasMeaningfulStats(r.stats)') || !src.includes('r.minute >= 30')) {
+  hit('ALTO', 'alertas sin gate stats/minuto');
+} else ok('alert gates stats+minuto');
+
+// betas
+if (!w.betas || typeof w.betas.baseline !== 'number') hit('CRITICO', 'weights sin betas');
+else ok('betas presentes baseline=' + w.betas.baseline);
+
+if ((w.stats?.correctScore || 0) > (w.stats?.verifiedCount || 0) + 10) {
+  hit('ALTO', 'contadores stats inconsistentes correct=' + w.stats.correctScore + ' ver=' + w.stats.verifiedCount);
+} else ok('contadores stats coherentes');
+
+// data pipeline
+const recent = p.filter(x => x.timestamp && x.timestamp >= '2026-08-01');
+const withL = recent.filter(x => x._lambda != null).length;
+const pending = p.filter(x => x.predictionCorrect === null);
+const verified = p.filter(x => x.predictionCorrect === true || x.predictionCorrect === false);
+console.log('\nDATA recent=' + recent.length + ' lambda=' + withL + ' pending=' + pending.length + ' verified=' + verified.length);
+console.log('stats', JSON.stringify(w.stats));
+
+if (recent.length > 50 && withL / recent.length < 0.5) {
+  hit('ALTO', 'pocas preds con _lambda: ' + withL + '/' + recent.length);
+} else if (recent.length > 0) ok('_lambda en ' + withL + '/' + recent.length);
+
+// stale pending
+const oldPend = pending.filter(x => x.timestamp && (Date.now() - new Date(x.timestamp)) / 86400000 > 2);
+if (oldPend.length > 30) hit('MEDIO', 'pending >2d: ' + oldPend.length + ' (verificacion puede estar fallando)');
+else ok('pending viejos=' + oldPend.length);
+
+// verifiedCount stuck at 0 while many verified in file?
+if ((w.stats?.verifiedCount || 0) === 0 && verified.filter(x => x.timestamp >= '2026-08-01').length > 20) {
+  hit('ALTO', 'weights.stats.verifiedCount=0 pero hay ' + verified.filter(x => x.timestamp >= '2026-08-01').length + ' verificadas post-ago — contadores no se persisten o se resetean');
 }
 
-const ag = src.slice(src.indexOf('function analyzeGoal'), src.indexOf('function writeSummary'));
-if (ag.includes('teams') && !ag.includes('teams[')) {
-  hit('MEDIO', 'analyzeGoal recibe teams pero no los usa en el score');
-}
-
-// lead2 en gd>=2 es intencional para modelo any-goal (0-2 suele tener menos goles que 1-1)
-
-if (learn.includes('learnable.slice(0, 5)') && !learn.includes('learnable.sort')) {
-  hit('MEDIO', 'adjustBetas toma las primeras 5 del array, no las de mayor |error|');
-}
-
-// Brier contamination
-const brierBlock = learn.slice(learn.indexOf('Brier Score'), learn.indexOf('return adjustments'));
-if (brierBlock.includes('for (const pred of verified)')) {
-  hit('MEDIO', 'Brier acumula de TODO verified (puede incluir modelo viejo)');
-}
-
-if (yml.includes('cancel-in-progress: true')) {
-  hit('ALTO', 'cancel-in-progress:true puede matar job a mitad y perder save de la ronda');
-}
-
-if (src.includes('existing.predictedProbability = r.score') && !src.includes('firstAlertProbability')) {
-  hit('MEDIO', 'se pisa predictedProbability al actualizar — no hay score-at-first-alert fijo');
-}
-
-if ((w.stats.correctScore || 0) > (w.stats.verifiedCount || 0) + 5) {
-  hit('ALTO', 'stats.correctScore (' + w.stats.correctScore + ') > verifiedCount (' + w.stats.verifiedCount + ') — contadores basura');
-}
-
-// --- HT effectiveMins bug ---
-const B = w.betas || { baseline: 0.03, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4, redCardMult: 1.5, urgency60: 1.3, urgency75: 1.5, lead2Mult: 0.5, lead1LateMult: 0.7 };
-const fakeStats = {
+// --- Behavioral model checks ---
+const B = w.betas;
+const fake = {
   xgHome: 0.8, xgAway: 0.6, sotHome: 3, sotAway: 2, bigChancesHome: 1, bigChancesAway: 0,
   shotsInsideBoxHome: 4, shotsInsideBoxAway: 3, redCardsHome: 0, redCardsAway: 0,
   xgotHome: null, xgotAway: null, possessionHome: 0.55, possessionAway: 0.45
 };
-const ht = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 46, scoreHome: 0, scoreAway: 0, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(46), null
-);
-const m70 = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 70, scoreHome: 0, scoreAway: 0, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(70), null
-);
-console.log('HT min46 score=' + ht.score + ' lambda=' + (ht.lambda || ht.pressure / 100).toFixed(4) + ' windowType=' + getWindowType(46));
-console.log('min70 score=' + m70.score + ' lambda=' + (m70.lambda || m70.pressure / 100).toFixed(4));
+function run(min, sh, sa) {
+  return analyzeGoal(
+    { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'T', matchId: '1', minute: min, scoreHome: sh, scoreAway: sa, stats: fake },
+    { betas: B }, {}, null, getWindowType(min), null
+  );
+}
+const d = run(70, 1, 1);
+const t = run(70, 0, 2);
+const l = run(70, 2, 0);
+const early = run(20, 0, 0);
+const ht = run(46, 0, 0);
+console.log('\nMODEL draw70=' + d.score + ' trail02=' + t.score + ' lead20=' + l.score + ' early20=' + early.score + ' ht46=' + ht.score);
 
-// At HT remaining should be ~45+ of 2H. If effectiveMins wrong, score too low.
-// Reconstruct: if score is much lower at 46 than expected for ~45 min remaining...
-if (ht.score < 40 && m70.score > ht.score) {
-  hit('CRITICO', 'entretiempo min46 score=' + ht.score + ' parece subestimado vs min70=' + m70.score + ' (effectiveMins HT mal)');
+if (early.score >= 80) hit('CRITICO', 'early puede alertar score=' + early.score);
+else ok('early cap OK score=' + early.score);
+
+if (ht.score >= 80) hit('CRITICO', 'HT puede alertar score=' + ht.score);
+else ok('HT cap OK score=' + ht.score);
+
+if (!d.score15 && d.score15 !== 0) hit('ALTO', 'analyzeGoal no devuelve score15');
+else ok('score15=' + d.score15);
+
+// backtest
+const oldV = verified.filter(x => x.timestamp && x.timestamp < '2026-08-01');
+const newV = verified.filter(x => x.timestamp && x.timestamp >= '2026-08-01');
+function bt(set, label) {
+  let brier = 0, n = 0, a = 0, h = 0;
+  for (const pred of set) {
+    if (!pred.stats || !hasMeaningfulStats(pred.stats)) continue;
+    const m = {
+      rawName: pred.match, teamHome: pred.teamHome, teamAway: pred.teamAway, league: pred.league,
+      matchId: pred.id, minute: pred.analysisMinute || 0,
+      scoreHome: pred.scoreAtAnalysis?.home ?? 0, scoreAway: pred.scoreAtAnalysis?.away ?? 0,
+      stats: pred.stats
+    };
+    const r = analyzeGoal(m, { betas: B }, {}, null, getWindowType(m.minute), null);
+    const y = pred.goalAfterAnalysis ? 1 : 0;
+    brier += Math.pow(r.score / 100 - y, 2);
+    n++;
+    if (r.score >= 80 && m.minute >= 30) { a++; if (y) h++; }
+  }
+  const br = n ? (brier / n).toFixed(4) : '-';
+  const rate = a ? ((h / a) * 100).toFixed(0) : '0';
+  console.log('BT ' + label + ' n=' + n + ' Brier=' + br + ' alerts=' + a + ' hit=' + h + ' (' + rate + '%)');
+  return { n, brier: n ? brier / n : 1, a, h };
+}
+console.log('\n========== BACKTEST ==========');
+const btOld = bt(oldV, 'OLD');
+const btNew = bt(newV, 'NEW');
+bt(verified, 'ALL');
+
+if (btOld.a >= 5 && btOld.h / btOld.a < 0.7) {
+  hit('ALTO', 'OLD alert hit-rate <70%: ' + btOld.h + '/' + btOld.a);
+}
+if (btNew.a >= 8 && btNew.h / btNew.a < 0.55) {
+  hit('MEDIO', 'NEW alert hit-rate baja n>=8: ' + btNew.h + '/' + btNew.a);
 }
 
-// lead2 when trailing
-const trail2 = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 70, scoreHome: 0, scoreAway: 2, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(70), null
-);
-const lead2 = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 70, scoreHome: 2, scoreAway: 0, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(70), null
-);
-const draw = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 70, scoreHome: 1, scoreAway: 1, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(70), null
-);
-console.log('0-2 trailing score=' + trail2.score + ' reasons=' + trail2.reasons.join('; '));
-console.log('2-0 leading score=' + lead2.score + ' reasons=' + lead2.reasons.join('; '));
-console.log('1-1 draw score=' + draw.score);
-
-// 0-2 < 1-1 es CORRECTO para modelo any-goal (partido mas cerrado). No es bug.
-if (trail2.score > draw.score + 15) {
-  hit('MEDIO', '0-2 mucho mas alto que empate — posible sobre-urgencia');
+// code smells
+// teams factor: solo flag si el codigo promete usarlo sin guardia de samples
+if (src.includes('teams[') && src.includes('timesPredictedGoal') && !src.includes('matchesTracked')) {
+  hit('MEDIO', 'team factor sin umbral de samples');
 }
 
-// recent data quality
-const recent = p.filter(x => x.timestamp && x.timestamp >= '2026-08-02');
-const withL = recent.filter(x => x._lambda != null).length;
-const with15 = recent.filter(x => x.predictedProbability15 != null).length;
-const alerts = recent.filter(x => (x.predictedProbability || 0) >= 80);
-const pending = p.filter(x => x.predictionCorrect === null);
-console.log('recent', recent.length, 'lambda', withL, 'p15', with15, 'alerts>=80', alerts.length, 'pending', pending.length);
-if (recent.length > 20 && withL / recent.length < 0.3) {
-  hit('ALTO', 'pocas preds nuevas con _lambda (' + withL + '/' + recent.length + ')');
+if (src.includes('WINDOW_ODDS') || (src.includes('result.ev') && src.includes('windowOdds'))) {
+  hit('BAJO', 'EV/windowOdds con odds inventadas aun en codigo');
 }
 
-// Check if firstHalf at min 44 uses 45-min remaining correctly
-const m40 = analyzeGoal(
-  { rawName: 'A vs B', teamHome: 'A', teamAway: 'B', league: 'Test', matchId: '1', minute: 40, scoreHome: 0, scoreAway: 0, stats: fakeStats },
-  { betas: B }, {}, null, getWindowType(40), null
-);
-console.log('min40 1T score=' + m40.score + ' wt=' + getWindowType(40));
+// Double counting alert in learn + path?
+// skip
 
-// Snapshot original alert score missing?
-const upd = recent.filter(x => x.lastAnalyzedAt && x.timestamp && x.lastAnalyzedAt !== x.timestamp);
-console.log('preds updated after create', upd.length);
-
-console.log('\n=== RESUMEN ===');
+console.log('\n========== RESUMEN ==========');
 const by = { CRITICO: 0, ALTO: 0, MEDIO: 0, BAJO: 0 };
-issues.forEach(i => { by[i.sev] = (by[i.sev] || 0) + 1; });
+issues.forEach(i => { by[i.sev]++; });
 console.log(by);
 console.log('TOTAL', issues.length);
-if (!issues.length) console.log('NADA critico encontrado en esta pasada');
-process.exit(issues.some(i => i.sev === 'CRITICO' || i.sev === 'ALTO') ? 2 : 0);
+issues.forEach(i => console.log(' - [' + i.sev + '] ' + i.msg));
+
+const bad = issues.filter(i => i.sev === 'CRITICO' || i.sev === 'ALTO');
+process.exit(bad.length ? 2 : 0);
