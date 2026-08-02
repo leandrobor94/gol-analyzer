@@ -781,12 +781,12 @@
       "falseNegatives": 0
     },
     "Segunda Division - Temporada": {
-      "matchesTracked": 2,
+      "matchesTracked": 3,
       "totalGoals": 4,
-      "totalXg": 0.3,
-      "totalSot": 2,
+      "totalXg": 0.75,
+      "totalSot": 5,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.15999999999999998,
+      "totalPossessionDiff": 0.18,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
@@ -1420,8 +1420,8 @@
       "falseNegatives": 0
     },
     "Copa de la Liga": {
-      "matchesTracked": 13,
-      "totalGoals": 55,
+      "matchesTracked": 14,
+      "totalGoals": 58,
       "totalXg": 3.5999999999999996,
       "totalSot": 16,
       "totalShotsInsideBox": 15,
@@ -1443,20 +1443,64 @@
       "corners": 6,
       "possession": 4.5,
       "saves": 3
+    },
+    "Carioca, Serie A2 -": {
+      "matchesTracked": 1,
+      "totalGoals": 5,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Super Liga": {
+      "matchesTracked": 2,
+      "totalGoals": 5,
+      "totalXg": 0.47,
+      "totalSot": 1,
+      "totalShotsInsideBox": 4,
+      "totalPossessionDiff": 1.08,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Primera B": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.36000000000000004,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Super Cup - Final": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 1.19,
+      "totalSot": 5,
+      "totalShotsInsideBox": 4,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
     "predictionsCount": 1200,
-    "correctScore": 217,
+    "correctScore": 222,
     "correctScorer": 0,
-    "brierScore": null,
-    "brierCount": 0,
-    "createdCount": 0,
-    "verifiedCount": 0
+    "createdCount": 65,
+    "verifiedCount": 29,
+    "brierScore": 0.6401,
+    "brierCount": 22
   },
   "windows": {
     "firstHalf": {
-      "xg": 35.2,
+      "xg": 35.3,
       "shotsOnTarget": 20.2,
       "shotsInsideBox": 15,
       "bigChances": 14,
@@ -1476,8 +1520,8 @@
       "matchContext": 5
     },
     "earlySecondHalf": {
-      "xg": 29.8,
-      "shotsOnTarget": 17.7,
+      "xg": 29.6,
+      "shotsOnTarget": 17.6,
       "shotsInsideBox": 13.8,
       "bigChances": 11.8,
       "totalShots": 4.9,
@@ -1485,34 +1529,34 @@
       "hitWoodwork": 4.9,
       "xA": 5.9,
       "touchesOppBox": 5.9,
-      "scoreNeeds": 9.8,
-      "timePressure": 7.9,
+      "scoreNeeds": 9.7,
+      "timePressure": 7.8,
       "corners": 3.9,
       "possession": 2.9,
       "saves": 2,
       "goalsScored": -3.9,
       "redCard": 19.7,
-      "teamHistory": 7.9,
+      "teamHistory": 7.8,
       "matchContext": 4.9
     },
     "late": {
-      "xg": 23.2,
-      "shotsOnTarget": 14.2,
-      "shotsInsideBox": 11.3,
-      "bigChances": 9.4,
+      "xg": 23.4,
+      "shotsOnTarget": 14.3,
+      "shotsInsideBox": 11.4,
+      "bigChances": 9.5,
       "totalShots": 3.9,
       "xgot": 7.4,
       "hitWoodwork": 3.9,
       "xA": 4.8,
       "touchesOppBox": 4.8,
-      "scoreNeeds": 13.2,
-      "timePressure": 15.1,
+      "scoreNeeds": 13.3,
+      "timePressure": 15.2,
       "corners": 4.8,
       "possession": 1.9,
       "saves": 1.9,
       "goalsScored": -4.7,
       "redCard": 23.2,
-      "teamHistory": 9.4,
+      "teamHistory": 9.5,
       "matchContext": 5.7
     }
   },
@@ -1536,16 +1580,16 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-02T14:54:26.460Z",
+  "lastUpdated": "2026-08-02T15:31:05.121Z",
   "alertedMatches": {},
   "betas": {
-    "baseline": 0.03,
-    "xgWeight": 0.8,
-    "bcWeight": 1.2,
-    "sotWeight": 0.4,
+    "baseline": 0.035,
+    "xgWeight": 1.059,
+    "bcWeight": 1.589,
+    "sotWeight": 0.53,
     "redCardMult": 1.5,
-    "urgency60": 1.3,
-    "urgency75": 1.5,
+    "urgency60": 1.415,
+    "urgency75": 1.633,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
