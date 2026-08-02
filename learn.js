@@ -418,7 +418,12 @@ function adjustBetas(weights, verified) {
     const error = (pred.goalAfterAnalysis ? 1 : 0) - prob;
     return Math.abs(error) >= 0.15;
   });
-  // Cap por ciclo: max 5 ajustes, lr bajo → no explotar betas en un batch grande
+  // Cap por ciclo: max 5 de MAYOR error, lr bajo → no explotar betas
+  learnable.sort((a, b) => {
+    const ea = Math.abs((a.goalAfterAnalysis ? 1 : 0) - (a.predictedProbability || 0) / 100);
+    const eb = Math.abs((b.goalAfterAnalysis ? 1 : 0) - (b.predictedProbability || 0) / 100);
+    return eb - ea;
+  });
   const batch = learnable.slice(0, 5);
   const lr = Math.min(0.02, (weights.learningRate || 0.03) / Math.max(batch.length, 1));
   let adjustments = 0;
@@ -452,18 +457,19 @@ function adjustBetas(weights, verified) {
     if (typeof betas[k] === 'number') betas[k] = Math.round(betas[k] * 1000) / 1000;
   }
   
-  // Brier Score acumulativo (no solo del lote actual)
+  // Brier solo de preds del modelo actual (_lambda) — no contaminar con scores viejos
   if (verified.length > 0) {
     let batchSum = 0;
     let batchCount = 0;
     for (const pred of verified) {
-      if (pred.predictionCorrect !== null) {
-        const p = (pred.predictedProbability || 0) / 100;
-        const y = pred.goalAfterAnalysis ? 1 : 0;
-        batchSum += Math.pow(p - y, 2);
-        batchCount++;
-      }
-      if ((pred.predictedProbability || 0) >= 80 && pred.alertCorrect !== undefined && pred.alertCorrect !== null) {
+      if (pred.predictionCorrect === null) continue;
+      if (pred._lambda == null && pred.predictedProbability15 == null) continue;
+      const p = (pred.predictedProbability || 0) / 100;
+      const y = pred.goalAfterAnalysis ? 1 : 0;
+      batchSum += Math.pow(p - y, 2);
+      batchCount++;
+      const alertP = pred.firstAlertProbability != null ? pred.firstAlertProbability : pred.predictedProbability;
+      if ((alertP || 0) >= 80 && pred.alertCorrect !== undefined && pred.alertCorrect !== null) {
         weights.stats.alertCount = (weights.stats.alertCount || 0) + 1;
         if (pred.alertCorrect) weights.stats.alertHits = (weights.stats.alertHits || 0) + 1;
       }

@@ -2086,6 +2086,7 @@
     }
   },
   "stats": {
+<<<<<<< HEAD
     "predictionsCount": 1200,
     "correctScore": 360,
     "correctScorer": 0,
@@ -2094,6 +2095,16 @@
     "brierScore": 0.2621,
     "brierCount": 49,
     "alertCount": 2,
+=======
+    "predictionsCount": 0,
+    "correctScore": 0,
+    "correctScorer": 0,
+    "createdCount": 192,
+    "verifiedCount": 0,
+    "brierScore": null,
+    "brierCount": 0,
+    "alertCount": 0,
+>>>>>>> de357d2 (fix: re-auditoria de lo entregado — bugs reales cerrados)
     "alertHits": 0
   },
   "windows": {
@@ -2178,7 +2189,11 @@
     "teamHistory": 8,
     "matchContext": 5
   },
+<<<<<<< HEAD
   "lastUpdated": "2026-08-02T20:38:08.386Z",
+=======
+  "lastUpdated": "2026-08-02T20:38:05.600Z",
+>>>>>>> de357d2 (fix: re-auditoria de lo entregado — bugs reales cerrados)
   "alertedMatches": {
     "4782374_firstHalf": {
       "timestamp": 1785695745711,

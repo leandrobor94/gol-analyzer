@@ -155,22 +155,23 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   const gd = Math.abs(match.scoreHome - match.scoreAway);
   
   // ─── MINUTOS EFECTIVOS ───
-  // Si predecimos "GOL 1T", el tiempo real que queda es hasta el min 45.
-  // Si predecimos 2T/tarde, es hasta el 90 + descuento.
-  // Esto evita que a los 41' el modelo calcule con 49 min cuando solo quedan 4+desc.
+  // 1T: tiempo hasta el 45+desc. HT: todo el 2T por delante (~47). 2T: hasta 90+desc.
   const isHalftime = minute >= 44 && minute <= 48;
   const veryEarly = minute < 30;
   let minsRemaining;
-  if (windowType === 'firstHalf') {
-    minsRemaining = Math.max(1, 45 - minute) + 2; // +2 min descuento 1T típico
+  if (isHalftime) {
+    minsRemaining = 47; // 2T completo por empezar (45+2 desc tipico)
+  } else if (windowType === 'firstHalf') {
+    minsRemaining = Math.max(1, 45 - minute) + 2;
   } else if (minute >= 85 && minute < 90) {
-    minsRemaining = (90 - minute) + 4; // descuento estimado
+    minsRemaining = (90 - minute) + 4;
   } else if (minute >= 90) {
-    minsRemaining = Math.max(1, 98 - minute); // descuento real
+    minsRemaining = Math.max(1, 98 - minute);
   } else {
     minsRemaining = 90 - minute;
   }
-  const effectiveMins = isHalftime ? Math.max(5, Math.round(minsRemaining * 0.65)) : minsRemaining;
+  // HT: partido parado → bajar un poco la ventana efectiva (incertidumbre táctica)
+  const effectiveMins = isHalftime ? Math.max(20, Math.round(minsRemaining * 0.75)) : minsRemaining;
   
   // Ventanas
   const preHT = minute >= 40 && minute <= 44 && windowType === 'firstHalf';
@@ -250,28 +251,31 @@ function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
   // 40-44' y 85-89' = picos de urgencia pre-descanso/pre-final
   const trailing = homeTrails || awayTrails;
   
+  // Urgencia del que pierde (betas aprendibles urgency60/75)
   if (trailing) {
     let urgency;
     if (gd >= 3) {
-      // Abajo por 3+ goles = partido definido, no hay urgencia real
       urgency = 0.65;
       reasons.push('Goleada en contra — partido definido');
     } else if (homeTrails) {
-      urgency = preFT ? 2.10 : (minute >= 75 ? 2.00 : minute >= 60 ? 1.60 : preHT ? 1.40 : minute >= 40 ? 1.25 : 1.05);
+      urgency = preFT ? Math.min(2.20, B.urgency75 * 1.40)
+        : (minute >= 75 ? Math.min(2.10, B.urgency75 * 1.33)
+          : minute >= 60 ? Math.min(1.70, B.urgency60 * 1.23)
+            : preHT ? 1.40 : minute >= 40 ? 1.25 : 1.05);
     } else {
-      urgency = preFT ? 1.60 : (minute >= 75 ? 1.50 : minute >= 60 ? 1.30 : preHT ? 1.20 : minute >= 40 ? 1.15 : 1.05);
+      urgency = preFT ? Math.min(1.70, B.urgency75 * 1.07)
+        : (minute >= 75 ? B.urgency75
+          : minute >= 60 ? B.urgency60
+            : preHT ? 1.20 : minute >= 40 ? 1.15 : 1.05);
     }
-    if (gd < 3) {
-      lambda *= urgency;
-      reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(1) + ')');
-    } else {
-      lambda *= urgency;
-    }
+    lambda *= urgency;
+    if (gd < 3) reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(2) + ')');
   }
-  // 0-0 llegando al final: ambos arriesgan (solo aplicar el boost mas fuerte)
   if (goals === 0 && preFT) lambda *= 1.20;
   else if (goals === 0 && minute >= 77) lambda *= 1.12;
-  
+
+  // Marcador holgado reduce goles esperados del partido (ANY goal).
+  // Correcto que 0-2 < 1-1: el modelo predice gol en el partido, no solo comeback.
   if (gd >= 2) {
     lambda *= B.lead2Mult;
     reasons.push('Ventaja c\u00f3moda (\u00d7' + B.lead2Mult.toFixed(2) + ')');
@@ -736,7 +740,9 @@ async function main() {
         ranked.forEach(r => {
           const wt = getWindowType(r.minute);
           const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt);
-          r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons;
+          r.score = updated.score; r.score15 = updated.score15; r.lambda = updated.lambda;
+          r.pressure = updated.pressure; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow;
+          r.reasons = updated.reasons; r.predictedScorer = updated.predictedScorer; r.whoText = updated.whoText;
         });
         ranked.sort((a, b) => b.score - a.score);
       }
@@ -758,7 +764,9 @@ async function main() {
               momFound++;
               const wt = getWindowType(r.minute);
               const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt, momResults[key]);
-              r.score = updated.score; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow; r.reasons = updated.reasons;
+              r.score = updated.score; r.score15 = updated.score15; r.lambda = updated.lambda;
+              r.pressure = updated.pressure; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow;
+              r.reasons = updated.reasons; r.predictedScorer = updated.predictedScorer; r.whoText = updated.whoText;
             }
           });
           ranked.sort((a, b) => b.score - a.score);
@@ -824,8 +832,17 @@ async function main() {
         const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
         const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
         if (minuteAdvanced || scoreChanged || crossed80) {
+          // Conservar primer score de alerta para evaluar precision real del aviso
+          if ((existing.predictedProbability || 0) >= 80 && existing.firstAlertProbability == null) {
+            existing.firstAlertProbability = existing.predictedProbability;
+            existing.firstAlertMinute = existing.analysisMinute;
+          }
+          if (r.score >= 80 && existing.firstAlertProbability == null) {
+            existing.firstAlertProbability = r.score;
+            existing.firstAlertMinute = r.minute;
+          }
           existing.predictedProbability = r.score;
-          existing.predictedProbability15 = r.score15 || null;
+          existing.predictedProbability15 = r.score15 != null ? r.score15 : null;
           existing.windowType = r.windowType;
           existing.predictedScorer = r.predictedScorer;
           existing.predictedTimeWindow = r.timeWindow;
@@ -841,7 +858,9 @@ async function main() {
             id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
             teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now, lastAnalyzedAt: now,
             analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-            predictedProbability: r.score, predictedProbability15: r.score15 || null,
+            predictedProbability: r.score, predictedProbability15: r.score15 != null ? r.score15 : null,
+            firstAlertProbability: r.score >= 80 ? r.score : null,
+            firstAlertMinute: r.score >= 80 ? r.minute : null,
             predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
             windowType: r.windowType, _lambda: r.lambda != null ? r.lambda : (r.pressure || 0) / 100,
             finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null,
@@ -1004,8 +1023,9 @@ async function main() {
         const prob = (pred.predictedProbability || 0) / 100;
         // Binario calibrado en 50% (metricas generales). Alertas usan alertCorrect aparte.
         pred.predictionCorrect = scoreChanged ? (prob >= 0.5) : (prob < 0.5);
-        // Metricas de ALERTA (umbral operativo 80%). Contadores alert* los actualiza adjustBetas.
-        if ((pred.predictedProbability || 0) >= 80) {
+        // Metricas de ALERTA: usar firstAlertProbability si existe (score al momento del aviso)
+        const alertP = pred.firstAlertProbability != null ? pred.firstAlertProbability : pred.predictedProbability;
+        if ((alertP || 0) >= 80) {
           pred.alertCorrect = scoreChanged;
           logAlertVerification(pred, scoreChanged);
         }

@@ -5,11 +5,11 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
 
-# Evitar jobs solapados: dos instancias corriendo a la vez generan race
-# conditions en git push y podrian duplicar alertas
+# Evitar jobs solapados. cancel-in-progress:false para NO matar un analisis
+# a mitad (perdiamos save/push). El nuevo espera a que termine el actual.
 concurrency:
   group: gol-analyzer
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   analyze:
