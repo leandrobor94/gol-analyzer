@@ -15,6 +15,8 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -49,6 +51,6 @@ jobs:
           else
             git diff --cached --quiet || git commit -m "auto: aprendizaje ronda ${{ github.run_id }}"
           fi
-          git pull --rebase || true
-          git push
+          git pull --rebase 2>/dev/null || true
+          git push 2>/dev/null || true
         shell: bash
