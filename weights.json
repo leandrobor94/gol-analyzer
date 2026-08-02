@@ -3,12 +3,12 @@
   "learningRate": 0.05,
   "betas": {
     "baseline": 0.03,
-    "xgWeight": 0.798,
-    "bcWeight": 1.196,
-    "sotWeight": 0.399,
+    "xgWeight": 0.8,
+    "bcWeight": 1.199,
+    "sotWeight": 0.4,
     "redCardMult": 1.5,
-    "urgency60": 1.298,
-    "urgency75": 1.498,
+    "urgency60": 1.3,
+    "urgency75": 1.5,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
@@ -51,6 +51,21 @@
     },
     "Juegos Centroamericanos y del Caribe (F)": {
       "baseline": 0.029949463623872092
+    },
+    "Copa de Brasil - Octavos de final": {
+      "baseline": 0.029863351619999996
+    },
+    "Primera Division -": {
+      "baseline": 0.0300423954731292
+    },
+    "Copa de Primera -": {
+      "baseline": 0.03008325204753296
+    },
+    "Torneo BetPlay Dimayor - Finalización": {
+      "baseline": 0.030135145300531237
+    },
+    "Liga Panameña - Apertura - Conferencia Oeste": {
+      "baseline": 0.0300145099572767
     }
   },
   "global": {
@@ -83,7 +98,7 @@
       "correctAt70": 1,
       "falsePositives": 1,
       "falseNegatives": 0,
-      "xg": 29.4,
+      "xg": 29.3,
       "shotsOnTarget": 17.6,
       "shotsInsideBox": 13.7,
       "bigChances": 11.7,
@@ -338,7 +353,7 @@
       "falsePositives": 3,
       "falseNegatives": 1,
       "xg": 19.9,
-      "shotsOnTarget": 12,
+      "shotsOnTarget": 11.9,
       "shotsInsideBox": 9.3,
       "bigChances": 8,
       "totalShots": 3.3,
@@ -400,40 +415,54 @@
       "falseNegatives": 0
     },
     "Liga de": {
-      "matchesTracked": 14,
-      "totalGoals": 41,
-      "totalXg": 24.77,
-      "totalSot": 87,
-      "totalShotsInsideBox": 121,
-      "totalPossessionDiff": 3.02,
-      "correctAt70": 1,
+      "matchesTracked": 16,
+      "totalGoals": 47,
+      "totalXg": 27.31,
+      "totalSot": 97,
+      "totalShotsInsideBox": 134,
+      "totalPossessionDiff": 3.46,
+      "correctAt70": 3,
       "falsePositives": 1,
       "falseNegatives": 1,
-      "xg": 32.7,
-      "shotsOnTarget": 19.6,
+      "xg": 32.8,
+      "shotsOnTarget": 19.7,
       "shotsInsideBox": 15.3,
       "bigChances": 13.1,
       "totalShots": 5.5,
       "xgot": 10.9,
       "hitWoodwork": 5.5,
-      "xA": 6.5,
-      "touchesOppBox": 6.5,
+      "xA": 6.6,
+      "touchesOppBox": 6.6,
       "scoreNeeds": 10.9,
-      "timePressure": 8.7,
+      "timePressure": 8.8,
       "corners": 4.4,
       "possession": 3.3,
       "saves": 2.2
     },
     "Copa de Primera -": {
-      "matchesTracked": 4,
-      "totalGoals": 11,
-      "totalXg": 1.95,
-      "totalSot": 13,
+      "matchesTracked": 5,
+      "totalGoals": 14,
+      "totalXg": 2.25,
+      "totalSot": 15,
       "totalShotsInsideBox": 0,
       "totalPossessionDiff": 0.8600000000000001,
       "correctAt70": 0,
       "falsePositives": 0,
-      "falseNegatives": 3
+      "falseNegatives": 3,
+      "xg": 31.3,
+      "shotsOnTarget": 18.8,
+      "shotsInsideBox": 14.6,
+      "bigChances": 12.5,
+      "totalShots": 5.2,
+      "xgot": 10.4,
+      "hitWoodwork": 5.2,
+      "xA": 6.3,
+      "touchesOppBox": 6.3,
+      "scoreNeeds": 10.4,
+      "timePressure": 8.3,
+      "corners": 4.2,
+      "possession": 3.1,
+      "saves": 2.1
     },
     "Primera": {
       "matchesTracked": 12,
@@ -552,29 +581,29 @@
       "falseNegatives": 0
     },
     "Liga Pro": {
-      "matchesTracked": 6,
-      "totalGoals": 13,
-      "totalXg": 9.32,
-      "totalSot": 32,
-      "totalShotsInsideBox": 43,
-      "totalPossessionDiff": 1.08,
-      "correctAt70": 0,
+      "matchesTracked": 7,
+      "totalGoals": 16,
+      "totalXg": 10.95,
+      "totalSot": 37,
+      "totalShotsInsideBox": 51,
+      "totalPossessionDiff": 1.1800000000000002,
+      "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 24.2,
-      "shotsOnTarget": 14.5,
-      "shotsInsideBox": 11.3,
-      "bigChances": 9.7,
-      "totalShots": 4,
-      "xgot": 8.1,
-      "hitWoodwork": 4,
-      "xA": 4.8,
-      "touchesOppBox": 4.8,
-      "scoreNeeds": 8.1,
-      "timePressure": 6.5,
-      "corners": 3.2,
-      "possession": 2.4,
-      "saves": 1.6
+      "xg": 25.6,
+      "shotsOnTarget": 15.3,
+      "shotsInsideBox": 11.9,
+      "bigChances": 10.2,
+      "totalShots": 4.3,
+      "xgot": 8.5,
+      "hitWoodwork": 4.3,
+      "xA": 5.1,
+      "touchesOppBox": 5.1,
+      "scoreNeeds": 8.5,
+      "timePressure": 6.8,
+      "corners": 3.4,
+      "possession": 2.6,
+      "saves": 1.7
     },
     "Serie D - Grupo I": {
       "matchesTracked": 2,
@@ -795,12 +824,12 @@
       "falseNegatives": 0
     },
     "Liga AUF Uruguaya -": {
-      "matchesTracked": 3,
-      "totalGoals": 2,
-      "totalXg": 2.4000000000000004,
-      "totalSot": 16,
+      "matchesTracked": 4,
+      "totalGoals": 5,
+      "totalXg": 2.7,
+      "totalSot": 18,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.2800000000000001,
+      "totalPossessionDiff": 0.74,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
@@ -850,7 +879,7 @@
       "falseNegatives": 3,
       "xg": 31.8,
       "shotsOnTarget": 19.1,
-      "shotsInsideBox": 14.9,
+      "shotsInsideBox": 14.8,
       "bigChances": 12.7,
       "totalShots": 5.3,
       "xgot": 10.6,
@@ -1250,12 +1279,12 @@
       "falseNegatives": 0
     },
     "Brasileirao": {
-      "matchesTracked": 3,
-      "totalGoals": 10,
-      "totalXg": 3,
-      "totalSot": 20,
+      "matchesTracked": 4,
+      "totalGoals": 11,
+      "totalXg": 4.5,
+      "totalSot": 30,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.6199999999999999,
+      "totalPossessionDiff": 0.74,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -1283,8 +1312,8 @@
       "falseNegatives": 0
     },
     "Liga FUTVE 2": {
-      "matchesTracked": 6,
-      "totalGoals": 17,
+      "matchesTracked": 7,
+      "totalGoals": 21,
       "totalXg": 2.3600000000000003,
       "totalSot": 0,
       "totalShotsInsideBox": 0,
@@ -1292,20 +1321,20 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 2,
-      "xg": 31.7,
-      "shotsOnTarget": 19,
-      "shotsInsideBox": 14.8,
-      "bigChances": 12.7,
-      "totalShots": 5.3,
-      "xgot": 10.6,
-      "hitWoodwork": 5.3,
-      "xA": 6.3,
-      "touchesOppBox": 6.3,
-      "scoreNeeds": 10.6,
-      "timePressure": 8.4,
-      "corners": 4.2,
-      "possession": 3.2,
-      "saves": 2.1
+      "xg": 33.5,
+      "shotsOnTarget": 20.1,
+      "shotsInsideBox": 15.7,
+      "bigChances": 13.4,
+      "totalShots": 5.6,
+      "xgot": 11.2,
+      "hitWoodwork": 5.6,
+      "xA": 6.7,
+      "touchesOppBox": 6.7,
+      "scoreNeeds": 11.2,
+      "timePressure": 8.9,
+      "corners": 4.5,
+      "possession": 3.4,
+      "saves": 2.2
     },
     "Serie D - Grupo 6": {
       "matchesTracked": 1,
@@ -1350,7 +1379,7 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1,
-      "xg": 28,
+      "xg": 27.9,
       "shotsOnTarget": 16.8,
       "shotsInsideBox": 13,
       "bigChances": 11.2,
@@ -1435,12 +1464,12 @@
       "falseNegatives": 0
     },
     "División": {
-      "matchesTracked": 3,
-      "totalGoals": 6,
-      "totalXg": 3.66,
-      "totalSot": 10,
-      "totalShotsInsideBox": 21,
-      "totalPossessionDiff": 0.52,
+      "matchesTracked": 4,
+      "totalGoals": 7,
+      "totalXg": 4.12,
+      "totalSot": 12,
+      "totalShotsInsideBox": 23,
+      "totalPossessionDiff": 0.8400000000000001,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -1975,15 +2004,29 @@
       "falseNegatives": 0
     },
     "Primera Division -": {
-      "matchesTracked": 3,
-      "totalGoals": 7,
-      "totalXg": 0,
-      "totalSot": 0,
+      "matchesTracked": 5,
+      "totalGoals": 11,
+      "totalXg": 0.6,
+      "totalSot": 4,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.12000000000000005,
+      "totalPossessionDiff": 0.42000000000000004,
       "correctAt70": 1,
       "falsePositives": 0,
-      "falseNegatives": 0
+      "falseNegatives": 0,
+      "xg": 24.6,
+      "shotsOnTarget": 14.8,
+      "shotsInsideBox": 11.5,
+      "bigChances": 9.8,
+      "totalShots": 4.1,
+      "xgot": 8.2,
+      "hitWoodwork": 4.1,
+      "xA": 4.9,
+      "touchesOppBox": 4.9,
+      "scoreNeeds": 8.2,
+      "timePressure": 6.6,
+      "corners": 3.3,
+      "possession": 2.5,
+      "saves": 1.6
     },
     "Copa Africana de Naciones (F)": {
       "matchesTracked": 2,
@@ -2151,14 +2194,14 @@
       "falseNegatives": 1
     },
     "Copa de Brasil - Octavos de final": {
-      "matchesTracked": 1,
-      "totalGoals": 3,
-      "totalXg": 2.53,
-      "totalSot": 7,
-      "totalShotsInsideBox": 14,
-      "totalPossessionDiff": 0.30000000000000004,
+      "matchesTracked": 3,
+      "totalGoals": 5,
+      "totalXg": 5.54,
+      "totalSot": 14,
+      "totalShotsInsideBox": 34,
+      "totalPossessionDiff": 0.5,
       "correctAt70": 0,
-      "falsePositives": 0,
+      "falsePositives": 1,
       "falseNegatives": 0
     },
     "Copa": {
@@ -2193,16 +2236,71 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
+    },
+    "Liga Panameña - Apertura - Conferencia Oeste": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.2,
+      "totalSot": 8,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.08000000000000002,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga FUTVE -": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 3.38,
+      "totalSot": 10,
+      "totalShotsInsideBox": 13,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga Nacional - Apertura - Grupo": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 0.8999999999999999,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.08000000000000002,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Liga Primera Juvenil -": {
+      "matchesTracked": 1,
+      "totalGoals": 8,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Torneo BetPlay Dimayor - Finalización": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0.75,
+      "totalSot": 5,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.15999999999999998,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
     "predictionsCount": 0,
-    "correctScore": 103,
+    "correctScore": 117,
     "correctScorer": 0,
-    "createdCount": 235,
-    "verifiedCount": 210,
-    "brierScore": 0.2957,
-    "brierCount": 210,
+    "createdCount": 249,
+    "verifiedCount": 228,
+    "brierScore": 0.2888,
+    "brierCount": 228,
     "alertCount": 7,
     "alertHits": 4
   },
@@ -2288,23 +2386,15 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-02T22:31:06.174Z",
+  "lastUpdated": "2026-08-02T23:31:22.184Z",
   "alertedMatches": {
-    "4797291_earlySecondHalf": {
-      "timestamp": 1785700088506,
-      "minute": 56
-    },
-    "4762539_earlySecondHalf": {
-      "timestamp": 1785700088506,
-      "minute": 59
-    },
-    "4715368_earlySecondHalf": {
-      "timestamp": 1785700088506,
-      "minute": 49
-    },
     "4653902_late": {
       "timestamp": 1785706338708,
       "minute": 75
+    },
+    "4633398_earlySecondHalf": {
+      "timestamp": 1785713480276,
+      "minute": 59
     }
   },
   "_note": "betas reset 2026-08-02 tras overshoot por aprender de modelo viejo"
