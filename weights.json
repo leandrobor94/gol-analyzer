@@ -31,17 +31,17 @@
       "correctAt70": 1,
       "falsePositives": 1,
       "falseNegatives": 0,
-      "xg": 28.6,
-      "shotsOnTarget": 17.2,
+      "xg": 28.8,
+      "shotsOnTarget": 17.3,
       "shotsInsideBox": 13.4,
       "bigChances": 11.5,
       "totalShots": 4.8,
-      "xgot": 9.5,
+      "xgot": 9.6,
       "hitWoodwork": 4.8,
-      "xA": 5.7,
-      "touchesOppBox": 5.7,
-      "scoreNeeds": 9.5,
-      "timePressure": 7.6,
+      "xA": 5.8,
+      "touchesOppBox": 5.8,
+      "scoreNeeds": 9.6,
+      "timePressure": 7.7,
       "corners": 3.8,
       "possession": 2.9,
       "saves": 1.9
@@ -224,20 +224,20 @@
       "correctAt70": 1,
       "falsePositives": 2,
       "falseNegatives": 2,
-      "xg": 32.2,
-      "shotsOnTarget": 19.3,
-      "shotsInsideBox": 15,
+      "xg": 32.3,
+      "shotsOnTarget": 19.4,
+      "shotsInsideBox": 15.1,
       "bigChances": 12.9,
       "totalShots": 5.4,
-      "xgot": 10.7,
+      "xgot": 10.8,
       "hitWoodwork": 5.4,
-      "xA": 6.4,
-      "touchesOppBox": 6.4,
-      "scoreNeeds": 10.7,
+      "xA": 6.5,
+      "touchesOppBox": 6.5,
+      "scoreNeeds": 10.8,
       "timePressure": 8.6,
       "corners": 4.3,
       "possession": 3.2,
-      "saves": 2.1
+      "saves": 2.2
     },
     "NWSL": {
       "matchesTracked": 4,
@@ -271,19 +271,19 @@
       "correctAt70": 1,
       "falsePositives": 3,
       "falseNegatives": 1,
-      "xg": 19.4,
+      "xg": 19.5,
       "shotsOnTarget": 11.7,
       "shotsInsideBox": 9.1,
       "bigChances": 7.8,
-      "totalShots": 3.2,
+      "totalShots": 3.3,
       "xgot": 6.5,
-      "hitWoodwork": 3.2,
+      "hitWoodwork": 3.3,
       "xA": 3.9,
       "touchesOppBox": 3.9,
       "scoreNeeds": 6.5,
       "timePressure": 5.2,
       "corners": 2.6,
-      "possession": 1.9,
+      "possession": 2,
       "saves": 1.3
     },
     "MLS Next Pro": {
@@ -296,16 +296,16 @@
       "correctAt70": 1,
       "falsePositives": 1,
       "falseNegatives": 1,
-      "xg": 30,
-      "shotsOnTarget": 18,
-      "shotsInsideBox": 14,
-      "bigChances": 12,
+      "xg": 30.2,
+      "shotsOnTarget": 18.1,
+      "shotsInsideBox": 14.1,
+      "bigChances": 12.1,
       "totalShots": 5,
-      "xgot": 10,
+      "xgot": 10.1,
       "hitWoodwork": 5,
       "xA": 6,
       "touchesOppBox": 6,
-      "scoreNeeds": 10,
+      "scoreNeeds": 10.1,
       "timePressure": 8,
       "corners": 4,
       "possession": 3,
@@ -334,15 +334,29 @@
       "falseNegatives": 0
     },
     "Liga de": {
-      "matchesTracked": 4,
-      "totalGoals": 13,
-      "totalXg": 8.91,
-      "totalSot": 33,
-      "totalShotsInsideBox": 42,
-      "totalPossessionDiff": 1.04,
-      "correctAt70": 0,
+      "matchesTracked": 9,
+      "totalGoals": 29,
+      "totalXg": 14.85,
+      "totalSot": 55,
+      "totalShotsInsideBox": 69,
+      "totalPossessionDiff": 1.4200000000000002,
+      "correctAt70": 1,
       "falsePositives": 1,
-      "falseNegatives": 0
+      "falseNegatives": 0,
+      "xg": 35.3,
+      "shotsOnTarget": 21.2,
+      "shotsInsideBox": 16.5,
+      "bigChances": 14.1,
+      "totalShots": 5.9,
+      "xgot": 11.8,
+      "hitWoodwork": 5.9,
+      "xA": 7.1,
+      "touchesOppBox": 7.1,
+      "scoreNeeds": 11.8,
+      "timePressure": 9.4,
+      "corners": 4.7,
+      "possession": 3.5,
+      "saves": 2.4
     },
     "Copa de Primera -": {
       "matchesTracked": 4,
@@ -365,7 +379,7 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 2,
-      "xg": 20.3,
+      "xg": 20.4,
       "shotsOnTarget": 12.2,
       "shotsInsideBox": 9.5,
       "bigChances": 8.1,
@@ -381,12 +395,12 @@
       "saves": 1.4
     },
     "Campeonato": {
-      "matchesTracked": 3,
+      "matchesTracked": 4,
       "totalGoals": 14,
       "totalXg": 0,
       "totalSot": 0,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.21999999999999997,
+      "totalPossessionDiff": 0.41999999999999993,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -412,19 +426,19 @@
       "correctAt70": 2,
       "falsePositives": 1,
       "falseNegatives": 1,
-      "xg": 28.4,
-      "shotsOnTarget": 17,
-      "shotsInsideBox": 13.2,
-      "bigChances": 11.3,
-      "totalShots": 4.7,
+      "xg": 28.5,
+      "shotsOnTarget": 17.1,
+      "shotsInsideBox": 13.3,
+      "bigChances": 11.4,
+      "totalShots": 4.8,
       "xgot": 9.5,
-      "hitWoodwork": 4.7,
+      "hitWoodwork": 4.8,
       "xA": 5.7,
       "touchesOppBox": 5.7,
       "scoreNeeds": 9.5,
       "timePressure": 7.6,
       "corners": 3.8,
-      "possession": 2.8,
+      "possession": 2.9,
       "saves": 1.9
     },
     "Serie D - Group 14": {
@@ -481,20 +495,20 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 26.2,
-      "shotsOnTarget": 15.7,
-      "shotsInsideBox": 12.2,
+      "xg": 26.3,
+      "shotsOnTarget": 15.8,
+      "shotsInsideBox": 12.3,
       "bigChances": 10.5,
       "totalShots": 4.4,
-      "xgot": 8.7,
+      "xgot": 8.8,
       "hitWoodwork": 4.4,
-      "xA": 5.2,
-      "touchesOppBox": 5.2,
-      "scoreNeeds": 8.7,
+      "xA": 5.3,
+      "touchesOppBox": 5.3,
+      "scoreNeeds": 8.8,
       "timePressure": 7,
       "corners": 3.5,
       "possession": 2.6,
-      "saves": 1.7
+      "saves": 1.8
     },
     "Serie D - Grupo I": {
       "matchesTracked": 2,
@@ -541,15 +555,29 @@
       "falseNegatives": 1
     },
     "Liga 1 -": {
-      "matchesTracked": 4,
-      "totalGoals": 9,
-      "totalXg": 1.23,
-      "totalSot": 5,
-      "totalShotsInsideBox": 6,
-      "totalPossessionDiff": 1.22,
+      "matchesTracked": 5,
+      "totalGoals": 11,
+      "totalXg": 2.58,
+      "totalSot": 10,
+      "totalShotsInsideBox": 12,
+      "totalPossessionDiff": 1.5,
       "correctAt70": 0,
       "falsePositives": 0,
-      "falseNegatives": 0
+      "falseNegatives": 0,
+      "xg": 24.1,
+      "shotsOnTarget": 14.5,
+      "shotsInsideBox": 11.3,
+      "bigChances": 9.7,
+      "totalShots": 4,
+      "xgot": 8,
+      "hitWoodwork": 4,
+      "xA": 4.8,
+      "touchesOppBox": 4.8,
+      "scoreNeeds": 8,
+      "timePressure": 6.4,
+      "corners": 3.2,
+      "possession": 2.4,
+      "saves": 1.6
     },
     "National": {
       "matchesTracked": 2,
@@ -572,19 +600,19 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 28.4,
-      "shotsOnTarget": 17,
-      "shotsInsideBox": 13.2,
-      "bigChances": 11.3,
-      "totalShots": 4.7,
+      "xg": 28.5,
+      "shotsOnTarget": 17.1,
+      "shotsInsideBox": 13.3,
+      "bigChances": 11.4,
+      "totalShots": 4.8,
       "xgot": 9.5,
-      "hitWoodwork": 4.7,
+      "hitWoodwork": 4.8,
       "xA": 5.7,
       "touchesOppBox": 5.7,
       "scoreNeeds": 9.5,
       "timePressure": 7.6,
       "corners": 3.8,
-      "possession": 2.8,
+      "possession": 2.9,
       "saves": 1.9
     },
     "USL League One - Temporada": {
@@ -652,17 +680,17 @@
       "correctAt70": 0,
       "falsePositives": 2,
       "falseNegatives": 0,
-      "xg": 30.5,
-      "shotsOnTarget": 18.3,
+      "xg": 30.7,
+      "shotsOnTarget": 18.4,
       "shotsInsideBox": 14.3,
-      "bigChances": 12.2,
+      "bigChances": 12.3,
       "totalShots": 5.1,
       "xgot": 10.2,
       "hitWoodwork": 5.1,
       "xA": 6.1,
       "touchesOppBox": 6.1,
       "scoreNeeds": 10.2,
-      "timePressure": 8.1,
+      "timePressure": 8.2,
       "corners": 4.1,
       "possession": 3.1,
       "saves": 2
@@ -754,17 +782,17 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 3,
-      "xg": 30.5,
-      "shotsOnTarget": 18.3,
+      "xg": 30.7,
+      "shotsOnTarget": 18.4,
       "shotsInsideBox": 14.3,
-      "bigChances": 12.2,
+      "bigChances": 12.3,
       "totalShots": 5.1,
       "xgot": 10.2,
       "hitWoodwork": 5.1,
       "xA": 6.1,
       "touchesOppBox": 6.1,
       "scoreNeeds": 10.2,
-      "timePressure": 8.1,
+      "timePressure": 8.2,
       "corners": 4.1,
       "possession": 3.1,
       "saves": 2
@@ -880,15 +908,29 @@
       "falseNegatives": 1
     },
     "Meistriliiga": {
-      "matchesTracked": 3,
-      "totalGoals": 12,
-      "totalXg": 1.35,
-      "totalSot": 9,
+      "matchesTracked": 5,
+      "totalGoals": 15,
+      "totalXg": 3.9,
+      "totalSot": 26,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 1.22,
+      "totalPossessionDiff": 1.68,
       "correctAt70": 0,
       "falsePositives": 0,
-      "falseNegatives": 2
+      "falseNegatives": 2,
+      "xg": 32.9,
+      "shotsOnTarget": 19.7,
+      "shotsInsideBox": 15.4,
+      "bigChances": 13.2,
+      "totalShots": 5.5,
+      "xgot": 11,
+      "hitWoodwork": 5.5,
+      "xA": 6.6,
+      "touchesOppBox": 6.6,
+      "scoreNeeds": 11,
+      "timePressure": 8.8,
+      "corners": 4.4,
+      "possession": 3.3,
+      "saves": 2.2
     },
     "Eliteserien": {
       "matchesTracked": 8,
@@ -900,18 +942,18 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 1,
-      "xg": 43.6,
-      "shotsOnTarget": 26.2,
-      "shotsInsideBox": 20.4,
-      "bigChances": 17.5,
+      "xg": 43.9,
+      "shotsOnTarget": 26.3,
+      "shotsInsideBox": 20.5,
+      "bigChances": 17.6,
       "totalShots": 7.3,
-      "xgot": 14.5,
+      "xgot": 14.6,
       "hitWoodwork": 7.3,
-      "xA": 8.7,
-      "touchesOppBox": 8.7,
-      "scoreNeeds": 14.5,
-      "timePressure": 11.6,
-      "corners": 5.8,
+      "xA": 8.8,
+      "touchesOppBox": 8.8,
+      "scoreNeeds": 14.6,
+      "timePressure": 11.7,
+      "corners": 5.9,
       "possession": 4.4,
       "saves": 2.9
     },
@@ -1002,17 +1044,17 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 27.9,
-      "shotsOnTarget": 16.7,
-      "shotsInsideBox": 13,
+      "xg": 28,
+      "shotsOnTarget": 16.8,
+      "shotsInsideBox": 13.1,
       "bigChances": 11.2,
-      "totalShots": 4.6,
+      "totalShots": 4.7,
       "xgot": 9.3,
-      "hitWoodwork": 4.6,
+      "hitWoodwork": 4.7,
       "xA": 5.6,
       "touchesOppBox": 5.6,
       "scoreNeeds": 9.3,
-      "timePressure": 7.4,
+      "timePressure": 7.5,
       "corners": 3.7,
       "possession": 2.8,
       "saves": 1.9
@@ -1214,45 +1256,45 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1,
-      "xg": 27.3,
-      "shotsOnTarget": 16.4,
-      "shotsInsideBox": 12.7,
-      "bigChances": 10.9,
-      "totalShots": 4.5,
+      "xg": 27.4,
+      "shotsOnTarget": 16.5,
+      "shotsInsideBox": 12.8,
+      "bigChances": 11,
+      "totalShots": 4.6,
       "xgot": 9.1,
-      "hitWoodwork": 4.5,
+      "hitWoodwork": 4.6,
       "xA": 5.5,
       "touchesOppBox": 5.5,
       "scoreNeeds": 9.1,
       "timePressure": 7.3,
-      "corners": 3.6,
+      "corners": 3.7,
       "possession": 2.7,
       "saves": 1.8
     },
     "Partido": {
-      "matchesTracked": 12,
-      "totalGoals": 23,
+      "matchesTracked": 17,
+      "totalGoals": 36,
       "totalXg": 3.39,
       "totalSot": 13,
       "totalShotsInsideBox": 15,
-      "totalPossessionDiff": 1.7999999999999998,
+      "totalPossessionDiff": 2.5999999999999996,
       "correctAt70": 0,
       "falsePositives": 0,
-      "falseNegatives": 1,
-      "xg": 20.9,
-      "shotsOnTarget": 12.5,
-      "shotsInsideBox": 9.8,
-      "bigChances": 8.4,
-      "totalShots": 3.5,
-      "xgot": 7,
-      "hitWoodwork": 3.5,
-      "xA": 4.2,
-      "touchesOppBox": 4.2,
-      "scoreNeeds": 7,
-      "timePressure": 5.6,
-      "corners": 2.8,
-      "possession": 2.1,
-      "saves": 1.4
+      "falseNegatives": 3,
+      "xg": 23.2,
+      "shotsOnTarget": 13.9,
+      "shotsInsideBox": 10.8,
+      "bigChances": 9.3,
+      "totalShots": 3.9,
+      "xgot": 7.7,
+      "hitWoodwork": 3.9,
+      "xA": 4.6,
+      "touchesOppBox": 4.6,
+      "scoreNeeds": 7.7,
+      "timePressure": 6.2,
+      "corners": 3.1,
+      "possession": 2.3,
+      "saves": 1.5
     },
     "Copa Primera - Cuartos de Final": {
       "matchesTracked": 1,
@@ -1343,29 +1385,29 @@
       "falseNegatives": 0
     },
     "Superliga": {
-      "matchesTracked": 6,
-      "totalGoals": 17,
-      "totalXg": 18.45,
-      "totalSot": 51,
-      "totalShotsInsideBox": 105,
-      "totalPossessionDiff": 1.0800000000000003,
+      "matchesTracked": 7,
+      "totalGoals": 21,
+      "totalXg": 21.5,
+      "totalSot": 62,
+      "totalShotsInsideBox": 115,
+      "totalPossessionDiff": 1.3000000000000003,
       "correctAt70": 3,
       "falsePositives": 2,
       "falseNegatives": 0,
-      "xg": 30.9,
-      "shotsOnTarget": 18.5,
-      "shotsInsideBox": 14.4,
-      "bigChances": 12.4,
-      "totalShots": 5.2,
-      "xgot": 10.3,
-      "hitWoodwork": 5.2,
-      "xA": 6.2,
-      "touchesOppBox": 6.2,
-      "scoreNeeds": 10.3,
-      "timePressure": 8.2,
-      "corners": 4.1,
-      "possession": 3.1,
-      "saves": 2.1
+      "xg": 32.9,
+      "shotsOnTarget": 19.7,
+      "shotsInsideBox": 15.4,
+      "bigChances": 13.2,
+      "totalShots": 5.5,
+      "xgot": 11,
+      "hitWoodwork": 5.5,
+      "xA": 6.6,
+      "touchesOppBox": 6.6,
+      "scoreNeeds": 11,
+      "timePressure": 8.8,
+      "corners": 4.4,
+      "possession": 3.3,
+      "saves": 2.2
     },
     "League One": {
       "matchesTracked": 1,
@@ -1525,12 +1567,12 @@
       "falseNegatives": 0
     },
     "Formuladeildin": {
-      "matchesTracked": 3,
-      "totalGoals": 10,
-      "totalXg": 1.2,
-      "totalSot": 8,
+      "matchesTracked": 4,
+      "totalGoals": 13,
+      "totalXg": 1.5,
+      "totalSot": 10,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.08000000000000002,
+      "totalPossessionDiff": 0.36000000000000004,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1
@@ -1547,12 +1589,12 @@
       "falseNegatives": 0
     },
     "Campeonato Femenino -": {
-      "matchesTracked": 3,
-      "totalGoals": 9,
-      "totalXg": 2.1,
-      "totalSot": 14,
+      "matchesTracked": 4,
+      "totalGoals": 10,
+      "totalXg": 2.85,
+      "totalSot": 19,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.38000000000000006,
+      "totalPossessionDiff": 0.6000000000000001,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
@@ -1611,20 +1653,20 @@
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 1,
-      "xg": 38.2,
-      "shotsOnTarget": 22.9,
-      "shotsInsideBox": 17.8,
-      "bigChances": 15.3,
+      "xg": 38.4,
+      "shotsOnTarget": 23,
+      "shotsInsideBox": 17.9,
+      "bigChances": 15.4,
       "totalShots": 6.4,
-      "xgot": 12.7,
+      "xgot": 12.8,
       "hitWoodwork": 6.4,
-      "xA": 7.6,
-      "touchesOppBox": 7.6,
-      "scoreNeeds": 12.7,
+      "xA": 7.7,
+      "touchesOppBox": 7.7,
+      "scoreNeeds": 12.8,
       "timePressure": 10.2,
       "corners": 5.1,
       "possession": 3.8,
-      "saves": 2.5
+      "saves": 2.6
     },
     "Bundesliga": {
       "matchesTracked": 2,
@@ -1757,16 +1799,49 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0
+    },
+    "Johan Cruyff Shield - Final": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 4.16,
+      "totalSot": 12,
+      "totalShotsInsideBox": 22,
+      "totalPossessionDiff": 0.24,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "David Kipiani Cup - Octavos de final": {
+      "matchesTracked": 2,
+      "totalGoals": 3,
+      "totalXg": 0.8999999999999999,
+      "totalSot": 6,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.4600000000000001,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Liga eslovena - Regular": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.5,
+      "totalSot": 10,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.10000000000000003,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
     }
   },
   "stats": {
     "predictionsCount": 1200,
-    "correctScore": 281,
+    "correctScore": 305,
     "correctScorer": 0,
-    "createdCount": 116,
-    "verifiedCount": 170,
-    "brierScore": 0.2725,
-    "brierCount": 44
+    "createdCount": 167,
+    "verifiedCount": 212,
+    "brierScore": 0.265,
+    "brierCount": 21
   },
   "windows": {
     "firstHalf": {
@@ -1850,21 +1925,37 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-02T17:33:49.940Z",
+  "lastUpdated": "2026-08-02T18:35:46.809Z",
   "alertedMatches": {
-    "4731535_firstHalf": {
-      "timestamp": 1785688188622,
-      "minute": 30
+    "4782374_firstHalf": {
+      "timestamp": 1785695745711,
+      "minute": 32
+    },
+    "4788397_firstHalf": {
+      "timestamp": 1785695745711,
+      "minute": 32
+    },
+    "4737482_late": {
+      "timestamp": 1785695745711,
+      "minute": 73
+    },
+    "4637325_earlySecondHalf": {
+      "timestamp": 1785695745711,
+      "minute": 61
+    },
+    "4633407_earlySecondHalf": {
+      "timestamp": 1785695745711,
+      "minute": 49
     }
   },
   "betas": {
-    "baseline": 0.04,
-    "xgWeight": 1.464,
-    "bcWeight": 2.196,
-    "sotWeight": 0.732,
+    "baseline": 0.039,
+    "xgWeight": 1.364,
+    "bcWeight": 2.046,
+    "sotWeight": 0.682,
     "redCardMult": 1.5,
-    "urgency60": 1.562,
-    "urgency75": 1.803,
+    "urgency60": 1.531,
+    "urgency75": 1.767,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
@@ -1879,13 +1970,13 @@
       "baseline": 0.03396161005497686
     },
     "Superliga": {
-      "baseline": 0.034935543167358314
+      "baseline": 0.03476086545152152
     },
     "Campeonato Femenino -": {
-      "baseline": 0.035459849802010154
+      "baseline": 0.03528255055300011
     },
     "Liga de": {
-      "baseline": 0.03481532739651007
+      "baseline": 0.03498765458515931
     },
     "Allsvenskan": {
       "baseline": 0.03545827376928481
@@ -1894,10 +1985,10 @@
       "baseline": 0.03563309044610775
     },
     "Formuladeildin": {
-      "baseline": 0.03575127648407162
+      "baseline": 0.035930032866491976
     },
     "Partido": {
-      "baseline": 0.03580697858949776
+      "baseline": 0.03598511383210818
     },
     "Federal A - Reválida - Zona B": {
       "baseline": 0.03664998195377674
@@ -1912,7 +2003,7 @@
       "baseline": 0.03567563678063843
     },
     "Meistriliiga": {
-      "baseline": 0.03537833980746645
+      "baseline": 0.03502544086788697
     },
     "Super Liga de Uzbekistán": {
       "baseline": 0.036211841937591215
@@ -1976,6 +2067,24 @@
     },
     "Liga checa": {
       "baseline": 0.039139430555555556
+    },
+    "A Lyga": {
+      "baseline": 0.038415
+    },
+    "Johan Cruyff Shield - Final": {
+      "baseline": 0.03752757911074942
+    },
+    "Campeonato": {
+      "baseline": 0.03721484928482651
+    },
+    "David Kipiani Cup - Octavos de final": {
+      "baseline": 0.03678017209208613
+    },
+    "Liga 1 -": {
+      "baseline": 0.03726527404262448
+    },
+    "Liga eslovena - Regular": {
+      "baseline": 0.03757581799297969
     }
   }
 }
