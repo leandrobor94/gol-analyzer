@@ -154,5 +154,31 @@
     "windowType": "late",
     "timestamp": "2026-08-03T21:14:54.230Z",
     "alertTimestamp": "2026-08-03T20:02:47.989Z"
+  },
+  {
+    "match": "Kenia (F) vs Argelia (F)",
+    "league": "Copa Africana de Naciones (F)",
+    "probability": 80,
+    "minute": 53,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-03T22:19:02.271Z",
+    "alertTimestamp": "2026-08-03T20:02:47.989Z"
+  },
+  {
+    "match": "3 De Noviembre vs Sportivo Carapeguá",
+    "league": "Division",
+    "probability": 91,
+    "minute": 56,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-03T22:19:02.368Z",
+    "alertTimestamp": "2026-08-03T20:02:47.989Z"
   }
 ]
