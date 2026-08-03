@@ -3,12 +3,12 @@
   "learningRate": 0.05,
   "betas": {
     "baseline": 0.03,
-    "xgWeight": 0.827,
-    "bcWeight": 1.238,
-    "sotWeight": 0.411,
+    "xgWeight": 0.818,
+    "bcWeight": 1.224,
+    "sotWeight": 0.407,
     "redCardMult": 1.5,
-    "urgency60": 1.319,
-    "urgency75": 1.521,
+    "urgency60": 1.313,
+    "urgency75": 1.514,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
@@ -41,7 +41,7 @@
       "baseline": 0.029886832768815
     },
     "Liga Femenina BetPlay": {
-      "baseline": 0.029790468998770275
+      "baseline": 0.029694891244065887
     },
     "Copa Africana de Naciones (F)": {
       "baseline": 0.029835901456417714
@@ -59,7 +59,7 @@
       "baseline": 0.03009271648554669
     },
     "Copa de Primera -": {
-      "baseline": 0.030122360275194757
+      "baseline": 0.030181349897400345
     },
     "Torneo BetPlay Dimayor - Finalización": {
       "baseline": 0.030135145300531237
@@ -120,6 +120,9 @@
     },
     "Campeonato": {
       "baseline": 0.030073736226057492
+    },
+    "Brasileirao": {
+      "baseline": 0.0297485145
     }
   },
   "global": {
@@ -433,7 +436,7 @@
       "falseNegatives": 2,
       "xg": 38.5,
       "shotsOnTarget": 23.1,
-      "shotsInsideBox": 17.9,
+      "shotsInsideBox": 18,
       "bigChances": 15.4,
       "totalShots": 6.4,
       "xgot": 12.8,
@@ -494,29 +497,29 @@
       "saves": 2.1
     },
     "Copa de Primera -": {
-      "matchesTracked": 6,
-      "totalGoals": 17,
-      "totalXg": 2.4,
-      "totalSot": 16,
+      "matchesTracked": 7,
+      "totalGoals": 22,
+      "totalXg": 2.8499999999999996,
+      "totalSot": 19,
       "totalShotsInsideBox": 0,
       "totalPossessionDiff": 0.8600000000000001,
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 3,
-      "xg": 31.6,
-      "shotsOnTarget": 19,
-      "shotsInsideBox": 14.8,
-      "bigChances": 12.7,
-      "totalShots": 5.3,
-      "xgot": 10.5,
-      "hitWoodwork": 5.3,
-      "xA": 6.3,
-      "touchesOppBox": 6.3,
-      "scoreNeeds": 10.5,
-      "timePressure": 8.4,
-      "corners": 4.2,
-      "possession": 3.2,
-      "saves": 2.1
+      "xg": 35.1,
+      "shotsOnTarget": 21.1,
+      "shotsInsideBox": 16.4,
+      "bigChances": 14,
+      "totalShots": 5.9,
+      "xgot": 11.7,
+      "hitWoodwork": 5.9,
+      "xA": 7,
+      "touchesOppBox": 7,
+      "scoreNeeds": 11.7,
+      "timePressure": 9.4,
+      "corners": 4.7,
+      "possession": 3.5,
+      "saves": 2.3
     },
     "Primera": {
       "matchesTracked": 13,
@@ -531,7 +534,7 @@
       "xg": 26.6,
       "shotsOnTarget": 16,
       "shotsInsideBox": 12.4,
-      "bigChances": 10.6,
+      "bigChances": 10.7,
       "totalShots": 4.4,
       "xgot": 8.9,
       "hitWoodwork": 4.4,
@@ -539,7 +542,7 @@
       "touchesOppBox": 5.3,
       "scoreNeeds": 8.9,
       "timePressure": 7.1,
-      "corners": 3.5,
+      "corners": 3.6,
       "possession": 2.7,
       "saves": 1.8
     },
@@ -553,15 +556,15 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 1,
-      "xg": 35.7,
-      "shotsOnTarget": 21.4,
+      "xg": 35.8,
+      "shotsOnTarget": 21.5,
       "shotsInsideBox": 16.7,
       "bigChances": 14.3,
       "totalShots": 6,
       "xgot": 11.9,
       "hitWoodwork": 6,
-      "xA": 7.1,
-      "touchesOppBox": 7.1,
+      "xA": 7.2,
+      "touchesOppBox": 7.2,
       "scoreNeeds": 11.9,
       "timePressure": 9.5,
       "corners": 4.8,
@@ -569,14 +572,14 @@
       "saves": 2.4
     },
     "Liga Femenina BetPlay": {
-      "matchesTracked": 3,
-      "totalGoals": 2,
-      "totalXg": 2.85,
-      "totalSot": 19,
+      "matchesTracked": 4,
+      "totalGoals": 3,
+      "totalXg": 3.75,
+      "totalSot": 25,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 1.12,
+      "totalPossessionDiff": 1.28,
       "correctAt70": 0,
-      "falsePositives": 0,
+      "falsePositives": 1,
       "falseNegatives": 0
     },
     "Brasileirão": {
@@ -591,7 +594,7 @@
       "falseNegatives": 1,
       "xg": 29,
       "shotsOnTarget": 17.4,
-      "shotsInsideBox": 13.5,
+      "shotsInsideBox": 13.6,
       "bigChances": 11.6,
       "totalShots": 4.8,
       "xgot": 9.7,
@@ -661,7 +664,7 @@
       "xg": 25.1,
       "shotsOnTarget": 15.1,
       "shotsInsideBox": 11.7,
-      "bigChances": 10,
+      "bigChances": 10.1,
       "totalShots": 4.2,
       "xgot": 8.4,
       "hitWoodwork": 4.2,
@@ -669,7 +672,7 @@
       "touchesOppBox": 5,
       "scoreNeeds": 8.4,
       "timePressure": 6.7,
-      "corners": 3.3,
+      "corners": 3.4,
       "possession": 2.5,
       "saves": 1.7
     },
@@ -727,7 +730,7 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 19.5,
+      "xg": 19.6,
       "shotsOnTarget": 11.7,
       "shotsInsideBox": 9.1,
       "bigChances": 7.8,
@@ -765,7 +768,7 @@
       "falseNegatives": 0,
       "xg": 29,
       "shotsOnTarget": 17.4,
-      "shotsInsideBox": 13.5,
+      "shotsInsideBox": 13.6,
       "bigChances": 11.6,
       "totalShots": 4.8,
       "xgot": 9.7,
@@ -1120,7 +1123,7 @@
       "scoreNeeds": 11.2,
       "timePressure": 8.9,
       "corners": 4.5,
-      "possession": 3.3,
+      "possession": 3.4,
       "saves": 2.2
     },
     "Eliteserien": {
@@ -1235,7 +1238,7 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 28.5,
+      "xg": 28.6,
       "shotsOnTarget": 17.1,
       "shotsInsideBox": 13.3,
       "bigChances": 11.4,
@@ -1361,15 +1364,29 @@
       "falseNegatives": 0
     },
     "Brasileirao": {
-      "matchesTracked": 4,
-      "totalGoals": 11,
-      "totalXg": 4.5,
-      "totalSot": 30,
+      "matchesTracked": 5,
+      "totalGoals": 12,
+      "totalXg": 5.25,
+      "totalSot": 35,
       "totalShotsInsideBox": 0,
-      "totalPossessionDiff": 0.74,
+      "totalPossessionDiff": 0.8,
       "correctAt70": 0,
-      "falsePositives": 0,
-      "falseNegatives": 1
+      "falsePositives": 1,
+      "falseNegatives": 1,
+      "xg": 26.8,
+      "shotsOnTarget": 16.1,
+      "shotsInsideBox": 12.5,
+      "bigChances": 10.7,
+      "totalShots": 4.5,
+      "xgot": 8.9,
+      "hitWoodwork": 4.5,
+      "xA": 5.4,
+      "touchesOppBox": 5.4,
+      "scoreNeeds": 8.9,
+      "timePressure": 7.2,
+      "corners": 3.6,
+      "possession": 2.7,
+      "saves": 1.8
     },
     "Serie D - Grupo 3": {
       "matchesTracked": 1,
@@ -1415,7 +1432,7 @@
       "scoreNeeds": 11.2,
       "timePressure": 8.9,
       "corners": 4.5,
-      "possession": 3.3,
+      "possession": 3.4,
       "saves": 2.2
     },
     "Serie D - Grupo 6": {
@@ -1462,7 +1479,7 @@
       "falsePositives": 0,
       "falseNegatives": 1,
       "xg": 27.9,
-      "shotsOnTarget": 16.7,
+      "shotsOnTarget": 16.8,
       "shotsInsideBox": 13,
       "bigChances": 11.2,
       "totalShots": 4.7,
@@ -1488,7 +1505,7 @@
       "falseNegatives": 5,
       "xg": 29,
       "shotsOnTarget": 17.4,
-      "shotsInsideBox": 13.5,
+      "shotsInsideBox": 13.6,
       "bigChances": 11.6,
       "totalShots": 4.8,
       "xgot": 9.7,
@@ -1625,7 +1642,7 @@
       "scoreNeeds": 11.2,
       "timePressure": 8.9,
       "corners": 4.5,
-      "possession": 3.3,
+      "possession": 3.4,
       "saves": 2.2
     },
     "League One": {
@@ -1659,7 +1676,7 @@
       "xA": 4.9,
       "touchesOppBox": 4.9,
       "scoreNeeds": 8.2,
-      "timePressure": 6.5,
+      "timePressure": 6.6,
       "corners": 3.3,
       "possession": 2.5,
       "saves": 1.6
@@ -1901,7 +1918,7 @@
       "falsePositives": 0,
       "falseNegatives": 1,
       "xg": 39.1,
-      "shotsOnTarget": 23.4,
+      "shotsOnTarget": 23.5,
       "shotsInsideBox": 18.2,
       "bigChances": 15.6,
       "totalShots": 6.5,
@@ -2124,7 +2141,7 @@
       "falsePositives": 0,
       "falseNegatives": 0,
       "xg": 27.9,
-      "shotsOnTarget": 16.7,
+      "shotsOnTarget": 16.8,
       "shotsInsideBox": 13,
       "bigChances": 11.2,
       "totalShots": 4.7,
@@ -2584,13 +2601,13 @@
   },
   "stats": {
     "predictionsCount": 0,
-    "correctScore": 144,
+    "correctScore": 146,
     "correctScorer": 0,
-    "createdCount": 314,
-    "verifiedCount": 305,
-    "brierScore": 0.2997,
-    "brierCount": 305,
-    "alertCount": 14,
+    "createdCount": 320,
+    "verifiedCount": 309,
+    "brierScore": 0.3008,
+    "brierCount": 309,
+    "alertCount": 15,
     "alertHits": 7
   },
   "windows": {
@@ -2615,8 +2632,8 @@
       "matchContext": 5
     },
     "earlySecondHalf": {
-      "xg": 27.8,
-      "shotsOnTarget": 16.6,
+      "xg": 27.6,
+      "shotsOnTarget": 16.5,
       "shotsInsideBox": 13.6,
       "bigChances": 11.6,
       "totalShots": 4.7,
@@ -2675,7 +2692,7 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-03T22:19:02.687Z",
+  "lastUpdated": "2026-08-03T23:30:50.950Z",
   "alertedMatches": {
     "4781213_earlySecondHalf": {
       "timestamp": 1785791694136,
