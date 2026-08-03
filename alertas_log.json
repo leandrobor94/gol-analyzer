@@ -141,5 +141,18 @@
     "windowType": "firstHalf",
     "timestamp": "2026-08-03T18:19:31.251Z",
     "alertTimestamp": "2026-08-03T16:31:57.946Z"
+  },
+  {
+    "match": "York vs Crawley Town",
+    "league": "Copa de la liga - Fase",
+    "probability": 82,
+    "minute": 74,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "correct": true,
+    "windowType": "late",
+    "timestamp": "2026-08-03T21:14:54.230Z",
+    "alertTimestamp": "2026-08-03T20:02:47.989Z"
   }
 ]
