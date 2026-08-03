@@ -3,12 +3,12 @@
   "learningRate": 0.05,
   "betas": {
     "baseline": 0.03,
-    "xgWeight": 0.816,
-    "bcWeight": 1.223,
-    "sotWeight": 0.406,
+    "xgWeight": 0.825,
+    "bcWeight": 1.236,
+    "sotWeight": 0.41,
     "redCardMult": 1.5,
-    "urgency60": 1.312,
-    "urgency75": 1.512,
+    "urgency60": 1.318,
+    "urgency75": 1.519,
     "lead2Mult": 0.5,
     "lead1LateMult": 0.7
   },
@@ -84,6 +84,21 @@
     },
     "División": {
       "baseline": 0.03022335929175164
+    },
+    "Inkasso": {
+      "baseline": 0.030126128624999998
+    },
+    "Torneo Promocional": {
+      "baseline": 0.030194513594948815
+    },
+    "Liga Femenina de Fútbol": {
+      "baseline": 0.030258071448432997
+    },
+    "Premier": {
+      "baseline": 0.030110875273430378
+    },
+    "ASEAN": {
+      "baseline": 0.030219309035525964
     }
   },
   "global": {
@@ -311,7 +326,7 @@
       "falseNegatives": 2,
       "xg": 33.1,
       "shotsOnTarget": 19.9,
-      "shotsInsideBox": 15.4,
+      "shotsInsideBox": 15.5,
       "bigChances": 13.2,
       "totalShots": 5.5,
       "xgot": 11,
@@ -337,7 +352,7 @@
       "xg": 28.9,
       "shotsOnTarget": 17.3,
       "shotsInsideBox": 13.5,
-      "bigChances": 11.5,
+      "bigChances": 11.6,
       "totalShots": 4.8,
       "xgot": 9.6,
       "hitWoodwork": 4.8,
@@ -345,7 +360,7 @@
       "touchesOppBox": 5.8,
       "scoreNeeds": 9.6,
       "timePressure": 7.7,
-      "corners": 3.8,
+      "corners": 3.9,
       "possession": 2.9,
       "saves": 1.9
     },
@@ -397,7 +412,7 @@
       "falseNegatives": 2,
       "xg": 38.7,
       "shotsOnTarget": 23.2,
-      "shotsInsideBox": 18,
+      "shotsInsideBox": 18.1,
       "bigChances": 15.5,
       "totalShots": 6.4,
       "xgot": 12.9,
@@ -677,16 +692,16 @@
       "correctAt70": 0,
       "falsePositives": 0,
       "falseNegatives": 0,
-      "xg": 19.6,
+      "xg": 19.7,
       "shotsOnTarget": 11.8,
       "shotsInsideBox": 9.2,
       "bigChances": 7.9,
       "totalShots": 3.3,
-      "xgot": 6.5,
+      "xgot": 6.6,
       "hitWoodwork": 3.3,
       "xA": 3.9,
       "touchesOppBox": 3.9,
-      "scoreNeeds": 6.5,
+      "scoreNeeds": 6.6,
       "timePressure": 5.2,
       "corners": 2.6,
       "possession": 2,
@@ -886,28 +901,28 @@
       "falseNegatives": 1
     },
     "Premier": {
-      "matchesTracked": 26,
+      "matchesTracked": 27,
       "totalGoals": 74,
-      "totalXg": 9.16,
-      "totalSot": 40,
+      "totalXg": 10.36,
+      "totalSot": 48,
       "totalShotsInsideBox": 32,
-      "totalPossessionDiff": 2.82,
+      "totalPossessionDiff": 2.94,
       "correctAt70": 1,
       "falsePositives": 0,
       "falseNegatives": 3,
-      "xg": 32,
-      "shotsOnTarget": 19.2,
-      "shotsInsideBox": 14.9,
-      "bigChances": 12.8,
-      "totalShots": 5.3,
-      "xgot": 10.7,
-      "hitWoodwork": 5.3,
-      "xA": 6.4,
-      "touchesOppBox": 6.4,
-      "scoreNeeds": 10.7,
-      "timePressure": 8.5,
-      "corners": 4.3,
-      "possession": 3.2,
+      "xg": 30.8,
+      "shotsOnTarget": 18.5,
+      "shotsInsideBox": 14.4,
+      "bigChances": 12.3,
+      "totalShots": 5.1,
+      "xgot": 10.3,
+      "hitWoodwork": 5.1,
+      "xA": 6.2,
+      "touchesOppBox": 6.2,
+      "scoreNeeds": 10.3,
+      "timePressure": 8.2,
+      "corners": 4.1,
+      "possession": 3.1,
       "saves": 2.1
     },
     "Superettan": {
@@ -1769,8 +1784,8 @@
       "falseNegatives": 0
     },
     "Liga Femenina de Fútbol": {
-      "matchesTracked": 1,
-      "totalGoals": 1,
+      "matchesTracked": 2,
+      "totalGoals": 6,
       "totalXg": 0,
       "totalSot": 0,
       "totalShotsInsideBox": 0,
@@ -1826,9 +1841,9 @@
       "shotsOnTarget": 23.6,
       "shotsInsideBox": 18.3,
       "bigChances": 15.7,
-      "totalShots": 6.5,
+      "totalShots": 6.6,
       "xgot": 13.1,
-      "hitWoodwork": 6.5,
+      "hitWoodwork": 6.6,
       "xA": 7.9,
       "touchesOppBox": 7.9,
       "scoreNeeds": 13.1,
@@ -2381,23 +2396,78 @@
       "correctAt70": 0,
       "falsePositives": 1,
       "falseNegatives": 0
+    },
+    "ASEAN": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 1.16,
+      "totalSot": 4,
+      "totalShotsInsideBox": 4,
+      "totalPossessionDiff": 0.18,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Inkasso": {
+      "matchesTracked": 1,
+      "totalGoals": 3,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.06000000000000005,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "Tercera División -": {
+      "matchesTracked": 2,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.26,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
+    },
+    "Torneo Promocional": {
+      "matchesTracked": 1,
+      "totalGoals": 2,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 0
+    },
+    "APF Primera C": {
+      "matchesTracked": 1,
+      "totalGoals": 4,
+      "totalXg": 0,
+      "totalSot": 0,
+      "totalShotsInsideBox": 0,
+      "totalPossessionDiff": 0.10000000000000003,
+      "correctAt70": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1
     }
   },
   "stats": {
     "predictionsCount": 0,
-    "correctScore": 129,
+    "correctScore": 131,
     "correctScorer": 0,
-    "createdCount": 264,
-    "verifiedCount": 256,
-    "brierScore": 0.2908,
-    "brierCount": 256,
+    "createdCount": 287,
+    "verifiedCount": 264,
+    "brierScore": 0.2936,
+    "brierCount": 264,
     "alertCount": 10,
     "alertHits": 5
   },
   "windows": {
     "firstHalf": {
-      "xg": 35.3,
-      "shotsOnTarget": 20.2,
+      "xg": 35.4,
+      "shotsOnTarget": 20.3,
       "shotsInsideBox": 15,
       "bigChances": 14,
       "totalShots": 5,
@@ -2436,7 +2506,7 @@
       "matchContext": 4.9
     },
     "late": {
-      "xg": 22.2,
+      "xg": 22.1,
       "shotsOnTarget": 13.6,
       "shotsInsideBox": 11.2,
       "bigChances": 9.4,
@@ -2476,19 +2546,11 @@
     "teamHistory": 8,
     "matchContext": 5
   },
-  "lastUpdated": "2026-08-03T14:01:16.763Z",
+  "lastUpdated": "2026-08-03T16:31:59.572Z",
   "alertedMatches": {
-    "4633398_earlySecondHalf": {
-      "timestamp": 1785713480276,
-      "minute": 59
-    },
-    "4763063_earlySecondHalf": {
-      "timestamp": 1785719339105,
-      "minute": 54
-    },
-    "4744333_earlySecondHalf": {
-      "timestamp": 1785719339105,
-      "minute": 52
+    "4633686_firstHalf": {
+      "timestamp": 1785774718843,
+      "minute": 31
     }
   },
   "_note": "betas reset 2026-08-02 tras overshoot por aprender de modelo viejo"
