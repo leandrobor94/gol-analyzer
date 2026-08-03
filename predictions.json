@@ -38112,17 +38112,23 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.11402593548387098,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Wexford Youths",
+      "awayTeam": "Bray Wanderers"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
-    "alertCorrect": null,
+    "predictionCorrect": false,
+    "alertCorrect": false,
     "lastSeenMinute": 31,
     "lastSeenScore": {
       "home": 2,
       "away": 1
-    }
+    },
+    "alertHorizon": "until_ft"
   },
   {
     "id": "4663720",
@@ -38310,11 +38316,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.04002713,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 5,
+      "away": 2,
+      "homeTeam": "Zalaegerszegi TE",
+      "awayTeam": "Paksi"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": true,
     "alertCorrect": null,
     "lastSeenMinute": 45,
     "lastSeenScore": {
@@ -38409,11 +38420,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.1067048888888889,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Universitatea Cluj",
+      "awayTeam": "FC Botosani"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": true,
     "alertCorrect": null,
     "lastSeenMinute": 45,
     "lastSeenScore": {
@@ -38508,11 +38524,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.04651762500000001,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 3,
+      "homeTeam": "Siauliai",
+      "awayTeam": "Banga Gargzdai"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": true,
     "alertCorrect": null,
     "lastSeenMinute": 48,
     "lastSeenScore": {
@@ -38607,11 +38628,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.0223660812375,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "Monopoli",
+      "awayTeam": "Vibonese"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 52,
     "lastSeenScore": {
@@ -38706,11 +38732,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.07662666666666668,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "SJK Seinajoki",
+      "awayTeam": "HJK Helsinki"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": true,
     "alertCorrect": null,
     "lastSeenMinute": 33,
     "lastSeenScore": {
@@ -38805,11 +38836,16 @@
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
     "_lambda": 0.0451476256,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1,
+      "homeTeam": "Inter Bratislava",
+      "awayTeam": "Zilina B"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 72,
     "lastSeenScore": {
@@ -38904,11 +38940,16 @@
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
     "_lambda": 0.04478276846465754,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "AGMK",
+      "awayTeam": "Nasaf Qarshi"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 73,
     "lastSeenScore": {
@@ -39003,11 +39044,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.015958659574468084,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1,
+      "homeTeam": "Etar",
+      "awayTeam": "Yantra Gabrovo"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 47,
     "lastSeenScore": {
@@ -39102,11 +39148,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "UC Dublin FC",
+      "awayTeam": "Treaty United"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 31,
     "lastSeenScore": {
@@ -39201,11 +39252,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 0,
+      "homeTeam": "Al Duhail",
+      "awayTeam": "Al Feiha"
+    },
+    "goalAfterAnalysis": false,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "lastSeenMinute": 31,
     "lastSeenScore": {
@@ -39300,11 +39356,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.027923880103853965,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 4,
+      "homeTeam": "Atlético San Luis (F)",
+      "awayTeam": "Toluca (F)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 27,
     "lastSeenScore": {
@@ -39399,11 +39460,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.035666060606060604,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 1,
+      "away": 2,
+      "homeTeam": "Viimsi JK",
+      "awayTeam": "JK Tallinna Kalev"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 33,
     "lastSeenScore": {
@@ -39498,11 +39564,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 3,
+      "homeTeam": "Al Hilal Riyadh",
+      "awayTeam": "Al-Ahli Doha"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
     "actualScorer": null,
-    "predictionCorrect": null,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 47,
     "lastSeenScore": {
@@ -39597,11 +39668,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.030834363636363635,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 5,
+      "away": 0,
+      "homeTeam": "Longford",
+      "awayTeam": "Finn Harps"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 33,
     "lastSeenScore": {
@@ -39696,11 +39772,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 0,
+      "away": 3,
+      "homeTeam": "IMT Belgrad",
+      "awayTeam": "Gaziantep FK"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 30,
     "lastSeenScore": {
@@ -39795,11 +39876,16 @@
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
     "_lambda": 0.024046848,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 5,
+      "away": 1,
+      "homeTeam": "Shakhtar Donetsk",
+      "awayTeam": "Kudrivka"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 75,
     "lastSeenScore": {
@@ -39894,11 +39980,16 @@
     "predictedTimeWindow": "GOL TARDE",
     "windowType": "late",
     "_lambda": 0.021050429399999997,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 1,
+      "homeTeam": "Al Shabab Riyadh",
+      "awayTeam": "MC Alger"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 75,
     "lastSeenScore": {
@@ -39993,11 +40084,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.020999999999999998,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Alashkert Martuni",
+      "awayTeam": "Ararat Yerevan"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 32,
     "lastSeenScore": {
@@ -40092,11 +40188,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.021876272727272727,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0,
+      "homeTeam": "Kerry",
+      "awayTeam": "Cobh Ramblers"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 33,
     "lastSeenScore": {
@@ -40191,11 +40292,16 @@
     "predictedTimeWindow": "GOL 1T",
     "windowType": "firstHalf",
     "_lambda": 0.013542454545454545,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 3,
+      "away": 2,
+      "homeTeam": "Cork City",
+      "awayTeam": "Athlone Town"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "away",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 33,
     "lastSeenScore": {
@@ -40290,11 +40396,16 @@
     "predictedTimeWindow": "GOL 46-70",
     "windowType": "earlySecondHalf",
     "_lambda": 0.00375375,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 4,
+      "away": 0,
+      "homeTeam": "Montevideo City Torque (Reserva)",
+      "awayTeam": "Deportivo Maldonado (Reserva)"
+    },
+    "goalAfterAnalysis": true,
     "actualGoalMinute": null,
-    "actualScorer": null,
-    "predictionCorrect": null,
+    "actualScorer": "home",
+    "predictionCorrect": false,
     "alertCorrect": null,
     "lastSeenMinute": 45,
     "lastSeenScore": {

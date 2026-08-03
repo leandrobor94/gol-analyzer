@@ -128,5 +128,18 @@
     "windowType": "earlySecondHalf",
     "timestamp": "2026-08-03T14:01:16.312Z",
     "alertTimestamp": "2026-08-03T01:08:58.040Z"
+  },
+  {
+    "match": "Wexford Youths vs Bray Wanderers",
+    "league": "Division 1",
+    "probability": 84,
+    "minute": 31,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "firstHalf",
+    "timestamp": "2026-08-03T18:19:31.251Z",
+    "alertTimestamp": "2026-08-03T16:31:57.946Z"
   }
 ]
