@@ -193,5 +193,18 @@
     "windowType": "earlySecondHalf",
     "timestamp": "2026-08-03T23:30:50.920Z",
     "alertTimestamp": "2026-08-03T22:19:00.756Z"
+  },
+  {
+    "match": "Hapoel Beer Sheva vs Estrella Roja Belgrado",
+    "league": "UEFA Champions League Clasificatorio - Tercera Ronda",
+    "probability": 81,
+    "minute": 70,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "late",
+    "timestamp": "2026-08-04T20:26:58.365Z",
+    "alertTimestamp": "2026-08-04T18:59:06.818Z"
   }
 ]
