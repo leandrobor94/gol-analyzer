@@ -9,13 +9,20 @@
  *    acorta y la cuota justa sube sola al rango que compensa el riesgo. Del 45
  *    al 70 se estrecha a UN equipo concreto por el mismo motivo.
  *
- * 2. Se decide por valor esperado, no por certeza.
- *    EV = p_NUESTRA x cuota - 1. La cuota nunca sustituye a nuestra
- *    probabilidad: solo dice a cuanto la pagan. Si no hay cuota publicada
- *    (pasa en ~60% de los partidos) se avisa igual, indicando el precio minimo
- *    al que merece la pena. Lo que NO se hace es estimar lo que paga la casa
- *    con nuestro propio modelo: eso seria compararlo consigo mismo y todo
- *    pareceria valor.
+ * 2. Manda NUESTRO analisis; la cuota es el premio, no el juez.
+ *    Son DOS condiciones distintas y ambas deben cumplirse:
+ *      - conviccion nuestra alta       p >= minProb (70%)
+ *      - premio de la casa suficiente  cuota >= minOdds (1.5)
+ *
+ *    Ojo con no confundir dos cuotas. La NUESTRA (1/p) mide conviccion: si
+ *    decimos 80%, es 1.25. La de la CASA es lo que pagan. El minimo de 1.5 va
+ *    sobre la segunda. Filtrar por la primera —error de diseño que hubo aqui—
+ *    excluia mecanicamente todo analisis fuerte, justo lo contrario del objetivo.
+ *
+ *    Lo que se busca es un DESACUERDO: nosotros al 80%, la casa pagando 3.00.
+ *    Si no hay cuota publicada (~60% de los partidos) se avisa igual con el
+ *    precio minimo. Lo que NO se hace es estimar lo que paga la casa con
+ *    nuestro propio modelo: seria compararlo consigo mismo y todo pareceria valor.
  */
 
 const num = (v) => (v == null || Number.isNaN(v) ? 0 : v);
@@ -55,23 +62,22 @@ function alertQuality(r) {
  *   2T     -> otro gol en lo que queda
  *   FINAL  -> gol en lo que queda
  *
- * Se alerta cuando NUESTRA probabilidad cae en la banda apostable, es decir
- * cuando la cuota justa esta entre minOdds y maxOdds. Fuera de ahi no se manda:
- * por debajo el premio no compensa el riesgo (el problema del 1.05), por encima
- * es un tiro lejano que no sabemos sostener.
+ * Se elige la apuesta con MAYOR conviccion nuestra (p >= minProb). El minimo de
+ * cuota se aplica a lo que paga LA CASA, no a nuestra cuota justa.
  *
  * La cuota de la casa NO hace falta para alertar:
- *   - si la hay  -> se calcula EV y se exige que sea positivo
- *   - si no la hay -> se da el precio minimo al que merece la pena, y el usuario
- *                     la busca donde quiera
+ *   - si la hay    -> se exige cuota >= minOdds y EV >= minEv
+ *   - si no la hay -> se da el precio minimo al que merece la pena
  *
- * @param {object} p  { p, phase, lambda, edge }  edge puede ser null
+ * @param {object} input { phase, lambda, split, teamHome, teamAway, minute,
+ *                         informed, edge }   edge puede ser null
  */
 function classifyBet(input, opts) {
-  const minOdds = (opts && opts.minOdds) || 1.5;
-  const maxOdds = (opts && opts.maxOdds) || 3.5;
+  const minOdds = (opts && opts.minOdds) || 1.5;   // lo que debe pagar LA CASA
+  const minProb = (opts && opts.minProb) || 0.70;  // conviccion minima NUESTRA
   const minEv = (opts && opts.minEv) || 0.05;
-  const maxEdge = (opts && opts.maxEdge) || 0.25;
+  const maxEdge = (opts && opts.maxEdge) || 0.50;   // solo lo absurdo
+  const avisoEdge = (opts && opts.avisoEdge) || 0.25;  // a partir de aqui, se marca
   const margin = (opts && opts.margin) || 1.08;
 
   const ph = input.phase;
@@ -104,18 +110,25 @@ function classifyBet(input, opts) {
     }
   }
 
-  const enBanda = opciones.filter(o => {
-    const f = 1 / o.p;
-    return o.p > 0 && o.p < 1 && f >= minOdds && f <= maxOdds;
-  });
-  if (!enBanda.length) {
+  // ── Manda NUESTRO analisis ──
+  //
+  // Se elige la apuesta en la que MAS convencidos estamos. El minimo de cuota
+  // (1.5) NO se aplica aqui: eso es lo que tiene que pagar la CASA, no un techo
+  // a nuestra conviccion. Confundir las dos cuotas fue un error de diseño mio:
+  // filtrar por nuestra cuota justa >= 1.5 excluia mecanicamente todo analisis
+  // fuerte, que es justo lo contrario de lo que interesa.
+  //
+  // Lo que se busca es un DESACUERDO: nosotros altos, la casa pagando bien.
+  const validas = opciones.filter(o => o.p >= minProb && o.p < 0.97);
+  if (!validas.length) {
     const mejor = opciones.sort((a, b) => b.p - a.p)[0];
-    const f = mejor && mejor.p > 0 ? 1 / mejor.p : 0;
-    return { tier: 'REJECT', reason: 'cuota justa ' + f.toFixed(2) + ' fuera de [' + minOdds + '-' + maxOdds + ']' };
+    return {
+      tier: 'REJECT',
+      reason: 'analisis ' + Math.round((mejor ? mejor.p : 0) * 100) + '% < ' + Math.round(minProb * 100) + '% (poca conviccion)',
+    };
   }
-  // La de menor cuota dentro de la banda: la mas probable de las apostables.
-  enBanda.sort((a, b) => b.p - a.p);
-  const elegida = enBanda[0];
+  validas.sort((a, b) => b.p - a.p);
+  const elegida = validas[0];
   const p = elegida.p;
   const fair = 1 / p;
 
@@ -128,7 +141,10 @@ function classifyBet(input, opts) {
     horizon: ph.T,
     p: Math.round(p * 1e4) / 1e4,
     fair: Math.round(fair * 100) / 100,
-    target: Math.round(fair * margin * 100) / 100,
+    // Precio minimo al que apostar. Es el mayor de: nuestra cuota justa con
+    // margen, y el suelo que pide el usuario. Si decimos 80% (justa 1.25) pero
+    // exiges 1.5, el aviso sigue valiendo: solo hay que encontrar esa cuota.
+    target: Math.round(Math.max(fair * margin, minOdds) * 100) / 100,
   };
 
   // ── ¿Tenemos derecho a decir que el mercado se equivoca? ──
@@ -154,15 +170,24 @@ function classifyBet(input, opts) {
     return Object.assign({ tier: 'AVISO', reason: 'sin cuota publicada', hasOdds: false, requiresAi: true }, base);
   }
 
+  // El minimo de cuota se aplica AQUI: a lo que paga la casa. Si no llega, la
+  // apuesta es correcta pero el premio no compensa el riesgo.
+  if (e.odds < minOdds) {
+    return Object.assign({ tier: 'REJECT', hasOdds: true,
+      reason: 'la casa paga ' + e.odds + ' < ' + minOdds + ' (premio no compensa)' }, base);
+  }
+
   const ev = p * e.odds - 1;
   const edgePts = p - 1 / e.odds;
 
-  // Demasiado bueno para ser verdad. Un desacuerdo enorme con una casa
-  // profesional casi nunca es dinero gratis: suele ser dato roto o error
-  // nuestro. Medido en vivo: cuotas con 1X2 a -1 producian "EV +71%".
+  // Un desacuerdo ENORME con una casa profesional casi siempre es dato roto
+  // (se vieron cuotas con 1X2 a -1 produciendo "EV +71%"). Pero la corrupcion
+  // ya se filtra en scores365 por rango, margen y coherencia del 1X2, asi que
+  // aqui solo se corta lo absurdo. Un desacuerdo grande es precisamente lo que
+  // se busca: nosotros al 80% y la casa pagando 3.00 es la apuesta ideal.
   if (edgePts > maxEdge) {
     return Object.assign({ tier: 'REJECT', hasOdds: true,
-      reason: 'ventaja ' + (edgePts * 100).toFixed(0) + ' pts es implausible (dato sospechoso)' }, base);
+      reason: 'ventaja ' + (edgePts * 100).toFixed(0) + ' pts es absurda (dato roto casi seguro)' }, base);
   }
   if (ev < minEv) {
     return Object.assign({ tier: 'REJECT', hasOdds: true,
@@ -171,6 +196,8 @@ function classifyBet(input, opts) {
   return Object.assign({
     tier: 'VALOR', reason: 'EV +' + (ev * 100).toFixed(1) + '% a cuota ' + e.odds,
     hasOdds: true, requiresAi: true,
+    // Ventaja muy grande: se manda, pero marcada. Que decida quien apuesta.
+    revisar: edgePts > avisoEdge,
     odds: e.odds, ev: Math.round(ev * 1e4) / 1e4,
     edgePts: Math.round(edgePts * 1e4) / 1e4,
     bookmaker: e.bookmaker || null,

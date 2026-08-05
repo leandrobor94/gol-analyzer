@@ -298,7 +298,7 @@ async function main() {
 
     // ── 3b. apuesta por fase, con la cuota como extra opcional ──
     const MIN_ODDS = parseFloat(process.env.MIN_ODDS || '1.5');
-    const MAX_ODDS = parseFloat(process.env.MAX_ODDS || '3.5');
+    const MIN_PROB = parseFloat(process.env.MIN_PROB || '0.70');
     const MIN_EV = parseFloat(process.env.MIN_EV || '0.05');
 
     for (const a of analyzed) {
@@ -314,8 +314,8 @@ async function main() {
     // consulta es una llamada extra y no tiene sentido gastarla en descartados.
     const mktTargets = analyzed.filter(a => {
       if (!a.phaseP) return false;
-      const fair = 1 / a.phaseP;
-      return fair >= MIN_ODDS && fair <= MAX_ODDS && hasMeaningfulStats(a.stats);
+      // Se pide cuota a los que ya convencen: son los unicos que pueden alertar.
+      return a.phaseP >= MIN_PROB && hasMeaningfulStats(a.stats);
     }).slice(0, 12);
 
     if (mktTargets.length && model.trained) {
@@ -345,7 +345,7 @@ async function main() {
         { phase: a.phase, lambda: a.lambda, split: a.split, edge: a.edge,
           teamHome: a.teamHome, teamAway: a.teamAway,
           minute: a.minute, informed: hasMeaningfulStats(a.stats) },
-        { minOdds: MIN_ODDS, maxOdds: MAX_ODDS, minEv: MIN_EV });
+        { minOdds: MIN_ODDS, minProb: MIN_PROB, minEv: MIN_EV });
       a.gate = g;
       if (g.tier === 'REJECT') continue;
       if (g.requiresAi && aiOn) {

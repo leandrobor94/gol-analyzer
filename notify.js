@@ -82,6 +82,9 @@ function buildMessage(alerts) {
     if (g.hasOdds && g.odds) {
       L.push('   🏦 ' + esc(g.bookmaker || 'la casa') + ' paga <b>' + g.odds + '</b>  (justa ' + g.fair + ')');
       L.push('   🟢 <b>Valor esperado ' + (g.ev >= 0 ? '+' : '') + (g.ev * 100).toFixed(1) + '%</b>');
+      if (g.revisar) {
+        L.push('   ⚠️ <b>Ventaja muy grande</b> — comprueba la cuota y el marcador antes de entrar');
+      }
       L.push('   <i>Verifica el precio antes de apostar: vale desde ' + g.target + '</i>');
     } else {
       // Sin cuota publicada la alerta se manda IGUAL. Lo que no se hace es
