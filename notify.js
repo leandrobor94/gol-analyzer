@@ -1,13 +1,12 @@
 /**
  * notify.js — envia alertas por Telegram.
  *
- * Configuracion (variables de entorno):
  *   TELEGRAM_BOT_TOKEN = token del bot (de @BotFather)
  *   TELEGRAM_CHAT_ID   = id del chat
  *
- * El mensaje incluye SIEMPRE la precision medida del tier y su intervalo de
- * confianza. Una alerta sin su tasa de acierto historica invita a confiar de mas;
- * el numero va al lado del aviso a proposito.
+ * El mensaje lleva SIEMPRE nuestra probabilidad y el precio minimo al que la
+ * apuesta compensa. Un aviso sin precio invita a apostar a cualquier cuota, y
+ * ahi es donde se pierde el dinero aunque el aviso sea correcto.
  */
 
 const https = require('https');
@@ -53,85 +52,54 @@ function sendTelegram(message) {
 
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const TIER_LABEL = {
-  PRECISION: '🎯 ALTA PRECISION',
-  VALOR: '💰 VALOR',
+const FASE = {
+  '1T': '⏱ PRIMER TIEMPO',
+  '2T': '⚡ SEGUNDA PARTE',
+  'FINAL': '🔥 TRAMO FINAL',
 };
 
-function buildMessage(alerts, model) {
+function buildMessage(alerts) {
   if (!alerts || !alerts.length) return null;
   const when = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
-  let msg = '<b>⚽ ALERTA GOL</b>  <i>' + esc(when) + '</i>\n\n';
+  const L = [];
+  L.push('<b>⚽ ALERTA GOL</b>  <i>' + esc(when) + '</i>');
+  L.push('');
 
-  let hayBarato = false;
-
-  alerts.slice(0, 5).forEach((a) => {
+  let enviadas = 0;
+  for (const a of alerts.slice(0, 5)) {
     const g = a.gate || {};
+    if (!g.bet) continue;
+    enviadas++;
 
-    // ── Aviso de VALOR: manda NUESTRO analisis, la cuota es solo el precio ──
-    if (g.tier === 'VALOR' && g.best) {
-      const b = g.best;
-      msg += '💰 <b>VALOR</b>\n';
-      msg += '<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>\n';
-      if (a.league) msg += '   ' + esc(a.league) + '\n';
-      msg += '   ⏱ ' + a.minute + "'  ·  " + a.scoreHome + '-' + a.scoreAway + '\n';
-      msg += '   🎯 Apuesta: <b>' + esc(b.pick) + '</b> goles (final del partido)\n';
-      msg += '   ⚽ Hacen falta ' + g.goalsNeeded + ' gol(es) más en ' + a.minsLeft + ' min\n';
-      msg += '\n';
-      msg += '   📊 <b>Nuestro análisis: ' + Math.round(b.p * 100) + '%</b>  (justo ' + b.fair + ')\n';
-      msg += '   🏦 La casa paga: <b>' + b.odds + '</b>  (implícita ' + Math.round(100 / b.odds) + '%)\n';
-      msg += '   🟢 <b>Valor esperado ' + (b.ev >= 0 ? '+' : '') + (b.ev * 100).toFixed(1) + '%</b>' +
-        '  ·  ventaja ' + (b.edge >= 0 ? '+' : '') + (b.edge * 100).toFixed(1) + ' pts\n';
-      if (a.aiDecision && a.aiDecision.reason) {
-        msg += '   🤖 ' + esc(a.aiDecision.reason).slice(0, 120) + '\n';
-      }
-      msg += '\n';
-      return;
-    }
+    L.push(FASE[g.phase] || g.phase);
+    L.push('<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>');
+    if (a.league) L.push('   ' + esc(a.league));
+    L.push('   ' + a.minute + "'  ·  " + a.scoreHome + '-' + a.scoreAway + '  ·  quedan ~' + g.horizon + ' min');
+    L.push('');
+    L.push('   🎯 <b>' + esc(g.bet) + '</b>');
+    L.push('   📊 Nuestro análisis: <b>' + Math.round(g.p * 100) + '%</b>');
 
-    const gateInfo = (model && model.gates || []).find(x => x.tier === g.tier);
-    const p = a.probability || 0;
-    const goles = (a.scoreHome || 0) + (a.scoreAway || 0);
-    // La prediccion es "al menos un gol MAS". Con `goles` ya marcados, eso es
-    // exactamente el mercado Over (goles + 0.5) al final del partido. Decirlo
-    // evita la duda razonable de "¿esto es del partido o del primer tiempo?".
-    const linea = goles + 0.5;
-    const cuotaJusta = p > 0 ? 1 / p : null;
-
-    msg += (TIER_LABEL[g.tier] || g.tier) + '\n';
-    msg += '<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>\n';
-    if (a.league) msg += '   ' + esc(a.league) + '\n';
-    msg += '   ⏱ ' + a.minute + "'  ·  " + a.scoreHome + '-' + a.scoreAway + '\n';
-    msg += '   ➡️ <b>Al menos 1 gol MÁS</b>, del minuto ' + a.minute + " al 90'\n";
-    msg += '   🎰 Equivale a: <b>Over ' + linea.toFixed(1) + '</b> goles al final del partido\n';
-    msg += '   📈 ' + Math.round(p * 100) + '%';
-    if (cuotaJusta) msg += '  ·  cuota justa <b>' + cuotaJusta.toFixed(2) + '</b>';
-    msg += '\n';
-    // Con la cuota justa tan baja ninguna casa paga por encima una vez aplicado
-    // su margen. Avisarlo es mas util que dejar creer que un 95% es una ocasion.
-    if (cuotaJusta && cuotaJusta < 1.15) {
-      hayBarato = true;
-      msg += '   ⚠️ Solo hay valor si te pagan MÁS de ' + cuotaJusta.toFixed(2) + '\n';
-    }
-    if (gateInfo) {
-      msg += '   📊 avisos así aciertan <b>' + (gateInfo.measuredPrecision * 100).toFixed(0) + '%</b>' +
-        ' (IC ' + (gateInfo.ci95[0] * 100).toFixed(0) + '-' + (gateInfo.ci95[1] * 100).toFixed(0) + '%, n=' + gateInfo.n + ')\n';
+    if (g.hasOdds && g.odds) {
+      L.push('   🏦 ' + esc(g.bookmaker || 'la casa') + ' paga <b>' + g.odds + '</b>  (justa ' + g.fair + ')');
+      L.push('   🟢 <b>Valor esperado ' + (g.ev >= 0 ? '+' : '') + (g.ev * 100).toFixed(1) + '%</b>');
+      L.push('   <i>Verifica el precio antes de apostar: vale desde ' + g.target + '</i>');
+    } else {
+      // Sin cuota publicada la alerta se manda IGUAL. Lo que no se hace es
+      // estimar lo que paga la casa: seria comparar el modelo consigo mismo.
+      L.push('   💵 <b>Apuesta solo desde cuota ' + g.target + '</b>  (justa ' + g.fair + ')');
+      L.push('   <i>Sin cuota publicada para este partido: búscala tú.</i>');
     }
     if (a.aiDecision && a.aiDecision.reason) {
-      msg += '   🤖 ' + esc(a.aiDecision.reason).slice(0, 120) + '\n';
+      L.push('   🤖 ' + esc(a.aiDecision.reason).slice(0, 120));
     }
-    msg += '\n';
-  });
+    L.push('');
+  }
+  if (!enviadas) return null;
 
-  if (alerts.some(a => (a.gate || {}).tier === 'PRECISION')) {
-    msg += '<i>ALTA PRECISION = "este partido tendra otro gol", no "viene un gol ya". ' +
-      'Salta temprano, con casi todo el partido por delante.</i>\n';
-  }
-  if (hayBarato) {
-    msg += '<i>Compara siempre la cuota justa con la que te ofrecen. Si te pagan menos, ' +
-      'el aviso es correcto pero la apuesta pierde dinero a la larga.</i>\n';
-  }
-  return msg;
+  L.push('<i>La apuesta cambia con el momento: en el 1T se busca gol antes del ' +
+    'descanso; del 45 al 70, gol de un equipo concreto; del 70 en adelante, gol ' +
+    'de cualquiera. Así la cuota se mantiene en un rango que compensa el riesgo.</i>');
+  return L.join('\n');
 }
 
 module.exports = { sendTelegram, buildMessage };

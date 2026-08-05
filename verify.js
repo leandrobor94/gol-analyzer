@@ -76,6 +76,9 @@ function label(pred, detail) {
   const goals = Array.isArray(detail.goals) ? detail.goals : [];
   if (goals.length) {
     pred.goalMinutes = goals.map(g => g.minute);
+    // El lado de cada gol permite validar el reparto por equipo (model.teamSplit),
+    // que hoy es una estimacion sin calibrar.
+    pred.goalSides = goals.map(g => g.side);
     const next = goals.find(g => g.minute > analysisMin);
     pred.nextGoalMinute = next ? next.minute : null;
     pred.goalWithin15 = !!next && (next.minute - analysisMin) <= HORIZON;
@@ -107,17 +110,25 @@ function label(pred, detail) {
   const p = pred.probability != null ? pred.probability : (pred.predictedProbability || 0) / 100;
   pred.predictionCorrect = pred.goalAfterAnalysis ? (p >= 0.5) : (p < 0.5);
 
-  // ── resolver la apuesta concreta ──
-  // El acierto de la prediccion y el resultado de la apuesta NO son lo mismo:
-  // se puede acertar "habra gol" y perder el Over 3.5. Lo que cuenta es esto.
-  if (pred.bet && pred.bet.odds) {
-    const totalFinal = (detail.home ?? 0) + (detail.away ?? 0);
-    const paso = totalFinal > pred.bet.line;
-    const gano = pred.bet.side === 'UNDER' ? !paso : paso;
-    pred.bet.finalGoals = totalFinal;
-    pred.bet.won = gano;
-    // Beneficio por unidad apostada: +(cuota-1) si gana, -1 si pierde.
-    pred.bet.profit = Math.round((gano ? pred.bet.odds - 1 : -1) * 1000) / 1000;
+  // ── resolver la apuesta de fase ──
+  // Cada fase apuesta a algo distinto, asi que cada una se resuelve distinto.
+  if (pred.bet && pred.bet.phase) {
+    const b = pred.bet;
+    const desde = pred.alertMinute != null ? pred.alertMinute : (pred.analysisMinute || 0);
+    const posteriores = goals.filter(g => g.minute > desde);
+    let gano = null;
+    if (b.phase === '1T') {
+      // Gol antes del descanso: cuenta solo hasta el 45 (+descuento).
+      gano = posteriores.some(g => g.minute <= 47);
+    } else if (b.kind === 'TEAM') {
+      gano = posteriores.some(g => g.side === b.side);
+    } else {
+      gano = posteriores.length > 0;
+    }
+    if (goals.length || pred.timelineConsistent !== false) {
+      b.won = gano;
+      b.profit = b.odds ? Math.round((gano ? b.odds - 1 : -1) * 1000) / 1000 : null;
+    }
   }
 
   // alertCorrect solo tiene sentido si REALMENTE se alerto

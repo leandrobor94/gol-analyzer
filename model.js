@@ -20,6 +20,81 @@ const path = require('path');
 
 const MODEL_FILE = path.join(__dirname, 'model.json');
 
+/**
+ * Fase del partido y horizonte de la apuesta.
+ *
+ * No se pregunta lo mismo en el minuto 20 que en el 80. Cada fase tiene su
+ * horizonte natural, y de ahi sale una apuesta distinta:
+ *
+ *   1T      (min < 45)   ¿gol ANTES DEL DESCANSO?  -> quedan pocos minutos
+ *   2T      (45-70)      ¿otro gol en lo que queda?
+ *   FINAL   (> 70)       ¿gol en general?          -> horizonte corto por si solo
+ *
+ * Esto ademas arregla el problema del precio: en el 1T el horizonte es corto,
+ * asi que la probabilidad cae sola al rango apostable (en el minuto 20 quedan
+ * ~27 min de primera parte -> ~55%, cuota justa 1.8) en vez de dispararse al
+ * 95% que ninguna casa paga.
+ */
+function phase(minute) {
+  const m = minute || 0;
+  if (m < 45) {
+    return {
+      key: '1T',
+      T: Math.max(1, (45 - m) + 2),          // resto del 1T + descuento tipico
+      // En el 1T el horizonte ya es corto: no hace falta estrechar mas la apuesta.
+      options: ['ANY'],
+    };
+  }
+  if (m <= 70) {
+    return {
+      key: '2T',
+      T: Math.max(1, (90 - m) + 3),
+      // Aqui "gol de cualquiera" ronda el 65% y se paga a 1.5: no compensa.
+      // Estrechando a UN equipo concreto la probabilidad baja y la cuota sube
+      // al rango util. Ese es el motivo, no una preferencia estetica.
+      options: ['TEAM'],
+    };
+  }
+  return {
+    key: 'FINAL',
+    T: m >= 90 ? Math.max(1, 98 - m) : Math.max(1, (90 - m) + 4),
+    // Con poco tiempo por delante, "gol en general" ya se paga bien. Se ofrecen
+    // las dos y el gate se queda con la que caiga en la banda apostable.
+    options: ['ANY', 'TEAM'],
+  };
+}
+
+/**
+ * Reparto de la intensidad de gol entre los dos equipos.
+ *
+ * lambda es del partido; para apostar "marca el local" hace falta lambda_local.
+ * Se reparte segun la produccion ofensiva de cada lado (remates a puerta, dentro
+ * del area, xG y ataques), suavizado hacia 50/50 para no fiarlo todo a una
+ * muestra corta de minutos.
+ *
+ * NOTA: este reparto todavia NO esta validado contra datos. verify.js ya guarda
+ * el lado de cada gol (goalSides), asi que se podra medir en cuanto haya
+ * suficientes partidos. Hasta entonces, tratarlo como una estimacion razonable
+ * y no como un numero calibrado.
+ */
+function teamSplit(stats) {
+  const s = stats || {};
+  const n = (v) => (v == null || Number.isNaN(v) ? 0 : v);
+  const peso = (sot, box, xg, atk) => n(sot) * 3 + n(box) * 1.5 + n(xg) * 8 + n(atk) * 0.05;
+  const h = peso(s.sotHome, s.shotsInsideBoxHome, s.xgHome, s.attacksHome);
+  const a = peso(s.sotAway, s.shotsInsideBoxAway, s.xgAway, s.attacksAway);
+  const total = h + a;
+  if (total <= 0) return { home: 0.5, away: 0.5, confident: false };
+  // Suavizado: 60% de la evidencia + 40% de un reparto neutro.
+  const raw = h / total;
+  const share = 0.6 * raw + 0.4 * 0.5;
+  return {
+    home: Math.round(share * 1e4) / 1e4,
+    away: Math.round((1 - share) * 1e4) / 1e4,
+    confident: total >= 12,
+  };
+}
+
 /** Minutos utiles que quedan por jugar. Es el termino T del Poisson. */
 function minsLeft(minute) {
   const m = minute || 0;
@@ -232,6 +307,6 @@ function loadModel() {
 module.exports = {
   FEATURES, minsLeft, extractFeatures,
   fitPlatt, applyPlatt, logit, rawProb, score, loadModel,
-  probAtLeast, marketEdge,
+  probAtLeast, marketEdge, phase, teamSplit,
   MODEL_FILE,
 };

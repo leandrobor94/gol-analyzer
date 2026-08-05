@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const scores365 = require('./scores365');
 const M = require('./model');
-const { classifyAlert, alertQuality, classifyValue } = require('./alert_gate');
+const { alertQuality, classifyBet } = require('./alert_gate');
 const verify = require('./verify');
 const notify = require('./notify');
 const aiFilter = require('./ai_filter');
@@ -131,6 +131,22 @@ function hasMeaningfulStats(stats) {
     || (n(stats.shotsInsideBoxHome) + n(stats.shotsInsideBoxAway) >= 3)
     || (n(stats.bigChancesHome) + n(stats.bigChancesAway) >= 1)
     || (n(stats.attacksHome) + n(stats.attacksAway) >= 50);
+}
+
+/** Congela la apuesta tal como se anuncio, para poder resolverla despues. */
+function betOf(a) {
+  const g = a.gate || {};
+  if (!g.bet) return null;
+  return {
+    phase: g.phase, kind: g.kind, side: g.side, team: g.team,
+    bet: g.bet, horizon: g.horizon,
+    modelProb: g.p, fair: g.fair, target: g.target,
+    odds: g.hasOdds ? g.odds : null,
+    ev: g.hasOdds ? g.ev : null,
+    bookmaker: g.bookmaker || null,
+    minuteAtBet: a.minute,
+    goalsAtBet: (a.scoreHome || 0) + (a.scoreAway || 0),
+  };
 }
 
 function alertsEnabled() {
@@ -280,70 +296,64 @@ async function main() {
     // Una foto por ronda de TODOS los partidos, alerten o no.
     appendSnapshots(analyzed);
 
-    // ── 3b. mercado de goles y ventaja ──
-    // Solo para partidos con opciones reales: la linea Over/Under cuesta una
-    // llamada extra por partido, y en marcadores ya resueltos no hay apuesta.
+    // ── 3b. apuesta por fase, con la cuota como extra opcional ──
     const MIN_ODDS = parseFloat(process.env.MIN_ODDS || '1.5');
+    const MAX_ODDS = parseFloat(process.env.MAX_ODDS || '3.5');
     const MIN_EV = parseFloat(process.env.MIN_EV || '0.05');
-    const mktTargets = analyzed
-      .filter(a => a.minute >= 8 && a.minute <= 85 && a.probability > 0.10 && a.probability < 0.92)
-      .slice(0, 12);
+
+    for (const a of analyzed) {
+      const ph = M.phase(a.minute);
+      a.phase = ph;
+      a.split = M.teamSplit(a.stats);
+      // Probabilidad de la apuesta ANY para esta fase (referencia para decidir
+      // a quien vale la pena pedirle cuota).
+      a.phaseP = a.lambda > 0 ? 1 - Math.exp(-a.lambda * ph.T) : 0;
+    }
+
+    // Solo se pide la cuota a los que ya caen en la banda apostable: cada
+    // consulta es una llamada extra y no tiene sentido gastarla en descartados.
+    const mktTargets = analyzed.filter(a => {
+      if (!a.phaseP) return false;
+      const fair = 1 / a.phaseP;
+      return fair >= MIN_ODDS && fair <= MAX_ODDS && hasMeaningfulStats(a.stats);
+    }).slice(0, 12);
+
     if (mktTargets.length && model.trained) {
-      console.log('\n  Consultando mercado de goles en ' + mktTargets.length + ' partidos...');
-      let conMercado = 0;
+      console.log('\n  Consultando cuota de goles en ' + mktTargets.length + ' candidatos...');
+      let conCuota = 0;
       for (const a of mktTargets) {
         let mk = null;
         try { mk = await scores365.fetchGoalsMarket(a.matchId); } catch {}
         if (!mk) continue;
-        conMercado++;
+        conCuota++;
         a.goalsMarket = mk;
-        a.edge = M.marketEdge(a.lambda, a.minsLeft, (a.scoreHome || 0) + (a.scoreAway || 0), mk);
-        a.value = classifyValue(a.edge, { minOdds: MIN_ODDS, minEv: MIN_EV });
-        if (a.edge) {
-          const b = a.value.best;
-          // Mostrar el lado elegido: el valor puede estar en el Under, y decir
-          // solo el Over hace pensar que la traza esta mal.
-          console.log('    ' + (a.teamHome + ' vs ' + a.teamAway).slice(0, 32).padEnd(32) +
-            ' L' + mk.line +
-            ' | nuestro ' + (a.edge.pOver * 100).toFixed(0) + '% over vs casa ' + (a.edge.impliedOver * 100).toFixed(0) + '%' +
-            (b ? '  -> ' + b.side + ' @' + b.odds + ' EV ' + (b.ev >= 0 ? '+' : '') + (b.ev * 100).toFixed(1) + '%' : '') +
-            (a.value.tier === 'VALOR' ? '   <<< VALOR' : ''));
-        }
+        const goles = (a.scoreHome || 0) + (a.scoreAway || 0);
+        const me = M.marketEdge(a.lambda, a.minsLeft, goles, mk);
+        // La cuota Over/Under es del TOTAL del partido; solo es comparable con
+        // nuestra apuesta cuando ambas preguntan lo mismo: un gol mas hasta el
+        // final. En el 1T preguntamos por el descanso, que es otra cosa.
+        if (me) a.edge = { odds: me.bookOver, bookmaker: mk.bookmaker, line: me.line, goalsNeeded: me.goalsNeeded };
       }
-      console.log('  -> mercado disponible en ' + conMercado + '/' + mktTargets.length);
+      console.log('  -> cuota comparable en ' + conCuota + '/' + mktTargets.length);
     }
 
     // ── 4. gate + IA ──
     const candidates = [];
     const aiOn = aiFilter.isAvailable();
     for (const a of analyzed) {
-      // El gate de VALOR manda: es el unico que produce apuestas con premio real.
-      // El de PRECISION solo entra si no hay mercado que evaluar, y queda
-      // marcado como informativo para que no se confunda con una apuesta.
-      const g = (a.value && a.value.tier === 'VALOR')
-        ? Object.assign({}, a.value, { informativo: false })
-        : Object.assign({}, classifyAlert(a, hasMeaningfulStats, model), { informativo: true });
+      const g = classifyBet(
+        { phase: a.phase, lambda: a.lambda, split: a.split, edge: a.edge,
+          teamHome: a.teamHome, teamAway: a.teamAway },
+        { minOdds: MIN_ODDS, maxOdds: MAX_ODDS, minEv: MIN_EV });
       a.gate = g;
       if (g.tier === 'REJECT') continue;
-      // Un aviso de PRECISION con cuota justa ridicula no se envia: es cierto
-      // pero no accionable, y llenar Telegram de eso quema la confianza.
-      if (g.informativo && (a.probability || 0) > 1 / MIN_ODDS) {
-        continue;
-      }
-      // La IA REVISA, no habilita. La precision medida de este gate (84.2%) se
-      // midio SIN IA, asi que exigir una key para alertar seria incoherente con
-      // el numero que se promete. Sin key el sistema funciona igual; con key,
-      // la IA puede vetar y su aporte queda registrado para medirlo.
       if (g.requiresAi && aiOn) {
         const ai = await aiFilter.reviewAlert(a, g);
-        // Solo se guarda como decision de la IA si la IA respondio de verdad.
-        // Un fallo de facturacion o de red deja pasar la alerta, pero registrarlo
-        // como "la IA aprobo" contaminaria la medicion de su aporte en evaluate.js.
         a.aiDecision = ai.error ? null
           : { pass: !!ai.alert, confidence: ai.confidence || 0, reason: ai.reason || '', provider: ai.provider || null };
         console.log('  IA ' + (ai.provider || '?') + ': ' + a.teamHome + ' vs ' + a.teamAway +
           ' -> ' + (ai.error ? 'NO DISPONIBLE (pasa sin filtrar)' : (ai.alert ? 'PASA' : 'VETA')) +
-          ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
+          ' ' + (ai.reason || ''));
         if (!ai.alert) continue;
       }
       a.alertQuality = alertQuality(a);
@@ -377,7 +387,16 @@ async function main() {
       writeSummary('- Alerta: desactivada');
     } else if (!process.env.CI) {
       console.log('\nCandidatos (local, no se envia Telegram): ' + toSend.length);
-      toSend.forEach(c => console.log('  [' + c.gate.tier + '] ' + Math.round(c.probability * 100) + '% ' + c.teamHome + ' vs ' + c.teamAway));
+      // Mostrar la probabilidad DE LA APUESTA, no la del partido entero: son
+      // cosas distintas y confundirlas es lo que hacia parecer util un 95%.
+      toSend.forEach(c => {
+        const g = c.gate;
+        console.log('  [' + g.phase + '] ' + (c.teamHome + ' vs ' + c.teamAway).slice(0, 34).padEnd(34) +
+          ' ' + c.minute + "'  " + g.bet.slice(0, 30).padEnd(30) +
+          ' p=' + Math.round(g.p * 100) + '%  justa ' + g.fair +
+          (g.hasOdds ? '  casa ' + g.odds + ' EV ' + (g.ev >= 0 ? '+' : '') + (g.ev * 100).toFixed(0) + '%'
+                     : '  desde ' + g.target));
+      });
     } else {
       const msg = notify.buildMessage(toSend, model);
       if (msg && await notify.sendTelegram(msg)) {
@@ -420,13 +439,7 @@ async function main() {
           existing.aiDecision = a.aiDecision || null;
           // La apuesta concreta, congelada al alertar. Sin esto no se puede
           // calcular el ROI real despues: hace falta la cuota QUE HABIA.
-          existing.bet = a.gate.best ? {
-            pick: a.gate.best.pick, side: a.gate.best.side,
-            line: a.gate.line, goalsNeeded: a.gate.goalsNeeded,
-            odds: a.gate.best.odds, modelProb: a.gate.best.p,
-            ev: a.gate.best.ev, edge: a.gate.best.edge,
-            goalsAtBet: (a.scoreHome || 0) + (a.scoreAway || 0),
-          } : null;
+          existing.bet = betOf(a);
         }
       } else {
         predictions.push(Object.assign({
@@ -439,13 +452,7 @@ async function main() {
           alertProbability: a.alerted ? a.probability : null,
           alertMinute: a.alerted ? a.minute : null,
           aiDecision: a.aiDecision || null,
-          bet: (a.alerted && a.gate.best) ? {
-            pick: a.gate.best.pick, side: a.gate.best.side,
-            line: a.gate.line, goalsNeeded: a.gate.goalsNeeded,
-            odds: a.gate.best.odds, modelProb: a.gate.best.p,
-            ev: a.gate.best.ev, edge: a.gate.best.edge,
-            goalsAtBet: (a.scoreHome || 0) + (a.scoreAway || 0),
-          } : null,
+          bet: a.alerted ? betOf(a) : null,
           finalScore: null, goalAfterAnalysis: null, goalWithin15: null,
           goalMinutes: null, nextGoalMinute: null,
           predictionCorrect: null, alertCorrect: null,

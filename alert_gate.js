@@ -1,16 +1,21 @@
 /**
- * alert_gate.js — decide que se alerta.
+ * alert_gate.js — decide QUE se apuesta y SI se avisa.
  *
- * Aqui NO hay umbrales escritos a mano. Las reglas salen de model.json, que las
- * deriva train.js midiendo precision fuera de muestra sobre datos verificados.
- * Cambiar el criterio de alerta = reentrenar, no editar este archivo.
+ * Dos ideas, las dos aprendidas por las malas:
  *
- * Dos tiers, con proposito distinto y medido por separado:
+ * 1. La apuesta depende del momento del partido (model.phase).
+ *    En el minuto 20 "habra gol en el partido" es un 95% que se paga a 1.05:
+ *    correcto e inutil. Preguntando "gol antes del descanso" el horizonte se
+ *    acorta y la cuota justa sube sola al rango que compensa el riesgo. Del 45
+ *    al 70 se estrecha a UN equipo concreto por el mismo motivo.
  *
- *   PRECISION  ventana temprana. Alta precision medida (>=90%). Responde
- *              "este partido tendra gol", no "viene un gol ya".
- *   VALOR      ventana media/tardia. Precision estructuralmente menor, pero es
- *              la ventana donde una cuota en vivo todavia paga. Pasa por IA.
+ * 2. Se decide por valor esperado, no por certeza.
+ *    EV = p_NUESTRA x cuota - 1. La cuota nunca sustituye a nuestra
+ *    probabilidad: solo dice a cuanto la pagan. Si no hay cuota publicada
+ *    (pasa en ~60% de los partidos) se avisa igual, indicando el precio minimo
+ *    al que merece la pena. Lo que NO se hace es estimar lo que paga la casa
+ *    con nuestro propio modelo: eso seria compararlo consigo mismo y todo
+ *    pareceria valor.
  */
 
 const num = (v) => (v == null || Number.isNaN(v) ? 0 : v);
@@ -39,96 +44,121 @@ function alertQuality(r) {
 }
 
 /**
- * @param {object} r      resultado de model.score() mezclado con datos del partido
- * @param {function} hasMeaningfulStats
- * @param {object} model  model.json cargado
+ * EL GATE. Uno solo, por fase del partido, con la cuota como extra opcional.
+ *
+ * Que se apuesta depende del momento (model.phase):
+ *   1T     -> gol antes del descanso
+ *   2T     -> otro gol en lo que queda
+ *   FINAL  -> gol en lo que queda
+ *
+ * Se alerta cuando NUESTRA probabilidad cae en la banda apostable, es decir
+ * cuando la cuota justa esta entre minOdds y maxOdds. Fuera de ahi no se manda:
+ * por debajo el premio no compensa el riesgo (el problema del 1.05), por encima
+ * es un tiro lejano que no sabemos sostener.
+ *
+ * La cuota de la casa NO hace falta para alertar:
+ *   - si la hay  -> se calcula EV y se exige que sea positivo
+ *   - si no la hay -> se da el precio minimo al que merece la pena, y el usuario
+ *                     la busca donde quiera
+ *
+ * @param {object} p  { p, phase, lambda, edge }  edge puede ser null
  */
-function classifyAlert(r, hasMeaningfulStats, model) {
-  const minute = r.minute || 0;
-  const p = r.probability != null ? r.probability : (r.score || 0) / 100;
-  const base = {
-    probability: Math.round(p * 1000) / 1000,
-    minute,
-    xgRemaining: Math.round(xgRemaining(r.stats, r.scoreHome, r.scoreAway) * 100) / 100,
-    gd: Math.abs(num(r.scoreHome) - num(r.scoreAway)),
-    quality: alertQuality(r),
-  };
-
-  if (!model || !model.trained || !Array.isArray(model.gates) || !model.gates.length) {
-    return Object.assign({ tier: 'REJECT', reason: 'sin modelo entrenado (corre: npm run train)' }, base);
-  }
-  if (!hasMeaningfulStats(r.stats)) {
-    return Object.assign({ tier: 'REJECT', reason: 'sin stats fiables' }, base);
-  }
-
-  // Los gates vienen en orden de prioridad: PRECISION primero.
-  for (const g of model.gates) {
-    if (minute < g.minMinute || minute > g.maxMinute) continue;
-    if (p < g.threshold) continue;
-    return Object.assign({
-      tier: g.tier,
-      reason: 'min ' + g.minMinute + '-' + g.maxMinute + ', p>=' + g.threshold,
-      gate: g,
-      requiresAi: !!g.requiresAi,
-      expectedPrecision: g.measuredPrecision,
-      ci95: g.ci95,
-    }, base);
-  }
-
-  const why = model.gates.map(function (g) {
-    return (minute >= g.minMinute && minute <= g.maxMinute)
-      ? g.tier + ': falta p>=' + g.threshold + ' (tiene ' + p.toFixed(2) + ')'
-      : g.tier + ': fuera de ventana ' + g.minMinute + '-' + g.maxMinute;
-  }).join(' | ');
-  return Object.assign({ tier: 'REJECT', reason: why }, base);
-}
-
-/**
- * Gate de VALOR: decide con valor esperado, no con precision.
- *
- * El criterio anterior premiaba la certeza, y la certeza se paga a 1.05. Un
- * aviso al 95% con cuota 1.05 arriesga 100 para ganar 5: no es un producto.
- *
- * Aqui manda NUESTRO analisis. La cuota no sustituye a nuestra probabilidad:
- * solo dice a cuanto nos pagan por ella.
- *
- *   EV = p_nuestra x cuota - 1
- *
- * Con p=55% y cuota 3.00 el EV es +65%, aunque la casa crea que es un 33%.
- * Ese desacuerdo es exactamente lo que se busca: si el mercado y nosotros
- * pensaramos igual, no habria nada que apostar.
- *
- * @param {object} edge   salida de model.marketEdge()
- * @param {object} opts   { minOdds, minEv }
- */
-function classifyValue(edge, opts) {
+function classifyBet(input, opts) {
   const minOdds = (opts && opts.minOdds) || 1.5;
+  const maxOdds = (opts && opts.maxOdds) || 3.5;
   const minEv = (opts && opts.minEv) || 0.05;
-  if (!edge) return { tier: 'REJECT', reason: 'sin mercado de goles' };
+  const maxEdge = (opts && opts.maxEdge) || 0.25;
+  const margin = (opts && opts.margin) || 1.08;
 
-  const sides = [
-    { side: 'OVER', pick: 'Más de ' + edge.line, p: edge.pOver, odds: edge.bookOver, ev: edge.evOver, edge: edge.edgeOver, fair: edge.fairOver },
-    { side: 'UNDER', pick: 'Menos de ' + edge.line, p: edge.pUnder, odds: edge.bookUnder, ev: edge.evUnder, edge: edge.edgeUnder, fair: edge.fairUnder },
-  ].filter(s => s.odds && s.ev != null);
+  const ph = input.phase;
+  const lambda = input.lambda;
+  if (!(lambda > 0) || !ph) return { tier: 'REJECT', reason: 'sin modelo' };
 
-  if (!sides.length) return { tier: 'REJECT', reason: 'sin cuotas utilizables' };
+  // Cada fase ofrece una o dos apuestas. Se evaluan y se elige la que cae en la
+  // banda apostable; si ninguna cae, no se manda nada.
+  const split = input.split || { home: 0.5, away: 0.5 };
+  const favorito = split.home >= split.away ? 'home' : 'away';
+  const cuotaTeam = split[favorito];
+  const nombre = favorito === 'home' ? input.teamHome : input.teamAway;
 
-  const best = sides.sort((a, b) => b.ev - a.ev)[0];
-
-  if (best.odds < minOdds) {
-    return { tier: 'REJECT', reason: 'cuota ' + best.odds + ' < ' + minOdds + ' (riesgo/premio absurdo)', best };
+  const opciones = [];
+  for (const opt of ph.options) {
+    if (opt === 'ANY') {
+      opciones.push({
+        kind: 'ANY',
+        p: 1 - Math.exp(-lambda * ph.T),
+        bet: ph.key === '1T' ? 'Gol antes del descanso' : 'Gol en lo que queda (cualquier equipo)',
+      });
+    } else {
+      opciones.push({
+        kind: 'TEAM',
+        side: favorito,
+        team: nombre,
+        p: 1 - Math.exp(-lambda * cuotaTeam * ph.T),
+        bet: 'Marca ' + (nombre || (favorito === 'home' ? 'el local' : 'el visitante')),
+      });
+    }
   }
-  if (best.ev < minEv) {
-    return { tier: 'REJECT', reason: 'EV ' + (best.ev * 100).toFixed(1) + '% < ' + (minEv * 100).toFixed(0) + '%', best };
+
+  const enBanda = opciones.filter(o => {
+    const f = 1 / o.p;
+    return o.p > 0 && o.p < 1 && f >= minOdds && f <= maxOdds;
+  });
+  if (!enBanda.length) {
+    const mejor = opciones.sort((a, b) => b.p - a.p)[0];
+    const f = mejor && mejor.p > 0 ? 1 / mejor.p : 0;
+    return { tier: 'REJECT', reason: 'cuota justa ' + f.toFixed(2) + ' fuera de [' + minOdds + '-' + maxOdds + ']' };
   }
-  return {
-    tier: 'VALOR',
-    reason: 'EV +' + (best.ev * 100).toFixed(1) + '% a cuota ' + best.odds,
-    best,
-    line: edge.line,
-    goalsNeeded: edge.goalsNeeded,
-    requiresAi: true,
+  // La de menor cuota dentro de la banda: la mas probable de las apostables.
+  enBanda.sort((a, b) => b.p - a.p);
+  const elegida = enBanda[0];
+  const p = elegida.p;
+  const fair = 1 / p;
+
+  const base = {
+    phase: ph.key,
+    kind: elegida.kind,
+    side: elegida.side || null,
+    team: elegida.team || null,
+    bet: elegida.bet,
+    horizon: ph.T,
+    p: Math.round(p * 1e4) / 1e4,
+    fair: Math.round(fair * 100) / 100,
+    target: Math.round(fair * margin * 100) / 100,
   };
+
+  // La cuota Over/Under del feed es del TOTAL del partido: solo compara con
+  // "un gol mas hasta el final". Con la apuesta de 1T (descanso) o de equipo
+  // concreto NO pregunta lo mismo, asi que ahi no se usa.
+  const comparable = elegida.kind === 'ANY' && ph.key !== '1T';
+  const e = comparable ? input.edge : null;
+  if (!e || !e.odds) {
+    // Sin precio publicado se manda igual. No se estima lo que paga la casa:
+    // eso seria comparar el modelo consigo mismo y todo pareceria valor.
+    return Object.assign({ tier: 'AVISO', reason: 'sin cuota publicada', hasOdds: false, requiresAi: true }, base);
+  }
+
+  const ev = p * e.odds - 1;
+  const edgePts = p - 1 / e.odds;
+
+  // Demasiado bueno para ser verdad. Un desacuerdo enorme con una casa
+  // profesional casi nunca es dinero gratis: suele ser dato roto o error
+  // nuestro. Medido en vivo: cuotas con 1X2 a -1 producian "EV +71%".
+  if (edgePts > maxEdge) {
+    return Object.assign({ tier: 'REJECT', hasOdds: true,
+      reason: 'ventaja ' + (edgePts * 100).toFixed(0) + ' pts es implausible (dato sospechoso)' }, base);
+  }
+  if (ev < minEv) {
+    return Object.assign({ tier: 'REJECT', hasOdds: true,
+      reason: 'EV ' + (ev * 100).toFixed(1) + '% < ' + (minEv * 100).toFixed(0) + '%' }, base);
+  }
+  return Object.assign({
+    tier: 'VALOR', reason: 'EV +' + (ev * 100).toFixed(1) + '% a cuota ' + e.odds,
+    hasOdds: true, requiresAi: true,
+    odds: e.odds, ev: Math.round(ev * 1e4) / 1e4,
+    edgePts: Math.round(edgePts * 1e4) / 1e4,
+    bookmaker: e.bookmaker || null,
+  }, base);
 }
 
-module.exports = { xgRemaining, bigChances, alertQuality, classifyAlert, classifyValue };
+module.exports = { xgRemaining, bigChances, alertQuality, classifyBet };

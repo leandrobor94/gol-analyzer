@@ -252,10 +252,34 @@ async function fetchGoalsMarket(gameId) {
       if (/^m[aá]s de|over/i.test(opt.name || '')) over = rate;
       else if (/^menos de|under/i.test(opt.name || '')) under = rate;
     }
-    if (!over) continue;
+    if (!over || !under) continue;
+    // Linea ya cerrada: la cuota que trae es historica, no apostable.
+    if (o.isConcluded) continue;
+
+    // ── Control de sanidad del dato ──
+    // El feed sirve bloques corruptos: se han visto 1X2 con rate -1 y cuotas de
+    // 1.00 en partidos sin resolver. Comparar nuestro modelo contra un precio
+    // roto genera "ventajas" enormes que son puro artefacto.
+    if (over <= 1.02 || under <= 1.02 || over > 60 || under > 60) continue;
+    // Margen de la casa: en un mercado de dos salidas 1/over + 1/under suele
+    // caer entre 1.02 y 1.20. Fuera de ahi el precio no es coherente.
+    const overround = 1 / over + 1 / under;
+    if (overround < 1.0 || overround > 1.35) continue;
+    // Si el 1X2 del mismo partido viene roto, todo el bloque es sospechoso.
+    const x12 = preds.map(pp => pp.odds).find(oo => oo && oo.lineTypeId === 1);
+    if (x12 && Array.isArray(x12.options)) {
+      const rates = x12.options.map(op => op && op.rate && op.rate.decimal).filter(v => typeof v === 'number');
+      if (rates.length && rates.some(v => v <= 1.0)) continue;
+    }
     return {
       line, over, under,
       bookmakerId: o.bookmakerId || null,
+      bookmaker: (o.bookmaker && o.bookmaker.name) || null,
+      // El objeto odds NO trae marca de tiempo propia (verificado: sus campos son
+      // lineId, gameId, bookmakerId, lineTypeId, lineType, link, bookmaker,
+      // options, internalOption*, outcomeOptionNum, isConcluded). Asi que no se
+      // puede saber cuanto lleva ese precio publicado. Se guarda cuando LO VIMOS
+      // nosotros, que es lo unico que sabemos con certeza.
       capturedAt: new Date().toISOString(),
     };
   }
