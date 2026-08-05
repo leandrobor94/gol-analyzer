@@ -16,12 +16,18 @@
  *      su aporte real: precision con IA vs sin IA sobre las mismas alertas.
  *
  * Si tras >=30 decisiones evaluate.js muestra que no aporta, quitarla.
- * Mientras tanto solo filtra el tier VALOR, nunca el de PRECISION.
+ * Mientras tanto solo REVISA el tier VALOR (nunca el de PRECISION), y sin key
+ * el sistema alerta igual: la precision medida de ese gate se midio SIN IA.
  *
- * Providers, por prioridad:
- *   1. OPENAI_API_KEY     -> gpt-4o-mini
- *   2. GROQ_API_KEY       -> llama-3.3-70b (gratis)
- *   3. ANTHROPIC_API_KEY  -> claude haiku
+ * Providers, en orden. Los dos primeros tienen capa gratuita real y no dependen
+ * de que quede saldo en una cuenta de pago:
+ *   1. GROQ_API_KEY      -> llama-3.3-70b-versatile   console.groq.com/keys
+ *   2. NVIDIA_API_KEY    -> meta/llama-3.3-70b-instruct   build.nvidia.com
+ *   3. OPENAI_API_KEY    -> gpt-4o-mini      (de pago; Plus NO incluye API)
+ *   4. ANTHROPIC_API_KEY -> claude haiku     (de pago; Pro NO incluye API)
+ *
+ * Si uno responde con error se pasa al siguiente. Si el modelo no soporta
+ * response_format json_object, se reintenta sin el.
  *
  * Keys: local en .env (ver .env.example) | nube en GitHub Secrets.
  */
@@ -62,15 +68,23 @@ function providers() {
   return [buildGroq(), buildNvidia(), buildOpenAI(), buildAnthropic()].filter(Boolean);
 }
 
-/** Formato OpenAI-compatible: sirve para Groq, NVIDIA NIM y OpenAI. */
+/**
+ * Formato OpenAI-compatible: sirve para Groq, NVIDIA NIM y OpenAI.
+ *
+ * `jsonMode` es un parametro porque el soporte de response_format varia por
+ * modelo — sobre todo en el catalogo de NVIDIA, donde conviven decenas de
+ * arquitecturas distintas. Si el servidor lo rechaza, reviewAlert reintenta sin
+ * el: el prompt ya pide JSON explicitamente y el parser tolera vallas ```json.
+ */
 function openaiShape(name, host, apiPath, key, model) {
   return {
     name, key, host, path: apiPath, model,
     headers: (k) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + k }),
-    body: (m, messages) => JSON.stringify({
-      model: m, messages, temperature: 0.05, max_tokens: 220,
-      response_format: { type: 'json_object' },
-    }),
+    body: (m, messages, jsonMode = true) => {
+      const payload = { model: m, messages, temperature: 0.05, max_tokens: 220 };
+      if (jsonMode) payload.response_format = { type: 'json_object' };
+      return JSON.stringify(payload);
+    },
     parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
   };
 }
@@ -93,41 +107,19 @@ function provider() {
 }
 
 function buildOpenAI() {
-  if (process.env.OPENAI_API_KEY) {
-    return {
-      name: 'openai',
-      key: process.env.OPENAI_API_KEY,
-      host: 'api.openai.com',
-      path: '/v1/chat/completions',
-      model: process.env.AI_MODEL || 'gpt-4o-mini',
-      headers: (key) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + key }),
-      body: (model, messages) => JSON.stringify({
-        model, messages, temperature: 0.05, max_tokens: 220,
-        response_format: { type: 'json_object' },
-      }),
-      parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
-    };
-  }
-  return null;
+  if (!process.env.OPENAI_API_KEY) return null;
+  return openaiShape(
+    'openai', 'api.openai.com', '/v1/chat/completions',
+    process.env.OPENAI_API_KEY,
+    process.env.AI_MODEL || 'gpt-4o-mini');
 }
 
 function buildGroq() {
-  if (process.env.GROQ_API_KEY) {
-    return {
-      name: 'groq',
-      key: process.env.GROQ_API_KEY,
-      host: 'api.groq.com',
-      path: '/openai/v1/chat/completions',
-      model: process.env.AI_MODEL || 'llama-3.3-70b-versatile',
-      headers: (key) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + key }),
-      body: (model, messages) => JSON.stringify({
-        model, messages, temperature: 0.05, max_tokens: 220,
-        response_format: { type: 'json_object' },
-      }),
-      parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
-    };
-  }
-  return null;
+  if (!process.env.GROQ_API_KEY) return null;
+  return openaiShape(
+    'groq', 'api.groq.com', '/openai/v1/chat/completions',
+    process.env.GROQ_API_KEY,
+    process.env.AI_MODEL || 'llama-3.3-70b-versatile');
 }
 
 function buildAnthropic() {
@@ -229,7 +221,15 @@ async function reviewAlert(r, gate) {
 
   for (const p of list) {
     try {
-      const { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages));
+      let { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages));
+
+      // Un modelo que no soporta modo JSON devuelve 4xx quejandose de
+      // response_format. No es motivo para descartar el provider: se reintenta
+      // sin el, que es como funcionaba antes de que existiera esa opcion.
+      if (status >= 400 && status < 500 && /response_format|json_object|json mode|json_schema/i.test(raw || '')) {
+        ({ status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages, false)));
+      }
+
       if (status < 200 || status >= 300) {
         const errMsg = (json && json.error && json.error.message) || (raw || '').slice(0, 120) || ('HTTP ' + status);
         problems.push(p.name + ': ' + errMsg);
