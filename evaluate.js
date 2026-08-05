@@ -284,6 +284,28 @@ try {
     snapMatches = ids.size;
   }
 } catch {}
+// ── frontera de lo alcanzable ──
+// Esto no depende del modelo ni de los datos: sale de la aritmetica del proceso.
+// P(al menos un gol en T minutos) = 1 - exp(-lambda*T)
+console.log('  FRONTERA DE LO ALCANZABLE (aritmetica, no modelo)');
+console.log('    P(gol en T min) = 1 - exp(-lambda*T). Para llegar al 90% hace falta');
+console.log('    lambda*T >= 2.30. Con ritmos de gol reales:');
+console.log('');
+console.log('    ritmo del partido      lambda    minutos necesarios para un 90%');
+for (const [etiqueta, gpm] of [['tipico (2.7 g/p)', 2.7], ['alto (3.5 g/p)', 3.5], ['muy abierto (4.5 g/p)', 4.5]]) {
+  const lam = gpm / 90;
+  console.log('    ' + etiqueta.padEnd(22) + lam.toFixed(4) + '    ' + (2.303 / lam).toFixed(0) + ' min');
+}
+console.log('');
+console.log('    En una ventana de 15 minutos harian falta ' + (2.303 / 15 * 90).toFixed(1) + ' goles/partido');
+console.log('    de ritmo sostenido. Ningun partido de futbol tiene ese ritmo.');
+console.log('');
+console.log('    CONCLUSION: un 90% exige ~50-77 minutos por delante. Es decir,');
+console.log('    solo se puede prometer "habra gol" mirando casi todo el partido.');
+console.log('    En ventana corta el 90% no lo impide el modelo: lo impide el deporte.');
+console.log('    Por eso el gate PRECISION dispara en el minuto 0-25 y no en el 70.');
+console.log('');
+
 console.log('  SIGUIENTE PALANCA: trayectoria (momentum real)');
 console.log('    Todo lo medido usa UNA foto por partido. Que un equipo lleve 8 remates');
 console.log('    dice poco; que lleve 5 en los ultimos 10 minutos es otra cosa. Eso');

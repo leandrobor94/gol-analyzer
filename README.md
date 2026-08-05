@@ -131,34 +131,61 @@ Comandos del bot: `/pause`, `/resume`, `/status`.
 
 Un 90% útil no sale de afinar coeficientes. Sale de cambiar la pregunta.
 
-### Ya probamos la pregunta correcta. Tampoco funciona (todavía)
+### Probamos la pregunta correcta. Y hay un techo que no es del modelo
 
 La hipótesis era: *"si fijamos el horizonte en 15 minutos, el tiempo deja de
 dominar y las estadísticas del partido tendrán que importar"*.
 
-Se pudo probar sin esperar semanas. Resulta que la API de 365scores **sigue
-sirviendo el timeline de goles de partidos de semanas atrás**, así que
-`backfill.js` recuperó el minuto exacto de cada gol para los 548 partidos del
-histórico — 548/548, sin un solo fallo. Eso convirtió el archivo en un dataset
-entrenable para la etiqueta corta al instante.
+Se pudo probar sin esperar semanas. La API de 365scores **sigue sirviendo el
+timeline de goles de partidos de semanas atrás**, así que `backfill.js` recuperó
+el minuto exacto de cada gol para los 548 partidos del histórico — 548/548, sin
+un solo fallo.
+
+Y con esos minutos se puede reconstruir el marcador en **cualquier** instante, lo
+que convierte cada partido en ~14 observaciones en vez de 1:
 
 ```bash
-node backfill.js      # recupera minutos de gol del histórico
-npm run train:15      # entrena el modelo de 15 minutos
+node backfill.js       # recupera minutos de gol del histórico
+npm run train:15       # rejilla temporal: 341 partidos -> 4.774 filas
 ```
 
-Resultado, validado fuera de muestra sobre 299 partidos:
+Resultado sobre 4.774 filas, validado fuera de muestra: **AUC 0.530, skill 0%**.
+Y la razón salta a la vista en la tasa base por minuto:
 
-| | Gol antes del final | **Gol en 15 min** |
+| Minuto | Gol en los próximos 15' |
+|---|---|
+| 10 | 33.7% |
+| 30 | 36.4% |
+| 50 | 39.3% |
+| 70 | 41.3% |
+
+Es **plana**. Los goles en fútbol llegan casi como un proceso de Poisson
+homogéneo: la probabilidad de que caiga uno en los próximos 15 minutos apenas
+depende de en qué minuto estés ni de cómo vaya el marcador.
+
+### El 90% en ventana corta es imposible, y se demuestra
+
+No es que no encontremos el modelo. Es aritmética:
+
+```
+P(gol en T minutos) = 1 - exp(-λ·T)
+Para P ≥ 0.90  →  λ·T ≥ 2.30
+```
+
+| Ritmo del partido | λ (goles/min) | Minutos necesarios para un 90% |
 |---|---|---|
-| Tasa base | 65.9% | 37.8% |
-| AUC | 0.731 | **0.508** |
-| Skill score | +15% | **−2%** |
+| Típico (2.7 g/p) | 0.030 | **77 min** |
+| Alto (3.5 g/p) | 0.039 | 59 min |
+| Muy abierto (4.5 g/p) | 0.050 | 46 min |
 
-**Con el tiempo ya controlado, las estadísticas siguen sin predecir nada.** No es
-un problema de calibración ni de tamaño de muestra: no hay señal en esas
-variables. `model15.json` se guarda con **cero gates** — a propósito: un modelo
-que no discrimina no debe alertar.
+En una ventana de 15 minutos harían falta **13.8 goles por partido** de ritmo
+sostenido. Ningún partido de fútbol tiene ese ritmo — ni el más loco que hayas
+visto.
+
+**Un 90% de acierto exige tener 50–77 minutos por delante.** Por eso el gate
+`PRECISION` dispara en el minuto 0–25 y no en el 70: no es una elección de
+diseño, es la única región donde ese número existe. Ningún modelo, ninguna IA y
+ninguna cantidad de datos cambia eso: lo fija el deporte.
 
 ### Lo que queda por probar
 

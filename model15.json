@@ -1,13 +1,11 @@
 {
   "version": 5,
   "horizon": 15,
-  "trainedAt": "2026-08-05T12:36:20.991Z",
-  "n": 299,
-  "dataRange": [
-    "2026-07-18",
-    "2026-08-05"
-  ],
-  "baseRate": 0.3946,
+  "trainedAt": "2026-08-05T12:58:18.142Z",
+  "n": 4774,
+  "matches": 341,
+  "source": "rejilla temporal desde timeline de goles (sin stats en el minuto t)",
+  "baseRate": 0.3831,
   "features": [
     "xgRate",
     "sotRate",
@@ -24,81 +22,34 @@
     "early",
     "leagueRate"
   ],
-  "b0": -3.647988,
+  "b0": -3.392227,
   "b": [
-    0.011966,
-    0.120102,
-    -0.065367,
-    -0.098539,
-    0.157073,
-    0.067492,
-    -0.022974,
-    -0.038327,
-    0.211496,
-    0.041647,
-    0.061889,
-    0.167043,
-    -0.02554,
-    0
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0.017076,
+    -0.117662,
+    0,
+    0.079548,
+    0,
+    -0.011189,
+    -0.125496,
+    -0.003946
   ],
   "calibration": {
-    "a": -0.517756,
-    "b": -0.648002
+    "a": 0.89506,
+    "b": -0.050463
   },
   "eval": {
     "method": "rolling-origin 5 cortes, calibracion fuera de pliegue",
-    "nTest": 150,
-    "auc": 0.5076,
-    "brier": 0.2406,
-    "brierBase": 0.2358,
-    "skillScore": -0.0205
+    "nTest": 2387,
+    "auc": 0.5305,
+    "brier": 0.2316,
+    "brierBase": 0.2316,
+    "skillScore": -0.0001
   },
-  "gates": [],
-  "curve": [
-    {
-      "threshold": 0.5,
-      "n": 19,
-      "precision": 0.5263
-    },
-    {
-      "threshold": 0.52,
-      "n": 11,
-      "precision": 0.5455
-    },
-    {
-      "threshold": 0.54,
-      "n": 9,
-      "precision": 0.5556
-    },
-    {
-      "threshold": 0.56,
-      "n": 5,
-      "precision": 0.4
-    },
-    {
-      "threshold": 0.58,
-      "n": 3,
-      "precision": 0.6667
-    },
-    {
-      "threshold": 0.6,
-      "n": 3,
-      "precision": 0.6667
-    },
-    {
-      "threshold": 0.62,
-      "n": 3,
-      "precision": 0.6667
-    },
-    {
-      "threshold": 0.64,
-      "n": 1,
-      "precision": 1
-    },
-    {
-      "threshold": 0.66,
-      "n": 1,
-      "precision": 1
-    }
-  ]
+  "gates": []
 }

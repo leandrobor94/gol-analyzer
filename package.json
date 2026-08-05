@@ -1,17 +1,18 @@
 {
   "name": "gol-analyzer",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Alertas de gol en vivo con modelo calibrado y evaluacion fuera de muestra",
   "main": "run_flashscore.js",
   "scripts": {
     "start": "node run_flashscore.js",
     "train": "node train.js",
-    "train:15": "node train.js --label h15",
+    "train:15": "node train_grid.js",
     "train:dry": "node train.js --dry",
     "backfill": "node backfill.js",
     "audit": "node evaluate.js",
     "test:ai": "node _test_ai.js",
-    "test": "node evaluate.js"
+    "test": "node evaluate.js",
+    "train:15snapshot": "node train.js --label h15"
   },
   "keywords": [],
   "author": "",
