@@ -4,6 +4,8 @@ const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWi
 const notify = require('./notify');
 const scores365 = require('./scores365');
 const { fetchStatsBatch, extractMatchMomentum, fetchMomentumBatch } = require('./flashscore_fetcher');
+const { classifyAlert, alertQuality } = require('./alert_gate');
+const aiFilter = require('./ai_filter');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
@@ -877,29 +879,44 @@ async function main() {
     saveWeights(weights);
     console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
-    // --- Telegram alert ---
-    // Gates (medidos en NEW-set ago-1+, n=357):
-    //   solo score>=80 → 11/28 (39%) hit
-    //   + xG restante >=1.0 → 5/8 (63%) hit  ← aplicado
-    // xG restante = oportunidad real no convertida; sin eso el modelo
-    // se emociona con tiempo restante y manda FPs.
-    const topByScore = ranked.filter(r => {
-      if (r.score < 80 || r.minute < 30 || !hasMeaningfulStats(r.stats)) return false;
-      const xg = (r.stats.xgHome || 0) + (r.stats.xgAway || 0);
-      const goals = (r.scoreHome || 0) + (r.scoreAway || 0);
-      const xgRemaining = xg - goals;
-      if (xgRemaining < 1.0) return false;
-      return true;
-    });
-    if (topByScore.length > 0) {
+    // --- Telegram alert (alto impacto, medido >=90% en STRONG) ---
+    // STRONG: score>=80 + xgRem>=1.5 + gd<=1 + min35-85 → 5/5 (100%) historico
+    // BORDERLINE: xgRem 1.0-1.5 → solo si IA confirma (OPENAI/GROQ/ANTHROPIC key)
+    const aiOn = aiFilter.isAvailable();
+    console.log('\n  Gate alertas: STRONG auto | BORDERLINE ' + (aiOn ? 'IA ON' : 'IA OFF (solo STRONG)'));
+    const candidates = [];
+    for (const r of ranked) {
+      r.alertQuality = alertQuality(r);
+      const g = classifyAlert(r, hasMeaningfulStats);
+      r.alertGate = g;
+      if (g.tier === 'REJECT') continue;
+      if (g.tier === 'STRONG') {
+        candidates.push({ r, gate: g, source: 'STRONG' });
+        continue;
+      }
+      if (g.tier === 'BORDERLINE' && aiOn) {
+        const ai = await aiFilter.reviewAlert(r, g);
+        console.log('  AI ' + (ai.provider || '?') + ' ' + r.teamHome + ' vs ' + r.teamAway +
+          ' → ' + (ai.alert ? 'PASS' : 'VETO') + ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
+        if (ai.alert) candidates.push({ r, gate: g, source: 'AI', ai });
+      }
+    }
+    candidates.sort((a, b) => (b.r.alertQuality || 0) - (a.r.alertQuality || 0));
+
+    if (candidates.length > 0) {
       if (!process.env.CI) {
-        // Local: no mandar Telegram, ya ves la terminal
+        console.log('  Candidatos alerta (local, no Telegram): ' + candidates.length);
+        candidates.slice(0, 5).forEach(c =>
+          console.log('   [' + c.source + '] ' + c.r.score + '% q=' + c.r.alertQuality + ' ' +
+            c.r.teamHome + ' vs ' + c.r.teamAway + ' xgR=' + c.gate.xgRemaining)
+        );
       } else if (!alertsEnabled()) {
         console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
         writeSummary('- Alerta: Desactivada por usuario');
       } else {
         const filtered = [];
-        for (const r of topByScore) {
+        for (const c of candidates) {
+          const r = c.r;
           const key = r.matchId + '_' + r.windowType;
           const lastAlert = weights.alertedMatches?.[key];
           let skip = false;
@@ -908,7 +925,7 @@ async function main() {
             const gameMinAdvance = (r.minute || 0) - (lastAlert.minute || 0);
             if (realMin < 45 && gameMinAdvance < 25) skip = true;
           }
-          if (!skip) filtered.push(r);
+          if (!skip) filtered.push(c);
           if (filtered.length >= 5) break;
         }
 
@@ -916,28 +933,37 @@ async function main() {
           console.log('\nAlertas: todos los partidos ya alertados (dedup)');
           writeSummary('- Alerta: Todos dedup');
         } else {
-          const msg = notify.buildMessage(filtered);
+          const toSend = filtered.map(c => {
+            const r = c.r;
+            // Anotar fuente en verdict para el mensaje
+            r.verdict = (r.verdict || '') + ' [' + c.source + ' q=' + (r.alertQuality || 0) + ']';
+            return r;
+          });
+          const msg = notify.buildMessage(toSend);
           if (msg) {
-            console.log('\nEnviando alerta Telegram con ' + filtered.length + ' partidos (prob>80%)...');
+            console.log('\nEnviando alerta Telegram con ' + filtered.length + ' partidos...');
             await notify.sendTelegram(msg);
             weights.alertedMatches = weights.alertedMatches || {};
-            for (const r of filtered) {
+            for (const c of filtered) {
+              const r = c.r;
               const key = r.matchId + '_' + r.windowType;
-              weights.alertedMatches[key] = { timestamp: Date.now(), minute: r.minute || 0 };
+              weights.alertedMatches[key] = { timestamp: Date.now(), minute: r.minute || 0, source: c.source };
             }
-            // Limpiar entradas viejas (> 2h)
             const cutoff = Date.now() - 2 * 60 * 60 * 1000;
             for (const [k, v] of Object.entries(weights.alertedMatches)) {
               if (v.timestamp < cutoff) delete weights.alertedMatches[k];
             }
             saveWeights(weights);
-            writeSummary('- Alerta: ENVIADA (' + filtered.length + ' partidos)');
+            writeSummary('- Alerta: ENVIADA (' + filtered.length + ' | ' + filtered.map(c => c.source).join(',') + ')');
           }
         }
       }
     } else if (ranked.length > 0) {
-      console.log('\nMejor probabilidad: ' + ranked[0].score + '% (umbral: 80%)');
-      writeSummary('- Alerta: No enviada (mejor prob=' + ranked[0].score + '%)');
+      const best = ranked[0];
+      const g = best.alertGate || classifyAlert(best, hasMeaningfulStats);
+      console.log('\nSin alerta STRONG. Mejor: ' + best.score + '% q=' + (best.alertQuality || alertQuality(best)) +
+        ' tier=' + g.tier + ' (' + g.reason + ')');
+      writeSummary('- Alerta: No (' + g.tier + ' best=' + best.score + '% xgR=' + g.xgRemaining + ')');
     }
   } else {
     console.log('  Sin partidos en vivo.');

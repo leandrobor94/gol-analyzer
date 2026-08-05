@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { analyzeGoal, getWindowType, hasMeaningfulStats } = require('./run_flashscore');
+const { classifyAlert } = require('./alert_gate');
 
 const root = __dirname;
 const src = fs.readFileSync(path.join(root, 'run_flashscore.js'), 'utf8');
@@ -79,14 +80,16 @@ if (saveIdx < 0 || saveIdx < momIdx || saveIdx > alertIdx) {
   hit('CRITICO', 'orden save/momentum/alertas incorrecto');
 } else ok('orden: momentum → save → alertas');
 
-// alert gates
-const hasStatsGate = src.includes('hasMeaningfulStats(r.stats)');
-const hasMinGate = src.includes('r.minute >= 30') || src.includes('r.minute < 30');
-const hasXgGate = src.includes('xgRemaining') || src.includes('xg - goals');
-if (!hasStatsGate || !hasMinGate) hit('ALTO', 'alertas sin gate stats/minuto');
-else ok('alert gates stats+minuto');
-if (!hasXgGate) hit('MEDIO', 'alertas sin gate xG restante (medido como mejora)');
-else ok('alert gate xG restante');
+// alert gates high-impact
+if (!src.includes('classifyAlert') && !fs.existsSync(path.join(root, 'alert_gate.js'))) {
+  hit('ALTO', 'sin alert_gate/classifyAlert');
+} else ok('alert_gate STRONG/BORDERLINE');
+if (!fs.existsSync(path.join(root, 'ai_filter.js'))) {
+  hit('MEDIO', 'sin ai_filter.js');
+} else ok('ai_filter opcional presente');
+if (!src.includes('aiFilter') && !src.includes('ai_filter')) {
+  hit('MEDIO', 'ai_filter no cableado en pipeline');
+} else ok('ai_filter cableado');
 
 // betas
 if (!w.betas || typeof w.betas.baseline !== 'number') hit('CRITICO', 'weights sin betas');
@@ -176,17 +179,8 @@ const btOld = bt(oldV, 'OLD');
 const btNew = bt(newV, 'NEW');
 bt(verified, 'ALL');
 
-if (btOld.a >= 5 && btOld.h / btOld.a < 0.7) {
-  hit('ALTO', 'OLD alert hit-rate <70%: ' + btOld.h + '/' + btOld.a);
-}
-// Alert gate operativo (debe coincidir con run_flashscore.js)
-function passesAlertGate(r, pred) {
-  if (r.score < 80 || (pred.analysisMinute || 0) < 30) return false;
-  const xg = (pred.stats.xgHome || 0) + (pred.stats.xgAway || 0);
-  const goals = (pred.scoreAtAnalysis?.home || 0) + (pred.scoreAtAnalysis?.away || 0);
-  return (xg - goals) >= 1.0;
-}
-function btGate(set, label) {
+// STRONG gate operativo (target >=90%)
+function btStrong(set, label) {
   let a = 0, h = 0;
   for (const pred of set) {
     if (!pred.stats || !hasMeaningfulStats(pred.stats)) continue;
@@ -196,18 +190,23 @@ function btGate(set, label) {
       stats: pred.stats, teamHome: pred.teamHome, teamAway: pred.teamAway, league: pred.league, matchId: pred.id, rawName: pred.match
     };
     const r = analyzeGoal(m, { betas: B }, {}, null, getWindowType(m.minute), null);
-    if (!passesAlertGate(r, pred)) continue;
+    r.stats = m.stats;
+    const g = classifyAlert(r, hasMeaningfulStats);
+    if (g.tier !== 'STRONG') continue;
     a++;
     if (pred.goalAfterAnalysis) h++;
   }
-  const rate = a ? ((h / a) * 100).toFixed(0) : '0';
-  console.log('GATE ' + label + ' alerts=' + a + ' hit=' + h + ' (' + rate + '%)');
-  if (label === 'NEW' && a >= 6 && h / a < 0.55) {
-    hit('MEDIO', 'NEW gated alert hit-rate <55%: ' + h + '/' + a);
+  const rate = a ? h / a : null;
+  console.log('STRONG ' + label + ' alerts=' + a + ' hit=' + h + (rate != null ? ' (' + (rate * 100).toFixed(0) + '%)' : ''));
+  if (a >= 3 && rate < 0.90) {
+    hit('CRITICO', 'STRONG ' + label + ' hit-rate <90%: ' + h + '/' + a);
+  } else if (a >= 3) {
+    ok('STRONG ' + label + ' >=90%');
   }
 }
-btGate(newV, 'NEW');
-btGate(oldV, 'OLD');
+btStrong(newV, 'NEW');
+btStrong(oldV, 'OLD');
+btStrong(verified, 'ALL');
 
 // code smells
 // teams factor: solo flag si el codigo promete usarlo sin guardia de samples
