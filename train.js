@@ -30,17 +30,39 @@ const arg = (k, d) => { const i = argv.indexOf(k); return i >= 0 ? argv[i + 1] :
 const TARGET = parseFloat(arg('--target', '0.90'));
 const DRY = argv.includes('--dry');
 
+/**
+ * Dos etiquetas, dos modelos, dos archivos.
+ *
+ *   ft   "hubo gol antes del final"      -> model.json
+ *   h15  "hubo gol en los proximos 15'"  -> model15.json
+ *
+ * No son la misma pregunta. La primera la contesta casi entera el reloj; la
+ * segunda fija el horizonte, y solo ahi tiene sentido preguntarse si el estado
+ * del juego informa algo.
+ */
+const HORIZON = arg('--label', 'ft') === 'h15' ? 15 : null;
+const OUT_FILE = HORIZON ? path.join(__dirname, 'model15.json') : M.MODEL_FILE;
+
 // ───────────────────────────── datos ─────────────────────────────
 
 function loadRows() {
   const raw = JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8').replace(/^﻿/, ''));
   return raw
-    .filter(x =>
-      x.predictionCorrect !== null &&
-      x.goalAfterAnalysis !== null &&
-      x.stats &&
-      (x.analysisMinute || 0) >= 5 &&
-      (x.analysisMinute || 0) <= 95)
+    .filter(x => {
+      if (!x.stats) return false;
+      const m = x.analysisMinute || 0;
+      if (m < 5 || m > 95) return false;
+      if (HORIZON) {
+        if (x.goalWithin15 == null) return false;
+        // Un timeline incompleto no permite afirmar que NO hubo gol en la ventana.
+        if (x.timelineConsistent === false) return false;
+        // Sin ventana suficiente por delante la etiqueta esta truncada por el
+        // final del partido, no por el juego: contaminaria el entrenamiento.
+        if (M.minsLeft(m) < 10) return false;
+        return true;
+      }
+      return x.predictionCorrect !== null && x.goalAfterAnalysis !== null;
+    })
     .sort((a, b) => (a.timestamp || '') < (b.timestamp || '') ? -1 : 1)
     .map(x => ({
       f: M.extractFeatures({
@@ -50,8 +72,8 @@ function loadRows() {
         stats: x.stats,
         leagueGoalsPerMatch: x.leagueGoalsPerMatch || null,
       }),
-      y: x.goalAfterAnalysis ? 1 : 0,
-      T: M.minsLeft(x.analysisMinute),
+      y: HORIZON ? (x.goalWithin15 ? 1 : 0) : (x.goalAfterAnalysis ? 1 : 0),
+      T: HORIZON ? Math.min(HORIZON, M.minsLeft(x.analysisMinute)) : M.minsLeft(x.analysisMinute),
       minute: x.analysisMinute,
       match: x.match,
       league: x.league,
@@ -231,7 +253,7 @@ if (rows.length < 100) {
 const baseRate = rows.filter(r => r.y).length / rows.length;
 
 console.log('='.repeat(68));
-console.log('  ENTRENAMIENTO — modelo de gol');
+console.log('  ENTRENAMIENTO — ' + (HORIZON ? 'gol en los proximos ' + HORIZON + ' min' : 'gol antes del final'));
 console.log('='.repeat(68));
 console.log('  filas verificadas : ' + rows.length);
 console.log('  rango             : ' + (rows[0].timestamp || '').slice(0, 10) + ' -> ' + (rows[rows.length - 1].timestamp || '').slice(0, 10));
@@ -277,8 +299,12 @@ for (const r of curve.filter(r => Math.round(r.threshold * 100) % 5 === 0)) {
 // Dos gates con propositos distintos. No es una decision estetica: la evidencia
 // dice que la precision alta solo existe temprano, y que en la ventana donde una
 // apuesta tiene cuota util la precision es estructuralmente menor.
-const gateHigh  = searchGate(scored, TARGET, { maxMinuteCap: 45, label: 'PRECISION' });
-const gateValue = searchGate(scored, 0.80,   { minMinute: 35,    label: 'VALOR' });
+const gateHigh  = HORIZON
+  ? searchGate(scored, TARGET, { label: 'PRECISION' })
+  : searchGate(scored, TARGET, { maxMinuteCap: 45, label: 'PRECISION' });
+const gateValue = HORIZON
+  ? searchGate(scored, 0.60, { label: 'VALOR' })
+  : searchGate(scored, 0.80, { minMinute: 35, label: 'VALOR' });
 
 function printGate(g, target) {
   if (!g) { console.log('  (ningun candidato alcanza ' + MIN_ALERTS + ' casos)'); return; }
@@ -322,6 +348,7 @@ M.FEATURES.map((k, i) => [k, finalModel.b[i]])
 
 const out = {
   version: 5,
+  horizon: HORIZON,
   trainedAt: new Date().toISOString(),
   n: rows.length,
   dataRange: [(rows[0].timestamp || '').slice(0, 10), (rows[rows.length - 1].timestamp || '').slice(0, 10)],
@@ -340,7 +367,7 @@ const out = {
   },
   gates: [
     ['PRECISION', gateHigh, TARGET],
-    ['VALOR', gateValue, 0.80],
+    ['VALOR', gateValue, HORIZON ? 0.60 : 0.80],
   ].filter(([, g]) => g).map(([tier, g, tgt]) => ({
     tier,
     targetPrecision: tgt,
@@ -361,9 +388,25 @@ const out = {
   })),
 };
 
+const outName = path.basename(OUT_FILE);
+
 if (DRY) {
-  console.log('\n--dry: model.json NO se escribio.');
+  console.log('\n--dry: ' + outName + ' NO se escribio.');
+} else if (!out.gates.length && fs.existsSync(OUT_FILE)) {
+  // Salvaguarda: un modelo sin gates no alerta. Si ya habia uno que si alertaba,
+  // sobrescribirlo dejaria el sistema mudo en silencio. Se exige --force.
+  const prev = JSON.parse(fs.readFileSync(OUT_FILE, 'utf8'));
+  if ((prev.gates || []).length && !argv.includes('--force')) {
+    console.log('\nNO se escribio ' + outName + '.');
+    console.log('El modelo nuevo no produce ningun gate valido, y el que ya existe');
+    console.log('tiene ' + prev.gates.length + '. Sobrescribirlo dejaria el sistema sin alertar.');
+    console.log('Si de verdad quieres reemplazarlo: node train.js --force');
+    process.exitCode = 1;
+  } else {
+    fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2));
+    console.log('\n' + outName + ' escrito (sin gates — no alertara).');
+  }
 } else {
-  fs.writeFileSync(M.MODEL_FILE, JSON.stringify(out, null, 2));
-  console.log('\nmodel.json escrito — ' + out.gates.length + ' gate(s), ' + rows.length + ' filas.');
+  fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2));
+  console.log('\n' + outName + ' escrito — ' + out.gates.length + ' gate(s), ' + rows.length + ' filas.');
 }

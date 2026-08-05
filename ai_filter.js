@@ -57,7 +57,34 @@ const https = require('https');
  * lista, se pasa al siguiente y el sistema sigue funcionando.
  */
 function providers() {
-  return [buildOpenAI(), buildGroq(), buildAnthropic()].filter(Boolean);
+  // Groq y NVIDIA van primero a proposito: ambos tienen capa gratuita real y
+  // no dependen de que quede saldo en una cuenta de pago.
+  return [buildGroq(), buildNvidia(), buildOpenAI(), buildAnthropic()].filter(Boolean);
+}
+
+/** Formato OpenAI-compatible: sirve para Groq, NVIDIA NIM y OpenAI. */
+function openaiShape(name, host, apiPath, key, model) {
+  return {
+    name, key, host, path: apiPath, model,
+    headers: (k) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + k }),
+    body: (m, messages) => JSON.stringify({
+      model: m, messages, temperature: 0.05, max_tokens: 220,
+      response_format: { type: 'json_object' },
+    }),
+    parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
+  };
+}
+
+/**
+ * NVIDIA NIM (build.nvidia.com). Capa gratuita, endpoint compatible con OpenAI.
+ * Alternativa legitima cuando no hay saldo en OpenAI.
+ */
+function buildNvidia() {
+  if (!process.env.NVIDIA_API_KEY) return null;
+  return openaiShape(
+    'nvidia', 'integrate.api.nvidia.com', '/v1/chat/completions',
+    process.env.NVIDIA_API_KEY,
+    process.env.NVIDIA_MODEL || 'meta/llama-3.3-70b-instruct');
 }
 
 /** Primer provider disponible. Compat con el codigo que solo quiere saber si hay alguno. */

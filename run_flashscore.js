@@ -24,6 +24,7 @@ const aiFilter = require('./ai_filter');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
 const STATE_FILE = path.join(__dirname, 'state.json');
+const SNAPSHOTS_FILE = path.join(__dirname, 'snapshots.jsonl');
 
 // Flashscore (Playwright) es la parte cara del ciclo. Solo se usa para intentar
 // conseguir xG REAL de los candidatos del tier VALOR, y como mucho cada 20 min.
@@ -57,6 +58,56 @@ function savePredictions(preds) {
   });
   fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(kept, null, 2));
   return kept;
+}
+
+/**
+ * Guarda una foto del partido en CADA ronda, en un fichero append-only.
+ *
+ * predictions.json guarda una sola fila por partido (la ultima). Eso pierde la
+ * trayectoria, que es justo donde podria vivir la señal que falta: no importa
+ * tanto que un equipo lleve 8 remates como que lleve 5 en los ultimos 10 minutos.
+ *
+ * Con estas fotos, cada partido pasa a aportar ~10 filas en vez de 1, con minutos
+ * repartidos por todo el encuentro, y se pueden calcular features de tendencia
+ * (remates/ataques en la ultima ventana) que hoy son imposibles.
+ *
+ * JSONL append-only a proposito: escribir sin releer, y un diff por ronda que es
+ * solo las lineas nuevas.
+ */
+function appendSnapshots(rows) {
+  if (!rows.length) return;
+  const ts = new Date().toISOString();
+  const n = (v) => (v == null ? null : v);
+  const lines = rows.map(a => JSON.stringify({
+    id: a.matchId, ts, minute: a.minute,
+    sh: a.scoreHome, sa: a.scoreAway,
+    p: a.probability != null ? Math.round(a.probability * 1e4) / 1e4 : null,
+    lg: a.leagueGoalsPerMatch ? Math.round(a.leagueGoalsPerMatch * 100) / 100 : null,
+    s: {
+      xg: n(a.stats.xgHome), xga: n(a.stats.xgAway), xgSrc: a.stats.xgSource || 'est',
+      sot: n(a.stats.sotHome), sota: n(a.stats.sotAway),
+      sh: n(a.stats.totalShotsHome), sha: n(a.stats.totalShotsAway),
+      box: n(a.stats.shotsInsideBoxHome), boxa: n(a.stats.shotsInsideBoxAway),
+      bc: n(a.stats.bigChancesHome), bca: n(a.stats.bigChancesAway),
+      cor: n(a.stats.cornersHome), cora: n(a.stats.cornersAway),
+      atk: n(a.stats.attacksHome), atka: n(a.stats.attacksAway),
+      pos: n(a.stats.possessionHome),
+      red: n(a.stats.redCardsHome), reda: n(a.stats.redCardsAway),
+    },
+  })).join('\n') + '\n';
+  try {
+    fs.appendFileSync(SNAPSHOTS_FILE, lines);
+    // Tope de tamaño. A ~900 lineas/dia esto son mas de un año de historia; sin
+    // el, el fichero crece sin limite y acabamos con el mismo problema de bloat
+    // que tenia teams.json. Se comprueba por tamaño para no leerlo cada ronda.
+    if (fs.statSync(SNAPSHOTS_FILE).size > 24 * 1024 * 1024) {
+      const kept = fs.readFileSync(SNAPSHOTS_FILE, 'utf8').trim().split('\n').slice(-300000);
+      fs.writeFileSync(SNAPSHOTS_FILE, kept.join('\n') + '\n');
+      console.log('  (snapshots.jsonl recortado a las ultimas 300k lineas)');
+    }
+  } catch (e) {
+    console.log('  (no se pudo guardar snapshots: ' + (e.message || e) + ')');
+  }
 }
 
 const loadState = () => readJson(STATE_FILE, { alertedMatches: {}, counters: {} });
@@ -226,6 +277,9 @@ async function main() {
         ' | xG ' + xg + (a.leagueGoalsPerMatch ? ' | liga ' + a.leagueGoalsPerMatch.toFixed(2) + ' g/p' : ''));
     }
 
+    // Una foto por ronda de TODOS los partidos, alerten o no.
+    appendSnapshots(analyzed);
+
     // ── 4. gate + IA ──
     const candidates = [];
     const aiOn = aiFilter.isAvailable();
@@ -233,8 +287,11 @@ async function main() {
       const g = classifyAlert(a, hasMeaningfulStats, model);
       a.gate = g;
       if (g.tier === 'REJECT') continue;
-      if (g.requiresAi) {
-        if (!aiOn) { console.log('  ' + a.teamHome + ' vs ' + a.teamAway + ' — VALOR sin IA disponible, descartado'); continue; }
+      // La IA REVISA, no habilita. La precision medida de este gate (84.2%) se
+      // midio SIN IA, asi que exigir una key para alertar seria incoherente con
+      // el numero que se promete. Sin key el sistema funciona igual; con key,
+      // la IA puede vetar y su aporte queda registrado para medirlo.
+      if (g.requiresAi && aiOn) {
         const ai = await aiFilter.reviewAlert(a, g);
         // Solo se guarda como decision de la IA si la IA respondio de verdad.
         // Un fallo de facturacion o de red deja pasar la alerta, pero registrarlo

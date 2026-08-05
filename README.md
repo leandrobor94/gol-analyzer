@@ -51,7 +51,8 @@ alert_gate.js  qué se alerta. Umbrales de model.json, nunca escritos a mano
 ai_filter.js   segunda opinión de un LLM sobre el tier VALOR (aporte sin probar)
 verify.js      etiqueta predicciones con partidos ya terminados
 notify.js      Telegram
-train.js       aprende, offline y bajo demanda
+train.js       aprende, offline y bajo demanda (dos etiquetas: ft y h15)
+backfill.js    recupera minutos de gol del histórico vía API
 evaluate.js    re-auditoría
 ```
 
@@ -104,7 +105,23 @@ quedaba publicado en el repo.
 |---|---|
 | `TELEGRAM_BOT_TOKEN` | obligatorio para alertar |
 | `TELEGRAM_CHAT_ID` | obligatorio para alertar |
-| `OPENAI_API_KEY` | opcional. Sin él, el tier VALOR no alerta |
+| `GROQ_API_KEY` / `NVIDIA_API_KEY` / `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | **todos opcionales** |
+
+**El sistema alerta perfectamente sin ninguna clave de IA.** La precisión de
+ambos gates se midió *sin* IA, así que exigir una clave para alertar sería
+incoherente con el número que se promete. La IA solo revisa el tier VALOR cuando
+está disponible.
+
+Se prueban en orden y, si una falla, se pasa a la siguiente — Groq y NVIDIA van
+primero porque tienen capa gratuita real y no dependen de que quede saldo:
+
+1. **Groq** — gratis, sin tarjeta: <https://console.groq.com/keys>
+2. **NVIDIA NIM** — capa gratuita: <https://build.nvidia.com/models>
+3. OpenAI — de pago. **ChatGPT Plus no incluye API.**
+4. Anthropic — de pago. **Claude Pro no incluye API.**
+
+> No uses sitios de terceros que "regalan" claves de API. O son claves ajenas
+> (te las revocan), o es un proxy que registra tus prompts, o es phishing.
 
 Comandos del bot: `/pause`, `/resume`, `/status`.
 
@@ -112,31 +129,56 @@ Comandos del bot: `/pause`, `/resume`, `/status`.
 
 ## Cómo llegar a un 90% que sí valga
 
-Un 90% útil no sale de afinar coeficientes. Sale de cambiar la pregunta, y eso
-necesita datos que hasta ahora no se guardaban. **Ya se están capturando**:
+Un 90% útil no sale de afinar coeficientes. Sale de cambiar la pregunta.
 
-| Dato | Estado | Para qué |
+### Ya probamos la pregunta correcta. Tampoco funciona (todavía)
+
+La hipótesis era: *"si fijamos el horizonte en 15 minutos, el tiempo deja de
+dominar y las estadísticas del partido tendrán que importar"*.
+
+Se pudo probar sin esperar semanas. Resulta que la API de 365scores **sigue
+sirviendo el timeline de goles de partidos de semanas atrás**, así que
+`backfill.js` recuperó el minuto exacto de cada gol para los 548 partidos del
+histórico — 548/548, sin un solo fallo. Eso convirtió el archivo en un dataset
+entrenable para la etiqueta corta al instante.
+
+```bash
+node backfill.js      # recupera minutos de gol del histórico
+npm run train:15      # entrena el modelo de 15 minutos
+```
+
+Resultado, validado fuera de muestra sobre 299 partidos:
+
+| | Gol antes del final | **Gol en 15 min** |
 |---|---|---|
-| Minuto real de cada gol | capturándose | etiqueta *"gol en los próximos 15 min"* |
-| Cuota 1X2 al analizar | capturándose | medir ventaja contra el mercado |
-| Ritmo de la liga (goles/partido) | capturándose | prior de λ por competición |
-| xG real de Flashscore | parcial | única estadística de juego con opción de aportar |
+| Tasa base | 65.9% | 37.8% |
+| AUC | 0.731 | **0.508** |
+| Skill score | +15% | **−2%** |
 
-`npm run audit` lleva la cuenta: con ~150 partidos de cada uno ya se puede
-entrenar el modelo de horizonte corto.
+**Con el tiempo ya controlado, las estadísticas siguen sin predecir nada.** No es
+un problema de calibración ni de tamaño de muestra: no hay señal en esas
+variables. `model15.json` se guarda con **cero gates** — a propósito: un modelo
+que no discrimina no debe alertar.
 
-El minuto de gol es el que más cambia las cosas. Antes se rellenaba con
-`lastSeenMinute` — el último minuto observado, no el minuto en que se marcó — así
-que era imposible entrenar o evaluar un horizonte corto. Ahora sale de
-`game.events[]` con `eventType.id === 1`, verificado contra la API.
+### Lo que queda por probar
 
-**Expectativa realista.** Con la etiqueta *"gol en 15 minutos"* la tasa base cae
-a ~36%. Un sistema bueno acierta ahí entre el 40% y el 50%. Ese 45% sobre un
-mercado que lo paga como 38% vale mucho más que el 96% actual sobre un mercado
-que lo paga a 1.03.
+Todo lo medido hasta aquí usa **una sola foto por partido**. Que un equipo lleve
+8 remates dice poco; que lleve 5 en los últimos 10 minutos es otra cosa. Esa
+información —la trayectoria— nunca se guardó.
 
-Y falta una pieza que no está en este feed: **365scores solo expone cuota 1X2, no
-over/under de goles**. Para medir ventaja sobre el mercado de goles hace falta
+Desde v2.1 cada ronda escribe una línea por partido en `snapshots.jsonl`. Cada
+partido pasa a aportar ~10 filas en vez de 1, repartidas por todo el encuentro, y
+con eso se pueden calcular features de tendencia que hoy son imposibles.
+`npm run audit` lleva la cuenta; con ~150 partidos se puede probar.
+
+Es la última palanca disponible con datos gratuitos. Si tampoco aporta, la
+conclusión honesta es que el volumen de juego no anticipa goles a corto plazo y
+el valor hay que buscarlo en otro sitio: datos pre-partido (fuerza ofensiva y
+defensiva de cada equipo, tipo Dixon-Coles), que son mucho más predictivos del
+ritmo de goles que cualquier estadística en vivo.
+
+**Y falta una pieza que no está en este feed:** 365scores solo expone cuota 1X2,
+no over/under de goles. Para medir ventaja sobre el mercado de goles hace falta
 otra fuente.
 
 ---

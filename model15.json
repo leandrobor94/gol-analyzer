@@ -1,0 +1,104 @@
+{
+  "version": 5,
+  "horizon": 15,
+  "trainedAt": "2026-08-05T12:36:20.991Z",
+  "n": 299,
+  "dataRange": [
+    "2026-07-18",
+    "2026-08-05"
+  ],
+  "baseRate": 0.3946,
+  "features": [
+    "xgRate",
+    "sotRate",
+    "bcRate",
+    "boxRate",
+    "shotRate",
+    "atkRate",
+    "goalRate",
+    "gd1",
+    "gd2",
+    "nil",
+    "reds",
+    "late",
+    "early",
+    "leagueRate"
+  ],
+  "b0": -3.647988,
+  "b": [
+    0.011966,
+    0.120102,
+    -0.065367,
+    -0.098539,
+    0.157073,
+    0.067492,
+    -0.022974,
+    -0.038327,
+    0.211496,
+    0.041647,
+    0.061889,
+    0.167043,
+    -0.02554,
+    0
+  ],
+  "calibration": {
+    "a": -0.517756,
+    "b": -0.648002
+  },
+  "eval": {
+    "method": "rolling-origin 5 cortes, calibracion fuera de pliegue",
+    "nTest": 150,
+    "auc": 0.5076,
+    "brier": 0.2406,
+    "brierBase": 0.2358,
+    "skillScore": -0.0205
+  },
+  "gates": [],
+  "curve": [
+    {
+      "threshold": 0.5,
+      "n": 19,
+      "precision": 0.5263
+    },
+    {
+      "threshold": 0.52,
+      "n": 11,
+      "precision": 0.5455
+    },
+    {
+      "threshold": 0.54,
+      "n": 9,
+      "precision": 0.5556
+    },
+    {
+      "threshold": 0.56,
+      "n": 5,
+      "precision": 0.4
+    },
+    {
+      "threshold": 0.58,
+      "n": 3,
+      "precision": 0.6667
+    },
+    {
+      "threshold": 0.6,
+      "n": 3,
+      "precision": 0.6667
+    },
+    {
+      "threshold": 0.62,
+      "n": 3,
+      "precision": 0.6667
+    },
+    {
+      "threshold": 0.64,
+      "n": 1,
+      "precision": 1
+    },
+    {
+      "threshold": 0.66,
+      "n": 1,
+      "precision": 1
+    }
+  ]
+}

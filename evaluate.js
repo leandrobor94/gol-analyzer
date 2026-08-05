@@ -253,16 +253,47 @@ if (pg && pg.meetsTarget) {
   console.log('  Objetivo ' + pct(target) + ': NO alcanzado. Mejor disponible: ' + pct(pg.measuredPrecision));
 }
 console.log('');
-console.log('  Para una alerta de >=90% que ADEMAS valga dinero hacen falta:');
-const need = [
-  ['minuto real de gol   (-> etiqueta "gol en 15 min")', with15.length, 150],
-  ['cuota al momento del aviso (-> medir ventaja)', withOdds.length, 150],
-  ['xG real de Flashscore (-> unica señal de juego con opcion)', withRealXg.length, 150],
-];
-for (const [what, have, req] of need) {
-  console.log('    ' + (have >= req ? '[OK]' : '[--]') + ' ' + what.padEnd(52) + have + '/' + req);
+
+// El modelo de horizonte corto ya se pudo entrenar (los minutos de gol se
+// recuperaron hacia atras con backfill.js). Su resultado cambia el diagnostico.
+let m15 = null;
+try { m15 = JSON.parse(fs.readFileSync(path.join(__dirname, 'model15.json'), 'utf8')); } catch {}
+if (m15) {
+  console.log('  MODELO DE 15 MINUTOS (entrenado con ' + m15.n + ' partidos)');
+  console.log('    AUC fuera de muestra : ' + m15.eval.auc + '   (0.500 = azar)');
+  console.log('    Skill score          : ' + pct(m15.eval.skillScore));
+  console.log('    gates validos        : ' + (m15.gates || []).length);
+  if (m15.eval.auc < 0.55) {
+    console.log('');
+    console.log('    Con el horizonte fijado en 15 min —es decir, con el tiempo ya');
+    console.log('    controlado— las estadisticas del partido siguen sin predecir nada.');
+    console.log('    No es un problema de calibracion: no hay señal en estas variables.');
+  }
+  console.log('');
 }
+
+// Trayectoria: lo unico que queda por probar con los datos disponibles.
+let snapLines = 0, snapMatches = 0;
+try {
+  const raw = fs.readFileSync(path.join(__dirname, 'snapshots.jsonl'), 'utf8').trim();
+  if (raw) {
+    const ls = raw.split('\n');
+    snapLines = ls.length;
+    const ids = new Set();
+    for (const l of ls) { try { ids.add(JSON.parse(l).id); } catch {} }
+    snapMatches = ids.size;
+  }
+} catch {}
+console.log('  SIGUIENTE PALANCA: trayectoria (momentum real)');
+console.log('    Todo lo medido usa UNA foto por partido. Que un equipo lleve 8 remates');
+console.log('    dice poco; que lleve 5 en los ultimos 10 minutos es otra cosa. Eso');
+console.log('    requiere historia dentro del partido, que antes no se guardaba.');
+console.log('    snapshots capturados : ' + snapLines + ' filas / ' + snapMatches + ' partidos' +
+  (snapMatches >= 150 ? '  -> listo para probar features de tendencia' : '  (hacen falta ~150 partidos)'));
 console.log('');
-console.log('  El feed de 365scores solo expone cuota 1X2, no over/under de goles.');
-console.log('  Para medir ventaja sobre el mercado de goles hace falta otra fuente.');
+console.log('  PARA MEDIR VENTAJA CONTRA EL MERCADO:');
+console.log('    cuota 1X2 guardada   : ' + withOdds.length + '/150');
+console.log('    xG real de Flashscore: ' + withRealXg.length + '/150');
+console.log('    Limitacion de la fuente: 365scores solo expone cuota 1X2, no');
+console.log('    over/under de goles. Para el mercado de goles hace falta otra fuente.');
 console.log('');
