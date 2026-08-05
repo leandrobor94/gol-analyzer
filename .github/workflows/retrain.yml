@@ -31,7 +31,11 @@ jobs:
 
       - name: Entrenar
         id: train
+        shell: bash
         run: |
+          # pipefail: sin esto `tee` enmascara un fallo de train.js y el job
+          # publicaria un model.json a medias como si todo hubiera ido bien.
+          set -o pipefail
           TARGET="${{ github.event.inputs.target || '0.90' }}"
           echo '## Entrenamiento' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
