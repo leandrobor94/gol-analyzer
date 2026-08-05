@@ -343,7 +343,8 @@ async function main() {
     for (const a of analyzed) {
       const g = classifyBet(
         { phase: a.phase, lambda: a.lambda, split: a.split, edge: a.edge,
-          teamHome: a.teamHome, teamAway: a.teamAway },
+          teamHome: a.teamHome, teamAway: a.teamAway,
+          minute: a.minute, informed: hasMeaningfulStats(a.stats) },
         { minOdds: MIN_ODDS, maxOdds: MAX_ODDS, minEv: MIN_EV });
       a.gate = g;
       if (g.tier === 'REJECT') continue;

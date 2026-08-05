@@ -20,6 +20,10 @@
 
 const num = (v) => (v == null || Number.isNaN(v) ? 0 : v);
 
+// Antes de este minuto nuestro lambda es basicamente el promedio de la liga:
+// no hemos visto suficiente partido para saber mas que un modelo pre-partido.
+const MIN_MINUTO_EV = 25;
+
 function xgRemaining(stats, scoreHome, scoreAway) {
   const xg = num(stats && stats.xgHome) + num(stats && stats.xgAway);
   return xg - (num(scoreHome) + num(scoreAway));
@@ -127,10 +131,22 @@ function classifyBet(input, opts) {
     target: Math.round(fair * margin * 100) / 100,
   };
 
+  // ── ¿Tenemos derecho a decir que el mercado se equivoca? ──
+  //
+  // Nuestro modelo no sabe NADA de los equipos: no tiene fuerza ofensiva ni
+  // defensiva, solo lo que ve en el partido. La casa si tiene modelos
+  // pre-partido. En el minuto 9 sin estadisticas, nuestro lambda es
+  // practicamente el promedio global (medido: 0.0338 sin stats vs 0.0377 con
+  // stats), asi que un desacuerdo de 16-19 puntos ahi no es un precio malo:
+  // es que no sabemos nada y creemos saber.
+  //
+  // Solo se reclama ventaja cuando el partido ya nos ha DICHO algo.
+  const informado = input.informed === true && (input.minute || 0) >= MIN_MINUTO_EV;
+
   // La cuota Over/Under del feed es del TOTAL del partido: solo compara con
   // "un gol mas hasta el final". Con la apuesta de 1T (descanso) o de equipo
   // concreto NO pregunta lo mismo, asi que ahi no se usa.
-  const comparable = elegida.kind === 'ANY' && ph.key !== '1T';
+  const comparable = elegida.kind === 'ANY' && ph.key !== '1T' && informado;
   const e = comparable ? input.edge : null;
   if (!e || !e.odds) {
     // Sin precio publicado se manda igual. No se estima lo que paga la casa:
