@@ -297,5 +297,80 @@
     "goalMinutes": [],
     "timestamp": "2026-08-05T18:41:23.764Z",
     "alertTimestamp": "2026-08-05T15:34:33.569Z"
+  },
+  {
+    "match": "Hapoel Ramat Gan vs Hapoel Jerusalem",
+    "league": "Toto League Cup",
+    "tier": "VALOR",
+    "probability": 0.9103439251805869,
+    "minute": 9,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, empate a cero",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      10,
+      47,
+      86,
+      95
+    ],
+    "timestamp": "2026-08-05T20:20:02.044Z",
+    "alertTimestamp": "2026-08-05T17:08:39.983Z"
+  },
+  {
+    "match": "Ponferradina vs Unionistas de Salamanca",
+    "league": "Partido Amistoso",
+    "tier": "VALOR",
+    "probability": 0.9056261259419741,
+    "minute": 8,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      20,
+      52,
+      88
+    ],
+    "timestamp": "2026-08-05T20:20:02.419Z",
+    "alertTimestamp": "2026-08-05T17:08:39.983Z"
+  },
+  {
+    "match": "CD Cieza vs Real Murcia",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9512241175264705,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      8,
+      17,
+      31,
+      64,
+      86
+    ],
+    "timestamp": "2026-08-05T20:20:02.841Z",
+    "alertTimestamp": "2026-08-05T18:41:22.389Z"
   }
 ]
