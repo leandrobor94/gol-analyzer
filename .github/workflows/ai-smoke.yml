@@ -1,0 +1,31 @@
+name: AI smoke test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ai_filter.js'
+      - '_test_ai.js'
+      - '.github/workflows/ai-smoke.yml'
+
+jobs:
+  test-ai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Probar OpenAI / Groq / Anthropic
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+        run: |
+          echo "Keys presentes:"
+          if [ -n "$OPENAI_API_KEY" ]; then echo "  OPENAI_API_KEY=si (len=${#OPENAI_API_KEY})"; else echo "  OPENAI_API_KEY=NO"; fi
+          if [ -n "$GROQ_API_KEY" ]; then echo "  GROQ_API_KEY=si"; else echo "  GROQ_API_KEY=NO"; fi
+          if [ -n "$ANTHROPIC_API_KEY" ]; then echo "  ANTHROPIC_API_KEY=si"; else echo "  ANTHROPIC_API_KEY=NO"; fi
+          node _test_ai.js
