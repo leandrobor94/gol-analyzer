@@ -80,9 +80,13 @@ if (saveIdx < 0 || saveIdx < momIdx || saveIdx > alertIdx) {
 } else ok('orden: momentum → save → alertas');
 
 // alert gates
-if (!src.includes('hasMeaningfulStats(r.stats)') || !src.includes('r.minute >= 30')) {
-  hit('ALTO', 'alertas sin gate stats/minuto');
-} else ok('alert gates stats+minuto');
+const hasStatsGate = src.includes('hasMeaningfulStats(r.stats)');
+const hasMinGate = src.includes('r.minute >= 30') || src.includes('r.minute < 30');
+const hasXgGate = src.includes('xgRemaining') || src.includes('xg - goals');
+if (!hasStatsGate || !hasMinGate) hit('ALTO', 'alertas sin gate stats/minuto');
+else ok('alert gates stats+minuto');
+if (!hasXgGate) hit('MEDIO', 'alertas sin gate xG restante (medido como mejora)');
+else ok('alert gate xG restante');
 
 // betas
 if (!w.betas || typeof w.betas.baseline !== 'number') hit('CRITICO', 'weights sin betas');
