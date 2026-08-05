@@ -74,7 +74,11 @@ function alertQuality(r) {
  */
 function classifyBet(input, opts) {
   const minOdds = (opts && opts.minOdds) || 1.5;   // lo que debe pagar LA CASA
-  const minProb = (opts && opts.minProb) || 0.70;  // conviccion minima NUESTRA
+  // Conviccion minima NUESTRA. 0.55 y no 0.70 por una razon medida, no por
+  // rebajar el liston: sobre 254 partidos con el lado de cada gol, un equipo
+  // concreto marcando llega como mucho al 62% (dominio aplastante, n=32) y
+  // ronda el 45-50% en dominio normal. Exigir 70% dejaria el bot mudo.
+  const minProb = (opts && opts.minProb) || 0.55;
   const minEv = (opts && opts.minEv) || 0.05;
   const maxEdge = (opts && opts.maxEdge) || 0.50;   // solo lo absurdo
   const avisoEdge = (opts && opts.avisoEdge) || 0.25;  // a partir de aqui, se marca
@@ -170,13 +174,6 @@ function classifyBet(input, opts) {
     return Object.assign({ tier: 'AVISO', reason: 'sin cuota publicada', hasOdds: false, requiresAi: true }, base);
   }
 
-  // El minimo de cuota se aplica AQUI: a lo que paga la casa. Si no llega, la
-  // apuesta es correcta pero el premio no compensa el riesgo.
-  if (e.odds < minOdds) {
-    return Object.assign({ tier: 'REJECT', hasOdds: true,
-      reason: 'la casa paga ' + e.odds + ' < ' + minOdds + ' (premio no compensa)' }, base);
-  }
-
   const ev = p * e.odds - 1;
   const edgePts = p - 1 / e.odds;
 
@@ -189,15 +186,17 @@ function classifyBet(input, opts) {
     return Object.assign({ tier: 'REJECT', hasOdds: true,
       reason: 'ventaja ' + (edgePts * 100).toFixed(0) + ' pts es absurda (dato roto casi seguro)' }, base);
   }
-  if (ev < minEv) {
-    return Object.assign({ tier: 'REJECT', hasOdds: true,
-      reason: 'EV ' + (ev * 100).toFixed(1) + '% < ' + (minEv * 100).toFixed(0) + '%' }, base);
-  }
+  // La cuota YA NO decide. Es el dato mas fragil que hay: solo aparece en el 40%
+  // de los partidos, viene de una sola casa, sin marca de tiempo, y a veces
+  // corrupta. Basar el filtro en eso era construir sobre arena. Ahora solo
+  // acompaña al aviso para que se vea si el precio compensa.
   return Object.assign({
-    tier: 'VALOR', reason: 'EV +' + (ev * 100).toFixed(1) + '% a cuota ' + e.odds,
+    tier: 'AVISO', reason: 'analisis ' + Math.round(p * 100) + '%' +
+      (ev >= 0 ? ', cuota ' + e.odds + ' da EV +' + (ev * 100).toFixed(0) + '%' : ', cuota ' + e.odds + ' NO compensa'),
     hasOdds: true, requiresAi: true,
-    // Ventaja muy grande: se manda, pero marcada. Que decida quien apuesta.
+    // Ventaja muy grande: se marca para que decida quien apuesta.
     revisar: edgePts > avisoEdge,
+    evPositivo: ev >= minEv,
     odds: e.odds, ev: Math.round(ev * 1e4) / 1e4,
     edgePts: Math.round(edgePts * 1e4) / 1e4,
     bookmaker: e.bookmaker || null,

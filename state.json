@@ -1,20 +1,5 @@
 {
   "alertedMatches": {
-    "4802552_VALOR": {
-      "timestamp": 1785944073569,
-      "minute": 45,
-      "tier": "VALOR"
-    },
-    "4804556_VALOR": {
-      "timestamp": 1785944073569,
-      "minute": 45,
-      "tier": "VALOR"
-    },
-    "4802562_VALOR": {
-      "timestamp": 1785944073569,
-      "minute": 45,
-      "tier": "VALOR"
-    },
     "4738856_VALOR": {
       "timestamp": 1785949719983,
       "minute": 9,
@@ -27,10 +12,10 @@
     }
   },
   "counters": {
-    "total": 654,
-    "verified": 591,
-    "withGoalTimeline": 417,
+    "total": 690,
+    "verified": 635,
+    "withGoalTimeline": 446,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-05T17:08:42.093Z"
+  "lastUpdated": "2026-08-05T18:41:27.780Z"
 }

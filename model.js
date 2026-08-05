@@ -41,25 +41,24 @@ function phase(minute) {
     return {
       key: '1T',
       T: Math.max(1, (45 - m) + 2),          // resto del 1T + descuento tipico
-      // En el 1T el horizonte ya es corto: no hace falta estrechar mas la apuesta.
-      options: ['ANY'],
+      options: ['ANY', 'TEAM'],              // gol de cualquiera o de uno concreto
     };
   }
   if (m <= 70) {
     return {
       key: '2T',
       T: Math.max(1, (90 - m) + 3),
-      // Aqui "gol de cualquiera" ronda el 65% y se paga a 1.5: no compensa.
-      // Estrechando a UN equipo concreto la probabilidad baja y la cuota sube
-      // al rango util. Ese es el motivo, no una preferencia estetica.
+      // SOLO equipo concreto. "Gol de cualquiera" aqui ronda el 65% y se paga
+      // a 1.5: correcto pero sin premio. Estrechar a un equipo es lo que deja
+      // la apuesta en un rango que compensa el riesgo.
       options: ['TEAM'],
     };
   }
   return {
     key: 'FINAL',
     T: m >= 90 ? Math.max(1, 98 - m) : Math.max(1, (90 - m) + 4),
-    // Con poco tiempo por delante, "gol en general" ya se paga bien. Se ofrecen
-    // las dos y el gate se queda con la que caiga en la banda apostable.
+    // Con poco tiempo por delante "gol en general" ya se paga bien. Se ofrecen
+    // las dos y se elige aquella en la que estemos mas convencidos.
     options: ['ANY', 'TEAM'],
   };
 }

@@ -257,5 +257,45 @@
     "goalMinutes": [],
     "timestamp": "2026-08-05T17:08:40.964Z",
     "alertTimestamp": "2026-08-05T15:34:33.569Z"
+  },
+  {
+    "match": "Filiasi vs Oltul Curtisoara",
+    "league": "Copa rumana - Clasificación",
+    "tier": "VALOR",
+    "probability": 0.8289451865089322,
+    "minute": 45,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-05T18:41:23.615Z",
+    "alertTimestamp": "2026-08-05T15:34:33.569Z"
+  },
+  {
+    "match": "Cil Blaj vs Gaz Metan Medias",
+    "league": "Copa rumana - Clasificación",
+    "tier": "VALOR",
+    "probability": 0.7610073076315957,
+    "minute": 45,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Empate y minutos restantes",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-05T18:41:23.764Z",
+    "alertTimestamp": "2026-08-05T15:34:33.569Z"
   }
 ]

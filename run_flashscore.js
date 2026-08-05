@@ -298,7 +298,9 @@ async function main() {
 
     // ── 3b. apuesta por fase, con la cuota como extra opcional ──
     const MIN_ODDS = parseFloat(process.env.MIN_ODDS || '1.5');
-    const MIN_PROB = parseFloat(process.env.MIN_PROB || '0.70');
+    // Techo medido: un equipo concreto marcando llega como mucho al ~62% (dominio
+    // aplastante, n=32). Pedir 70% dejaria el bot mudo. 55% es el limite util.
+    const MIN_PROB = parseFloat(process.env.MIN_PROB || '0.55');
     const MIN_EV = parseFloat(process.env.MIN_EV || '0.05');
 
     for (const a of analyzed) {
