@@ -63,16 +63,36 @@ function buildMessage(alerts, model) {
   const when = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
   let msg = '<b>⚽ ALERTA GOL</b>  <i>' + esc(when) + '</i>\n\n';
 
+  let hayBarato = false;
+
   alerts.slice(0, 5).forEach((a) => {
     const g = a.gate || {};
     const gateInfo = (model && model.gates || []).find(x => x.tier === g.tier);
+    const p = a.probability || 0;
+    const goles = (a.scoreHome || 0) + (a.scoreAway || 0);
+    // La prediccion es "al menos un gol MAS". Con `goles` ya marcados, eso es
+    // exactamente el mercado Over (goles + 0.5) al final del partido. Decirlo
+    // evita la duda razonable de "¿esto es del partido o del primer tiempo?".
+    const linea = goles + 0.5;
+    const cuotaJusta = p > 0 ? 1 / p : null;
+
     msg += (TIER_LABEL[g.tier] || g.tier) + '\n';
     msg += '<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>\n';
-    msg += '   ' + Math.round((a.probability || 0) * 100) + '% de gol antes del final\n';
-    msg += '   ⏱ ' + a.minute + "'  |  " + a.scoreHome + '-' + a.scoreAway + '\n';
-    if (a.league) msg += '   🏆 ' + esc(a.league) + '\n';
+    if (a.league) msg += '   ' + esc(a.league) + '\n';
+    msg += '   ⏱ ' + a.minute + "'  ·  " + a.scoreHome + '-' + a.scoreAway + '\n';
+    msg += '   ➡️ <b>Al menos 1 gol MÁS</b>, del minuto ' + a.minute + " al 90'\n";
+    msg += '   🎰 Equivale a: <b>Over ' + linea.toFixed(1) + '</b> goles al final del partido\n';
+    msg += '   📈 ' + Math.round(p * 100) + '%';
+    if (cuotaJusta) msg += '  ·  cuota justa <b>' + cuotaJusta.toFixed(2) + '</b>';
+    msg += '\n';
+    // Con la cuota justa tan baja ninguna casa paga por encima una vez aplicado
+    // su margen. Avisarlo es mas util que dejar creer que un 95% es una ocasion.
+    if (cuotaJusta && cuotaJusta < 1.15) {
+      hayBarato = true;
+      msg += '   ⚠️ Solo hay valor si te pagan MÁS de ' + cuotaJusta.toFixed(2) + '\n';
+    }
     if (gateInfo) {
-      msg += '   📊 este tipo de aviso acierta <b>' + (gateInfo.measuredPrecision * 100).toFixed(0) + '%</b>' +
+      msg += '   📊 avisos así aciertan <b>' + (gateInfo.measuredPrecision * 100).toFixed(0) + '%</b>' +
         ' (IC ' + (gateInfo.ci95[0] * 100).toFixed(0) + '-' + (gateInfo.ci95[1] * 100).toFixed(0) + '%, n=' + gateInfo.n + ')\n';
     }
     if (a.aiDecision && a.aiDecision.reason) {
@@ -82,8 +102,12 @@ function buildMessage(alerts, model) {
   });
 
   if (alerts.some(a => (a.gate || {}).tier === 'PRECISION')) {
-    msg += '<i>ALTA PRECISION responde "este partido tendra gol", no "viene un gol ya". ' +
-      'Se dispara temprano, cuando aun queda casi todo el partido.</i>\n';
+    msg += '<i>ALTA PRECISION = "este partido tendra otro gol", no "viene un gol ya". ' +
+      'Salta temprano, con casi todo el partido por delante.</i>\n';
+  }
+  if (hayBarato) {
+    msg += '<i>Compara siempre la cuota justa con la que te ofrecen. Si te pagan menos, ' +
+      'el aviso es correcto pero la apuesta pierde dinero a la larga.</i>\n';
   }
   return msg;
 }
