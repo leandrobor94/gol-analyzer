@@ -2,11 +2,13 @@ name: Analizar partidos y alertar
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    # Cada 10 min. Antes era cada 5 (288 corridas/dia) para alimentar un
+    # aprendizaje en vivo que perseguia ruido. Ahora el modelo se entrena
+    # offline, asi que la unica razon para correr seguido es no perder
+    # partidos: 10 min basta.
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
-# Evitar jobs solapados. cancel-in-progress:false para NO matar un analisis
-# a mitad (perdiamos save/push). El nuevo espera a que termine el actual.
 concurrency:
   group: gol-analyzer
   cancel-in-progress: false
@@ -40,35 +42,31 @@ jobs:
         if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
-      # Con cache hit el browser ya esta; deps de sistema suelen estar en la imagen.
-      # Evitar install-deps en cada run (cuesta minutos y no aporta si el cache sirve).
-
-      - name: Ejecutar análisis (365scores)
+      - name: Analizar y alertar
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # Opcional: filtro IA para candidatos BORDERLINE (sin key = solo STRONG >=90%)
+          # Opcional: filtro IA para el tier VALOR. Sin key, ese tier no alerta.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           AI_MODEL: ${{ secrets.AI_MODEL }}
         run: node run_flashscore.js
 
-      - name: Debug — ver cambios antes de commit
-        if: always()
-        run: git status && git diff --stat
-
-      - name: Commit y push de cambios (aprendizaje persistente)
+      - name: Guardar datos etiquetados
         if: always()
         run: |
           git config user.name "sofastats-bot"
           git config user.email "sofastats-bot@users.noreply.github.com"
-          git add predictions.json weights.json teams.json last-local-run.json alertas.json alertas_log.json telegram-offset.txt 2>/dev/null || true
+          git add predictions.json state.json alertas.json alertas_log.json telegram-offset.txt 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Sin cambios nuevos"
           else
-            git commit -m "auto: aprendizaje ronda ${{ github.run_id }}" || true
+            git commit -m "datos: ronda ${{ github.run_id }} [skip ci]" || true
+            for i in 1 2 3; do
+              git pull --rebase --autostash && git push && break
+              echo "reintento $i de push"
+              sleep 5
+            done
           fi
-          git pull --rebase 2>/dev/null || true
-          git push || echo "WARN: git push fallo (exit $?)"
         shell: bash

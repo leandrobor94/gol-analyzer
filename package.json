@@ -1,14 +1,15 @@
 {
-  "name": "sofastats",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "gol-analyzer",
+  "version": "2.0.0",
+  "description": "Alertas de gol en vivo con modelo calibrado y evaluacion fuera de muestra",
+  "main": "run_flashscore.js",
   "scripts": {
     "start": "node run_flashscore.js",
-    "audit": "node _reaudit.js",
-    "audit:gates": "node _audit_gates.js",
+    "train": "node train.js",
+    "train:dry": "node train.js --dry",
+    "audit": "node evaluate.js",
     "test:ai": "node _test_ai.js",
-    "test": "node _reaudit.js && node _audit_gates.js"
+    "test": "node evaluate.js"
   },
   "keywords": [],
   "author": "",

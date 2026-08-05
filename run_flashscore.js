@@ -1,375 +1,68 @@
+/**
+ * run_flashscore.js — ciclo en vivo: analizar, alertar, etiquetar.
+ *
+ * Separacion de responsabilidades (antes todo vivia aqui, en 1100 lineas):
+ *   model.js    probabilidad. Coeficientes de model.json, no escritos a mano.
+ *   alert_gate.js  que se alerta. Umbrales de model.json, medidos fuera de muestra.
+ *   verify.js   etiqueta predicciones con partidos terminados.
+ *   train.js    aprende (offline, bajo demanda). NO se aprende en vivo.
+ *
+ * Por que no se aprende en vivo: el motor anterior ajustaba pesos cada ronda
+ * con 1-5 partidos. Con esa muestra el gradiente es ruido, y el ruido quedaba
+ * publicado en el repo. Ahora el modelo solo cambia cuando alguien corre
+ * `npm run train`, que valida fuera de muestra antes de escribir nada.
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { runLearning, updateTeamStats, adjustWeights, loadTeams, saveTeams, getWindowWeights, getBetas, adjustBetas } = require('./learn');
-const notify = require('./notify');
 const scores365 = require('./scores365');
-const { fetchStatsBatch, extractMatchMomentum, fetchMomentumBatch } = require('./flashscore_fetcher');
+const M = require('./model');
 const { classifyAlert, alertQuality } = require('./alert_gate');
+const verify = require('./verify');
+const notify = require('./notify');
 const aiFilter = require('./ai_filter');
 
 const PREDICTIONS_FILE = path.join(__dirname, 'predictions.json');
-const WEIGHTS_FILE = path.join(__dirname, 'weights.json');
-const TEAMS_FILE = path.join(__dirname, 'teams.json');
-const ALERTAS_LOG_FILE = path.join(__dirname, 'alertas_log.json');
+const STATE_FILE = path.join(__dirname, 'state.json');
 
-const DEFAULT_WEIGHTS = {
-  version: 4, learningRate: 0.03,
-  betas: {
-    baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4,
-    redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70
-  },
-  perLeagueBetas: {},
-  global: {
-    xg: 30, shotsOnTarget: 25, shotsInsideBox: 18, bigChances: 15, totalShots: 10,
-    xgot: 12, hitWoodwork: 10, xA: 8, touchesOppBox: 8,
-    scoreNeeds: 10, timePressure: 8, corners: 5, possession: 5, saves: 5, goalsScored: -10,
-    teamFactor: 8, leagueFactor: 5
-  },
-  byLeague: {},
-  stats: { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0, brierScore: null, brierCount: 0, alertCount: 0, alertHits: 0 }
-};
+// Flashscore (Playwright) es la parte cara del ciclo. Solo se usa para intentar
+// conseguir xG REAL de los candidatos del tier VALOR, y como mucho cada 20 min.
+// Sigue activo para poder medir algun dia si el xG real aporta: el xG estimado
+// de 365scores, medido, no aporta nada (corr -0.04).
+const FLASHSCORE_ENABLED = process.env.ENABLE_FLASHSCORE !== '0';
+const FLASHSCORE_MAX = 5;
 
-function deepMerge(defaults, loaded) {
-  const result = { ...defaults };
-  for (const key of Object.keys(loaded)) {
-    if (typeof defaults[key] === 'object' && defaults[key] !== null && !Array.isArray(defaults[key])) {
-      result[key] = deepMerge(defaults[key], loaded[key]);
-    } else if (loaded[key] !== undefined) {
-      result[key] = loaded[key];
-    }
-  }
-  return result;
-}
+// ───────────────────────────── persistencia ─────────────────────────────
 
-function loadWeights() {
+function readJson(file, def) {
   try {
-    if (fs.existsSync(WEIGHTS_FILE)) {
-      const loaded = JSON.parse(fs.readFileSync(WEIGHTS_FILE, 'utf8'));
-      const merged = deepMerge(DEFAULT_WEIGHTS, loaded);
-      for (const k of Object.keys(DEFAULT_WEIGHTS.global)) {
-        if (merged.global[k] === undefined) merged.global[k] = DEFAULT_WEIGHTS.global[k];
-      }
-      // v4 lambda: garantizar betas aunque weights.json sea v3 legacy
-      if (!merged.betas) {
-        merged.betas = {
-          baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4,
-          redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70
-        };
-      }
-      if (!merged.perLeagueBetas) merged.perLeagueBetas = {};
-      if (!merged.stats) merged.stats = { predictionsCount: 0, correctScore: 0, correctScorer: 0, createdCount: 0, verifiedCount: 0 };
-      if (merged.stats.brierScore === undefined) merged.stats.brierScore = null;
-      if (merged.stats.brierCount === undefined) merged.stats.brierCount = 0;
-      return merged;
-    }
+    if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8').replace(/^﻿/, ''));
   } catch {}
-  return JSON.parse(JSON.stringify(DEFAULT_WEIGHTS));
+  return def;
 }
-function saveWeights(w) { w.lastUpdated = new Date().toISOString(); fs.writeFileSync(WEIGHTS_FILE, JSON.stringify(w, null, 2)); }
+
 function loadPredictions() {
-  try {
-    if (fs.existsSync(PREDICTIONS_FILE)) {
-      return JSON.parse(fs.readFileSync(PREDICTIONS_FILE, 'utf8').replace(/^\uFEFF/, ''));
-    }
-  } catch {}
-  return [];
+  const p = readJson(PREDICTIONS_FILE, []);
+  return Array.isArray(p) ? p : [];
 }
-function savePredictions(p) {
-  // Misma politica que learn.js: no bloat eterno de verificadas viejas
-  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
-  const filtered = (p || []).filter(pred => {
-    if (pred.predictionCorrect === null) return true;
-    if (pred.timestamp) {
-      const t = new Date(pred.timestamp).getTime();
-      if (t > cutoff) return true;
-    }
-    return false;
+
+function savePredictions(preds) {
+  // Las verificadas se conservan 90 dias: son el dataset de entrenamiento.
+  // Las pendientes nunca se tiran.
+  const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
+  const kept = (preds || []).filter(p => {
+    if (p.predictionCorrect == null) return true;
+    if (!p.timestamp) return true;
+    return new Date(p.timestamp).getTime() > cutoff;
   });
-  fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(filtered, null, 2));
-}
-function getLeagueWeights(weights, league, windowType) {
-  // v4: devolver betas del modelo lambda (con overrides por liga si existen)
-  const { getBetas } = require('./learn');
-  return { betas: getBetas(weights, league) };
+  fs.writeFileSync(PREDICTIONS_FILE, JSON.stringify(kept, null, 2));
+  return kept;
 }
 
-/** Ajustar pesos por tramo temporal — DEPRECATED, reemplazado por score state en analyzeGoal */
-
-/** Determine window type from minute */
-function getWindowType(minute) {
-  if (minute <= 44) return 'firstHalf';
-  if (minute <= 65) return 'earlySecondHalf';
-  return 'late';
-}
-
-/** Get fallback score when stats are mostly null — basado en intensidad minima */
-function getFallbackScore(minute, scoreHome, scoreAway, league, match) {
-  let base = 20;
-  const gd = Math.abs(scoreHome - scoreAway);
-  
-  if (minute <= 44) {
-    base = 30;
-    if (gd === 0 && minute >= 25) base += 10;
-    if (gd <= 1 && minute >= 30) base += 5;
-    if (match.stats?.possessionHome !== null && match.stats?.possessionAway !== null) {
-      const diff = Math.abs(match.stats.possessionHome - match.stats.possessionAway);
-      if (diff > 15) base += 10;
-    }
-    if (match.stats?.attacksHome !== null || match.stats?.attacksAway !== null) {
-      const total = (match.stats.attacksHome||0) + (match.stats.attacksAway||0);
-      if (total > 60) base += 10;
-    }
-    if (match.stats?.cornersHome !== null || match.stats?.cornersAway !== null) {
-      const total = (match.stats.cornersHome||0) + (match.stats.cornersAway||0);
-      if (total >= 4) base += 10;
-    }
-  } else if (minute <= 70) {
-    base = 25;
-    if (gd === 0) base += 10;
-  }
-  
-  // Cap 70: sin stats reales NUNCA debe acercarse al umbral de alerta (80%)
-  return Math.min(70, base);
-}
-
-/** Check if match has meaningful stats for scoring */
-function hasMeaningfulStats(stats) {
-  if (!stats) return false;
-  const xgTotal = (stats.xgHome||0) + (stats.xgAway||0);
-  const sotTotal = (stats.sotHome||0) + (stats.sotAway||0);
-  const shotsBoxTotal = (stats.shotsInsideBoxHome||0) + (stats.shotsInsideBoxAway||0);
-  const bigChancesTotal = (stats.bigChancesHome||0) + (stats.bigChancesAway||0);
-  const atkTotal = (stats.attacksHome||0) + (stats.attacksAway||0);
-  return (xgTotal > 0.3 || sotTotal >= 3 || shotsBoxTotal >= 3 || bigChancesTotal >= 1 || atkTotal >= 50);
-}
-
-// teams: reservado para factor historico cuando haya >=8 samples/equipo (hoy casi ninguno).
-function analyzeGoal(match, w, teams, leagueContext, windowType, momentum) {
-  const s = match.stats;
-  const minute = match.minute || 0;
-  const goals = (match.scoreHome || 0) + (match.scoreAway || 0);
-  const gd = Math.abs(match.scoreHome - match.scoreAway);
-  
-  // ─── MINUTOS EFECTIVOS ───
-  // 1T: tiempo hasta el 45+desc. HT: todo el 2T por delante (~47). 2T: hasta 90+desc.
-  const isHalftime = minute >= 44 && minute <= 48;
-  const veryEarly = minute < 30;
-  let minsRemaining;
-  if (isHalftime) {
-    minsRemaining = 47; // 2T completo por empezar (45+2 desc tipico)
-  } else if (windowType === 'firstHalf') {
-    minsRemaining = Math.max(1, 45 - minute) + 2;
-  } else if (minute >= 85 && minute < 90) {
-    minsRemaining = (90 - minute) + 4;
-  } else if (minute >= 90) {
-    minsRemaining = Math.max(1, 98 - minute);
-  } else {
-    minsRemaining = 90 - minute;
-  }
-  // HT: partido parado → bajar un poco la ventana efectiva (incertidumbre táctica)
-  const effectiveMins = isHalftime ? Math.max(20, Math.round(minsRemaining * 0.75)) : minsRemaining;
-  
-  // Ventanas
-  const preHT = minute >= 40 && minute <= 44 && windowType === 'firstHalf';
-  const preFT = minute >= 85 && minute <= 89;
-  const reasons = [];
-  const toRate = (v) => minute > 0 ? v / minute : 0;
-
-  // ─── LAMBDA: intensidad de gol por minuto ───
-  // Betas calibrados por aprendizaje (o defaults si no hay datos)
-  const B = w?.betas || { baseline: 0.030, xgWeight: 0.8, bcWeight: 1.2, sotWeight: 0.4, redCardMult: 1.5, urgency60: 1.30, urgency75: 1.50, lead2Mult: 0.50, lead1LateMult: 0.70 };
-  let lambda = B.baseline;
-  if (leagueContext && leagueContext.goalsPerMatch) {
-    const leagueAvg = leagueContext.goalsPerMatch;
-    // Ajustar baseline por liga: ligas goleadoras suben, secas bajan
-    if (leagueAvg > 0) lambda = B.baseline * Math.max(0.7, Math.min(1.3, leagueAvg / 2.5));
-  }
-
-  // 1. xG — EL predictor. Peso 1.5 sobre baseline
-  const xgTotal = (s.xgHome || 0) + (s.xgAway || 0);
-  const xgRate = toRate(xgTotal);
-  const xgRemaining = xgTotal - goals;
-  if (xgRate > 0.03) {
-    lambda += (xgRate - 0.03) * B.xgWeight;
-  } else if (xgRate < 0.015) {
-    lambda *= 0.7; // partido muerto ofensivamente
-  }
-  if (xgRemaining > 1.5) reasons.push('Alto xG restante (' + xgRemaining.toFixed(2) + ')');
-  else if (xgRemaining > 0.8) reasons.push('xG restante ' + xgRemaining.toFixed(2));
-
-  // 2. Big Chances — predictor #2. Umbral: al menos 1 BC en 50 min para activar
-  const bcTotal = (s.bigChancesHome || 0) + (s.bigChancesAway || 0);
-  const bcRate = toRate(bcTotal);
-  if (bcRate > 0.02) lambda += bcRate * B.bcWeight;
-
-  // 3. SoT — señal débil porque xG ya lo cubre. Solo suma si hay volumen real
-  const sotTotal = (s.sotHome || 0) + (s.sotAway || 0);
-  const sotRate = toRate(sotTotal);
-  if (sotRate > 0.04) lambda += (sotRate - 0.04) * B.sotWeight;
-
-  // 4. xGOT — calidad de tiro (complementa xG, no disponible en 365scores sin Flashscore)
-  if (s.xgotHome !== null && s.xgotAway !== null) {
-    const xgotRate = toRate(s.xgotHome + s.xgotAway);
-    if (xgotRate > 0.015) lambda += xgotRate * 0.5;
-  }
-
-  // 5. Red cards — el multiplicador más fuerte en fútbol
-  const reds = (s.redCardsHome || 0) + (s.redCardsAway || 0);
-  if (reds > 0) {
-    lambda *= (1 + reds * B.redCardMult);
-    reasons.push(reds + ' roja(s) — partido roto!');
-  }
-
-  // 5b. MOMENTUM — tendencia reciente (Flashscore, ultimos 15 min)
-  const homeTrails = match.scoreHome < match.scoreAway;
-  const awayTrails = match.scoreAway < match.scoreHome;
-  if (momentum && momentum.momentumFound) {
-    const domSide = momentum.dominantSide;
-    const momDiff = momentum.momentumDiff || 0;
-    if (momDiff > 20) {
-      // Un equipo claramente dominando el momento reciente
-      const boost = Math.min(0.3, momDiff / 200);
-      lambda *= (1 + boost);
-      reasons.push('Momentum ' + domSide + ' (+' + Math.round(boost*100) + '%)');
-    } else if (momDiff > 10) {
-      lambda *= 1.08;
-      reasons.push('Ligero momentum ' + domSide);
-    }
-    // Si el momentum contradice al trailing (quien necesita gol NO esta dominando)
-    const homeDone = domSide === 'home';
-    const awayDone = domSide === 'away';
-    if (homeTrails && awayDone) lambda *= 0.85; // Visitante domina, local necesita → menos probable
-    if (awayTrails && homeDone) lambda *= 0.85; // Local domina, visitante necesita → menos probable
-  }
-
-  // 6. SCORE STATE — urgencia real basada en datos de StatsBomb/Opta
-  // Local trailing > visitante trailing (local empujado por su gente)
-  // 40-44' y 85-89' = picos de urgencia pre-descanso/pre-final
-  const trailing = homeTrails || awayTrails;
-  
-  // Urgencia del que pierde (betas aprendibles urgency60/75)
-  if (trailing) {
-    let urgency;
-    if (gd >= 3) {
-      urgency = 0.65;
-      reasons.push('Goleada en contra — partido definido');
-    } else if (homeTrails) {
-      urgency = preFT ? Math.min(2.20, B.urgency75 * 1.40)
-        : (minute >= 75 ? Math.min(2.10, B.urgency75 * 1.33)
-          : minute >= 60 ? Math.min(1.70, B.urgency60 * 1.23)
-            : preHT ? 1.40 : minute >= 40 ? 1.25 : 1.05);
-    } else {
-      urgency = preFT ? Math.min(1.70, B.urgency75 * 1.07)
-        : (minute >= 75 ? B.urgency75
-          : minute >= 60 ? B.urgency60
-            : preHT ? 1.20 : minute >= 40 ? 1.15 : 1.05);
-    }
-    lambda *= urgency;
-    if (gd < 3) reasons.push((homeTrails ? 'Local' : 'Visitante') + ' necesita gol (\u00d7' + urgency.toFixed(2) + ')');
-  }
-  if (goals === 0 && preFT) lambda *= 1.20;
-  else if (goals === 0 && minute >= 77) lambda *= 1.12;
-
-  // Marcador holgado reduce goles esperados del partido (ANY goal).
-  // Correcto que 0-2 < 1-1: el modelo predice gol en el partido, no solo comeback.
-  if (gd >= 2) {
-    lambda *= B.lead2Mult;
-    reasons.push('Ventaja c\u00f3moda (\u00d7' + B.lead2Mult.toFixed(2) + ')');
-  } else if (gd === 1 && !trailing && minute >= 75) {
-    lambda *= B.lead1LateMult;
-    reasons.push('Cuidando resultado');
-  }
-
-  // 7. Goles acumulados — más goles = menos necesidad de otro
-  if (goals >= 4) lambda *= 0.30;
-  else if (goals >= 3 && minute >= 70) lambda *= 0.40;
-  else if (goals >= 2 && minute >= 80) lambda *= 0.50;
-
-  // 8. Ventanas temporales (cada factor UNA sola vez)
-  if (veryEarly) lambda *= 0.45;
-  // Halftime: stats del 1T no garantizan 2T
-  if (isHalftime) lambda *= 0.55;
-  // Transicion post-HT (45-55): incertidumbre post-descanso (no apilar con isHalftime)
-  else if (minute >= 45 && minute <= 55) lambda *= 0.85;
-  // Pre-entretiempo (40-44'): equipos apuran antes del descanso
-  if (preHT && !trailing && gd < 2) lambda *= 1.10;
-  // Pre-final (85-89'): maxima urgencia con descuento por delante
-  if (preFT && gd <= 1) lambda *= 1.12;
-  // 0-0 llegando al final sin ocasiones: partido trabado
-  if (goals === 0 && minute >= 70 && bcTotal === 0 && xgTotal < 1.0) lambda *= 0.70;
-
-  // ─── PROBABILIDAD POISSON ───
-  const prob = 1 - Math.exp(-lambda * effectiveMins);
-  // Cap máximo 95%: ningún evento en fútbol es 100% seguro
-  let score = Math.round(Math.min(95, prob * 100));
-
-  // ─── ANCLA DE LIGA: calibrar contra el promedio real de la liga ───
-  // Mismo efecto que usar odds de mercado: si el modelo dice 90% pero
-  // la liga promedia 2.0 goles/partido, el modelo está sobreconfiado.
-  if (leagueContext && leagueContext.goalsPerMatch) {
-    const leagueRate = leagueContext.goalsPerMatch / 90;
-    const leagueProb = 1 - Math.exp(-leagueRate * effectiveMins);
-    const leagueScore = Math.round(Math.min(95, leagueProb * 100));
-    // Blend 70% modelo + 30% ancla de liga
-    score = Math.round(score * 0.70 + leagueScore * 0.30);
-  }
-
-  // ─── CAPS DUROS POR VENTANA (basados en datos reales) ───
-  // < 30 min: muy temprano, datos insuficientes. No alertar.
-  if (veryEarly) score = Math.min(score, 60);
-  // 44-48 min: entretiempo. Partido parado. No alertar.
-  if (isHalftime) score = Math.min(score, 70);
-  // 90+ min: queda muy poco tiempo. Solo alertar si es MUY probable.
-  if (minute >= 90 && score < 75) score = Math.min(score, 60);
-
-  // ─── SCORER PREDICTION ───
-  // PRIORIDAD: el que va perdiendo > xG superior > nadie
-  // Si vas ganando 2-0, no eres el proximo anotador aunque tengas mas xG
-  let predictedScorer = null;
-  const scorerReasons = [];
-  if (homeTrails) {
-    predictedScorer = 'home'; scorerReasons.push('necesita gol');
-  } else if (awayTrails) {
-    predictedScorer = 'away'; scorerReasons.push('necesita gol');
-  } else if (s.xgHome !== null && s.xgAway !== null) {
-    if (s.xgHome > s.xgAway + 0.3) { predictedScorer = 'home'; scorerReasons.push('xG superior'); }
-    else if (s.xgAway > s.xgHome + 0.3) { predictedScorer = 'away'; scorerReasons.push('xG superior'); }
-  }
-
-  // ─── TIME WINDOW ───
-  let timeWindow = '';
-  if (isHalftime) timeWindow = 'Entretiempo — 2T por arrancar';
-  else if (minute < 25) timeWindow = 'GOL 1T';
-  else if (minute < 40) timeWindow = score >= 60 ? 'Gol antes del descanso!' : '1T';
-  else if (minute < 50) timeWindow = score >= 60 ? 'Gol inicio 2T!' : 'Inicio 2T';
-  else if (minute < 65) timeWindow = score >= 60 ? 'Gol 2T!' : '2T';
-  else if (minute < 80) timeWindow = score >= 60 ? 'GOL inminente!' : 'Tramo final';
-  else timeWindow = score >= 40 ? 'Descuento!' : 'Defini\u00e9ndose';
-
-  const verdict = score >= 80 ? 'MUY PROBABLE \u2014 casi seguro proximo gol'
-    : score >= 60 ? 'PROBABLE \u2014 buenos indicios'
-    : score >= 40 ? 'POSIBLE \u2014 atentos'
-    : score >= 20 ? 'DUDOSO \u2014 poca actividad'
-    : 'IMPROBABLE \u2014 muy pocas ocasiones';
-
-  let whoText = '';
-  if (predictedScorer && scorerReasons.length > 0 && score >= 30) {
-    whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante')) + ' (' + scorerReasons.join(', ') + ')';
-  } else if (predictedScorer && score >= 45) {
-    whoText = '\n     Proximo gol: ' + (predictedScorer === 'home' ? (match.teamHome || 'Local') : (match.teamAway || 'Visitante'));
-  }
-
-  // Probabilidad en ventana corta (15 min) — util para decidir "inminente"
-  const score15 = Math.round(Math.min(95, (1 - Math.exp(-lambda * 15)) * 100));
-
-  return {
-    match: match.rawName, teamHome: match.teamHome, teamAway: match.teamAway,
-    league: match.league, matchId: match.matchId,
-    score, score15, verdict, timeWindow, whoText, reasons,
-    minute, scoreHome: match.scoreHome, scoreAway: match.scoreAway,
-    predictedScorer: predictedScorer && score >= 25 ? predictedScorer : null,
-    stats: s, pressure: Math.round(lambda * 100), lambda,
-  };
+const loadState = () => readJson(STATE_FILE, { alertedMatches: {}, counters: {} });
+function saveState(s) {
+  s.lastUpdated = new Date().toISOString();
+  fs.writeFileSync(STATE_FILE, JSON.stringify(s, null, 2));
 }
 
 function writeSummary(text) {
@@ -378,748 +71,305 @@ function writeSummary(text) {
   }
 }
 
-function logAlertVerification(pred, correct) {
-  try {
-    let log = [];
-    if (fs.existsSync(ALERTAS_LOG_FILE)) {
-      // strip BOM si el archivo se edito en Windows
-      const raw = fs.readFileSync(ALERTAS_LOG_FILE, 'utf8').replace(/^\uFEFF/, '');
-      log = JSON.parse(raw);
-    }
-    log.push({
-      match: pred.match || (pred.teamHome + ' vs ' + pred.teamAway),
-      league: pred.league,
-      probability: pred.predictedProbability,
-      minute: pred.analysisMinute,
-      scoreAtAlert: pred.scoreAtAnalysis ? (pred.scoreAtAnalysis.home + '-' + pred.scoreAtAnalysis.away) : null,
-      finalScore: pred.finalScore ? (pred.finalScore.home + '-' + pred.finalScore.away) : null,
-      goalAfterAlert: pred.goalAfterAnalysis,
-      correct: correct,
-      windowType: pred.windowType,
-      timestamp: new Date().toISOString(),
-      alertTimestamp: pred.timestamp
-    });
-    // Keep last 500 entries
-    if (log.length > 500) log = log.slice(-500);
-    fs.writeFileSync(ALERTAS_LOG_FILE, JSON.stringify(log, null, 2));
-  } catch (e) {
-    console.log('  (no se pudo guardar log de alerta: ' + (e.message || e) + ')');
-  }
+/** ¿Hay stats suficientes para que el modelo signifique algo? */
+function hasMeaningfulStats(stats) {
+  if (!stats) return false;
+  const n = (v) => (v == null ? 0 : v);
+  return (n(stats.xgHome) + n(stats.xgAway) > 0.3)
+    || (n(stats.sotHome) + n(stats.sotAway) >= 3)
+    || (n(stats.shotsInsideBoxHome) + n(stats.shotsInsideBoxAway) >= 3)
+    || (n(stats.bigChancesHome) + n(stats.bigChancesAway) >= 1)
+    || (n(stats.attacksHome) + n(stats.attacksAway) >= 50);
 }
 
 function alertsEnabled() {
-  if (process.env.CI) {
-    // Nube: consultar GitHub directo (evita checkout desactualizado)
-    try {
-      const raw = require('child_process').execSync('curl -s https://raw.githubusercontent.com/leandrobor94/gol-analyzer/main/alertas.json', { timeout: 5000, stdio: 'pipe' }).toString();
-      const { enabled } = JSON.parse(raw);
-      return enabled !== false;
-    } catch {}
-    return true;
-  }
-  // Local: archivo
-  try {
-    if (fs.existsSync('alertas.json')) {
-      const { enabled } = JSON.parse(fs.readFileSync('alertas.json', 'utf8'));
-      return enabled !== false;
-    }
-  } catch {}
+  const local = readJson(path.join(__dirname, 'alertas.json'), null);
+  if (local && typeof local.enabled === 'boolean') return local.enabled;
   return true;
 }
 
-function doSync() {
-  if (process.env.NO_SYNC) return;
-  // En CI el workflow hace commit/push al final. Si doSync tambien pushea,
-  // hay race (dos pushes concurrentes → datos perdidos). Solo git-sync en local.
-  if (process.env.CI) {
-    console.log('  Sync: CI — archivos en disco; commit lo hace el workflow');
-    return;
-  }
-  const cp = require('child_process');
+// ───────────────────────────── enriquecimiento ─────────────────────────────
+
+async function enrichWithFlashscore(candidates) {
+  if (!FLASHSCORE_ENABLED || !candidates.length) return 0;
+  let fetcher;
+  try { fetcher = require('./flashscore_fetcher'); } catch { return 0; }
+  const targets = candidates.slice(0, FLASHSCORE_MAX).map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
+  let updated = 0;
   try {
-    try {
-      cp.execSync('git pull --rebase', { stdio: 'ignore', timeout: 20000 });
-    } catch {
-      try { cp.execSync('git rebase --abort', { stdio: 'ignore', timeout: 5000 }); } catch {}
-    }
-  } catch {}
-  try {
-    cp.execSync('git config user.email "sofastats-bot@users.noreply.github.com"', { stdio: 'ignore', timeout: 5000 });
-    cp.execSync('git config user.name "sofastats-bot"', { stdio: 'ignore', timeout: 5000 });
-    const files = ['predictions.json', 'weights.json', 'teams.json', 'alertas.json', 'alertas_log.json', 'telegram-offset.txt', 'last-local-run.json']
-      .filter(f => fs.existsSync(f));
-    if (files.length > 0) {
-      cp.execSync('git add ' + files.join(' '), { stdio: 'ignore', timeout: 5000 });
-    }
-    const hasChanges = cp.execSync('git status --porcelain', { encoding: 'utf8', timeout: 5000 }).trim();
-    if (hasChanges) {
-      cp.execSync('git commit -m "sync: datos ronda [skip ci]"', { stdio: 'ignore', timeout: 5000 });
-      cp.execSync('git push', { stdio: 'ignore', timeout: 15000 });
-      console.log('  Sync: commit + push exitoso');
-    } else {
-      console.log('  Sync: sin cambios nuevos');
+    const xg = await fetcher.fetchXgBatch(targets);
+    for (const r of candidates) {
+      const v = xg[r.teamHome + ' vs ' + r.teamAway];
+      if (!v || v.home == null || v.away == null) continue;
+      if (v.home > 6 || v.away > 6) continue;              // dato corrupto
+      r.stats.xgHome = v.home;
+      r.stats.xgAway = v.away;
+      r.stats.xgSource = 'flashscore';
+      updated++;
     }
   } catch (e) {
-    console.log('  Sync: ' + (e.message || 'error').split('\n')[0]);
+    console.log('  -> Flashscore no disponible: ' + (e.message || e));
   }
+  return updated;
 }
 
+// ───────────────────────────────── main ─────────────────────────────────
+
 async function main() {
-
-  // Si es nube y hubo ejecución local hace < 10 min, saltar
-  if (process.env.CI) {
-    try {
-      if (fs.existsSync('last-local-run.json')) {
-        const { lastRun } = JSON.parse(fs.readFileSync('last-local-run.json', 'utf8'));
-        const minSince = (Date.now() - new Date(lastRun).getTime()) / 60000;
-        if (minSince < 10) {
-          console.log(`Ejecucion local hace ${Math.round(minSince)} min. Saltando ciclo en la nube.`);
-          writeSummary('## Skip ' + new Date().toISOString() + ' - ejecucion local reciente');
-          return;
-        }
-      }
-    } catch {}
-  }
-
-  // Traer ultimos cambios de la nube
-  try { require('child_process').execSync('git pull --ff-only', { stdio: 'ignore', timeout: 15000 }); } catch {}
-
-  console.log('\n' + '='.repeat(64));
+  console.log('\n' + '='.repeat(66));
   console.log('  ANALISIS — ' + new Date().toISOString());
-  console.log('='.repeat(64));
+  console.log('='.repeat(66));
 
-  // Validar horario Colombia (7am-10pm)
-  const co = new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' });
-  const coHour = new Date(co).getHours();
-  if (coHour < 7 || coHour >= 22) {
+  const coHour = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' })).getHours();
+  if ((coHour < 7 || coHour >= 22) && !process.env.FORCE_RUN) {
     console.log('Fuera de horario Colombia (' + coHour + ':00).');
-    writeSummary('## Skip ' + new Date().toISOString() + ' - fuera de horario (' + coHour + ':00 Colombia)');
+    writeSummary('## Skip — fuera de horario (' + coHour + ':00 Colombia)');
     return;
   }
 
-  // Flashscore enrichment solo cada 4 ciclos (cada ~20 min) — Playwright es caro
-  // Cron */5 corre a :00 :05 :10 :15 :20... → :00, :20, :40 → minuto % 20 === 0
-  const fsCycle = new Date().getUTCMinutes() % 20 === 0;
+  const model = M.loadModel();
+  if (!model.trained) {
+    console.log('AVISO: no hay model.json entrenado. Se analiza y se guardan datos,');
+    console.log('       pero NO se envian alertas. Corre: npm run train');
+  } else {
+    console.log('Modelo v' + model.version + ' (' + model.n + ' partidos, AUC ' + model.eval.auc + ')');
+    for (const g of model.gates) {
+      console.log('  gate ' + g.tier.padEnd(9) + ' min ' + g.minMinute + '-' + g.maxMinute +
+        ' p>=' + g.threshold + '  precision medida ' + (g.measuredPrecision * 100).toFixed(1) +
+        '% (n=' + g.n + ', IC ' + (g.ci95[0] * 100).toFixed(0) + '-' + (g.ci95[1] * 100).toFixed(0) + '%)');
+    }
+  }
 
-    let liveData = [];
+  let predictions = loadPredictions();
+  const state = loadState();
+  let liveData = [];
 
-    try {
-    let weights = loadWeights();
-    let predictions = loadPredictions();
-    let teams = {};
-    try { if (fs.existsSync(TEAMS_FILE)) teams = JSON.parse(fs.readFileSync(TEAMS_FILE, 'utf8')); } catch {}
-    const analyzed = [];
-
-    console.log('[1/3] Obteniendo partidos en vivo desde 365scores...');
+  // ── 1. partidos en vivo ──
+  console.log('\n[1/4] Partidos en vivo...');
+  try {
     liveData = await scores365.fetchLiveMatches();
-    console.log('  -> ' + liveData.length + ' partidos en vivo\n');
+  } catch (e) {
+    console.log('  Error al obtener partidos: ' + (e.message || e));
+  }
+  console.log('  -> ' + liveData.length + ' en vivo');
+  writeSummary('## Analisis ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
 
-    writeSummary('## Analisis 365scores ' + new Date().toISOString() + '\n- Partidos: ' + liveData.length);
-
-    if (liveData.length > 0) {
-      console.log('[2/3] Obteniendo stats y analizando ' + liveData.length + ' partidos...\n');
-
-      for (let i = 0; i < liveData.length; i++) {
-        const m = liveData[i];
-        const displayName = m.homeTeam + ' vs ' + m.awayTeam;
-        const league = m.league;
-        console.log('  [' + (i + 1) + '/' + liveData.length + '] ' + displayName + (league ? ' (' + league + ')' : ''));
-
-        // Fetch match stats from 365scores
-        let rawStats;
-        try {
-          rawStats = await scores365.fetchMatchStats(m.gameId, m.homeId, m.awayId);
-        } catch (e) {
-          console.log('     -> Error al obtener stats: ' + (e.message || e) + '\n');
-          continue;
-        }
-        let internalStats;
-        let statsAvailable = false;
-        if (rawStats) {
-          internalStats = scores365.toInternalFormat(rawStats, m);
-          statsAvailable = hasMeaningfulStats(internalStats);
-        }
-        if (!rawStats || !statsAvailable) {
-          // NULL_STATS tiene TODAS las claves en null — evita que `undefined !== null`
-          // pase como true en analyzeGoal (bug que dejaba entrar NaN a los calculos)
-          internalStats = { ...scores365.NULL_STATS, ...(internalStats || {}) };
-          console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | Stats no disponibles, usando fallback');
-        } else {
-          const sotStr = internalStats.sotHome !== null ? internalStats.sotHome + '-' + internalStats.sotAway : '?-?';
-          const boxStr = internalStats.shotsInsideBoxHome !== null ? 'Box:' + internalStats.shotsInsideBoxHome + '-' + internalStats.shotsInsideBoxAway : '';
-          console.log('     -> ' + m.minute + "' " + m.scoreHome + '-' + m.scoreAway + ' | SOT:' + sotStr + (boxStr ? ' ' + boxStr : ''));
-        }
-
-        // Validar datos coherentes
-        const totalGoals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
-        if (m.minute <= 10 && totalGoals >= 3) {
-          console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
-          continue;
-        }
-        if (m.minute <= 30 && totalGoals >= 6) {
-          console.log('  -> Score imposible: ' + m.scoreHome + '-' + m.scoreAway + ' en min ' + m.minute + ', saltando\n');
-          continue;
-        }
-
-        analyzed.push({
-          rawName: displayName, teamHome: m.homeTeam, teamAway: m.awayTeam,
-          league, matchId: String(m.gameId), minute: m.minute || 0,
-          scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
-          stats: internalStats,
-          competitionId: m.competitionId
-        });
-      }
-
-      // Flashscore: enriquecimiento solo en ciclos cada 20 min para ahorrar Playwright
-      // (a) partidos sin stats de 365scores y (b) hasta 8 partidos en ventana de alerta
-      const noStats = analyzed.filter(m => !hasMeaningfulStats(m.stats));
-      const enrichable = analyzed.filter(m => hasMeaningfulStats(m.stats) && m.minute >= 25 && m.minute <= 70).slice(0, 8);
-      const needFlashscore = fsCycle ? [...noStats, ...enrichable.filter(m => !noStats.includes(m))] : [];
-      if (needFlashscore.length > 0) {
-        console.log('\n  -> ' + needFlashscore.length + ' partidos a enriquecer en Flashscore (' + noStats.length + ' sin stats)...');
-        const fsTargets = needFlashscore.map(m => ({ teamHome: m.teamHome, teamAway: m.teamAway, matchId: m.matchId, minute: m.minute }));
-        try {
-          const fsStats = await fetchStatsBatch(fsTargets);
-          let merged = 0;
-          for (const match of needFlashscore) {
-            const key = match.matchId;
-            const fs = fsStats[key];
-            if (!fs || !fs.stats || Object.keys(fs.stats).length === 0) continue;
-            const s = match.stats;
-            // Map Flashscore stat names to internal format.
-            // overwrite:true => el dato real de Flashscore REEMPLAZA el estimado de 365scores
-            const fsm = {
-              'Expected goals (xG)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xg', overwrite: true },
-              'Expected goals on target (xGOT)': { h: v => parseFloat(v), a: v => parseFloat(v), k: 'xgot', overwrite: true },
-              'Expected assists (xA)': { h: v => parseFloat(v), a: v => parseFloat(v), kh: 'xgHomeA', ka: 'xgAwayA', overwrite: true },
-              'Touches in opposition box': { h: parseInt, a: parseInt, k: 'touchesOppBox' },
-              'Goalkeeper saves': { h: parseInt, a: parseInt, k: 'saves' },
-              'Ball possession': { h: v => parseInt(v)/100, a: v => parseInt(v)/100, k: 'possession' },
-              'Total shots': { h: parseInt, a: parseInt, k: 'totalShots' },
-              'Shots on target': { h: parseInt, a: parseInt, k: 'shotsOnTarget' },
-              'Big chances': { h: parseInt, a: parseInt, k: 'bigChances' },
-              'Corner kicks': { h: parseInt, a: parseInt, k: 'corners' },
-              'Fouls': { h: parseInt, a: parseInt, k: 'fouls' },
-              'Yellow cards': { h: parseInt, a: parseInt, k: 'yellowCards' },
-              'Red cards': { h: parseInt, a: parseInt, k: 'redCards' },
-              'Shots off target': { h: parseInt, a: parseInt, k: 'shotsOffTarget' },
-              'Shots inside box': { h: parseInt, a: parseInt, k: 'shotsInsideBox' },
-              'Blocked shots': { h: parseInt, a: parseInt, k: 'blockedShots' },
-              'Hit woodwork': { h: parseInt, a: parseInt, k: 'hitWoodwork' },
-              'Saves': { h: parseInt, a: parseInt, k: 'saves' },
-            };
-            let anyNew = false;
-            for (const [fsName, mapping] of Object.entries(fsm)) {
-              if (fs.stats[fsName]) {
-                const hVal = mapping.h(fs.stats[fsName].home);
-                const aVal = mapping.a(fs.stats[fsName].away);
-                if (isNaN(hVal) || isNaN(aVal)) continue;
-                // Filtro de outliers: xG/xGOT/xA > 6 son datos corruptos
-                if (/xG|xg|xA/.test(mapping.k || mapping.kh) && (hVal > 6 || aVal > 6)) continue;
-                const kh = mapping.kh || (mapping.k + 'Home');
-                const ka = mapping.ka || (mapping.k + 'Away');
-                const existing = s[kh];
-                if (mapping.overwrite || existing === null || existing === undefined) {
-                  s[kh] = hVal;
-                  s[ka] = aVal;
-                  anyNew = true;
-                }
-              }
-            }
-            if (anyNew) {
-              merged++;
-              console.log('     -> Stats Flashscore mergeadas para ' + match.teamHome + ' vs ' + match.teamAway);
-            }
-          }
-          console.log('  -> Flashscore: stats mergeadas para ' + merged + '/' + needFlashscore.length + ' partidos');
-        } catch (e) {
-          console.log('  -> Error Flashscore: ' + (e.message || e));
-        }
-      }
-
-      // Fetch league context from 365scores
-      const uniqueComps = [...new Set(analyzed.map(m => m.competitionId).filter(Boolean))];
-      const leagueContextMap = {};
-      for (const compId of uniqueComps) {
-        try {
-          const ctx = await scores365.fetchLeagueContext(compId);
-          if (ctx) {
-            const leagueName = analyzed.find(m => m.competitionId === compId)?.league || '';
-            ctx.name = leagueName;
-            leagueContextMap[compId] = ctx;
-          }
-        } catch (e) {
-          console.log('     -> Error contexto liga ' + compId + ': ' + (e.message || e));
-        }
-      }
-      if (Object.keys(leagueContextMap).length > 0) {
-        console.log('  -> Contexto 365scores para ' + Object.keys(leagueContextMap).length + ' ligas');
-      }
-
-    const ranked = analyzed.map(m => {
-      const compCtx = leagueContextMap[m.competitionId];
-      const windowType = getWindowType(m.minute);
-      const w = getLeagueWeights(weights, m.league, windowType);
-      let result;
-
-      if (hasMeaningfulStats(m.stats)) {
-        result = analyzeGoal(m, w, teams, compCtx, windowType);
-      } else {
-        const fallbackScore = getFallbackScore(m.minute, m.scoreHome, m.scoreAway, m.league, m);
-        result = {
-          score: fallbackScore,
-          timeWindow: windowType === 'firstHalf' ? 'Gol en 1T (fallback)' : windowType === 'earlySecondHalf' ? 'Gol 46-70 (fallback)' : 'Gol tarde (fallback)',
-          verdict: fallbackScore >= 50 ? 'POSIBLE (stats insuficientes)' : 'DUDOSO (stats insuficientes)',
-          whoText: '', reasons: ['Stats no disponibles, score basado en contexto'],
-          teamHome: m.teamHome, teamAway: m.teamAway, league: m.league, matchId: m.matchId,
-          minute: m.minute, scoreHome: m.scoreHome, scoreAway: m.scoreAway,
-          stats: m.stats, predictedScorer: null, pressure: 0,
-        };
-      }
-
-      // Save base score (pre-window) for training
-      const baseScore = Math.min(100, Math.max(0, result.score));
-
-      // Window classification (solo etiqueta, no modifica el score)
-      if (windowType === 'firstHalf') {
-        result.timeWindow = 'GOL 1T';
-      } else if (windowType === 'earlySecondHalf') {
-        result.timeWindow = 'GOL 46-70';
-      } else {
-        result.timeWindow = 'GOL TARDE';
-      }
-
-      result.score = baseScore;
-      result.windowType = windowType;
-      result.competitionId = m.competitionId;
-
-      return result;
-    }).sort((a, b) => b.score - a.score);
-
-    // --- Fetch real xG from Flashscore for top matches (solo ciclos cada 20 min) ---
-    const topForXg = fsCycle ? ranked.filter(r => r.score >= 50 && r.stats.xgHome !== null && r.stats.xgAway !== null).slice(0, 5) : [];
-    if (topForXg.length > 0) {
-      console.log('\n--- Buscando xG real en Flashscore para ' + topForXg.length + ' partidos ---');
-      const { fetchXgBatch } = require('./flashscore_fetcher');
-      const targets = topForXg.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
-      let xgResults = {};
-      let xgFound = 0;
+  const analyzed = [];
+  if (liveData.length) {
+    // ── 2. stats + contexto de liga ──
+    console.log('\n[2/4] Stats y contexto...');
+    const leagueCtx = {};
+    for (const compId of [...new Set(liveData.map(m => m.competitionId).filter(Boolean))]) {
       try {
-        xgResults = await fetchXgBatch(targets);
-      } catch (e) {
-        console.log('  -> Error xG Flashscore: ' + (e.message || e));
-      }
-      for (const r of ranked) {
-        const key = r.teamHome + ' vs ' + r.teamAway;
-        const xg = xgResults[key];
-        if (xg && xg.home !== null && xg.away !== null) {
-          // Filter outliers: Flashscore a veces devuelve xG > 5.0 (datos corruptos)
-          if (xg.home > 5.0 || xg.away > 5.0) {
-            console.log('  * xG outlier ignorado: ' + r.teamHome + ' vs ' + r.teamAway + ' = ' + xg.home + '-' + xg.away);
-            continue;
-          }
-          const prevXgH = r.stats.xgHome;
-          const prevXgA = r.stats.xgAway;
-          if (Math.abs(xg.home - prevXgH) > 0.1 || Math.abs(xg.away - prevXgA) > 0.1) {
-            xgFound++;
-            r.stats.xgHome = xg.home;
-            r.stats.xgAway = xg.away;
-            console.log('  * xG actualizado: ' + r.teamHome + ' vs ' + r.teamAway + ' | estimado: ' + prevXgH.toFixed(2) + '-' + prevXgA.toFixed(2) + ' -> real: ' + xg.home.toFixed(2) + '-' + xg.away.toFixed(2));
-          }
-        }
-      }
-      if (xgFound > 0) {
-        // BUG FIX: el re-analisis pasaba leagueContext=null, perdiendo la normalizacion
-        // por liga y haciendo el score inconsistente con el analisis original
-        ranked.forEach(r => {
-          const wt = getWindowType(r.minute);
-          const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt);
-          r.score = updated.score; r.score15 = updated.score15; r.lambda = updated.lambda;
-          r.pressure = updated.pressure; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow;
-          r.reasons = updated.reasons; r.predictedScorer = updated.predictedScorer; r.whoText = updated.whoText;
-        });
-        ranked.sort((a, b) => b.score - a.score);
-      }
-      console.log('  xG real obtenido para ' + xgFound + ' partidos\n');
+        const ctx = await scores365.fetchLeagueContext(compId);
+        if (ctx && ctx.goalsPerMatch) leagueCtx[compId] = ctx.goalsPerMatch;
+      } catch {}
     }
+    console.log('  -> contexto de ' + Object.keys(leagueCtx).length + '/' +
+      new Set(liveData.map(m => m.competitionId)).size + ' ligas');
 
-    // --- Fetch momentum from Flashscore for alert candidates (cada 20 min) ---
-    if (fsCycle) {
-      const momentumCandidates = ranked.filter(r => r.score >= 60).slice(0, 8);
-      if (momentumCandidates.length > 0) {
-        console.log('\n  -> Buscando momentum para ' + momentumCandidates.length + ' candidatos...');
-        try {
-          const momTargets = momentumCandidates.map(r => ({ teamHome: r.teamHome, teamAway: r.teamAway }));
-          const momResults = await fetchMomentumBatch(momTargets);
-          let momFound = 0;
-          ranked.forEach(r => {
-            const key = r.teamHome + ' vs ' + r.teamAway;
-            if (momResults[key]) {
-              momFound++;
-              const wt = getWindowType(r.minute);
-              const updated = analyzeGoal(r, getLeagueWeights(weights, r.league, wt), teams, leagueContextMap[r.competitionId] || null, wt, momResults[key]);
-              r.score = updated.score; r.score15 = updated.score15; r.lambda = updated.lambda;
-              r.pressure = updated.pressure; r.verdict = updated.verdict; r.timeWindow = updated.timeWindow;
-              r.reasons = updated.reasons; r.predictedScorer = updated.predictedScorer; r.whoText = updated.whoText;
-            }
-          });
-          ranked.sort((a, b) => b.score - a.score);
-          console.log('  -> Momentum aplicado en ' + momFound + ' partidos');
-        } catch (e) {
-          console.log('  -> Error momentum: ' + (e.message || e));
-        }
-      }
-    }
-
-    // ─── LOG FINAL (scores post xG/momentum = mismos que se guardan y alertan) ───
-    console.log('='.repeat(64));
-    console.log('  PROXIMO GOL — ANALISIS EN VIVO');
-    console.log('='.repeat(64) + '\n');
-    if (ranked.length > 0) {
-      ranked.forEach((r, i) => {
-        const medal = i === 0 ? '1.' : i === 1 ? '2.' : i === 2 ? '3.' : '  ' + (i + 1) + '.';
-        const bar = '#'.repeat(Math.round(r.score / 5)) + '-'.repeat(20 - Math.round(r.score / 5));
-        console.log('  ' + medal + ' [' + r.score + '%] ' + bar);
-        console.log('     ' + r.teamHome + ' vs ' + r.teamAway + ' | ' + (r.minute ? r.minute + "'" : '') + ' ' + r.scoreHome + '-' + r.scoreAway);
-        console.log('     ' + r.timeWindow);
-        console.log('     ' + r.verdict + r.whoText);
-        const xgS = r.stats.xgHome != null ? r.stats.xgHome.toFixed(2) + '-' + r.stats.xgAway.toFixed(2) : '?-?';
-        const sotS = r.stats.sotHome != null ? r.stats.sotHome + '-' + r.stats.sotAway : '?-?';
-        const bcS = r.stats.bigChancesHome != null ? r.stats.bigChancesHome + '-' + r.stats.bigChancesAway : '?-?';
-        const boxS = r.stats.shotsInsideBoxHome != null ? r.stats.shotsInsideBoxHome + '-' + r.stats.shotsInsideBoxAway : '?-?';
-        const posS = r.stats.possessionHome != null ? Math.round(r.stats.possessionHome * 100) + '%-' + Math.round(r.stats.possessionAway * 100) + '%' : '?-?';
-        console.log('     xG:' + xgS + ' SOT:' + sotS + ' OC:' + bcS + ' Box:' + boxS + ' Pos:' + posS);
-        if (r.reasons.length > 0) console.log('     ' + r.reasons.join(' | '));
-      });
-      const top = ranked[0];
-      if (top.score >= 40) {
-        console.log('\n  RECOMENDACION PRINCIPAL: ' + top.teamHome + ' vs ' + top.teamAway + ' | ' + top.score + '% — ' + top.timeWindow);
-      } else {
-        console.log('\n  Sin recomendaciones solidas ahora.');
-      }
-    }
-
-    // ─── PERSISTIR PREDICCIONES (scores FINALES post xG/momentum) ───
-    // Critico: este bloque DEBE ir despues de todo re-analisis y ANTES de alertas.
-    // Asi lo guardado === lo alertado.
-    const now = new Date().toISOString();
-    let newCount = 0;
-    for (const r of ranked) {
-      const existing = predictions.find(p => p.id === r.matchId && p.predictionCorrect === null);
-      if (existing) {
-        const prevGoals = (existing.lastSeenScore?.home || 0) + (existing.lastSeenScore?.away || 0);
-        const newGoals = (r.scoreHome || 0) + (r.scoreAway || 0);
-        const prevMin = existing.lastSeenMinute || 0;
-        const newMin = r.minute || 0;
-        if (newMin > prevMin && newGoals < prevGoals) {
-          console.log('  [SKIP] ' + (r.teamHome + ' vs ' + r.teamAway) + ' - marcador inconsistente');
-          continue;
-        }
-        if (newMin < prevMin - 2) {
-          console.log('  [SKIP] ' + (r.teamHome + ' vs ' + r.teamAway) + ' - minuto retrocede');
-          continue;
-        }
-        existing.lastSeenMinute = r.minute;
-        existing.lastSeenScore = { home: r.scoreHome, away: r.scoreAway };
-        existing.lastAnalyzedAt = now; // siempre: este ciclo lo analizamos
-        const minuteAdvanced = (r.minute || 0) > (existing.analysisMinute || 0);
-        const scoreChanged = Math.abs(r.score - (existing.predictedProbability || 0)) > 5;
-        const crossed80 = (r.score >= 80) !== ((existing.predictedProbability || 0) >= 80);
-        if (minuteAdvanced || scoreChanged || crossed80) {
-          // Conservar primer score de alerta para evaluar precision real del aviso
-          if ((existing.predictedProbability || 0) >= 80 && existing.firstAlertProbability == null) {
-            existing.firstAlertProbability = existing.predictedProbability;
-            existing.firstAlertMinute = existing.analysisMinute;
-          }
-          if (r.score >= 80 && existing.firstAlertProbability == null) {
-            existing.firstAlertProbability = r.score;
-            existing.firstAlertMinute = r.minute;
-          }
-          existing.predictedProbability = r.score;
-          existing.predictedProbability15 = r.score15 != null ? r.score15 : null;
-          existing.windowType = r.windowType;
-          existing.predictedScorer = r.predictedScorer;
-          existing.predictedTimeWindow = r.timeWindow;
-          existing.stats = r.stats;
-          existing.scoreAtAnalysis = { home: r.scoreHome, away: r.scoreAway };
-          existing.analysisMinute = r.minute;
-          existing._lambda = r.lambda != null ? r.lambda : (r.pressure || 0) / 100;
-        }
-      } else {
-        const hasStats = r.stats && (hasMeaningfulStats(r.stats) || Object.keys(r.stats).filter(k => r.stats[k] !== null).length >= 15);
-        if (hasStats || r.score >= 30) {
-          predictions.push({
-            id: r.matchId, match: r.teamHome + ' vs ' + r.teamAway, league: r.league,
-            teamHome: r.teamHome, teamAway: r.teamAway, timestamp: now, lastAnalyzedAt: now,
-            analysisMinute: r.minute, scoreAtAnalysis: { home: r.scoreHome, away: r.scoreAway }, stats: r.stats,
-            predictedProbability: r.score, predictedProbability15: r.score15 != null ? r.score15 : null,
-            firstAlertProbability: r.score >= 80 ? r.score : null,
-            firstAlertMinute: r.score >= 80 ? r.minute : null,
-            predictedScorer: r.predictedScorer, predictedTimeWindow: r.timeWindow,
-            windowType: r.windowType, _lambda: r.lambda != null ? r.lambda : (r.pressure || 0) / 100,
-            finalScore: null, goalAfterAnalysis: null, actualGoalMinute: null, actualScorer: null,
-            predictionCorrect: null, alertCorrect: null,
-            lastSeenMinute: r.minute, lastSeenScore: { home: r.scoreHome, away: r.scoreAway }
-          });
-          newCount++;
-        }
-      }
-    }
-    // lastSeen de pendientes aun en vivo (aunque no se re-analicen por score)
-    for (const pred of predictions) {
-      if (pred.predictionCorrect !== null) continue;
-      const lm = liveData.find(m => String(m.gameId) === String(pred.id));
-      if (lm) {
-        pred.lastSeenMinute = lm.minute;
-        pred.lastSeenScore = { home: lm.scoreHome ?? 0, away: lm.scoreAway ?? 0 };
-      }
-    }
-    savePredictions(predictions);
-    weights.stats.createdCount = (weights.stats.createdCount || 0) + newCount;
-    saveWeights(weights);
-    console.log('  -> ' + newCount + ' predicciones nuevas\n');
-
-    // --- Telegram alert (alto impacto, medido >=90% en STRONG) ---
-    // STRONG: score>=80 + xgRem>=1.5 + gd<=1 + min35-85 → 5/5 (100%) historico
-    // BORDERLINE: xgRem 1.0-1.5 → solo si IA confirma (OPENAI/GROQ/ANTHROPIC key)
-    const aiOn = aiFilter.isAvailable();
-    console.log('\n  Gate alertas: STRONG auto | BORDERLINE ' + (aiOn ? 'IA ON' : 'IA OFF (solo STRONG)'));
-    const candidates = [];
-    for (const r of ranked) {
-      r.alertQuality = alertQuality(r);
-      const g = classifyAlert(r, hasMeaningfulStats);
-      r.alertGate = g;
-      if (g.tier === 'REJECT') continue;
-      if (g.tier === 'STRONG') {
-        candidates.push({ r, gate: g, source: 'STRONG' });
+    for (const m of liveData) {
+      // Descartar marcadores imposibles (datos corruptos del feed)
+      const goals = (m.scoreHome ?? 0) + (m.scoreAway ?? 0);
+      if ((m.minute <= 10 && goals >= 3) || (m.minute <= 30 && goals >= 6)) {
+        console.log('  [SKIP] ' + m.homeTeam + ' vs ' + m.awayTeam + ' — marcador imposible');
         continue;
       }
-      if (g.tier === 'BORDERLINE' && aiOn) {
-        const ai = await aiFilter.reviewAlert(r, g);
-        console.log('  AI ' + (ai.provider || '?') + ' ' + r.teamHome + ' vs ' + r.teamAway +
-          ' → ' + (ai.alert ? 'PASS' : 'VETO') + ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
-        if (ai.alert) candidates.push({ r, gate: g, source: 'AI', ai });
+      let stats = null;
+      try {
+        const raw = await scores365.fetchMatchStats(m.gameId, m.homeId, m.awayId);
+        if (raw) stats = scores365.toInternalFormat(raw, m);
+      } catch {}
+      if (!stats || !hasMeaningfulStats(stats)) {
+        stats = Object.assign({}, scores365.NULL_STATS, stats || {});
+      }
+      analyzed.push({
+        matchId: String(m.gameId),
+        teamHome: m.homeTeam, teamAway: m.awayTeam,
+        league: m.league, competitionId: m.competitionId,
+        leagueGoalsPerMatch: leagueCtx[m.competitionId] || null,
+        minute: m.minute || 0,
+        scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
+        stats,
+        odds: m.odds || null,
+      });
+    }
+
+    // ── 3. puntuar ──
+    console.log('\n[3/4] Puntuando ' + analyzed.length + ' partidos...');
+    const scoreAll = () => {
+      for (const a of analyzed) Object.assign(a, M.score(model, a));
+      analyzed.sort((x, y) => (y.probability || 0) - (x.probability || 0));
+    };
+    scoreAll();
+
+    // xG real solo para los que rondan el tier VALOR, y como mucho cada 20 min
+    if (new Date().getUTCMinutes() % 20 === 0 && model.trained) {
+      const valor = model.gates.find(g => g.tier === 'VALOR');
+      if (valor) {
+        const near = analyzed.filter(a =>
+          a.minute >= valor.minMinute && a.minute <= valor.maxMinute &&
+          a.probability >= valor.threshold - 0.10 && hasMeaningfulStats(a.stats));
+        if (near.length) {
+          const n = await enrichWithFlashscore(near);
+          if (n) { console.log('  -> xG real de Flashscore en ' + n + ' partidos, re-puntuando'); scoreAll(); }
+        }
       }
     }
-    candidates.sort((a, b) => (b.r.alertQuality || 0) - (a.r.alertQuality || 0));
 
-    if (candidates.length > 0) {
-      if (!process.env.CI) {
-        console.log('  Candidatos alerta (local, no Telegram): ' + candidates.length);
-        candidates.slice(0, 5).forEach(c =>
-          console.log('   [' + c.source + '] ' + c.r.score + '% q=' + c.r.alertQuality + ' ' +
-            c.r.teamHome + ' vs ' + c.r.teamAway + ' xgR=' + c.gate.xgRemaining)
-        );
-      } else if (!alertsEnabled()) {
-        console.log('\nAlertas desactivadas (alertas.json). Analisis sigue corriendo.');
-        writeSummary('- Alerta: Desactivada por usuario');
+    for (const a of analyzed.slice(0, 12)) {
+      const pct = Math.round((a.probability || 0) * 100);
+      const bar = '#'.repeat(Math.round(pct / 5)) + '-'.repeat(20 - Math.round(pct / 5));
+      const xg = a.stats.xgHome != null ? a.stats.xgHome.toFixed(2) + '-' + a.stats.xgAway.toFixed(2) : '?-?';
+      console.log('  [' + String(pct).padStart(3) + '%] ' + bar + '  ' +
+        a.teamHome + ' vs ' + a.teamAway + '  ' + a.minute + "' " + a.scoreHome + '-' + a.scoreAway +
+        ' | xG ' + xg + (a.leagueGoalsPerMatch ? ' | liga ' + a.leagueGoalsPerMatch.toFixed(2) + ' g/p' : ''));
+    }
+
+    // ── 4. gate + IA ──
+    const candidates = [];
+    const aiOn = aiFilter.isAvailable();
+    for (const a of analyzed) {
+      const g = classifyAlert(a, hasMeaningfulStats, model);
+      a.gate = g;
+      if (g.tier === 'REJECT') continue;
+      if (g.requiresAi) {
+        if (!aiOn) { console.log('  ' + a.teamHome + ' vs ' + a.teamAway + ' — VALOR sin IA disponible, descartado'); continue; }
+        const ai = await aiFilter.reviewAlert(a, g);
+        a.aiDecision = { pass: !!ai.alert, confidence: ai.confidence || 0, reason: ai.reason || '', provider: ai.provider || null };
+        console.log('  IA ' + (ai.provider || '?') + ': ' + a.teamHome + ' vs ' + a.teamAway +
+          ' -> ' + (ai.alert ? 'PASA' : 'VETA') + ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
+        if (!ai.alert) continue;
+      }
+      a.alertQuality = alertQuality(a);
+      candidates.push(a);
+    }
+    candidates.sort((x, y) => (y.alertQuality || 0) - (x.alertQuality || 0));
+
+    // Dedup: no repetir el mismo partido en el mismo tier
+    const toSend = [];
+    for (const c of candidates) {
+      const key = c.matchId + '_' + c.gate.tier;
+      const last = state.alertedMatches[key];
+      if (last) {
+        const realMin = (Date.now() - last.timestamp) / 60000;
+        const gameAdvance = (c.minute || 0) - (last.minute || 0);
+        if (realMin < 45 && gameAdvance < 25) continue;
+      }
+      toSend.push(c);
+      if (toSend.length >= 5) break;
+    }
+
+    if (!candidates.length) {
+      const best = analyzed[0];
+      if (best) console.log('\nSin alerta. Mejor: ' + Math.round(best.probability * 100) + '% — ' + best.gate.reason);
+      writeSummary('- Alerta: no (' + (best ? best.gate.reason : 'sin partidos') + ')');
+    } else if (!toSend.length) {
+      console.log('\nTodos los candidatos ya alertados (dedup)');
+      writeSummary('- Alerta: dedup');
+    } else if (!alertsEnabled()) {
+      console.log('\nAlertas desactivadas por el usuario (alertas.json)');
+      writeSummary('- Alerta: desactivada');
+    } else if (!process.env.CI) {
+      console.log('\nCandidatos (local, no se envia Telegram): ' + toSend.length);
+      toSend.forEach(c => console.log('  [' + c.gate.tier + '] ' + Math.round(c.probability * 100) + '% ' + c.teamHome + ' vs ' + c.teamAway));
+    } else {
+      const msg = notify.buildMessage(toSend, model);
+      if (msg && await notify.sendTelegram(msg)) {
+        for (const c of toSend) {
+          state.alertedMatches[c.matchId + '_' + c.gate.tier] = { timestamp: Date.now(), minute: c.minute || 0, tier: c.gate.tier };
+          c.alerted = true;
+        }
+        writeSummary('- Alerta ENVIADA: ' + toSend.map(c => c.gate.tier).join(','));
+      }
+    }
+    // Limpiar dedup viejo
+    const cutoff = Date.now() - 3 * 60 * 60 * 1000;
+    for (const [k, v] of Object.entries(state.alertedMatches)) {
+      if (!v || v.timestamp < cutoff) delete state.alertedMatches[k];
+    }
+
+    // ── persistir predicciones ──
+    const now = new Date().toISOString();
+    let created = 0;
+    for (const a of analyzed) {
+      const existing = predictions.find(p => String(p.id) === a.matchId && p.predictionCorrect == null);
+      const snapshot = {
+        probability: a.probability, probability15: a.prob15,
+        analysisMinute: a.minute,
+        scoreAtAnalysis: { home: a.scoreHome, away: a.scoreAway },
+        stats: a.stats,
+        leagueGoalsPerMatch: a.leagueGoalsPerMatch,
+        odds: a.odds,
+        lambda: a.lambda,
+        lastAnalyzedAt: now,
+      };
+      if (existing) {
+        // El minuto nunca retrocede: si lo hace, el feed va stale
+        if ((a.minute || 0) < (existing.analysisMinute || 0) - 2) continue;
+        Object.assign(existing, snapshot);
+        if (a.alerted && !existing.alertTier) {
+          existing.alertTier = a.gate.tier;
+          existing.alertProbability = a.probability;
+          existing.alertMinute = a.minute;
+          existing.aiDecision = a.aiDecision || null;
+        }
       } else {
-        const filtered = [];
-        for (const c of candidates) {
-          const r = c.r;
-          const key = r.matchId + '_' + r.windowType;
-          const lastAlert = weights.alertedMatches?.[key];
-          let skip = false;
-          if (lastAlert) {
-            const realMin = (Date.now() - lastAlert.timestamp) / 60000;
-            const gameMinAdvance = (r.minute || 0) - (lastAlert.minute || 0);
-            if (realMin < 45 && gameMinAdvance < 25) skip = true;
-          }
-          if (!skip) filtered.push(c);
-          if (filtered.length >= 5) break;
-        }
-
-        if (filtered.length === 0) {
-          console.log('\nAlertas: todos los partidos ya alertados (dedup)');
-          writeSummary('- Alerta: Todos dedup');
-        } else {
-          const toSend = filtered.map(c => {
-            const r = c.r;
-            // Anotar fuente en verdict para el mensaje
-            r.verdict = (r.verdict || '') + ' [' + c.source + ' q=' + (r.alertQuality || 0) + ']';
-            return r;
-          });
-          const msg = notify.buildMessage(toSend);
-          if (msg) {
-            console.log('\nEnviando alerta Telegram con ' + filtered.length + ' partidos...');
-            await notify.sendTelegram(msg);
-            weights.alertedMatches = weights.alertedMatches || {};
-            for (const c of filtered) {
-              const r = c.r;
-              const key = r.matchId + '_' + r.windowType;
-              weights.alertedMatches[key] = { timestamp: Date.now(), minute: r.minute || 0, source: c.source };
-            }
-            const cutoff = Date.now() - 2 * 60 * 60 * 1000;
-            for (const [k, v] of Object.entries(weights.alertedMatches)) {
-              if (v.timestamp < cutoff) delete weights.alertedMatches[k];
-            }
-            saveWeights(weights);
-            writeSummary('- Alerta: ENVIADA (' + filtered.length + ' | ' + filtered.map(c => c.source).join(',') + ')');
-          }
-        }
+        predictions.push(Object.assign({
+          id: a.matchId,
+          match: a.teamHome + ' vs ' + a.teamAway,
+          teamHome: a.teamHome, teamAway: a.teamAway,
+          league: a.league, competitionId: a.competitionId,
+          timestamp: now,
+          alertTier: a.alerted ? a.gate.tier : null,
+          alertProbability: a.alerted ? a.probability : null,
+          alertMinute: a.alerted ? a.minute : null,
+          aiDecision: a.aiDecision || null,
+          finalScore: null, goalAfterAnalysis: null, goalWithin15: null,
+          goalMinutes: null, nextGoalMinute: null,
+          predictionCorrect: null, alertCorrect: null,
+        }, snapshot));
+        created++;
       }
-    } else if (ranked.length > 0) {
-      const best = ranked[0];
-      const g = best.alertGate || classifyAlert(best, hasMeaningfulStats);
-      console.log('\nSin alerta STRONG. Mejor: ' + best.score + '% q=' + (best.alertQuality || alertQuality(best)) +
-        ' tier=' + g.tier + ' (' + g.reason + ')');
-      writeSummary('- Alerta: No (' + g.tier + ' best=' + best.score + '% xgR=' + g.xgRemaining + ')');
     }
+    console.log('\n  -> ' + created + ' predicciones nuevas, ' + (analyzed.length - created) + ' actualizadas');
   } else {
     console.log('  Sin partidos en vivo.');
   }
 
-  // --- APRENDIZAJE: verificar predicciones anteriores contra datos actuales ---
-  console.log('\n[3/3] Aprendiendo de predicciones anteriores...');
-  let learningResult = { weights: null, adjustments: 0, insights: [] };
+  // ── verificar terminados ──
+  console.log('\n[4/4] Verificando partidos terminados...');
+  let res = { checked: 0, verified: 0, withTimeline: 0 };
   try {
-    learningResult = await runLearning(liveData);
+    res = await verify.verifyPending(predictions, liveData);
   } catch (e) {
-    console.log('  Error en aprendizaje: ' + (e.message || e));
+    console.log('  Error al verificar: ' + (e.message || e) + '\n' + (e.stack || ''));
   }
-  weights = learningResult.weights || weights;
-  if (learningResult.adjustments > 0) {
-    console.log('  Pesos ajustados. Se usaran en el proximo analisis.');
-  }
-  writeSummary('- Aprendizaje: ' + learningResult.insights.length + ' fallos analizados');
+  console.log('  Revisados ' + res.checked + ', etiquetados ' + res.verified +
+    ' (' + res.withTimeline + ' con minuto real de gol)');
 
-  // --- VERIFICAR PARTIDOS TERMINADOS ---
-  // Recargar predictions por si learn.js las modificó
-  predictions = loadPredictions();
-  const pendingVerify = predictions.filter(p => {
-    if (p.predictionCorrect !== null) return false;
-    // BUG FIX: excluir partidos AUN EN VIVO (antes usaba m.url que no existe)
-    if (liveData.find(m => String(m.gameId) === String(p.id))) return false;
-    if (p.analysisMinute && p.analysisMinute >= 10) return true;
-    // Si analysisMinute < 10 pero pasaron > 30 min reales, verificar igual
-    if (p.timestamp) {
-      const elapsed = (Date.now() - new Date(p.timestamp).getTime()) / 60000;
-      return elapsed >= 30;
-    }
-    return false;
-  });
-  if (pendingVerify.length > 0) {
-    console.log('\n[4/4] Verificando ' + pendingVerify.length + ' partidos terminados (365scores)...');
-    let verifiedCount = 0;
-    const newlyVerified = [];
-    const teamsData = loadTeams();
-    const currentWeights = loadWeights();
-    for (const pred of pendingVerify) {
-      const gameId = parseInt(pred.id);
-      if (isNaN(gameId)) {
-        console.log('  ? ' + pred.match + ' | ID invalido: ' + pred.id);
-        continue;
-      }
-      let score;
-      try {
-        score = await scores365.verifyFinishedMatch(gameId);
-      } catch (e) {
-        console.log('  ? ' + pred.match + ' | error al verificar: ' + (e.message || e));
-        continue;
-      }
-      if (score) {
-        const scoreChanged = score.home !== (pred.scoreAtAnalysis?.home ?? 0) || score.away !== (pred.scoreAtAnalysis?.away ?? 0);
-        pred.finalScore = score;
-        pred.goalAfterAnalysis = scoreChanged;
-        // Determine who scored (actual scorer for training)
-        if (scoreChanged) {
-          const prevHome = pred.scoreAtAnalysis?.home ?? 0;
-          const prevAway = pred.scoreAtAnalysis?.away ?? 0;
-          if (score.home > prevHome && score.away > prevAway) {
-            pred.actualScorer = null; // ambos
-          } else if (score.home > prevHome) {
-            pred.actualScorer = 'home';
-          } else if (score.away > prevAway) {
-            pred.actualScorer = 'away';
-          } else {
-            pred.actualScorer = null;
-          }
-          // Use lastSeenMinute as rough goal minute if available
-          if (pred.lastSeenMinute && pred.lastSeenMinute > (pred.analysisMinute || 0)) {
-            pred.actualGoalMinute = pred.lastSeenMinute;
-          } else {
-            pred.actualGoalMinute = null;
-          }
-        } else {
-          pred.actualScorer = null;
-          pred.actualGoalMinute = null;
-        }
-        const prob = (pred.predictedProbability || 0) / 100;
-        // Binario calibrado en 50% (metricas generales). Alertas usan alertCorrect aparte.
-        pred.predictionCorrect = scoreChanged ? (prob >= 0.5) : (prob < 0.5);
-        // Metricas de ALERTA: firstAlertProbability = score al aviso.
-        // alertCorrect = hubo gol despues del analisis (label actual del sistema).
-        // Nota: no es "gol en 10 min" — el modelo predice gol en el resto del partido.
-        const alertP = pred.firstAlertProbability != null ? pred.firstAlertProbability : pred.predictedProbability;
-        if ((alertP || 0) >= 80) {
-          pred.alertCorrect = scoreChanged;
-          pred.alertHorizon = 'until_ft';
-          logAlertVerification(pred, scoreChanged);
-        }
-        // Contadores generales UNA sola vez aqui (adjustWeights ya no re-cuenta)
-        currentWeights.stats.verifiedCount = (currentWeights.stats.verifiedCount || 0) + 1;
-        if (pred.predictionCorrect) currentWeights.stats.correctScore = (currentWeights.stats.correctScore || 0) + 1;
-        const icon = pred.predictionCorrect ? '\u2713' : '\u2717';
-        const aIcon = pred.alertCorrect === true ? ' ALERT-HIT' : pred.alertCorrect === false ? ' ALERT-MISS' : '';
-        console.log('  ' + icon + ' ' + pred.match + ' | final ' + score.home + '-' + score.away + ' | pred=' + pred.predictedProbability + '%' + aIcon);
-        // Analisis de fallos en predicciones >=70%
-        if (!scoreChanged && pred.predictedProbability >= 70) {
-          const dif = Math.abs((score.home - (pred.scoreAtAnalysis?.home ?? 0)) + (score.away - (pred.scoreAtAnalysis?.away ?? 0)));
-          const min = pred.analysisMinute || 0;
-          const estXg = (pred.stats?.xgHome ?? 0) + (pred.stats?.xgAway ?? 0);
-          const sot = (pred.stats?.sotHome ?? 0) + (pred.stats?.sotAway ?? 0);
-          const reasons = [];
-          if (min >= 75 && score.home !== undefined && score.away !== undefined) {
-            const gd = Math.abs(score.home - score.away);
-            if (gd >= 3) reasons.push('goleada ' + score.home + '-' + score.away + ', ritmo bajo');
-            if (score.home + score.away === 0 && estXg > 0) reasons.push('0-0 estancado pese a xG=' + estXg.toFixed(2));
-          }
-          if (estXg < 1) reasons.push('bajo xG=' + estXg.toFixed(2));
-          if (sot === 0) reasons.push('sin tiros a puerta');
-          if (reasons.length > 0) console.log('     fallo: ' + reasons.join(' | '));
-        }
-        verifiedCount++;
-        newlyVerified.push(pred);
-        if (teamsData) updateTeamStats(teamsData, pred, { scoreHome: score.home, scoreAway: score.away });
-      } else {
-        console.log('  ? ' + pred.match + ' | aun no finalizado o no encontrado en 365scores');
-      }
-    }
-    if (verifiedCount > 0) {
-      const adj = adjustWeights(currentWeights, newlyVerified, []);
-      const adjB = adjustBetas(currentWeights, newlyVerified);
-      // SIEMPRE persistir weights tras verificar: contadores/brier/alertas
-      // no dependen de que haya ajuste de betas (antes se perdian si adj=0).
-      saveWeights(currentWeights);
-      if (teamsData) saveTeams(teamsData);
-      if (adj > 0 || adjB > 0) {
-        console.log('  Pesos ajustados: ' + adj + ' (legacy) + ' + adjB + ' betas');
-      } else {
-        console.log('  Stats de verificacion guardados (sin ajuste de betas)');
-      }
-      savePredictions(predictions);
-    }
-    console.log('  Verificados: ' + verifiedCount);
-  }
+  predictions = savePredictions(predictions);
 
-  } catch (e) {
-    console.log('\n!!! Error: ' + (e.message || e));
-    writeSummary('- Error: ' + (e.message || e).substring(0, 200));
-  }
+  const done = predictions.filter(p => p.predictionCorrect != null);
+  const with15 = done.filter(p => p.goalWithin15 != null);
+  state.counters = {
+    total: predictions.length,
+    verified: done.length,
+    withGoalTimeline: with15.length,
+    modelVersion: model.trained ? model.version : null,
+  };
+  saveState(state);
 
-  doSync();
-
-  // Guardar timestamp local DESPUES del sync
-  if (!process.env.CI && require.main === module) {
-    fs.writeFileSync('last-local-run.json', JSON.stringify({ lastRun: new Date().toISOString() }));
-  }
+  console.log('\n  Dataset: ' + done.length + ' etiquetadas | ' + with15.length +
+    ' con horizonte de 15 min' + (with15.length < 150 ? ' (hacen falta ~150 para entrenar ese modelo)' : ' — LISTO para entrenar el modelo de 15 min'));
+  writeSummary('- Dataset: ' + done.length + ' etiquetadas, ' + with15.length + ' con timeline');
 }
 
-module.exports = { analyzeGoal, getLeagueWeights, getWindowType, hasMeaningfulStats };
+module.exports = { hasMeaningfulStats };
 
 if (require.main === module) {
   main().catch(err => {
-    console.error('Error:', err.message, '\n' + err.stack);
+    console.error('Error fatal:', err.message, '\n' + err.stack);
     process.exit(1);
   });
 }

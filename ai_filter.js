@@ -1,18 +1,29 @@
 /**
- * Filtro IA de segunda opinion para alertas BORDERLINE.
+ * ai_filter.js — segunda opinion de un LLM sobre alertas del tier VALOR.
  *
- * Prioridad de providers:
- *   1. OPENAI_API_KEY  → gpt-4o-mini (barato, JSON fiable)  ← recomendado si pagas OpenAI
- *   2. GROQ_API_KEY    → llama-3.3-70b (gratis, rapido)
- *   3. ANTHROPIC_API_KEY → claude haiku
+ * HONESTIDAD SOBRE SU APORTE (leer antes de confiar en esto):
  *
- * Keys:
- *   - Local: archivo .env (ver .env.example)
- *   - GitHub Actions: Settings → Secrets → OPENAI_API_KEY
+ * No hay evidencia todavia de que la IA mejore la precision. Al contrario: sobre
+ * 548 partidos verificados, TODAS las estadisticas del partido (xG, remates,
+ * ocasiones, posesion, ataques) tienen correlacion practicamente nula con "hubo
+ * gol despues" cuando se controla el tiempo restante (|corr| < 0.06). Un LLM que
+ * lee esas mismas estadisticas no puede extraer una señal que no esta ahi.
  *
- * Nota: ChatGPT Plus NO incluye API automaticamente.
- * Hay que crear key en https://platform.openai.com/api-keys
- * (billing de API es aparte del Plus).
+ * Se mantiene por dos razones concretas:
+ *   1. Puede aportar contexto que el pipeline NO tiene: conocimiento de la
+ *      competicion, de que un marcador es atipico, de situaciones raras.
+ *   2. Cada decision se guarda en la prediccion (aiDecision) y evaluate.js mide
+ *      su aporte real: precision con IA vs sin IA sobre las mismas alertas.
+ *
+ * Si tras >=30 decisiones evaluate.js muestra que no aporta, quitarla.
+ * Mientras tanto solo filtra el tier VALOR, nunca el de PRECISION.
+ *
+ * Providers, por prioridad:
+ *   1. OPENAI_API_KEY     -> gpt-4o-mini
+ *   2. GROQ_API_KEY       -> llama-3.3-70b (gratis)
+ *   3. ANTHROPIC_API_KEY  -> claude haiku
+ *
+ * Keys: local en .env (ver .env.example) | nube en GitHub Secrets.
  */
 
 const fs = require('fs');
@@ -24,17 +35,14 @@ const https = require('https');
   try {
     const envPath = path.join(__dirname, '.env');
     if (!fs.existsSync(envPath)) return;
-    const lines = fs.readFileSync(envPath, 'utf8').split(/\r?\n/);
-    for (const line of lines) {
+    for (const line of fs.readFileSync(envPath, 'utf8').split(/\r?\n/)) {
       const t = line.trim();
       if (!t || t.startsWith('#')) continue;
       const i = t.indexOf('=');
       if (i < 1) continue;
       const k = t.slice(0, i).trim();
       let v = t.slice(i + 1).trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-        v = v.slice(1, -1);
-      }
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
       if (process.env[k] === undefined) process.env[k] = v;
     }
   } catch {}
@@ -47,17 +55,13 @@ function provider() {
       key: process.env.OPENAI_API_KEY,
       host: 'api.openai.com',
       path: '/v1/chat/completions',
-      // gpt-4o-mini: barato, rapido, excelente en JSON estructurado
       model: process.env.AI_MODEL || 'gpt-4o-mini',
-      headers: (key) => ({
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + key
-      }),
+      headers: (key) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + key }),
       body: (model, messages) => JSON.stringify({
         model, messages, temperature: 0.05, max_tokens: 220,
-        response_format: { type: 'json_object' }
+        response_format: { type: 'json_object' },
       }),
-      parse: (j) => j.choices?.[0]?.message?.content || ''
+      parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
     };
   }
   if (process.env.GROQ_API_KEY) {
@@ -67,15 +71,12 @@ function provider() {
       host: 'api.groq.com',
       path: '/openai/v1/chat/completions',
       model: process.env.AI_MODEL || 'llama-3.3-70b-versatile',
-      headers: (key) => ({
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + key
-      }),
+      headers: (key) => ({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + key }),
       body: (model, messages) => JSON.stringify({
         model, messages, temperature: 0.05, max_tokens: 220,
-        response_format: { type: 'json_object' }
+        response_format: { type: 'json_object' },
       }),
-      parse: (j) => j.choices?.[0]?.message?.content || ''
+      parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
     };
   }
   if (process.env.ANTHROPIC_API_KEY) {
@@ -84,21 +85,14 @@ function provider() {
       key: process.env.ANTHROPIC_API_KEY,
       host: 'api.anthropic.com',
       path: '/v1/messages',
-      model: process.env.AI_MODEL || 'claude-3-5-haiku-20241022',
-      headers: (key) => ({
-        'Content-Type': 'application/json',
-        'x-api-key': key,
-        'anthropic-version': '2023-06-01'
-      }),
+      model: process.env.AI_MODEL || 'claude-haiku-4-5-20251001',
+      headers: (key) => ({ 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' }),
       body: (model, messages) => {
-        const sys = messages.find(m => m.role === 'system')?.content || '';
+        const sys = (messages.find(m => m.role === 'system') || {}).content || '';
         const user = messages.filter(m => m.role === 'user').map(m => m.content).join('\n');
-        return JSON.stringify({
-          model, max_tokens: 220, system: sys,
-          messages: [{ role: 'user', content: user }]
-        });
+        return JSON.stringify({ model, max_tokens: 220, system: sys, messages: [{ role: 'user', content: user }] });
       },
-      parse: (j) => j.content?.[0]?.text || ''
+      parse: (j) => (j.content && j.content[0] && j.content[0].text) || '',
     };
   }
   return null;
@@ -108,14 +102,14 @@ function postJson(host, reqPath, headers, body) {
   return new Promise((resolve, reject) => {
     const req = https.request({
       hostname: host, path: reqPath, method: 'POST',
-      headers: { ...headers, 'Content-Length': Buffer.byteLength(body) },
-      timeout: 25000
+      headers: Object.assign({}, headers, { 'Content-Length': Buffer.byteLength(body) }),
+      timeout: 25000,
     }, res => {
       let d = '';
       res.on('data', c => d += c);
       res.on('end', () => {
         try { resolve({ status: res.statusCode, json: JSON.parse(d), raw: d }); }
-        catch (e) { reject(new Error('AI JSON parse: ' + d.slice(0, 200))); }
+        catch { reject(new Error('AI JSON parse: ' + d.slice(0, 200))); }
       });
     });
     req.on('error', reject);
@@ -125,96 +119,94 @@ function postJson(host, reqPath, headers, body) {
   });
 }
 
+const SYSTEM_PROMPT = [
+  'Eres un filtro anti falso-positivo de alertas de gol en futbol en vivo.',
+  'Un modelo estadistico calibrado ya marco este partido. Tu unica tarea es decidir',
+  'si existe una razon CONCRETA para no avisar.',
+  '',
+  'Contexto que debes tener en cuenta:',
+  '- Si xgIsEstimated es true, el xG NO es real: esta estimado a partir de remates',
+  '  y esta medido que no correlaciona con el resultado. No bases tu decision en el.',
+  '- El modelo YA incorpora minutos restantes, marcador y ritmo de la liga.',
+  '  No los penalices otra vez salvo que veas algo que el modelo no puede ver.',
+  '',
+  'RECHAZA (alert:false) solo si: el partido esta resuelto y sin urgencia, la',
+  'competicion es de muy bajo scoring sin señal de ruptura, o el volumen de juego',
+  'es claramente esteril (posesion sin llegada).',
+  'APRUEBA (alert:true) si no hay una razon concreta en contra.',
+  '',
+  'Responde SOLO JSON valido: {"alert":true|false,"confidence":0-100,"reason":"max 20 palabras"}',
+].join('\n');
+
 function buildPrompt(r, gate) {
   const s = r.stats || {};
   const payload = {
     match: (r.teamHome || '') + ' vs ' + (r.teamAway || ''),
     league: r.league || '',
+    leagueGoalsPerMatch: r.leagueGoalsPerMatch || null,
     minute: r.minute,
+    minutesRemaining: r.minsLeft,
     scoreline: (r.scoreHome || 0) + '-' + (r.scoreAway || 0),
-    modelProbUntilFT: r.score,
-    modelProbNext15min: r.score15,
+    goalDifference: gate.gd,
+    modelProbUntilFT: Math.round((r.probability || 0) * 100),
+    modelProbNext15min: Math.round((r.prob15 || 0) * 100),
     xgHome: s.xgHome, xgAway: s.xgAway,
+    xgIsEstimated: s.xgSource !== 'flashscore',
     xgRemaining: gate.xgRemaining,
     bigChancesHome: s.bigChancesHome, bigChancesAway: s.bigChancesAway,
     sotHome: s.sotHome, sotAway: s.sotAway,
     boxHome: s.shotsInsideBoxHome, boxAway: s.shotsInsideBoxAway,
-    gd: gate.gd,
-    quality: gate.quality,
-    reasons: r.reasons || []
+    redCards: (s.redCardsHome || 0) + (s.redCardsAway || 0),
   };
-
   return [
-    {
-      role: 'system',
-      content:
-        'Eres un filtro anti falso-positivo de alertas de gol en vivo. ' +
-        'El modelo estadistico ya marco alta probabilidad. Tu SOLO apruebas si hay ' +
-        'peligro REAL de gol en los proximos 10-15 minutos.\n' +
-        'RECHAZA (alert:false) si:\n' +
-        '- Ventaja comoda / partido resuelto\n' +
-        '- xG restante flojo sin big chances recientes\n' +
-        '- Liga/contexto de bajo scoring sin evidencia de ruptura\n' +
-        '- Minuto muy tarde con poco tiempo y sin oleada clara\n' +
-        '- Stats infladas pero sin peligro (posesion vacia)\n' +
-        'APRUEBA (alert:true) solo con confluencia: xG residual alto + ocasiones + urgencia.\n' +
-        'Se conservador: ante duda, alert:false.\n' +
-        'Responde SOLO JSON valido: {"alert":true|false,"confidence":0-100,"reason":"max 25 palabras"}'
-    },
-    { role: 'user', content: JSON.stringify(payload) }
+    { role: 'system', content: SYSTEM_PROMPT },
+    { role: 'user', content: JSON.stringify(payload) },
   ];
 }
 
 /**
- * @returns {Promise<{available:boolean, alert?:boolean, confidence?:number, reason?:string, provider?:string}>}
+ * @returns {Promise<{available:boolean, alert?:boolean, confidence?:number,
+ *                    reason?:string, provider?:string, rawAlert?:boolean}>}
  */
 async function reviewAlert(r, gate) {
   const p = provider();
-  if (!p) return { available: false, reason: 'sin API key — pon OPENAI_API_KEY en .env o GitHub Secrets' };
+  if (!p) return { available: false, alert: false, reason: 'sin API key' };
 
   try {
-    const messages = buildPrompt(r, gate);
-    const body = p.body(p.model, messages);
+    const body = p.body(p.model, buildPrompt(r, gate));
     const { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), body);
     if (status < 200 || status >= 300) {
-      const errMsg = json?.error?.message || raw?.slice(0, 120) || ('HTTP ' + status);
-      return { available: true, alert: false, confidence: 0, reason: 'AI error: ' + errMsg, provider: p.name, error: true };
+      const errMsg = (json && json.error && json.error.message) || (raw || '').slice(0, 120) || ('HTTP ' + status);
+      // Si la IA falla NO se bloquea la alerta por un problema de infraestructura:
+      // se deja pasar y se marca el fallo, para no perder avisos por una caida.
+      return { available: true, alert: true, confidence: 0, reason: 'IA no disponible: ' + errMsg, provider: p.name, error: true };
     }
-    const text = p.parse(json);
-    const cleaned = (text || '').replace(/```json|```/g, '').trim();
-    const out = JSON.parse(cleaned);
+    const text = (p.parse(json) || '').replace(/```json|```/g, '').trim();
+    const out = JSON.parse(text);
     const rawAlert = out.alert === true;
     const confidence = Math.max(0, Math.min(100, parseInt(out.confidence, 10) || 0));
-    // Conservador: hace falta alert:true Y confidence>=75
-    const pass = rawAlert && confidence >= 75;
+    // Umbral de confianza. NO esta validado: su efecto real lo mide evaluate.js
+    // comparando precision con IA vs sin IA sobre las mismas alertas.
+    const MIN_CONF = parseInt(process.env.AI_MIN_CONFIDENCE || '60', 10);
     return {
       available: true,
-      alert: pass,
+      alert: rawAlert && confidence >= MIN_CONF,
       confidence,
       reason: String(out.reason || '').slice(0, 140),
       provider: p.name,
       model: p.model,
-      rawAlert
+      rawAlert,
     };
   } catch (e) {
-    return {
-      available: true,
-      alert: false,
-      confidence: 0,
-      reason: 'AI error: ' + (e.message || e).toString().slice(0, 100),
-      provider: p.name,
-      error: true
-    };
+    return { available: true, alert: true, confidence: 0, reason: 'IA error: ' + String(e.message || e).slice(0, 100), provider: p.name, error: true };
   }
 }
 
-function isAvailable() {
-  return !!provider();
-}
+const isAvailable = () => !!provider();
 
 function status() {
   const p = provider();
-  if (!p) return { ok: false, message: 'Sin key. Crea .env con OPENAI_API_KEY o secret en GitHub.' };
+  if (!p) return { ok: false, message: 'Sin key. Crea .env con OPENAI_API_KEY o un secret en GitHub.' };
   return { ok: true, provider: p.name, model: p.model, keyLen: p.key.length };
 }
 
@@ -224,16 +216,12 @@ async function smokeTest() {
   if (!p) return { ok: false, error: 'sin key' };
   const fake = {
     teamHome: 'Test FC', teamAway: 'Sample United', league: 'Test League',
-    minute: 72, scoreHome: 0, scoreAway: 0, score: 88, score15: 70,
-    stats: {
-      xgHome: 1.4, xgAway: 0.9, bigChancesHome: 2, bigChancesAway: 1,
-      sotHome: 5, sotAway: 3, shotsInsideBoxHome: 8, shotsInsideBoxAway: 4
-    },
-    reasons: ['test smoke']
+    minute: 55, minsLeft: 38, scoreHome: 0, scoreAway: 0,
+    probability: 0.82, prob15: 0.41,
+    stats: { xgHome: 1.4, xgAway: 0.9, bigChancesHome: 2, bigChancesAway: 1, sotHome: 5, sotAway: 3, shotsInsideBoxHome: 8, shotsInsideBoxAway: 4 },
   };
-  const gate = { xgRemaining: 2.3, gd: 0, quality: 80 };
-  const r = await reviewAlert(fake, gate);
-  return { ok: !r.error && r.available, ...r };
+  const r = await reviewAlert(fake, { xgRemaining: 2.3, gd: 0, quality: 80 });
+  return Object.assign({ ok: !r.error && r.available }, r);
 }
 
-module.exports = { reviewAlert, isAvailable, provider, status, smokeTest };
+module.exports = { reviewAlert, isAvailable, provider, status, smokeTest, buildPrompt };

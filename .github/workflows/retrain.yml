@@ -1,0 +1,63 @@
+name: Reentrenar y re-auditar
+
+# El modelo NO se toca en cada ronda. Se reentrena aqui, con validacion fuera
+# de muestra, y solo entonces se publica un model.json nuevo.
+on:
+  schedule:
+    - cron: '0 8 * * 1'        # lunes 08:00 UTC (03:00 Colombia)
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Precision objetivo del gate (0-1)'
+        required: false
+        default: '0.90'
+
+concurrency:
+  group: gol-analyzer-train
+  cancel-in-progress: false
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Entrenar
+        id: train
+        run: |
+          TARGET="${{ github.event.inputs.target || '0.90' }}"
+          echo '## Entrenamiento' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          node train.js --target "$TARGET" | tee train.log
+          cat train.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Re-auditar
+        if: always()
+        run: |
+          echo '## Re-auditoria' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          node evaluate.js | tee audit.log
+          cat audit.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Publicar modelo
+        run: |
+          rm -f train.log audit.log
+          git config user.name "sofastats-bot"
+          git config user.email "sofastats-bot@users.noreply.github.com"
+          git add model.json
+          if git diff --cached --quiet; then
+            echo "El modelo no cambio"
+          else
+            git commit -m "modelo: reentrenado ${{ github.run_id }} [skip ci]"
+            git pull --rebase --autostash && git push
+          fi
+        shell: bash

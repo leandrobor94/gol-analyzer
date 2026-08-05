@@ -1,13 +1,13 @@
 /**
- * notify.js — Envía alertas por Telegram cuando se detecta alta probabilidad de gol.
+ * notify.js — envia alertas por Telegram.
  *
- * Configuración (variables de entorno):
- *   TELEGRAM_BOT_TOKEN = token de tu bot (de @BotFather)
- *   TELEGRAM_CHAT_ID   = tu ID de chat en Telegram
+ * Configuracion (variables de entorno):
+ *   TELEGRAM_BOT_TOKEN = token del bot (de @BotFather)
+ *   TELEGRAM_CHAT_ID   = id del chat
  *
- * Uso:
- *   const notify = require('./notify');
- *   await notify.sendAlert('📊 Partido: Barcelona vs Madrid ...');
+ * El mensaje incluye SIEMPRE la precision medida del tier y su intervalo de
+ * confianza. Una alerta sin su tasa de acierto historica invita a confiar de mas;
+ * el numero va al lado del aviso a proposito.
  */
 
 const https = require('https');
@@ -18,55 +18,74 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID || null;
 function sendTelegram(message) {
   return new Promise((resolve) => {
     if (!BOT_TOKEN || !CHAT_ID) {
-      console.log('  ⚠️ Telegram no configurado. Define TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID');
-      console.log('  📖 Ver: TELEGRAM_SETUP.md');
+      console.log('  Telegram no configurado (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID)');
       return resolve(false);
     }
+    const body = new URLSearchParams({
+      chat_id: CHAT_ID,
+      text: message.slice(0, 4000),
+      parse_mode: 'HTML',
+      disable_web_page_preview: 'true',
+    }).toString();
 
-    const text = encodeURIComponent(message.slice(0, 4000));
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}&parse_mode=HTML`;
-
-    https.get(url, (res) => {
-      let data = '';
-      res.on('data', (chunk) => data += chunk);
+    const req = https.request({
+      hostname: 'api.telegram.org',
+      path: '/bot' + BOT_TOKEN + '/sendMessage',
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(body) },
+      timeout: 15000,
+    }, (res) => {
+      let d = '';
+      res.on('data', c => d += c);
       res.on('end', () => {
-        const ok = JSON.parse(data).ok;
-        if (ok) console.log('  -> Alerta Telegram enviada');
-        else console.log('  -> Error al enviar Telegram');
+        let ok = false;
+        try { ok = JSON.parse(d).ok === true; } catch {}
+        console.log(ok ? '  -> Alerta Telegram enviada' : '  -> Telegram rechazo el envio: ' + d.slice(0, 160));
         resolve(ok);
       });
-    }).on('error', (err) => {
-      console.log(`  -> Error Telegram: ${err.message}`);
-      resolve(false);
     });
+    req.on('timeout', () => { req.destroy(new Error('timeout')); });
+    req.on('error', (e) => { console.log('  -> Error Telegram: ' + e.message); resolve(false); });
+    req.write(body);
+    req.end();
   });
 }
 
-function buildMessage(ranked) {
-  if (ranked.length === 0) return null;
+const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-  let msg = `<b>⚽ ALERTA GOL — ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}</b>\n\n`;
+const TIER_LABEL = {
+  PRECISION: '🎯 ALTA PRECISION',
+  VALOR: '💰 VALOR',
+};
 
-  ranked.slice(0, 5).forEach((r, i) => {
-    const medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
-    const medal = medals[i] || '▫️';
-    msg += `${medal} <b>${r.teamHome} vs ${r.teamAway}</b>\n`;
-    msg += `   🔥 ${r.score}% | ${r.timeWindow}\n`;
-    if (r.league) msg += `   🏆 ${r.league}\n`;
-    if (r.minute) msg += `   ⏱ ${r.minute}' | ${r.scoreHome}-${r.scoreAway}\n`;
-    msg += `   ${r.verdict}\n`;
-    if (r.whoText) {
-      const who = r.whoText.replace('\n     ', '');
-      msg += `   ${who}\n`;
+function buildMessage(alerts, model) {
+  if (!alerts || !alerts.length) return null;
+  const when = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
+  let msg = '<b>⚽ ALERTA GOL</b>  <i>' + esc(when) + '</i>\n\n';
+
+  alerts.slice(0, 5).forEach((a) => {
+    const g = a.gate || {};
+    const gateInfo = (model && model.gates || []).find(x => x.tier === g.tier);
+    msg += (TIER_LABEL[g.tier] || g.tier) + '\n';
+    msg += '<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>\n';
+    msg += '   ' + Math.round((a.probability || 0) * 100) + '% de gol antes del final\n';
+    msg += '   ⏱ ' + a.minute + "'  |  " + a.scoreHome + '-' + a.scoreAway + '\n';
+    if (a.league) msg += '   🏆 ' + esc(a.league) + '\n';
+    if (gateInfo) {
+      msg += '   📊 este tipo de aviso acierta <b>' + (gateInfo.measuredPrecision * 100).toFixed(0) + '%</b>' +
+        ' (IC ' + (gateInfo.ci95[0] * 100).toFixed(0) + '-' + (gateInfo.ci95[1] * 100).toFixed(0) + '%, n=' + gateInfo.n + ')\n';
+    }
+    if (a.aiDecision && a.aiDecision.reason) {
+      msg += '   🤖 ' + esc(a.aiDecision.reason).slice(0, 120) + '\n';
     }
     msg += '\n';
   });
 
-  msg += `<i>📊 sofastats</i>`;
+  if (alerts.some(a => (a.gate || {}).tier === 'PRECISION')) {
+    msg += '<i>ALTA PRECISION responde "este partido tendra gol", no "viene un gol ya". ' +
+      'Se dispara temprano, cuando aun queda casi todo el partido.</i>\n';
+  }
   return msg;
 }
 
-module.exports = {
-  sendTelegram,
-  buildMessage
-};
+module.exports = { sendTelegram, buildMessage };

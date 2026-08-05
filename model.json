@@ -1,0 +1,218 @@
+{
+  "version": 5,
+  "trainedAt": "2026-08-05T03:17:27.433Z",
+  "n": 536,
+  "dataRange": [
+    "2026-07-18",
+    "2026-08-04"
+  ],
+  "baseRate": 0.6586,
+  "features": [
+    "xgRate",
+    "sotRate",
+    "bcRate",
+    "boxRate",
+    "shotRate",
+    "atkRate",
+    "goalRate",
+    "gd1",
+    "gd2",
+    "nil",
+    "reds",
+    "late",
+    "early",
+    "leagueRate"
+  ],
+  "b0": -3.45218,
+  "b": [
+    -0.011188,
+    -0.070186,
+    -0.017129,
+    0.063949,
+    0.081446,
+    0.014518,
+    0.009415,
+    -0.035826,
+    0.26391,
+    -0.143369,
+    0.026072,
+    0.269771,
+    0.207497,
+    0
+  ],
+  "calibration": {
+    "a": 0.720698,
+    "b": 0.163018
+  },
+  "eval": {
+    "method": "rolling-origin 5 cortes, calibracion fuera de pliegue",
+    "nTest": 268,
+    "auc": 0.7313,
+    "brier": 0.1953,
+    "brierBase": 0.2302,
+    "skillScore": 0.1516
+  },
+  "gates": [
+    {
+      "tier": "PRECISION",
+      "targetPrecision": 0.9,
+      "minMinute": 0,
+      "maxMinute": 25,
+      "threshold": 0.5,
+      "measuredPrecision": 0.9643,
+      "ci95": [
+        0.8229,
+        0.9937
+      ],
+      "n": 28,
+      "hits": 27,
+      "volumePct": 0.1045,
+      "meetsTarget": true,
+      "requiresAi": false
+    },
+    {
+      "tier": "VALOR",
+      "targetPrecision": 0.8,
+      "minMinute": 45,
+      "maxMinute": 60,
+      "threshold": 0.75,
+      "measuredPrecision": 0.8421,
+      "ci95": [
+        0.6958,
+        0.9256
+      ],
+      "n": 38,
+      "hits": 32,
+      "volumePct": 0.1418,
+      "meetsTarget": true,
+      "requiresAi": true
+    }
+  ],
+  "curve": [
+    {
+      "threshold": 0.5,
+      "n": 243,
+      "precision": 0.6955
+    },
+    {
+      "threshold": 0.52,
+      "n": 234,
+      "precision": 0.7094
+    },
+    {
+      "threshold": 0.54,
+      "n": 225,
+      "precision": 0.7111
+    },
+    {
+      "threshold": 0.56,
+      "n": 209,
+      "precision": 0.7273
+    },
+    {
+      "threshold": 0.58,
+      "n": 196,
+      "precision": 0.7347
+    },
+    {
+      "threshold": 0.6,
+      "n": 184,
+      "precision": 0.7446
+    },
+    {
+      "threshold": 0.62,
+      "n": 178,
+      "precision": 0.7416
+    },
+    {
+      "threshold": 0.64,
+      "n": 169,
+      "precision": 0.7337
+    },
+    {
+      "threshold": 0.66,
+      "n": 156,
+      "precision": 0.7436
+    },
+    {
+      "threshold": 0.68,
+      "n": 147,
+      "precision": 0.7619
+    },
+    {
+      "threshold": 0.7,
+      "n": 134,
+      "precision": 0.7761
+    },
+    {
+      "threshold": 0.72,
+      "n": 120,
+      "precision": 0.825
+    },
+    {
+      "threshold": 0.74,
+      "n": 101,
+      "precision": 0.8515
+    },
+    {
+      "threshold": 0.76,
+      "n": 83,
+      "precision": 0.8434
+    },
+    {
+      "threshold": 0.78,
+      "n": 67,
+      "precision": 0.8507
+    },
+    {
+      "threshold": 0.8,
+      "n": 59,
+      "precision": 0.8814
+    },
+    {
+      "threshold": 0.82,
+      "n": 53,
+      "precision": 0.8868
+    },
+    {
+      "threshold": 0.84,
+      "n": 45,
+      "precision": 0.8889
+    },
+    {
+      "threshold": 0.86,
+      "n": 35,
+      "precision": 0.8571
+    },
+    {
+      "threshold": 0.88,
+      "n": 23,
+      "precision": 0.8261
+    },
+    {
+      "threshold": 0.9,
+      "n": 12,
+      "precision": 0.8333
+    },
+    {
+      "threshold": 0.92,
+      "n": 6,
+      "precision": 0.8333
+    },
+    {
+      "threshold": 0.94,
+      "n": 4,
+      "precision": 0.75
+    },
+    {
+      "threshold": 0.96,
+      "n": 2,
+      "precision": 0.5
+    },
+    {
+      "threshold": 0.98,
+      "n": 2,
+      "precision": 0.5
+    }
+  ]
+}
