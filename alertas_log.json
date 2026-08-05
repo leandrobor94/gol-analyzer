@@ -372,5 +372,124 @@
     ],
     "timestamp": "2026-08-05T20:20:02.841Z",
     "alertTimestamp": "2026-08-05T18:41:22.389Z"
+  },
+  {
+    "match": "Panathinaikos vs CSKA 1948 Sofia",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.883782267886363,
+    "minute": 19,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      21,
+      31
+    ],
+    "timestamp": "2026-08-05T21:39:39.348Z",
+    "alertTimestamp": "2026-08-05T18:41:22.389Z"
+  },
+  {
+    "match": "Vllaznia (F) vs Myjava (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8516217267943366,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      42,
+      68,
+      74
+    ],
+    "timestamp": "2026-08-05T21:39:39.369Z",
+    "alertTimestamp": "2026-08-05T18:41:22.389Z"
+  },
+  {
+    "match": "CD Badajoz vs CD Coria",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9028529391071981,
+    "minute": 19,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién empezado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      13,
+      91,
+      94
+    ],
+    "timestamp": "2026-08-05T21:39:39.602Z",
+    "alertTimestamp": "2026-08-05T18:41:22.389Z"
+  },
+  {
+    "match": "Arsenal vs Real Betis",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8837528045677452,
+    "minute": 5,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      9,
+      26,
+      32,
+      43
+    ],
+    "timestamp": "2026-08-05T21:39:39.668Z",
+    "alertTimestamp": "2026-08-05T18:50:36.650Z"
+  },
+  {
+    "match": "FH Hafnarfjordur vs KR Reykjavik",
+    "league": "Besta-deild karla",
+    "tier": "AVISO",
+    "probability": 0.766269132687057,
+    "minute": 47,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      32,
+      62
+    ],
+    "timestamp": "2026-08-05T21:39:39.695Z",
+    "alertTimestamp": "2026-08-05T20:20:01.520Z"
   }
 ]
