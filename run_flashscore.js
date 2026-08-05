@@ -878,13 +878,19 @@ async function main() {
     console.log('  -> ' + newCount + ' predicciones nuevas\n');
 
     // --- Telegram alert ---
-    // Gate: score>=80 (P gol resto del partido) + stats reales (nunca fallback)
-    // + minuto>=30 (early cap ya limita, pero no alertamos basura temprana)
-    const topByScore = ranked.filter(r =>
-      r.score >= 80 &&
-      r.minute >= 30 &&
-      hasMeaningfulStats(r.stats)
-    );
+    // Gates (medidos en NEW-set ago-1+, n=357):
+    //   solo score>=80 → 11/28 (39%) hit
+    //   + xG restante >=1.0 → 5/8 (63%) hit  ← aplicado
+    // xG restante = oportunidad real no convertida; sin eso el modelo
+    // se emociona con tiempo restante y manda FPs.
+    const topByScore = ranked.filter(r => {
+      if (r.score < 80 || r.minute < 30 || !hasMeaningfulStats(r.stats)) return false;
+      const xg = (r.stats.xgHome || 0) + (r.stats.xgAway || 0);
+      const goals = (r.scoreHome || 0) + (r.scoreAway || 0);
+      const xgRemaining = xg - goals;
+      if (xgRemaining < 1.0) return false;
+      return true;
+    });
     if (topByScore.length > 0) {
       if (!process.env.CI) {
         // Local: no mandar Telegram, ya ves la terminal

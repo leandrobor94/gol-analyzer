@@ -175,9 +175,35 @@ bt(verified, 'ALL');
 if (btOld.a >= 5 && btOld.h / btOld.a < 0.7) {
   hit('ALTO', 'OLD alert hit-rate <70%: ' + btOld.h + '/' + btOld.a);
 }
-if (btNew.a >= 8 && btNew.h / btNew.a < 0.55) {
-  hit('MEDIO', 'NEW alert hit-rate baja n>=8: ' + btNew.h + '/' + btNew.a);
+// Alert gate operativo (debe coincidir con run_flashscore.js)
+function passesAlertGate(r, pred) {
+  if (r.score < 80 || (pred.analysisMinute || 0) < 30) return false;
+  const xg = (pred.stats.xgHome || 0) + (pred.stats.xgAway || 0);
+  const goals = (pred.scoreAtAnalysis?.home || 0) + (pred.scoreAtAnalysis?.away || 0);
+  return (xg - goals) >= 1.0;
 }
+function btGate(set, label) {
+  let a = 0, h = 0;
+  for (const pred of set) {
+    if (!pred.stats || !hasMeaningfulStats(pred.stats)) continue;
+    const m = {
+      minute: pred.analysisMinute || 0,
+      scoreHome: pred.scoreAtAnalysis?.home ?? 0, scoreAway: pred.scoreAtAnalysis?.away ?? 0,
+      stats: pred.stats, teamHome: pred.teamHome, teamAway: pred.teamAway, league: pred.league, matchId: pred.id, rawName: pred.match
+    };
+    const r = analyzeGoal(m, { betas: B }, {}, null, getWindowType(m.minute), null);
+    if (!passesAlertGate(r, pred)) continue;
+    a++;
+    if (pred.goalAfterAnalysis) h++;
+  }
+  const rate = a ? ((h / a) * 100).toFixed(0) : '0';
+  console.log('GATE ' + label + ' alerts=' + a + ' hit=' + h + ' (' + rate + '%)');
+  if (label === 'NEW' && a >= 6 && h / a < 0.55) {
+    hit('MEDIO', 'NEW gated alert hit-rate <55%: ' + h + '/' + a);
+  }
+}
+btGate(newV, 'NEW');
+btGate(oldV, 'OLD');
 
 // code smells
 // teams factor: solo flag si el codigo promete usarlo sin guardia de samples
