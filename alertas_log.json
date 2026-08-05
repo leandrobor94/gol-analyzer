@@ -491,5 +491,104 @@
     ],
     "timestamp": "2026-08-05T21:39:39.695Z",
     "alertTimestamp": "2026-08-05T20:20:01.520Z"
+  },
+  {
+    "match": "Vinotinto del Ecuador FC vs Universidad Católica",
+    "league": "Copa Ecuador - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8920926947629338,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      17,
+      19,
+      30,
+      59,
+      95
+    ],
+    "timestamp": "2026-08-05T22:42:53.599Z",
+    "alertTimestamp": "2026-08-05T20:20:01.520Z"
+  },
+  {
+    "match": "Malawi (F) vs Zambia (F)",
+    "league": "Copa Africana de Naciones (F)",
+    "tier": "AVISO",
+    "probability": 0.8867761535043601,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      2,
+      37,
+      72
+    ],
+    "timestamp": "2026-08-05T22:42:53.699Z",
+    "alertTimestamp": "2026-08-05T20:20:01.520Z"
+  },
+  {
+    "match": "Egypt (W) vs Nigeria (F)",
+    "league": "Copa Africana de Naciones (F)",
+    "tier": "AVISO",
+    "probability": 0.879230704938358,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-6",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      21,
+      47,
+      55,
+      57,
+      81,
+      84,
+      91,
+      99
+    ],
+    "timestamp": "2026-08-05T22:42:53.808Z",
+    "alertTimestamp": "2026-08-05T20:20:01.520Z"
+  },
+  {
+    "match": "Unsaac (F) vs Atlético Andahuaylas (F)",
+    "league": "Liga Femenina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8780060932861368,
+    "minute": 19,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-05T22:42:53.923Z",
+    "alertTimestamp": "2026-08-05T20:20:01.520Z"
   }
 ]
