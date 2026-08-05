@@ -68,16 +68,39 @@ Los coeficientes salen de `train.js` sobre datos verificados. Si no hay
 `model.json`, el sistema analiza y guarda datos pero **no alerta**: nunca se
 inventan pesos.
 
-### Los dos gates
+### Cómo se decide qué se alerta
 
-| Tier | Ventana | Precisión medida | Para qué sirve |
-|---|---|---|---|
-| `PRECISION` | min 0–25 | **96.4%** (IC 82–99%, n=28) | "este partido tendrá gol" |
-| `VALOR` | min 45–60 | 84.2% (IC 70–93%, n=38) | ventana donde la cuota aún paga |
+**Por valor esperado, no por precisión.** Un aviso al 95% con cuota 1.05 arriesga
+100 para ganar 5: no es un producto. Maximizar precisión producía exactamente eso.
 
-Ambos se eligen por búsqueda sobre datos **fuera de muestra**, exigiendo n≥20 y
-quedándose con el candidato de mayor límite inferior del intervalo de confianza
-— no con el de mejor precisión puntual. Así un 100% con n=3 nunca gana.
+```
+EV = probabilidad_del_MODELO × cuota − 1
+```
+
+La cuota **no sustituye** a nuestra probabilidad: solo dice a cuánto la pagan. Con
+p=55% y cuota 3.00 el EV es +65%, aunque la casa crea que es un 33%. Ese
+desacuerdo es justo lo que se busca — si pensáramos igual que el mercado, no
+habría nada que apostar.
+
+| Tier | Cuándo salta | Qué te dice |
+|---|---|---|
+| `VALOR` | cuota ≥ `MIN_ODDS` (1.5) y EV ≥ `MIN_EV` (5%) | la apuesta concreta, con nuestra probabilidad y la del mercado |
+| `PRECISION` | solo si no hay mercado que evaluar | informativo; se suprime si la cuota justa baja de 1/`MIN_ODDS` |
+
+Se evalúan **Over y Under**: el valor aparece en los dos lados. En una prueba en
+vivo, 3 de 12 partidos daban valor y dos de ellos estaban en el Under.
+
+Cada alerta **congela la apuesta** (línea, lado, cuota, EV). Al terminar el
+partido, `verify.js` la resuelve y calcula el beneficio por unidad. `npm run audit`
+reporta el **ROI real** — la única métrica que distingue un 96% a cuota 1.05
+(pierde dinero) de un 45% a cuota 2.60 (lo gana).
+
+### De dónde sale la cuota de goles
+
+`game.promotedPredictions.predictions[].odds` con `lineTypeId === 3`. La línea
+numérica no está en el objeto `odds`: va en el título, `"Goles en el partido (2.5)"`.
+Disponible en ~7 de cada 12 partidos en vivo. La cuota 1X2 del listado **no sirve**
+para esto: predecir quién gana no es predecir cuántos goles caen.
 
 ---
 
