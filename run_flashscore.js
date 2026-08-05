@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const scores365 = require('./scores365');
 const M = require('./model');
-const { classifyAlert, alertQuality } = require('./alert_gate');
+const { classifyAlert, alertQuality, classifyValue } = require('./alert_gate');
 const verify = require('./verify');
 const notify = require('./notify');
 const aiFilter = require('./ai_filter');
@@ -280,13 +280,56 @@ async function main() {
     // Una foto por ronda de TODOS los partidos, alerten o no.
     appendSnapshots(analyzed);
 
+    // ── 3b. mercado de goles y ventaja ──
+    // Solo para partidos con opciones reales: la linea Over/Under cuesta una
+    // llamada extra por partido, y en marcadores ya resueltos no hay apuesta.
+    const MIN_ODDS = parseFloat(process.env.MIN_ODDS || '1.5');
+    const MIN_EV = parseFloat(process.env.MIN_EV || '0.05');
+    const mktTargets = analyzed
+      .filter(a => a.minute >= 8 && a.minute <= 85 && a.probability > 0.10 && a.probability < 0.92)
+      .slice(0, 12);
+    if (mktTargets.length && model.trained) {
+      console.log('\n  Consultando mercado de goles en ' + mktTargets.length + ' partidos...');
+      let conMercado = 0;
+      for (const a of mktTargets) {
+        let mk = null;
+        try { mk = await scores365.fetchGoalsMarket(a.matchId); } catch {}
+        if (!mk) continue;
+        conMercado++;
+        a.goalsMarket = mk;
+        a.edge = M.marketEdge(a.lambda, a.minsLeft, (a.scoreHome || 0) + (a.scoreAway || 0), mk);
+        a.value = classifyValue(a.edge, { minOdds: MIN_ODDS, minEv: MIN_EV });
+        if (a.edge) {
+          const b = a.value.best;
+          // Mostrar el lado elegido: el valor puede estar en el Under, y decir
+          // solo el Over hace pensar que la traza esta mal.
+          console.log('    ' + (a.teamHome + ' vs ' + a.teamAway).slice(0, 32).padEnd(32) +
+            ' L' + mk.line +
+            ' | nuestro ' + (a.edge.pOver * 100).toFixed(0) + '% over vs casa ' + (a.edge.impliedOver * 100).toFixed(0) + '%' +
+            (b ? '  -> ' + b.side + ' @' + b.odds + ' EV ' + (b.ev >= 0 ? '+' : '') + (b.ev * 100).toFixed(1) + '%' : '') +
+            (a.value.tier === 'VALOR' ? '   <<< VALOR' : ''));
+        }
+      }
+      console.log('  -> mercado disponible en ' + conMercado + '/' + mktTargets.length);
+    }
+
     // ── 4. gate + IA ──
     const candidates = [];
     const aiOn = aiFilter.isAvailable();
     for (const a of analyzed) {
-      const g = classifyAlert(a, hasMeaningfulStats, model);
+      // El gate de VALOR manda: es el unico que produce apuestas con premio real.
+      // El de PRECISION solo entra si no hay mercado que evaluar, y queda
+      // marcado como informativo para que no se confunda con una apuesta.
+      const g = (a.value && a.value.tier === 'VALOR')
+        ? Object.assign({}, a.value, { informativo: false })
+        : Object.assign({}, classifyAlert(a, hasMeaningfulStats, model), { informativo: true });
       a.gate = g;
       if (g.tier === 'REJECT') continue;
+      // Un aviso de PRECISION con cuota justa ridicula no se envia: es cierto
+      // pero no accionable, y llenar Telegram de eso quema la confianza.
+      if (g.informativo && (a.probability || 0) > 1 / MIN_ODDS) {
+        continue;
+      }
       // La IA REVISA, no habilita. La precision medida de este gate (84.2%) se
       // midio SIN IA, asi que exigir una key para alertar seria incoherente con
       // el numero que se promete. Sin key el sistema funciona igual; con key,
@@ -375,6 +418,15 @@ async function main() {
           existing.alertProbability = a.probability;
           existing.alertMinute = a.minute;
           existing.aiDecision = a.aiDecision || null;
+          // La apuesta concreta, congelada al alertar. Sin esto no se puede
+          // calcular el ROI real despues: hace falta la cuota QUE HABIA.
+          existing.bet = a.gate.best ? {
+            pick: a.gate.best.pick, side: a.gate.best.side,
+            line: a.gate.line, goalsNeeded: a.gate.goalsNeeded,
+            odds: a.gate.best.odds, modelProb: a.gate.best.p,
+            ev: a.gate.best.ev, edge: a.gate.best.edge,
+            goalsAtBet: (a.scoreHome || 0) + (a.scoreAway || 0),
+          } : null;
         }
       } else {
         predictions.push(Object.assign({
@@ -387,6 +439,13 @@ async function main() {
           alertProbability: a.alerted ? a.probability : null,
           alertMinute: a.alerted ? a.minute : null,
           aiDecision: a.aiDecision || null,
+          bet: (a.alerted && a.gate.best) ? {
+            pick: a.gate.best.pick, side: a.gate.best.side,
+            line: a.gate.line, goalsNeeded: a.gate.goalsNeeded,
+            odds: a.gate.best.odds, modelProb: a.gate.best.p,
+            ev: a.gate.best.ev, edge: a.gate.best.edge,
+            goalsAtBet: (a.scoreHome || 0) + (a.scoreAway || 0),
+          } : null,
           finalScore: null, goalAfterAnalysis: null, goalWithin15: null,
           goalMinutes: null, nextGoalMinute: null,
           predictionCorrect: null, alertCorrect: null,

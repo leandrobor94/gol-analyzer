@@ -193,6 +193,43 @@ if (!model.trained) {
   }
 }
 
+// ── 3b. ROI real de las apuestas ──
+// La metrica que de verdad importa. Un 96% de acierto a cuota 1.05 pierde
+// dinero; un 45% a cuota 2.60 lo gana. Solo esto lo distingue.
+bar('3b. RESULTADO ECONOMICO DE LAS APUESTAS');
+const bets = preds.filter(p => p.bet && p.bet.won != null);
+if (!bets.length) {
+  const pend = preds.filter(p => p.bet && p.bet.won == null).length;
+  console.log('  Todavia sin apuestas resueltas' + (pend ? ' (' + pend + ' pendientes)' : '') + '.');
+  console.log('  Cada aviso de VALOR congela la cuota que habia; al terminar el');
+  console.log('  partido se resuelve y se acumula aqui el ROI real.');
+} else {
+  const profit = bets.reduce((s, p) => s + (p.bet.profit || 0), 0);
+  const won = bets.filter(p => p.bet.won).length;
+  const avgOdds = bets.reduce((s, p) => s + p.bet.odds, 0) / bets.length;
+  const avgP = bets.reduce((s, p) => s + (p.bet.modelProb || 0), 0) / bets.length;
+  const [lo, hi] = wilson(won, bets.length);
+  console.log('  apuestas resueltas   : ' + bets.length);
+  console.log('  ganadas              : ' + won + '  (' + pct(won / bets.length) + ', IC ' + pct(lo) + '-' + pct(hi) + ')');
+  console.log('  cuota media          : ' + avgOdds.toFixed(2));
+  console.log('  el modelo esperaba   : ' + pct(avgP) + ' de acierto');
+  console.log('  beneficio            : ' + (profit >= 0 ? '+' : '') + profit.toFixed(2) + ' unidades');
+  console.log('  ROI                  : ' + (profit / bets.length >= 0 ? '+' : '') + pct(profit / bets.length));
+  console.log('');
+  if (bets.length < 30) {
+    console.log('  AVISO: con n<30 el ROI todavia es ruido. No saques conclusiones.');
+  } else if (profit / bets.length > 0.03) {
+    console.log('  El modelo esta batiendo al mercado en esta muestra.');
+  } else if (profit / bets.length < -0.05) {
+    console.log('  El modelo NO bate al mercado. Sube MIN_EV o revisa la calibracion.');
+  }
+  // ¿estaba bien calibrado donde aposto?
+  const realHit = won / bets.length;
+  if (Math.abs(realHit - avgP) > 0.12 && bets.length >= 20) {
+    console.log('  Descalibracion: esperaba ' + pct(avgP) + ' y salio ' + pct(realHit) + '.');
+  }
+}
+
 // ── 4. ¿aporta la IA? ──
 bar('4. ¿APORTA LA IA?');
 const withAi = done.filter(p => p.aiDecision && typeof p.aiDecision.pass === 'boolean');

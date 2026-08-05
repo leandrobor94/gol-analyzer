@@ -83,4 +83,52 @@ function classifyAlert(r, hasMeaningfulStats, model) {
   return Object.assign({ tier: 'REJECT', reason: why }, base);
 }
 
-module.exports = { xgRemaining, bigChances, alertQuality, classifyAlert };
+/**
+ * Gate de VALOR: decide con valor esperado, no con precision.
+ *
+ * El criterio anterior premiaba la certeza, y la certeza se paga a 1.05. Un
+ * aviso al 95% con cuota 1.05 arriesga 100 para ganar 5: no es un producto.
+ *
+ * Aqui manda NUESTRO analisis. La cuota no sustituye a nuestra probabilidad:
+ * solo dice a cuanto nos pagan por ella.
+ *
+ *   EV = p_nuestra x cuota - 1
+ *
+ * Con p=55% y cuota 3.00 el EV es +65%, aunque la casa crea que es un 33%.
+ * Ese desacuerdo es exactamente lo que se busca: si el mercado y nosotros
+ * pensaramos igual, no habria nada que apostar.
+ *
+ * @param {object} edge   salida de model.marketEdge()
+ * @param {object} opts   { minOdds, minEv }
+ */
+function classifyValue(edge, opts) {
+  const minOdds = (opts && opts.minOdds) || 1.5;
+  const minEv = (opts && opts.minEv) || 0.05;
+  if (!edge) return { tier: 'REJECT', reason: 'sin mercado de goles' };
+
+  const sides = [
+    { side: 'OVER', pick: 'Más de ' + edge.line, p: edge.pOver, odds: edge.bookOver, ev: edge.evOver, edge: edge.edgeOver, fair: edge.fairOver },
+    { side: 'UNDER', pick: 'Menos de ' + edge.line, p: edge.pUnder, odds: edge.bookUnder, ev: edge.evUnder, edge: edge.edgeUnder, fair: edge.fairUnder },
+  ].filter(s => s.odds && s.ev != null);
+
+  if (!sides.length) return { tier: 'REJECT', reason: 'sin cuotas utilizables' };
+
+  const best = sides.sort((a, b) => b.ev - a.ev)[0];
+
+  if (best.odds < minOdds) {
+    return { tier: 'REJECT', reason: 'cuota ' + best.odds + ' < ' + minOdds + ' (riesgo/premio absurdo)', best };
+  }
+  if (best.ev < minEv) {
+    return { tier: 'REJECT', reason: 'EV ' + (best.ev * 100).toFixed(1) + '% < ' + (minEv * 100).toFixed(0) + '%', best };
+  }
+  return {
+    tier: 'VALOR',
+    reason: 'EV +' + (best.ev * 100).toFixed(1) + '% a cuota ' + best.odds,
+    best,
+    line: edge.line,
+    goalsNeeded: edge.goalsNeeded,
+    requiresAi: true,
+  };
+}
+
+module.exports = { xgRemaining, bigChances, alertQuality, classifyAlert, classifyValue };

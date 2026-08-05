@@ -107,6 +107,19 @@ function label(pred, detail) {
   const p = pred.probability != null ? pred.probability : (pred.predictedProbability || 0) / 100;
   pred.predictionCorrect = pred.goalAfterAnalysis ? (p >= 0.5) : (p < 0.5);
 
+  // ── resolver la apuesta concreta ──
+  // El acierto de la prediccion y el resultado de la apuesta NO son lo mismo:
+  // se puede acertar "habra gol" y perder el Over 3.5. Lo que cuenta es esto.
+  if (pred.bet && pred.bet.odds) {
+    const totalFinal = (detail.home ?? 0) + (detail.away ?? 0);
+    const paso = totalFinal > pred.bet.line;
+    const gano = pred.bet.side === 'UNDER' ? !paso : paso;
+    pred.bet.finalGoals = totalFinal;
+    pred.bet.won = gano;
+    // Beneficio por unidad apostada: +(cuota-1) si gana, -1 si pierde.
+    pred.bet.profit = Math.round((gano ? pred.bet.odds - 1 : -1) * 1000) / 1000;
+  }
+
   // alertCorrect solo tiene sentido si REALMENTE se alerto
   if (pred.alertTier) {
     pred.alertCorrect = pred.goalAfterAnalysis;

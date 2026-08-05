@@ -218,6 +218,50 @@ async function fetchGameDetail(gameId) {
   };
 }
 
+/**
+ * Cuota Over/Under de goles totales ("Goles en el partido").
+ *
+ * Vive en game.promotedPredictions.predictions[].odds con lineTypeId === 3.
+ * La linea numerica (2.5, 3.5...) NO esta en el objeto odds: esta en el titulo
+ * del contenedor, "Goles en el partido (2.5)". Verificado contra la API en vivo.
+ *
+ * No todos los partidos la traen — depende de lo que 365scores promocione.
+ *
+ * Esta es la unica cuota de GOLES del feed. La 1X2 no sirve para esto: predecir
+ * quien gana no es predecir cuantos goles caen.
+ */
+async function fetchGoalsMarket(gameId) {
+  let j;
+  try { j = JSON.parse(await fetch(API_BASE + '/game/?' + PARAMS + '&gameId=' + gameId)); } catch { return null; }
+  const preds = j.game && j.game.promotedPredictions && j.game.promotedPredictions.predictions;
+  if (!Array.isArray(preds)) return null;
+
+  for (const p of preds) {
+    const o = p && p.odds;
+    if (!o || o.lineTypeId !== 3 || !Array.isArray(o.options)) continue;
+
+    const m = /\(([\d.]+)\)/.exec(p.title || '');
+    const line = m ? parseFloat(m[1]) : null;
+    if (!line) continue;
+
+    let over = null, under = null;
+    for (const opt of o.options) {
+      const rate = opt && opt.rate && opt.rate.decimal;
+      if (typeof rate !== 'number' || rate <= 1) continue;
+      // "Más de" / "Over" vs "Menos de" / "Under"
+      if (/^m[aá]s de|over/i.test(opt.name || '')) over = rate;
+      else if (/^menos de|under/i.test(opt.name || '')) under = rate;
+    }
+    if (!over) continue;
+    return {
+      line, over, under,
+      bookmakerId: o.bookmakerId || null,
+      capturedAt: new Date().toISOString(),
+    };
+  }
+  return null;
+}
+
 /** Verify finished match result. null si aun no ha terminado. */
 async function verifyFinishedMatch(gameId) {
   const d = await fetchGameDetail(gameId);
@@ -353,5 +397,6 @@ const NULL_STATS = {
 module.exports = {
   fetchLiveMatches, fetchMatchStats, verifyFinishedMatch, fetchGameDetail,
   fetchLeagueContext, toInternalFormat, estimateXg, sanitizeLeague, extractOdds,
+  fetchGoalsMarket,
   NULL_STATS,
 };

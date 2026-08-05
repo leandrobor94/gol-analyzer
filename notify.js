@@ -67,6 +67,28 @@ function buildMessage(alerts, model) {
 
   alerts.slice(0, 5).forEach((a) => {
     const g = a.gate || {};
+
+    // ── Aviso de VALOR: manda NUESTRO analisis, la cuota es solo el precio ──
+    if (g.tier === 'VALOR' && g.best) {
+      const b = g.best;
+      msg += '💰 <b>VALOR</b>\n';
+      msg += '<b>' + esc(a.teamHome) + ' vs ' + esc(a.teamAway) + '</b>\n';
+      if (a.league) msg += '   ' + esc(a.league) + '\n';
+      msg += '   ⏱ ' + a.minute + "'  ·  " + a.scoreHome + '-' + a.scoreAway + '\n';
+      msg += '   🎯 Apuesta: <b>' + esc(b.pick) + '</b> goles (final del partido)\n';
+      msg += '   ⚽ Hacen falta ' + g.goalsNeeded + ' gol(es) más en ' + a.minsLeft + ' min\n';
+      msg += '\n';
+      msg += '   📊 <b>Nuestro análisis: ' + Math.round(b.p * 100) + '%</b>  (justo ' + b.fair + ')\n';
+      msg += '   🏦 La casa paga: <b>' + b.odds + '</b>  (implícita ' + Math.round(100 / b.odds) + '%)\n';
+      msg += '   🟢 <b>Valor esperado ' + (b.ev >= 0 ? '+' : '') + (b.ev * 100).toFixed(1) + '%</b>' +
+        '  ·  ventaja ' + (b.edge >= 0 ? '+' : '') + (b.edge * 100).toFixed(1) + ' pts\n';
+      if (a.aiDecision && a.aiDecision.reason) {
+        msg += '   🤖 ' + esc(a.aiDecision.reason).slice(0, 120) + '\n';
+      }
+      msg += '\n';
+      return;
+    }
+
     const gateInfo = (model && model.gates || []).find(x => x.tier === g.tier);
     const p = a.probability || 0;
     const goles = (a.scoreHome || 0) + (a.scoreAway || 0);

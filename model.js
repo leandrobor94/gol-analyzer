@@ -147,6 +147,74 @@ function score(model, m) {
   };
 }
 
+/**
+ * P(caigan al menos `k` goles mas en T minutos), con intensidad lambda.
+ *
+ * El modelo ES un proceso de Poisson, asi que el numero de goles restantes
+ * sigue Poisson(lambda*T). Hasta ahora solo se usaba el caso k=1 ("habra otro
+ * gol"). Con k general se puede responder a la pregunta que hace el mercado:
+ * "¿pasara el total de 2.5?" cuando ya hay 1 gol son k=2 goles mas.
+ *
+ * Esto es lo que permite comparar el modelo con la cuota Over/Under en sus
+ * propios terminos, en vez de con una linea distinta.
+ */
+function probAtLeast(lambda, T, k) {
+  if (k <= 0) return 1;
+  const mu = Math.max(lambda, 0) * Math.max(T, 0);
+  if (mu <= 0) return 0;
+  // P(N >= k) = 1 - sum_{i=0}^{k-1} e^-mu mu^i / i!
+  let term = Math.exp(-mu);
+  let cum = term;
+  for (let i = 1; i < k; i++) {
+    term *= mu / i;
+    cum += term;
+  }
+  return Math.min(1, Math.max(0, 1 - cum));
+}
+
+/**
+ * Compara el modelo con una cuota de mercado Over/Under.
+ *
+ * @param {number} lambda   intensidad estimada (goles/min)
+ * @param {number} T        minutos utiles restantes
+ * @param {number} goalsNow goles ya marcados
+ * @param {object} market   { line, over, under } cuotas decimales
+ * @returns {object|null}   probabilidades, cuota justa y ventaja
+ */
+function marketEdge(lambda, T, goalsNow, market) {
+  if (!market || !market.line || !market.over) return null;
+  // Goles adicionales necesarios para superar la linea.
+  const needed = Math.ceil(market.line - goalsNow + 1e-9);
+  if (needed <= 0) return null;                 // ya esta superada: no hay apuesta
+  const pOver = probAtLeast(lambda, T, needed);
+  const pUnder = 1 - pOver;
+
+  // Probabilidad implicita SIN el margen de la casa (se reparte proporcional).
+  let impOver = 1 / market.over;
+  if (market.under) {
+    const s = impOver + 1 / market.under;
+    if (s > 0) impOver = impOver / s;
+  }
+  const r4 = (v) => Math.round(v * 1e4) / 1e4;
+  return {
+    line: market.line,
+    goalsNeeded: needed,
+    pOver: r4(pOver),
+    pUnder: r4(pUnder),
+    fairOver: pOver > 0 ? Math.round((1 / pOver) * 100) / 100 : null,
+    fairUnder: pUnder > 0 ? Math.round((1 / pUnder) * 100) / 100 : null,
+    bookOver: market.over,
+    bookUnder: market.under || null,
+    impliedOver: r4(impOver),
+    // Ventaja: cuanto mas probable lo cree el modelo de lo que lo paga la casa.
+    edgeOver: r4(pOver - impOver),
+    edgeUnder: r4(pUnder - (1 - impOver)),
+    // Valor esperado por unidad apostada.
+    evOver: r4(pOver * market.over - 1),
+    evUnder: market.under ? r4(pUnder * market.under - 1) : null,
+  };
+}
+
 function loadModel() {
   try {
     if (fs.existsSync(MODEL_FILE)) {
@@ -164,5 +232,6 @@ function loadModel() {
 module.exports = {
   FEATURES, minsLeft, extractFeatures,
   fitPlatt, applyPlatt, logit, rawProb, score, loadModel,
+  probAtLeast, marketEdge,
   MODEL_FILE,
 };
