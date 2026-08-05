@@ -206,5 +206,18 @@
     "windowType": "late",
     "timestamp": "2026-08-04T20:26:58.365Z",
     "alertTimestamp": "2026-08-04T18:59:06.818Z"
+  },
+  {
+    "match": "Deportivo Táchira vs Portuguesa FC",
+    "league": "Liga FUTVE -",
+    "probability": 85,
+    "minute": 56,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "correct": false,
+    "windowType": "earlySecondHalf",
+    "timestamp": "2026-08-05T01:07:32.446Z",
+    "alertTimestamp": "2026-08-04T22:47:04.144Z"
   }
 ]
