@@ -4,13 +4,28 @@
       "timestamp": 1785936009664,
       "minute": 21,
       "tier": "PRECISION"
+    },
+    "4802552_VALOR": {
+      "timestamp": 1785944073569,
+      "minute": 45,
+      "tier": "VALOR"
+    },
+    "4804556_VALOR": {
+      "timestamp": 1785944073569,
+      "minute": 45,
+      "tier": "VALOR"
+    },
+    "4802562_VALOR": {
+      "timestamp": 1785944073569,
+      "minute": 45,
+      "tier": "VALOR"
     }
   },
   "counters": {
-    "total": 573,
-    "verified": 568,
-    "withGoalTimeline": 407,
+    "total": 603,
+    "verified": 573,
+    "withGoalTimeline": 409,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-05T13:20:09.848Z"
+  "lastUpdated": "2026-08-05T15:34:33.674Z"
 }

@@ -219,5 +219,23 @@
     "windowType": "earlySecondHalf",
     "timestamp": "2026-08-05T01:07:32.446Z",
     "alertTimestamp": "2026-08-04T22:47:04.144Z"
+  },
+  {
+    "match": "Ajax (F) vs Brondby (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "PRECISION",
+    "probability": 0.9518509552855283,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      20
+    ],
+    "timestamp": "2026-08-05T15:34:33.641Z",
+    "alertTimestamp": "2026-08-05T13:20:09.664Z"
   }
 ]
