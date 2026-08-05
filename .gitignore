@@ -2,3 +2,6 @@ node_modules/
 *.png
 *.zip
 ejecutar.bat
+.env
+.env.local
+*.pem
