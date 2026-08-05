@@ -237,5 +237,25 @@
     ],
     "timestamp": "2026-08-05T15:34:33.641Z",
     "alertTimestamp": "2026-08-05T13:20:09.664Z"
+  },
+  {
+    "match": "Viitorul Cluj vs Zalău",
+    "league": "Copa rumana - Clasificación",
+    "tier": "VALOR",
+    "probability": 0.7544180078988816,
+    "minute": 45,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-05T17:08:40.964Z",
+    "alertTimestamp": "2026-08-05T15:34:33.569Z"
   }
 ]
