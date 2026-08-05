@@ -48,7 +48,24 @@ const https = require('https');
   } catch {}
 })();
 
+/**
+ * Devuelve TODOS los providers con key, en orden de preferencia.
+ *
+ * Existe el orden porque una key puede estar puesta y no servir: la de OpenAI
+ * de este repo devuelve "exceeded your current quota" (verificado en el smoke
+ * test del 2026-08-05). Con un solo provider eso deja al filtro ciego; con la
+ * lista, se pasa al siguiente y el sistema sigue funcionando.
+ */
+function providers() {
+  return [buildOpenAI(), buildGroq(), buildAnthropic()].filter(Boolean);
+}
+
+/** Primer provider disponible. Compat con el codigo que solo quiere saber si hay alguno. */
 function provider() {
+  return providers()[0] || null;
+}
+
+function buildOpenAI() {
   if (process.env.OPENAI_API_KEY) {
     return {
       name: 'openai',
@@ -64,6 +81,10 @@ function provider() {
       parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
     };
   }
+  return null;
+}
+
+function buildGroq() {
   if (process.env.GROQ_API_KEY) {
     return {
       name: 'groq',
@@ -79,6 +100,10 @@ function provider() {
       parse: (j) => (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '',
     };
   }
+  return null;
+}
+
+function buildAnthropic() {
   if (process.env.ANTHROPIC_API_KEY) {
     return {
       name: 'anthropic',
@@ -169,37 +194,51 @@ function buildPrompt(r, gate) {
  *                    reason?:string, provider?:string, rawAlert?:boolean}>}
  */
 async function reviewAlert(r, gate) {
-  const p = provider();
-  if (!p) return { available: false, alert: false, reason: 'sin API key' };
+  const list = providers();
+  if (!list.length) return { available: false, alert: false, reason: 'sin API key' };
 
-  try {
-    const body = p.body(p.model, buildPrompt(r, gate));
-    const { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), body);
-    if (status < 200 || status >= 300) {
-      const errMsg = (json && json.error && json.error.message) || (raw || '').slice(0, 120) || ('HTTP ' + status);
-      // Si la IA falla NO se bloquea la alerta por un problema de infraestructura:
-      // se deja pasar y se marca el fallo, para no perder avisos por una caida.
-      return { available: true, alert: true, confidence: 0, reason: 'IA no disponible: ' + errMsg, provider: p.name, error: true };
+  const messages = buildPrompt(r, gate);
+  const problems = [];
+
+  for (const p of list) {
+    try {
+      const { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages));
+      if (status < 200 || status >= 300) {
+        const errMsg = (json && json.error && json.error.message) || (raw || '').slice(0, 120) || ('HTTP ' + status);
+        problems.push(p.name + ': ' + errMsg);
+        continue;                                   // probar el siguiente provider
+      }
+      const text = (p.parse(json) || '').replace(/```json|```/g, '').trim();
+      const out = JSON.parse(text);
+      const rawAlert = out.alert === true;
+      const confidence = Math.max(0, Math.min(100, parseInt(out.confidence, 10) || 0));
+      // Umbral de confianza. NO esta validado: su efecto real lo mide evaluate.js
+      // comparando precision con IA vs sin IA sobre las mismas alertas.
+      const MIN_CONF = parseInt(process.env.AI_MIN_CONFIDENCE || '60', 10);
+      return {
+        available: true,
+        alert: rawAlert && confidence >= MIN_CONF,
+        confidence,
+        reason: String(out.reason || '').slice(0, 140),
+        provider: p.name,
+        model: p.model,
+        rawAlert,
+      };
+    } catch (e) {
+      problems.push(p.name + ': ' + String(e.message || e).slice(0, 90));
     }
-    const text = (p.parse(json) || '').replace(/```json|```/g, '').trim();
-    const out = JSON.parse(text);
-    const rawAlert = out.alert === true;
-    const confidence = Math.max(0, Math.min(100, parseInt(out.confidence, 10) || 0));
-    // Umbral de confianza. NO esta validado: su efecto real lo mide evaluate.js
-    // comparando precision con IA vs sin IA sobre las mismas alertas.
-    const MIN_CONF = parseInt(process.env.AI_MIN_CONFIDENCE || '60', 10);
-    return {
-      available: true,
-      alert: rawAlert && confidence >= MIN_CONF,
-      confidence,
-      reason: String(out.reason || '').slice(0, 140),
-      provider: p.name,
-      model: p.model,
-      rawAlert,
-    };
-  } catch (e) {
-    return { available: true, alert: true, confidence: 0, reason: 'IA error: ' + String(e.message || e).slice(0, 100), provider: p.name, error: true };
   }
+
+  // Ningun provider respondio. Se deja pasar la alerta a proposito: perder avisos
+  // por un problema de facturacion seria peor que no filtrarlos, sobre todo cuando
+  // el aporte del filtro todavia no esta demostrado. Queda marcado con error:true
+  // para que evaluate.js no lo cuente como una decision real de la IA.
+  return {
+    available: true, alert: true, confidence: 0,
+    reason: 'IA no disponible (' + problems.join(' | ').slice(0, 160) + ')',
+    provider: list.map(p => p.name).join('>'),
+    error: true,
+  };
 }
 
 const isAvailable = () => !!provider();
@@ -224,4 +263,4 @@ async function smokeTest() {
   return Object.assign({ ok: !r.error && r.available }, r);
 }
 
-module.exports = { reviewAlert, isAvailable, provider, status, smokeTest, buildPrompt };
+module.exports = { reviewAlert, isAvailable, provider, providers, status, smokeTest, buildPrompt };

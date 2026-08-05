@@ -236,9 +236,14 @@ async function main() {
       if (g.requiresAi) {
         if (!aiOn) { console.log('  ' + a.teamHome + ' vs ' + a.teamAway + ' — VALOR sin IA disponible, descartado'); continue; }
         const ai = await aiFilter.reviewAlert(a, g);
-        a.aiDecision = { pass: !!ai.alert, confidence: ai.confidence || 0, reason: ai.reason || '', provider: ai.provider || null };
+        // Solo se guarda como decision de la IA si la IA respondio de verdad.
+        // Un fallo de facturacion o de red deja pasar la alerta, pero registrarlo
+        // como "la IA aprobo" contaminaria la medicion de su aporte en evaluate.js.
+        a.aiDecision = ai.error ? null
+          : { pass: !!ai.alert, confidence: ai.confidence || 0, reason: ai.reason || '', provider: ai.provider || null };
         console.log('  IA ' + (ai.provider || '?') + ': ' + a.teamHome + ' vs ' + a.teamAway +
-          ' -> ' + (ai.alert ? 'PASA' : 'VETA') + ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
+          ' -> ' + (ai.error ? 'NO DISPONIBLE (pasa sin filtrar)' : (ai.alert ? 'PASA' : 'VETA')) +
+          ' conf=' + (ai.confidence || 0) + ' ' + (ai.reason || ''));
         if (!ai.alert) continue;
       }
       a.alertQuality = alertQuality(a);
