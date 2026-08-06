@@ -707,5 +707,168 @@
     ],
     "timestamp": "2026-08-06T01:08:46.675Z",
     "alertTimestamp": "2026-08-05T22:42:53.432Z"
+  },
+  {
+    "match": "Inter Miami vs Atlético San Luis",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8928387249125197,
+    "minute": 12,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      4,
+      11,
+      26,
+      44,
+      51,
+      52
+    ],
+    "timestamp": "2026-08-06T12:19:21.213Z",
+    "alertTimestamp": "2026-08-05T23:42:43.170Z"
+  },
+  {
+    "match": "FC Naples vs Alta",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8920958873007799,
+    "minute": 12,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      48,
+      73,
+      90
+    ],
+    "timestamp": "2026-08-06T12:19:21.323Z",
+    "alertTimestamp": "2026-08-05T23:42:43.170Z"
+  },
+  {
+    "match": "El Paso vs Monterey Bay",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8993464729975538,
+    "minute": 9,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-08-06T12:19:21.705Z",
+    "alertTimestamp": "2026-08-06T01:08:46.523Z"
+  },
+  {
+    "match": "Tigre vs Belgrano",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.7479109460766934,
+    "minute": 45,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Empate y minutos restantes",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-06T12:19:23.092Z",
+    "alertTimestamp": "2026-08-06T01:08:46.523Z"
+  },
+  {
+    "match": "Bolívar vs Oriente Petrolero",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.7382961892976903,
+    "minute": 48,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      23,
+      37,
+      56
+    ],
+    "timestamp": "2026-08-06T12:19:23.232Z",
+    "alertTimestamp": "2026-08-06T01:08:46.523Z"
+  },
+  {
+    "match": "Liga de Portoviejo vs Barcelona SC",
+    "league": "Copa Ecuador - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6893510745886215,
+    "minute": 49,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Empate y minutos restantes",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      66
+    ],
+    "timestamp": "2026-08-06T12:19:23.710Z",
+    "alertTimestamp": "2026-08-06T01:08:46.523Z"
+  },
+  {
+    "match": "Monterrey vs Orlando City SC",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.670663856391555,
+    "minute": 52,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Empate y minutos restantes",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      27,
+      60,
+      99
+    ],
+    "timestamp": "2026-08-06T12:19:41.053Z",
+    "alertTimestamp": "2026-08-06T01:08:46.523Z"
   }
 ]
