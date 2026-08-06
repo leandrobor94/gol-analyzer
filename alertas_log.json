@@ -590,5 +590,122 @@
     "goalMinutes": [],
     "timestamp": "2026-08-05T22:42:53.923Z",
     "alertTimestamp": "2026-08-05T20:20:01.520Z"
+  },
+  {
+    "match": "Canada Sub20 vs Jamaica Sub20",
+    "league": "CONCACAF Campeonato Sub20 - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.9166438705295324,
+    "minute": 13,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      57,
+      87,
+      94
+    ],
+    "timestamp": "2026-08-06T01:08:46.544Z",
+    "alertTimestamp": "2026-08-05T22:42:53.432Z"
+  },
+  {
+    "match": "Deportivo La Guaira vs Metropolitanos FC",
+    "league": "Liga FUTVE - Clausura",
+    "tier": "AVISO",
+    "probability": 0.9104782279809447,
+    "minute": 13,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, resultado ajustado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      10,
+      15,
+      67
+    ],
+    "timestamp": "2026-08-06T01:08:46.574Z",
+    "alertTimestamp": "2026-08-05T22:42:53.432Z"
+  },
+  {
+    "match": "Grêmio vs Mirassol",
+    "league": "Copa de Brasil - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.90122075592863,
+    "minute": 12,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, empate a cero",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      37
+    ],
+    "timestamp": "2026-08-06T01:08:46.623Z",
+    "alertTimestamp": "2026-08-05T22:42:53.432Z"
+  },
+  {
+    "match": "EC Pelotas vs União-RS",
+    "league": "Gaucho A2",
+    "tier": "AVISO",
+    "probability": 0.884129743661365,
+    "minute": 13,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, empate a cero",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      0
+    ],
+    "timestamp": "2026-08-06T01:08:46.651Z",
+    "alertTimestamp": "2026-08-05T22:42:53.432Z"
+  },
+  {
+    "match": "Santiago Wanderers vs U. La Calera",
+    "league": "Copa Chile",
+    "tier": "AVISO",
+    "probability": 0.8203871407879445,
+    "minute": 45,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      9,
+      11,
+      47,
+      64
+    ],
+    "timestamp": "2026-08-06T01:08:46.675Z",
+    "alertTimestamp": "2026-08-05T22:42:53.432Z"
   }
 ]
