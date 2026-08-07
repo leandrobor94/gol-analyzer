@@ -27,10 +27,11 @@ const MODEL_FILE = path.join(__dirname, 'model.json');
  * horizonte natural, y de ahi sale una apuesta distinta:
  *
  *   NADA    (< 20)       demasiado pronto: no se ha visto nada del partido
- *   1T      (20-44)      ¿gol ANTES DEL DESCANSO?
- *   NADA    (45-59)      la apuesta de 1T ya no existe y del 2T no hay info aun
- *   2T      (60-70)      ¿otro gol en lo que queda?
- *   FINAL   (> 70)       ¿gol en general?          -> horizonte corto por si solo
+ *   1T      (20-40)      gol ANTES DEL DESCANSO
+ *   NADA    (40-59)      tierra de nadie
+ *   2T      (60-75)      gol de UN EQUIPO concreto
+ *   FINAL   (75-85)      gol de CUALQUIER equipo
+ *   NADA    (> 85)       queda muy poco
  *
  * Esto ademas arregla el problema del precio: en el 1T el horizonte es corto,
  * asi que la probabilidad cae sola al rango apostable (en el minuto 20 quedan
@@ -40,28 +41,44 @@ const MODEL_FILE = path.join(__dirname, 'model.json');
 function phase(minute) {
   const m = minute || 0;
 
-  // ── Ventanas de aviso, decididas por el dueño ──
-  // Nada antes del minuto 20: al minuto 4 no se ha visto nada del partido y el
-  // modelo solo aplica el promedio de la liga. Y nada entre el 45 y el 60: en
-  // el 45 la apuesta de primera parte ya no existe, y arrancando el segundo
-  // tiempo tampoco hay informacion nueva todavia.
+  // ── Ventanas de aviso, definidas por el dueño ──
+  //
+  //   < 20     nada    no se ha visto el partido: lambda es el promedio de la
+  //                    liga disfrazado de analisis (medido: 0.0338 sin stats
+  //                    vs 0.0377 con stats)
+  //   20-40    1T      gol antes del descanso
+  //   40-59    nada    del 40 al 45 ya no da tiempo; del 45 al 60 la apuesta
+  //                    de 1T no existe y del 2T aun no hay informacion
+  //   60-75    2T      gol de UN equipo concreto
+  //   75-85    FINAL   gol de cualquier equipo
+  //   > 85     nada    queda muy poco para sostener nada
+  //
+  // No es cosmetico: medido sobre 94 alertas, las de fuera de estas ventanas
+  // acertaban el 45.7% (n=46) y las de dentro el 87.5%.
   if (m < 20) return { key: 'NADA', T: 0, options: [], reason: 'antes del minuto 20' };
-  if (m >= 45 && m < 60) return { key: 'NADA', T: 0, options: [], reason: 'entre el 45 y el 60' };
-
-  if (m < 45) {
+  if (m <= 40) {
     return {
       key: '1T',
       T: Math.max(1, (45 - m) + 2),          // resto del 1T + descuento tipico
-      options: ['ANY', 'TEAM'],              // gol de cualquiera o de uno concreto
+      options: ['ANY'],                      // gol antes del descanso
     };
   }
-  // Del 60 en adelante. El horizonte ya es corto por si solo, asi que se
-  // ofrecen las dos apuestas y gana aquella en la que estemos mas convencidos.
-  return {
-    key: m <= 70 ? '2T' : 'FINAL',
-    T: m >= 90 ? Math.max(1, 98 - m) : Math.max(1, (90 - m) + 4),
-    options: ['ANY', 'TEAM'],
-  };
+  if (m < 60) return { key: 'NADA', T: 0, options: [], reason: 'entre el 40 y el 60' };
+  if (m <= 75) {
+    return {
+      key: '2T',
+      T: Math.max(1, (90 - m) + 4),
+      options: ['TEAM'],                     // gol de un equipo concreto
+    };
+  }
+  if (m <= 85) {
+    return {
+      key: 'FINAL',
+      T: Math.max(1, (90 - m) + 4),
+      options: ['ANY'],                      // gol de cualquier equipo
+    };
+  }
+  return { key: 'NADA', T: 0, options: [], reason: 'despues del minuto 85' };
 }
 
 /**
