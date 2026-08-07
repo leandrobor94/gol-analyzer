@@ -66,31 +66,44 @@ function phase(minute) {
 /**
  * Reparto de la intensidad de gol entre los dos equipos.
  *
- * lambda es del partido; para apostar "marca el local" hace falta lambda_local.
- * Se reparte segun la produccion ofensiva de cada lado (remates a puerta, dentro
- * del area, xG y ataques), suavizado hacia 50/50 para no fiarlo todo a una
- * muestra corta de minutos.
+ * CALIBRADO CON DATOS (2026-08-05, 270 partidos con el lado de cada gol
+ * recuperado de la API). La version anterior la escribi a ojo con remates a
+ * puerta, xG y remates al area, y al medirlo resulto que ninguna de esas tres
+ * predice quien marca:
  *
- * NOTA: este reparto todavia NO esta validado contra datos. verify.js ya guarda
- * el lado de cada gol (goalSides), asi que se podra medir en cuanto haya
- * suficientes partidos. Hasta entonces, tratarlo como una estimacion razonable
- * y no como un numero calibrado.
+ *   ataques RELATIVOS (yo - el)   AUC 0.595   <- la mejor señal
+ *   posesion                      AUC 0.580   <- no la usaba
+ *   remates a puerta              AUC 0.483   <- le daba peso x3
+ *   xG estimado                   AUC 0.494   <- le daba peso x8
+ *   remates al area               AUC 0.510
+ *   ocasiones claras              AUC 0.499
+ *
+ * La leccion que importa: lo que informa es lo RELATIVO, no lo absoluto.
+ * Ataques absolutos dan 0.485 (nada) y los mismos ataques en relativo dan
+ * 0.595. No es cuanto ataca un equipo, es cuanto MAS que el otro.
+ *
+ * Los coeficientes salen de una regresion logistica sobre esos 270 partidos.
+ * AUC 0.638 frente a ~0.50 del reparto anterior. AVISO: ese 0.638 es dentro de
+ * muestra; la cifra honesta la dara verify.js cuando haya apuestas resueltas
+ * en produccion.
  */
-function teamSplit(stats) {
+function teamSplit(stats, scoreHome, scoreAway) {
   const s = stats || {};
   const n = (v) => (v == null || Number.isNaN(v) ? 0 : v);
-  const peso = (sot, box, xg, atk) => n(sot) * 3 + n(box) * 1.5 + n(xg) * 8 + n(atk) * 0.05;
-  const h = peso(s.sotHome, s.shotsInsideBoxHome, s.xgHome, s.attacksHome);
-  const a = peso(s.sotAway, s.shotsInsideBoxAway, s.xgAway, s.attacksAway);
-  const total = h + a;
-  if (total <= 0) return { home: 0.5, away: 0.5, confident: false };
-  // Suavizado: 60% de la evidencia + 40% de un reparto neutro.
-  const raw = h / total;
-  const share = 0.6 * raw + 0.4 * 0.5;
+
+  const atkH = n(s.attacksHome), atkA = n(s.attacksAway);
+  const tot = atkH + atkA;
+  const relAtk = tot > 0 ? (atkH - atkA) / tot : 0;
+  const pos = (s.possessionHome != null ? s.possessionHome : 0.5) - 0.5;
+  const perd = ((scoreHome ?? 0) < (scoreAway ?? 0) ? 1 : 0) - ((scoreAway ?? 0) < (scoreHome ?? 0) ? 1 : 0);
+
+  const z = 2.006 * relAtk + 1.377 * pos + 0.148 * perd - 0.218;
+  const home = 1 / (1 + Math.exp(-z));
   return {
-    home: Math.round(share * 1e4) / 1e4,
-    away: Math.round((1 - share) * 1e4) / 1e4,
-    confident: total >= 12,
+    home: Math.round(home * 1e4) / 1e4,
+    away: Math.round((1 - home) * 1e4) / 1e4,
+    // Sin ataques ni posesion no hay señal: se avisa para no fiarse del reparto.
+    confident: tot >= 30 && s.possessionHome != null,
   };
 }
 

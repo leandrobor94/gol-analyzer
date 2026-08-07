@@ -91,6 +91,10 @@ function classifyBet(input, opts) {
   // Cada fase ofrece una o dos apuestas. Se evaluan y se elige la que cae en la
   // banda apostable; si ninguna cae, no se manda nada.
   const split = input.split || { home: 0.5, away: 0.5 };
+  // Sin ataques ni posesion el reparto es un 50/50 disfrazado: no se apuesta a
+  // un equipo concreto. Medido hoy en produccion: el tier de equipo se desvio
+  // 27 puntos (dijo 61%, acerto 33% con n=6).
+  const puedeEquipo = split.confident === true;
   const favorito = split.home >= split.away ? 'home' : 'away';
   const cuotaTeam = split[favorito];
   const nombre = favorito === 'home' ? input.teamHome : input.teamAway;
@@ -104,6 +108,7 @@ function classifyBet(input, opts) {
         bet: ph.key === '1T' ? 'Gol antes del descanso' : 'Gol en lo que queda (cualquier equipo)',
       });
     } else {
+      if (!puedeEquipo) continue;
       opciones.push({
         kind: 'TEAM',
         side: favorito,
