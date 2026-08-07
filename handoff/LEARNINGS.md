@@ -144,7 +144,21 @@ Toda la auditoría estuvo midiendo la capa aleatoria (goles) y concluyendo "no h
 La señal está en la capa de debajo. Los mercados de *total de remates* y *remates a puerta*
 existen en las casas de apuestas, aunque 365scores no publique esas cuotas.
 
-**Esta es la línea de trabajo más prometedora que queda.** Ver `TODO.md` #4.
+**Esta línea YA SE CONSTRUYÓ Y VALIDÓ.** `shots.js` + `shots_model.json`:
+
+| Predictor | MAE fuera de muestra (n=178) |
+|---|---|
+| Media global | 6.02 |
+| Proyección del ritmo (trivial) | 5.01 |
+| **Modelo** | **4.02** |
+
+Simulación Over/Under: **90.7% con margen 5** (n=75, IC 82-95%), batiendo al trivial
+(85.3%) en todos los márgenes.
+
+**Es el primer resultado del proyecto que supera el 90% con señal real y no con el
+reloj.** Pero la línea de la simulación es un proxy naive; contra una casa real la
+ventaja sería menor. Falta una fuente de cuotas de remates para convertirlo en producto.
+Ver `TODO.md` #4.
 
 ---
 

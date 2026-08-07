@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "trainedAt": "2026-08-07T02:45:37.853Z",
+  "n": 356,
+  "features": [
+    "ritmoProy",
+    "minRestNorm",
+    "sotRate",
+    "corRate",
+    "goles",
+    "atkRate",
+    "intercepto"
+  ],
+  "w": [
+    0.778975,
+    4.677403,
+    -0.002424,
+    -0.817633,
+    -0.290593,
+    -0.660978,
+    7.502105
+  ],
+  "sigma": 4.493,
+  "eval": {
+    "method": "validacion temporal 5 cortes, ajuste solo en train",
+    "nTest": 178,
+    "maeModelo": 4.02,
+    "maeProyeccion": 5.01,
+    "maeMediaGlobal": 6.02,
+    "aciertoMargen3": 0.871,
+    "aciertoMargen4": 0.89,
+    "aciertoMargen5": 0.907,
+    "nMargen5": 75,
+    "ci95Margen5": [
+      0.82,
+      0.95
+    ]
+  }
+}

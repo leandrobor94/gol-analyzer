@@ -70,9 +70,45 @@ El problema es de nivel, no de orden.
 
 ---
 
-## 4. Explorar el mercado de REMATES — **la apuesta grande**
+## 4. Mercado de REMATES — **HECHO Y VALIDADO** (falta cablearlo)
 
-**Objetivo.** Alertar sobre total de remates / remates a puerta en vez de sobre goles.
+**Estado: el modelo existe, está entrenado y validado.** `shots.js` + `shots_model.json`.
+
+**Resultado de la validación** (5 cortes temporales, ajuste solo en train, n_test=178):
+
+| Predictor | MAE |
+|---|---|
+| Media global (no mira el partido) | 6.02 |
+| Proyección del ritmo (baseline trivial) | 5.01 |
+| **Modelo** | **4.02** |
+
+Bate al baseline trivial por ~1 remate. Esa comparación era obligatoria: sin ella
+"predecir remates" sería repetir el ritmo actual con otro nombre.
+
+Simulación de apuestas Over/Under:
+
+| Margen | Apuestas | Acierto | (trivial) |
+|---|---|---|---|
+| 3 | 116 | 87.1% | 81.6% |
+| 4 | 91 | 89.0% | 84.3% |
+| **5** | **75** | **90.7%** | 85.3% |
+
+IC 95% del 90.7%: [82%, 95%].
+
+**⚠️ ADVERTENCIA CRÍTICA:** la "línea" de esa simulación es la media global redondeada
+— un proxy **naive** de lo que pondría una casa. Una casa real pone una línea más afilada
+con modelos pre-partido. **Contra una línea real la ventaja sería menor**, y cuánto no se
+sabe porque 365scores no publica cuotas de remates.
+
+**Lo que falta:** una fuente de cuotas de remates. Sin ella el modelo es una herramienta
+válida pero no un producto. Opciones: otra API de cuotas, o que el dueño meta la línea a
+mano cuando la vea en su casa de apuestas.
+
+---
+
+## 4-bis. (histórico) Explorar el mercado de REMATES
+
+**Objetivo original.** Alertar sobre total de remates / remates a puerta en vez de sobre goles.
 
 **Motivo.** Es el único sitio donde nuestras estadísticas predicen de verdad:
 
