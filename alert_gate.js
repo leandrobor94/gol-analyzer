@@ -87,6 +87,10 @@ function classifyBet(input, opts) {
   const ph = input.phase;
   const lambda = input.lambda;
   if (!(lambda > 0) || !ph) return { tier: 'REJECT', reason: 'sin modelo' };
+  // Fuera de las ventanas de aviso no se evalua nada.
+  if (ph.key === 'NADA' || !ph.options.length) {
+    return { tier: 'REJECT', reason: 'fuera de ventana (' + (ph.reason || ph.key) + ')' };
+  }
 
   // Cada fase ofrece una o dos apuestas. Se evaluan y se elige la que cae en la
   // banda apostable; si ninguna cae, no se manda nada.

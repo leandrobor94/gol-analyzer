@@ -26,8 +26,10 @@ const MODEL_FILE = path.join(__dirname, 'model.json');
  * No se pregunta lo mismo en el minuto 20 que en el 80. Cada fase tiene su
  * horizonte natural, y de ahi sale una apuesta distinta:
  *
- *   1T      (min < 45)   ¿gol ANTES DEL DESCANSO?  -> quedan pocos minutos
- *   2T      (45-70)      ¿otro gol en lo que queda?
+ *   NADA    (< 20)       demasiado pronto: no se ha visto nada del partido
+ *   1T      (20-44)      ¿gol ANTES DEL DESCANSO?
+ *   NADA    (45-59)      la apuesta de 1T ya no existe y del 2T no hay info aun
+ *   2T      (60-70)      ¿otro gol en lo que queda?
  *   FINAL   (> 70)       ¿gol en general?          -> horizonte corto por si solo
  *
  * Esto ademas arregla el problema del precio: en el 1T el horizonte es corto,
@@ -37,6 +39,15 @@ const MODEL_FILE = path.join(__dirname, 'model.json');
  */
 function phase(minute) {
   const m = minute || 0;
+
+  // ── Ventanas de aviso, decididas por el dueño ──
+  // Nada antes del minuto 20: al minuto 4 no se ha visto nada del partido y el
+  // modelo solo aplica el promedio de la liga. Y nada entre el 45 y el 60: en
+  // el 45 la apuesta de primera parte ya no existe, y arrancando el segundo
+  // tiempo tampoco hay informacion nueva todavia.
+  if (m < 20) return { key: 'NADA', T: 0, options: [], reason: 'antes del minuto 20' };
+  if (m >= 45 && m < 60) return { key: 'NADA', T: 0, options: [], reason: 'entre el 45 y el 60' };
+
   if (m < 45) {
     return {
       key: '1T',
@@ -44,21 +55,11 @@ function phase(minute) {
       options: ['ANY', 'TEAM'],              // gol de cualquiera o de uno concreto
     };
   }
-  if (m <= 70) {
-    return {
-      key: '2T',
-      T: Math.max(1, (90 - m) + 3),
-      // SOLO equipo concreto. "Gol de cualquiera" aqui ronda el 65% y se paga
-      // a 1.5: correcto pero sin premio. Estrechar a un equipo es lo que deja
-      // la apuesta en un rango que compensa el riesgo.
-      options: ['TEAM'],
-    };
-  }
+  // Del 60 en adelante. El horizonte ya es corto por si solo, asi que se
+  // ofrecen las dos apuestas y gana aquella en la que estemos mas convencidos.
   return {
-    key: 'FINAL',
+    key: m <= 70 ? '2T' : 'FINAL',
     T: m >= 90 ? Math.max(1, 98 - m) : Math.max(1, (90 - m) + 4),
-    // Con poco tiempo por delante "gol en general" ya se paga bien. Se ofrecen
-    // las dos y se elige aquella en la que estemos mas convencidos.
     options: ['ANY', 'TEAM'],
   };
 }
