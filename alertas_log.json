@@ -870,5 +870,28 @@
     ],
     "timestamp": "2026-08-06T12:19:41.053Z",
     "alertTimestamp": "2026-08-06T01:08:46.523Z"
+  },
+  {
+    "match": "Bate Borisov II Reserve vs Bumprom",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.9178466571468753,
+    "minute": 12,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      2,
+      86
+    ],
+    "timestamp": "2026-08-07T00:19:30.239Z",
+    "alertTimestamp": "2026-08-06T14:42:03.174Z"
   }
 ]
