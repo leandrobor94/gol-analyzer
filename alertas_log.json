@@ -1058,5 +1058,71 @@
     ],
     "timestamp": "2026-08-07T15:04:45.033Z",
     "alertTimestamp": "2026-08-07T13:14:42.231Z"
+  },
+  {
+    "match": "Plaza Amador Sub20 vs Tauro FC Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Sur",
+    "tier": "AVISO",
+    "probability": 0.9169067378355302,
+    "minute": 4,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T15:54:46.304Z",
+    "alertTimestamp": "2026-08-07T14:04:42.821Z"
+  },
+  {
+    "match": "Servette (F) vs Aktobe (W)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.9129638757934513,
+    "minute": 6,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      20,
+      67,
+      85
+    ],
+    "timestamp": "2026-08-07T15:54:46.393Z",
+    "alertTimestamp": "2026-08-07T14:04:42.821Z"
+  },
+  {
+    "match": "Surkhon Termez vs Navbahor",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.9139768725912074,
+    "minute": 5,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      5
+    ],
+    "timestamp": "2026-08-07T16:04:53.136Z",
+    "alertTimestamp": "2026-08-07T14:04:42.821Z"
   }
 ]
