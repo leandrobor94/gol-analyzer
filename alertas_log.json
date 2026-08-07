@@ -893,5 +893,122 @@
     ],
     "timestamp": "2026-08-07T00:19:30.239Z",
     "alertTimestamp": "2026-08-06T14:42:03.174Z"
+  },
+  {
+    "match": "Cruz Azul vs Philadelphia Union",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8992497576606946,
+    "minute": 19,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, ventaja parcial",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      3
+    ],
+    "timestamp": "2026-08-07T13:14:42.342Z",
+    "alertTimestamp": "2026-08-07T00:19:30.169Z"
+  },
+  {
+    "match": "Colombia (F) vs Mexico (F)",
+    "league": "Juegos Centroamericanos y del Caribe (F) - Final",
+    "tier": "AVISO",
+    "probability": 0.8776931037981441,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      118,
+      121,
+      121,
+      122,
+      123,
+      124
+    ],
+    "timestamp": "2026-08-07T13:14:42.430Z",
+    "alertTimestamp": "2026-08-07T00:19:30.169Z"
+  },
+  {
+    "match": "Blooming vs Always Ready",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.6959165973282022,
+    "minute": 48,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T13:14:42.863Z",
+    "alertTimestamp": "2026-08-07T00:19:30.169Z"
+  },
+  {
+    "match": "Corinthians vs Internacional",
+    "league": "Copa de Brasil - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6370548312106088,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      43,
+      59,
+      70
+    ],
+    "timestamp": "2026-08-07T13:14:43.308Z",
+    "alertTimestamp": "2026-08-07T00:19:30.169Z"
+  },
+  {
+    "match": "Bayern Munich vs Aston Villa",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5898324896451022,
+    "minute": 74,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      37,
+      74,
+      83
+    ],
+    "timestamp": "2026-08-07T14:04:42.937Z",
+    "alertTimestamp": "2026-08-07T13:14:42.231Z"
   }
 ]
