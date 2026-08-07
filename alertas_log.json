@@ -1327,5 +1327,284 @@
     "goalMinutes": [],
     "timestamp": "2026-08-07T17:05:02.616Z",
     "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "Magallanes (F) vs Universidad Católica (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.9241347687113391,
+    "minute": 1,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T17:24:45.956Z",
+    "alertTimestamp": "2026-08-07T15:34:45.330Z"
+  },
+  {
+    "match": "JäPS vs MP Mikkeli",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.9170997037240449,
+    "minute": 3,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T17:24:46.047Z",
+    "alertTimestamp": "2026-08-07T15:34:45.330Z"
+  },
+  {
+    "match": "Kuopion Palloseura II vs Turku Ii",
+    "league": "Ykkonen",
+    "tier": "AVISO",
+    "probability": 0.9092319919381062,
+    "minute": 6,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T17:24:46.219Z",
+    "alertTimestamp": "2026-08-07T15:34:45.330Z"
+  },
+  {
+    "match": "Kuopion Palloseura II vs Fc Inter Turku 2",
+    "league": "Ykkonen",
+    "tier": "AVISO",
+    "probability": 0.9082787723048245,
+    "minute": 5,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      86
+    ],
+    "timestamp": "2026-08-07T17:24:46.314Z",
+    "alertTimestamp": "2026-08-07T15:34:45.330Z"
+  },
+  {
+    "match": "MTK Budapest vs Puskas FC Academy",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.9111506207996423,
+    "minute": 5,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      18,
+      23,
+      52,
+      78,
+      98
+    ],
+    "timestamp": "2026-08-07T17:34:46.681Z",
+    "alertTimestamp": "2026-08-07T15:34:45.330Z"
+  },
+  {
+    "match": "Etar vs Marek",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.927836095146344,
+    "minute": 1,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      72
+    ],
+    "timestamp": "2026-08-07T17:44:48.061Z",
+    "alertTimestamp": "2026-08-07T15:44:58.616Z"
+  },
+  {
+    "match": "Vysocina Jihlava vs Marila Pribram",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.9284186574937064,
+    "minute": 10,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      2,
+      78
+    ],
+    "timestamp": "2026-08-07T17:44:48.154Z",
+    "alertTimestamp": "2026-08-07T15:54:46.215Z"
+  },
+  {
+    "match": "Polonia Bytom vs Pogon Siedlce",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.9069683521682546,
+    "minute": 13,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      9,
+      68,
+      72,
+      82
+    ],
+    "timestamp": "2026-08-07T17:54:55.352Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "SJK Seinajoki vs Gnistan",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.9140038804555539,
+    "minute": 5,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      9,
+      10,
+      11,
+      79
+    ],
+    "timestamp": "2026-08-07T17:54:55.451Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "SK Prostejov vs Karvina",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.885260429846864,
+    "minute": 15,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      29,
+      35,
+      62
+    ],
+    "timestamp": "2026-08-07T17:54:55.844Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Usti Nad Labem vs Arsenal Česká Lípa",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.9167456828549957,
+    "minute": 15,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      13,
+      31,
+      37,
+      72,
+      77,
+      81
+    ],
+    "timestamp": "2026-08-07T17:54:55.935Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Seravezza Pozzi vs Sestri Levante",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9008825426891983,
+    "minute": 10,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      26,
+      48,
+      79,
+      87
+    ],
+    "timestamp": "2026-08-07T17:54:56.118Z",
+    "alertTimestamp": "2026-08-07T16:14:48.442Z"
   }
 ]
