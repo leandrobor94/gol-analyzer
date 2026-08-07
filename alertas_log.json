@@ -1606,5 +1606,755 @@
     ],
     "timestamp": "2026-08-07T17:54:56.118Z",
     "alertTimestamp": "2026-08-07T16:14:48.442Z"
+  },
+  {
+    "match": "FK Lietava Jonava vs Ekranas",
+    "league": "I Lyga",
+    "tier": "AVISO",
+    "probability": 0.9504328443641795,
+    "minute": 3,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      43,
+      64,
+      93
+    ],
+    "timestamp": "2026-08-07T22:55:37.629Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Kuressaare vs Harju Jalgpallikool",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.9314725247889799,
+    "minute": 3,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      47,
+      58,
+      70,
+      91,
+      96
+    ],
+    "timestamp": "2026-08-07T22:55:37.672Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Rustavi vs Torpedo Kutaisi",
+    "league": "Erovnuli Liga",
+    "tier": "AVISO",
+    "probability": 0.920334428231446,
+    "minute": 1,
+    "scoreAtAlert": "2-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empezado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      12
+    ],
+    "timestamp": "2026-08-07T22:55:37.715Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Dukla Praha vs Slavia Kromeriz",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.9154246187411993,
+    "minute": 4,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      35,
+      78
+    ],
+    "timestamp": "2026-08-07T22:55:37.734Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "AEK Larnaca vs Karmiotissa",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8903998520517685,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      11,
+      49,
+      84
+    ],
+    "timestamp": "2026-08-07T22:55:37.758Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Gor Mahia vs Rayon Sports",
+    "league": "CECAFA Kagame Cup",
+    "tier": "AVISO",
+    "probability": 0.886328499603442,
+    "minute": 15,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T22:55:37.789Z",
+    "alertTimestamp": "2026-08-07T16:04:53.010Z"
+  },
+  {
+    "match": "Girona FC vs CE Sabadell",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.920334428231446,
+    "minute": 1,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empezando",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      17,
+      47,
+      58,
+      93
+    ],
+    "timestamp": "2026-08-07T22:55:37.813Z",
+    "alertTimestamp": "2026-08-07T16:35:21.732Z"
+  },
+  {
+    "match": "Huesca vs Andorra CF",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.917753318621809,
+    "minute": 3,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      14,
+      54,
+      73,
+      82
+    ],
+    "timestamp": "2026-08-07T22:55:37.836Z",
+    "alertTimestamp": "2026-08-07T16:35:21.732Z"
+  },
+  {
+    "match": "St. Pölten vs Austria Vienna (AM)",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.9082787723048245,
+    "minute": 5,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      40
+    ],
+    "timestamp": "2026-08-07T22:55:37.935Z",
+    "alertTimestamp": "2026-08-07T16:35:21.732Z"
+  },
+  {
+    "match": "Middlefart vs Brabrand",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.9082787723048245,
+    "minute": 5,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      28,
+      53,
+      90
+    ],
+    "timestamp": "2026-08-07T22:55:37.965Z",
+    "alertTimestamp": "2026-08-07T16:35:21.732Z"
+  },
+  {
+    "match": "FC Liefering vs FC Hertha Wels",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.8338630775001415,
+    "minute": 3,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      14,
+      31,
+      50,
+      79,
+      85
+    ],
+    "timestamp": "2026-08-07T22:55:37.984Z",
+    "alertTimestamp": "2026-08-07T16:35:21.732Z"
+  },
+  {
+    "match": "VFB Oldenburg vs Drochtersen / Assel",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8843360842935271,
+    "minute": 15,
+    "scoreAtAlert": "0-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T22:55:38.004Z",
+    "alertTimestamp": "2026-08-07T16:45:26.259Z"
+  },
+  {
+    "match": "Hannover 96 II vs Hannoverscher SC",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8843360842935271,
+    "minute": 15,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T22:55:38.019Z",
+    "alertTimestamp": "2026-08-07T16:45:26.259Z"
+  },
+  {
+    "match": "Slavia Mozyr vs Dnepr Mogilev",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8807179746647705,
+    "minute": 10,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      43,
+      65,
+      84
+    ],
+    "timestamp": "2026-08-07T22:55:38.075Z",
+    "alertTimestamp": "2026-08-07T16:55:44.039Z"
+  },
+  {
+    "match": "B93 Copenhagen vs FC Roskilde",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.9417384727814712,
+    "minute": 4,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      1,
+      51,
+      78
+    ],
+    "timestamp": "2026-08-07T22:55:38.091Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Sonderjyske vs Viborg",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.932649880580838,
+    "minute": 3,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T22:55:38.120Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Östersunds FK vs GIF Sundsvall",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.927838073979506,
+    "minute": 4,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      23
+    ],
+    "timestamp": "2026-08-07T22:55:38.174Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Cd Alfaro vs Tudelano",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.920334428231446,
+    "minute": 1,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empezando",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      44,
+      56,
+      60
+    ],
+    "timestamp": "2026-08-07T22:55:38.202Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Tienen vs RWDM",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9184115220987227,
+    "minute": 2,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T22:55:38.229Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Vaxjo DFF (F) vs FC Rosengard (F)",
+    "league": "Damallsvenskan",
+    "tier": "AVISO",
+    "probability": 0.9380899393245138,
+    "minute": 25,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      17,
+      21
+    ],
+    "timestamp": "2026-08-07T22:55:38.247Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Levante Badalona (F) vs Villarreal (F)",
+    "league": "Amistosos (F)",
+    "tier": "AVISO",
+    "probability": 0.9178389270423107,
+    "minute": 13,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      7,
+      36,
+      38,
+      48,
+      86,
+      87
+    ],
+    "timestamp": "2026-08-07T22:55:38.309Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Sandefjord vs KFUM Oslo",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.8982437467142944,
+    "minute": 15,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      48
+    ],
+    "timestamp": "2026-08-07T22:55:38.344Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Zbrojovka Brno vs Slovan Liberec",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.7258873498308339,
+    "minute": 45,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61
+    ],
+    "timestamp": "2026-08-07T22:55:38.383Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "AIK (F) vs Brommapojkarna (F)",
+    "league": "Damallsvenskan",
+    "tier": "AVISO",
+    "probability": 0.8992462863165276,
+    "minute": 15,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-08-07T22:55:38.406Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "SV Waldhof Mannheim 07 e.V. vs Fortuna Düsseldorf",
+    "league": "3. Liga - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8669444902934873,
+    "minute": 14,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      48,
+      56
+    ],
+    "timestamp": "2026-08-07T22:55:38.439Z",
+    "alertTimestamp": "2026-08-07T17:05:02.298Z"
+  },
+  {
+    "match": "Fulham vs Crystal Palace",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9100318341110395,
+    "minute": 15,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      33,
+      48
+    ],
+    "timestamp": "2026-08-07T22:55:38.475Z",
+    "alertTimestamp": "2026-08-07T17:14:47.210Z"
+  },
+  {
+    "match": "FC Winterthur vs FC Wil 1900",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.9409564734238942,
+    "minute": 4,
+    "scoreAtAlert": "3-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, resultado abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      2,
+      9,
+      18,
+      49,
+      84
+    ],
+    "timestamp": "2026-08-07T22:55:38.558Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "SC Kriens vs Yverdon-Sport FC",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.9338158700102656,
+    "minute": 3,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      67
+    ],
+    "timestamp": "2026-08-07T22:55:38.590Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "SCR Altach vs WSG Tirol",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.9252294279954832,
+    "minute": 5,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      19,
+      56,
+      86
+    ],
+    "timestamp": "2026-08-07T22:55:38.737Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "07 Vestur vs Streymur",
+    "league": "Formuladeildin",
+    "tier": "AVISO",
+    "probability": 0.924831555700706,
+    "minute": 5,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      22,
+      24,
+      29,
+      70
+    ],
+    "timestamp": "2026-08-07T22:55:38.766Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "Hércules vs Castellón",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8923276417792976,
+    "minute": 13,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      121,
+      122,
+      122,
+      123,
+      124,
+      124,
+      125,
+      125,
+      127
+    ],
+    "timestamp": "2026-08-07T22:55:38.792Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "Racing de Santander vs Alavés",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8945676408556633,
+    "minute": 11,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      45,
+      68,
+      121,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125,
+      125,
+      126,
+      126,
+      129
+    ],
+    "timestamp": "2026-08-07T22:55:38.823Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "FC Stade Lausanne Ouchy vs FC Rapperswil-Jona",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.9057703100752663,
+    "minute": 4,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      89
+    ],
+    "timestamp": "2026-08-07T22:55:38.877Z",
+    "alertTimestamp": "2026-08-07T17:34:46.576Z"
+  },
+  {
+    "match": "Chiclana vs Xerez",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9183976362586282,
+    "minute": 1,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-08-07T22:55:38.956Z",
+    "alertTimestamp": "2026-08-07T17:44:47.968Z"
   }
 ]
