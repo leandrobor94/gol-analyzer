@@ -1124,5 +1124,208 @@
     ],
     "timestamp": "2026-08-07T16:04:53.136Z",
     "alertTimestamp": "2026-08-07T14:04:42.821Z"
+  },
+  {
+    "match": "Lokomotiv Tashkent vs Dinamo Samarkand",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.9144291017973281,
+    "minute": 4,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      7,
+      29
+    ],
+    "timestamp": "2026-08-07T16:35:21.825Z",
+    "alertTimestamp": "2026-08-07T14:34:41.669Z"
+  },
+  {
+    "match": "Naftan Novopolotsk vs FK Arsenal Dzerzhinsk",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.9059769644248992,
+    "minute": 9,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      28,
+      43,
+      46
+    ],
+    "timestamp": "2026-08-07T16:45:26.441Z",
+    "alertTimestamp": "2026-08-07T14:54:59.637Z"
+  },
+  {
+    "match": "Slavia Praha II vs Trinec",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.9226278009134693,
+    "minute": 5,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      2,
+      13,
+      29,
+      32,
+      41
+    ],
+    "timestamp": "2026-08-07T16:55:44.363Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "FC Ararat-Armenia vs Urartu",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.9160010848591967,
+    "minute": 5,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T16:55:44.453Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "Ararat Yerevan vs Sardarapat FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.9123674947427132,
+    "minute": 5,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T16:55:44.541Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "Haka vs JIPPO",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.8940666901768378,
+    "minute": 13,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, resultado ajustado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      7,
+      24,
+      29
+    ],
+    "timestamp": "2026-08-07T16:55:44.829Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "Hellas Verona vs Cremonese",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8843360842935271,
+    "minute": 15,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      33
+    ],
+    "timestamp": "2026-08-07T17:05:02.412Z",
+    "alertTimestamp": "2026-08-07T14:44:42.460Z"
+  },
+  {
+    "match": "Unirea Slobozia vs Gloria Bistrita",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.9184115220987227,
+    "minute": 2,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido recién iniciado",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      52,
+      54,
+      86
+    ],
+    "timestamp": "2026-08-07T17:05:02.506Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
+  },
+  {
+    "match": "Xorazm Urganch vs Mash'al Mubarek",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.894141200550439,
+    "minute": 5,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, sin goles",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-07T17:05:02.616Z",
+    "alertTimestamp": "2026-08-07T15:04:44.933Z"
   }
 ]
