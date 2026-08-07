@@ -162,6 +162,53 @@ Ver `TODO.md` #4.
 
 ---
 
+## 3-bis. EL HALLAZGO MAYOR — llegó el último
+
+**Toda la auditoría preguntó "¿habrá gol?". Nunca preguntó "¿quién gana?".**
+
+Y ahí las estadísticas SÍ hablan:
+
+| Variable | AUC para "gana el local" |
+|---|---|
+| marcador actual | 0.844 |
+| **xG relativo** | **0.634** |
+| **remates a puerta rel.** | **0.625** |
+| **posesión** | **0.616** |
+| ataques relativos | 0.582 |
+
+**Ablación fuera de muestra (n=271):** solo marcador+minuto AUC 0.821 → con estadísticas
+**0.851**. Aporte **+0.030**, positivo por primera vez en todo el proyecto.
+
+**Validación del modelo 1X2** (`result.js`, 5 cortes temporales, n=575):
+
+| Objetivo | AUC | Brier | skill |
+|---|---|---|---|
+| gana local | **0.870** | 0.1416 | **+42.6%** |
+| gana visitante | **0.854** | 0.1385 | **+37.3%** |
+| empate | 0.515 | 0.1760 | −0.7% (impredecible) |
+
+Precisión por convicción, fuera de muestra:
+
+| Umbral | n | Acierto | IC 95% |
+|---|---|---|---|
+| p ≥ 0.70 | 78 | **92.3%** | [84–96%] |
+| p ≥ 0.80 | 45 | **93.3%** | [82–98%] |
+| p ≥ 0.90 | 30 | 93.3% | [79–98%] |
+
+**Es el único >90% del proyecto con señal real y no con el reloj.** Y el 1X2 es el mercado
+más profundo que existe, publicado por 365scores para todos los partidos.
+
+**⚠️ LO QUE FALTA Y DECIDE SI ES UN PRODUCTO:** no está medido si le ganamos al mercado
+**en vivo**. Buena parte del 0.870 viene del marcador (0.844 él solo) y la casa también lo
+conoce. Nuestra ventaja real es el +0.030 de las estadísticas, que es modesto.
+
+Las cuotas de partidos terminados se pueden recuperar (verificado 6/6) pero son
+**pre-partido**: compararnos contra ellas sería trampa, porque nosotros sabemos el
+marcador y ellas no. La comparación honesta necesita cuotas **en vivo** del minuto del
+análisis, que solo se capturan hacia delante — y ya se están capturando.
+
+---
+
 ## 4. Errores propios cometidos en esta sesión — patrón a evitar
 
 ### 4.1 Medir dentro de muestra y creerlo (EL MÁS GRAVE)

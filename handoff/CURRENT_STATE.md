@@ -18,6 +18,7 @@ Fecha del corte: **2026-08-05**. Último commit antes del traspaso: `2b4a059`.
 | Cascada de IA | Verificado en la nube: `OK — IA lista. Provider: groq` |
 | Guardas contra datos corruptos | 4 filtros, probados contra un caso real |
 | Alertas del tier 1T | **Bien calibrado**: dijo 68%, acertó 64.7% (n=17) |
+| **Modelo 1X2** (`result.js`) | **AUC 0.870 / skill +42.6% fuera de muestra.** p≥0.70 → 92.3% (n=78, IC 84-96%). **El mejor resultado del proyecto.** No cableado; falta medir ventaja vs mercado en vivo |
 | **Modelo de REMATES** (`shots.js`) | **MAE 4.02 fuera de muestra vs 5.01 del baseline trivial.** Simulación: 90.7% con margen 5 (n=75, IC 82-95%). **No cableado**: falta fuente de cuotas de remates |
 
 ---

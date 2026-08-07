@@ -6,6 +6,28 @@ solo entonces las apuestas grandes.
 
 ---
 
+## 0. Medir la ventaja del modelo 1X2 contra el mercado EN VIVO — **LO MÁS IMPORTANTE**
+
+**Objetivo.** Saber si el modelo 1X2 (AUC 0.870, 92.3% con p≥0.70) le gana al mercado.
+
+**Motivo.** Es el mejor resultado del proyecto y el único >90% con señal real. Pero buena
+parte de ese AUC viene del marcador, que la casa también conoce. La ventaja real es el
++0.030 que aportan las estadísticas. **Sin esta medición, es una predicción buena, no una
+ventaja demostrada.**
+
+**Cómo.** Las cuotas 1X2 en vivo ya se capturan (`scores365.extractOdds` → campo `odds` de
+cada predicción). Cuando haya ~50 predicciones con odds y resultado, comparar:
+`p_modelo` vs `p_implícita` y calcular ROI real.
+
+**⚠️ NO usar las cuotas de partidos terminados**: son pre-partido, y compararse contra
+ellas es hacer trampa (nosotros sabemos el marcador, ellas no).
+
+**Dificultad.** Baja (solo hay que esperar datos y medir).
+**Dependencias.** La tarea 1 (frecuencia de ejecución).
+**Riesgo.** El resultado puede ser que NO haya ventaja. Es información igual de valiosa.
+
+---
+
 ## 1. Arreglar la frecuencia de ejecución — **BLOQUEANTE**
 
 **Objetivo.** Que el ciclo corra de verdad cada 10 minutos.
