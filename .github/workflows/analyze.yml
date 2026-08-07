@@ -1,13 +1,39 @@
 name: Analizar partidos y alertar
 
+# ─────────────────────────────────────────────────────────────────────────────
+# POR QUE ESTE WORKFLOW NO USA UN CRON DE 10 MINUTOS
+#
+# Lo usaba: `cron: */10`. Medido, no funcionaba. snapshots.jsonl acumulaba huecos
+# de 70+ minutos DENTRO del mismo partido (min 8 -> min 81) y 288 lineas en un
+# dia cuando deberian ser ~4.000. GitHub Actions retrasa y se salta ejecuciones
+# programadas, sobre todo con frecuencias altas y en repos con poca actividad.
+#
+# Eso bloqueaba las tres cosas mas importantes del proyecto: medir la ventaja
+# contra el mercado, calibrar el tier de equipo, y probar el momentum de juego.
+# Ninguna puede acumular datos si el ciclo no corre de verdad.
+#
+# SOLUCION: un solo job que dura horas y hace el bucle POR DENTRO.
+# El cron solo tiene que acertar 3 veces al dia en vez de 144, y dentro del job
+# el intervalo lo controlamos nosotros con sleep — exacto y sin depender de
+# GitHub. Limite de un job: 6 horas. Se usan 4h50 y los arranques van cada 5h,
+# de forma que NUNCA se solapan.
+# ─────────────────────────────────────────────────────────────────────────────
+
 on:
   schedule:
-    # Cada 10 min. Antes era cada 5 (288 corridas/dia) para alimentar un
-    # aprendizaje en vivo que perseguia ruido. Ahora el modelo se entrena
-    # offline, asi que la unica razon para correr seguido es no perder
-    # partidos: 10 min basta.
-    - cron: '*/10 * * * *'
+    # 3 arranques, cada uno de 4h50, separados 5h: cubren 7:05-21:55 Colombia
+    # (12:05-02:55 UTC) SIN SOLAPARSE. El solapamiento importa: con
+    # cancel-in-progress:false un job que pisa al anterior queda ENCOLADO y
+    # arrastra retraso en cascada.
+    - cron: '5 12 * * *'
+    - cron: '5 17 * * *'
+    - cron: '5 22 * * *'
   workflow_dispatch:
+    inputs:
+      minutos:
+        description: 'Duracion del bucle en minutos'
+        required: false
+        default: '290'
 
 concurrency:
   group: gol-analyzer
@@ -16,7 +42,7 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 300
     permissions:
       contents: write
 
@@ -42,34 +68,91 @@ jobs:
         if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
-      - name: Analizar y alertar
+      - name: Bucle de analisis
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # Opcional: filtro IA para el tier VALOR. Sin key, ese tier no alerta.
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          MIN_ODDS: "1.5"
-          MIN_EV: "0.05"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           AI_MODEL: ${{ secrets.AI_MODEL }}
-        run: node run_flashscore.js
+          MIN_ODDS: "1.5"
+          MIN_EV: "0.05"
+          CI: "true"
+        shell: bash
+        run: |
+          DURACION=${{ github.event.inputs.minutos || '290' }}
+          INTERVALO=600              # 10 minutos exactos, controlados por nosotros
+          FIN=$(( $(date +%s) + DURACION * 60 ))
+          RONDA=0
 
-      - name: Guardar datos etiquetados
+          # Commit periodico: si el job muere (timeout, runner caido), no se
+          # pierde todo lo acumulado. Cada 6 rondas = ~1 hora.
+          commit_datos() {
+            git add predictions.json snapshots.jsonl state.json alertas.json alertas_log.json telegram-offset.txt 2>/dev/null || true
+            if git diff --cached --quiet; then return 0; fi
+            git commit -m "datos: ronda ${{ github.run_id }}.$RONDA [skip ci]" || return 0
+            for i in 1 2 3; do
+              git pull --rebase --autostash -q && git push -q && return 0
+              echo "  reintento de push $i"
+              sleep 5
+            done
+            echo "  WARN: no se pudo publicar esta tanda"
+          }
+
+          git config user.name "sofastats-bot"
+          git config user.email "sofastats-bot@users.noreply.github.com"
+
+          while [ $(date +%s) -lt $FIN ]; do
+            RONDA=$((RONDA + 1))
+            INICIO=$(date +%s)
+            echo "══════ RONDA $RONDA ══════"
+
+            # Un fallo de una ronda no debe matar el bucle entero.
+            SALIDA=$(node run_flashscore.js 2>&1) || echo "  ronda $RONDA fallo, se continua"
+            echo "$SALIDA"
+
+            # Fuera del horario Colombia el ciclo no hace nada. Si ademas ya
+            # pasaron las 22:00, no va a volver a haber nada: se corta el bucle
+            # en vez de quemar horas de runner durmiendo.
+            if echo "$SALIDA" | grep -q "Fuera de horario"; then
+              HORA_CO=$(TZ=America/Bogota date +%H)
+              if [ "$HORA_CO" -ge 22 ] || [ "$HORA_CO" -lt 6 ]; then
+                echo "Fuera de horario y sin vuelta atras. Cerrando el bucle."
+                break
+              fi
+            fi
+
+            if [ $((RONDA % 6)) -eq 0 ]; then commit_datos; fi
+
+            # Descontar lo que tardo el analisis para que el intervalo sea real.
+            TARDO=$(( $(date +%s) - INICIO ))
+            ESPERA=$(( INTERVALO - TARDO ))
+            if [ $ESPERA -gt 0 ]; then
+              # No dormir mas alla del final previsto.
+              RESTA=$(( FIN - $(date +%s) ))
+              [ $ESPERA -gt $RESTA ] && ESPERA=$RESTA
+              [ $ESPERA -gt 0 ] && sleep $ESPERA
+            fi
+          done
+
+          echo "Bucle terminado tras $RONDA rondas"
+          commit_datos
+
+      - name: Guardar datos finales
         if: always()
+        shell: bash
         run: |
           git config user.name "sofastats-bot"
           git config user.email "sofastats-bot@users.noreply.github.com"
           git add predictions.json snapshots.jsonl state.json alertas.json alertas_log.json telegram-offset.txt 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "Sin cambios nuevos"
+            echo "Sin cambios pendientes"
           else
-            git commit -m "datos: ronda ${{ github.run_id }} [skip ci]" || true
+            git commit -m "datos: cierre ${{ github.run_id }} [skip ci]" || true
             for i in 1 2 3; do
-              git pull --rebase --autostash && git push && break
-              echo "reintento $i de push"
+              git pull --rebase --autostash -q && git push -q && break
               sleep 5
             done
           fi
-        shell: bash
