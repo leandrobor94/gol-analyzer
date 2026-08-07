@@ -306,7 +306,7 @@ async function main() {
     for (const a of analyzed) {
       const ph = M.phase(a.minute);
       a.phase = ph;
-      a.split = M.teamSplit(a.stats, a.scoreHome, a.scoreAway);
+      a.split = M.teamSplit(a.stats);
       // Probabilidad de la apuesta ANY para esta fase (referencia para decidir
       // a quien vale la pena pedirle cuota).
       a.phaseP = a.lambda > 0 ? 1 - Math.exp(-a.lambda * ph.T) : 0;

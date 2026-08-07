@@ -66,44 +66,42 @@ function phase(minute) {
 /**
  * Reparto de la intensidad de gol entre los dos equipos.
  *
- * CALIBRADO CON DATOS (2026-08-05, 270 partidos con el lado de cada gol
- * recuperado de la API). La version anterior la escribi a ojo con remates a
- * puerta, xG y remates al area, y al medirlo resulto que ninguna de esas tres
- * predice quien marca:
+ * HISTORIA DE UN ERROR MIO, dejada aqui para que no se repita:
  *
- *   ataques RELATIVOS (yo - el)   AUC 0.595   <- la mejor señal
- *   posesion                      AUC 0.580   <- no la usaba
- *   remates a puerta              AUC 0.483   <- le daba peso x3
- *   xG estimado                   AUC 0.494   <- le daba peso x8
- *   remates al area               AUC 0.510
- *   ocasiones claras              AUC 0.499
+ * El 2026-08-05 medi que sobre 270 partidos los ataques RELATIVOS daban AUC
+ * 0.595 y la posesion 0.580, mientras remates a puerta (0.483) y xG (0.494) no
+ * daban nada. Reescribi el reparto con las dos primeras y medi AUC 0.638.
+ * Parecia una mejora clara.
  *
- * La leccion que importa: lo que informa es lo RELATIVO, no lo absoluto.
- * Ataques absolutos dan 0.485 (nada) y los mismos ataques en relativo dan
- * 0.595. No es cuanto ataca un equipo, es cuanto MAS que el otro.
+ * Era dentro de muestra. Validado luego con 5 pliegues temporales, ajustando
+ * SOLO en train:
  *
- * Los coeficientes salen de una regresion logistica sobre esos 270 partidos.
- * AUC 0.638 frente a ~0.50 del reparto anterior. AVISO: ese 0.638 es dentro de
- * muestra; la cifra honesta la dara verify.js cuando haya apuestas resueltas
- * en produccion.
+ *   reparto por remates/xG (este)   AUC 0.644   Brier 0.2368
+ *   reparto por ataques/posesion    AUC 0.538   Brier 0.2632
+ *   bootstrap 2000x: el nuevo gana solo el 5.6% de las veces
+ *
+ * O sea: la version "mejorada" era peor, y esta —escrita a ojo— aguanta fuera
+ * de muestra. Se revierte.
+ *
+ * Lo que SI esta demostrado que falla es la CALIBRACION, no el orden: en
+ * produccion el tier de equipo dijo 61% y acerto el 33% (n=6). El reparto
+ * ordena razonablemente pero la probabilidad que sale es demasiado alta. Eso se
+ * arregla calibrando la salida con datos verificados, no cambiando las
+ * variables. Pendiente hasta tener muestra suficiente.
  */
-function teamSplit(stats, scoreHome, scoreAway) {
+function teamSplit(stats) {
   const s = stats || {};
   const n = (v) => (v == null || Number.isNaN(v) ? 0 : v);
-
-  const atkH = n(s.attacksHome), atkA = n(s.attacksAway);
-  const tot = atkH + atkA;
-  const relAtk = tot > 0 ? (atkH - atkA) / tot : 0;
-  const pos = (s.possessionHome != null ? s.possessionHome : 0.5) - 0.5;
-  const perd = ((scoreHome ?? 0) < (scoreAway ?? 0) ? 1 : 0) - ((scoreAway ?? 0) < (scoreHome ?? 0) ? 1 : 0);
-
-  const z = 2.006 * relAtk + 1.377 * pos + 0.148 * perd - 0.218;
-  const home = 1 / (1 + Math.exp(-z));
+  const peso = (sot, box, xg, atk) => n(sot) * 3 + n(box) * 1.5 + n(xg) * 8 + n(atk) * 0.05;
+  const h = peso(s.sotHome, s.shotsInsideBoxHome, s.xgHome, s.attacksHome);
+  const a = peso(s.sotAway, s.shotsInsideBoxAway, s.xgAway, s.attacksAway);
+  const total = h + a;
+  if (total <= 0) return { home: 0.5, away: 0.5, confident: false };
+  const share = 0.6 * (h / total) + 0.4 * 0.5;
   return {
-    home: Math.round(home * 1e4) / 1e4,
-    away: Math.round((1 - home) * 1e4) / 1e4,
-    // Sin ataques ni posesion no hay señal: se avisa para no fiarse del reparto.
-    confident: tot >= 30 && s.possessionHome != null,
+    home: Math.round(share * 1e4) / 1e4,
+    away: Math.round((1 - share) * 1e4) / 1e4,
+    confident: total >= 12,
   };
 }
 
