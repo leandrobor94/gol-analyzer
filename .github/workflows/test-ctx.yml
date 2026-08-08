@@ -16,7 +16,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          MAX_CASOS: "150"
+          MAX_CASOS: "95"
         run: node _test_ctx.js
       - name: Filtro IA con prompt nuevo sobre las alertas ya resueltas
         if: always()

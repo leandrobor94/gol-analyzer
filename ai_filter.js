@@ -110,7 +110,13 @@ function buildNvidia() {
 
 /**
  * Google AI Studio (Gemini). Capa gratuita oficial y con limites reales:
- * 15 peticiones/min, 1.500/dia y 1.000.000 tokens/min en gemini-2.0-flash.
+ * Limites REALES verificados con la clave del repo (2026-08-07), no los de la
+ * documentacion generica: gemini-2.0-flash devuelve 429 de cuota a la primera,
+ * asi que el modelo que se usa es gemini-2.5-flash y sus limites gratuitos son
+ * 10 peticiones/min, 250/dia y 250.000 tokens/min POR CLAVE.
+ *
+ * Ese 250/dia es lo que manda. Los dos tests suman ~238 llamadas: con una sola
+ * clave entran, pero sin margen para reintentos.
  *
  * Acepta varias claves separadas por coma en GEMINI_API_KEYS y las devuelve
  * como providers distintos, de forma que el fallo de una pase a la siguiente.
@@ -122,6 +128,8 @@ function buildNvidia() {
  *
  * El modelo va en la RUTA, no en el cuerpo: por eso no usa openaiShape.
  */
+let _giro = 0;
+
 function buildGemini() {
   const raw = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || '';
   const keys = raw.split(',').map(k => k.trim()).filter(Boolean);
@@ -130,8 +138,16 @@ function buildGemini() {
   // 2.0-flash y 2.0-flash-lite devuelven 429 de cuota en la PRIMERA llamada
   // (su capa gratuita ya no admite claves nuevas); 2.5-flash-lite da 404.
   const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-  return keys.map((key, i) => ({
-    name: 'gemini' + (keys.length > 1 ? '#' + (i + 1) : ''),
+  // Reparto ROTATORIO, no solo cascada. La cascada pasa a la siguiente clave
+  // cuando una falla; eso no reparte carga: la primera se come todo el limite
+  // diario y las demas no se tocan hasta que reviente. Con 250 peticiones/dia
+  // por clave la diferencia es decisiva. El desfase inicial hace que cada
+  // llamada arranque por una clave distinta, y la cascada sigue cubriendo el
+  // fallo puntual.
+  const off = (_giro++ % keys.length);
+  const rot = keys.slice(off).concat(keys.slice(0, off));
+  return rot.map((key, i) => ({
+    name: 'gemini' + (keys.length > 1 ? '#' + (((off + i) % keys.length) + 1) : ''),
     key,
     host: 'generativelanguage.googleapis.com',
     path: '/v1beta/models/' + model + ':generateContent',

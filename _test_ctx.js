@@ -41,9 +41,9 @@ const get = u => new Promise(ok => { https.get(u, { headers: { 'User-Agent': 'Mo
       real: (H.atk * A.def + A.atk * H.def) / 2 * (H.liga / 2) });
   }
   console.log('casos con fuerza real conocida:', casos.length);
-  const N = Math.min(casos.length, parseInt(process.env.MAX_CASOS || '150', 10));
+  const N = Math.min(casos.length, parseInt(process.env.MAX_CASOS || '95', 10));
   // Gemini permite 15/min por clave; Groq se ahoga por TOKENS/min mucho antes.
-  const PAUSA = parseInt(process.env.PAUSA_MS || '4200', 10);
+  const PAUSA = parseInt(process.env.PAUSA_MS || '6500', 10);
   const muestra = casos.slice(0, N);
   const pares = [];
   const fallos = [];
