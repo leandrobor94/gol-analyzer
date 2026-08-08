@@ -2356,5 +2356,30 @@
     ],
     "timestamp": "2026-08-07T22:55:38.956Z",
     "alertTimestamp": "2026-08-07T17:44:47.968Z"
+  },
+  {
+    "match": "Operário-PR vs São Bernardo",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.8667202009786401,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      30,
+      67,
+      87,
+      92
+    ],
+    "timestamp": "2026-08-08T00:35:37.803Z",
+    "alertTimestamp": "2026-08-07T22:55:37.602Z"
   }
 ]
