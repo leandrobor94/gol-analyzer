@@ -290,4 +290,4 @@ async function smokeTest() {
   return Object.assign({ ok: !r.error && r.available }, r);
 }
 
-module.exports = { reviewAlert, isAvailable, provider, providers, status, smokeTest, buildPrompt };
+module.exports = { reviewAlert, isAvailable, provider, providers, status, smokeTest, buildPrompt, postJson };
