@@ -73,6 +73,18 @@ function label(pred, detail) {
   pred.finalScore = { home: detail.home, away: detail.away };
   pred.goalAfterAnalysis = final > before;
 
+  // ESTADISTICAS FINALES. Sin esto no se puede medir que eventos son
+  // predecibles: hace falta el par (lo que iba en el minuto X, el total final).
+  //
+  // Es el tercer sitio donde el problema no fue el analisis sino que el dato
+  // nunca se guardo: la cuota de cada apuesta, la serie de cuotas, y esto.
+  // De los tres, este es el que bloquea el unico mercado con ventaja medida
+  // sobre un baseline trivial —remates, MAE 4.02 contra 5.01— porque impide
+  // reverificarlo con datos propios en vez de confiar en la medicion original.
+  if (detail.stats && typeof detail.stats === 'object') {
+    pred.finalStats = detail.stats;
+  }
+
   const goals = Array.isArray(detail.goals) ? detail.goals : [];
   if (goals.length) {
     pred.goalMinutes = goals.map(g => g.minute);

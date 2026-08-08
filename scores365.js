@@ -215,6 +215,18 @@ async function fetchGameDetail(gameId) {
     homeTeam: g.homeCompetitor && g.homeCompetitor.name,
     awayTeam: g.awayCompetitor && g.awayCompetitor.name,
     goals,
+    // Estadisticas FINALES. El endpoint /game/ NO las trae (verificado: el campo
+    // statistics viene vacio); viven en /game/stats/, que es el mismo que usa el
+    // ciclo en vivo. Se piden aparte y se pasan por toInternalFormat para que el
+    // par (lo que iba en el minuto X, el total final) sea comparable campo a
+    // campo. Es una peticion extra, pero solo se hace una vez por partido al
+    // verificarlo, no en cada ronda.
+    stats: await (async () => {
+      try {
+        const raw = await fetchMatchStats(gameId, homeId, g.awayCompetitor && g.awayCompetitor.id);
+        return raw ? toInternalFormat(raw, { homeId }) : null;
+      } catch { return null; }
+    })(),
   };
 }
 
