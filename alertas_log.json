@@ -2381,5 +2381,118 @@
     ],
     "timestamp": "2026-08-08T00:35:37.803Z",
     "alertTimestamp": "2026-08-07T22:55:37.602Z"
+  },
+  {
+    "match": "Inter Miami II vs Crown Legacy",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.8754537819976603,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T01:05:38.175Z",
+    "alertTimestamp": "2026-08-07T23:05:54.134Z"
+  },
+  {
+    "match": "Orlando Pride vs Racing Louisville FC",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.877783214684881,
+    "minute": 26,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      16,
+      68
+    ],
+    "timestamp": "2026-08-08T01:16:11.416Z",
+    "alertTimestamp": "2026-08-07T23:15:42.852Z"
+  },
+  {
+    "match": "Ceará vs Ponte Preta",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.87825559831193,
+    "minute": 25,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      29,
+      78
+    ],
+    "timestamp": "2026-08-08T01:25:48.429Z",
+    "alertTimestamp": "2026-08-07T23:35:47.806Z"
+  },
+  {
+    "match": "Real Tomayapo vs Real Oruro",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.9017125701038002,
+    "minute": 25,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      13,
+      43,
+      82
+    ],
+    "timestamp": "2026-08-08T01:25:48.463Z",
+    "alertTimestamp": "2026-08-07T23:35:47.806Z"
+  },
+  {
+    "match": "Charlotte FC vs Atlas",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8867960930421619,
+    "minute": 26,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto",
+      "provider": "groq"
+    },
+    "goalMinutes": [
+      78,
+      95
+    ],
+    "timestamp": "2026-08-08T01:45:37.385Z",
+    "alertTimestamp": "2026-08-07T23:45:47.585Z"
   }
 ]
