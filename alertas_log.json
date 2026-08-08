@@ -2568,5 +2568,41 @@
     ],
     "timestamp": "2026-08-08T02:50:59.526Z",
     "alertTimestamp": "2026-08-08T00:05:37.538Z"
+  },
+  {
+    "match": "Tepatitlán de Morelos vs Atletico La Paz",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8811817924414624,
+    "minute": 26,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      31,
+      43,
+      58,
+      73,
+      92
+    ],
+    "timestamp": "2026-08-08T03:44:51.704Z",
+    "alertTimestamp": "2026-08-08T01:05:38.142Z"
+  },
+  {
+    "match": "Atlas (F) vs Pachuca (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8759206116050827,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T03:45:20.873Z",
+    "alertTimestamp": "2026-08-08T01:16:11.345Z"
   }
 ]

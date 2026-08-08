@@ -343,13 +343,23 @@ async function main() {
       a.phaseP = a.lambda > 0 ? 1 - Math.exp(-a.lambda * ph.T) : 0;
     }
 
-    // Solo se pide la cuota a los que ya caen en la banda apostable: cada
-    // consulta es una llamada extra y no tiene sentido gastarla en descartados.
-    const mktTargets = analyzed.filter(a => {
-      if (!a.phaseP) return false;
-      // Se pide cuota a los que ya convencen: son los unicos que pueden alertar.
-      return a.phaseP >= MIN_PROB && hasMeaningfulStats(a.stats);
-    }).slice(0, 12);
+    // MUESTRA SIN SESGO. Antes se pedia la cuota solo a los partidos que el
+    // modelo ya aprobaba (phaseP >= MIN_PROB, y solo dentro de las ventanas de
+    // aviso). Para decidir si alertar eso bastaba; para MEDIR no vale.
+    //
+    // La pregunta abierta es si la casa valora mal un ESTADO concreto —0-0 en
+    // el minuto 70 en una liga pequeña— y eso se contesta comparando su linea
+    // con lo que pasa de verdad en TODOS los partidos de ese estado. Si solo
+    // guardamos la linea de los partidos que nos gustan, la muestra la elige
+    // nuestro propio modelo y la comparacion no mide a la casa: nos mide a
+    // nosotros. Ademas los estados fuera de ventana —justo los que interesa
+    // estudiar— no se capturaban nunca.
+    //
+    // Ahora el criterio es puramente observable: minuto en rango y estadisticas
+    // reales. Ni probabilidad, ni fase, ni nada que dependa del modelo.
+    const mktTargets = analyzed
+      .filter(a => (a.minute || 0) >= 15 && (a.minute || 0) <= 88 && hasMeaningfulStats(a.stats))
+      .slice(0, 25);
 
     if (mktTargets.length && model.trained) {
       console.log('\n  Consultando cuota de goles en ' + mktTargets.length + ' candidatos...');
@@ -433,7 +443,12 @@ async function main() {
       });
     } else {
       const msg = notify.buildMessage(toSend, model);
-      if (msg && await notify.sendTelegram(msg)) {
+      // DRY_RUN permite recorrer el ciclo entero —analisis, cuotas, guardado—
+      // sin mandar nada. Es la unica forma de comprobar que los campos nuevos
+      // llegan de verdad al fichero antes de fiarse de ellos en produccion.
+      if (process.env.DRY_RUN === '1') {
+        console.log('  [DRY_RUN] no se envia: ' + String(msg || '').slice(0, 70).replace(/\s+/g, ' '));
+      } else if (msg && await notify.sendTelegram(msg)) {
         for (const c of toSend) {
           state.alertedMatches[c.matchId + '_' + c.gate.tier] = { timestamp: Date.now(), minute: c.minute || 0, tier: c.gate.tier };
           c.alerted = true;
