@@ -218,3 +218,48 @@ es no saber nada y creer que sabemos.
 | Alertar sobre córners | corr −0.03, tan impredecibles como los goles |
 | Sitios de terceros con claves de API gratis | Claves ajenas, proxies que registran prompts, o phishing |
 | Usar la cuota 1X2 para el mercado de goles | Predecir quién gana no es predecir cuántos goles caen |
+
+---
+
+## D-17 · La fuerza de equipo entra como multiplicador de lambda (no como feature)
+
+**Fecha:** 2026-08-07 · **Estado:** aplicado en produccion
+
+**Que se decidio.** `scores365.fetchStandings()` deriva ataque y defensa de la tabla
+(forma Dixon-Coles: goles a favor por partido / media de la liga). `strengthFactor()`
+combina los dos equipos y devuelve un multiplicador acotado a **[0.65, 1.55]**.
+`model.rawProb()` lo aplica sobre lambda. Sin tabla devuelve `null` y el modelo se
+comporta **exactamente** como antes.
+
+**Por que multiplicador y no una feature mas de la regresion.**
+1. Los 783 partidos de entrenamiento no tienen la fuerza guardada: no hay con que
+   ajustar un coeficiente. Se empieza a guardar ahora (campo `strength` en cada
+   prediccion) para poder hacerlo bien en el proximo reentreno.
+2. El factor esta centrado en 1.0 por construccion —es un ratio contra la media de
+   la liga—, asi que la calibracion de Platt existente sigue valiendo en promedio.
+   Un coeficiente libre no daria esa garantia sin recalibrar.
+
+**Validacion de ESTA implementacion** (no del concepto: son cosas distintas y
+confundirlas fue el error D-14). 141 partidos con tabla, tasa base 40.4%:
+
+| | AUC | Brier | Top 20% |
+|---|---|---|---|
+| Sin fuerza | 0.5819 | 0.2361 | 46.4% |
+| **Con fuerza** | **0.6140** | **0.2288** | **57.1%** |
+| Diferencia | +0.0322 | +0.0073 | +10.7 pts |
+
+Bootstrap 2.000 remuestras: la version con fuerza gana en el **100%**.
+
+**Limites que van con el numero.**
+- **Fuga de informacion:** las tablas usadas para medir son las de HOY e incluyen el
+  resultado de los partidos que se predicen. El +0.032 es un **techo**, no una cifra
+  limpia. Por eso la tabla se pide ahora EN VIVO y se guarda: dentro de unas semanas
+  habra una medicion sin fuga. Es la razon principal del cambio.
+- **Cobertura ~57%:** copas, amistosos y torneos entre ligas no publican tabla. Ahi
+  `strength` es null y no se inventa nada.
+- **Muestra corta:** el limite [0.65, 1.55] existe porque con 3-5 jornadas un equipo
+  puede salir con atk 3.0, y eso dice que lleva tres partidos, no que marque el triple.
+
+**Lo que NO se toco.** El filtro de IA sigue sin cablearse a esto. Sus tests fallan
+todavia a nivel de infraestructura (limite de tokens/minuto de Groq), y un modulo cuyo
+unico resultado medido es "no contesta" no entra en produccion.

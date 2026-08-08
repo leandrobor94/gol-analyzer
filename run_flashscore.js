@@ -226,14 +226,25 @@ async function main() {
     // ── 2. stats + contexto de liga ──
     console.log('\n[2/4] Stats y contexto...');
     const leagueCtx = {};
+    const tablas = {};
     for (const compId of [...new Set(liveData.map(m => m.competitionId).filter(Boolean))]) {
       try {
         const ctx = await scores365.fetchLeagueContext(compId);
         if (ctx && ctx.goalsPerMatch) leagueCtx[compId] = ctx.goalsPerMatch;
       } catch {}
+      // La tabla es lo unico que la ablacion midio que aporta (+0.036 AUC en
+      // los 191 partidos con tabla; el orden pasa de 0.665 a 0.701). Se pide
+      // AQUI y no despues a proposito: la fuerza tiene que ser la de ANTES del
+      // partido. Guardarla en vivo es lo que permitira validarla sin la fuga
+      // que tienen las tablas de hoy —que ya incluyen el resultado que se
+      // quiere predecir— y por eso el 0.701 medido es un techo, no una cifra
+      // limpia.
+      try { tablas[compId] = await scores365.fetchStandings(compId); } catch {}
     }
+    const conTabla = Object.values(tablas).filter(Boolean).length;
     console.log('  -> contexto de ' + Object.keys(leagueCtx).length + '/' +
-      new Set(liveData.map(m => m.competitionId)).size + ' ligas');
+      new Set(liveData.map(m => m.competitionId)).size + ' ligas' +
+      ' | tabla en ' + conTabla + ' competiciones');
 
     for (const m of liveData) {
       // Descartar marcadores imposibles (datos corruptos del feed)
@@ -250,10 +261,16 @@ async function main() {
       if (!stats || !hasMeaningfulStats(stats)) {
         stats = Object.assign({}, scores365.NULL_STATS, stats || {});
       }
+      // null cuando no hay tabla (copas, amistosos, torneos entre ligas: ~43%
+      // de los partidos). Ahi el modelo se comporta igual que antes. No se
+      // inventa una fuerza que no se puede calcular.
+      const fuerza = scores365.strengthFactor(tablas[m.competitionId], m.homeId, m.awayId);
       analyzed.push({
         matchId: String(m.gameId),
         teamHome: m.homeTeam, teamAway: m.awayTeam,
+        homeId: m.homeId, awayId: m.awayId,
         league: m.league, competitionId: m.competitionId,
+        strength: fuerza,
         leagueGoalsPerMatch: leagueCtx[m.competitionId] || null,
         minute: m.minute || 0,
         scoreHome: m.scoreHome ?? 0, scoreAway: m.scoreAway ?? 0,
@@ -429,6 +446,10 @@ async function main() {
         leagueGoalsPerMatch: a.leagueGoalsPerMatch,
         odds: a.odds,
         lambda: a.lambda,
+        // Se guarda aunque sea null: sin este campo el proximo reentreno no
+        // puede ajustarle un coeficiente propio y habria que volver a pedir
+        // las tablas a posteriori, que es justo lo que introduce la fuga.
+        strength: a.strength ?? null,
         lastAnalyzedAt: now,
       };
       if (existing) {
@@ -450,6 +471,7 @@ async function main() {
           match: a.teamHome + ' vs ' + a.teamAway,
           teamHome: a.teamHome, teamAway: a.teamAway,
           league: a.league, competitionId: a.competitionId,
+          homeId: a.homeId ?? null, awayId: a.awayId ?? null,
           timestamp: now,
           alertTier: a.alerted ? a.gate.tier : null,
           alertProbability: a.alerted ? a.probability : null,

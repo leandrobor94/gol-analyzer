@@ -215,12 +215,25 @@ function applyPlatt(cal, p) {
 // ─────────────────────────────── scoring ───────────────────────────────
 
 /** Probabilidad cruda del Poisson, sin calibrar. */
-function rawProb(model, features, T) {
+function rawProb(model, features, T, strength) {
   let z = model.b0;
   for (let i = 0; i < model.features.length; i++) {
     z += model.b[i] * num(features[model.features[i]]);
   }
-  const lambda = Math.exp(Math.min(z, 2.5));
+  let lambda = Math.exp(Math.min(z, 2.5));
+  // FUERZA DE EQUIPO. Es la forma de Dixon-Coles: lambda es una TASA, y la
+  // calidad del emparejamiento la escala. Entra como multiplicador y no como
+  // feature de la regresion por dos motivos:
+  //
+  //   1. Los 783 partidos de entrenamiento no la tienen guardada, asi que no
+  //      hay con que ajustarle un coeficiente todavia. Se empieza a guardar
+  //      ahora (campo strength de cada prediccion) para poder hacerlo bien.
+  //   2. El factor esta centrado en 1.0 por construccion —es un ratio contra
+  //      la media de la liga— asi que la calibracion de Platt existente sigue
+  //      valiendo en promedio. Un coeficiente libre no tendria esa garantia.
+  //
+  // Sin tabla, strength es null y el comportamiento es exactamente el de antes.
+  if (strength > 0) lambda *= strength;
   return { p: 1 - Math.exp(-lambda * T), lambda };
 }
 
@@ -235,7 +248,7 @@ function score(model, m) {
     return { probability: 0, score: 0, lambda: 0, minsLeft: T, raw: 0, prob15: 0, score15: 0, trained: false };
   }
   const f = extractFeatures(m);
-  const { p, lambda } = rawProb(model, f, T);
+  const { p, lambda } = rawProb(model, f, T, m.strength);
   const cal = applyPlatt(model.calibration, p);
   const p15 = 1 - Math.exp(-lambda * Math.min(15, T));
   return {

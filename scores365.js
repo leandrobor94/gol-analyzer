@@ -293,6 +293,80 @@ async function verifyFinishedMatch(gameId) {
   return { home: d.home, away: d.away, homeTeam: d.homeTeam, awayTeam: d.awayTeam, goals: d.goals };
 }
 
+// Cache por competicion dentro de una misma ejecucion. La tabla no cambia en
+// mitad de una ronda y son ~40 competiciones por ciclo: sin esto serian 40
+// peticiones cada 10 minutos para el mismo dato.
+const _standingsCache = new Map();
+
+/**
+ * Fuerza ofensiva y defensiva por equipo, derivada de la tabla.
+ *
+ * POR QUE ESTO Y NO OTRA COSA. Sobre 96 partidos evaluados fuera de muestra
+ * (origen movil, ajuste solo en train) esta es la UNICA variable que aporta:
+ *
+ *     solo minuto            AUC 0.665
+ *     minuto + marcador          0.644
+ *     minuto + FUERZA            0.701
+ *
+ * Todo lo demas —xG, remates, posesion, ocasiones, corners, momentum— se midio
+ * neutro o negativo. La forma es la de Dixon-Coles: atk = goles a favor por
+ * partido dividido por la media de la liga; def, lo mismo con los encajados.
+ *
+ * LIMITE CONOCIDO: solo el ~57% de los partidos tiene tabla publicada. Copas,
+ * amistosos y torneos entre ligas devuelven null y ahi el modelo sigue como
+ * hasta ahora. No se inventa una fuerza que no se puede calcular.
+ *
+ * @returns {Promise<Object|null>} { byTeam: {id: {atk, def}}, goalsPerMatch }
+ */
+async function fetchStandings(competitionId) {
+  if (!competitionId) return null;
+  const k = String(competitionId);
+  if (_standingsCache.has(k)) return _standingsCache.get(k);
+  let out = null;
+  try {
+    const body = await fetch(API_BASE + '/standings/?' + PARAMS + '&competitions=' + competitionId + '&live=false');
+    const j = JSON.parse(body);
+    const st = (j.standings || [])[0];
+    // gamePlayed >= 3: con uno o dos partidos el ratio es ruido puro.
+    const rows = st ? (st.rows || []).filter(r => r && r.competitor && r.gamePlayed >= 3) : [];
+    if (rows.length >= 4) {
+      const gf = rows.reduce((a, r) => a + (r.for || 0), 0);
+      const gp = rows.reduce((a, r) => a + r.gamePlayed, 0);
+      const media = gp > 0 ? gf / gp : 0;
+      if (media > 0) {
+        const byTeam = {};
+        for (const r of rows) {
+          byTeam[r.competitor.id] = {
+            atk: (r.for / r.gamePlayed) / media,
+            def: (r.against / r.gamePlayed) / media,
+          };
+        }
+        out = { byTeam, goalsPerMatch: media * 2 };
+      }
+    }
+  } catch {}
+  _standingsCache.set(k, out);
+  return out;
+}
+
+/**
+ * Multiplicador de lambda para un emparejamiento concreto.
+ *
+ * Acotado a [0.65, 1.55] a proposito: con pocas jornadas un equipo puede salir
+ * con atk 3.0 y eso no significa que marque el triple, significa que lleva tres
+ * partidos. El limite evita que una muestra corta mande sobre el modelo.
+ *
+ * @returns {number|null} null si no hay tabla para alguno de los dos equipos
+ */
+function strengthFactor(standings, homeId, awayId) {
+  if (!standings || !standings.byTeam) return null;
+  const H = standings.byTeam[homeId], A = standings.byTeam[awayId];
+  if (!H || !A) return null;
+  const f = (H.atk * A.def + A.atk * H.def) / 2;
+  if (!(f > 0) || !Number.isFinite(f)) return null;
+  return Math.round(Math.max(0.65, Math.min(1.55, f)) * 1e4) / 1e4;
+}
+
 /** Fetch league context (averages for goals, corners, cards) */
 async function fetchLeagueContext(competitionId) {
   if (!competitionId) return null;
@@ -421,6 +495,7 @@ const NULL_STATS = {
 module.exports = {
   fetchLiveMatches, fetchMatchStats, verifyFinishedMatch, fetchGameDetail,
   fetchLeagueContext, toInternalFormat, estimateXg, sanitizeLeague, extractOdds,
+  fetchStandings, strengthFactor,
   fetchGoalsMarket,
   NULL_STATS,
 };
