@@ -464,6 +464,17 @@ async function main() {
         // puede ajustarle un coeficiente propio y habria que volver a pedir
         // las tablas a posteriori, que es justo lo que introduce la fuga.
         strength: a.strength ?? null,
+        // MERCADO DE GOLES: la LINEA que pone la casa y lo que paga.
+        //
+        // Se pedia ya, se usaba para calcular EV en el momento, y se tiraba.
+        // Es el dato que decide la hipotesis mas prometedora que queda: sobre
+        // 851 partidos terminados la media global es 2.86 goles, pero por
+        // competicion va de 3.17 a 4.00 —Copa rumana 4.00 con 78% de over 2.5,
+        // DBU Pokalen 3.44 con 75%—. Si la casa pone 2.5 en esas ligas en vez
+        // de ajustar por competicion, apostar over acierta sin necesidad de
+        // modelo. Y si pone 3.5, no hay nada. Sin guardar la linea no se puede
+        // distinguir un caso del otro.
+        goalsMarket: a.goalsMarket || null,
         lastAnalyzedAt: now,
       };
       if (existing) {
