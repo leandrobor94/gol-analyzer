@@ -2604,5 +2604,74 @@
     "goalMinutes": [],
     "timestamp": "2026-08-08T03:45:20.873Z",
     "alertTimestamp": "2026-08-08T01:16:11.345Z"
+  },
+  {
+    "match": "CS Cartaginés vs Sporting FC",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8634134335548225,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      52,
+      62,
+      86
+    ],
+    "timestamp": "2026-08-08T12:57:52.964Z",
+    "alertTimestamp": "2026-08-08T02:01:09.466Z"
+  },
+  {
+    "match": "Deportivo Malacateco vs Club Xelaju",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.864823376742615,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T12:57:53.096Z",
+    "alertTimestamp": "2026-08-08T02:11:00.020Z"
+  },
+  {
+    "match": "Miramar vs FC Western",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.9749199972109275,
+    "minute": 21,
+    "scoreAtAlert": "7-0",
+    "finalScore": "12-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T12:57:53.258Z",
+    "alertTimestamp": "2026-08-08T02:30:58.127Z"
+  },
+  {
+    "match": "Vancouver Whitecaps vs Juárez",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.9045177390758042,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      34,
+      74,
+      96
+    ],
+    "timestamp": "2026-08-08T12:57:53.304Z",
+    "alertTimestamp": "2026-08-08T02:41:11.597Z"
   }
 ]
