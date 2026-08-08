@@ -2827,5 +2827,273 @@
     ],
     "timestamp": "2026-08-08T14:49:29.106Z",
     "alertTimestamp": "2026-08-08T12:57:52.933Z"
+  },
+  {
+    "match": "Tailandia vs Myanmar",
+    "league": "ASEAN Championship",
+    "tier": "AVISO",
+    "probability": 0.8864887996301518,
+    "minute": 27,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y sin señales de juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      52
+    ],
+    "timestamp": "2026-08-08T14:59:33.591Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Deportivo Capiata vs Sol de América",
+    "league": "Division Intermedia",
+    "tier": "AVISO",
+    "probability": 0.9302159167796235,
+    "minute": 27,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      22,
+      44,
+      50,
+      73
+    ],
+    "timestamp": "2026-08-08T15:00:08.702Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Djurgardens (F) vs IK Uppsala (F)",
+    "league": "Damallsvenskan",
+    "tier": "AVISO",
+    "probability": 0.932963882825114,
+    "minute": 28,
+    "scoreAtAlert": "5-0",
+    "finalScore": "8-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, liga de scoring medio, y Djurgardens dominando con remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      23,
+      36,
+      51,
+      69
+    ],
+    "timestamp": "2026-08-08T15:00:08.956Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Örgryte IS vs AIK Solna",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.8989620213267123,
+    "minute": 26,
+    "scoreAtAlert": "2-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, y un gol de ventaja no es definitivo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      30,
+      32,
+      74,
+      84,
+      87,
+      96
+    ],
+    "timestamp": "2026-08-08T15:00:26.114Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Vasas vs Zalaegerszegi TE",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.9306984242200458,
+    "minute": 28,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, xG alto (aunque estimado), y muchas llegadas a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      7,
+      56,
+      79,
+      86
+    ],
+    "timestamp": "2026-08-08T15:29:20.586Z",
+    "alertTimestamp": "2026-08-08T13:38:10.931Z"
+  },
+  {
+    "match": "1. FC Köln vs Real Sociedad",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8902031183038494,
+    "minute": 27,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con goles, sin datos de xG reales para descartar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      10
+    ],
+    "timestamp": "2026-08-08T15:29:20.613Z",
+    "alertTimestamp": "2026-08-08T13:38:10.931Z"
+  },
+  {
+    "match": "Bayer Leverkusen vs Sevilla FC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8882635545178548,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador ajustado y sin datos de xG reales. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      66,
+      78
+    ],
+    "timestamp": "2026-08-08T15:29:20.727Z",
+    "alertTimestamp": "2026-08-08T13:38:10.931Z"
+  },
+  {
+    "match": "Miedz Legnica vs Pogoń Grodzisk",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.8868166796292444,
+    "minute": 27,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T15:29:20.806Z",
+    "alertTimestamp": "2026-08-08T13:38:10.931Z"
+  },
+  {
+    "match": "Rapid Wien II vs ASK Voitsberg",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.9269314823566768,
+    "minute": 28,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador 0-2, y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      21,
+      84,
+      88
+    ],
+    "timestamp": "2026-08-08T15:29:20.842Z",
+    "alertTimestamp": "2026-08-08T13:38:10.931Z"
+  },
+  {
+    "match": "Orlando Pirates vs Durban City",
+    "league": "MTN 8 Cup - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.6656909661017087,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, un equipo con 10 jugadores, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      52,
+      120
+    ],
+    "timestamp": "2026-08-08T15:38:27.222Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Leeds United vs RB Leipzig",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8736490760510359,
+    "minute": 25,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      7,
+      120
+    ],
+    "timestamp": "2026-08-08T15:38:27.267Z",
+    "alertTimestamp": "2026-08-08T13:08:22.528Z"
   }
 ]
