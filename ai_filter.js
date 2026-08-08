@@ -63,9 +63,16 @@ const https = require('https');
  * lista, se pasa al siguiente y el sistema sigue funcionando.
  */
 function providers() {
-  // Groq y NVIDIA van primero a proposito: ambos tienen capa gratuita real y
-  // no dependen de que quede saldo en una cuenta de pago.
-  return [buildGroq(), buildNvidia(), buildOpenAI(), buildAnthropic()].filter(Boolean);
+  // Gemini va PRIMERO por una razon medida, no por preferencia. El cuello de
+  // botella real no son las peticiones por minuto sino los TOKENS por minuto:
+  //
+  //     Groq gratuito     ~6.000 TPM   -> 5 respuestas validas de 60 (429)
+  //     Gemini gratuito  1.000.000 TPM -> el limite deja de existir
+  //
+  // Groq admite mas peticiones por minuto (30 vs 15), pero con un prompt de
+  // ~350 tokens se agota antes la cuota de tokens que la de peticiones. Ese fue
+  // exactamente el fallo que dejo los tests de IA sin muestra.
+  return [...buildGemini(), buildGroq(), buildNvidia(), buildOpenAI(), buildAnthropic()].filter(Boolean);
 }
 
 /**
@@ -99,6 +106,52 @@ function buildNvidia() {
     'nvidia', 'integrate.api.nvidia.com', '/v1/chat/completions',
     process.env.NVIDIA_API_KEY,
     process.env.NVIDIA_MODEL || 'meta/llama-3.3-70b-instruct');
+}
+
+/**
+ * Google AI Studio (Gemini). Capa gratuita oficial y con limites reales:
+ * 15 peticiones/min, 1.500/dia y 1.000.000 tokens/min en gemini-2.0-flash.
+ *
+ * Acepta varias claves separadas por coma en GEMINI_API_KEYS y las devuelve
+ * como providers distintos, de forma que el fallo de una pase a la siguiente.
+ * Con nuestro volumen (~240 llamadas por test) UNA sola clave sobra: son 16
+ * minutos y el limite diario ni se roza. La rotacion existe por si produccion
+ * necesita mas caudal, no para multiplicar cuota gratuita — repartir carga
+ * entre varias cuentas para saltarse un limite va contra los terminos de
+ * Google, y esa decision es del dueño del repo, no de este codigo.
+ *
+ * El modelo va en la RUTA, no en el cuerpo: por eso no usa openaiShape.
+ */
+function buildGemini() {
+  const raw = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || '';
+  const keys = raw.split(',').map(k => k.trim()).filter(Boolean);
+  if (!keys.length) return [];
+  const model = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+  return keys.map((key, i) => ({
+    name: 'gemini' + (keys.length > 1 ? '#' + (i + 1) : ''),
+    key,
+    host: 'generativelanguage.googleapis.com',
+    path: '/v1beta/models/' + model + ':generateContent',
+    model,
+    headers: (k) => ({ 'Content-Type': 'application/json', 'x-goog-api-key': k }),
+    body: (m, messages, jsonMode = true) => {
+      const sys = (messages.find(x => x.role === 'system') || {}).content || '';
+      const user = messages.filter(x => x.role === 'user').map(x => x.content).join('\n');
+      const gen = { temperature: 0.05, maxOutputTokens: 300 };
+      if (jsonMode) gen.responseMimeType = 'application/json';
+      const payload = {
+        contents: [{ role: 'user', parts: [{ text: user }] }],
+        generationConfig: gen,
+      };
+      if (sys) payload.systemInstruction = { parts: [{ text: sys }] };
+      return JSON.stringify(payload);
+    },
+    parse: (j) => {
+      const c = j && j.candidates && j.candidates[0];
+      const parts = c && c.content && c.content.parts;
+      return (parts && parts.map(x => x.text || '').join('')) || '';
+    },
+  }));
 }
 
 /** Primer provider disponible. Compat con el codigo que solo quiere saber si hay alguno. */

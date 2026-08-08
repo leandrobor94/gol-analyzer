@@ -42,6 +42,8 @@ const get = u => new Promise(ok => { https.get(u, { headers: { 'User-Agent': 'Mo
   }
   console.log('casos con fuerza real conocida:', casos.length);
   const N = Math.min(casos.length, parseInt(process.env.MAX_CASOS || '150', 10));
+  // Gemini permite 15/min por clave; Groq se ahoga por TOKENS/min mucho antes.
+  const PAUSA = parseInt(process.env.PAUSA_MS || '4200', 10);
   const muestra = casos.slice(0, N);
   const pares = [];
   const fallos = [];
@@ -52,7 +54,7 @@ const get = u => new Promise(ok => { https.get(u, { headers: { 'User-Agent': 'Mo
     if (r) pares.push({ real: c.real, ia: r.goles, conf: r.confianza, eq: c.teamHome + ' vs ' + c.teamAway });
     if (!r) fallos.push(estimarRitmo.ultimoFallo || 'sin motivo');
     if (i % 20 === 0) console.log('  ' + i + '/' + N + '  validas=' + pares.length);
-    await new Promise(r2 => setTimeout(r2, 2300));  // Groq gratis: ~30/min
+    await new Promise(r2 => setTimeout(r2, PAUSA));
   }
   console.log('respuestas validas:', pares.length, 'de', N);
   if (fallos.length) {

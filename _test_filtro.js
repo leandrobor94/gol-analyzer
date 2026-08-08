@@ -77,7 +77,7 @@ async function juzgar(a) {
     i++;
     if (j) out.push({ won: a.bet.won, ok: j.aprobar, razon: j.razon });
     if (i % 20 === 0) console.log('  ' + i + '/' + res.length + '  juzgadas=' + out.length);
-    await new Promise(r => setTimeout(r, 2300));
+    await new Promise(r => setTimeout(r, parseInt(process.env.PAUSA_MS || '4200', 10)));
   }
   console.log('juzgadas:', out.length, 'de', res.length);
   if (out.length < 20) { console.log('muestra insuficiente'); return; }
