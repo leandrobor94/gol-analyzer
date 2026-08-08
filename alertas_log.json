@@ -3095,5 +3095,248 @@
     ],
     "timestamp": "2026-08-08T15:38:27.267Z",
     "alertTimestamp": "2026-08-08T13:08:22.528Z"
+  },
+  {
+    "match": "Kelty Hearts vs Stirling",
+    "league": "League Two escocia",
+    "tier": "AVISO",
+    "probability": 0.7207438956733336,
+    "minute": 60,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, volumen de juego aceptable para la liga.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T15:57:50.155Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Derby vs Lincoln",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9294179067640411,
+    "minute": 28,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador 0-2, y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      3,
+      23,
+      46
+    ],
+    "timestamp": "2026-08-08T15:57:50.548Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Dundee vs Aberdeen",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.8831901654642629,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Dundee domina con 2 grandes ocasiones y 3 tiros a puerta, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      56
+    ],
+    "timestamp": "2026-08-08T15:57:50.598Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Crewe vs Accrington",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5681672475344977,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      65,
+      85
+    ],
+    "timestamp": "2026-08-08T15:57:50.855Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Bradford vs Rochdale",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6038167911976359,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      46,
+      67
+    ],
+    "timestamp": "2026-08-08T15:57:50.968Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Brighton vs AS Roma",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8817498850229838,
+    "minute": 25,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad y el marcador está 0-0.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      31,
+      42,
+      49
+    ],
+    "timestamp": "2026-08-08T15:57:52.122Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Cardiff vs Swindon",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8954119719661671,
+    "minute": 28,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles esperados, marcador ajustado y sin señales de esterilidad en el juego.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      29,
+      43,
+      62,
+      77
+    ],
+    "timestamp": "2026-08-08T15:57:52.444Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Gillingham vs Luton",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5741584996071896,
+    "minute": 79,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      59,
+      78
+    ],
+    "timestamp": "2026-08-08T15:57:55.321Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "Norwich vs MK Dons",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9371056254117883,
+    "minute": 28,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, aunque el xG sea estimado, las grandes ocasiones y tiros a puerta son reales.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      7,
+      43,
+      56,
+      59
+    ],
+    "timestamp": "2026-08-08T16:08:07.107Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "West Ham United vs Portsmouth",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6143902181735797,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      43,
+      45,
+      50
+    ],
+    "timestamp": "2026-08-08T16:08:07.236Z",
+    "alertTimestamp": "2026-08-08T14:08:27.005Z"
+  },
+  {
+    "match": "N.E.C. Nijmegen vs Telstar",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.9484827973153197,
+    "minute": 28,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El marcador 0-2 y la alta probabilidad del modelo sugieren una alerta, a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      24,
+      82
+    ],
+    "timestamp": "2026-08-08T16:27:53.847Z",
+    "alertTimestamp": "2026-08-08T14:38:53.379Z"
   }
 ]
