@@ -31,8 +31,17 @@ const { providers, postJson } = require('./ai_filter');
       const ms = Date.now() - t0;
       if (status >= 200 && status < 300) {
         const txt = (p.parse(json) || '').replace(/```json|```/g, '').trim();
-        console.log('  [OK]   ' + p.name.padEnd(10) + ms + 'ms  ' + txt.slice(0, 120).replace(/\s+/g, ' '));
-        vivos++;
+        // Un 200 NO basta. La familia 2.5 de Gemini puede devolver 200 con
+        // texto vacio si el razonamiento se come el presupuesto de salida.
+        // Lo que se verifica es que llega JSON parseable, no que hubo respuesta.
+        let ok = false;
+        try { ok = !!txt && typeof JSON.parse(txt) === 'object'; } catch {}
+        if (ok) { console.log('  [OK]   ' + p.name.padEnd(10) + ms + 'ms  ' + txt.slice(0, 110).replace(/\s+/g, ' ')); vivos++; }
+        else {
+          const fr = (json.candidates && json.candidates[0] && json.candidates[0].finishReason) || '?';
+          const um = (json.usageMetadata && JSON.stringify(json.usageMetadata)) || '';
+          console.log('  [VACIO] ' + p.name.padEnd(9) + '200 pero sin JSON. finishReason=' + fr + ' ' + um.slice(0, 110));
+        }
       } else {
         console.log('  [HTTP ' + status + '] ' + p.name.padEnd(10) + String(raw || '').slice(0, 200).replace(/\s+/g, ' '));
       }

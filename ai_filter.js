@@ -126,7 +126,10 @@ function buildGemini() {
   const raw = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || '';
   const keys = raw.split(',').map(k => k.trim()).filter(Boolean);
   if (!keys.length) return [];
-  const model = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+  // gemini-2.5-flash y NO 2.0-flash: verificado con la clave real el 2026-08-07.
+  // 2.0-flash y 2.0-flash-lite devuelven 429 de cuota en la PRIMERA llamada
+  // (su capa gratuita ya no admite claves nuevas); 2.5-flash-lite da 404.
+  const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
   return keys.map((key, i) => ({
     name: 'gemini' + (keys.length > 1 ? '#' + (i + 1) : ''),
     key,
@@ -137,7 +140,12 @@ function buildGemini() {
     body: (m, messages, jsonMode = true) => {
       const sys = (messages.find(x => x.role === 'system') || {}).content || '';
       const user = messages.filter(x => x.role === 'user').map(x => x.content).join('\n');
-      const gen = { temperature: 0.05, maxOutputTokens: 300 };
+      // thinkingBudget 0 es OBLIGATORIO en la familia 2.5: viene con
+      // razonamiento activado por defecto y se gasta TODO el presupuesto de
+      // salida pensando. Verificado: HTTP 200 con texto vacio. Sin esta linea
+      // el test daria "0 respuestas validas" y pareceria que la IA no sabe,
+      // cuando lo que pasa es que no llego a escribir.
+      const gen = { temperature: 0.05, maxOutputTokens: 800, thinkingConfig: { thinkingBudget: 0 } };
       if (jsonMode) gen.responseMimeType = 'application/json';
       const payload = {
         contents: [{ role: 'user', parts: [{ text: user }] }],
