@@ -41,18 +41,25 @@ const get = u => new Promise(ok => { https.get(u, { headers: { 'User-Agent': 'Mo
       real: (H.atk * A.def + A.atk * H.def) / 2 * (H.liga / 2) });
   }
   console.log('casos con fuerza real conocida:', casos.length);
-  const N = Math.min(casos.length, parseInt(process.env.MAX_CASOS || '120', 10));
+  const N = Math.min(casos.length, parseInt(process.env.MAX_CASOS || '150', 10));
   const muestra = casos.slice(0, N);
   const pares = [];
+  const fallos = [];
   let i = 0;
   for (const c of muestra) {
     const r = await estimarRitmo(c);
     i++;
     if (r) pares.push({ real: c.real, ia: r.goles, conf: r.confianza, eq: c.teamHome + ' vs ' + c.teamAway });
-    if (i % 20 === 0) console.log('  ' + i + '/' + N);
-    await new Promise(r2 => setTimeout(r2, 200));
+    if (!r) fallos.push(estimarRitmo.ultimoFallo || 'sin motivo');
+    if (i % 20 === 0) console.log('  ' + i + '/' + N + '  validas=' + pares.length);
+    await new Promise(r2 => setTimeout(r2, 2300));  // Groq gratis: ~30/min
   }
   console.log('respuestas validas:', pares.length, 'de', N);
+  if (fallos.length) {
+    const c = {};
+    for (const f of fallos) c[f] = (c[f] || 0) + 1;
+    console.log('motivos de fallo:', JSON.stringify(c).slice(0, 300));
+  }
   if (pares.length < 20) { console.log('muestra insuficiente'); return; }
   const mx = pares.reduce((s, p) => s + p.ia, 0) / pares.length;
   const my = pares.reduce((s, p) => s + p.real, 0) / pares.length;

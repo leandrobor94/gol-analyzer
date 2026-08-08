@@ -77,25 +77,35 @@ async function estimarRitmo(m) {
     { role: 'user', content: JSON.stringify(payload) },
   ];
 
+  let ultimoFallo = null;
   for (const p of list) {
     try {
       let { status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages));
       if (status >= 400 && status < 500 && /response_format|json_object/i.test(raw || '')) {
         ({ status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages, false)));
       }
-      if (status < 200 || status >= 300) continue;
+      // Groq gratuito limita a ~30 peticiones/minuto. Un 429 no es "la IA no
+      // sabe": es que no le dejamos contestar. Se reintenta con espera creciente.
+      let intentos = 0;
+      while (status === 429 && intentos < 4) {
+        intentos++;
+        await new Promise(r => setTimeout(r, 4000 * intentos));
+        ({ status, json, raw } = await postJson(p.host, p.path, p.headers(p.key), p.body(p.model, messages)));
+      }
+      if (status < 200 || status >= 300) { ultimoFallo = p.name + ' HTTP ' + status; continue; }
       const out = JSON.parse((p.parse(json) || '').replace(/```json|```/g, '').trim());
       const g = parseFloat(out.goles);
       // Rango sano: fuera de esto la respuesta no es creible y se descarta.
-      if (!(g >= 1.2 && g <= 5.0)) continue;
+      if (!(g >= 1.2 && g <= 5.0)) { ultimoFallo = 'fuera de rango: ' + out.goles; continue; }
       return {
         goles: Math.round(g * 100) / 100,
         confianza: Math.max(0, Math.min(100, parseInt(out.confianza, 10) || 0)),
         razon: String(out.razon || '').slice(0, 100),
         provider: p.name,
       };
-    } catch {}
+    } catch (e) { ultimoFallo = p.name + ' ' + e.message; }
   }
+  if (ultimoFallo) estimarRitmo.ultimoFallo = ultimoFallo;
   return null;
 }
 
