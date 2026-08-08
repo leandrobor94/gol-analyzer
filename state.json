@@ -1,10 +1,5 @@
 {
   "alertedMatches": {
-    "4669837_AVISO": {
-      "timestamp": 1786143337601,
-      "minute": 24,
-      "tier": "AVISO"
-    },
     "4653905_AVISO": {
       "timestamp": 1786149337711,
       "minute": 79,
@@ -46,21 +41,46 @@
       "tier": "AVISO"
     },
     "4761070_AVISO": {
-      "timestamp": 1786152348371,
-      "minute": 26,
+      "timestamp": 1786155678867,
+      "minute": 60,
       "tier": "AVISO"
     },
     "4788401_AVISO": {
       "timestamp": 1786152348371,
       "minute": 20,
       "tier": "AVISO"
+    },
+    "4650612_AVISO": {
+      "timestamp": 1786155060020,
+      "minute": 82,
+      "tier": "AVISO"
+    },
+    "4744332_AVISO": {
+      "timestamp": 1786155678867,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4734847_AVISO": {
+      "timestamp": 1786155678867,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4678845_AVISO": {
+      "timestamp": 1786157459456,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4683978_AVISO": {
+      "timestamp": 1786157459456,
+      "minute": 21,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 860,
-    "verified": 841,
-    "withGoalTimeline": 601,
+    "total": 867,
+    "verified": 851,
+    "withGoalTimeline": 608,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-08T01:45:37.470Z"
+  "lastUpdated": "2026-08-08T02:50:59.542Z"
 }

@@ -2494,5 +2494,79 @@
     ],
     "timestamp": "2026-08-08T01:45:37.385Z",
     "alertTimestamp": "2026-08-07T23:45:47.585Z"
+  },
+  {
+    "match": "NJ/NY Gotham FC vs San Diego Wave",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.8969676413038198,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44
+    ],
+    "timestamp": "2026-08-08T02:21:19.021Z",
+    "alertTimestamp": "2026-08-08T00:25:37.890Z"
+  },
+  {
+    "match": "Universidad Católica vs Deportes Cobresal",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.555656912865484,
+    "minute": 82,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      60,
+      95
+    ],
+    "timestamp": "2026-08-08T02:30:58.705Z",
+    "alertTimestamp": "2026-08-08T00:35:37.711Z"
+  },
+  {
+    "match": "Independiente Rivadavia vs Estudiantes RC",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8856449312761467,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      71,
+      80,
+      88
+    ],
+    "timestamp": "2026-08-08T02:41:11.709Z",
+    "alertTimestamp": "2026-08-08T00:56:03.344Z"
+  },
+  {
+    "match": "México Sub21 vs Venezuela Sub21",
+    "league": "Juegos Centroamericanos y del Caribe - Final",
+    "tier": "AVISO",
+    "probability": 0.8880236457432494,
+    "minute": 26,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      2,
+      25,
+      30,
+      48
+    ],
+    "timestamp": "2026-08-08T02:50:59.526Z",
+    "alertTimestamp": "2026-08-08T00:05:37.538Z"
   }
 ]
