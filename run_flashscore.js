@@ -94,6 +94,20 @@ function appendSnapshots(rows) {
       pos: n(a.stats.possessionHome),
       red: n(a.stats.redCardsHome), reda: n(a.stats.redCardsAway),
     },
+    // CUOTA CON MARCA DE TIEMPO. Sin esto no se puede medir la unica hipotesis
+    // que sigue viva: que en ligas menores la casa tarda en repreciar tras un
+    // gol. Esa ventana —si existe— es de VELOCIDAD, no de modelo: no depende de
+    // acertar mas que ellos, sino de llegar antes de que corrijan.
+    //
+    // Guardar la cuota una sola vez no sirve: hace falta la SERIE del mismo
+    // partido. La prueba es "cuantos minutos pasan entre el gol y el movimiento
+    // de la cuota", y eso necesita varias capturas con su hora y su marcador.
+    o: a.odds ? {
+      h: a.odds.home, d: a.odds.draw, a: a.odds.away,
+      ov: a.odds.overround, bk: a.odds.bookmakerId,
+    } : null,
+    // Goles vistos en esta captura: permite localizar el instante del gol.
+    g: (a.scoreHome || 0) + (a.scoreAway || 0),
   })).join('\n') + '\n';
   try {
     fs.appendFileSync(SNAPSHOTS_FILE, lines);
