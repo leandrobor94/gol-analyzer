@@ -3338,5 +3338,332 @@
     ],
     "timestamp": "2026-08-08T16:27:53.847Z",
     "alertTimestamp": "2026-08-08T14:38:53.379Z"
+  },
+  {
+    "match": "IFK Norrköping vs IK Brage",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.9340137720112321,
+    "minute": 28,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      16,
+      32
+    ],
+    "timestamp": "2026-08-08T16:57:50.924Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Bukovyna vs Obolon Kyiv",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.870842794772214,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T16:57:51.081Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "SJK Akatemia vs PK-35",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.7032726284358755,
+    "minute": 62,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T16:57:51.116Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Zlin vs Bohemians Praha",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.5731144469586185,
+    "minute": 80,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      9,
+      73
+    ],
+    "timestamp": "2026-08-08T16:57:51.350Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Mainz 05 vs Paris FC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8813622426007798,
+    "minute": 26,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con xG estimado, pero el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      20,
+      32,
+      83,
+      87
+    ],
+    "timestamp": "2026-08-08T16:57:51.514Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Galanta vs FC Petrzalka",
+    "league": "2. Liga",
+    "tier": "AVISO",
+    "probability": 0.7199164418237259,
+    "minute": 60,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39,
+      60,
+      63
+    ],
+    "timestamp": "2026-08-08T16:57:51.806Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Bashkimi vs Tikveš",
+    "league": "First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.7091055841924245,
+    "minute": 61,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-5",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-08T16:57:51.837Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Rennes vs Brentford",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8827902140532619,
+    "minute": 26,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador ajustado y sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      29,
+      46,
+      48,
+      49,
+      71
+    ],
+    "timestamp": "2026-08-08T16:57:51.918Z",
+    "alertTimestamp": "2026-08-08T15:18:29.088Z"
+  },
+  {
+    "match": "Grazer AK vs Austria Lustenau",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.9127085520253256,
+    "minute": 27,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      51,
+      66
+    ],
+    "timestamp": "2026-08-08T17:07:49.550Z",
+    "alertTimestamp": "2026-08-08T15:09:08.419Z"
+  },
+  {
+    "match": "Latte Dolce vs Torres",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.884265647385267,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      77
+    ],
+    "timestamp": "2026-08-08T17:18:08.780Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "Salernitana vs ASD Sambiase 2023",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8920697263487868,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      52,
+      63
+    ],
+    "timestamp": "2026-08-08T17:18:08.809Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "Kisvarda vs Ujpest",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.9032849180981632,
+    "minute": 28,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      15,
+      31,
+      78,
+      85,
+      92
+    ],
+    "timestamp": "2026-08-08T17:27:49.611Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "Merelbeke vs Lierse SK",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9364211577159239,
+    "minute": 26,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      11
+    ],
+    "timestamp": "2026-08-08T17:27:59.666Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "Pogon vs Motor Lublin",
+    "league": "Ekstraklasa",
+    "tier": "AVISO",
+    "probability": 0.6214722864024051,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      43,
+      90,
+      90
+    ],
+    "timestamp": "2026-08-08T17:27:59.966Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "SK Sturm AM vs Floridsdorfer AC",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.8904121414856956,
+    "minute": 24,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      20,
+      24,
+      47,
+      62,
+      88
+    ],
+    "timestamp": "2026-08-08T17:37:49.252Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
+  },
+  {
+    "match": "Farul Constanta vs Csíkszereda Miercurea Ciuc",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.7037246352430508,
+    "minute": 61,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      28,
+      35,
+      40,
+      69
+    ],
+    "timestamp": "2026-08-08T17:37:49.292Z",
+    "alertTimestamp": "2026-08-08T15:38:27.065Z"
   }
 ]
