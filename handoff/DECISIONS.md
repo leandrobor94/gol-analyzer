@@ -263,3 +263,47 @@ Bootstrap 2.000 remuestras: la version con fuerza gana en el **100%**.
 **Lo que NO se toco.** El filtro de IA sigue sin cablearse a esto. Sus tests fallan
 todavia a nivel de infraestructura (limite de tokens/minuto de Groq), y un modulo cuyo
 unico resultado medido es "no contesta" no entra en produccion.
+
+---
+
+## D-18 · La fuerza de equipo se DESACTIVA: el +0.032 era fuga
+
+**Fecha:** 2026-08-07 · **Estado:** revertido el mismo dia (D-17 queda anulado)
+
+**Que paso.** D-17 publico la fuerza como multiplicador de lambda con una validacion
+de +0.032 de AUC. Horas despues se encontro el endpoint `/web/games/results/?competitors=ID`,
+que devuelve los ultimos ~26 partidos de CUALQUIER equipo **con fecha**. Eso permite
+construir la misma fuerza usando solo partidos ANTERIORES: sin fuga por construccion,
+y con cobertura del 90.7% en vez del 57%.
+
+**El careo, sobre los MISMOS 136 partidos** (tasa base 41.2%):
+
+| version | AUC | Brier | top 20% |
+|---|---|---|---|
+| sin fuerza | 0.5848 | 0.2372 | 51.9% |
+| por TABLA (con fuga) | 0.6143 | 0.2294 | 59.3% |
+| **por HISTORIAL (limpia)** | **0.5442** | **0.2470** | **44.4%** |
+
+Sobre los 302 partidos con historial: AUC 0.5169 -> 0.5092, bootstrap favorable en
+el **0.0%** de 2.000 remuestras.
+
+**Por que era fuga.** La tabla de posiciones de hoy ya incluye el resultado del partido
+que se esta prediciendo. Un partido con muchos goles sube el ataque de sus equipos, y
+ese ataque se usaba luego para "predecir" ese mismo partido.
+
+**Lo que queda abierto.** La correlacion entre las dos medidas de fuerza es solo **0.252**:
+apenas miden lo mismo. Cabe que el problema sea la medida por historial (mezcla
+competiciones y no ajusta por calidad del rival) y no la fuerza en si. Lo que no cabe
+es publicarla: la unica evidencia a favor esta contaminada y el unico test limpio dice
+que resta.
+
+**Que se conserva.** `fetchStandings`, `strengthFactor` y el guardado del campo
+`strength` en cada prediccion. La captura EN VIVO es anterior al partido por
+construccion, asi que en unas semanas habra la medicion limpia que hoy no se puede
+hacer. Si entonces gana, se activa quitando el `false &&`.
+
+**La leccion, que es la misma de D-14 con otra cara.** Alli el fallo fue medir dentro
+de muestra. Aqui la validacion era fuera de muestra, con origen movil y bootstrap
+—todo correcto— y aun asi el resultado era falso, porque la CONTAMINACION no estaba en
+el procedimiento sino en el dato. Un protocolo impecable sobre una variable que mira al
+futuro produce un numero impecable y falso.

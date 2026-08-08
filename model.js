@@ -221,19 +221,32 @@ function rawProb(model, features, T, strength) {
     z += model.b[i] * num(features[model.features[i]]);
   }
   let lambda = Math.exp(Math.min(z, 2.5));
-  // FUERZA DE EQUIPO. Es la forma de Dixon-Coles: lambda es una TASA, y la
-  // calidad del emparejamiento la escala. Entra como multiplicador y no como
-  // feature de la regresion por dos motivos:
+  // FUERZA DE EQUIPO: SE CALCULA Y SE GUARDA, PERO NO SE APLICA.
   //
-  //   1. Los 783 partidos de entrenamiento no la tienen guardada, asi que no
-  //      hay con que ajustarle un coeficiente todavia. Se empieza a guardar
-  //      ahora (campo strength de cada prediccion) para poder hacerlo bien.
-  //   2. El factor esta centrado en 1.0 por construccion —es un ratio contra
-  //      la media de la liga— asi que la calibracion de Platt existente sigue
-  //      valiendo en promedio. Un coeficiente libre no tendria esa garantia.
+  // El 2026-08-07 se publico multiplicando lambda por este factor, con una
+  // validacion que daba +0.032 de AUC. Ese numero era la FUGA, no señal.
   //
-  // Sin tabla, strength es null y el comportamiento es exactamente el de antes.
-  if (strength > 0) lambda *= strength;
+  // Careo sobre los MISMOS 136 partidos, tasa base 41.2%:
+  //
+  //     version                        AUC      Brier    top 20%
+  //     sin fuerza                    0.5848   0.2372    51.9%
+  //     por TABLA (con fuga)          0.6143   0.2294    59.3%
+  //     por HISTORIAL (sin fuga)      0.5442   0.2470    44.4%
+  //
+  // La tabla de posiciones de HOY ya contiene el resultado del partido que se
+  // predice. Al construir la misma fuerza desde el historial de cada equipo
+  // filtrando por fecha anterior —endpoint /games/results/, cobertura 90.7% y
+  // sin fuga por construccion— la ventaja no solo desaparece: se invierte.
+  //
+  // La correlacion entre las dos medidas es 0.252: apenas miden lo mismo. Eso
+  // deja abierto que el problema sea la medida por historial y no la fuerza en
+  // si. Lo que NO deja abierto es publicarla: la unica evidencia a favor esta
+  // contaminada, y el unico test limpio que se pudo construir dice que resta.
+  //
+  // El campo se sigue calculando y guardando en cada prediccion. Con fuerzas
+  // capturadas EN VIVO —anteriores al partido por construccion— habra en unas
+  // semanas la medicion que hoy no se puede hacer. Si entonces gana, se activa.
+  if (false && strength > 0) lambda *= strength;
   return { p: 1 - Math.exp(-lambda * T), lambda };
 }
 
