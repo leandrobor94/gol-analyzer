@@ -4140,5 +4140,148 @@
     "goalMinutes": [],
     "timestamp": "2026-08-09T00:33:02.449Z",
     "alertTimestamp": "2026-08-08T22:41:45.395Z"
+  },
+  {
+    "match": "Orlando City SC vs León",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.873532894176347,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      54,
+      72
+    ],
+    "timestamp": "2026-08-09T00:42:06.531Z",
+    "alertTimestamp": "2026-08-08T22:41:45.395Z"
+  },
+  {
+    "match": "Deportivo Merlo vs Sportivo Italiano",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.946728174552169,
+    "minute": 21,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T00:52:21.041Z",
+    "alertTimestamp": "2026-08-08T23:01:42.565Z"
+  },
+  {
+    "match": "Chattanooga Red Wolves vs Union Omaha",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8903998520517685,
+    "minute": 22,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      50,
+      52,
+      83
+    ],
+    "timestamp": "2026-08-09T01:02:28.495Z",
+    "alertTimestamp": "2026-08-08T23:12:08.737Z"
+  },
+  {
+    "match": "Pittsburgh Riverhounds vs Sacramento Republic",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8750573359062984,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T01:02:28.585Z",
+    "alertTimestamp": "2026-08-08T23:12:08.737Z"
+  },
+  {
+    "match": "Miami FC vs Las Vegas Lights",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8804220413234161,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      34
+    ],
+    "timestamp": "2026-08-09T01:02:28.815Z",
+    "alertTimestamp": "2026-08-08T23:12:08.737Z"
+  },
+  {
+    "match": "Lexington vs Phoenix Rising FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8812766996447972,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      63
+    ],
+    "timestamp": "2026-08-09T01:02:28.910Z",
+    "alertTimestamp": "2026-08-08T23:12:08.737Z"
+  },
+  {
+    "match": "Deportivo Aurora vs Bolívar",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.9071827533576069,
+    "minute": 22,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      14,
+      50,
+      53,
+      58,
+      91
+    ],
+    "timestamp": "2026-08-09T01:31:43.766Z",
+    "alertTimestamp": "2026-08-08T23:31:43.877Z"
+  },
+  {
+    "match": "Rhode Island vs Colorado Springs Switchbacks",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8678210837262085,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      69,
+      92
+    ],
+    "timestamp": "2026-08-09T01:31:43.975Z",
+    "alertTimestamp": "2026-08-08T23:42:01.090Z"
   }
 ]
