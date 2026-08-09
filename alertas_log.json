@@ -4912,5 +4912,435 @@
     ],
     "timestamp": "2026-08-09T15:30:48.906Z",
     "alertTimestamp": "2026-08-09T13:41:32.288Z"
+  },
+  {
+    "match": "Siauliai vs Džiugas Telšiai",
+    "league": "A Lyga",
+    "tier": "AVISO",
+    "probability": 0.9371274912622118,
+    "minute": 29,
+    "scoreAtAlert": "3-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador abierto y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      16,
+      22,
+      27,
+      52,
+      57,
+      70
+    ],
+    "timestamp": "2026-08-09T16:01:27.210Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Zenit vs Rodina Moscow",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8869783030834791,
+    "minute": 26,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Zenit domina con ocasiones claras. xG estimado no es un factor decisivo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23,
+      59,
+      65
+    ],
+    "timestamp": "2026-08-09T16:01:27.424Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Charleroi vs Oud-Heverlee Leuven",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.589512389823536,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      39,
+      59,
+      79
+    ],
+    "timestamp": "2026-08-09T16:01:27.686Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Hearts vs Dundee United",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.9505903182735159,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, xG estimado no es fiable, pero el volumen de juego es alto.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      12,
+      56,
+      67
+    ],
+    "timestamp": "2026-08-09T16:01:28.035Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Athletic Club vs Criciúma",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.5649382323060109,
+    "minute": 80,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      55
+    ],
+    "timestamp": "2026-08-09T16:01:28.246Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Randers FC vs Lyngby",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8883689370371647,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, Randers con 2 grandes chances y 2 tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      15,
+      49
+    ],
+    "timestamp": "2026-08-09T16:01:28.722Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Inter Turku vs Lahti",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.8932982479271626,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, y una gran ocasión ya generada.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T16:01:29.128Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Zulte Waregem vs KRC Genk",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.8833613120995318,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador 0-0, liga de alto scoring. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39,
+      82,
+      86
+    ],
+    "timestamp": "2026-08-09T16:01:40.151Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Cruzeiro vs Mirassol",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8992377043833041,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones claras para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      27,
+      76,
+      84
+    ],
+    "timestamp": "2026-08-09T16:10:50.210Z",
+    "alertTimestamp": "2026-08-09T14:11:19.411Z"
+  },
+  {
+    "match": "Halmstad vs Gais",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.8820383292739041,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      65,
+      77
+    ],
+    "timestamp": "2026-08-09T16:21:24.758Z",
+    "alertTimestamp": "2026-08-09T14:30:47.486Z"
+  },
+  {
+    "match": "IFK Göteborg vs Kalmar FF",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.9084047484217951,
+    "minute": 21,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      13,
+      77,
+      81,
+      84
+    ],
+    "timestamp": "2026-08-09T16:21:24.986Z",
+    "alertTimestamp": "2026-08-09T14:30:47.486Z"
+  },
+  {
+    "match": "FC Sion vs FC Vaduz",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.9298391200591256,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      21,
+      36,
+      83,
+      94
+    ],
+    "timestamp": "2026-08-09T16:31:19.437Z",
+    "alertTimestamp": "2026-08-09T14:30:47.486Z"
+  },
+  {
+    "match": "FC Basilea vs FC Thun",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.9284464454725929,
+    "minute": 21,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      31,
+      53,
+      73,
+      75,
+      91
+    ],
+    "timestamp": "2026-08-09T16:31:19.631Z",
+    "alertTimestamp": "2026-08-09T14:30:47.486Z"
+  },
+  {
+    "match": "FC St. Gallen vs Luzern",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.9067904470074921,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      46,
+      48,
+      89,
+      101
+    ],
+    "timestamp": "2026-08-09T16:41:19.810Z",
+    "alertTimestamp": "2026-08-09T14:41:23.979Z"
+  },
+  {
+    "match": "Union Berlin vs Aris Limasol",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8701730803395844,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44,
+      49,
+      55,
+      90,
+      110
+    ],
+    "timestamp": "2026-08-09T16:51:32.216Z",
+    "alertTimestamp": "2026-08-09T13:41:32.288Z"
+  },
+  {
+    "match": "Heerenveen vs Twente",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.8878858649981793,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, y aunque el xG es estimado, hay llegadas al área.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-08-09T16:51:32.615Z",
+    "alertTimestamp": "2026-08-09T14:51:36.055Z"
+  },
+  {
+    "match": "MVV Maastricht vs Jong Utrecht",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.8911568759917304,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es fiable, no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      6,
+      46
+    ],
+    "timestamp": "2026-08-09T16:51:32.844Z",
+    "alertTimestamp": "2026-08-09T14:51:36.055Z"
+  },
+  {
+    "match": "Mansfield vs Sheffield Utd",
+    "league": "Copa de la liga - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9258163630908004,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y Sheffield Utd ya generó una gran ocasión.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      71,
+      89
+    ],
+    "timestamp": "2026-08-09T16:51:33.055Z",
+    "alertTimestamp": "2026-08-09T15:01:14.740Z"
   }
 ]
