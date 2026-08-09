@@ -4061,5 +4061,84 @@
     ],
     "timestamp": "2026-08-08T22:41:52.356Z",
     "alertTimestamp": "2026-08-08T17:07:49.478Z"
+  },
+  {
+    "match": "Boca Juniors vs Vélez Sarsfield",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8867204956435676,
+    "minute": 26,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, Vélez con ventaja mínima y chance clara. xG estimado no es factor.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      39
+    ],
+    "timestamp": "2026-08-09T00:11:44.912Z",
+    "alertTimestamp": "2026-08-08T22:41:45.395Z"
+  },
+  {
+    "match": "Inter de Limeira vs Volta Redonda",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.8572889734107693,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      35,
+      90
+    ],
+    "timestamp": "2026-08-09T00:32:45.237Z",
+    "alertTimestamp": "2026-08-08T22:41:45.395Z"
+  },
+  {
+    "match": "Ituano vs Barra FC",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.8781071161900089,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un remate a puerta. No hay razón para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      60,
+      76
+    ],
+    "timestamp": "2026-08-09T00:33:02.380Z",
+    "alertTimestamp": "2026-08-08T22:41:45.395Z"
+  },
+  {
+    "match": "Sol De América vs Defensores Belgrano (VR)",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "tier": "AVISO",
+    "probability": 0.876563275827319,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T00:33:02.449Z",
+    "alertTimestamp": "2026-08-08T22:41:45.395Z"
   }
 ]
