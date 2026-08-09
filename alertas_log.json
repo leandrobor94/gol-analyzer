@@ -5342,5 +5342,280 @@
     ],
     "timestamp": "2026-08-09T16:51:33.055Z",
     "alertTimestamp": "2026-08-09T15:01:14.740Z"
+  },
+  {
+    "match": "FK Jablonec vs Slovacko",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.8946642139088783,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con 1 tarjeta roja, marcador 0-0 y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      62
+    ],
+    "timestamp": "2026-08-09T17:01:49.617Z",
+    "alertTimestamp": "2026-08-09T15:01:14.740Z"
+  },
+  {
+    "match": "Riga vs Ogre United",
+    "league": "Virsliga Letonia",
+    "tier": "AVISO",
+    "probability": 0.944235550388833,
+    "minute": 21,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, Riga con 2 grandes oportunidades y 2 tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2,
+      16,
+      26,
+      45,
+      49
+    ],
+    "timestamp": "2026-08-09T17:01:50.174Z",
+    "alertTimestamp": "2026-08-09T15:01:14.740Z"
+  },
+  {
+    "match": "Hradec Kralove vs Banik Ostrava",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.8927474856031596,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado bajo pero sin datos concretos para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27,
+      53,
+      63
+    ],
+    "timestamp": "2026-08-09T17:01:51.988Z",
+    "alertTimestamp": "2026-08-09T15:11:46.785Z"
+  },
+  {
+    "match": "Vihren vs Chernomorets Burgas",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.852488458629271,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T17:01:52.760Z",
+    "alertTimestamp": "2026-08-09T15:11:46.785Z"
+  },
+  {
+    "match": "Termalica Nieciecza vs Warta Poznan",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.8749462750256197,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      51,
+      60
+    ],
+    "timestamp": "2026-08-09T17:21:36.549Z",
+    "alertTimestamp": "2026-08-09T15:21:32.344Z"
+  },
+  {
+    "match": "Lech Poznan vs Piast Gliwice",
+    "league": "Ekstraklasa",
+    "tier": "AVISO",
+    "probability": 0.8804279584096378,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      63,
+      79,
+      90
+    ],
+    "timestamp": "2026-08-09T17:30:51.228Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Debreceni VSC vs Nyiregyhaza",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.8916275916526086,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      55
+    ],
+    "timestamp": "2026-08-09T17:30:51.451Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Graficar Beograd vs FK Smederevo",
+    "league": "Prva Liga",
+    "tier": "AVISO",
+    "probability": 0.867641527988689,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61,
+      72,
+      90
+    ],
+    "timestamp": "2026-08-09T17:30:51.683Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Olympique Marsella vs Athletic Club",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9004033844266718,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      10,
+      34,
+      40,
+      86
+    ],
+    "timestamp": "2026-08-09T17:30:52.104Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Szentlorinc vs Nagykanizsa",
+    "league": "NB II - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8528573761125394,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      58
+    ],
+    "timestamp": "2026-08-09T17:30:52.332Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Rotor Volgograd vs FC Chelyabinsk",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5648615985033735,
+    "minute": 79,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14,
+      31,
+      33,
+      41,
+      60
+    ],
+    "timestamp": "2026-08-09T17:30:52.559Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Soroksar vs Diosgyori VTK",
+    "league": "NB II - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.7183565486397477,
+    "minute": 60,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      48,
+      59,
+      74,
+      82
+    ],
+    "timestamp": "2026-08-09T17:30:53.196Z",
+    "alertTimestamp": "2026-08-09T15:41:07.074Z"
+  },
+  {
+    "match": "Gomel vs FC Minsk",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8796118309575928,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14
+    ],
+    "timestamp": "2026-08-09T17:41:54.897Z",
+    "alertTimestamp": "2026-08-09T15:52:33.142Z"
+  },
+  {
+    "match": "Banga Gargzdai vs Suduva",
+    "league": "A Lyga",
+    "tier": "AVISO",
+    "probability": 0.8803101115622363,
+    "minute": 24,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      45,
+      54
+    ],
+    "timestamp": "2026-08-09T17:41:55.090Z",
+    "alertTimestamp": "2026-08-09T15:52:33.142Z"
   }
 ]
