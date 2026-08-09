@@ -4743,5 +4743,174 @@
     "goalMinutes": [],
     "timestamp": "2026-08-09T14:51:36.467Z",
     "alertTimestamp": "2026-08-09T13:01:29.878Z"
+  },
+  {
+    "match": "Slavia Praga vs Pardubice",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.8903158223438008,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, muchas chances claras para el local. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      50,
+      52,
+      80
+    ],
+    "timestamp": "2026-08-09T15:01:16.463Z",
+    "alertTimestamp": "2026-08-09T13:01:29.878Z"
+  },
+  {
+    "match": "FK Jelgava vs Auda",
+    "league": "Virsliga Letonia",
+    "tier": "AVISO",
+    "probability": 0.8848902022597682,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con xG estimado bajo pero sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45
+    ],
+    "timestamp": "2026-08-09T15:01:16.767Z",
+    "alertTimestamp": "2026-08-09T13:01:29.878Z"
+  },
+  {
+    "match": "América SP vs Independente SP",
+    "league": "Paulista Serie B - Final",
+    "tier": "AVISO",
+    "probability": 0.9477576590332987,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      0,
+      0
+    ],
+    "timestamp": "2026-08-09T15:01:17.137Z",
+    "alertTimestamp": "2026-08-09T13:10:57.151Z"
+  },
+  {
+    "match": "Arsenal vs Borussia Dortmund",
+    "league": "Emirates Cup - Final",
+    "tier": "AVISO",
+    "probability": 0.8982702675484597,
+    "minute": 20,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y una gran ocasión para el visitante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      7,
+      29,
+      54,
+      58,
+      69
+    ],
+    "timestamp": "2026-08-09T15:01:18.285Z",
+    "alertTimestamp": "2026-08-09T13:10:57.151Z"
+  },
+  {
+    "match": "Super Nova vs FK Liepaja",
+    "league": "Virsliga Letonia",
+    "tier": "AVISO",
+    "probability": 0.8777097853558986,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, sin goles, con una gran ocasión para el visitante. xG estimado no relevante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      59,
+      87
+    ],
+    "timestamp": "2026-08-09T15:01:26.653Z",
+    "alertTimestamp": "2026-08-09T13:10:57.151Z"
+  },
+  {
+    "match": "Paksi vs Kispest Honvéd",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.8861976802980779,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con tiros a puerta y llegadas al área. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      59,
+      68,
+      79,
+      90
+    ],
+    "timestamp": "2026-08-09T15:30:48.583Z",
+    "alertTimestamp": "2026-08-09T13:30:53.097Z"
+  },
+  {
+    "match": "CF Chindia Targoviste vs FC Metaloglobus Bucharest",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8496806688783628,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, inicio de juego, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      46,
+      57,
+      65,
+      93
+    ],
+    "timestamp": "2026-08-09T15:30:48.906Z",
+    "alertTimestamp": "2026-08-09T13:41:32.288Z"
   }
 ]
