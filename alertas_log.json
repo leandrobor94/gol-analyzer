@@ -4485,5 +4485,243 @@
     "goalMinutes": [],
     "timestamp": "2026-08-09T02:51:42.101Z",
     "alertTimestamp": "2026-08-09T00:52:20.865Z"
+  },
+  {
+    "match": "Sport Boys vs Alianza Lima",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8711967333999393,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28,
+      65
+    ],
+    "timestamp": "2026-08-09T13:01:30.440Z",
+    "alertTimestamp": "2026-08-09T01:02:20.376Z"
+  },
+  {
+    "match": "Atlético Morelia vs Cancún FC",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8841301336019396,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      51,
+      56,
+      87,
+      94
+    ],
+    "timestamp": "2026-08-09T13:01:30.705Z",
+    "alertTimestamp": "2026-08-09T01:02:20.376Z"
+  },
+  {
+    "match": "Jaiba Brava vs Cruz Azul Hidalgo",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.9067087373093463,
+    "minute": 22,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      26,
+      64
+    ],
+    "timestamp": "2026-08-09T13:01:30.933Z",
+    "alertTimestamp": "2026-08-09T01:02:20.376Z"
+  },
+  {
+    "match": "El Paso vs Oakland Roots",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.9076432336734654,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-08-09T13:01:32.108Z",
+    "alertTimestamp": "2026-08-09T01:11:56.990Z"
+  },
+  {
+    "match": "Chivas de Guadalajara vs FC Dallas",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8689298280902028,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-08-09T13:01:42.476Z",
+    "alertTimestamp": "2026-08-09T01:21:48.355Z"
+  },
+  {
+    "match": "Deportivo Pasto vs Deportivo Cali",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8685446886219761,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      65
+    ],
+    "timestamp": "2026-08-09T13:01:42.704Z",
+    "alertTimestamp": "2026-08-09T01:31:43.588Z"
+  },
+  {
+    "match": "UMECIT vs CD Árabe Unido",
+    "league": "Liga Panameña - Apertura - Conferencia Oeste",
+    "tier": "AVISO",
+    "probability": 0.874828945763498,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T13:01:42.930Z",
+    "alertTimestamp": "2026-08-09T01:31:43.588Z"
+  },
+  {
+    "match": "Real CD España vs Genesis Policía Nacional FC",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.891146111335422,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15,
+      93
+    ],
+    "timestamp": "2026-08-09T13:01:43.145Z",
+    "alertTimestamp": "2026-08-09T01:31:43.588Z"
+  },
+  {
+    "match": "Puntarenas FC vs Deportivo Saprissa",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8793561201178216,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      73
+    ],
+    "timestamp": "2026-08-09T13:02:00.554Z",
+    "alertTimestamp": "2026-08-09T02:01:43.070Z"
+  },
+  {
+    "match": "Cashmere Technical vs Coastal Spirit",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.9437032748016678,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T13:02:00.994Z",
+    "alertTimestamp": "2026-08-09T02:01:43.070Z"
+  },
+  {
+    "match": "Denver Summit vs Utah Royals",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.8947117921022082,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      51,
+      89,
+      94
+    ],
+    "timestamp": "2026-08-09T13:02:01.405Z",
+    "alertTimestamp": "2026-08-09T02:11:42.266Z"
+  },
+  {
+    "match": "Monterey Bay vs New Mexico",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.9190798167365472,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      31,
+      55,
+      74,
+      77,
+      86,
+      91
+    ],
+    "timestamp": "2026-08-09T13:02:01.722Z",
+    "alertTimestamp": "2026-08-09T02:11:42.266Z"
+  },
+  {
+    "match": "Real Salt Lake vs Atlante",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.874616817331129,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      50,
+      54,
+      90
+    ],
+    "timestamp": "2026-08-09T13:02:01.927Z",
+    "alertTimestamp": "2026-08-09T02:11:42.266Z"
   }
 ]
