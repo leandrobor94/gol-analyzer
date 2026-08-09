@@ -4435,5 +4435,55 @@
     ],
     "timestamp": "2026-08-09T02:31:42.044Z",
     "alertTimestamp": "2026-08-09T00:32:45.017Z"
+  },
+  {
+    "match": "FC Tulsa vs Detroit City",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.88253234279262,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-08-09T02:41:42.103Z",
+    "alertTimestamp": "2026-08-09T00:42:06.244Z"
+  },
+  {
+    "match": "Houston Dash vs Kansas City Current",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.8831318279158905,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44,
+      81
+    ],
+    "timestamp": "2026-08-09T02:51:42.009Z",
+    "alertTimestamp": "2026-08-09T00:52:20.865Z"
+  },
+  {
+    "match": "North Texas vs Tacoma Defiance",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.8741090285158284,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T02:51:42.101Z",
+    "alertTimestamp": "2026-08-09T00:52:20.865Z"
   }
 ]
