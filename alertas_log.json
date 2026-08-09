@@ -5617,5 +5617,387 @@
     ],
     "timestamp": "2026-08-09T17:41:55.090Z",
     "alertTimestamp": "2026-08-09T15:52:33.142Z"
+  },
+  {
+    "match": "Horsens vs Brondby IF",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.9141487207963405,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      60
+    ],
+    "timestamp": "2026-08-09T22:45:29.550Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Sariyer vs Muglaspor",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.5719206940930617,
+    "minute": 79,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44,
+      65
+    ],
+    "timestamp": "2026-08-09T22:45:30.702Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Swift Hesperange vs Wiltz",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.9328564917661251,
+    "minute": 29,
+    "scoreAtAlert": "2-6",
+    "finalScore": "2-7",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      27,
+      31,
+      41,
+      44,
+      46,
+      55,
+      65,
+      83
+    ],
+    "timestamp": "2026-08-09T22:45:37.719Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Igdir Fk vs Fatih Karagümrük",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.9061447545041171,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      85
+    ],
+    "timestamp": "2026-08-09T22:45:37.879Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Veles vs Leningradets",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8652960010610149,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      53,
+      58,
+      93
+    ],
+    "timestamp": "2026-08-09T22:45:38.595Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Levadia Tallinn vs Nõmme United",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.8846679707120185,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      30,
+      47,
+      47,
+      87
+    ],
+    "timestamp": "2026-08-09T22:45:38.691Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Trofense vs Varzim",
+    "league": "Liga 3 - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8656796321048825,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      41
+    ],
+    "timestamp": "2026-08-09T22:45:38.805Z",
+    "alertTimestamp": "2026-08-09T16:10:49.441Z"
+  },
+  {
+    "match": "Anderlecht vs La Louvière Centre",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.8822661093427314,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      54,
+      69,
+      92
+    ],
+    "timestamp": "2026-08-09T22:45:38.996Z",
+    "alertTimestamp": "2026-08-09T16:41:19.195Z"
+  },
+  {
+    "match": "NK Slaven Belupo vs NK Varaždin",
+    "league": "Liga de Croacia",
+    "tier": "AVISO",
+    "probability": 0.9047793752636886,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      26,
+      28,
+      44,
+      71,
+      78
+    ],
+    "timestamp": "2026-08-09T22:45:39.248Z",
+    "alertTimestamp": "2026-08-09T16:41:19.195Z"
+  },
+  {
+    "match": "Borac Banjaluka vs Velez Mostar",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8841309879849816,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      50,
+      78,
+      88
+    ],
+    "timestamp": "2026-08-09T22:45:39.514Z",
+    "alertTimestamp": "2026-08-09T16:41:19.195Z"
+  },
+  {
+    "match": "Hapoel Jerusalem vs Hapoel Petah Tikva",
+    "league": "Toto League Cup",
+    "tier": "AVISO",
+    "probability": 0.8650551335319046,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      76,
+      84,
+      86,
+      88
+    ],
+    "timestamp": "2026-08-09T22:45:39.726Z",
+    "alertTimestamp": "2026-08-09T17:01:49.215Z"
+  },
+  {
+    "match": "Deportivo Iztapa vs Chichicasteco FC",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.9516643180509475,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T22:45:39.918Z",
+    "alertTimestamp": "2026-08-09T17:10:47.564Z"
+  },
+  {
+    "match": "Austria Vienna vs LASK Linz",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8825036927249963,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      54,
+      83
+    ],
+    "timestamp": "2026-08-09T22:45:50.162Z",
+    "alertTimestamp": "2026-08-09T17:10:47.564Z"
+  },
+  {
+    "match": "Santa Ana vs AD Carmelita",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8864257964893195,
+    "minute": 27,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      16,
+      35,
+      54,
+      56
+    ],
+    "timestamp": "2026-08-09T22:45:50.349Z",
+    "alertTimestamp": "2026-08-09T17:10:47.564Z"
+  },
+  {
+    "match": "Maccabi Petah Tikva vs Hapoel Ramat Gan",
+    "league": "Toto League Cup",
+    "tier": "AVISO",
+    "probability": 0.8926287540692295,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      64,
+      74,
+      84
+    ],
+    "timestamp": "2026-08-09T22:45:50.542Z",
+    "alertTimestamp": "2026-08-09T17:10:47.564Z"
+  },
+  {
+    "match": "CSD Amatitlan vs Deportivo Quiché",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8962771284354031,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      15,
+      47,
+      76
+    ],
+    "timestamp": "2026-08-09T22:45:51.116Z",
+    "alertTimestamp": "2026-08-09T17:10:47.564Z"
+  },
+  {
+    "match": "Royal Antwerp FC vs SK Beveren",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.8757434785185734,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      29,
+      62,
+      86
+    ],
+    "timestamp": "2026-08-09T22:45:51.268Z",
+    "alertTimestamp": "2026-08-09T17:21:35.975Z"
+  },
+  {
+    "match": "Kristiansund FK vs Molde",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.9006194637694105,
+    "minute": 26,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      25,
+      76,
+      89
+    ],
+    "timestamp": "2026-08-09T22:45:51.370Z",
+    "alertTimestamp": "2026-08-09T17:21:35.975Z"
+  },
+  {
+    "match": "Santos vs Athletico Paranaense",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.6335454181175497,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14,
+      26
+    ],
+    "timestamp": "2026-08-09T23:35:35.762Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "Itabaiana vs Caxias",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.5886385573892583,
+    "minute": 78,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      47
+    ],
+    "timestamp": "2026-08-09T23:35:35.838Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
   }
 ]
