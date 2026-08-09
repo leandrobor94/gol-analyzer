@@ -4283,5 +4283,157 @@
     ],
     "timestamp": "2026-08-09T01:31:43.975Z",
     "alertTimestamp": "2026-08-08T23:42:01.090Z"
+  },
+  {
+    "match": "Coritiba vs Chapecoense",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8932878894821312,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      31,
+      82,
+      95
+    ],
+    "timestamp": "2026-08-09T01:41:43.313Z",
+    "alertTimestamp": "2026-08-08T23:31:43.877Z"
+  },
+  {
+    "match": "One Knoxville vs Sarasota Paradise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8640432806644649,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      53,
+      84,
+      95
+    ],
+    "timestamp": "2026-08-09T01:41:43.378Z",
+    "alertTimestamp": "2026-08-08T23:42:01.090Z"
+  },
+  {
+    "match": "2 De Mayo (Reserva) vs Olimpia (Reserva)",
+    "league": "División Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.9388801310544794,
+    "minute": 26,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T01:41:43.521Z",
+    "alertTimestamp": "2026-08-08T23:52:35.639Z"
+  },
+  {
+    "match": "Inter Panamá CF (F) vs Santa Fe FC (F)",
+    "league": "Liga Femenina de Fútbol - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8951542178806934,
+    "minute": 22,
+    "scoreAtAlert": "8-0",
+    "finalScore": "9-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T01:52:09.341Z",
+    "alertTimestamp": "2026-08-09T00:01:55.686Z"
+  },
+  {
+    "match": "Deportes Temuco vs Magallanes",
+    "league": "Liga de Ascenso",
+    "tier": "AVISO",
+    "probability": 0.9029352259155182,
+    "minute": 20,
+    "scoreAtAlert": "3-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T02:01:43.661Z",
+    "alertTimestamp": "2026-08-09T00:11:44.779Z"
+  },
+  {
+    "match": "Louisville City vs San Antonio FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8895865800794043,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      78
+    ],
+    "timestamp": "2026-08-09T02:01:43.836Z",
+    "alertTimestamp": "2026-08-09T00:11:44.779Z"
+  },
+  {
+    "match": "Grecia vs Quepos Cambute",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8959970324395145,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-09T02:11:42.427Z",
+    "alertTimestamp": "2026-08-09T00:01:55.686Z"
+  },
+  {
+    "match": "Barcelona SC vs Macara",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.8954685945009253,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15,
+      37,
+      54
+    ],
+    "timestamp": "2026-08-09T02:11:42.512Z",
+    "alertTimestamp": "2026-08-09T00:01:55.686Z"
+  },
+  {
+    "match": "Instituto vs Gimnasia de Mendoza",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8609020105003194,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      80
+    ],
+    "timestamp": "2026-08-09T02:31:42.044Z",
+    "alertTimestamp": "2026-08-09T00:32:45.017Z"
   }
 ]
