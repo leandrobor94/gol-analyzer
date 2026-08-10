@@ -5999,5 +5999,76 @@
     ],
     "timestamp": "2026-08-09T23:35:35.838Z",
     "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "Atlético San Luis (F) vs Tijuana (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5843517576521252,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T00:05:26.808Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "Flamengo vs Vitória",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8861949570984334,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14,
+      80
+    ],
+    "timestamp": "2026-08-10T00:25:33.167Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "Metropolitanos FC vs Universidad Central FC",
+    "league": "Liga FUTVE - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5925138819684078,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44,
+      73,
+      83
+    ],
+    "timestamp": "2026-08-10T00:25:36.207Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "Sportivo Luqueño (F) vs Recoleta FC (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.8818092730657136,
+    "minute": 26,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      83,
+      84
+    ],
+    "timestamp": "2026-08-10T00:25:36.279Z",
+    "alertTimestamp": "2026-08-09T22:45:29.451Z"
   }
 ]
