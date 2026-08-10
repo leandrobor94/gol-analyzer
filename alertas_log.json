@@ -6212,5 +6212,94 @@
     ],
     "timestamp": "2026-08-10T01:36:25.472Z",
     "alertTimestamp": "2026-08-09T23:45:15.173Z"
+  },
+  {
+    "match": "CD FAS vs Atlético Balboa",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.872158548978966,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T01:45:24.837Z",
+    "alertTimestamp": "2026-08-09T23:45:15.173Z"
+  },
+  {
+    "match": "Club Sport Herediano vs LD Alajuelense",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6245493486377759,
+    "minute": 76,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      66,
+      84
+    ],
+    "timestamp": "2026-08-10T01:55:15.443Z",
+    "alertTimestamp": "2026-08-10T00:05:26.691Z"
+  },
+  {
+    "match": "Guayaquil City vs Emelec",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.8719692145935998,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T02:05:24.093Z",
+    "alertTimestamp": "2026-08-10T00:05:26.691Z"
+  },
+  {
+    "match": "Universidad de Chile vs Palestino",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.885293237992193,
+    "minute": 26,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      26,
+      78
+    ],
+    "timestamp": "2026-08-10T02:05:24.215Z",
+    "alertTimestamp": "2026-08-10T00:05:26.691Z"
+  },
+  {
+    "match": "Nashville SC vs Atlético San Luis",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.6024377701826593,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      36,
+      38,
+      52,
+      88
+    ],
+    "timestamp": "2026-08-10T02:15:23.997Z",
+    "alertTimestamp": "2026-08-10T00:15:16.178Z"
   }
 ]
