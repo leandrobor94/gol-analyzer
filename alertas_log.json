@@ -6505,5 +6505,193 @@
     "goalMinutes": [],
     "timestamp": "2026-08-10T17:49:39.530Z",
     "alertTimestamp": "2026-08-10T15:59:34.910Z"
+  },
+  {
+    "match": "Fakel Voronezh vs Akhmat Grozny",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.6488995986415257,
+    "minute": 60,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, aunque xG estimado, hay 1 gran chance y 3 tiros al área.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T23:01:09.692Z",
+    "alertTimestamp": "2026-08-10T16:39:37.780Z"
+  },
+  {
+    "match": "Rigas FS vs Grobiņa",
+    "league": "Virsliga Letonia",
+    "tier": "AVISO",
+    "probability": 0.8551934295134525,
+    "minute": 20,
+    "scoreAtAlert": "5-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      28,
+      36,
+      47,
+      53,
+      66,
+      75
+    ],
+    "timestamp": "2026-08-10T23:01:09.731Z",
+    "alertTimestamp": "2026-08-10T16:39:37.780Z"
+  },
+  {
+    "match": "Moss vs Odd BK",
+    "league": "OBOS-ligaen",
+    "tier": "AVISO",
+    "probability": 0.8656568118995026,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      44,
+      49,
+      51,
+      73,
+      93
+    ],
+    "timestamp": "2026-08-10T23:01:09.777Z",
+    "alertTimestamp": "2026-08-10T16:59:36.034Z"
+  },
+  {
+    "match": "CA River Plate (Reserva) vs Central Español (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8577134543154904,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T23:01:09.801Z",
+    "alertTimestamp": "2026-08-10T17:09:38.664Z"
+  },
+  {
+    "match": "Sirius vs IF Brommapojkarna",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.8597135023642043,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. Sin razones para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      17,
+      23,
+      25,
+      28
+    ],
+    "timestamp": "2026-08-10T23:01:09.881Z",
+    "alertTimestamp": "2026-08-10T17:09:38.664Z"
+  },
+  {
+    "match": "Deportivo Maldonado (Reserva) vs Colon FC (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8781992624150852,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de reserva, marcador ajustado, y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T23:01:09.948Z",
+    "alertTimestamp": "2026-08-10T17:09:38.664Z"
+  },
+  {
+    "match": "Norrby IF vs Örebro SK",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.8493707683936849,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      29,
+      42,
+      85
+    ],
+    "timestamp": "2026-08-10T23:01:10.096Z",
+    "alertTimestamp": "2026-08-10T17:09:38.664Z"
+  },
+  {
+    "match": "KÍ Klaksvík vs HB Torshavn",
+    "league": "Formuladeildin",
+    "tier": "AVISO",
+    "probability": 0.8548447713519884,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      77
+    ],
+    "timestamp": "2026-08-10T23:01:10.174Z",
+    "alertTimestamp": "2026-08-10T17:39:48.041Z"
   }
 ]
