@@ -6485,5 +6485,25 @@
     ],
     "timestamp": "2026-08-10T16:59:36.634Z",
     "alertTimestamp": "2026-08-10T15:09:35.014Z"
+  },
+  {
+    "match": "Alashkert Martuni vs BKMA Yerevan",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8793284766253111,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 2-0 temprano, y 5 tiros a puerta del local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T17:49:39.530Z",
+    "alertTimestamp": "2026-08-10T15:59:34.910Z"
   }
 ]
