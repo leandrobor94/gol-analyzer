@@ -6438,5 +6438,52 @@
     ],
     "timestamp": "2026-08-10T13:19:34.410Z",
     "alertTimestamp": "2026-08-10T02:35:16.887Z"
+  },
+  {
+    "match": "Salmiyah SC vs ASO Chlef",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8715479607131293,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      57
+    ],
+    "timestamp": "2026-08-10T16:50:21.427Z",
+    "alertTimestamp": "2026-08-10T14:49:34.962Z"
+  },
+  {
+    "match": "FC Slonim vs Bumprom",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.874170775929518,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, marcador 0-0, y liga con promedio de goles razonable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      71,
+      86,
+      88
+    ],
+    "timestamp": "2026-08-10T16:59:36.634Z",
+    "alertTimestamp": "2026-08-10T15:09:35.014Z"
   }
 ]
