@@ -6301,5 +6301,35 @@
     ],
     "timestamp": "2026-08-10T02:15:23.997Z",
     "alertTimestamp": "2026-08-10T00:15:16.178Z"
+  },
+  {
+    "match": "Austin Fc II vs Sporting Kansas City II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.8859823316320585,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T02:45:23.370Z",
+    "alertTimestamp": "2026-08-10T00:35:33.027Z"
+  },
+  {
+    "match": "Matagalpa vs Managua FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.949329061019609,
+    "minute": 23,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T02:55:13.369Z",
+    "alertTimestamp": "2026-08-10T01:05:25.972Z"
   }
 ]
