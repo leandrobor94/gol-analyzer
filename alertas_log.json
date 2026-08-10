@@ -6070,5 +6070,147 @@
     ],
     "timestamp": "2026-08-10T00:25:36.279Z",
     "alertTimestamp": "2026-08-09T22:45:29.451Z"
+  },
+  {
+    "match": "EEUU Sub20 vs México Sub20",
+    "league": "CONCACAF Campeonato Sub20 - Final",
+    "tier": "AVISO",
+    "probability": 0.8808234235372723,
+    "minute": 26,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28,
+      69
+    ],
+    "timestamp": "2026-08-10T00:55:25.479Z",
+    "alertTimestamp": "2026-08-09T23:05:16.007Z"
+  },
+  {
+    "match": "San Marcos FC vs UNAN Managua",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8877941745756698,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19
+    ],
+    "timestamp": "2026-08-10T00:55:25.634Z",
+    "alertTimestamp": "2026-08-09T23:05:16.007Z"
+  },
+  {
+    "match": "CSD Municipal vs Coban Imperial",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8711291780773115,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      47,
+      91
+    ],
+    "timestamp": "2026-08-10T01:05:26.034Z",
+    "alertTimestamp": "2026-08-09T23:05:16.007Z"
+  },
+  {
+    "match": "Jaguares de Córdoba vs Once Caldas",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8969170177149027,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      70,
+      73
+    ],
+    "timestamp": "2026-08-10T01:05:43.205Z",
+    "alertTimestamp": "2026-08-09T23:15:53.583Z"
+  },
+  {
+    "match": "Chicago Stars FC vs Bay FC",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.871100080610732,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T01:05:43.289Z",
+    "alertTimestamp": "2026-08-09T23:15:53.583Z"
+  },
+  {
+    "match": "Sporting San Miguelito vs Alianza FC",
+    "league": "Liga Panameña - Apertura - Conferencia Este",
+    "tier": "AVISO",
+    "probability": 0.8699154397872785,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T01:15:58.999Z",
+    "alertTimestamp": "2026-08-09T23:15:53.583Z"
+  },
+  {
+    "match": "Oriente Petrolero vs FC Universitario",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.6275030951111271,
+    "minute": 76,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      34,
+      47,
+      74,
+      91
+    ],
+    "timestamp": "2026-08-10T01:25:44.679Z",
+    "alertTimestamp": "2026-08-09T23:35:35.667Z"
+  },
+  {
+    "match": "Philadelphia Union vs Necaxa",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.9337973239570769,
+    "minute": 25,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      12,
+      53,
+      79
+    ],
+    "timestamp": "2026-08-10T01:36:25.472Z",
+    "alertTimestamp": "2026-08-09T23:45:15.173Z"
   }
 ]
