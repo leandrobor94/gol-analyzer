@@ -6331,5 +6331,112 @@
     "goalMinutes": [],
     "timestamp": "2026-08-10T02:55:13.369Z",
     "alertTimestamp": "2026-08-10T01:05:25.972Z"
+  },
+  {
+    "match": "Huehuetecos FC vs Santa Lucia Cotzumalguapa FC",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8828589719767472,
+    "minute": 25,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-10T13:19:32.814Z",
+    "alertTimestamp": "2026-08-10T01:15:58.933Z"
+  },
+  {
+    "match": "Austin FC vs Puebla",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.9337894555575471,
+    "minute": 25,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      7,
+      34
+    ],
+    "timestamp": "2026-08-10T13:19:33.073Z",
+    "alertTimestamp": "2026-08-10T01:15:58.933Z"
+  },
+  {
+    "match": "América de Cali vs Atlético Nacional",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8949641235677556,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      46
+    ],
+    "timestamp": "2026-08-10T13:19:33.601Z",
+    "alertTimestamp": "2026-08-10T01:25:44.582Z"
+  },
+  {
+    "match": "Atl. Independiente vs Atlético Choloma",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.88698788479243,
+    "minute": 26,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      25,
+      32
+    ],
+    "timestamp": "2026-08-10T13:19:33.806Z",
+    "alertTimestamp": "2026-08-10T01:36:25.376Z"
+  },
+  {
+    "match": "San Diego FC vs Club Tijuana",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8725496392865381,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22
+    ],
+    "timestamp": "2026-08-10T13:19:34.197Z",
+    "alertTimestamp": "2026-08-10T02:15:23.914Z"
+  },
+  {
+    "match": "Club América vs Portland Timbers",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8922952964620493,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      20,
+      63,
+      88
+    ],
+    "timestamp": "2026-08-10T13:19:34.410Z",
+    "alertTimestamp": "2026-08-10T02:35:16.887Z"
   }
 ]
