@@ -6693,5 +6693,53 @@
     ],
     "timestamp": "2026-08-10T23:01:10.174Z",
     "alertTimestamp": "2026-08-10T17:39:48.041Z"
+  },
+  {
+    "match": "Paysandu vs Confianca",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.8514816773360934,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44,
+      88,
+      92
+    ],
+    "timestamp": "2026-08-11T01:01:15.950Z",
+    "alertTimestamp": "2026-08-10T23:10:49.156Z"
+  },
+  {
+    "match": "Anápolis vs Guarani",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.8650701574727174,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      38,
+      94
+    ],
+    "timestamp": "2026-08-11T01:01:16.042Z",
+    "alertTimestamp": "2026-08-10T23:10:49.156Z"
   }
 ]
