@@ -6885,5 +6885,121 @@
     ],
     "timestamp": "2026-08-11T16:56:58.939Z",
     "alertTimestamp": "2026-08-11T15:06:37.977Z"
+  },
+  {
+    "match": "FC Dordoi Bishkek vs Homs Al Fidaa SC",
+    "league": "AFC Challenge League - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5267331920012452,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "7-8",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, con un gol de diferencia y 13 minutos restantes. El modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      86
+    ],
+    "timestamp": "2026-08-11T17:16:44.345Z",
+    "alertTimestamp": "2026-08-11T14:06:36.983Z"
+  },
+  {
+    "match": "PK Keski Uusimaa vs Fc Inter Turku 2",
+    "league": "Ykkonen",
+    "tier": "AVISO",
+    "probability": 0.5559803315820747,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-08-11T17:27:21.654Z",
+    "alertTimestamp": "2026-08-11T15:36:40.726Z"
+  },
+  {
+    "match": "Valasske Mezirici vs Unicov",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5431835208125424,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en fase eliminatoria, con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      47,
+      54,
+      79
+    ],
+    "timestamp": "2026-08-11T17:27:21.803Z",
+    "alertTimestamp": "2026-08-11T15:36:40.726Z"
+  },
+  {
+    "match": "Čechie Vykáň vs Dukla Praha",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6654615672295718,
+    "minute": 61,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Dukla Praha domina con 7 tiros a puerta y xG estimado alto, a pesar de la ventaja.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-11T17:57:19.859Z",
+    "alertTimestamp": "2026-08-11T16:06:40.351Z"
+  },
+  {
+    "match": "Vysoké Mýto vs Graffin Vlasim",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5402899993752022,
+    "minute": 78,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado 2-2 en el minuto 78, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      21,
+      34,
+      74,
+      80,
+      85
+    ],
+    "timestamp": "2026-08-11T17:57:20.021Z",
+    "alertTimestamp": "2026-08-11T16:06:40.351Z"
   }
 ]
