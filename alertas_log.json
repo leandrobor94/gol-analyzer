@@ -6741,5 +6741,54 @@
     ],
     "timestamp": "2026-08-11T01:01:16.042Z",
     "alertTimestamp": "2026-08-10T23:10:49.156Z"
+  },
+  {
+    "match": "Deportivo Cuenca vs Manta",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.8605558483070705,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      44,
+      84
+    ],
+    "timestamp": "2026-08-11T02:00:54.663Z",
+    "alertTimestamp": "2026-08-11T00:00:49.201Z"
+  },
+  {
+    "match": "Audax Italiano vs Ñublense",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.8668892505880175,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      33,
+      92,
+      102
+    ],
+    "timestamp": "2026-08-11T02:10:32.294Z",
+    "alertTimestamp": "2026-08-11T00:10:32.660Z"
   }
 ]
