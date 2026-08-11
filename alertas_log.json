@@ -6790,5 +6790,55 @@
     ],
     "timestamp": "2026-08-11T02:10:32.294Z",
     "alertTimestamp": "2026-08-11T00:10:32.660Z"
+  },
+  {
+    "match": "Independiente vs CD Universitario",
+    "league": "Liga Panameña - Apertura - Conferencia Este",
+    "tier": "AVISO",
+    "probability": 0.8511084075144629,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23,
+      49,
+      63,
+      65
+    ],
+    "timestamp": "2026-08-11T13:16:36.359Z",
+    "alertTimestamp": "2026-08-11T01:01:15.899Z"
+  },
+  {
+    "match": "Pitbulls Santa Bárbara FC vs Guadalupe",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5267908380496424,
+    "minute": 79,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 2-2 en el minuto 79, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      13,
+      41,
+      64
+    ],
+    "timestamp": "2026-08-11T13:16:36.690Z",
+    "alertTimestamp": "2026-08-11T01:10:32.434Z"
   }
 ]
