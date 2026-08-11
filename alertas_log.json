@@ -6840,5 +6840,25 @@
     ],
     "timestamp": "2026-08-11T13:16:36.690Z",
     "alertTimestamp": "2026-08-11T01:10:32.434Z"
+  },
+  {
+    "match": "Dynamo SPB vs FC 10",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.5967700791168965,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en fase de playoffs, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-11T16:06:40.500Z",
+    "alertTimestamp": "2026-08-11T14:06:36.983Z"
   }
 ]
