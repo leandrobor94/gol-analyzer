@@ -7001,5 +7001,71 @@
     ],
     "timestamp": "2026-08-11T17:57:20.021Z",
     "alertTimestamp": "2026-08-11T16:06:40.351Z"
+  },
+  {
+    "match": "Bodo Glimt vs Union St. Gilloise",
+    "league": "UEFA Champions League Clasificatorio - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.554977513105499,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no fiable, muchas ocasiones de gol para el visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      51,
+      61,
+      76,
+      88,
+      117
+    ],
+    "timestamp": "2026-08-11T22:57:54.069Z",
+    "alertTimestamp": "2026-08-11T16:06:40.351Z"
+  },
+  {
+    "match": "1. FC Magdeburg II vs SV Babelsberg 03",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.898564892836937,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-11T22:57:54.539Z",
+    "alertTimestamp": "2026-08-11T17:07:04.912Z"
+  },
+  {
+    "match": "VSG Altglienicke vs Hertha Berlin II",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.9088128392577365,
+    "minute": 27,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-11T22:57:55.055Z",
+    "alertTimestamp": "2026-08-11T17:16:44.189Z"
   }
 ]
