@@ -7672,5 +7672,130 @@
     "goalMinutes": [],
     "timestamp": "2026-08-12T18:01:16.730Z",
     "alertTimestamp": "2026-08-12T16:20:57.864Z"
+  },
+  {
+    "match": "Bremer SV vs Phönix Lübeck",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8754730571962306,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T23:01:37.802Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "Bnei Yehuda vs SC Ashdod",
+    "league": "Toto Cup National League - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.905896068440991,
+    "minute": 20,
+    "scoreAtAlert": "5-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T23:01:39.675Z",
+    "alertTimestamp": "2026-08-12T16:40:40.048Z"
+  },
+  {
+    "match": "Hapoel Raanana vs Maccabi Ahi Nazeret",
+    "league": "Toto Cup National League - Puesto de Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8452958352814606,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T23:01:42.182Z",
+    "alertTimestamp": "2026-08-12T16:40:40.048Z"
+  },
+  {
+    "match": "Girona B vs Sant Andreu",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8803734663687842,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T23:01:42.458Z",
+    "alertTimestamp": "2026-08-12T16:50:03.564Z"
+  },
+  {
+    "match": "FC Barcelona (F) vs Montpellier HSC (F)",
+    "league": "Amistosos (F)",
+    "tier": "AVISO",
+    "probability": 0.8527219066487717,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso femenino, 0-0 en el minuto 20. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      47,
+      50,
+      56,
+      83
+    ],
+    "timestamp": "2026-08-12T23:01:44.198Z",
+    "alertTimestamp": "2026-08-12T17:10:22.082Z"
+  },
+  {
+    "match": "Durban City vs Golden Arrows",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8655590863284178,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, modelo da alta probabilidad de gol a FT. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T23:01:46.312Z",
+    "alertTimestamp": "2026-08-12T17:51:36.253Z"
   }
 ]
