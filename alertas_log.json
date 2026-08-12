@@ -7467,5 +7467,210 @@
     ],
     "timestamp": "2026-08-12T17:10:35.575Z",
     "alertTimestamp": "2026-08-12T15:10:14.521Z"
+  },
+  {
+    "match": "Břidličná vs Tatran Vsechovice",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5312951876560448,
+    "minute": 79,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los últimos minutos, ambos equipos buscan el gol de la victoria.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T17:20:02.841Z",
+    "alertTimestamp": "2026-08-12T15:10:14.521Z"
+  },
+  {
+    "match": "KS Pogradeci vs Skenderbeu",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8715479607131293,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35
+    ],
+    "timestamp": "2026-08-12T17:30:00.547Z",
+    "alertTimestamp": "2026-08-12T15:40:39.197Z"
+  },
+  {
+    "match": "Atlético Tordesillas vs Real Ávila",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8557807113998617,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T17:30:00.622Z",
+    "alertTimestamp": "2026-08-12T15:40:39.197Z"
+  },
+  {
+    "match": "Johvi Phoenix vs Pärnu JK Vaprus",
+    "league": "Copa Estonia - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.913223527432281,
+    "minute": 25,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Pärnu JK Vaprus puede aumentar la ventaja.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      20,
+      44,
+      78,
+      88
+    ],
+    "timestamp": "2026-08-12T17:51:38.806Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "Nea Salamis vs Anorthosis",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5644038000571234,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      46,
+      58,
+      60
+    ],
+    "timestamp": "2026-08-12T18:01:15.771Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "FC Copenhague vs Debreceni VSC",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8633591749567533,
+    "minute": 20,
+    "scoreAtAlert": "5-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      47,
+      58,
+      76,
+      78,
+      92
+    ],
+    "timestamp": "2026-08-12T18:01:15.909Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "Linense vs UD Montijo",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8715479607131293,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T18:01:16.246Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "Barakaldo vs Athletic Bilbao B",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8870473877689777,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo da alta probabilidad y no hay datos que la contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      50,
+      79,
+      85
+    ],
+    "timestamp": "2026-08-12T18:01:16.662Z",
+    "alertTimestamp": "2026-08-12T16:10:21.389Z"
+  },
+  {
+    "match": "Velbert vs Borussia Mönchengladbach",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8557807113998617,
+    "minute": 20,
+    "scoreAtAlert": "0-7",
+    "finalScore": "0-8",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T18:01:16.730Z",
+    "alertTimestamp": "2026-08-12T16:20:57.864Z"
   }
 ]
