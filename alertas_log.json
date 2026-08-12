@@ -7177,5 +7177,85 @@
     ],
     "timestamp": "2026-08-12T15:10:14.721Z",
     "alertTimestamp": "2026-08-12T13:20:07.142Z"
+  },
+  {
+    "match": "Kaluga vs Iskra Smolensk",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.9147901593232592,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El partido no está resuelto y la probabilidad de gol en los próximos 15 minutos es alta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T15:50:03.574Z",
+    "alertTimestamp": "2026-08-12T14:09:57.723Z"
+  },
+  {
+    "match": "FK Shumbrat Saransk vs 2Drots",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.5515159843432635,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T16:10:21.587Z",
+    "alertTimestamp": "2026-08-12T14:09:57.723Z"
+  },
+  {
+    "match": "Fancom Broke Boys vs Dynamo Kirov",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8715479607131293,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T16:10:21.641Z",
+    "alertTimestamp": "2026-08-12T14:09:57.723Z"
+  },
+  {
+    "match": "Muaither vs Muharraq SC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8715479607131293,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T16:10:21.698Z",
+    "alertTimestamp": "2026-08-12T14:20:18.207Z"
   }
 ]
