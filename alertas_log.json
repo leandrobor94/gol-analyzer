@@ -7067,5 +7067,47 @@
     "goalMinutes": [],
     "timestamp": "2026-08-11T22:57:55.055Z",
     "alertTimestamp": "2026-08-11T17:16:44.189Z"
+  },
+  {
+    "match": "Avai vs CRB",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.5305413764517132,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, xG estimado no es real, pero el volumen de juego es alto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      34
+    ],
+    "timestamp": "2026-08-12T00:27:34.006Z",
+    "alertTimestamp": "2026-08-11T22:57:53.996Z"
+  },
+  {
+    "match": "Deportivo Colonia vs Deportivo Italiano",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.5436668915295831,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 1-1 en el minuto 78, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-12T00:27:34.041Z",
+    "alertTimestamp": "2026-08-11T22:57:53.996Z"
   }
 ]
