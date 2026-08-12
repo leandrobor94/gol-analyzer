@@ -7132,5 +7132,50 @@
     ],
     "timestamp": "2026-08-12T02:27:43.254Z",
     "alertTimestamp": "2026-08-12T00:37:53.143Z"
+  },
+  {
+    "match": "Krasnoe Znamya vs Dynamo Bryansk",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8493707683936849,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol según el modelo, y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40,
+      60
+    ],
+    "timestamp": "2026-08-12T14:59:59.966Z",
+    "alertTimestamp": "2026-08-12T13:20:07.142Z"
+  },
+  {
+    "match": "Irtysh Omsk vs Saturn Ramenskoye",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.5282230815402066,
+    "minute": 80,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y ambos equipos con bajo xG estimado, lo que sugiere que el modelo no está sobreestimando.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-08-12T15:10:14.721Z",
+    "alertTimestamp": "2026-08-12T13:20:07.142Z"
   }
 ]
