@@ -7823,5 +7823,195 @@
     ],
     "timestamp": "2026-08-13T01:41:06.839Z",
     "alertTimestamp": "2026-08-12T23:41:56.513Z"
+  },
+  {
+    "match": "Orlando City SC vs Atlético San Luis",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8595396529343661,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con xG estimado bajo pero sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      69,
+      79,
+      97,
+      121,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      125
+    ],
+    "timestamp": "2026-08-13T02:01:12.565Z",
+    "alertTimestamp": "2026-08-12T23:41:56.513Z"
+  },
+  {
+    "match": "Tiga Sport vs Auckland City",
+    "league": "OFC Champions League - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.8682472629363244,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      85
+    ],
+    "timestamp": "2026-08-13T02:01:12.751Z",
+    "alertTimestamp": "2026-08-13T00:01:09.346Z"
+  },
+  {
+    "match": "Forward Madison vs Greenville Triumph Sc",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8701066433924732,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28,
+      44
+    ],
+    "timestamp": "2026-08-13T02:01:30.192Z",
+    "alertTimestamp": "2026-08-13T00:10:56.632Z"
+  },
+  {
+    "match": "Atenas Río Cuarto vs Kimberley Mar Del Plata",
+    "league": "Federal A - Segunda Fase - Zona B",
+    "tier": "AVISO",
+    "probability": 0.8524858185704703,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      55,
+      88,
+      93
+    ],
+    "timestamp": "2026-08-13T02:01:30.604Z",
+    "alertTimestamp": "2026-08-13T00:10:56.632Z"
+  },
+  {
+    "match": "Monterrey vs Nashville SC",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8809866961055921,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y chance clara de gol para el visitante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      1,
+      52,
+      92
+    ],
+    "timestamp": "2026-08-13T02:10:56.855Z",
+    "alertTimestamp": "2026-08-13T00:10:56.632Z"
+  },
+  {
+    "match": "San Martín de Mendoza vs Sol de Mayo",
+    "league": "Federal A - Reválida - Zona B",
+    "tier": "AVISO",
+    "probability": 0.5381809656149533,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto con marcador ajustado y xG estimado similar. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      23,
+      41,
+      50
+    ],
+    "timestamp": "2026-08-13T02:10:57.254Z",
+    "alertTimestamp": "2026-08-13T00:21:21.646Z"
+  },
+  {
+    "match": "Huntsville vs Crown Legacy",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.8783330697158939,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T02:20:56.118Z",
+    "alertTimestamp": "2026-08-13T00:10:56.632Z"
+  },
+  {
+    "match": "Sarmiento De La Banda vs Sol De América",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "tier": "AVISO",
+    "probability": 0.8607900268602872,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin datos de xG reales ni ocasiones claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T02:31:15.149Z",
+    "alertTimestamp": "2026-08-13T00:41:24.331Z"
+  },
+  {
+    "match": "San Marcos vs Union San Felipe",
+    "league": "Liga de Ascenso",
+    "tier": "AVISO",
+    "probability": 0.8723373452552435,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, sin goles y sin datos de xG reales para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T02:41:17.203Z",
+    "alertTimestamp": "2026-08-13T00:41:24.331Z"
   }
 ]
