@@ -7797,5 +7797,31 @@
     "goalMinutes": [],
     "timestamp": "2026-08-12T23:01:46.312Z",
     "alertTimestamp": "2026-08-12T17:51:36.253Z"
+  },
+  {
+    "match": "Inter Miami vs León",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8568370863739845,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      42,
+      50,
+      53,
+      61,
+      83
+    ],
+    "timestamp": "2026-08-13T01:41:06.839Z",
+    "alertTimestamp": "2026-08-12T23:41:56.513Z"
   }
 ]
