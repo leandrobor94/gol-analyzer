@@ -8098,5 +8098,25 @@
     ],
     "timestamp": "2026-08-13T13:22:26.140Z",
     "alertTimestamp": "2026-08-13T02:51:17.232Z"
+  },
+  {
+    "match": "ASO Chlef vs Kazma SC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8648637176339394,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T16:02:16.564Z",
+    "alertTimestamp": "2026-08-13T14:12:29.121Z"
   }
 ]
