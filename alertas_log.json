@@ -8205,5 +8205,77 @@
     ],
     "timestamp": "2026-08-13T17:52:53.875Z",
     "alertTimestamp": "2026-08-13T16:02:16.425Z"
+  },
+  {
+    "match": "Dynamo Vologda vs FC Tver",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8530006775180854,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, un equipo domina claramente en remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      48
+    ],
+    "timestamp": "2026-08-13T23:03:14.507Z",
+    "alertTimestamp": "2026-08-13T16:32:16.417Z"
+  },
+  {
+    "match": "Rigas FS vs FK Jablonec",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8851833275091123,
+    "minute": 23,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El marcador 0-2 es remontable y el modelo da alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      22,
+      38
+    ],
+    "timestamp": "2026-08-13T23:03:14.635Z",
+    "alertTimestamp": "2026-08-13T16:32:16.417Z"
+  },
+  {
+    "match": "FC Vaduz vs Inter Turku",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.860510864311237,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado en fase de clasificación, con goles y remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      13,
+      56,
+      76
+    ],
+    "timestamp": "2026-08-13T23:03:39.795Z",
+    "alertTimestamp": "2026-08-13T17:32:39.881Z"
   }
 ]
