@@ -8118,5 +8118,69 @@
     "goalMinutes": [],
     "timestamp": "2026-08-13T16:02:16.564Z",
     "alertTimestamp": "2026-08-13T14:12:29.121Z"
+  },
+  {
+    "match": "Al Khalidiyah vs Salmiyah SC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8648637176339394,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T16:22:25.525Z",
+    "alertTimestamp": "2026-08-13T14:12:29.121Z"
+  },
+  {
+    "match": "Tobol Kostanay vs Partizan Belgrade",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8607084615844396,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      47,
+      92
+    ],
+    "timestamp": "2026-08-13T17:02:16.705Z",
+    "alertTimestamp": "2026-08-13T15:02:16.624Z"
+  },
+  {
+    "match": "Urartu vs Syunik",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8579546475821763,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T17:12:26.777Z",
+    "alertTimestamp": "2026-08-13T15:12:16.379Z"
   }
 ]

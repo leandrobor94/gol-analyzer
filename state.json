@@ -19,13 +19,23 @@
       "timestamp": 1786634537851,
       "minute": 22,
       "tier": "AVISO"
+    },
+    "4800349_AVISO": {
+      "timestamp": 1786639938267,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4744815_AVISO": {
+      "timestamp": 1786639938267,
+      "minute": 21,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 1861,
-    "verified": 1854,
-    "withGoalTimeline": 1245,
+    "total": 1880,
+    "verified": 1857,
+    "withGoalTimeline": 1246,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-13T16:12:16.245Z"
+  "lastUpdated": "2026-08-13T17:12:26.819Z"
 }
