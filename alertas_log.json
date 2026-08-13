@@ -8182,5 +8182,28 @@
     "goalMinutes": [],
     "timestamp": "2026-08-13T17:12:26.777Z",
     "alertTimestamp": "2026-08-13T15:12:16.379Z"
+  },
+  {
+    "match": "Ilves vs HNK Rijeka",
+    "league": "UEFA Conference League - 3ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.5410899650967929,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado en fase de clasificación, ambos equipos buscarán el gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      64,
+      70
+    ],
+    "timestamp": "2026-08-13T17:52:53.875Z",
+    "alertTimestamp": "2026-08-13T16:02:16.425Z"
   }
 ]
