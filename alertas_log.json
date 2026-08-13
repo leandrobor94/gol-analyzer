@@ -8013,5 +8013,90 @@
     "goalMinutes": [],
     "timestamp": "2026-08-13T02:41:17.203Z",
     "alertTimestamp": "2026-08-13T00:41:24.331Z"
+  },
+  {
+    "match": "Chiquimulilla vs Sacachispas Chiquimula",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8891383661310837,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-13T13:22:25.717Z",
+    "alertTimestamp": "2026-08-13T01:10:56.414Z"
+  },
+  {
+    "match": "Toluca vs FC Dallas",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8838560366401292,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      9,
+      47,
+      50
+    ],
+    "timestamp": "2026-08-13T13:22:25.991Z",
+    "alertTimestamp": "2026-08-13T02:20:55.707Z"
+  },
+  {
+    "match": "Los Angeles FC vs Querétaro FC",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8552528267639883,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      57,
+      121,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      125
+    ],
+    "timestamp": "2026-08-13T13:22:26.082Z",
+    "alertTimestamp": "2026-08-13T02:41:16.898Z"
+  },
+  {
+    "match": "Seattle Sounders vs Chivas de Guadalajara",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.8611041999649844,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin eventos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      61,
+      71
+    ],
+    "timestamp": "2026-08-13T13:22:26.140Z",
+    "alertTimestamp": "2026-08-13T02:51:17.232Z"
   }
 ]
