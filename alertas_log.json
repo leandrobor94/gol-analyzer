@@ -8323,5 +8323,52 @@
     ],
     "timestamp": "2026-08-14T00:03:13.738Z",
     "alertTimestamp": "2026-08-13T23:03:14.199Z"
+  },
+  {
+    "match": "Philadelphia Union vs Santos Laguna",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.5948949323068647,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      48,
+      51
+    ],
+    "timestamp": "2026-08-14T01:03:25.776Z",
+    "alertTimestamp": "2026-08-13T23:13:14.625Z"
+  },
+  {
+    "match": "New York City FC vs Necaxa",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.5937472601266831,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y xG estimado no es real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      37,
+      58,
+      79
+    ],
+    "timestamp": "2026-08-14T01:43:14.717Z",
+    "alertTimestamp": "2026-08-13T23:43:31.532Z"
   }
 ]
