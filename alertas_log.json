@@ -8760,5 +8760,205 @@
     ],
     "timestamp": "2026-08-14T16:57:57.688Z",
     "alertTimestamp": "2026-08-14T15:16:55.162Z"
+  },
+  {
+    "match": "Bjelovar vs Inter Zapresic",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.898842829535738,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T17:27:18.370Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "FC Voluntari vs Petrolul Ploiesti",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.534652035219164,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos con chances y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      19,
+      71
+    ],
+    "timestamp": "2026-08-14T17:27:18.525Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "JäPS vs Haka",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.6372021074467692,
+    "minute": 60,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Haka con ventaja mínima y tiros a puerta. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T17:27:19.005Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "Be1 Nfa vs Hegelmann Litauen Ii",
+    "league": "I Lyga",
+    "tier": "AVISO",
+    "probability": 0.5410046858978369,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      16,
+      93
+    ],
+    "timestamp": "2026-08-14T17:27:19.896Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "Kispest Honvéd vs Vasas",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5468106751724165,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, ambos equipos con llegadas al área. El xG es estimado, no se considera.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27,
+      78,
+      97
+    ],
+    "timestamp": "2026-08-14T17:37:37.068Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "Kauno Zalgiris II vs FK Lietava Jonava",
+    "league": "I Lyga",
+    "tier": "AVISO",
+    "probability": 0.5290246191322636,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, ambos equipos con 3 tiros a puerta, sin evidencia de juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T17:57:02.895Z",
+    "alertTimestamp": "2026-08-14T16:07:10.399Z"
+  },
+  {
+    "match": "Dnepr Mogilev vs Belshina Bobruisk",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.6081774076604909,
+    "minute": 62,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando los remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      67,
+      92
+    ],
+    "timestamp": "2026-08-14T17:57:05.903Z",
+    "alertTimestamp": "2026-08-14T16:07:10.399Z"
+  },
+  {
+    "match": "Nõmme United vs JK Tammeka Tartu",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.5370214541794187,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no fiable. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-08-14T17:57:06.274Z",
+    "alertTimestamp": "2026-08-14T16:07:10.399Z"
+  },
+  {
+    "match": "Pogoń Grodzisk vs Stal Rzeszow",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5303869996383465,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      67,
+      90
+    ],
+    "timestamp": "2026-08-14T17:57:06.835Z",
+    "alertTimestamp": "2026-08-14T16:07:10.399Z"
   }
 ]
