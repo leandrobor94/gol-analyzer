@@ -8589,5 +8589,101 @@
     ],
     "timestamp": "2026-08-14T14:56:54.100Z",
     "alertTimestamp": "2026-08-14T13:16:54.205Z"
+  },
+  {
+    "match": "Mbeya City vs Geita Gold Fc",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.8664902867587565,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T15:16:55.384Z",
+    "alertTimestamp": "2026-08-14T13:16:54.205Z"
+  },
+  {
+    "match": "FK Arsenal Dzerzhinsk vs Slavia Mozyr",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.5372238851558362,
+    "minute": 79,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no fiable. ",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      70,
+      73,
+      84
+    ],
+    "timestamp": "2026-08-14T15:56:59.085Z",
+    "alertTimestamp": "2026-08-14T14:06:54.890Z"
+  },
+  {
+    "match": "Navbahor vs FC Bunyodkor",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.5893506978926506,
+    "minute": 76,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 3-3 en el minuto 76 con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      19,
+      39,
+      51,
+      63,
+      70,
+      89
+    ],
+    "timestamp": "2026-08-14T16:07:10.673Z",
+    "alertTimestamp": "2026-08-14T14:06:54.890Z"
+  },
+  {
+    "match": "FC Orenburg vs Lokomotiv Moscu",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.5912749505339658,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alto xG local y gran volumen de juego, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      62
+    ],
+    "timestamp": "2026-08-14T16:07:10.821Z",
+    "alertTimestamp": "2026-08-14T14:06:54.890Z"
   }
 ]
