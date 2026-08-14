@@ -8565,5 +8565,29 @@
     ],
     "timestamp": "2026-08-14T13:16:55.527Z",
     "alertTimestamp": "2026-08-14T02:13:14.687Z"
+  },
+  {
+    "match": "São Caetano/Sp Youth vs Aguaí SP/Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.9056649295735181,
+    "minute": 27,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      25,
+      69
+    ],
+    "timestamp": "2026-08-14T14:56:54.100Z",
+    "alertTimestamp": "2026-08-14T13:16:54.205Z"
   }
 ]
