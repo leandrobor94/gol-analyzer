@@ -8685,5 +8685,80 @@
     ],
     "timestamp": "2026-08-14T16:07:10.821Z",
     "alertTimestamp": "2026-08-14T14:06:54.890Z"
+  },
+  {
+    "match": "Al Nasr Dubai vs Kalba",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.5609499296020907,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos con chances y xG estimado no es real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      20,
+      64,
+      77
+    ],
+    "timestamp": "2026-08-14T16:16:59.495Z",
+    "alertTimestamp": "2026-08-14T14:16:54.651Z"
+  },
+  {
+    "match": "E.N. Paralimniou vs Akritas Chloraka",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5440415644019615,
+    "minute": 80,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol en los minutos finales.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      65,
+      68,
+      79,
+      88
+    ],
+    "timestamp": "2026-08-14T16:57:47.425Z",
+    "alertTimestamp": "2026-08-14T15:06:54.962Z"
+  },
+  {
+    "match": "FK Pohronie vs Bytča",
+    "league": "2. Liga",
+    "tier": "AVISO",
+    "probability": 0.9074706144116963,
+    "minute": 27,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      21,
+      32
+    ],
+    "timestamp": "2026-08-14T16:57:57.688Z",
+    "alertTimestamp": "2026-08-14T15:16:55.162Z"
   }
 ]
