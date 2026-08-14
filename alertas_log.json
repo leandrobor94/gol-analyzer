@@ -8370,5 +8370,109 @@
     ],
     "timestamp": "2026-08-14T01:43:14.717Z",
     "alertTimestamp": "2026-08-13T23:43:31.532Z"
+  },
+  {
+    "match": "Alianza FC vs UMECIT",
+    "league": "CONCACAF Copa Centroamericana - Fase de grupos - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.5637919261978631,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-08-14T02:04:50.750Z",
+    "alertTimestamp": "2026-08-14T00:13:13.159Z"
+  },
+  {
+    "match": "Cienciano vs Botafogo",
+    "league": "CONMEBOL Copa Sudamericana - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8901970758875183,
+    "minute": 23,
+    "scoreAtAlert": "6-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, Botafogo sin remates, pero Cienciano con 2 goles y 1 gran chance.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      20,
+      30,
+      35,
+      49,
+      62,
+      78
+    ],
+    "timestamp": "2026-08-14T02:33:16.119Z",
+    "alertTimestamp": "2026-08-14T00:33:43.290Z"
+  },
+  {
+    "match": "Rosario Central vs Corinthians",
+    "league": "CONMEBOL Copa Libertadores - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.540835858939852,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T02:43:25.157Z",
+    "alertTimestamp": "2026-08-14T00:33:43.290Z"
+  },
+  {
+    "match": "Club América vs Austin FC",
+    "league": "Leagues Cup",
+    "tier": "AVISO",
+    "probability": 0.5816440676536948,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      48,
+      67,
+      121,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125,
+      125,
+      126
+    ],
+    "timestamp": "2026-08-14T02:53:13.624Z",
+    "alertTimestamp": "2026-08-14T00:43:13.824Z"
   }
 ]
