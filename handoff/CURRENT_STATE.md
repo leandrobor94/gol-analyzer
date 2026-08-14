@@ -118,6 +118,47 @@ completas. Está en la última medición de este documento.
 
 ---
 
+## 5-bis. Busqueda exhaustiva de combinaciones (13 de agosto)
+
+Se probaron **987 combinaciones** de 1, 2 y 3 variables sobre 18 candidatas
+(minuto, restante, goles, diferencia, empate, ritmo de liga, fuerza, xG, xG
+pendiente, remates, a puerta, ocasiones, corners, ataques, remates al area,
+rojas, ritmo de remates, ritmo de xG). Objetivo: gol en los proximos 15 minutos.
+Particion temporal: 355 de entrenamiento (hasta el 6 de agosto), 153 de prueba
+(desde el 7). Tasa base en prueba 41.8%.
+
+**Control de comparaciones multiples.** Se repitio la busqueda entera tres veces
+sobre etiquetas BARAJADAS. El mejor AUC alcanzado sobre ruido puro fue **0.5849**
+(repeticiones: 0.585, 0.514, 0.571). Ese es el liston: buscar 987 veces sobre
+datos sin señal produce, solo por buscar, un 0.58.
+
+| AUC | supera azar | variables |
+|---|---|---|
+| 0.5361 | no | ocasiones + areaRem + rojas |
+| 0.5285 | no | golesYa + difGoles + ligaRitmo |
+| 0.5236 | no | ocasiones + areaRem |
+| 0.5234 | no | difGoles + ligaRitmo + xgPend |
+| 0.5199 | no | minuto + ligaRitmo + corners |
+
+Referencias: `minuto` solo = 0.4951 · `minuto + golesYa` = 0.5054 ·
+`minuto + fuerza` = 0.4951 · `minuto + xgPend` = 0.4881
+
+**VEREDICTO: 0 de 987 superan el liston.** La mejor combinacion real (0.5361)
+queda muy por debajo de lo que produce el azar cuando se busca tanto (0.5849).
+
+**Matiz importante sobre el reloj.** El 7 de agosto se midio que `solo el reloj`
+daba AUC 0.7020, mejor que el modelo. Aqui `minuto` da 0.4951. No es una
+contradiccion: aquel objetivo era "gol antes del final", donde el tiempo
+restante es mecanicamente informativo; este es "gol en los proximos 15 minutos",
+horizonte FIJO. Toda la fuerza del reloj venia de la longitud del horizonte, no
+de saber nada de futbol.
+
+**Limite de la prueba.** Con n=153 en prueba el error tipico del AUC ronda
+0.045, asi que el liston del azar es alto. Esto descarta efectos GRANDES, no
+efectos pequeños. Un AUC real de 0.60 se habria detectado; uno de 0.55 no.
+
+---
+
 ## 6. Qué hacer, en orden
 
 1. **Arreglar `bet.odds` y `finalStats`** — funcionan en local y no en producción. Sin

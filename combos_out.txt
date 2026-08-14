@@ -1,0 +1,59 @@
+OBJETIVO: gol en los proximos 15 minutos
+  entrenamiento: 355 (hasta 2026-08-06)
+  prueba       : 153 (desde 2026-08-07)
+  tasa base en prueba: 41.8%
+
+combinaciones a probar: 987 (de 1, 2 y 3 variables sobre 18)
+  real 0/987
+  real 200/987
+  real 400/987
+  real 600/987
+  real 800/987
+generando distribucion nula (misma busqueda sobre etiquetas barajadas)...
+  nulo1 0/987
+  nulo1 200/987
+  nulo1 400/987
+  nulo1 600/987
+  nulo1 800/987
+  nulo2 0/987
+  nulo2 200/987
+  nulo2 400/987
+  nulo2 600/987
+  nulo2 800/987
+  nulo3 0/987
+  nulo3 200/987
+  nulo3 400/987
+  nulo3 600/987
+  nulo3 800/987
+
+  LISTON DEL AZAR: el mejor de 987 combinaciones sobre datos
+  sin señal alcanza AUC 0.5849 (3 repeticiones: 0.585, 0.514, 0.571)
+  Cualquier resultado por debajo de eso es indistinguible del azar.
+
+=== MEJORES COMBINACIONES (fuera de muestra) ===
+   AUC     supera azar   variables
+  0.5361        no         ocasiones + areaRem + rojas
+  0.5285        no         golesYa + difGoles + ligaRitmo
+  0.5236        no         ocasiones + areaRem
+  0.5236        no         fuerza + ocasiones + areaRem
+  0.5234        no         difGoles + ligaRitmo + xgPend
+  0.5199        no         minuto + ligaRitmo + corners
+  0.5199        no         restante + ligaRitmo + corners
+  0.5198        no         minuto + golesYa + difGoles
+  0.5198        no         restante + golesYa + difGoles
+  0.5197        no         rojas
+  0.5197        no         fuerza + rojas
+  0.5197        no         minuto + ligaRitmo + xg
+  0.5197        no         restante + ligaRitmo + xg
+  0.5186        no         minuto + golesYa + ligaRitmo
+  0.5186        no         restante + golesYa + ligaRitmo
+
+=== REFERENCIAS ===
+  0.4951  minuto
+  0.4951  restante
+  0.5054  minuto + golesYa
+  0.4951  minuto + fuerza
+  0.4881  minuto + xgPend
+  0.4954  minuto + ritmoRem
+
+VEREDICTO: 0 de 987 combinaciones superan el liston del azar — ninguna. No hay combinacion que aporte.
