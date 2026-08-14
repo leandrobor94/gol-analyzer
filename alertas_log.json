@@ -8277,5 +8277,51 @@
     ],
     "timestamp": "2026-08-13T23:03:39.795Z",
     "alertTimestamp": "2026-08-13T17:32:39.881Z"
+  },
+  {
+    "match": "Santos vs Macara",
+    "league": "CONMEBOL Copa Sudamericana - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5491474965919169,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alto xG local (aunque estimado) y muchas llegadas. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      44,
+      76
+    ],
+    "timestamp": "2026-08-14T00:03:13.631Z",
+    "alertTimestamp": "2026-08-13T23:03:14.199Z"
+  },
+  {
+    "match": "São Paulo (F) vs Santos (F)",
+    "league": "Paulista Feminino",
+    "tier": "AVISO",
+    "probability": 0.5402220934014452,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-08-14T00:03:13.738Z",
+    "alertTimestamp": "2026-08-13T23:03:14.199Z"
   }
 ]
