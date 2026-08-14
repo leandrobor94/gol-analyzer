@@ -8960,5 +8960,221 @@
     ],
     "timestamp": "2026-08-14T17:57:06.835Z",
     "alertTimestamp": "2026-08-14T16:07:10.399Z"
+  },
+  {
+    "match": "BFC Daugavpils vs Ogre United",
+    "league": "Latvian Cup",
+    "tier": "AVISO",
+    "probability": 0.5572664408587512,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y liga de alto scoring.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T22:57:51.411Z",
+    "alertTimestamp": "2026-08-14T15:37:00.266Z"
+  },
+  {
+    "match": "Gandzasar Kapan vs Shirak FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6426496686911599,
+    "minute": 60,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T22:57:51.626Z",
+    "alertTimestamp": "2026-08-14T16:16:59.267Z"
+  },
+  {
+    "match": "Kheybar Khorramabad vs Fajr Sepasi",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.5267331920012452,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y tiempo restante. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24
+    ],
+    "timestamp": "2026-08-14T22:57:51.658Z",
+    "alertTimestamp": "2026-08-14T16:16:59.267Z"
+  },
+  {
+    "match": "Esteglal Khuzestan vs Aluminium Arak",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8952413458754558,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      92
+    ],
+    "timestamp": "2026-08-14T22:57:51.732Z",
+    "alertTimestamp": "2026-08-14T16:37:05.328Z"
+  },
+  {
+    "match": "Rotor Volgograd vs Ural Yekaterinburg",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8752781809675935,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      58
+    ],
+    "timestamp": "2026-08-14T22:57:51.771Z",
+    "alertTimestamp": "2026-08-14T16:37:05.328Z"
+  },
+  {
+    "match": "Al-Wahda vs Ajman Club",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.8637414636686251,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y chance clara para el visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      51,
+      77,
+      83,
+      93
+    ],
+    "timestamp": "2026-08-14T22:57:52.272Z",
+    "alertTimestamp": "2026-08-14T16:47:22.488Z"
+  },
+  {
+    "match": "FUS Rabat vs Ittihad Tanger",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5267331920012452,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con 13 minutos restantes y un solo gol de diferencia.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T22:57:52.364Z",
+    "alertTimestamp": "2026-08-14T16:47:22.488Z"
+  },
+  {
+    "match": "SV Babelsberg 03 vs Rsv Eintracht",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.8993873477560842,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T22:57:52.508Z",
+    "alertTimestamp": "2026-08-14T17:07:37.702Z"
+  },
+  {
+    "match": "FSV Zwickau vs FSV 63 Luckenwalde",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.9057764922278992,
+    "minute": 25,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-14T22:57:52.643Z",
+    "alertTimestamp": "2026-08-14T17:07:37.702Z"
+  },
+  {
+    "match": "Vukovar vs Bijelo Brdo",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8878562443594952,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15
+    ],
+    "timestamp": "2026-08-14T22:57:52.714Z",
+    "alertTimestamp": "2026-08-14T17:07:37.702Z"
   }
 ]
