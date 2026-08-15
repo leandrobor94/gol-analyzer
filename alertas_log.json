@@ -9201,5 +9201,70 @@
     ],
     "timestamp": "2026-08-14T23:57:51.792Z",
     "alertTimestamp": "2026-08-14T22:57:51.289Z"
+  },
+  {
+    "match": "U. de Concepción vs Deportes La Serena",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.5662669636005185,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      60
+    ],
+    "timestamp": "2026-08-15T00:58:08.091Z",
+    "alertTimestamp": "2026-08-14T23:07:51.573Z"
+  },
+  {
+    "match": "Toronto FC II vs Chattanooga FC",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5762044870254802,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T01:08:24.734Z",
+    "alertTimestamp": "2026-08-14T23:07:51.573Z"
+  },
+  {
+    "match": "Racing Club vs Banfield",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5338342457944271,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      24
+    ],
+    "timestamp": "2026-08-15T01:38:04.151Z",
+    "alertTimestamp": "2026-08-14T23:38:19.326Z"
   }
 ]
