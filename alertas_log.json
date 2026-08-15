@@ -9176,5 +9176,30 @@
     ],
     "timestamp": "2026-08-14T22:57:52.714Z",
     "alertTimestamp": "2026-08-14T17:07:37.702Z"
+  },
+  {
+    "match": "Osasco Sporting Youth vs União São João/SP Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5578813032597894,
+    "minute": 79,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      24,
+      47,
+      50,
+      87
+    ],
+    "timestamp": "2026-08-14T23:57:51.792Z",
+    "alertTimestamp": "2026-08-14T22:57:51.289Z"
   }
 ]
