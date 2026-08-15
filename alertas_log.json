@@ -10307,5 +10307,227 @@
     ],
     "timestamp": "2026-08-15T17:31:42.833Z",
     "alertTimestamp": "2026-08-15T15:42:17.735Z"
+  },
+  {
+    "match": "Deportes Recoleta (F) vs Magallanes (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.9010909401701784,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es real, no hay datos de ocasiones claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T22:34:19.628Z",
+    "alertTimestamp": "2026-08-15T16:10:36.176Z"
+  },
+  {
+    "match": "Dundalk vs Castlebar Celtic",
+    "league": "FAI Cup",
+    "tier": "AVISO",
+    "probability": 0.616489232222219,
+    "minute": 64,
+    "scoreAtAlert": "5-0",
+    "finalScore": "8-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T22:34:19.743Z",
+    "alertTimestamp": "2026-08-15T16:10:36.176Z"
+  },
+  {
+    "match": "Shams Azar Qazvin vs Persepolis",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.9017794115960456,
+    "minute": 28,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      10,
+      14
+    ],
+    "timestamp": "2026-08-15T22:34:19.910Z",
+    "alertTimestamp": "2026-08-15T16:10:36.176Z"
+  },
+  {
+    "match": "Slavia Kromeriz vs Vysocina Jihlava",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.6655765737829771,
+    "minute": 60,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      12,
+      74,
+      81
+    ],
+    "timestamp": "2026-08-15T22:34:19.958Z",
+    "alertTimestamp": "2026-08-15T16:10:36.176Z"
+  },
+  {
+    "match": "SD Laredo vs Palencia",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8977717563957165,
+    "minute": 26,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T22:34:22.534Z",
+    "alertTimestamp": "2026-08-15T16:41:19.325Z"
+  },
+  {
+    "match": "Al Wasl vs Dubai United",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.8765294427756026,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, liga de alto scoring, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      3,
+      17,
+      63,
+      87,
+      89,
+      96
+    ],
+    "timestamp": "2026-08-15T22:34:40.446Z",
+    "alertTimestamp": "2026-08-15T16:52:31.433Z"
+  },
+  {
+    "match": "Utrecht vs AZ Alkmaar",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.8549456905088898,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en Eredivisie, 0-0 en el minuto 20. El modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      46,
+      47,
+      49,
+      62,
+      84
+    ],
+    "timestamp": "2026-08-15T22:34:40.509Z",
+    "alertTimestamp": "2026-08-15T17:02:08.157Z"
+  },
+  {
+    "match": "Wiltz vs Differdange 03",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8953756951896262,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      26,
+      87
+    ],
+    "timestamp": "2026-08-15T22:34:40.943Z",
+    "alertTimestamp": "2026-08-15T17:11:31.998Z"
+  },
+  {
+    "match": "Guarani (F) vs Sportivo Luqueño (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.5877279996423656,
+    "minute": 77,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de fútbol femenino, marcador ajustado y minutos restantes. No hay datos de xG reales.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      47,
+      79,
+      88
+    ],
+    "timestamp": "2026-08-15T23:04:49.476Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Godoy Cruz vs Deportivo Maipú",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5541529898778003,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      63,
+      93
+    ],
+    "timestamp": "2026-08-15T23:04:49.532Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Cavalry vs Forge FC",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.537292855687022,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      62,
+      83
+    ],
+    "timestamp": "2026-08-15T23:14:41.967Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
   }
 ]
