@@ -10088,5 +10088,224 @@
     ],
     "timestamp": "2026-08-15T16:31:20.215Z",
     "alertTimestamp": "2026-08-15T14:43:57.222Z"
+  },
+  {
+    "match": "Manchester United vs AC Milan",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5642763953030914,
+    "minute": 76,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      37,
+      51,
+      57,
+      68,
+      71
+    ],
+    "timestamp": "2026-08-15T16:52:35.760Z",
+    "alertTimestamp": "2026-08-15T14:59:26.200Z"
+  },
+  {
+    "match": "Hapoel Ra'anana Sub19 vs Ironi Ramat Hasharon Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.5684686371815014,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, un gol de diferencia y alta probabilidad del modelo. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3
+    ],
+    "timestamp": "2026-08-15T17:02:08.628Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Politehnica UTM vs FC Balti",
+    "league": "Super Liga",
+    "tier": "AVISO",
+    "probability": 0.7125369788024561,
+    "minute": 60,
+    "scoreAtAlert": "6-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      29,
+      32,
+      39,
+      44,
+      63
+    ],
+    "timestamp": "2026-08-15T17:02:08.669Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Pardubice vs Mlada Boleslav",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.5418359252117548,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      10,
+      75
+    ],
+    "timestamp": "2026-08-15T17:02:08.821Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Energetik BGU vs FC Lida",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.5391464196361864,
+    "minute": 80,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T17:02:08.909Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Fulham vs Stuttgart",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5536441567180989,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido amistoso con marcador ajustado y tiempo restante. No hay datos de xG reales para descartar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      67
+    ],
+    "timestamp": "2026-08-15T17:02:19.778Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Huachipato (F) vs Universidad Católica (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.9054748464222765,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El marcador 2-0 no es definitivo y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T17:02:39.457Z",
+    "alertTimestamp": "2026-08-15T15:11:11.813Z"
+  },
+  {
+    "match": "Angers vs Paris FC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5423847584203818,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      36,
+      43,
+      65,
+      83
+    ],
+    "timestamp": "2026-08-15T17:31:28.738Z",
+    "alertTimestamp": "2026-08-15T15:42:17.735Z"
+  },
+  {
+    "match": "KF Tirana vs KF Laci",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5979625436844707,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      71,
+      74,
+      86
+    ],
+    "timestamp": "2026-08-15T17:31:34.350Z",
+    "alertTimestamp": "2026-08-15T15:42:17.735Z"
+  },
+  {
+    "match": "Nyiregyhaza vs Kisvarda",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5354056718914253,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      45,
+      82,
+      91
+    ],
+    "timestamp": "2026-08-15T17:31:34.423Z",
+    "alertTimestamp": "2026-08-15T15:42:17.735Z"
+  },
+  {
+    "match": "Sekhukhune United vs Polokwane City",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.663662066832032,
+    "minute": 60,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      20
+    ],
+    "timestamp": "2026-08-15T17:31:42.833Z",
+    "alertTimestamp": "2026-08-15T15:42:17.735Z"
   }
 ]
