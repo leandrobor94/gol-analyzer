@@ -9526,5 +9526,312 @@
     ],
     "timestamp": "2026-08-15T14:10:27.001Z",
     "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "Shakhter Soligorsk vs Niva Dolbizno",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.9421361558405213,
+    "minute": 23,
+    "scoreAtAlert": "2-5",
+    "finalScore": "2-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles, marcador abierto y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T14:59:26.265Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "Mjällby AIF vs Sirius",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.5527806987870834,
+    "minute": 78,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado con alta probabilidad de gol en liga de alto scoring.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      24,
+      34,
+      46,
+      54,
+      77,
+      87
+    ],
+    "timestamp": "2026-08-15T14:59:26.744Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "Leningradets vs Arsenal Tula",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5409037920296743,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T14:59:26.817Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "Kaizer Chiefs vs Mamelodi Sundowns",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5527556939158343,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      63,
+      75
+    ],
+    "timestamp": "2026-08-15T14:59:56.785Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "Quick Boys vs Rkav Volendam",
+    "league": "Tweede Divisie",
+    "tier": "AVISO",
+    "probability": 0.8721236647299483,
+    "minute": 23,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, y un equipo domina sin goles.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      14,
+      53,
+      80,
+      89
+    ],
+    "timestamp": "2026-08-15T14:59:58.554Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "Polisi Tanzania FC vs Azam FC",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.5603325072234505,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T15:00:21.559Z",
+    "alertTimestamp": "2026-08-15T13:16:45.483Z"
+  },
+  {
+    "match": "Chelsea vs Real Sociedad",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5807329417529313,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido amistoso con goles, el marcador no está completamente resuelto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      45,
+      47,
+      77
+    ],
+    "timestamp": "2026-08-15T15:11:24.447Z",
+    "alertTimestamp": "2026-08-15T13:07:36.371Z"
+  },
+  {
+    "match": "AFC vs Kloetinge",
+    "league": "Tweede Divisie",
+    "tier": "AVISO",
+    "probability": 0.8730250981430414,
+    "minute": 22,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      67,
+      81,
+      87
+    ],
+    "timestamp": "2026-08-15T15:21:58.958Z",
+    "alertTimestamp": "2026-08-15T13:16:45.483Z"
+  },
+  {
+    "match": "Union Berlin vs Ipswich",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8994080206906859,
+    "minute": 23,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido amistoso con goles, sin datos de xG reales. El modelo predice alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      16,
+      40,
+      46,
+      53,
+      78
+    ],
+    "timestamp": "2026-08-15T15:35:58.966Z",
+    "alertTimestamp": "2026-08-15T13:37:04.018Z"
+  },
+  {
+    "match": "Chrobry Glogow vs Podbeskidzie",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5274413115838896,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, pocos tiros a puerta, pero con un jugador menos y xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      46,
+      57
+    ],
+    "timestamp": "2026-08-15T15:36:01.844Z",
+    "alertTimestamp": "2026-08-15T13:37:04.018Z"
+  },
+  {
+    "match": "Pogon Siedlce vs Polonia Warsawa",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5460383150581921,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-08-15T15:36:09.698Z",
+    "alertTimestamp": "2026-08-15T13:37:04.018Z"
+  },
+  {
+    "match": "Borussia Mönchengladbach vs Aston Villa",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5720625418327895,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      35,
+      69
+    ],
+    "timestamp": "2026-08-15T15:36:09.733Z",
+    "alertTimestamp": "2026-08-15T13:37:04.018Z"
+  },
+  {
+    "match": "CS Afumati vs CF Chindia Targoviste",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5514700096647657,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aunque el marcador es 0-2, el xG estimado del local es alto y quedan minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      20,
+      90
+    ],
+    "timestamp": "2026-08-15T15:36:27.083Z",
+    "alertTimestamp": "2026-08-15T13:37:04.018Z"
   }
 ]
