@@ -159,6 +159,37 @@ efectos pequeños. Un AUC real de 0.60 se habria detectado; uno de 0.55 no.
 
 ---
 
+## 5-ter. Latencia de la cuota — hipotesis REFUTADA (13 de agosto)
+
+Era la unica hipotesis no refutada del proyecto y la unica que no exigia predecir
+nada: si la casa tarda en repreciar tras un gol en ligas menores, el margen seria de
+carrera, no de modelo.
+
+Medido sobre 10.609 capturas con cuota y marcador (1.228 partidos, 9.308 pares de
+capturas consecutivas separadas 10,2 minutos de media):
+
+| | pares | la cuota se movio |
+|---|---|---|
+| **con gol nuevo** | 1.862 | **1.859 (99.8%)** |
+| sin gol | 7.446 | 6.526 (87.6%) |
+
+Magnitud del movimiento (mediana del mayor cambio entre 1/X/2): **7.000 tras un gol**
+contra 0.400 sin gol.
+
+Los 3 casos que no se movieron son partidos ya decididos donde la cuota estaba en el
+extremo (1.06 -> 1.06, 1.02 -> 1.02, 51 -> 51): un gol mas no cambia nada. No son
+precios rancios.
+
+**Conclusion: la casa reprecia esencialmente al instante.** A resolucion de 10 minutos
+no queda ventana.
+
+**Limite honesto:** esto no puede descartar un retraso de segundos. Pero un retraso de
+segundos no es explotable por una persona que mete la apuesta a mano — y si existiera
+una ventana de varios minutos, parte de esos 1.862 pares la habrian mostrado. No lo
+hicieron.
+
+---
+
 ## 6. Qué hacer, en orden
 
 1. **Arreglar `bet.odds` y `finalStats`** — funcionan en local y no en producción. Sin
