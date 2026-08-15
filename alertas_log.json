@@ -9331,5 +9331,109 @@
     "goalMinutes": [],
     "timestamp": "2026-08-15T02:57:51.307Z",
     "alertTimestamp": "2026-08-15T01:08:09.919Z"
+  },
+  {
+    "match": "Cruz Azul (F) vs Atlante (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.557284154030087,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T12:47:24.124Z",
+    "alertTimestamp": "2026-08-15T01:08:09.919Z"
+  },
+  {
+    "match": "Correcaminos vs CD Tapatío",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5758473446157221,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      10,
+      20,
+      35,
+      61,
+      70
+    ],
+    "timestamp": "2026-08-15T12:47:24.206Z",
+    "alertTimestamp": "2026-08-15T01:08:09.919Z"
+  },
+  {
+    "match": "Sporting (F) vs Alajuelense (F)",
+    "league": "Liga Promerica femenina",
+    "tier": "AVISO",
+    "probability": 0.8570704011114851,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T12:47:24.956Z",
+    "alertTimestamp": "2026-08-15T02:07:51.491Z"
+  },
+  {
+    "match": "Guangxi Hengchen vs Meizhou Wuhua",
+    "league": "League One",
+    "tier": "AVISO",
+    "probability": 0.5877279996423656,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T13:27:03.061Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "Reading vs Luton",
+    "league": "League One",
+    "tier": "AVISO",
+    "probability": 0.5803551787360213,
+    "minute": 76,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 3-3 en el minuto 76 con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      8,
+      31,
+      38,
+      50,
+      52,
+      96
+    ],
+    "timestamp": "2026-08-15T13:37:04.614Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
   }
 ]

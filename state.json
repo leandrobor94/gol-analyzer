@@ -1,56 +1,56 @@
 {
   "alertedMatches": {
-    "4650605_AVISO": {
-      "timestamp": 1786754274593,
+    "4746869_AVISO": {
+      "timestamp": 1786799256370,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4727816_AVISO": {
+      "timestamp": 1786799256370,
       "minute": 77,
       "tier": "AVISO"
     },
-    "4659129_AVISO": {
-      "timestamp": 1786754274593,
+    "4712329_AVISO": {
+      "timestamp": 1786800422954,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4760219_AVISO": {
+      "timestamp": 1786800422954,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4760217_AVISO": {
+      "timestamp": 1786801024018,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4673317_AVISO": {
+      "timestamp": 1786801024018,
       "minute": 76,
       "tier": "AVISO"
     },
-    "4633366_AVISO": {
-      "timestamp": 1786756089919,
+    "4673316_AVISO": {
+      "timestamp": 1786801024018,
       "minute": 78,
       "tier": "AVISO"
     },
-    "4778503_AVISO": {
-      "timestamp": 1786761472548,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4678082_AVISO": {
-      "timestamp": 1786757884060,
+    "4764663_AVISO": {
+      "timestamp": 1786801024018,
       "minute": 76,
       "tier": "AVISO"
     },
-    "4806275_AVISO": {
-      "timestamp": 1786757884060,
-      "minute": 79,
-      "tier": "AVISO"
-    },
-    "4809606_AVISO": {
-      "timestamp": 1786760273070,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4761064_AVISO": {
-      "timestamp": 1786761472548,
+    "4815195_AVISO": {
+      "timestamp": 1786801024018,
       "minute": 76,
-      "tier": "AVISO"
-    },
-    "4791671_AVISO": {
-      "timestamp": 1786761472548,
-      "minute": 78,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 2061,
-    "verified": 2049,
-    "withGoalTimeline": 1378,
+    "total": 2156,
+    "verified": 2079,
+    "withGoalTimeline": 1401,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-15T02:57:51.527Z"
+  "lastUpdated": "2026-08-15T13:37:04.706Z"
 }
