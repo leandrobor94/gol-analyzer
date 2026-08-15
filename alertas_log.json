@@ -9311,5 +9311,25 @@
     ],
     "timestamp": "2026-08-15T02:07:51.565Z",
     "alertTimestamp": "2026-08-15T00:08:02.466Z"
+  },
+  {
+    "match": "UMECIT FC Sub20 vs Champions Academy",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.9056649295735181,
+    "minute": 27,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T02:57:51.307Z",
+    "alertTimestamp": "2026-08-15T01:08:09.919Z"
   }
 ]
