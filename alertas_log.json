@@ -9435,5 +9435,96 @@
     ],
     "timestamp": "2026-08-15T13:37:04.614Z",
     "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "Shanghai Shenhua vs Henan",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.5526898947854522,
+    "minute": 78,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con goles, ambos equipos generando. Aunque el marcador es 3-1, el modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      47,
+      56,
+      71,
+      83
+    ],
+    "timestamp": "2026-08-15T13:57:14.869Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "FC Roskilde vs Middlefart",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.6186874991824647,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T14:10:21.590Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "BFC Preussen vs Greifswalder Fc",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.6198488867875811,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T14:10:22.479Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
+  },
+  {
+    "match": "Yunnan Yukun vs Dalian Yingbo",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.556169253943436,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, un equipo con gran volumen de juego y superioridad numérica.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      72,
+      81,
+      97
+    ],
+    "timestamp": "2026-08-15T14:10:27.001Z",
+    "alertTimestamp": "2026-08-15T12:47:24.047Z"
   }
 ]
