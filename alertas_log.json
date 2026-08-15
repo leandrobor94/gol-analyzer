@@ -9266,5 +9266,50 @@
     ],
     "timestamp": "2026-08-15T01:38:04.151Z",
     "alertTimestamp": "2026-08-14T23:38:19.326Z"
+  },
+  {
+    "match": "Tupapa Maraerenga vs Abm Galaxy",
+    "league": "OFC Champions League - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.6526567123049661,
+    "minute": 76,
+    "scoreAtAlert": "1-6",
+    "finalScore": "1-7",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      25,
+      41,
+      47,
+      49,
+      55,
+      70,
+      88,
+      91
+    ],
+    "timestamp": "2026-08-15T01:57:51.335Z",
+    "alertTimestamp": "2026-08-15T00:08:02.466Z"
+  },
+  {
+    "match": "Bolívar vs San Antonio",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5304035980384593,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      2,
+      26,
+      41,
+      55,
+      98
+    ],
+    "timestamp": "2026-08-15T02:07:51.565Z",
+    "alertTimestamp": "2026-08-15T00:08:02.466Z"
   }
 ]
