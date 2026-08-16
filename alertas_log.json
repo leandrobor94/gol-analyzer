@@ -11014,5 +11014,173 @@
     ],
     "timestamp": "2026-08-16T02:53:56.327Z",
     "alertTimestamp": "2026-08-16T01:03:50.155Z"
+  },
+  {
+    "match": "Dorados de Sinaloa vs Tlaxcala",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5574969471418004,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      39,
+      64,
+      90
+    ],
+    "timestamp": "2026-08-16T12:48:47.067Z",
+    "alertTimestamp": "2026-08-16T01:03:50.155Z"
+  },
+  {
+    "match": "Cancún FC vs Durango",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5626740509846283,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      37
+    ],
+    "timestamp": "2026-08-16T12:48:47.157Z",
+    "alertTimestamp": "2026-08-16T01:03:50.155Z"
+  },
+  {
+    "match": "Monterrey vs Juárez",
+    "league": "Liga MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.889832447113997,
+    "minute": 24,
+    "scoreAtAlert": "5-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, Monterrey domina y genera peligro constante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      15,
+      29,
+      32,
+      48,
+      62,
+      92
+    ],
+    "timestamp": "2026-08-16T12:48:47.211Z",
+    "alertTimestamp": "2026-08-16T01:14:06.101Z"
+  },
+  {
+    "match": "Spokane Velocity vs Corpus Christi FC",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8933991012498513,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      57,
+      70,
+      81,
+      96
+    ],
+    "timestamp": "2026-08-16T12:48:47.435Z",
+    "alertTimestamp": "2026-08-16T01:14:06.101Z"
+  },
+  {
+    "match": "San Antonio FC vs El Paso",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5896474496639069,
+    "minute": 77,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      39,
+      44
+    ],
+    "timestamp": "2026-08-16T12:48:47.674Z",
+    "alertTimestamp": "2026-08-16T01:14:06.101Z"
+  },
+  {
+    "match": "Matagalpa vs San Marcos FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8915811159418813,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T12:48:47.742Z",
+    "alertTimestamp": "2026-08-16T01:14:06.101Z"
+  },
+  {
+    "match": "Colorado Springs Switchbacks vs Birmingham Legion FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5423414377923614,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      49,
+      86,
+      95,
+      99
+    ],
+    "timestamp": "2026-08-16T12:48:47.827Z",
+    "alertTimestamp": "2026-08-16T01:14:06.101Z"
+  },
+  {
+    "match": "Orange County SC vs Louisville City",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8815099925796469,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y Louisville ya tuvo una gran ocasión.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      48,
+      68,
+      70,
+      81
+    ],
+    "timestamp": "2026-08-16T12:48:48.547Z",
+    "alertTimestamp": "2026-08-16T02:14:06.316Z"
   }
 ]
