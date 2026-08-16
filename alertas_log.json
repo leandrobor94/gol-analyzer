@@ -10599,5 +10599,166 @@
     "goalMinutes": [],
     "timestamp": "2026-08-16T00:14:49.716Z",
     "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Marília vs Linense",
+    "league": "Copa Paulista",
+    "tier": "AVISO",
+    "probability": 0.885993171527209,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15
+    ],
+    "timestamp": "2026-08-16T00:34:19.645Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Terremoto vs Bella Vista",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.558685501288156,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      87
+    ],
+    "timestamp": "2026-08-16T00:34:19.856Z",
+    "alertTimestamp": "2026-08-15T22:44:45.147Z"
+  },
+  {
+    "match": "Portuguesa FC vs Trujillanos FC",
+    "league": "Liga FUTVE - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5509598247765324,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-08-16T00:54:14.607Z",
+    "alertTimestamp": "2026-08-15T23:04:32.215Z"
+  },
+  {
+    "match": "Rancho Santana vs CD Walter Ferretti",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8952413458754558,
+    "minute": 23,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en curso, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      40,
+      54,
+      59
+    ],
+    "timestamp": "2026-08-16T01:03:50.258Z",
+    "alertTimestamp": "2026-08-15T23:04:32.215Z"
+  },
+  {
+    "match": "Pittsburgh Riverhounds vs Charleston Battery",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.882100604599051,
+    "minute": 24,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay urgencia para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      16,
+      18,
+      61
+    ],
+    "timestamp": "2026-08-16T01:03:50.307Z",
+    "alertTimestamp": "2026-08-15T23:14:41.838Z"
+  },
+  {
+    "match": "Hartford vs Miami FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8818412056455905,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      47,
+      94
+    ],
+    "timestamp": "2026-08-16T01:03:50.469Z",
+    "alertTimestamp": "2026-08-15T23:14:41.838Z"
+  },
+  {
+    "match": "Sportivo Trinidense (F) vs CS San Lorenzo (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.5917798958824353,
+    "minute": 77,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      45,
+      67,
+      85,
+      92
+    ],
+    "timestamp": "2026-08-16T01:03:50.521Z",
+    "alertTimestamp": "2026-08-15T23:14:41.838Z"
+  },
+  {
+    "match": "Charlotte Independence vs Sarasota Paradise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.620599686884415,
+    "minute": 77,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      8,
+      14,
+      82
+    ],
+    "timestamp": "2026-08-16T01:24:14.914Z",
+    "alertTimestamp": "2026-08-15T23:34:12.464Z"
   }
 ]
