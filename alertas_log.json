@@ -11509,5 +11509,343 @@
     ],
     "timestamp": "2026-08-16T15:09:45.474Z",
     "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "Un Kaerjeng 97 vs Résidence Walferdange",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.854883953991213,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles, y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      46,
+      66,
+      94
+    ],
+    "timestamp": "2026-08-16T16:01:15.432Z",
+    "alertTimestamp": "2026-08-16T13:58:46.375Z"
+  },
+  {
+    "match": "Osasco Sporting vs Primavera SP",
+    "league": "Copa Paulista",
+    "tier": "AVISO",
+    "probability": 0.5753697525678854,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y tiempo restante. No hay razón para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      5,
+      46
+    ],
+    "timestamp": "2026-08-16T16:01:15.681Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Hostert vs Etzella Ettelbruck",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.893235521838998,
+    "minute": 25,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      27,
+      34,
+      65,
+      76,
+      95
+    ],
+    "timestamp": "2026-08-16T16:01:15.824Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Lahti vs KuPS",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.5629545352239131,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      11,
+      17
+    ],
+    "timestamp": "2026-08-16T16:01:15.911Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Krylya Sovetov Samara vs Dynamo Makhachkala",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8957135742627602,
+    "minute": 26,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, Dynamo con más llegadas y gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      22,
+      27,
+      77,
+      93
+    ],
+    "timestamp": "2026-08-16T16:01:38.257Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Bate Borisov II Reserve vs Volna Pinsk",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.6368610059180039,
+    "minute": 77,
+    "scoreAtAlert": "5-2",
+    "finalScore": "5-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 4-2, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T16:01:38.299Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Progreso vs Deportivo Maldonado",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8495294713956875,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      68,
+      90
+    ],
+    "timestamp": "2026-08-16T16:02:34.064Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Nasaf Qarshi vs Pakhtakor",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.868727833401642,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      48,
+      71
+    ],
+    "timestamp": "2026-08-16T16:02:37.303Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Santa Cruz RS vs Gramadense",
+    "league": "Gaucho A2",
+    "tier": "AVISO",
+    "probability": 0.5285343362338604,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      36,
+      48,
+      58
+    ],
+    "timestamp": "2026-08-16T16:02:47.135Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "Hatta Club vs Jazira Abu Dhabi",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.5618786976663265,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Jazira domina con 9 tiros a puerta y 2 grandes ocasiones, el partido no está resuelto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      48,
+      93
+    ],
+    "timestamp": "2026-08-16T16:09:51.737Z",
+    "alertTimestamp": "2026-08-16T14:19:51.604Z"
+  },
+  {
+    "match": "Debreceni VSC vs ETO FC Győr",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5346995633671499,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      41,
+      50
+    ],
+    "timestamp": "2026-08-16T16:29:14.131Z",
+    "alertTimestamp": "2026-08-16T14:39:37.101Z"
+  },
+  {
+    "match": "Nacional Madeira vs Estoril",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.5290990322437538,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido apretado, un gol de diferencia, y un equipo con 10 jugadores. Alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      68,
+      77
+    ],
+    "timestamp": "2026-08-16T16:29:14.333Z",
+    "alertTimestamp": "2026-08-16T14:39:37.101Z"
+  },
+  {
+    "match": "FC Basilea vs FC Barcelona",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5686038864068328,
+    "minute": 77,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-5",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con goles y chances, no hay razón para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      34,
+      43,
+      49,
+      81,
+      84,
+      89,
+      91
+    ],
+    "timestamp": "2026-08-16T16:29:22.310Z",
+    "alertTimestamp": "2026-08-16T14:39:37.101Z"
+  },
+  {
+    "match": "Ajax vs Heerenveen",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.8746467028292102,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      33,
+      45,
+      82
+    ],
+    "timestamp": "2026-08-16T16:39:14.939Z",
+    "alertTimestamp": "2026-08-16T14:50:22.481Z"
   }
 ]
