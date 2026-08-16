@@ -10760,5 +10760,170 @@
     ],
     "timestamp": "2026-08-16T01:24:14.914Z",
     "alertTimestamp": "2026-08-15T23:34:12.464Z"
+  },
+  {
+    "match": "Mar de Fondo vs Durazno",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.8722961792256712,
+    "minute": 23,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      28,
+      81
+    ],
+    "timestamp": "2026-08-16T01:33:49.333Z",
+    "alertTimestamp": "2026-08-15T23:34:12.464Z"
+  },
+  {
+    "match": "Charlotte FC vs Columbus Crew",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8875776456445054,
+    "minute": 24,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 2-0 pero xG estimado y solo minuto 24. Aún hay tiempo para más goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      9,
+      41,
+      73
+    ],
+    "timestamp": "2026-08-16T01:43:46.914Z",
+    "alertTimestamp": "2026-08-15T23:43:59.280Z"
+  },
+  {
+    "match": "CF Montréal vs DC United",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.562800384018227,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      50,
+      67
+    ],
+    "timestamp": "2026-08-16T01:43:47.033Z",
+    "alertTimestamp": "2026-08-15T23:43:59.280Z"
+  },
+  {
+    "match": "Orlando City SC vs FC Cincinnati",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5619343218023981,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      48
+    ],
+    "timestamp": "2026-08-16T01:43:47.078Z",
+    "alertTimestamp": "2026-08-15T23:43:59.280Z"
+  },
+  {
+    "match": "Atlanta United vs New York Red Bulls",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5489700141663303,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      69,
+      82
+    ],
+    "timestamp": "2026-08-16T01:43:47.121Z",
+    "alertTimestamp": "2026-08-15T23:43:59.280Z"
+  },
+  {
+    "match": "Tampa Bay Rowdies vs Rhode Island",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5482230568778602,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61,
+      92
+    ],
+    "timestamp": "2026-08-16T01:43:47.171Z",
+    "alertTimestamp": "2026-08-15T23:43:59.280Z"
+  },
+  {
+    "match": "Auckland City vs Vénus",
+    "league": "OFC Champions League - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.8952413458754558,
+    "minute": 23,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      25,
+      49,
+      54,
+      77,
+      84,
+      91
+    ],
+    "timestamp": "2026-08-16T02:03:47.450Z",
+    "alertTimestamp": "2026-08-16T00:03:58.051Z"
+  },
+  {
+    "match": "Sporting Kansas City II vs Colorado Rapids II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5650817184254929,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T02:24:07.331Z",
+    "alertTimestamp": "2026-08-16T00:14:32.447Z"
   }
 ]
