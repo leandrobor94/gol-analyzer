@@ -11847,5 +11847,205 @@
     ],
     "timestamp": "2026-08-16T16:39:14.939Z",
     "alertTimestamp": "2026-08-16T14:50:22.481Z"
+  },
+  {
+    "match": "Crossing Schaerbeek vs KRC Harelbeke",
+    "league": "Copa de Bélgica - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.9017656362982142,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, con alta probabilidad de gol según el modelo, y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T16:50:02.129Z",
+    "alertTimestamp": "2026-08-16T14:09:28.351Z"
+  },
+  {
+    "match": "SC Heerenveen (F) vs Feyenoord (F)",
+    "league": "Eredivisie Femenina",
+    "tier": "AVISO",
+    "probability": 0.8609262471745253,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, xG estimado no es real, sin datos de grandes ocasiones.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      50,
+      68
+    ],
+    "timestamp": "2026-08-16T16:50:07.969Z",
+    "alertTimestamp": "2026-08-16T14:50:22.481Z"
+  },
+  {
+    "match": "FC Slonim vs FC Smorgon",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.5410920751138812,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T16:59:27.469Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Dinamo Kiev vs Kolos Kovalivka",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8760801720836494,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, con alta probabilidad de gol según el modelo y sin razones claras para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      22,
+      73
+    ],
+    "timestamp": "2026-08-16T16:59:29.136Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Sogndal vs Sandnes Ulf",
+    "league": "OBOS-ligaen",
+    "tier": "AVISO",
+    "probability": 0.8504971928987598,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, sin grandes ocasiones ni tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      43,
+      72
+    ],
+    "timestamp": "2026-08-16T16:59:55.943Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "BSK Banja Luka vs Velez Mostar",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8486672675345148,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      32,
+      65
+    ],
+    "timestamp": "2026-08-16T16:59:56.955Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Deportes Iquique (F) vs Universidad Concepción (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.588116240493649,
+    "minute": 77,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T17:09:04.882Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Santos Laguna Sub19 vs Chivas Sub19",
+    "league": "Liga MX Sub19 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8881863103196913,
+    "minute": 24,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T17:09:04.919Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Molde vs Tromso",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.5489722227294852,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, liga de alto scoring, y ambos equipos generando juego.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      41,
+      53,
+      55,
+      92,
+      98
+    ],
+    "timestamp": "2026-08-16T17:09:05.287Z",
+    "alertTimestamp": "2026-08-16T15:09:37.833Z"
   }
 ]
