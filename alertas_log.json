@@ -11347,5 +11347,167 @@
     ],
     "timestamp": "2026-08-16T14:30:54.796Z",
     "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "Fc Inter Turku 2 vs KPV",
+    "league": "Ykkonen",
+    "tier": "AVISO",
+    "probability": 0.8774149433092814,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      34,
+      50,
+      61,
+      82,
+      92
+    ],
+    "timestamp": "2026-08-16T14:50:22.787Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "HJK Helsinki vs FF Jaro",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.9028596486972539,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, HJK busca ampliar ventaja. Volumen de juego no estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      9,
+      68
+    ],
+    "timestamp": "2026-08-16T14:58:48.334Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "Hearts vs Inverness CT",
+    "league": "Copa de la Liga Escocia - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5458481163765655,
+    "minute": 78,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado en octavos de final, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T14:58:48.727Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "Academia Control Orientado vs Buenos Aires City FC",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.5518431551088355,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      33,
+      47
+    ],
+    "timestamp": "2026-08-16T14:58:49.119Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "Ostrovets vs Bumprom",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.9040734224950733,
+    "minute": 27,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T14:58:49.695Z",
+    "alertTimestamp": "2026-08-16T13:19:43.185Z"
+  },
+  {
+    "match": "SC Buochs vs Luzern",
+    "league": "Copa Suiza - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5726301919055946,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Luzern tiene alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      35,
+      78
+    ],
+    "timestamp": "2026-08-16T15:09:45.445Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
+  },
+  {
+    "match": "FC Koniz vs Munsingen",
+    "league": "Copa Suiza - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5561953594219241,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales de copa, alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      59,
+      82,
+      93
+    ],
+    "timestamp": "2026-08-16T15:09:45.474Z",
+    "alertTimestamp": "2026-08-16T13:10:52.047Z"
   }
 ]
