@@ -24,13 +24,88 @@
       "timestamp": 1786887575878,
       "minute": 80,
       "tier": "AVISO"
+    },
+    "4734621_AVISO": {
+      "timestamp": 1786888155683,
+      "minute": 60,
+      "tier": "AVISO"
+    },
+    "4746211_AVISO": {
+      "timestamp": 1786889368351,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4734619_AVISO": {
+      "timestamp": 1786889368351,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4748733_AVISO": {
+      "timestamp": 1786889368351,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4742640_AVISO": {
+      "timestamp": 1786889368351,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4663707_AVISO": {
+      "timestamp": 1786889991604,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4753914_AVISO": {
+      "timestamp": 1786889991604,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4806026_AVISO": {
+      "timestamp": 1786889991604,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4745574_AVISO": {
+      "timestamp": 1786890650935,
+      "minute": 26,
+      "tier": "AVISO"
+    },
+    "4807684_AVISO": {
+      "timestamp": 1786890650935,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4753913_AVISO": {
+      "timestamp": 1786890650935,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4754248_AVISO": {
+      "timestamp": 1786891177101,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4754255_AVISO": {
+      "timestamp": 1786891177101,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4811396_AVISO": {
+      "timestamp": 1786891177101,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4791706_AVISO": {
+      "timestamp": 1786891177101,
+      "minute": 78,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 2630,
-    "verified": 2571,
-    "withGoalTimeline": 1696,
+    "total": 2679,
+    "verified": 2587,
+    "withGoalTimeline": 1709,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-16T13:39:39.958Z"
+  "lastUpdated": "2026-08-16T14:39:42.055Z"
 }

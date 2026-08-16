@@ -11182,5 +11182,170 @@
     ],
     "timestamp": "2026-08-16T12:48:48.547Z",
     "alertTimestamp": "2026-08-16T02:14:06.316Z"
+  },
+  {
+    "match": "Djurgårdens IF vs AIK Solna",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.5337192546915781,
+    "minute": 79,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      25,
+      39,
+      50
+    ],
+    "timestamp": "2026-08-16T13:58:46.610Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "Sv Tasmania Berlin vs Lokomotive Leipzig",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.5377582301213343,
+    "minute": 80,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con 5 goles, alta probabilidad de gol en los últimos 13 minutos y un expulsado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T14:09:36.566Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "FC Kharkiv vs Shakhtar Donetsk",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5849525776985157,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1
+    ],
+    "timestamp": "2026-08-16T14:30:54.472Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "Watford FC vs Southampton",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5580235617915341,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos con chances y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      29,
+      56
+    ],
+    "timestamp": "2026-08-16T14:30:54.524Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "Twente vs PEC Zwolle",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.5318120832348245,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Eredivisie es de alto scoring, el partido no está resuelto y el modelo da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21,
+      38,
+      59,
+      69
+    ],
+    "timestamp": "2026-08-16T14:30:54.649Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "LKS Lodz vs Termalica Nieciecza",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5367688199960133,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no es fiable, y el marcador es ajustado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      31,
+      38,
+      61
+    ],
+    "timestamp": "2026-08-16T14:30:54.721Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
+  },
+  {
+    "match": "Feyenoord vs Go Ahead Eagles",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.6669373883494861,
+    "minute": 60,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Feyenoord domina con 2-0, pero la Eredivisie es de alto scoring y aún quedan 33 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      38,
+      63,
+      80
+    ],
+    "timestamp": "2026-08-16T14:30:54.796Z",
+    "alertTimestamp": "2026-08-16T12:48:46.907Z"
   }
 ]
