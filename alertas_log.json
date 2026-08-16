@@ -10925,5 +10925,94 @@
     "goalMinutes": [],
     "timestamp": "2026-08-16T02:24:07.331Z",
     "alertTimestamp": "2026-08-16T00:14:32.447Z"
+  },
+  {
+    "match": "Austin Fc II vs Vancouver Whitecaps II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5771635398790717,
+    "minute": 77,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T02:33:48.945Z",
+    "alertTimestamp": "2026-08-16T00:34:19.496Z"
+  },
+  {
+    "match": "Portland Thorns vs Orlando Pride",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.6374801703656185,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      58,
+      63,
+      96
+    ],
+    "timestamp": "2026-08-16T02:43:46.823Z",
+    "alertTimestamp": "2026-08-16T00:54:14.471Z"
+  },
+  {
+    "match": "Nashville SC vs Inter Miami",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5620155412819176,
+    "minute": 77,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      48,
+      49,
+      56,
+      63
+    ],
+    "timestamp": "2026-08-16T02:53:56.212Z",
+    "alertTimestamp": "2026-08-16T00:43:47.468Z"
+  },
+  {
+    "match": "Houston Dynamo vs LA Galaxy",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5692864880692144,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      21
+    ],
+    "timestamp": "2026-08-16T02:53:56.253Z",
+    "alertTimestamp": "2026-08-16T00:43:47.468Z"
+  },
+  {
+    "match": "Shimizu S-Pulse vs Shonan Bellmare",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8648637176339394,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      81
+    ],
+    "timestamp": "2026-08-16T02:53:56.327Z",
+    "alertTimestamp": "2026-08-16T01:03:50.155Z"
   }
 ]
