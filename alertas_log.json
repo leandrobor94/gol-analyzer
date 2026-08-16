@@ -12047,5 +12047,268 @@
     ],
     "timestamp": "2026-08-16T17:09:05.287Z",
     "alertTimestamp": "2026-08-16T15:09:37.833Z"
+  },
+  {
+    "match": "Palestino (F) vs Santiago Wanderers (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.5428337685075598,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      33
+    ],
+    "timestamp": "2026-08-16T22:32:49.647Z",
+    "alertTimestamp": "2026-08-16T15:40:25.310Z"
+  },
+  {
+    "match": "Kauno Zalgiris vs Transinvest",
+    "league": "A Lyga",
+    "tier": "AVISO",
+    "probability": 0.8788691342762459,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      48
+    ],
+    "timestamp": "2026-08-16T22:32:49.939Z",
+    "alertTimestamp": "2026-08-16T15:50:17.071Z"
+  },
+  {
+    "match": "Frosinone vs Juve Stabia",
+    "league": "Copa Italia - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.871942900432791,
+    "minute": 24,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y muchas chances de gol. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21,
+      29,
+      38,
+      48,
+      71
+    ],
+    "timestamp": "2026-08-16T22:32:50.430Z",
+    "alertTimestamp": "2026-08-16T16:09:50.573Z"
+  },
+  {
+    "match": "Başakşehir vs Kocaelispor",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8553141236793057,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con ritmo, aunque xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      72
+    ],
+    "timestamp": "2026-08-16T22:32:52.295Z",
+    "alertTimestamp": "2026-08-16T16:09:50.573Z"
+  },
+  {
+    "match": "Baniyas vs Al Ain",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.87073562227403,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y volumen de juego en el área. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      15,
+      42,
+      47,
+      81,
+      97,
+      100
+    ],
+    "timestamp": "2026-08-16T22:32:54.068Z",
+    "alertTimestamp": "2026-08-16T16:50:01.907Z"
+  },
+  {
+    "match": "RCD Espanyol vs Levante UD",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8827003121697562,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, xG estimado no fiable, y un gol de ventaja no es definitivo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      40,
+      80
+    ],
+    "timestamp": "2026-08-16T22:32:54.393Z",
+    "alertTimestamp": "2026-08-16T17:09:04.766Z"
+  },
+  {
+    "match": "Caudal Deportivo vs CD Praviano",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.905896068440991,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T22:32:55.614Z",
+    "alertTimestamp": "2026-08-16T17:09:04.766Z"
+  },
+  {
+    "match": "Deportivo Táchira vs Monagas SC",
+    "league": "Liga FUTVE - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5707688979667505,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      35,
+      49,
+      61,
+      70,
+      90
+    ],
+    "timestamp": "2026-08-16T23:02:47.823Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Temperley vs Los Andes",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5554169522072249,
+    "minute": 76,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      47,
+      83
+    ],
+    "timestamp": "2026-08-16T23:02:47.898Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Herrera vs Veraguas",
+    "league": "Liga Panameña - Apertura - Conferencia Oeste",
+    "tier": "AVISO",
+    "probability": 0.5526291558727644,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      33,
+      37,
+      38
+    ],
+    "timestamp": "2026-08-16T23:02:47.980Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Olimpia vs Sportivo Ameliano",
+    "league": "Copa de Primera - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5529598519743817,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      70,
+      71,
+      77
+    ],
+    "timestamp": "2026-08-16T23:22:47.967Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Emelec vs Técnico Universitario",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.5289296241826612,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      32,
+      44,
+      62
+    ],
+    "timestamp": "2026-08-16T23:22:48.054Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
   }
 ]
