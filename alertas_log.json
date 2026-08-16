@@ -10529,5 +10529,75 @@
     ],
     "timestamp": "2026-08-15T23:14:41.967Z",
     "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Guayaquil City vs Libertad",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.5377811599541528,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      24,
+      62,
+      78
+    ],
+    "timestamp": "2026-08-15T23:34:24.880Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "CD Águila vs Atlético Balboa",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5548357111779264,
+    "minute": 77,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T23:54:25.965Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "América (F) vs Puebla (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6321849142450533,
+    "minute": 62,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-15T23:54:25.995Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
+  },
+  {
+    "match": "Columbus Crew II vs New York City II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5439125835245444,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, ambos equipos con tiros a puerta. xG estimado, no se considera.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T00:14:49.716Z",
+    "alertTimestamp": "2026-08-15T22:34:09.556Z"
   }
 ]
