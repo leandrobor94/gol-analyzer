@@ -12713,5 +12713,25 @@
     "goalMinutes": [],
     "timestamp": "2026-08-17T12:53:10.430Z",
     "alertTimestamp": "2026-08-17T02:12:44.987Z"
+  },
+  {
+    "match": "Albion (Reserva) vs CA River Plate (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.879577149454422,
+    "minute": 22,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es real, y el modelo predice alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T15:03:24.296Z",
+    "alertTimestamp": "2026-08-17T13:02:51.981Z"
   }
 ]
