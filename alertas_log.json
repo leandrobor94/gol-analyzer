@@ -12605,5 +12605,24 @@
     "goalMinutes": [],
     "timestamp": "2026-08-17T01:22:45.876Z",
     "alertTimestamp": "2026-08-16T23:12:46.810Z"
+  },
+  {
+    "match": "Colon vs La Luz",
+    "league": "Segunda Division - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8655245888591712,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      42,
+      83
+    ],
+    "timestamp": "2026-08-17T01:32:54.349Z",
+    "alertTimestamp": "2026-08-16T23:42:46.836Z"
   }
 ]
