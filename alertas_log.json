@@ -12658,5 +12658,60 @@
     ],
     "timestamp": "2026-08-17T02:52:44.789Z",
     "alertTimestamp": "2026-08-17T00:42:57.164Z"
+  },
+  {
+    "match": "Angel City vs Washington Spirit",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.5654599268172754,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      65,
+      85
+    ],
+    "timestamp": "2026-08-17T12:52:52.655Z",
+    "alertTimestamp": "2026-08-17T01:12:45.616Z"
+  },
+  {
+    "match": "Independiente Petrolero vs GV San Jose",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5777566173289338,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      29
+    ],
+    "timestamp": "2026-08-17T12:53:10.179Z",
+    "alertTimestamp": "2026-08-17T01:32:54.127Z"
+  },
+  {
+    "match": "Los Angeles FC II vs Tacoma Defiance",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.864658424653737,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T12:53:10.430Z",
+    "alertTimestamp": "2026-08-17T02:12:44.987Z"
   }
 ]
