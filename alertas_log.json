@@ -12846,5 +12846,166 @@
     ],
     "timestamp": "2026-08-17T17:33:02.334Z",
     "alertTimestamp": "2026-08-17T15:32:55.449Z"
+  },
+  {
+    "match": "Al Anwar vs Al Ahli Jeddah",
+    "league": "King's Cup - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5465960486112786,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      61,
+      89,
+      92
+    ],
+    "timestamp": "2026-08-17T22:36:16.582Z",
+    "alertTimestamp": "2026-08-17T16:03:06.630Z"
+  },
+  {
+    "match": "FC Nomme United II vs Kalju Nomme II",
+    "league": "Segunda división estonia",
+    "tier": "AVISO",
+    "probability": 0.5471616146620976,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      49,
+      67
+    ],
+    "timestamp": "2026-08-17T22:36:17.382Z",
+    "alertTimestamp": "2026-08-17T16:03:06.630Z"
+  },
+  {
+    "match": "Santiago Morning vs Atlético Colina",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.5446294671359136,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      6,
+      75
+    ],
+    "timestamp": "2026-08-17T22:36:17.840Z",
+    "alertTimestamp": "2026-08-17T16:12:55.733Z"
+  },
+  {
+    "match": "Sassuolo vs Cesena",
+    "league": "Copa Italia - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8745306398546173,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      47,
+      75
+    ],
+    "timestamp": "2026-08-17T22:36:28.682Z",
+    "alertTimestamp": "2026-08-17T16:33:11.266Z"
+  },
+  {
+    "match": "Spartak Kostroma vs FC Ufa",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8807224484991126,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin big chances ni tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      91
+    ],
+    "timestamp": "2026-08-17T22:36:28.870Z",
+    "alertTimestamp": "2026-08-17T16:33:11.266Z"
+  },
+  {
+    "match": "Hapoel Beer Sheva Sub19 vs Maccabi Haifa Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.9037887245924113,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T22:36:29.101Z",
+    "alertTimestamp": "2026-08-17T16:43:15.042Z"
+  },
+  {
+    "match": "Santamarina Tandil vs Fundación Amigos por el Deporte",
+    "league": "Federal A - Reválida - Zona B",
+    "tier": "AVISO",
+    "probability": 0.540967203647776,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      61,
+      82
+    ],
+    "timestamp": "2026-08-17T22:55:57.080Z",
+    "alertTimestamp": "2026-08-17T22:35:58.213Z"
   }
 ]
