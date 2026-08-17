@@ -12624,5 +12624,39 @@
     ],
     "timestamp": "2026-08-17T01:32:54.349Z",
     "alertTimestamp": "2026-08-16T23:42:46.836Z"
+  },
+  {
+    "match": "Caguas Sporting vs San Juan FC",
+    "league": "LPR Pro - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8775784854134426,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T02:32:45.946Z",
+    "alertTimestamp": "2026-08-17T00:32:51.293Z"
+  },
+  {
+    "match": "Austin FC vs FC Dallas",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5665499824126857,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      47,
+      57,
+      73
+    ],
+    "timestamp": "2026-08-17T02:52:44.789Z",
+    "alertTimestamp": "2026-08-17T00:42:57.164Z"
   }
 ]
