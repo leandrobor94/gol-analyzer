@@ -12758,5 +12758,93 @@
     ],
     "timestamp": "2026-08-17T16:03:06.925Z",
     "alertTimestamp": "2026-08-17T14:02:52.840Z"
+  },
+  {
+    "match": "Polissya vs Zorya Luhansk",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.864509672455194,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      59,
+      63
+    ],
+    "timestamp": "2026-08-17T16:53:13.921Z",
+    "alertTimestamp": "2026-08-17T15:03:24.068Z"
+  },
+  {
+    "match": "Siauliai vs FK Panevezys",
+    "league": "A Lyga",
+    "tier": "AVISO",
+    "probability": 0.538345244726199,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real. Aún hay urgencia.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-08-17T17:03:16.258Z",
+    "alertTimestamp": "2026-08-17T15:13:04.012Z"
+  },
+  {
+    "match": "Necaxa Sub21 vs León Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5596759100907804,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y minutos restantes. xG estimado no es relevante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T17:13:31.678Z",
+    "alertTimestamp": "2026-08-17T15:13:04.012Z"
+  },
+  {
+    "match": "Zalaegerszegi TE vs Ferencvaros",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5279395048408178,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y ambos equipos generando ocasiones. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-08-17T17:33:02.334Z",
+    "alertTimestamp": "2026-08-17T15:32:55.449Z"
   }
 ]
