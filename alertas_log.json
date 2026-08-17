@@ -12310,5 +12310,154 @@
     ],
     "timestamp": "2026-08-16T23:22:48.054Z",
     "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Vitória vs Botafogo",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.6674404562649625,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-08-16T23:33:04.745Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "CRB vs Novorizontino",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.5391595486625218,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-16T23:33:05.045Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Colo Colo vs O'Higgins",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.5680598497363316,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      46,
+      50,
+      77,
+      94
+    ],
+    "timestamp": "2026-08-16T23:33:05.148Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Sol De América vs Bartolomé Mitre (Posadas)",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "tier": "AVISO",
+    "probability": 0.5607319154200188,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      18,
+      19
+    ],
+    "timestamp": "2026-08-16T23:52:47.991Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Chicago Fire vs Portland Timbers",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.6034064062107802,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      9,
+      14,
+      85
+    ],
+    "timestamp": "2026-08-17T00:12:49.397Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "New York City FC vs Philadelphia Union",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5733889884648836,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      47,
+      48,
+      69,
+      75
+    ],
+    "timestamp": "2026-08-17T00:12:49.494Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Deportivo La Guaira vs Zamora FC",
+    "league": "Liga FUTVE - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8824490879425408,
+    "minute": 23,
+    "scoreAtAlert": "4-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      17,
+      35,
+      41,
+      77,
+      87,
+      91
+    ],
+    "timestamp": "2026-08-17T00:22:53.911Z",
+    "alertTimestamp": "2026-08-16T22:32:49.068Z"
+  },
+  {
+    "match": "Juventud (F) vs Defensor Sporting (F)",
+    "league": "Campeonato Femenino A - Clausura",
+    "tier": "AVISO",
+    "probability": 0.9311824330140038,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-7",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-17T00:22:54.005Z",
+    "alertTimestamp": "2026-08-16T22:42:52.087Z"
   }
 ]
