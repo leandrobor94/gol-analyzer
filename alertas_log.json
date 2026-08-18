@@ -13157,5 +13157,144 @@
     "goalMinutes": [],
     "timestamp": "2026-08-18T15:54:56.128Z",
     "alertTimestamp": "2026-08-18T14:05:02.307Z"
+  },
+  {
+    "match": "FC Slovan Giraltovce vs Bardejov",
+    "league": "Slovakia Cup - Preliminary Round",
+    "tier": "AVISO",
+    "probability": 0.9121533327776071,
+    "minute": 22,
+    "scoreAtAlert": "2-6",
+    "finalScore": "2-6",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Bardejov con llegadas y xG estimado a favor.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T16:55:48.639Z",
+    "alertTimestamp": "2026-08-18T15:05:10.111Z"
+  },
+  {
+    "match": "FCM Resita vs Petrolul Ploiesti",
+    "league": "Copa rumana - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5751033377666027,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en los minutos finales de una copa, con alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      31,
+      44,
+      48,
+      89
+    ],
+    "timestamp": "2026-08-18T17:05:48.049Z",
+    "alertTimestamp": "2026-08-18T14:35:03.055Z"
+  },
+  {
+    "match": "NK Jesenice vs Triglav Kranj",
+    "league": "Hervis Pokal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5552959376320876,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T17:25:36.465Z",
+    "alertTimestamp": "2026-08-18T15:35:26.765Z"
+  },
+  {
+    "match": "Rodina Moscow vs FC Orenburg",
+    "league": "Copa de Rusia - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.5366329852129796,
+    "minute": 78,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con 15 minutos restantes, un gol de diferencia y un expulsado. Aún hay urgencia.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2,
+      33,
+      47,
+      76,
+      78
+    ],
+    "timestamp": "2026-08-18T17:25:36.615Z",
+    "alertTimestamp": "2026-08-18T15:35:26.765Z"
+  },
+  {
+    "match": "Pirin Blagoevgrad vs Hebar Pazardzhik",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.5313425584724343,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con 4 goles, un expulsado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      34,
+      50,
+      67,
+      85
+    ],
+    "timestamp": "2026-08-18T17:25:36.831Z",
+    "alertTimestamp": "2026-08-18T15:35:26.765Z"
+  },
+  {
+    "match": "CSKA Moscú vs Akron Tolyatti",
+    "league": "Copa de Rusia - Grupo D",
+    "tier": "AVISO",
+    "probability": 0.8825893850112891,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-08-18T17:35:51.806Z",
+    "alertTimestamp": "2026-08-18T15:35:26.765Z"
   }
 ]
