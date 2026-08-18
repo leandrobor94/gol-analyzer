@@ -13296,5 +13296,253 @@
     ],
     "timestamp": "2026-08-18T17:35:51.806Z",
     "alertTimestamp": "2026-08-18T15:35:26.765Z"
+  },
+  {
+    "match": "Paykan FC vs Gol Gohar",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8868443145656177,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T22:36:28.974Z",
+    "alertTimestamp": "2026-08-18T15:54:55.751Z"
+  },
+  {
+    "match": "Vizela Sub23 vs Sporting Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.897786639905567,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, sin datos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20
+    ],
+    "timestamp": "2026-08-18T22:36:29.175Z",
+    "alertTimestamp": "2026-08-18T16:05:05.736Z"
+  },
+  {
+    "match": "Gil Vicente Sub23 vs Academico De Viseu Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.8770297697670356,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60,
+      66,
+      77,
+      79,
+      88
+    ],
+    "timestamp": "2026-08-18T22:36:29.372Z",
+    "alertTimestamp": "2026-08-18T16:05:05.736Z"
+  },
+  {
+    "match": "Torreense Sub23 vs Portimonense Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.592691107151355,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      52,
+      56
+    ],
+    "timestamp": "2026-08-18T22:36:29.762Z",
+    "alertTimestamp": "2026-08-18T16:05:05.736Z"
+  },
+  {
+    "match": "Aluminium Arak vs Chadormalu Sc",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8868443145656177,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T22:36:30.835Z",
+    "alertTimestamp": "2026-08-18T16:14:55.919Z"
+  },
+  {
+    "match": "Uribelarrea FC (Uribelarrea) vs Fútbol Club Ezeiza",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.534292231638541,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      60,
+      70,
+      80
+    ],
+    "timestamp": "2026-08-18T22:36:31.070Z",
+    "alertTimestamp": "2026-08-18T16:14:55.919Z"
+  },
+  {
+    "match": "Al-Akhdoud vs Al Khaleej Club",
+    "league": "King's Cup - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8860793117238073,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      37,
+      79
+    ],
+    "timestamp": "2026-08-18T22:36:31.271Z",
+    "alertTimestamp": "2026-08-18T16:25:15.853Z"
+  },
+  {
+    "match": "Sepahan vs Tractor FC",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8770297697670356,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, modelo indica alta probabilidad de gol. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      83,
+      91
+    ],
+    "timestamp": "2026-08-18T22:36:31.881Z",
+    "alertTimestamp": "2026-08-18T16:34:58.735Z"
+  },
+  {
+    "match": "AFC Eskilstuna vs IK Oddevold",
+    "league": "Copa de Suecia - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "4-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T22:36:35.564Z",
+    "alertTimestamp": "2026-08-18T16:55:48.059Z"
+  },
+  {
+    "match": "IF Karlstad vs Sandvikens IF",
+    "league": "Copa de Suecia - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T22:36:35.779Z",
+    "alertTimestamp": "2026-08-18T16:55:48.059Z"
+  },
+  {
+    "match": "TSV Aubstadt vs 1860 München",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.8932726717479867,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      45,
+      77,
+      83,
+      89
+    ],
+    "timestamp": "2026-08-18T22:36:36.016Z",
+    "alertTimestamp": "2026-08-18T17:14:58.894Z"
   }
 ]
