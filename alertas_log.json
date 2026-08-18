@@ -13007,5 +13007,73 @@
     ],
     "timestamp": "2026-08-17T22:55:57.080Z",
     "alertTimestamp": "2026-08-17T22:35:58.213Z"
+  },
+  {
+    "match": "Internacional vs Remo",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5622557618973257,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, ambos equipos generando juego.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      95
+    ],
+    "timestamp": "2026-08-18T00:56:18.043Z",
+    "alertTimestamp": "2026-08-17T23:05:57.158Z"
+  },
+  {
+    "match": "Club León (F) vs Querétaro (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5254783268077728,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con tiros a puerta. xG estimado, no relevante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T00:56:18.238Z",
+    "alertTimestamp": "2026-08-17T23:05:57.158Z"
+  },
+  {
+    "match": "Ferroviária vs Paysandu",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.5695422665475744,
+    "minute": 76,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos con xG bajo pero estimado. Alerta aprobada.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      9,
+      78,
+      87
+    ],
+    "timestamp": "2026-08-18T00:56:18.433Z",
+    "alertTimestamp": "2026-08-17T23:05:57.158Z"
   }
 ]
