@@ -13137,5 +13137,25 @@
     "goalMinutes": [],
     "timestamp": "2026-08-18T12:55:18.673Z",
     "alertTimestamp": "2026-08-18T01:16:14.434Z"
+  },
+  {
+    "match": "Sogdiana Jizzakh vs Qyzylqum",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.5280964609414956,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T15:54:56.128Z",
+    "alertTimestamp": "2026-08-18T14:05:02.307Z"
   }
 ]
