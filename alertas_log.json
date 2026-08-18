@@ -13095,5 +13095,47 @@
     "goalMinutes": [],
     "timestamp": "2026-08-18T01:56:51.099Z",
     "alertTimestamp": "2026-08-18T00:05:57.166Z"
+  },
+  {
+    "match": "Tauro FC vs CD Árabe Unido",
+    "league": "Liga Panameña - Apertura - Conferencia Oeste",
+    "tier": "AVISO",
+    "probability": 0.5236512994647521,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, Tauro FC con 8 tiros a puerta busca el empate.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15
+    ],
+    "timestamp": "2026-08-18T12:55:10.581Z",
+    "alertTimestamp": "2026-08-18T01:06:48.819Z"
+  },
+  {
+    "match": "Santos Laguna (F) vs Monterrey (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8775376289379515,
+    "minute": 20,
+    "scoreAtAlert": "0-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 0-2, y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T12:55:18.673Z",
+    "alertTimestamp": "2026-08-18T01:16:14.434Z"
   }
 ]
