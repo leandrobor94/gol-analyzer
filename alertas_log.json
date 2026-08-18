@@ -13075,5 +13075,25 @@
     ],
     "timestamp": "2026-08-18T00:56:18.433Z",
     "alertTimestamp": "2026-08-17T23:05:57.158Z"
+  },
+  {
+    "match": "Toluca (F) vs Atlas (F)",
+    "league": "Liga Femenil BBVA - Apertura",
+    "tier": "AVISO",
+    "probability": 0.545152957512461,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos restantes y xG estimado no concluyente. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-18T01:56:51.099Z",
+    "alertTimestamp": "2026-08-18T00:05:57.166Z"
   }
 ]
