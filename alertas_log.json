@@ -13589,5 +13589,65 @@
     "goalMinutes": [],
     "timestamp": "2026-08-19T15:15:46.320Z",
     "alertTimestamp": "2026-08-19T13:15:42.837Z"
+  },
+  {
+    "match": "AGMK vs Dinamo Samarkand",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.5478434548245914,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no es fiable, alto volumen de tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T16:06:34.896Z",
+    "alertTimestamp": "2026-08-19T14:05:43.162Z"
+  },
+  {
+    "match": "Jenis vs Kaysar Kyzylorda",
+    "league": "Kazakhstan Cup - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.5248257259729096,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, un gol cambia el escenario. La expulsión añade incertidumbre.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T16:06:35.077Z",
+    "alertTimestamp": "2026-08-19T14:05:43.162Z"
+  },
+  {
+    "match": "Nestos Chrisoupolis vs Apollon Pontou",
+    "league": "Copa griega - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5263275143379612,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado 0-0 en el minuto 79, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T16:06:35.460Z",
+    "alertTimestamp": "2026-08-19T15:15:46.039Z"
   }
 ]
