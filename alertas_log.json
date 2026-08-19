@@ -13754,5 +13754,181 @@
     ],
     "timestamp": "2026-08-19T17:38:52.190Z",
     "alertTimestamp": "2026-08-19T15:36:28.366Z"
+  },
+  {
+    "match": "Usv Iaşi vs Sporting Liesti",
+    "league": "Copa rumana - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.534292231638541,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T22:36:45.403Z",
+    "alertTimestamp": "2026-08-19T15:26:07.356Z"
+  },
+  {
+    "match": "Mes Shahr-E Babak vs Kheybar Khorramabad",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8699657368834356,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con 2 tarjetas rojas, lo que puede alterar el ritmo y las oportunidades de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      22,
+      71
+    ],
+    "timestamp": "2026-08-19T22:36:45.552Z",
+    "alertTimestamp": "2026-08-19T16:06:34.299Z"
+  },
+  {
+    "match": "Fajr Sepasi vs Sanat Naft Abadan",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8836612170574476,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T22:36:45.687Z",
+    "alertTimestamp": "2026-08-19T16:06:34.299Z"
+  },
+  {
+    "match": "Malavan vs Zob Ahan",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.880390491086333,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 22, alta probabilidad de gol hasta el final.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35,
+      72,
+      89
+    ],
+    "timestamp": "2026-08-19T22:36:45.831Z",
+    "alertTimestamp": "2026-08-19T16:06:34.299Z"
+  },
+  {
+    "match": "Persepolis vs Esteglal Khuzestan",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.9190936872870877,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, aún hay tiempo para cambios.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      20,
+      47,
+      65,
+      93
+    ],
+    "timestamp": "2026-08-19T22:36:45.981Z",
+    "alertTimestamp": "2026-08-19T16:06:34.299Z"
+  },
+  {
+    "match": "Hiiumaa vs Nõmme United",
+    "league": "Copa Estonia - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5752382380862632,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa con marcador ajustado y tiempo restante. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T22:36:46.800Z",
+    "alertTimestamp": "2026-08-19T16:16:19.129Z"
+  },
+  {
+    "match": "Asa Aarhus vs Randers FC",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.5412669654588906,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, Randers FC puede ampliar ventaja. xG no es real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T22:36:47.003Z",
+    "alertTimestamp": "2026-08-19T16:16:19.129Z"
+  },
+  {
+    "match": "Estepona vs Antequera CF",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      56
+    ],
+    "timestamp": "2026-08-19T22:36:52.394Z",
+    "alertTimestamp": "2026-08-19T17:05:50.142Z"
   }
 ]
