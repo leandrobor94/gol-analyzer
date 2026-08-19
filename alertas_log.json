@@ -13569,5 +13569,25 @@
     ],
     "timestamp": "2026-08-19T02:36:28.573Z",
     "alertTimestamp": "2026-08-19T00:36:28.756Z"
+  },
+  {
+    "match": "Pamba Jiji FC vs Simba SC",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.8952006040243278,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, y un gol de ventaja no es definitivo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T15:15:46.320Z",
+    "alertTimestamp": "2026-08-19T13:15:42.837Z"
   }
 ]
