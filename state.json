@@ -1,10 +1,16 @@
 {
-  "alertedMatches": {},
+  "alertedMatches": {
+    "4800504_AVISO": {
+      "timestamp": 1787105190521,
+      "minute": 77,
+      "tier": "AVISO"
+    }
+  },
   "counters": {
     "total": 2989,
-    "verified": 2980,
-    "withGoalTimeline": 1992,
+    "verified": 2983,
+    "withGoalTimeline": 1995,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-19T01:26:28.909Z"
+  "lastUpdated": "2026-08-19T02:26:29.004Z"
 }
