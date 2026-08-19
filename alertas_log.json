@@ -13649,5 +13649,110 @@
     "goalMinutes": [],
     "timestamp": "2026-08-19T16:06:35.460Z",
     "alertTimestamp": "2026-08-19T15:15:46.039Z"
+  },
+  {
+    "match": "Jednota Banova vs AS Trencin",
+    "league": "Slovakia Cup - Preliminary Round",
+    "tier": "AVISO",
+    "probability": 0.868800490203153,
+    "minute": 22,
+    "scoreAtAlert": "0-6",
+    "finalScore": "0-6",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es fiable, pero hay remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T16:55:47.504Z",
+    "alertTimestamp": "2026-08-19T15:05:46.662Z"
+  },
+  {
+    "match": "Svätý Peter vs DAC 1904",
+    "league": "Slovakia Cup - Preliminary Round",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "0-12",
+    "finalScore": "0-13",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T16:55:47.867Z",
+    "alertTimestamp": "2026-08-19T15:05:46.662Z"
+  },
+  {
+    "match": "Kamaz vs Tekstilshtik Ivanovo",
+    "league": "Russian First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5712205723972176,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-08-19T16:55:48.039Z",
+    "alertTimestamp": "2026-08-19T15:05:46.662Z"
+  },
+  {
+    "match": "Cil Blaj vs Progresul Spartac",
+    "league": "Copa rumana - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5268572300192381,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos tiros a puerta del local, y el xG es estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-19T17:15:49.897Z",
+    "alertTimestamp": "2026-08-19T14:35:45.154Z"
+  },
+  {
+    "match": "Rubin Kazan vs Spartak Moscú",
+    "league": "Copa de Rusia - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8922189241692048,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      62
+    ],
+    "timestamp": "2026-08-19T17:38:52.190Z",
+    "alertTimestamp": "2026-08-19T15:36:28.366Z"
   }
 ]
