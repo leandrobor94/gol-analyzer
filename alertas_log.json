@@ -13544,5 +13544,30 @@
     ],
     "timestamp": "2026-08-18T22:36:36.016Z",
     "alertTimestamp": "2026-08-18T17:14:58.894Z"
+  },
+  {
+    "match": "São Paulo vs Bolívar",
+    "league": "CONMEBOL Copa Sudamericana - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5445162568050904,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con chances de gol. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      61,
+      68,
+      76
+    ],
+    "timestamp": "2026-08-19T02:36:28.573Z",
+    "alertTimestamp": "2026-08-19T00:36:28.756Z"
   }
 ]
