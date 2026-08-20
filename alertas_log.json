@@ -14064,5 +14064,74 @@
     ],
     "timestamp": "2026-08-20T13:57:54.137Z",
     "alertTimestamp": "2026-08-20T12:57:35.372Z"
+  },
+  {
+    "match": "FC Bunyodkor vs Kokand-1912",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.5416454672323383,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y minutos restantes suficientes.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-20T15:57:48.089Z",
+    "alertTimestamp": "2026-08-20T14:07:36.269Z"
+  },
+  {
+    "match": "Al Wakrah vs Qatar SC",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.5340683318228021,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      46,
+      67,
+      79
+    ],
+    "timestamp": "2026-08-20T16:17:42.510Z",
+    "alertTimestamp": "2026-08-20T14:17:36.540Z"
+  },
+  {
+    "match": "CSA Steaua Bucuresti vs Csíkszereda Miercurea Ciuc",
+    "league": "Copa rumana - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5548304046076464,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40,
+      52,
+      111
+    ],
+    "timestamp": "2026-08-20T16:37:53.231Z",
+    "alertTimestamp": "2026-08-20T14:07:36.269Z"
   }
 ]
