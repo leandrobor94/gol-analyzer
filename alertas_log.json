@@ -13992,5 +13992,53 @@
     "goalMinutes": [],
     "timestamp": "2026-08-20T00:57:11.737Z",
     "alertTimestamp": "2026-08-19T23:06:53.650Z"
+  },
+  {
+    "match": "Columbus Crew vs CF Montréal",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.6688493503408843,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es real, pero hay 1 gran chance y 3 tiros a puerta del visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      20,
+      78
+    ],
+    "timestamp": "2026-08-20T01:46:42.486Z",
+    "alertTimestamp": "2026-08-19T23:47:28.105Z"
+  },
+  {
+    "match": "Atlético Nacional vs Once Caldas",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5287932575711077,
+    "minute": 80,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      23,
+      56,
+      79
+    ],
+    "timestamp": "2026-08-20T02:06:53.271Z",
+    "alertTimestamp": "2026-08-20T00:16:43.503Z"
   }
 ]
