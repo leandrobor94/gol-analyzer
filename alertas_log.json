@@ -13930,5 +13930,47 @@
     ],
     "timestamp": "2026-08-19T22:36:52.394Z",
     "alertTimestamp": "2026-08-19T17:05:50.142Z"
+  },
+  {
+    "match": "Delfines Del Este vs Violette",
+    "league": "CONCACAF Copa del Caribe - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.6377698281187104,
+    "minute": 60,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia clara de esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-08-20T00:07:04.653Z",
+    "alertTimestamp": "2026-08-19T22:36:45.086Z"
+  },
+  {
+    "match": "Passo Fundo (RS) vs Santa Cruz RS",
+    "league": "Gaucho A2",
+    "tier": "AVISO",
+    "probability": 0.5378772391054023,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-20T00:27:05.962Z",
+    "alertTimestamp": "2026-08-19T22:36:45.086Z"
   }
 ]
