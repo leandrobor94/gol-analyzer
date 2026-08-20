@@ -14133,5 +14133,53 @@
     ],
     "timestamp": "2026-08-20T16:37:53.231Z",
     "alertTimestamp": "2026-08-20T14:07:36.269Z"
+  },
+  {
+    "match": "Kairat Almaty vs Anderlecht",
+    "league": "UEFA Europa League Clasificatorio - Playoff",
+    "tier": "AVISO",
+    "probability": 0.9034799965488804,
+    "minute": 26,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Anderlecht leads 0-2, but it's early (minute 26) and the xG is estimated.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      24,
+      46
+    ],
+    "timestamp": "2026-08-20T16:57:39.051Z",
+    "alertTimestamp": "2026-08-20T15:07:37.844Z"
+  },
+  {
+    "match": "Deportes Iquique (F) vs Universidad de Chile (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.5512670990592217,
+    "minute": 79,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      18,
+      86
+    ],
+    "timestamp": "2026-08-20T16:57:50.206Z",
+    "alertTimestamp": "2026-08-20T15:17:36.730Z"
   }
 ]
