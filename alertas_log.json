@@ -13972,5 +13972,25 @@
     "goalMinutes": [],
     "timestamp": "2026-08-20T00:27:05.962Z",
     "alertTimestamp": "2026-08-19T22:36:45.086Z"
+  },
+  {
+    "match": "Champs Academy Guatemala vs Chiquimulilla",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5493116790020601,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de un gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-20T00:57:11.737Z",
+    "alertTimestamp": "2026-08-19T23:06:53.650Z"
   }
 ]
