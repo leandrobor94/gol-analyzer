@@ -14372,5 +14372,123 @@
     ],
     "timestamp": "2026-08-21T15:06:58.899Z",
     "alertTimestamp": "2026-08-21T13:07:12.701Z"
+  },
+  {
+    "match": "Navbahor vs Nasaf Qarshi",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.5394263364791726,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real. Aún hay urgencia.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-21T15:57:12.636Z",
+    "alertTimestamp": "2026-08-21T14:06:43.404Z"
+  },
+  {
+    "match": "Academía Costa Del Este vs Sporting San Miguelito Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.5752692018208104,
+    "minute": 76,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El partido no está resuelto y la probabilidad de gol es alta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      20,
+      34
+    ],
+    "timestamp": "2026-08-21T15:57:12.718Z",
+    "alertTimestamp": "2026-08-21T14:06:43.404Z"
+  },
+  {
+    "match": "CF Chindia Targoviste vs CS Dinamo București",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.534292231638541,
+    "minute": 79,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      81,
+      88
+    ],
+    "timestamp": "2026-08-21T16:27:23.322Z",
+    "alertTimestamp": "2026-08-21T14:36:46.628Z"
+  },
+  {
+    "match": "Orsha vs Bate Borisov II Reserve",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8929998316103207,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y sin datos de xG o chances claras para refutar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      57,
+      82
+    ],
+    "timestamp": "2026-08-21T16:27:23.426Z",
+    "alertTimestamp": "2026-08-21T14:36:46.628Z"
+  },
+  {
+    "match": "Molodechno vs Shakhter Soligorsk",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8992551261525042,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      27,
+      65,
+      85,
+      91
+    ],
+    "timestamp": "2026-08-21T16:37:21.066Z",
+    "alertTimestamp": "2026-08-21T14:46:55.849Z"
   }
 ]
