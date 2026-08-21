@@ -1,71 +1,21 @@
 {
   "alertedMatches": {
-    "4688078_AVISO": {
-      "timestamp": 1787324204700,
-      "minute": 24,
-      "tier": "AVISO"
-    },
-    "4712328_AVISO": {
-      "timestamp": 1787324818705,
-      "minute": 22,
-      "tier": "AVISO"
-    },
-    "4778498_AVISO": {
-      "timestamp": 1787326624698,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4663694_AVISO": {
-      "timestamp": 1787326624698,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4784726_AVISO": {
-      "timestamp": 1787328450682,
+    "4778497_AVISO": {
+      "timestamp": 1787351917355,
       "minute": 79,
       "tier": "AVISO"
     },
-    "4795639_AVISO": {
-      "timestamp": 1787330235178,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4667786_AVISO": {
-      "timestamp": 1787330823022,
-      "minute": 60,
-      "tier": "AVISO"
-    },
-    "4760460_AVISO": {
-      "timestamp": 1787331408941,
-      "minute": 27,
-      "tier": "AVISO"
-    },
-    "4668674_AVISO": {
-      "timestamp": 1787332050185,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4661043_AVISO": {
-      "timestamp": 1787332740974,
-      "minute": 62,
-      "tier": "AVISO"
-    },
-    "4817072_AVISO": {
-      "timestamp": 1787333825350,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4742632_AVISO": {
-      "timestamp": 1787333825350,
-      "minute": 77,
+    "4778493_AVISO": {
+      "timestamp": 1787351917355,
+      "minute": 81,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 3320,
-    "verified": 3245,
-    "withGoalTimeline": 2157,
+    "total": 3336,
+    "verified": 3324,
+    "withGoalTimeline": 2214,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-21T17:37:05.715Z"
+  "lastUpdated": "2026-08-21T23:27:42.641Z"
 }

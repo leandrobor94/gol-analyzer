@@ -14539,5 +14539,158 @@
     ],
     "timestamp": "2026-08-21T17:27:19.201Z",
     "alertTimestamp": "2026-08-21T15:37:04.698Z"
+  },
+  {
+    "match": "Seravezza Pozzi vs Scandicci",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5361061507400959,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador ajustado y minutos restantes. El xG no es real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18
+    ],
+    "timestamp": "2026-08-21T22:38:38.496Z",
+    "alertTimestamp": "2026-08-21T16:07:30.682Z"
+  },
+  {
+    "match": "Chrobry Glogow vs Warta Poznan",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5359197414084197,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      8
+    ],
+    "timestamp": "2026-08-21T22:38:38.705Z",
+    "alertTimestamp": "2026-08-21T16:07:30.682Z"
+  },
+  {
+    "match": "Levadia Tallinn vs Trans Narva",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.6691870894930096,
+    "minute": 62,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no confiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      17,
+      53,
+      67,
+      69
+    ],
+    "timestamp": "2026-08-21T22:38:39.896Z",
+    "alertTimestamp": "2026-08-21T16:07:30.682Z"
+  },
+  {
+    "match": "Albukiryah vs Al Anwar",
+    "league": "First Division",
+    "tier": "AVISO",
+    "probability": 0.8600468517662038,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, xG estimado no confiable, sin remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-21T22:38:40.980Z",
+    "alertTimestamp": "2026-08-21T16:27:23.060Z"
+  },
+  {
+    "match": "Torpedo Moscow vs Spartak Kostroma",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.9006142009074494,
+    "minute": 27,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, aún hay tiempo y el xG es estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      10,
+      60
+    ],
+    "timestamp": "2026-08-21T22:38:41.410Z",
+    "alertTimestamp": "2026-08-21T16:37:15.178Z"
+  },
+  {
+    "match": "San Francisco Fc Sub20 vs Unión Coclé II",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Sur",
+    "tier": "AVISO",
+    "probability": 0.5341646096173865,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-21T22:57:42.480Z",
+    "alertTimestamp": "2026-08-21T22:38:37.356Z"
+  },
+  {
+    "match": "Herrera II vs Veraguas Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.5219872586460756,
+    "minute": 81,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-21T22:57:42.522Z",
+    "alertTimestamp": "2026-08-21T22:38:37.356Z"
   }
 ]
