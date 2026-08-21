@@ -14327,5 +14327,50 @@
     ],
     "timestamp": "2026-08-21T13:56:42.675Z",
     "alertTimestamp": "2026-08-21T13:07:12.701Z"
+  },
+  {
+    "match": "Venda Fc vs Lerumo Lions",
+    "league": "Championship - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5264680507566749,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30,
+      52
+    ],
+    "timestamp": "2026-08-21T14:56:49.527Z",
+    "alertTimestamp": "2026-08-21T13:07:12.701Z"
+  },
+  {
+    "match": "FC Mesakhte Tkibuli vs Dinamo Batumi",
+    "league": "Erovnuli Liga",
+    "tier": "AVISO",
+    "probability": 0.6491853821981485,
+    "minute": 60,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Dinamo Batumi con llegadas. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23
+    ],
+    "timestamp": "2026-08-21T15:06:58.899Z",
+    "alertTimestamp": "2026-08-21T13:07:12.701Z"
   }
 ]
