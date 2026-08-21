@@ -14181,5 +14181,32 @@
     ],
     "timestamp": "2026-08-20T16:57:50.206Z",
     "alertTimestamp": "2026-08-20T15:17:36.730Z"
+  },
+  {
+    "match": "Venados vs Dorados de Sinaloa",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8832779129248326,
+    "minute": 21,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      8,
+      37,
+      40,
+      66,
+      90
+    ],
+    "timestamp": "2026-08-21T00:59:38.215Z",
+    "alertTimestamp": "2026-08-20T23:00:37.302Z"
   }
 ]
