@@ -14490,5 +14490,54 @@
     ],
     "timestamp": "2026-08-21T16:37:21.066Z",
     "alertTimestamp": "2026-08-21T14:46:55.849Z"
+  },
+  {
+    "match": "PK Keski Uusimaa vs JJK",
+    "league": "Ykkonen",
+    "tier": "AVISO",
+    "probability": 0.6945556299555558,
+    "minute": 60,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 75,
+      "reason": "Partido no resuelto, xG estimado no fiable, y volumen de juego no es estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      42,
+      81,
+      85
+    ],
+    "timestamp": "2026-08-21T17:27:18.639Z",
+    "alertTimestamp": "2026-08-21T15:37:04.698Z"
+  },
+  {
+    "match": "Flora Tallinn II vs Viimsi JK",
+    "league": "Segunda división estonia",
+    "tier": "AVISO",
+    "probability": 0.5270546517027409,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      48,
+      73,
+      90
+    ],
+    "timestamp": "2026-08-21T17:27:19.201Z",
+    "alertTimestamp": "2026-08-21T15:37:04.698Z"
   }
 ]
