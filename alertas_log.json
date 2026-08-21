@@ -14208,5 +14208,25 @@
     ],
     "timestamp": "2026-08-21T00:59:38.215Z",
     "alertTimestamp": "2026-08-20T23:00:37.302Z"
+  },
+  {
+    "match": "Cavalier FC vs Salcedo",
+    "league": "CONCACAF Copa del Caribe - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.859342681400249,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-21T02:09:55.813Z",
+    "alertTimestamp": "2026-08-21T00:09:48.053Z"
   }
 ]
