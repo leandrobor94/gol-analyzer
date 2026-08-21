@@ -14302,5 +14302,30 @@
     ],
     "timestamp": "2026-08-21T12:56:42.044Z",
     "alertTimestamp": "2026-08-21T01:09:55.671Z"
+  },
+  {
+    "match": "Eastern SC vs Shatin",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5471376222683563,
+    "minute": 80,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con goles, aunque el marcador es amplio, el modelo aún ve probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      44,
+      52,
+      68
+    ],
+    "timestamp": "2026-08-21T13:56:42.675Z",
+    "alertTimestamp": "2026-08-21T13:07:12.701Z"
   }
 ]
