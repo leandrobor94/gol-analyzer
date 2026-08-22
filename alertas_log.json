@@ -15621,5 +15621,231 @@
     ],
     "timestamp": "2026-08-22T17:33:26.174Z",
     "alertTimestamp": "2026-08-22T15:42:11.905Z"
+  },
+  {
+    "match": "Club Sportivo Cerrito vs Uruguay Montevideo Fc",
+    "league": "Segunda Division - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.7019543833576882,
+    "minute": 62,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T22:33:58.440Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "Harstad IL vs Tromsdalen Uil",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8883322379664099,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T22:33:58.465Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "FC Wil 1900 vs SC Kriens",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.8731751182173467,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      34,
+      92
+    ],
+    "timestamp": "2026-08-22T22:33:58.568Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "Frigg vs Kjelsås",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8882330034784565,
+    "minute": 20,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-2 no es definitivo. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      13,
+      31,
+      65
+    ],
+    "timestamp": "2026-08-22T22:33:58.833Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "Njardvik vs Husavik",
+    "league": "Inkasso Deildin",
+    "tier": "AVISO",
+    "probability": 0.653123970421371,
+    "minute": 62,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T22:33:59.219Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "Cittadella vs Pergolettese",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.624492174909477,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15,
+      91
+    ],
+    "timestamp": "2026-08-22T22:34:00.151Z",
+    "alertTimestamp": "2026-08-22T16:11:04.127Z"
+  },
+  {
+    "match": "Al-Najma vs Al-Jndal",
+    "league": "First Division",
+    "tier": "AVISO",
+    "probability": 0.8838590842505745,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y minutos restantes considerables.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      29,
+      52
+    ],
+    "timestamp": "2026-08-22T22:34:00.810Z",
+    "alertTimestamp": "2026-08-22T16:21:08.071Z"
+  },
+  {
+    "match": "Real Ávila vs Alcorcón B",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9075972948818513,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      16,
+      73,
+      83
+    ],
+    "timestamp": "2026-08-22T22:34:02.391Z",
+    "alertTimestamp": "2026-08-22T17:10:29.615Z"
+  },
+  {
+    "match": "São Paulo (F) vs Mixto (W)",
+    "league": "Brasileirao Femenino",
+    "tier": "AVISO",
+    "probability": 0.5401461836618983,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61
+    ],
+    "timestamp": "2026-08-22T23:04:03.266Z",
+    "alertTimestamp": "2026-08-22T22:33:58.178Z"
+  },
+  {
+    "match": "Juventude (W) vs Bahia (F)",
+    "league": "Brasileirao Femenino",
+    "tier": "AVISO",
+    "probability": 0.5284692249964101,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      31,
+      55,
+      92
+    ],
+    "timestamp": "2026-08-22T23:04:03.786Z",
+    "alertTimestamp": "2026-08-22T22:33:58.178Z"
+  },
+  {
+    "match": "New York City II vs New England II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5399640202935383,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T23:14:18.395Z",
+    "alertTimestamp": "2026-08-22T22:33:58.178Z"
+  },
+  {
+    "match": "Vitoria (W) vs Santos (F)",
+    "league": "Brasileirao Femenino",
+    "tier": "AVISO",
+    "probability": 0.5322712607919672,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      47,
+      56
+    ],
+    "timestamp": "2026-08-22T23:14:18.432Z",
+    "alertTimestamp": "2026-08-22T22:33:58.178Z"
   }
 ]
