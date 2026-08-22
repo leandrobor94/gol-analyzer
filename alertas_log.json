@@ -14760,5 +14760,119 @@
     "goalMinutes": [],
     "timestamp": "2026-08-22T02:57:42.391Z",
     "alertTimestamp": "2026-08-22T01:07:42.593Z"
+  },
+  {
+    "match": "Hull City vs Manchester United",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5325687004475583,
+    "minute": 80,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con oportunidades y xG estimado no fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      38
+    ],
+    "timestamp": "2026-08-22T13:28:59.580Z",
+    "alertTimestamp": "2026-08-22T12:48:35.507Z"
+  },
+  {
+    "match": "Millwall vs Norwich",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.6515410911400257,
+    "minute": 61,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Millwall domina con 2-0 y xG alto, a pesar de ser estimado. Norwich sin respuesta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      58,
+      84
+    ],
+    "timestamp": "2026-08-22T13:29:19.811Z",
+    "alertTimestamp": "2026-08-22T12:48:35.507Z"
+  },
+  {
+    "match": "Yeovil vs Gateshead",
+    "league": "Liga Nacional inglesa",
+    "tier": "AVISO",
+    "probability": 0.6391096959412897,
+    "minute": 60,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Yeovil con 12 tiros a puerta y xG estimado alto, Gateshead sin volumen de juego.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      81,
+      90
+    ],
+    "timestamp": "2026-08-22T13:29:39.923Z",
+    "alertTimestamp": "2026-08-22T12:48:35.507Z"
+  },
+  {
+    "match": "Kidderminster vs Aldershot Town",
+    "league": "Liga Nacional inglesa",
+    "tier": "AVISO",
+    "probability": 0.5246926523126865,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un solo gol, un expulsado y xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      28,
+      87
+    ],
+    "timestamp": "2026-08-22T13:39:39.689Z",
+    "alertTimestamp": "2026-08-22T12:48:35.507Z"
+  },
+  {
+    "match": "Ammanford vs Gap Connah's Quay",
+    "league": "Cymru Premier",
+    "tier": "AVISO",
+    "probability": 0.6403241316546212,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, y quedan 32 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T13:39:40.549Z",
+    "alertTimestamp": "2026-08-22T12:48:35.507Z"
   }
 ]
