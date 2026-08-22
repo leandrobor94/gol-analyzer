@@ -15029,5 +15029,176 @@
     ],
     "timestamp": "2026-08-22T14:38:46.945Z",
     "alertTimestamp": "2026-08-22T12:48:35.507Z"
+  },
+  {
+    "match": "Rollon vs SK Traeff",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T14:59:23.698Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "Sekhukhune United vs Orlando Pirates",
+    "league": "MTN 8 Cup",
+    "tier": "AVISO",
+    "probability": 0.6505590532341732,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, y 32 minutos restantes.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      43
+    ],
+    "timestamp": "2026-08-22T14:59:24.645Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "Kloetinge vs Kozakken Boys",
+    "league": "Tweede Divisie",
+    "tier": "AVISO",
+    "probability": 0.5523117100097579,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, xG estimado no es fiable, y el marcador no está resuelto.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T14:59:26.572Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "IJsselmeervogels vs Quick Boys",
+    "league": "Tweede Divisie",
+    "tier": "AVISO",
+    "probability": 0.5433892181052787,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26
+    ],
+    "timestamp": "2026-08-22T15:08:55.159Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "Katwijk vs HSV Hoek",
+    "league": "Tweede Divisie",
+    "tier": "AVISO",
+    "probability": 0.5478518003868746,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en liga de alto scoring.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      55,
+      81
+    ],
+    "timestamp": "2026-08-22T15:08:55.318Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "FC Hansa Luneburg vs Werder Bremen",
+    "league": "DFB-Pokal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6317400828174079,
+    "minute": 61,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Werder Bremen tiene 4 grandes oportunidades y 9 tiros al área, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      53,
+      76
+    ],
+    "timestamp": "2026-08-22T15:31:39.465Z",
+    "alertTimestamp": "2026-08-22T13:39:37.797Z"
+  },
+  {
+    "match": "Nyva Ternopil vs Bukovyna",
+    "league": "Copa Ucrania - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8978335024722,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T15:42:12.795Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "Lillehammer FK vs Strommen",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5350819478149444,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, con goles y minutos restantes. No hay razón para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T15:42:12.952Z",
+    "alertTimestamp": "2026-08-22T13:08:37.816Z"
   }
 ]
