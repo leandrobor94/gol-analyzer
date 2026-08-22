@@ -14720,5 +14720,45 @@
     ],
     "timestamp": "2026-08-22T02:07:44.405Z",
     "alertTimestamp": "2026-08-22T00:07:42.123Z"
+  },
+  {
+    "match": "San Marcos vs Rangers De Talca",
+    "league": "Liga de Ascenso",
+    "tier": "AVISO",
+    "probability": 0.5313627834953407,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T02:37:47.860Z",
+    "alertTimestamp": "2026-08-22T00:37:42.447Z"
+  },
+  {
+    "match": "Inter Santa Tecla vs CD Inca-Aruba",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6268252116904622,
+    "minute": 62,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, xG estimado no confiable, y un equipo sin remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T02:57:42.391Z",
+    "alertTimestamp": "2026-08-22T01:07:42.593Z"
   }
 ]
