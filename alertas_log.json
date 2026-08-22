@@ -15200,5 +15200,256 @@
     "goalMinutes": [],
     "timestamp": "2026-08-22T15:42:12.952Z",
     "alertTimestamp": "2026-08-22T13:08:37.816Z"
+  },
+  {
+    "match": "Ready vs KFUM Oslo",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8868443145656177,
+    "minute": 20,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T15:52:17.073Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Yate Town vs Bracknell Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8849927601480368,
+    "minute": 25,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T16:01:52.668Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Everton vs Crystal Palace",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5778988164996379,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      42,
+      53
+    ],
+    "timestamp": "2026-08-22T16:03:08.722Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Hyde vs Avro",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8878541109557044,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4
+    ],
+    "timestamp": "2026-08-22T16:04:24.915Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Ipswich vs Sunderland",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5204067333136024,
+    "minute": 80,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      39,
+      90
+    ],
+    "timestamp": "2026-08-22T16:04:25.774Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "King's Lynn vs Marine",
+    "league": "National League N/S - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6591862523150749,
+    "minute": 61,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alto xG estimado para el local y muchos tiros a puerta. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T16:04:55.394Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Vindbjart vs Flekkeroy",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6720201240646253,
+    "minute": 62,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el xG es estimado, los tiros a puerta indican actividad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T16:05:20.368Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Preston vs Wolves",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.526630454338092,
+    "minute": 78,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      71,
+      82,
+      91
+    ],
+    "timestamp": "2026-08-22T16:07:16.280Z",
+    "alertTimestamp": "2026-08-22T14:09:12.713Z"
+  },
+  {
+    "match": "Al Duhail vs Al Sailiya",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.8779640683315928,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y con xG estimado bajo. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62,
+      66
+    ],
+    "timestamp": "2026-08-22T16:21:33.206Z",
+    "alertTimestamp": "2026-08-22T14:19:05.325Z"
+  },
+  {
+    "match": "Galanta vs FK Pohronie",
+    "league": "2. Liga",
+    "tier": "AVISO",
+    "probability": 0.8908779858694088,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      59
+    ],
+    "timestamp": "2026-08-22T16:21:33.713Z",
+    "alertTimestamp": "2026-08-22T14:38:46.062Z"
+  },
+  {
+    "match": "Fortuna Sittard vs AZ Alkmaar",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.5393756665355232,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "AZ Alkmaar tiene 4 grandes oportunidades y 8 tiros a puerta, a pesar de la estimación de xG.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      58,
+      94
+    ],
+    "timestamp": "2026-08-22T16:29:44.583Z",
+    "alertTimestamp": "2026-08-22T14:38:46.062Z"
+  },
+  {
+    "match": "Naftan Novopolotsk vs Neman Grodno",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8879101565445552,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      26
+    ],
+    "timestamp": "2026-08-22T16:41:24.499Z",
+    "alertTimestamp": "2026-08-22T14:49:38.654Z"
   }
 ]
