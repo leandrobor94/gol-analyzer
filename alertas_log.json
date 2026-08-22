@@ -15451,5 +15451,175 @@
     ],
     "timestamp": "2026-08-22T16:41:24.499Z",
     "alertTimestamp": "2026-08-22T14:49:38.654Z"
+  },
+  {
+    "match": "Sassuolo Sub19 vs Fiorentina Sub19",
+    "league": "Campeonato Italiano Sub-19",
+    "tier": "AVISO",
+    "probability": 0.8770297697670356,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo. No hay datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T16:50:28.969Z",
+    "alertTimestamp": "2026-08-22T14:59:23.111Z"
+  },
+  {
+    "match": "Juventus Sub19 vs Parma U19",
+    "league": "Campeonato Italiano Sub-19",
+    "tier": "AVISO",
+    "probability": 0.8770297697670356,
+    "minute": 23,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T16:50:29.117Z",
+    "alertTimestamp": "2026-08-22T14:59:23.111Z"
+  },
+  {
+    "match": "Mlada Boleslav vs Slovacko",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.5527300227200256,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      66,
+      88
+    ],
+    "timestamp": "2026-08-22T17:02:16.404Z",
+    "alertTimestamp": "2026-08-22T15:08:54.627Z"
+  },
+  {
+    "match": "Santiago Wanderers (F) vs Deportes Temuco (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.5711398802020051,
+    "minute": 77,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-22T17:02:17.167Z",
+    "alertTimestamp": "2026-08-22T15:08:54.627Z"
+  },
+  {
+    "match": "Lens vs Auxerre",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8927068023539485,
+    "minute": 23,
+    "scoreAtAlert": "5-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, Lens domina con 2 grandes chances y xG alto (aunque estimado).",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      49,
+      54,
+      61,
+      66,
+      69,
+      88
+    ],
+    "timestamp": "2026-08-22T17:22:19.505Z",
+    "alertTimestamp": "2026-08-22T15:20:03.555Z"
+  },
+  {
+    "match": "Al Fujairah Club vs Al Jazira Al Hamra",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.8737320775103191,
+    "minute": 23,
+    "scoreAtAlert": "4-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      43,
+      49,
+      57,
+      60,
+      77,
+      90
+    ],
+    "timestamp": "2026-08-22T17:33:19.485Z",
+    "alertTimestamp": "2026-08-22T15:20:03.555Z"
+  },
+  {
+    "match": "Palm City vs Al Arabi",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5952152052260787,
+    "minute": 77,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      46,
+      66,
+      71,
+      88,
+      93,
+      97
+    ],
+    "timestamp": "2026-08-22T17:33:19.636Z",
+    "alertTimestamp": "2026-08-22T15:31:31.358Z"
+  },
+  {
+    "match": "Stade Tunisien vs CS Sfaxien",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5447316204277365,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      74
+    ],
+    "timestamp": "2026-08-22T17:33:26.174Z",
+    "alertTimestamp": "2026-08-22T15:42:11.905Z"
   }
 ]
