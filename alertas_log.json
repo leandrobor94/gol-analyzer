@@ -16233,5 +16233,65 @@
     ],
     "timestamp": "2026-08-23T02:14:03.296Z",
     "alertTimestamp": "2026-08-23T00:13:54.607Z"
+  },
+  {
+    "match": "St. Louis City SC vs Houston Dynamo",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5540703268395176,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      75,
+      85
+    ],
+    "timestamp": "2026-08-23T02:43:53.789Z",
+    "alertTimestamp": "2026-08-23T00:43:55.440Z"
+  },
+  {
+    "match": "Corpus Christi FC vs Westchester SC",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5751033377666027,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      37,
+      57,
+      89
+    ],
+    "timestamp": "2026-08-23T02:53:53.736Z",
+    "alertTimestamp": "2026-08-23T00:43:55.440Z"
+  },
+  {
+    "match": "Nashville SC vs Columbus Crew",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5466892581858472,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      27,
+      58,
+      68,
+      93,
+      95
+    ],
+    "timestamp": "2026-08-23T02:53:53.779Z",
+    "alertTimestamp": "2026-08-23T00:43:55.440Z"
   }
 ]
