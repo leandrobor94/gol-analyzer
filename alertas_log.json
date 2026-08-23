@@ -16652,5 +16652,215 @@
     ],
     "timestamp": "2026-08-23T15:41:34.021Z",
     "alertTimestamp": "2026-08-23T13:50:37.418Z"
+  },
+  {
+    "match": "Modum FK vs Stromsgodset",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8926223731726277,
+    "minute": 20,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T15:50:58.465Z",
+    "alertTimestamp": "2026-08-23T14:10:05.542Z"
+  },
+  {
+    "match": "Jeunesse Esch vs Mondorf",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8661465951333815,
+    "minute": 21,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      35,
+      55,
+      83
+    ],
+    "timestamp": "2026-08-23T16:01:15.931Z",
+    "alertTimestamp": "2026-08-23T13:59:47.355Z"
+  },
+  {
+    "match": "Streymur vs AB Argir",
+    "league": "Formuladeildin",
+    "tier": "AVISO",
+    "probability": 0.8895415153891304,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, xG estimado no real, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      49,
+      80
+    ],
+    "timestamp": "2026-08-23T16:01:27.136Z",
+    "alertTimestamp": "2026-08-23T14:10:05.542Z"
+  },
+  {
+    "match": "Baniyas vs Dubai United",
+    "league": "UAE Pro League",
+    "tier": "AVISO",
+    "probability": 0.5236687110981015,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      57,
+      68,
+      76,
+      77
+    ],
+    "timestamp": "2026-08-23T16:01:27.591Z",
+    "alertTimestamp": "2026-08-23T14:10:05.542Z"
+  },
+  {
+    "match": "Résidence Walferdange vs Atert Bissen",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.87824793979869,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      21,
+      35
+    ],
+    "timestamp": "2026-08-23T16:01:39.683Z",
+    "alertTimestamp": "2026-08-23T14:10:05.542Z"
+  },
+  {
+    "match": "F91 Dudelange vs Rumelange",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.9200950515592885,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado en liga de alto scoring, sin datos de xG reales para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      7,
+      64,
+      77,
+      83
+    ],
+    "timestamp": "2026-08-23T16:10:06.265Z",
+    "alertTimestamp": "2026-08-23T14:10:05.542Z"
+  },
+  {
+    "match": "Senyo Carnifex vs Tiszafuredi",
+    "league": "Hungarian Cup - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5317433441440879,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y tiempo restante. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T16:21:54.627Z",
+    "alertTimestamp": "2026-08-23T14:39:54.296Z"
+  },
+  {
+    "match": "Fundación Amigos por el Deporte vs Sol de Mayo",
+    "league": "Federal A - Reválida - Zona B",
+    "tier": "AVISO",
+    "probability": 0.8554777143006617,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      18,
+      72
+    ],
+    "timestamp": "2026-08-23T16:32:02.663Z",
+    "alertTimestamp": "2026-08-23T14:39:54.296Z"
+  },
+  {
+    "match": "Hammarby vs Gais",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.8688663822239677,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, Hammarby domina y genera ocasiones. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      11
+    ],
+    "timestamp": "2026-08-23T16:32:03.386Z",
+    "alertTimestamp": "2026-08-23T14:39:54.296Z"
   }
 ]
