@@ -16455,5 +16455,202 @@
     ],
     "timestamp": "2026-08-23T14:29:52.438Z",
     "alertTimestamp": "2026-08-23T12:49:54.902Z"
+  },
+  {
+    "match": "Vittsjö GIK (F) vs Norrkoping (F)",
+    "league": "Damallsvenskan",
+    "tier": "AVISO",
+    "probability": 0.863968063269616,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      21
+    ],
+    "timestamp": "2026-08-23T14:51:25.743Z",
+    "alertTimestamp": "2026-08-23T13:10:58.379Z"
+  },
+  {
+    "match": "Leningradets vs FC Chelyabinsk",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.8837165826159317,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      46,
+      61
+    ],
+    "timestamp": "2026-08-23T15:01:12.157Z",
+    "alertTimestamp": "2026-08-23T13:10:58.379Z"
+  },
+  {
+    "match": "Brighton vs Aston Villa",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.909218566640581,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, y big chances indican peligro.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      18,
+      30,
+      31
+    ],
+    "timestamp": "2026-08-23T15:01:12.434Z",
+    "alertTimestamp": "2026-08-23T13:10:58.379Z"
+  },
+  {
+    "match": "Angers vs Lille",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8915846538349983,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Lille ya marcó y tiene llegadas. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      31
+    ],
+    "timestamp": "2026-08-23T15:01:12.676Z",
+    "alertTimestamp": "2026-08-23T13:10:58.379Z"
+  },
+  {
+    "match": "IK Brage vs United Nordic",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.8875515356186107,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador 0-2 con 74 minutos restantes. El modelo indica alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      14,
+      15,
+      55
+    ],
+    "timestamp": "2026-08-23T15:01:13.299Z",
+    "alertTimestamp": "2026-08-23T13:10:58.379Z"
+  },
+  {
+    "match": "Westfalia Rhynern vs Dynamo Dresden",
+    "league": "DFB-Pokal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9195814599277606,
+    "minute": 20,
+    "scoreAtAlert": "0-6",
+    "finalScore": "0-6",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-2 no es definitivo. xG estimado, no es base para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      17,
+      30,
+      34,
+      39,
+      54
+    ],
+    "timestamp": "2026-08-23T15:20:00.344Z",
+    "alertTimestamp": "2026-08-23T13:39:50.437Z"
+  },
+  {
+    "match": "VfB 1921 Krieschow vs Mainz 05",
+    "league": "DFB-Pokal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.895752652895445,
+    "minute": 20,
+    "scoreAtAlert": "0-8",
+    "finalScore": "0-9",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para descartar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      26,
+      32,
+      39,
+      43,
+      48,
+      57,
+      73,
+      88
+    ],
+    "timestamp": "2026-08-23T15:20:00.591Z",
+    "alertTimestamp": "2026-08-23T13:39:50.437Z"
+  },
+  {
+    "match": "Bijelo Brdo vs Dinamo Zagreb II",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.5477909165898832,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32
+    ],
+    "timestamp": "2026-08-23T15:41:34.021Z",
+    "alertTimestamp": "2026-08-23T13:50:37.418Z"
   }
 ]
