@@ -16293,5 +16293,144 @@
     ],
     "timestamp": "2026-08-23T02:53:53.779Z",
     "alertTimestamp": "2026-08-23T00:43:55.440Z"
+  },
+  {
+    "match": "Jaiba Brava vs Alebrijes",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5473159611954989,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      68,
+      91
+    ],
+    "timestamp": "2026-08-23T12:49:55.681Z",
+    "alertTimestamp": "2026-08-23T01:04:02.204Z"
+  },
+  {
+    "match": "Puebla vs Santos Laguna",
+    "league": "Liga MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5355700953966857,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      9,
+      51,
+      54,
+      62
+    ],
+    "timestamp": "2026-08-23T12:49:55.878Z",
+    "alertTimestamp": "2026-08-23T01:04:02.204Z"
+  },
+  {
+    "match": "Durango vs Leones Negros",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8753910664725154,
+    "minute": 23,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      42,
+      52
+    ],
+    "timestamp": "2026-08-23T12:49:56.105Z",
+    "alertTimestamp": "2026-08-23T01:04:02.204Z"
+  },
+  {
+    "match": "Juárez (F) vs Santos Laguna (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5526191024474386,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T12:49:57.098Z",
+    "alertTimestamp": "2026-08-23T01:14:14.752Z"
+  },
+  {
+    "match": "CD Bocas FC vs Academia Mario Mendez",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.8586369806749679,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T12:49:57.592Z",
+    "alertTimestamp": "2026-08-23T01:14:14.752Z"
+  },
+  {
+    "match": "Austin FC vs Philadelphia Union",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.560258008377038,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      21
+    ],
+    "timestamp": "2026-08-23T12:49:57.813Z",
+    "alertTimestamp": "2026-08-23T01:14:14.752Z"
+  },
+  {
+    "match": "San Jose Earthquakes vs Minnesota United",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8806165098717168,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-5",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, muchas chances de gol, y el modelo predice alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      10,
+      40,
+      44,
+      65,
+      86
+    ],
+    "timestamp": "2026-08-23T12:50:04.696Z",
+    "alertTimestamp": "2026-08-23T02:43:53.709Z"
   }
 ]
