@@ -16053,5 +16053,185 @@
     ],
     "timestamp": "2026-08-23T01:23:54.851Z",
     "alertTimestamp": "2026-08-22T23:14:18.200Z"
+  },
+  {
+    "match": "One Knoxville vs Boise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5751033377666027,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      28,
+      32,
+      83
+    ],
+    "timestamp": "2026-08-23T01:44:06.526Z",
+    "alertTimestamp": "2026-08-22T23:43:53.570Z"
+  },
+  {
+    "match": "New York Red Bulls vs Chicago Fire",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5308117264922746,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      85
+    ],
+    "timestamp": "2026-08-23T01:44:06.587Z",
+    "alertTimestamp": "2026-08-22T23:43:53.570Z"
+  },
+  {
+    "match": "Inter Miami vs Toronto FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5704738834241637,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      59,
+      62,
+      82
+    ],
+    "timestamp": "2026-08-23T01:44:06.626Z",
+    "alertTimestamp": "2026-08-22T23:43:53.570Z"
+  },
+  {
+    "match": "Orlando City SC vs Real Salt Lake",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5371629499624992,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      53,
+      81
+    ],
+    "timestamp": "2026-08-23T01:44:06.711Z",
+    "alertTimestamp": "2026-08-22T23:43:53.570Z"
+  },
+  {
+    "match": "CF Montréal vs LA Galaxy",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.525944015309284,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      19,
+      48,
+      79
+    ],
+    "timestamp": "2026-08-23T01:44:06.763Z",
+    "alertTimestamp": "2026-08-22T23:43:53.570Z"
+  },
+  {
+    "match": "Universitario De Tarija vs Universitario",
+    "league": "Copa Simón Bolívar - Grupo E",
+    "tier": "AVISO",
+    "probability": 0.5357438550499376,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T01:54:14.085Z",
+    "alertTimestamp": "2026-08-23T00:03:55.180Z"
+  },
+  {
+    "match": "Forward Madison vs Charlotte Independence",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8883322379664099,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      59
+    ],
+    "timestamp": "2026-08-23T02:04:29.139Z",
+    "alertTimestamp": "2026-08-23T00:13:54.607Z"
+  },
+  {
+    "match": "Independiente Santa Fe vs América de Cali",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5556303720420168,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T02:04:29.248Z",
+    "alertTimestamp": "2026-08-23T00:43:55.440Z"
+  },
+  {
+    "match": "Birmingham Legion FC vs Sporting JAX",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5336204086550373,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y buen volumen de juego.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      55,
+      58,
+      76,
+      93,
+      101
+    ],
+    "timestamp": "2026-08-23T02:14:03.296Z",
+    "alertTimestamp": "2026-08-23T00:13:54.607Z"
   }
 ]
