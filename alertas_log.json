@@ -16948,5 +16948,415 @@
     "goalMinutes": [],
     "timestamp": "2026-08-23T17:21:08.091Z",
     "alertTimestamp": "2026-08-23T15:10:29.270Z"
+  },
+  {
+    "match": "Forte Virtus FC vs Emirates Club",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.880390491086333,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      42,
+      47,
+      95
+    ],
+    "timestamp": "2026-08-23T22:33:57.999Z",
+    "alertTimestamp": "2026-08-23T15:19:59.954Z"
+  },
+  {
+    "match": "Universidad Concepción (F) vs Coquimbo Unido (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.8868443145656177,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de liga femenina, sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T22:33:58.183Z",
+    "alertTimestamp": "2026-08-23T15:19:59.954Z"
+  },
+  {
+    "match": "Hajer vs Jeddah Club",
+    "league": "First Division",
+    "tier": "AVISO",
+    "probability": 0.871268337990907,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      37,
+      62
+    ],
+    "timestamp": "2026-08-23T22:33:59.641Z",
+    "alertTimestamp": "2026-08-23T16:01:15.623Z"
+  },
+  {
+    "match": "Sportivo Luqueño (F) vs Sportivo Trinidense (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.8609076145390898,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, xG estimado no es real, y el modelo predice alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      27,
+      51,
+      84
+    ],
+    "timestamp": "2026-08-23T22:34:01.813Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Maccabi Hertzliya vs Hapoel Raanana",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.856913718457558,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, con un expulsado, y buen volumen de remates a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      10,
+      37,
+      47,
+      95
+    ],
+    "timestamp": "2026-08-23T22:34:02.428Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Trabzonspor vs Başakşehir",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8679078308219333,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchas llegadas al área y grandes ocasiones para ambos equipos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      19,
+      48
+    ],
+    "timestamp": "2026-08-23T22:34:03.043Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Citta Di Campobasso vs Pianese",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8540911664413772,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es fiable, pero hay un remate a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      55
+    ],
+    "timestamp": "2026-08-23T22:34:03.513Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Azam FC vs Pamba Jiji FC",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.6611171635350532,
+    "minute": 60,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es fiable, pero 7 tiros a puerta indican actividad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T22:34:03.945Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Pärnu JK Vaprus vs Flora Tallinn",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.6573536975444211,
+    "minute": 62,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      29,
+      36,
+      71
+    ],
+    "timestamp": "2026-08-23T22:34:04.683Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "Fortuna Düsseldorf vs Friburgo",
+    "league": "DFB-Pokal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.851215912867042,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, y Friburgo ya tuvo una gran ocasión.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      71,
+      74,
+      76,
+      80,
+      94
+    ],
+    "timestamp": "2026-08-23T22:34:05.278Z",
+    "alertTimestamp": "2026-08-23T16:10:05.926Z"
+  },
+  {
+    "match": "HNK Rijeka vs Istra 1961",
+    "league": "Liga de Croacia",
+    "tier": "AVISO",
+    "probability": 0.8723805967932461,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      43,
+      53,
+      71,
+      93
+    ],
+    "timestamp": "2026-08-23T22:34:07.094Z",
+    "alertTimestamp": "2026-08-23T16:32:02.030Z"
+  },
+  {
+    "match": "OFI Crete vs Volos NFC",
+    "league": "Superliga Griega",
+    "tier": "AVISO",
+    "probability": 0.8745810338505663,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      33
+    ],
+    "timestamp": "2026-08-23T22:34:08.270Z",
+    "alertTimestamp": "2026-08-23T16:41:02.303Z"
+  },
+  {
+    "match": "Linares Deportivo vs Melilla",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8947266070668477,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      52
+    ],
+    "timestamp": "2026-08-23T22:34:09.915Z",
+    "alertTimestamp": "2026-08-23T16:51:12.233Z"
+  },
+  {
+    "match": "FC Ararat-Armenia vs Sardarapat FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8626356234254273,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T22:34:10.288Z",
+    "alertTimestamp": "2026-08-23T17:02:03.283Z"
+  },
+  {
+    "match": "Spartak Moscú vs Zenit",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8989676889664809,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego bajo pero sin señal de esterilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      38
+    ],
+    "timestamp": "2026-08-23T22:34:11.224Z",
+    "alertTimestamp": "2026-08-23T17:11:03.365Z"
+  },
+  {
+    "match": "MSK Zilina vs Komarno",
+    "league": "Niké liga",
+    "tier": "AVISO",
+    "probability": 0.8558716566139652,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      69,
+      73,
+      87
+    ],
+    "timestamp": "2026-08-23T22:34:12.363Z",
+    "alertTimestamp": "2026-08-23T17:11:03.365Z"
+  },
+  {
+    "match": "Metapán Reserva vs Alianza Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5466502430217409,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T23:03:57.408Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Herrera vs CD Universitario",
+    "league": "Liga Panameña - Apertura - Conferencia Este",
+    "tier": "AVISO",
+    "probability": 0.543037721845291,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T23:03:57.592Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
   }
 ]
