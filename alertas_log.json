@@ -16862,5 +16862,91 @@
     ],
     "timestamp": "2026-08-23T16:32:03.386Z",
     "alertTimestamp": "2026-08-23T14:39:54.296Z"
+  },
+  {
+    "match": "Marek vs Dobrudzha",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.8627368535078236,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      38,
+      42,
+      54,
+      67
+    ],
+    "timestamp": "2026-08-23T17:02:13.027Z",
+    "alertTimestamp": "2026-08-23T15:10:29.270Z"
+  },
+  {
+    "match": "Pumas Sub21 vs Necaxa Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8731033842319291,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T17:11:26.709Z",
+    "alertTimestamp": "2026-08-23T15:10:29.270Z"
+  },
+  {
+    "match": "AlbinoLeffe U20 vs Cagliari Sub19",
+    "league": "Campeonato Italiano Sub-19",
+    "tier": "AVISO",
+    "probability": 0.9190936872870877,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador 0-2 con 72 minutos restantes. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T17:21:07.896Z",
+    "alertTimestamp": "2026-08-23T14:51:24.897Z"
+  },
+  {
+    "match": "Atlético San Luis Sub21 vs Pachuca Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8532742994036362,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T17:21:08.091Z",
+    "alertTimestamp": "2026-08-23T15:10:29.270Z"
   }
 ]
