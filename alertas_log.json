@@ -16432,5 +16432,28 @@
     ],
     "timestamp": "2026-08-23T12:50:04.696Z",
     "alertTimestamp": "2026-08-23T02:43:53.709Z"
+  },
+  {
+    "match": "Miedz Legnica vs Arka Gdynia",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.8811843211956321,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      94
+    ],
+    "timestamp": "2026-08-23T14:29:52.438Z",
+    "alertTimestamp": "2026-08-23T12:49:54.902Z"
   }
 ]
