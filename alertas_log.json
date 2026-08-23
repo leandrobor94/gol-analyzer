@@ -15903,5 +15903,155 @@
     ],
     "timestamp": "2026-08-23T00:03:55.285Z",
     "alertTimestamp": "2026-08-22T22:33:58.178Z"
+  },
+  {
+    "match": "Kansas City Current vs Seattle Reign",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.529343171845463,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, xG estimado alto para el local, y muchas oportunidades de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      51
+    ],
+    "timestamp": "2026-08-23T00:43:55.529Z",
+    "alertTimestamp": "2026-08-22T22:33:58.178Z"
+  },
+  {
+    "match": "Richmond Kickers vs Portland Hearts of Pine",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5752382380862632,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      37,
+      74
+    ],
+    "timestamp": "2026-08-23T01:04:02.531Z",
+    "alertTimestamp": "2026-08-22T23:14:18.200Z"
+  },
+  {
+    "match": "Detroit City vs Tampa Bay Rowdies",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5272879028943951,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36
+    ],
+    "timestamp": "2026-08-23T01:04:02.573Z",
+    "alertTimestamp": "2026-08-22T23:14:18.200Z"
+  },
+  {
+    "match": "Lexington vs Las Vegas Lights",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.5376618191685116,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      51,
+      53
+    ],
+    "timestamp": "2026-08-23T01:04:02.710Z",
+    "alertTimestamp": "2026-08-22T23:14:18.200Z"
+  },
+  {
+    "match": "Union Omaha vs Sarasota Paradise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5752382380862632,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28,
+      94
+    ],
+    "timestamp": "2026-08-23T01:14:14.832Z",
+    "alertTimestamp": "2026-08-22T23:14:18.200Z"
+  },
+  {
+    "match": "Estrella Roja vs Juticalpa",
+    "league": "Liga Nacional - Apertura - Grupo Centro",
+    "tier": "AVISO",
+    "probability": 0.5914488409538269,
+    "minute": 78,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-23T01:14:14.873Z",
+    "alertTimestamp": "2026-08-22T23:24:38.555Z"
+  },
+  {
+    "match": "Independiente vs Unión Coclé Fc",
+    "league": "Liga Panameña - Apertura - Conferencia Este",
+    "tier": "AVISO",
+    "probability": 0.5216028605773556,
+    "minute": 79,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      51,
+      89
+    ],
+    "timestamp": "2026-08-23T01:14:14.909Z",
+    "alertTimestamp": "2026-08-22T23:24:38.555Z"
+  },
+  {
+    "match": "Chattanooga Red Wolves vs New York Cosmos",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8883322379664099,
+    "minute": 24,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      32,
+      48,
+      56,
+      61,
+      77
+    ],
+    "timestamp": "2026-08-23T01:23:54.851Z",
+    "alertTimestamp": "2026-08-22T23:14:18.200Z"
   }
 ]
