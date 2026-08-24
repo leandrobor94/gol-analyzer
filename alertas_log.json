@@ -17358,5 +17358,70 @@
     "goalMinutes": [],
     "timestamp": "2026-08-23T23:03:57.592Z",
     "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Santos vs Mirassol",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5836693515072646,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, ambos equipos con chances de ganar. xG estimado, no es base para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      68
+    ],
+    "timestamp": "2026-08-23T23:33:55.458Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Chapecoense vs São Paulo",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5567257120838125,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, xG estimado no es fiable, São Paulo busca el empate.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      26
+    ],
+    "timestamp": "2026-08-23T23:33:55.642Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Pachuca (F) vs Chivas (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5294736241549777,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido apretado, alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T00:04:14.988Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
   }
 ]
