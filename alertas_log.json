@@ -17560,5 +17560,71 @@
     "goalMinutes": [],
     "timestamp": "2026-08-24T12:59:09.663Z",
     "alertTimestamp": "2026-08-24T01:03:54.739Z"
+  },
+  {
+    "match": "Racing Club Montevideo (Reserva) vs Boston River (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.541343700597735,
+    "minute": 78,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los minutos finales, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T15:59:31.320Z",
+    "alertTimestamp": "2026-08-24T14:09:09.672Z"
+  },
+  {
+    "match": "Mesaimeer SC vs Muaither",
+    "league": "Q League",
+    "tier": "AVISO",
+    "probability": 0.8811105085427747,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T16:19:13.474Z",
+    "alertTimestamp": "2026-08-24T14:19:20.041Z"
+  },
+  {
+    "match": "Kamaz vs FK Sochi",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.6775418614491204,
+    "minute": 62,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto con ventaja mínima, a pesar del xG estimado y la liga de bajo scoring.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      22,
+      33,
+      77,
+      91
+    ],
+    "timestamp": "2026-08-24T16:29:39.027Z",
+    "alertTimestamp": "2026-08-24T14:39:11.037Z"
   }
 ]
