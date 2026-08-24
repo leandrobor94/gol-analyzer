@@ -17626,5 +17626,47 @@
     ],
     "timestamp": "2026-08-24T16:29:39.027Z",
     "alertTimestamp": "2026-08-24T14:39:11.037Z"
+  },
+  {
+    "match": "Vardar Skopje vs Sileks Kratovo",
+    "league": "First League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8577419769350078,
+    "minute": 20,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T16:59:11.614Z",
+    "alertTimestamp": "2026-08-24T15:09:11.871Z"
+  },
+  {
+    "match": "Rotor Volgograd vs Neftekhimik",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.5237001071107994,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-08-24T17:39:14.986Z",
+    "alertTimestamp": "2026-08-24T15:39:52.272Z"
   }
 ]
