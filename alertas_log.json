@@ -17471,5 +17471,47 @@
     ],
     "timestamp": "2026-08-24T01:14:10.942Z",
     "alertTimestamp": "2026-08-23T23:14:10.730Z"
+  },
+  {
+    "match": "Deportivo Marquense vs Coban Imperial",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8698036526380765,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y sin datos que contradigan la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T02:03:52.209Z",
+    "alertTimestamp": "2026-08-24T00:04:14.529Z"
+  },
+  {
+    "match": "LD Alajuelense vs A.D. San Carlos",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8765586465079195,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      71
+    ],
+    "timestamp": "2026-08-24T02:03:52.399Z",
+    "alertTimestamp": "2026-08-24T00:04:14.529Z"
   }
 ]
