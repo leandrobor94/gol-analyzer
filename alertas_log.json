@@ -17668,5 +17668,99 @@
     ],
     "timestamp": "2026-08-24T17:39:14.986Z",
     "alertTimestamp": "2026-08-24T15:39:52.272Z"
+  },
+  {
+    "match": "Malavan vs Fajr Sepasi",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.5471711342153501,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado 0-0 en el minuto 78, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      87
+    ],
+    "timestamp": "2026-08-24T22:40:38.527Z",
+    "alertTimestamp": "2026-08-24T16:09:36.438Z"
+  },
+  {
+    "match": "SC Ashdod vs Maccabi Kavilio Jaffa",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.8541314858903316,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es fiable, pero 2 SOT locales indican actividad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      90
+    ],
+    "timestamp": "2026-08-24T22:40:38.922Z",
+    "alertTimestamp": "2026-08-24T16:09:36.438Z"
+  },
+  {
+    "match": "Veles vs Arsenal Tula",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.890492612617257,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y con remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      92
+    ],
+    "timestamp": "2026-08-24T22:40:39.322Z",
+    "alertTimestamp": "2026-08-24T16:39:12.992Z"
+  },
+  {
+    "match": "Celta de Vigo B vs Andorra CF",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.8557519825874182,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con una gran ocasión para el equipo visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      52,
+      55,
+      87,
+      97,
+      101
+    ],
+    "timestamp": "2026-08-24T22:40:40.017Z",
+    "alertTimestamp": "2026-08-24T17:09:15.240Z"
   }
 ]
