@@ -17540,5 +17540,25 @@
     ],
     "timestamp": "2026-08-24T02:54:33.955Z",
     "alertTimestamp": "2026-08-24T01:03:54.739Z"
+  },
+  {
+    "match": "Huehuetecos FC vs Deportivo Quiché",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8739783383896711,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-24T12:59:09.663Z",
+    "alertTimestamp": "2026-08-24T01:03:54.739Z"
   }
 ]
