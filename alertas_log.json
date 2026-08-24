@@ -17423,5 +17423,53 @@
     "goalMinutes": [],
     "timestamp": "2026-08-24T00:04:14.988Z",
     "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Coritiba vs Corinthians",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5674373397189124,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo, a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40,
+      75,
+      93
+    ],
+    "timestamp": "2026-08-24T00:34:00.724Z",
+    "alertTimestamp": "2026-08-23T22:33:57.321Z"
+  },
+  {
+    "match": "Atlanta United vs Sporting KC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.556976501257809,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, xG estimado no es fiable, pero el modelo indica alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      24,
+      70
+    ],
+    "timestamp": "2026-08-24T01:14:10.942Z",
+    "alertTimestamp": "2026-08-23T23:14:10.730Z"
   }
 ]
