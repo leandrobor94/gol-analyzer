@@ -520964,15 +520964,23 @@
       "ev": null,
       "bookmaker": null,
       "minuteAtBet": 20,
-      "goalsAtBet": 1
+      "goalsAtBet": 1,
+      "won": false,
+      "profit": null
     },
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 2,
+      "away": 0
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      10,
+      83
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
-    "alertCorrect": null,
+    "predictionCorrect": true,
+    "alertCorrect": false,
     "probability": 0.2580938308500355,
     "probability15": 0.22732839841890917,
     "analysisMinute": 93,
@@ -521051,7 +521059,14 @@
     "lambda": 0.051580231382034464,
     "strength": 0.7318,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z"
+    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z",
+    "goalSides": [
+      "home",
+      "home"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null,
+    "alertCorrect15": false
   },
   {
     "id": "4788424",
@@ -521068,12 +521083,15 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 2,
+      "away": 0
+    },
+    "goalAfterAnalysis": false,
     "goalWithin15": null,
     "goalMinutes": null,
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.26368023407653307,
     "probability15": 0.23332496885912013,
@@ -521153,7 +521171,9 @@
     "lambda": 0.05313845112175301,
     "strength": 0.65,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z"
+    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z",
+    "timelineConsistent": null,
+    "actualScorer": null
   },
   {
     "id": "4795182",
@@ -521170,12 +521190,17 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      54
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.3149652871729504,
     "probability15": 0.289497307003557,
@@ -521264,7 +521289,12 @@
     "lambda": 0.042722817646080255,
     "strength": 0.9917,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z"
+    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z",
+    "goalSides": [
+      "away"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4659100",
@@ -521281,12 +521311,15 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
+    "finalScore": {
+      "home": 4,
+      "away": 0
+    },
+    "goalAfterAnalysis": true,
     "goalWithin15": null,
     "goalMinutes": null,
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.7878771924404893,
     "probability15": 0.4121370563586543,
@@ -521366,6 +521399,8 @@
     "lambda": 0.03541742981988761,
     "strength": null,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z"
+    "lastAnalyzedAt": "2026-08-25T02:50:07.325Z",
+    "timelineConsistent": null,
+    "actualScorer": "home"
   }
 ]

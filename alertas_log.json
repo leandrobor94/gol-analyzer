@@ -17884,5 +17884,28 @@
     ],
     "timestamp": "2026-08-25T02:00:34.675Z",
     "alertTimestamp": "2026-08-25T00:10:07.604Z"
+  },
+  {
+    "match": "Alianza FC vs Tauro FC",
+    "league": "Liga Panameña - Apertura - Conferencia Oeste",
+    "tier": "AVISO",
+    "probability": 0.8572365719031799,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      83
+    ],
+    "timestamp": "2026-08-25T12:55:21.292Z",
+    "alertTimestamp": "2026-08-25T01:10:07.404Z"
   }
 ]
