@@ -17762,5 +17762,29 @@
     ],
     "timestamp": "2026-08-24T22:40:40.017Z",
     "alertTimestamp": "2026-08-24T17:09:15.240Z"
+  },
+  {
+    "match": "Sport Recife vs América Mineiro",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.8677602428140772,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin señales de esterilidad en el juego.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      47,
+      97
+    ],
+    "timestamp": "2026-08-25T00:30:07.365Z",
+    "alertTimestamp": "2026-08-24T22:40:38.413Z"
   }
 ]
