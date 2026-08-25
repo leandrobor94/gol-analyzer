@@ -18054,5 +18054,123 @@
     ],
     "timestamp": "2026-08-25T16:25:43.906Z",
     "alertTimestamp": "2026-08-25T14:35:22.028Z"
+  },
+  {
+    "match": "Hapoel Petah Tikva Sub19 vs Hapoel Tel Aviv Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.5488293125397946,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y ambos equipos tienen alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      25
+    ],
+    "timestamp": "2026-08-25T16:56:08.445Z",
+    "alertTimestamp": "2026-08-25T15:05:38.599Z"
+  },
+  {
+    "match": "OKS vs Middlefart",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8972775069227531,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12
+    ],
+    "timestamp": "2026-08-25T17:25:26.437Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Zapy vs Bohemians Praha",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.9075839743038173,
+    "minute": 26,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador igualado, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      15,
+      31,
+      47,
+      65
+    ],
+    "timestamp": "2026-08-25T17:25:26.577Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Beroe vs Spartak Pleven",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.5632377519633863,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, ambos equipos con remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      47,
+      94
+    ],
+    "timestamp": "2026-08-25T17:25:26.661Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "FC Helsingor vs Horsholm-Usserod",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.5825646283908541,
+    "minute": 79,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-5",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      40,
+      75
+    ],
+    "timestamp": "2026-08-25T17:35:26.643Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
   }
 ]
