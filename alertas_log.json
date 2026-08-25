@@ -18172,5 +18172,457 @@
     ],
     "timestamp": "2026-08-25T17:35:26.643Z",
     "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Munkebo Bk vs Naesby",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8948268396129292,
+    "minute": 23,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      48,
+      53,
+      54,
+      60,
+      82
+    ],
+    "timestamp": "2026-08-25T22:39:13.700Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Frederikssund IK vs Sundby Bk",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8948268396129292,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T22:39:13.831Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Avarta vs Hillerød",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8948268396129292,
+    "minute": 23,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      45,
+      57,
+      74,
+      90
+    ],
+    "timestamp": "2026-08-25T22:39:13.989Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Vatanspor vs Aalborg",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.5818386152065005,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      68,
+      84,
+      95
+    ],
+    "timestamp": "2026-08-25T22:39:14.166Z",
+    "alertTimestamp": "2026-08-25T15:35:25.710Z"
+  },
+  {
+    "match": "Academico De Viseu Sub23 vs Vizela Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.5595796749561671,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2,
+      31,
+      51
+    ],
+    "timestamp": "2026-08-25T22:39:14.796Z",
+    "alertTimestamp": "2026-08-25T16:05:53.838Z"
+  },
+  {
+    "match": "Leixoes Sub23 vs Leiria U23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.8939295420612672,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51,
+      66,
+      74
+    ],
+    "timestamp": "2026-08-25T22:39:14.967Z",
+    "alertTimestamp": "2026-08-25T16:05:53.838Z"
+  },
+  {
+    "match": "Skovshoved If vs Tarnby FF",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8916030468603658,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      25,
+      61
+    ],
+    "timestamp": "2026-08-25T22:39:15.108Z",
+    "alertTimestamp": "2026-08-25T16:05:53.838Z"
+  },
+  {
+    "match": "Hluboká Nad Vltavou vs Viktoria Zizkov",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6333957523563849,
+    "minute": 60,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Viktoria Zizkov domina con 6 SOT. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T22:39:15.292Z",
+    "alertTimestamp": "2026-08-25T16:05:53.838Z"
+  },
+  {
+    "match": "Unirea Slobozia vs FC Metaloglobus Bucharest",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5249775090933203,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y ambos equipos con remates a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      8,
+      62,
+      93
+    ],
+    "timestamp": "2026-08-25T22:39:15.450Z",
+    "alertTimestamp": "2026-08-25T16:05:53.838Z"
+  },
+  {
+    "match": "Abha Club vs Al Khaleej Club",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.867766888639437,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y chances claras. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      17,
+      24
+    ],
+    "timestamp": "2026-08-25T22:39:16.353Z",
+    "alertTimestamp": "2026-08-25T16:15:22.306Z"
+  },
+  {
+    "match": "Fuglebakken Kfum vs Vendsyssel FF",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.9076714423274086,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21,
+      45,
+      67
+    ],
+    "timestamp": "2026-08-25T22:39:16.530Z",
+    "alertTimestamp": "2026-08-25T16:36:22.300Z"
+  },
+  {
+    "match": "Bayern Munich II vs FC Memmingen",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.9232050682293181,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador 0-2 con 70 minutos restantes. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      18,
+      47
+    ],
+    "timestamp": "2026-08-25T22:39:16.722Z",
+    "alertTimestamp": "2026-08-25T16:36:22.300Z"
+  },
+  {
+    "match": "Al Waab vs Al Rayyan Next Generation",
+    "league": "Q League",
+    "tier": "AVISO",
+    "probability": 0.884432436447086,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, xG estimado no fiable, y sin datos de grandes ocasiones.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T22:39:16.850Z",
+    "alertTimestamp": "2026-08-25T16:36:22.300Z"
+  },
+  {
+    "match": "Bronshoj vs AB Copenhagen",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8936651472352235,
+    "minute": 25,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin datos que contradigan la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T22:39:17.377Z",
+    "alertTimestamp": "2026-08-25T16:46:14.990Z"
+  },
+  {
+    "match": "Sabah vs Hapoel Beer Sheva",
+    "league": "UEFA Champions League Clasificatorio - Playoff",
+    "tier": "AVISO",
+    "probability": 0.8875807746095321,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      38,
+      61,
+      74,
+      94,
+      101,
+      115
+    ],
+    "timestamp": "2026-08-25T22:39:17.580Z",
+    "alertTimestamp": "2026-08-25T16:56:08.253Z"
+  },
+  {
+    "match": "FK Žalgiris Vilnius II vs FK Transinvest II",
+    "league": "I Lyga",
+    "tier": "AVISO",
+    "probability": 0.8900787595375638,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      38,
+      39,
+      42,
+      52,
+      60,
+      89
+    ],
+    "timestamp": "2026-08-25T22:39:17.709Z",
+    "alertTimestamp": "2026-08-25T17:05:32.544Z"
+  },
+  {
+    "match": "Skive vs Esbjerg fB",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8936651472352235,
+    "minute": 25,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21,
+      29,
+      44,
+      52,
+      67,
+      71
+    ],
+    "timestamp": "2026-08-25T22:39:17.839Z",
+    "alertTimestamp": "2026-08-25T17:05:32.544Z"
+  },
+  {
+    "match": "FSV 63 Luckenwalde vs Rot-Weiss Erfurt",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.8903879401176817,
+    "minute": 25,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-5",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      30,
+      34,
+      62,
+      81
+    ],
+    "timestamp": "2026-08-25T22:39:17.975Z",
+    "alertTimestamp": "2026-08-25T17:05:32.544Z"
+  },
+  {
+    "match": "1. FC Magdeburg II vs BSG Chemie Leipzig",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.8903879401176817,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y la liga tiene un promedio de goles alto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      3
+    ],
+    "timestamp": "2026-08-25T22:39:18.105Z",
+    "alertTimestamp": "2026-08-25T17:05:32.544Z"
   }
 ]
