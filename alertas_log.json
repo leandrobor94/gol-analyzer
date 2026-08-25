@@ -17907,5 +17907,152 @@
     ],
     "timestamp": "2026-08-25T12:55:21.292Z",
     "alertTimestamp": "2026-08-25T01:10:07.404Z"
+  },
+  {
+    "match": "Maritimo U23 vs Estrela Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.88754259892025,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T16:05:54.010Z",
+    "alertTimestamp": "2026-08-25T14:05:21.306Z"
+  },
+  {
+    "match": "Dynamo Kirov vs Amkar",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8888546108397379,
+    "minute": 25,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, sin datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      45,
+      47,
+      51,
+      60,
+      67,
+      76
+    ],
+    "timestamp": "2026-08-25T16:05:54.057Z",
+    "alertTimestamp": "2026-08-25T14:05:21.306Z"
+  },
+  {
+    "match": "Maccabi Hertzliya Sub19 vs Hapoel Rishon LeZion Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.8947149112707319,
+    "minute": 25,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 0-2 y muchos minutos por delante. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      20,
+      34,
+      36,
+      45,
+      48,
+      54
+    ],
+    "timestamp": "2026-08-25T16:05:54.097Z",
+    "alertTimestamp": "2026-08-25T14:05:21.306Z"
+  },
+  {
+    "match": "Torpedo Vladimir vs Krasnoe Znamya",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8899102932382108,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-25T16:15:22.384Z",
+    "alertTimestamp": "2026-08-25T14:05:21.306Z"
+  },
+  {
+    "match": "Vukovar vs NK Radnicki Dalj",
+    "league": "Copa Croata - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.7085254038419829,
+    "minute": 61,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y más tiros a puerta del visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      50,
+      59,
+      62,
+      71,
+      77
+    ],
+    "timestamp": "2026-08-25T16:15:22.453Z",
+    "alertTimestamp": "2026-08-25T14:35:22.028Z"
+  },
+  {
+    "match": "Kustosija vs NK Zadar",
+    "league": "Copa Croata - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8915619224337517,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, y sin datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      24,
+      32,
+      94
+    ],
+    "timestamp": "2026-08-25T16:25:43.906Z",
+    "alertTimestamp": "2026-08-25T14:35:22.028Z"
   }
 ]
