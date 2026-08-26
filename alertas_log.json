@@ -19449,5 +19449,50 @@
     ],
     "timestamp": "2026-08-26T21:02:47.209Z",
     "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "NK Celje vs Slovan Bratislava",
+    "league": "UEFA Champions League Clasificatorio - Playoff",
+    "tier": "AVISO",
+    "probability": 0.867049682889902,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido ajustado, marcador 0-1, y ambos equipos con oportunidades claras. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      34,
+      100
+    ],
+    "timestamp": "2026-08-26T21:43:05.201Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "Zamora FC vs Real Frontera",
+    "league": "Copa Venezuela",
+    "tier": "AVISO",
+    "probability": 0.5597532563184013,
+    "minute": 76,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      24,
+      37,
+      43,
+      67
+    ],
+    "timestamp": "2026-08-26T21:52:45.002Z",
+    "alertTimestamp": "2026-08-26T20:03:43.693Z"
   }
 ]
