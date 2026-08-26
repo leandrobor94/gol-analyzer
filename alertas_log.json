@@ -18791,5 +18791,185 @@
     ],
     "timestamp": "2026-08-26T16:23:47.461Z",
     "alertTimestamp": "2026-08-26T14:31:27.385Z"
+  },
+  {
+    "match": "Druzhba Maykop vs Neftyanik Izberbash",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.9034154697575743,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      63,
+      92
+    ],
+    "timestamp": "2026-08-26T17:02:24.532Z",
+    "alertTimestamp": "2026-08-26T15:01:47.227Z"
+  },
+  {
+    "match": "Qyzylqum vs Nasaf Qarshi",
+    "league": "Super Liga de Uzbekistán",
+    "tier": "AVISO",
+    "probability": 0.8698751541059252,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado bajo pero sin datos de grandes ocasiones o posesión estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T17:02:24.649Z",
+    "alertTimestamp": "2026-08-26T15:01:47.227Z"
+  },
+  {
+    "match": "Kozlovice vs Karvina",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5450512752954388,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en copa, minutos finales, ambos equipos buscan el gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      65
+    ],
+    "timestamp": "2026-08-26T17:02:24.747Z",
+    "alertTimestamp": "2026-08-26T15:01:47.227Z"
+  },
+  {
+    "match": "Bibiani Gold Stars FC vs Medeama SC",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9043252435514295,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      33,
+      40
+    ],
+    "timestamp": "2026-08-26T17:02:24.932Z",
+    "alertTimestamp": "2026-08-26T15:11:28.686Z"
+  },
+  {
+    "match": "SFK 2000 (F) vs Slovan Liberec (W)",
+    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8973312983740169,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa femenina, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      47,
+      57,
+      65,
+      82
+    ],
+    "timestamp": "2026-08-26T17:02:25.028Z",
+    "alertTimestamp": "2026-08-26T15:11:28.686Z"
+  },
+  {
+    "match": "Uherský Brod vs Artis Brno",
+    "league": "MOL Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8799460548500059,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es concluyente.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T17:24:15.279Z",
+    "alertTimestamp": "2026-08-26T15:31:38.960Z"
+  },
+  {
+    "match": "KRFK vs Brabrand",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.9341168112935959,
+    "minute": 20,
+    "scoreAtAlert": "1-5",
+    "finalScore": "1-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa con marcador igualado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      14
+    ],
+    "timestamp": "2026-08-26T17:24:15.753Z",
+    "alertTimestamp": "2026-08-26T15:41:29.080Z"
+  },
+  {
+    "match": "Petro Luanda vs Recreativo Libolo",
+    "league": "Girabola",
+    "tier": "AVISO",
+    "probability": 0.8939295420612672,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T17:32:40.672Z",
+    "alertTimestamp": "2026-08-26T15:31:38.960Z"
   }
 ]
