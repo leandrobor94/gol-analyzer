@@ -18971,5 +18971,357 @@
     "goalMinutes": [],
     "timestamp": "2026-08-26T17:32:40.672Z",
     "alertTimestamp": "2026-08-26T15:31:38.960Z"
+  },
+  {
+    "match": "Marienlyst vs VSK Aarhus",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8743228938916289,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado, y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      85,
+      110,
+      115
+    ],
+    "timestamp": "2026-08-26T19:14:48.091Z",
+    "alertTimestamp": "2026-08-26T15:41:29.080Z"
+  },
+  {
+    "match": "Fauske/Sprint vs Bodo Glimt",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008600847065487,
+    "minute": 21,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-5",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa con un equipo de menor categoría y una expulsión temprana. A pesar del xG estimado, la dinámica es propicia para más goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T19:14:51.073Z",
+    "alertTimestamp": "2026-08-26T16:01:44.011Z"
+  },
+  {
+    "match": "Rsv Eintracht vs FSV Zwickau",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.9007226260457408,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      76,
+      83,
+      86
+    ],
+    "timestamp": "2026-08-26T19:15:35.922Z",
+    "alertTimestamp": "2026-08-26T16:11:32.330Z"
+  },
+  {
+    "match": "Camioneros vs Comunicaciones",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8640781762477644,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      35
+    ],
+    "timestamp": "2026-08-26T19:15:39.374Z",
+    "alertTimestamp": "2026-08-26T16:11:32.330Z"
+  },
+  {
+    "match": "Strommen vs Raufoss",
+    "league": "OBOS-ligaen",
+    "tier": "AVISO",
+    "probability": 0.8707897177948373,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      24,
+      32,
+      68,
+      87
+    ],
+    "timestamp": "2026-08-26T19:15:39.462Z",
+    "alertTimestamp": "2026-08-26T16:11:32.330Z"
+  },
+  {
+    "match": "Sv Todesfelde vs VFB Oldenburg",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8977216670218169,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      41,
+      53,
+      74,
+      81
+    ],
+    "timestamp": "2026-08-26T19:15:42.111Z",
+    "alertTimestamp": "2026-08-26T16:33:41.494Z"
+  },
+  {
+    "match": "Schöningen vs FC St. Pauli II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9045165647320428,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      24,
+      45,
+      61,
+      79
+    ],
+    "timestamp": "2026-08-26T19:15:47.830Z",
+    "alertTimestamp": "2026-08-26T16:33:41.494Z"
+  },
+  {
+    "match": "Eimsbutteler TV vs Bremer SV",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8977216670218169,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60,
+      70,
+      77,
+      91
+    ],
+    "timestamp": "2026-08-26T19:15:49.528Z",
+    "alertTimestamp": "2026-08-26T16:33:41.494Z"
+  },
+  {
+    "match": "Sparta Praha (F) vs Servette (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8828437393252851,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      14,
+      46,
+      68,
+      73
+    ],
+    "timestamp": "2026-08-26T19:16:10.968Z",
+    "alertTimestamp": "2026-08-26T16:33:41.494Z"
+  },
+  {
+    "match": "Friska Viljor vs Sirius",
+    "league": "Copa de Suecia - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8969882350430294,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T19:16:17.943Z",
+    "alertTimestamp": "2026-08-26T16:42:10.556Z"
+  },
+  {
+    "match": "VfB Lübeck vs Hamburg SV II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9251239268845087,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      12,
+      58,
+      85
+    ],
+    "timestamp": "2026-08-26T19:16:19.455Z",
+    "alertTimestamp": "2026-08-26T17:02:24.027Z"
+  },
+  {
+    "match": "SSV Jeddeloh vs Hannover 96 II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.8946318015727422,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      41,
+      46,
+      73,
+      76
+    ],
+    "timestamp": "2026-08-26T19:16:29.038Z",
+    "alertTimestamp": "2026-08-26T17:02:24.027Z"
+  },
+  {
+    "match": "Greifswalder Fc vs SV Babelsberg 03",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.9079146900197628,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      70,
+      77
+    ],
+    "timestamp": "2026-08-26T19:17:03.224Z",
+    "alertTimestamp": "2026-08-26T17:11:52.544Z"
+  },
+  {
+    "match": "FC Erzgebirge Aue vs Hertha Berlin II",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.8977216670218169,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T19:17:03.497Z",
+    "alertTimestamp": "2026-08-26T17:11:52.544Z"
+  },
+  {
+    "match": "CD Leganés B vs Gimnástica Segoviana",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8939295420612672,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      87
+    ],
+    "timestamp": "2026-08-26T19:17:03.534Z",
+    "alertTimestamp": "2026-08-26T17:11:52.544Z"
   }
 ]
