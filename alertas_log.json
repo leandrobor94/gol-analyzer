@@ -18673,5 +18673,50 @@
     ],
     "timestamp": "2026-08-26T02:29:14.483Z",
     "alertTimestamp": "2026-08-26T00:29:12.826Z"
+  },
+  {
+    "match": "Vietnam vs Tailandia",
+    "league": "ASEAN Championship - Final",
+    "tier": "AVISO",
+    "probability": 0.8756272954138323,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de final, marcador ajustado, y Tailandia ya tuvo una gran ocasión.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      52,
+      85,
+      93
+    ],
+    "timestamp": "2026-08-26T15:01:47.539Z",
+    "alertTimestamp": "2026-08-26T13:01:29.476Z"
+  },
+  {
+    "match": "Kuala Lumpur vs Kuching City FC",
+    "league": "Liga Super - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8811777075858402,
+    "minute": 22,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y xG estimado no fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T15:41:29.279Z",
+    "alertTimestamp": "2026-08-26T13:01:29.476Z"
   }
 ]
