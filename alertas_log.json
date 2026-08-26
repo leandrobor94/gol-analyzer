@@ -19323,5 +19323,131 @@
     ],
     "timestamp": "2026-08-26T19:17:03.534Z",
     "alertTimestamp": "2026-08-26T17:11:52.544Z"
+  },
+  {
+    "match": "Avro vs Leek Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.5458758901020255,
+    "minute": 76,
+    "scoreAtAlert": "3-4",
+    "finalScore": "4-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de 7ª División con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      14,
+      23,
+      29,
+      52,
+      55,
+      66,
+      96
+    ],
+    "timestamp": "2026-08-26T20:43:24.379Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "St. Polten (F) vs Juventus (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.6882375070177034,
+    "minute": 60,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, Juventus puede aumentar ventaja. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      38,
+      80
+    ],
+    "timestamp": "2026-08-26T20:43:30.403Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "AEK Atenas vs Levski Sofia",
+    "league": "UEFA Champions League Clasificatorio - Playoff",
+    "tier": "AVISO",
+    "probability": 0.899061041455967,
+    "minute": 23,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      7,
+      12,
+      29,
+      55
+    ],
+    "timestamp": "2026-08-26T20:53:01.972Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "Deportivo Santaní vs Recoleta FC",
+    "league": "Copa Paraguay - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.876029876368672,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con xG estimado, no hay razón para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      43
+    ],
+    "timestamp": "2026-08-26T20:53:02.021Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
+  },
+  {
+    "match": "Viking vs Dinamo Zagreb",
+    "league": "UEFA Champions League Clasificatorio - Playoff",
+    "tier": "AVISO",
+    "probability": 0.922638610183922,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, muchas ocasiones claras para ambos equipos. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      18,
+      48,
+      50
+    ],
+    "timestamp": "2026-08-26T21:02:47.209Z",
+    "alertTimestamp": "2026-08-26T19:14:45.472Z"
   }
 ]
