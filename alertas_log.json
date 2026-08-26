@@ -18648,5 +18648,30 @@
     ],
     "timestamp": "2026-08-26T00:29:13.109Z",
     "alertTimestamp": "2026-08-25T22:39:13.352Z"
+  },
+  {
+    "match": "River Plate (Reserva) vs Unión Santa Fé (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8720021825275103,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      27,
+      32,
+      42
+    ],
+    "timestamp": "2026-08-26T02:29:14.483Z",
+    "alertTimestamp": "2026-08-26T00:29:12.826Z"
   }
 ]
