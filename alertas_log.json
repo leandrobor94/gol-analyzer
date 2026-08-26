@@ -19494,5 +19494,50 @@
     ],
     "timestamp": "2026-08-26T21:52:45.002Z",
     "alertTimestamp": "2026-08-26T20:03:43.693Z"
+  },
+  {
+    "match": "Plaza Colonia vs Cerro Largo",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.5651860058831397,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T22:32:27.329Z",
+    "alertTimestamp": "2026-08-26T20:34:15.096Z"
+  },
+  {
+    "match": "Unión Coclé II vs Herrera II",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Sur",
+    "tier": "AVISO",
+    "probability": 0.8907818417477981,
+    "minute": 22,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T22:52:54.269Z",
+    "alertTimestamp": "2026-08-26T21:02:44.466Z"
+  },
+  {
+    "match": "Vega Real vs Universidad O&M",
+    "league": "Liga Dominicana de Fútbol - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8949709738683491,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-26T23:02:25.970Z",
+    "alertTimestamp": "2026-08-26T21:02:44.466Z"
   }
 ]
