@@ -19539,5 +19539,53 @@
     "goalMinutes": [],
     "timestamp": "2026-08-26T23:02:25.970Z",
     "alertTimestamp": "2026-08-26T21:02:44.466Z"
+  },
+  {
+    "match": "Cristobal Colon JAS vs Olimpia",
+    "league": "Copa Paraguay - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8907818417477981,
+    "minute": 22,
+    "scoreAtAlert": "3-4",
+    "finalScore": "3-5",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      29,
+      40,
+      42,
+      44,
+      46,
+      48,
+      58,
+      94
+    ],
+    "timestamp": "2026-08-26T23:32:26.424Z",
+    "alertTimestamp": "2026-08-26T21:32:30.855Z"
+  },
+  {
+    "match": "Corinthians (F) vs Taubaté (F)",
+    "league": "Paulista Feminino",
+    "tier": "AVISO",
+    "probability": 0.8750698787531147,
+    "minute": 22,
+    "scoreAtAlert": "5-1",
+    "finalScore": "6-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      10,
+      16,
+      37,
+      67,
+      74,
+      79,
+      89,
+      95
+    ],
+    "timestamp": "2026-08-26T23:32:26.537Z",
+    "alertTimestamp": "2026-08-26T21:32:30.855Z"
   }
 ]
