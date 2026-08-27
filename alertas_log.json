@@ -19587,5 +19587,28 @@
     ],
     "timestamp": "2026-08-26T23:32:26.537Z",
     "alertTimestamp": "2026-08-26T21:32:30.855Z"
+  },
+  {
+    "match": "FC Naples vs Union Omaha",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8907818417477981,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 22, alta probabilidad de gol según el modelo. No hay datos para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40,
+      75
+    ],
+    "timestamp": "2026-08-27T22:03:41.500Z",
+    "alertTimestamp": "2026-08-26T23:42:43.483Z"
   }
 ]
