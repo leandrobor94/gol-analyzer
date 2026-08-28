@@ -19610,5 +19610,55 @@
     ],
     "timestamp": "2026-08-27T22:03:41.500Z",
     "alertTimestamp": "2026-08-26T23:42:43.483Z"
+  },
+  {
+    "match": "Brasil Pelotas (RS) vs Brasil de Farroupilha",
+    "league": "Gaucho A2",
+    "tier": "AVISO",
+    "probability": 0.5380409249963043,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchos tiros a puerta y minutos restantes. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30,
+      41,
+      60,
+      72
+    ],
+    "timestamp": "2026-08-28T00:03:38.000Z",
+    "alertTimestamp": "2026-08-27T22:03:37.965Z"
+  },
+  {
+    "match": "Independiente Petrolero vs Guabirá",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5692380501278912,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, muchas chances de gol y xG alto. A pesar del marcador, el partido no está resuelto.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      39,
+      56,
+      69
+    ],
+    "timestamp": "2026-08-28T00:23:37.694Z",
+    "alertTimestamp": "2026-08-27T22:33:37.348Z"
   }
 ]
