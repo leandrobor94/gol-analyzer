@@ -19685,5 +19685,92 @@
     ],
     "timestamp": "2026-08-28T02:23:37.126Z",
     "alertTimestamp": "2026-08-28T00:13:36.764Z"
+  },
+  {
+    "match": "Alebrijes vs CD Tapatío",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8796295470507607,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es fiable, pero el modelo da alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      56,
+      86
+    ],
+    "timestamp": "2026-08-28T22:01:05.028Z",
+    "alertTimestamp": "2026-08-28T01:03:38.149Z"
+  },
+  {
+    "match": "Saprissa (F) vs A.D. Moravia (F)",
+    "league": "Liga Promerica femenina",
+    "tier": "AVISO",
+    "probability": 0.5564571802541098,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado 1-1 en el minuto 77, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-28T22:01:05.211Z",
+    "alertTimestamp": "2026-08-28T01:03:38.149Z"
+  },
+  {
+    "match": "Cancún FC vs Atletico La Paz",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8782829358954419,
+    "minute": 23,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, liga de scoring medio, y Atletico La Paz ya tuvo una gran ocasión.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      16,
+      77
+    ],
+    "timestamp": "2026-08-28T22:01:05.557Z",
+    "alertTimestamp": "2026-08-28T01:03:38.149Z"
+  },
+  {
+    "match": "Veraguas Sub20 vs San Francisco Fc Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.8787959796552678,
+    "minute": 23,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por delante y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-28T22:01:05.699Z",
+    "alertTimestamp": "2026-08-28T01:03:38.149Z"
   }
 ]
