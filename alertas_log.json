@@ -19660,5 +19660,30 @@
     ],
     "timestamp": "2026-08-28T00:23:37.694Z",
     "alertTimestamp": "2026-08-27T22:33:37.348Z"
+  },
+  {
+    "match": "Nacional-AM vs CSA",
+    "league": "Serie D - Playoffs ascenso",
+    "tier": "AVISO",
+    "probability": 0.5542593143046751,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de playoffs, aunque el marcador es 3-1, el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      16,
+      19,
+      34
+    ],
+    "timestamp": "2026-08-28T02:23:37.126Z",
+    "alertTimestamp": "2026-08-28T00:13:36.764Z"
   }
 ]
