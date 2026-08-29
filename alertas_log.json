@@ -19842,5 +19842,47 @@
     ],
     "timestamp": "2026-08-29T01:41:30.507Z",
     "alertTimestamp": "2026-08-28T23:41:22.631Z"
+  },
+  {
+    "match": "Toluca (F) vs Club León (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8624367300912753,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, no hay razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      77
+    ],
+    "timestamp": "2026-08-29T02:01:12.547Z",
+    "alertTimestamp": "2026-08-29T00:01:20.123Z"
+  },
+  {
+    "match": "Familia FC vs Independiente De La Chorrera Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.8871456359488074,
+    "minute": 21,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El modelo indica alta probabilidad de gol a pesar del marcador, sin datos que lo contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-29T02:01:12.748Z",
+    "alertTimestamp": "2026-08-29T00:01:20.123Z"
   }
 ]
