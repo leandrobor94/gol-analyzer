@@ -19884,5 +19884,27 @@
     "goalMinutes": [],
     "timestamp": "2026-08-29T02:01:12.748Z",
     "alertTimestamp": "2026-08-29T00:01:20.123Z"
+  },
+  {
+    "match": "Juticalpa vs Lobos UPN",
+    "league": "Liga Nacional - Apertura - Grupo Centro",
+    "tier": "AVISO",
+    "probability": 0.8624367300912753,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      88
+    ],
+    "timestamp": "2026-08-29T16:33:43.111Z",
+    "alertTimestamp": "2026-08-29T01:01:05.543Z"
   }
 ]
