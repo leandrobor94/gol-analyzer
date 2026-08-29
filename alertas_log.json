@@ -20311,5 +20311,222 @@
     "goalMinutes": [],
     "timestamp": "2026-08-29T20:10:51.147Z",
     "alertTimestamp": "2026-08-29T18:25:12.323Z"
+  },
+  {
+    "match": "Mardin 1969 vs Van Spor FK",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.879668823994239,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60,
+      93
+    ],
+    "timestamp": "2026-08-29T20:31:43.040Z",
+    "alertTimestamp": "2026-08-29T18:42:37.780Z"
+  },
+  {
+    "match": "Young Boys vs FC Basilea",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8681155785235989,
+    "minute": 20,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 2-0 temprano, y xG estimado alto para el local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      7,
+      14,
+      32,
+      37,
+      46,
+      71
+    ],
+    "timestamp": "2026-08-29T20:31:43.445Z",
+    "alertTimestamp": "2026-08-29T18:42:37.780Z"
+  },
+  {
+    "match": "Oud-Heverlee Leuven vs Standard Lieja",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.889761586221162,
+    "minute": 25,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      66,
+      68
+    ],
+    "timestamp": "2026-08-29T20:42:13.942Z",
+    "alertTimestamp": "2026-08-29T18:53:20.667Z"
+  },
+  {
+    "match": "Brest vs Toulouse",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.9335382482445737,
+    "minute": 26,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, con oportunidades de gol y sin un claro dominador.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      18,
+      62,
+      95
+    ],
+    "timestamp": "2026-08-29T20:50:51.499Z",
+    "alertTimestamp": "2026-08-29T18:53:20.667Z"
+  },
+  {
+    "match": "GV San Jose vs Real Oruro",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.8900434466832622,
+    "minute": 20,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, y un remate a puerta indica actividad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      45,
+      47,
+      51,
+      72
+    ],
+    "timestamp": "2026-08-29T21:01:55.771Z",
+    "alertTimestamp": "2026-08-29T19:01:32.473Z"
+  },
+  {
+    "match": "Madrid CFF (F) vs Granada CF (F)",
+    "league": "Liga Femenina Iberdrola",
+    "tier": "AVISO",
+    "probability": 0.8991669626776801,
+    "minute": 21,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      23,
+      75,
+      91
+    ],
+    "timestamp": "2026-08-29T21:01:55.943Z",
+    "alertTimestamp": "2026-08-29T19:01:32.473Z"
+  },
+  {
+    "match": "Sportivo Trinidense vs 2 de Mayo",
+    "league": "Copa de Primera - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8901814259683524,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      55
+    ],
+    "timestamp": "2026-08-29T21:01:56.157Z",
+    "alertTimestamp": "2026-08-29T19:01:32.473Z"
+  },
+  {
+    "match": "PEC Zwolle vs N.E.C. Nijmegen",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.9063255457511423,
+    "minute": 21,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto en Eredivisie, con un gol de ventaja y xG estimado. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      23,
+      46,
+      83
+    ],
+    "timestamp": "2026-08-29T21:01:57.150Z",
+    "alertTimestamp": "2026-08-29T19:10:44.672Z"
+  },
+  {
+    "match": "Sporting (F) vs Pococí (F)",
+    "league": "Liga Promerica femenina",
+    "tier": "AVISO",
+    "probability": 0.8829824835857273,
+    "minute": 20,
+    "scoreAtAlert": "7-1",
+    "finalScore": "7-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-29T21:01:57.764Z",
+    "alertTimestamp": "2026-08-29T19:10:44.672Z"
   }
 ]
