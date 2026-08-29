@@ -19951,5 +19951,186 @@
     ],
     "timestamp": "2026-08-29T18:13:18.095Z",
     "alertTimestamp": "2026-08-29T16:33:42.124Z"
+  },
+  {
+    "match": "Tottenham vs Newcastle United",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8655510323551626,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62,
+      72
+    ],
+    "timestamp": "2026-08-29T18:33:29.203Z",
+    "alertTimestamp": "2026-08-29T16:33:42.124Z"
+  },
+  {
+    "match": "Neman Grodno vs Slavia Mozyr",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8897248926666201,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      92
+    ],
+    "timestamp": "2026-08-29T18:33:29.346Z",
+    "alertTimestamp": "2026-08-29T16:33:42.124Z"
+  },
+  {
+    "match": "Shahaniya SC vs Al Sailiya",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.8724041668518853,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y xG estimado no real. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      23,
+      51,
+      57,
+      95
+    ],
+    "timestamp": "2026-08-29T18:33:29.803Z",
+    "alertTimestamp": "2026-08-29T16:33:42.124Z"
+  },
+  {
+    "match": "Borussia Dortmund vs Hamburgo SV",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8996745770404669,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no fiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      46
+    ],
+    "timestamp": "2026-08-29T18:33:30.684Z",
+    "alertTimestamp": "2026-08-29T16:43:37.134Z"
+  },
+  {
+    "match": "Ludogorets II vs Hebar Pazardzhik",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.8615011187293925,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, y ambos equipos con tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-29T18:53:42.459Z",
+    "alertTimestamp": "2026-08-29T17:02:26.720Z"
+  },
+  {
+    "match": "Pirin Blagoevgrad vs Chernomorets Burgas",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.8974005367214092,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con remates a puerta y sin goles esperados reales. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      35,
+      63
+    ],
+    "timestamp": "2026-08-29T18:53:42.595Z",
+    "alertTimestamp": "2026-08-29T17:11:26.944Z"
+  },
+  {
+    "match": "Boston River vs Cerro",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8704050084285013,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      32
+    ],
+    "timestamp": "2026-08-29T19:01:46.084Z",
+    "alertTimestamp": "2026-08-29T17:11:26.944Z"
+  },
+  {
+    "match": "Rayo Majadahonda vs Villarreal B",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.5237188499629838,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, ambos equipos buscan el gol. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-29T19:21:32.027Z",
+    "alertTimestamp": "2026-08-29T17:24:12.278Z"
   }
 ]
