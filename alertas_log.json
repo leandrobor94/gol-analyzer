@@ -19906,5 +19906,50 @@
     ],
     "timestamp": "2026-08-29T16:33:43.111Z",
     "alertTimestamp": "2026-08-29T01:01:05.543Z"
+  },
+  {
+    "match": "Pachuca Sub21 vs Chivas Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5245875519316436,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-29T17:32:23.076Z",
+    "alertTimestamp": "2026-08-29T16:33:42.124Z"
+  },
+  {
+    "match": "Al-Kholood vs Al Ahli Jeddah",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5223644047433084,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas llegadas del visitante y big chances. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      66,
+      85,
+      92
+    ],
+    "timestamp": "2026-08-29T18:13:18.095Z",
+    "alertTimestamp": "2026-08-29T16:33:42.124Z"
   }
 ]
