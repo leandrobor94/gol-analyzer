@@ -20528,5 +20528,345 @@
     "goalMinutes": [],
     "timestamp": "2026-08-29T21:01:57.764Z",
     "alertTimestamp": "2026-08-29T19:10:44.672Z"
+  },
+  {
+    "match": "Girona FC vs Las Palmas",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.8783539688147902,
+    "minute": 21,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Early in the match, score 0-0, high model probability for goal despite estimated xG.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      22,
+      48,
+      55,
+      60,
+      72,
+      85,
+      91
+    ],
+    "timestamp": "2026-08-30T02:11:50.449Z",
+    "alertTimestamp": "2026-08-29T19:31:43.576Z"
+  },
+  {
+    "match": "Sevilla FC vs Atlético de Madrid",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.9237579346586923,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y ambos equipos con ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      26,
+      33,
+      66
+    ],
+    "timestamp": "2026-08-30T02:12:00.962Z",
+    "alertTimestamp": "2026-08-29T19:41:18.225Z"
+  },
+  {
+    "match": "Karkh SC vs Al Kahrabaa",
+    "league": "Liga Iraquí",
+    "tier": "AVISO",
+    "probability": 0.8871110175601103,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin datos de ocasiones claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      43,
+      65,
+      96
+    ],
+    "timestamp": "2026-08-30T02:12:01.158Z",
+    "alertTimestamp": "2026-08-29T19:41:18.225Z"
+  },
+  {
+    "match": "Midland vs Nueva Chicago",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8667699962899463,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador 0-0 y xG estimado bajo, pero sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      46,
+      58
+    ],
+    "timestamp": "2026-08-30T02:12:01.324Z",
+    "alertTimestamp": "2026-08-29T19:41:18.225Z"
+  },
+  {
+    "match": "Torreense vs Vizela",
+    "league": "Segunda división de Portugal",
+    "tier": "AVISO",
+    "probability": 0.8642783015966609,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      36,
+      47
+    ],
+    "timestamp": "2026-08-30T02:12:01.649Z",
+    "alertTimestamp": "2026-08-29T19:41:18.225Z"
+  },
+  {
+    "match": "Provincial Osorno vs CD Trasandino",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.8775021248287049,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y xG estimado no es base para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T02:12:02.589Z",
+    "alertTimestamp": "2026-08-29T20:01:29.678Z"
+  },
+  {
+    "match": "Figueirense vs Maranhão-MA",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.9015576287868786,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos restantes, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      17,
+      83
+    ],
+    "timestamp": "2026-08-30T02:12:03.392Z",
+    "alertTimestamp": "2026-08-29T20:10:50.503Z"
+  },
+  {
+    "match": "Universitario (Reserva) vs Union Huaral",
+    "league": "Liga 3",
+    "tier": "AVISO",
+    "probability": 0.8569539631344925,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, sin datos de xG reales, pero el modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      23,
+      42,
+      72
+    ],
+    "timestamp": "2026-08-30T02:12:04.110Z",
+    "alertTimestamp": "2026-08-29T20:10:50.503Z"
+  },
+  {
+    "match": "Itabaiana vs Botafogo-PB",
+    "league": "Serie C",
+    "tier": "AVISO",
+    "probability": 0.8559100341296829,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin datos de xG reales para descartar. ",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      84,
+      93
+    ],
+    "timestamp": "2026-08-30T02:12:04.625Z",
+    "alertTimestamp": "2026-08-29T20:10:50.503Z"
+  },
+  {
+    "match": "UTC Cajamarca vs Universitario",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8746266582826088,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Marcador 2-0, pero xG estimado y sin grandes ocasiones. Aún hay tiempo para cambios.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      16,
+      20,
+      46,
+      73,
+      77,
+      80
+    ],
+    "timestamp": "2026-08-30T02:12:07.455Z",
+    "alertTimestamp": "2026-08-29T20:31:42.038Z"
+  },
+  {
+    "match": "Seattle Sounders vs Chicago Fire",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8699876141336036,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en MLS, 0-0 en el minuto 20. Aunque xG es estimado, el modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      38,
+      48,
+      82
+    ],
+    "timestamp": "2026-08-30T02:12:07.746Z",
+    "alertTimestamp": "2026-08-29T20:42:02.883Z"
+  },
+  {
+    "match": "Gualaceo SC vs El Nacional",
+    "league": "Serie B - Fase de grupos - Grupo Descenso",
+    "tier": "AVISO",
+    "probability": 0.8562294311212933,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      72,
+      78
+    ],
+    "timestamp": "2026-08-30T02:12:07.902Z",
+    "alertTimestamp": "2026-08-29T20:42:02.883Z"
+  },
+  {
+    "match": "Nelson Suburbs vs Cashmere Technical",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.5843128216976662,
+    "minute": 77,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T02:51:37.772Z",
+    "alertTimestamp": "2026-08-30T02:11:49.958Z"
+  },
+  {
+    "match": "Nomads United vs Selwyn United",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.5880902831700617,
+    "minute": 77,
+    "scoreAtAlert": "6-1",
+    "finalScore": "8-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T02:51:38.109Z",
+    "alertTimestamp": "2026-08-30T02:11:49.958Z"
+  },
+  {
+    "match": "Denver Summit vs Chicago Stars FC",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.5345539158402077,
+    "minute": 79,
+    "scoreAtAlert": "6-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      19,
+      47,
+      53,
+      56,
+      58,
+      85
+    ],
+    "timestamp": "2026-08-30T02:51:38.265Z",
+    "alertTimestamp": "2026-08-30T02:11:49.958Z"
   }
 ]

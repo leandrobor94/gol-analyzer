@@ -1,156 +1,51 @@
 {
   "alertedMatches": {
-    "4747977_AVISO": {
-      "timestamp": 1788029600667,
-      "minute": 61,
-      "tier": "AVISO"
-    },
-    "4822588_AVISO": {
-      "timestamp": 1788032478225,
+    "4655230_AVISO": {
+      "timestamp": 1788057178261,
       "minute": 79,
       "tier": "AVISO"
     },
-    "4743922_AVISO": {
-      "timestamp": 1788027912323,
-      "minute": 20,
+    "4681817_AVISO": {
+      "timestamp": 1788057178261,
+      "minute": 77,
       "tier": "AVISO"
     },
-    "4796632_AVISO": {
-      "timestamp": 1788027912323,
-      "minute": 20,
+    "4681818_AVISO": {
+      "timestamp": 1788057178261,
+      "minute": 77,
       "tier": "AVISO"
     },
-    "4639070_AVISO": {
-      "timestamp": 1788027912323,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4827891_AVISO": {
-      "timestamp": 1788027912323,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4767001_AVISO": {
-      "timestamp": 1788029600667,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4738729_AVISO": {
-      "timestamp": 1788029600667,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4752438_AVISO": {
-      "timestamp": 1788029600667,
+    "4788427_AVISO": {
+      "timestamp": 1788057711996,
       "minute": 78,
       "tier": "AVISO"
     },
-    "4735288_AVISO": {
-      "timestamp": 1788030644672,
-      "minute": 26,
+    "4681816_AVISO": {
+      "timestamp": 1788057711997,
+      "minute": 80,
       "tier": "AVISO"
     },
-    "4740758_AVISO": {
-      "timestamp": 1788030644672,
-      "minute": 25,
+    "4621399_AVISO": {
+      "timestamp": 1788058297457,
+      "minute": 22,
       "tier": "AVISO"
     },
-    "4734606_AVISO": {
-      "timestamp": 1788034898527,
-      "minute": 61,
+    "4634112_AVISO": {
+      "timestamp": 1788058297457,
+      "minute": 22,
       "tier": "AVISO"
     },
-    "4750933_AVISO": {
-      "timestamp": 1788031291629,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4764165_AVISO": {
-      "timestamp": 1788031291629,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4812171_AVISO": {
-      "timestamp": 1788031291629,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4826504_AVISO": {
-      "timestamp": 1788031291629,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4824044_AVISO": {
-      "timestamp": 1788032478225,
-      "minute": 79,
-      "tier": "AVISO"
-    },
-    "4750881_AVISO": {
-      "timestamp": 1788033046485,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4751197_AVISO": {
-      "timestamp": 1788036650806,
-      "minute": 62,
-      "tier": "AVISO"
-    },
-    "4806556_AVISO": {
-      "timestamp": 1788033046485,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4826428_AVISO": {
-      "timestamp": 1788033046485,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4757983_AVISO": {
-      "timestamp": 1788033046485,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4677718_AVISO": {
-      "timestamp": 1788034898527,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4802369_AVISO": {
-      "timestamp": 1788034898527,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4827473_AVISO": {
-      "timestamp": 1788034898527,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4677720_AVISO": {
-      "timestamp": 1788034898527,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4621412_AVISO": {
-      "timestamp": 1788036650806,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4760849_AVISO": {
-      "timestamp": 1788036650806,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4821858_AVISO": {
-      "timestamp": 1788036650806,
-      "minute": 20,
+    "4634106_AVISO": {
+      "timestamp": 1788058297457,
+      "minute": 22,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 4905,
-    "verified": 4854,
-    "withGoalTimeline": 3224,
+    "total": 4939,
+    "verified": 4916,
+    "withGoalTimeline": 3264,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-29T21:10:55.064Z"
+  "lastUpdated": "2026-08-30T02:51:38.363Z"
 }
