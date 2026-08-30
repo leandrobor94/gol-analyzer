@@ -20868,5 +20868,240 @@
     ],
     "timestamp": "2026-08-30T02:51:38.265Z",
     "alertTimestamp": "2026-08-30T02:11:49.958Z"
+  },
+  {
+    "match": "Wanaka AFC vs Coastal Spirit",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.5457129974452393,
+    "minute": 80,
+    "scoreAtAlert": "2-8",
+    "finalScore": "2-8",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T16:34:40.811Z",
+    "alertTimestamp": "2026-08-30T02:11:49.958Z"
+  },
+  {
+    "match": "U.A.N.L.- Tigres (F) vs Pachuca (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5487800474882938,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      72
+    ],
+    "timestamp": "2026-08-30T16:35:01.178Z",
+    "alertTimestamp": "2026-08-30T02:11:49.958Z"
+  },
+  {
+    "match": "Las Vegas Lights vs Charleston Battery",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8912522464512617,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      40,
+      59
+    ],
+    "timestamp": "2026-08-30T16:35:09.166Z",
+    "alertTimestamp": "2026-08-30T02:41:51.997Z"
+  },
+  {
+    "match": "San Diego FC vs LA Galaxy",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8894877730912867,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      48,
+      55,
+      70
+    ],
+    "timestamp": "2026-08-30T16:35:19.416Z",
+    "alertTimestamp": "2026-08-30T02:41:51.997Z"
+  },
+  {
+    "match": "Phoenix Rising FC vs Indy Eleven",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8853925355438642,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      7,
+      28
+    ],
+    "timestamp": "2026-08-30T16:35:28.419Z",
+    "alertTimestamp": "2026-08-30T02:41:51.997Z"
+  },
+  {
+    "match": "TSV Hartberg vs Ried",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5326510768206398,
+    "minute": 77,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      11,
+      38,
+      64,
+      71
+    ],
+    "timestamp": "2026-08-30T17:02:11.580Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Start vs KFUM Oslo",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.5289826466126553,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      27,
+      44,
+      81,
+      96
+    ],
+    "timestamp": "2026-08-30T17:02:33.236Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Derry City vs Shamrock",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.5942562009017465,
+    "minute": 77,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y volumen de juego significativo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      16,
+      28,
+      33,
+      72,
+      80
+    ],
+    "timestamp": "2026-08-30T17:07:41.963Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "FK Sochi vs FC Chelyabinsk",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.5797056725003518,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      75,
+      89,
+      97
+    ],
+    "timestamp": "2026-08-30T17:07:42.812Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Ham-kam vs Kristiansund FK",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.5436530855048314,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      51,
+      62,
+      73
+    ],
+    "timestamp": "2026-08-30T17:07:46.372Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Al Hamriyah vs Forte Virtus FC",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5515060489110313,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      28
+    ],
+    "timestamp": "2026-08-30T17:21:50.531Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
   }
 ]
