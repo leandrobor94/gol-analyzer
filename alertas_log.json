@@ -1,251 +1,5 @@
 [
   {
-    "match": "Washington Spirit vs San Diego Wave",
-    "league": "NWSL",
-    "probability": 92,
-    "minute": 75,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "late",
-    "timestamp": "2026-08-02T22:31:06.022Z",
-    "alertTimestamp": "2026-08-02T20:38:06.532Z"
-  },
-  {
-    "match": "River Plate vs Rosario Central",
-    "league": "Liga Profesional Argentina -",
-    "probability": 82,
-    "minute": 59,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T01:08:59.826Z",
-    "alertTimestamp": "2026-08-02T22:31:05.703Z"
-  },
-  {
-    "match": "CD Walter Ferretti vs Matagalpa",
-    "league": "Liga Primera -",
-    "probability": 95,
-    "minute": 54,
-    "scoreAtAlert": "2-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T14:01:16.245Z",
-    "alertTimestamp": "2026-08-03T01:08:58.040Z"
-  },
-  {
-    "match": "Deportivo Marquense vs CSD Municipal",
-    "league": "Liga Nacional -",
-    "probability": 94,
-    "minute": 52,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T14:01:16.312Z",
-    "alertTimestamp": "2026-08-03T01:08:58.040Z"
-  },
-  {
-    "match": "Wexford Youths vs Bray Wanderers",
-    "league": "Division 1",
-    "probability": 84,
-    "minute": 31,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "firstHalf",
-    "timestamp": "2026-08-03T18:19:31.251Z",
-    "alertTimestamp": "2026-08-03T16:31:57.946Z"
-  },
-  {
-    "match": "York vs Crawley Town",
-    "league": "Copa de la liga - Fase",
-    "probability": 82,
-    "minute": 74,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "late",
-    "timestamp": "2026-08-03T21:14:54.230Z",
-    "alertTimestamp": "2026-08-03T20:02:47.989Z"
-  },
-  {
-    "match": "Kenia (F) vs Argelia (F)",
-    "league": "Copa Africana de Naciones (F)",
-    "probability": 80,
-    "minute": 53,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T22:19:02.271Z",
-    "alertTimestamp": "2026-08-03T20:02:47.989Z"
-  },
-  {
-    "match": "3 De Noviembre vs Sportivo Carapeguá",
-    "league": "Division",
-    "probability": 91,
-    "minute": 56,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T22:19:02.368Z",
-    "alertTimestamp": "2026-08-03T20:02:47.989Z"
-  },
-  {
-    "match": "Flamengo (F) vs Corinthians (F)",
-    "league": "Brasileirao",
-    "probability": 84,
-    "minute": 49,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-03T23:30:50.920Z",
-    "alertTimestamp": "2026-08-03T22:19:00.756Z"
-  },
-  {
-    "match": "Hapoel Beer Sheva vs Estrella Roja Belgrado",
-    "league": "UEFA Champions League Clasificatorio - Tercera Ronda",
-    "probability": 81,
-    "minute": 70,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "late",
-    "timestamp": "2026-08-04T20:26:58.365Z",
-    "alertTimestamp": "2026-08-04T18:59:06.818Z"
-  },
-  {
-    "match": "Deportivo Táchira vs Portuguesa FC",
-    "league": "Liga FUTVE -",
-    "probability": 85,
-    "minute": 56,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-05T01:07:32.446Z",
-    "alertTimestamp": "2026-08-04T22:47:04.144Z"
-  },
-  {
-    "match": "Ajax (F) vs Brondby (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "PRECISION",
-    "probability": 0.9518509552855283,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      20
-    ],
-    "timestamp": "2026-08-05T15:34:33.641Z",
-    "alertTimestamp": "2026-08-05T13:20:09.664Z"
-  },
-  {
-    "match": "Viitorul Cluj vs Zalău",
-    "league": "Copa rumana - Clasificación",
-    "tier": "VALOR",
-    "probability": 0.7544180078988816,
-    "minute": 45,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-6",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-05T17:08:40.964Z",
-    "alertTimestamp": "2026-08-05T15:34:33.569Z"
-  },
-  {
-    "match": "Filiasi vs Oltul Curtisoara",
-    "league": "Copa rumana - Clasificación",
-    "tier": "VALOR",
-    "probability": 0.8289451865089322,
-    "minute": 45,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-05T18:41:23.615Z",
-    "alertTimestamp": "2026-08-05T15:34:33.569Z"
-  },
-  {
-    "match": "Cil Blaj vs Gaz Metan Medias",
-    "league": "Copa rumana - Clasificación",
-    "tier": "VALOR",
-    "probability": 0.7610073076315957,
-    "minute": 45,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Empate y minutos restantes",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-05T18:41:23.764Z",
-    "alertTimestamp": "2026-08-05T15:34:33.569Z"
-  },
-  {
-    "match": "Hapoel Ramat Gan vs Hapoel Jerusalem",
-    "league": "Toto League Cup",
-    "tier": "VALOR",
-    "probability": 0.9103439251805869,
-    "minute": 9,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, empate a cero",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      10,
-      47,
-      86,
-      95
-    ],
-    "timestamp": "2026-08-05T20:20:02.044Z",
-    "alertTimestamp": "2026-08-05T17:08:39.983Z"
-  },
-  {
     "match": "Ponferradina vs Unionistas de Salamanca",
     "league": "Partido Amistoso",
     "tier": "VALOR",
@@ -21595,5 +21349,281 @@
     ],
     "timestamp": "2026-08-30T20:09:17.054Z",
     "alertTimestamp": "2026-08-30T18:19:24.105Z"
+  },
+  {
+    "match": "Samsunspor vs Fenerbahce",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.6197287446073896,
+    "minute": 65,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      49
+    ],
+    "timestamp": "2026-08-30T20:29:11.954Z",
+    "alertTimestamp": "2026-08-30T18:42:04.635Z"
+  },
+  {
+    "match": "Villa Mitre vs Huracán Las Heras",
+    "league": "Federal A - Segunda Fase - Zona B",
+    "tier": "AVISO",
+    "probability": 0.8851074328972517,
+    "minute": 22,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      29,
+      42
+    ],
+    "timestamp": "2026-08-30T20:29:19.969Z",
+    "alertTimestamp": "2026-08-30T18:48:06.784Z"
+  },
+  {
+    "match": "El Linqueño vs Atlético Escobar",
+    "league": "Federal A - Reválida - Zona A",
+    "tier": "AVISO",
+    "probability": 0.8813758883164552,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      92
+    ],
+    "timestamp": "2026-08-30T20:29:20.105Z",
+    "alertTimestamp": "2026-08-30T18:48:06.784Z"
+  },
+  {
+    "match": "Patronato vs Almagro",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8724020673825394,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      55
+    ],
+    "timestamp": "2026-08-30T20:36:52.439Z",
+    "alertTimestamp": "2026-08-30T18:42:04.635Z"
+  },
+  {
+    "match": "Monaco vs Olympique Marsella",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.9080728682575208,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      53
+    ],
+    "timestamp": "2026-08-30T20:46:54.724Z",
+    "alertTimestamp": "2026-08-30T18:48:06.784Z"
+  },
+  {
+    "match": "Cagliari vs Inter Milan",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8944275835291816,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-08-30T20:47:26.948Z",
+    "alertTimestamp": "2026-08-30T18:57:51.159Z"
+  },
+  {
+    "match": "Lazio vs Genoa",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8995539908320999,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      25
+    ],
+    "timestamp": "2026-08-30T20:47:27.141Z",
+    "alertTimestamp": "2026-08-30T18:57:51.159Z"
+  },
+  {
+    "match": "Pisa vs Catanzaro",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.8813165370804377,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      28,
+      30
+    ],
+    "timestamp": "2026-08-30T20:57:42.222Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Glacis United vs Lincoln Red Imps",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.5644715467694946,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T20:57:52.426Z",
+    "alertTimestamp": "2026-08-30T19:20:09.742Z"
+  },
+  {
+    "match": "U. de Concepción vs Universidad de Chile",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.9145082572033169,
+    "minute": 25,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      17,
+      90
+    ],
+    "timestamp": "2026-08-30T21:07:59.267Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Gama vs ASA-AL",
+    "league": "Serie D - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8855024971104595,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T21:07:59.346Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Corinthians vs Santos",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5369220722150355,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33
+    ],
+    "timestamp": "2026-08-30T21:07:59.642Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "9 De Julio Rafaela vs Defensores Belgrano (VR)",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "tier": "AVISO",
+    "probability": 0.8844110392159246,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      1
+    ],
+    "timestamp": "2026-08-30T21:08:16.880Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Sportivo Belgrano vs Bartolomé Mitre (Posadas)",
+    "league": "Federal A - Segunda Fase - Zona A",
+    "tier": "AVISO",
+    "probability": 0.8904113613189039,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      53
+    ],
+    "timestamp": "2026-08-30T21:08:27.229Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Pergolettese vs Union Brescia",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5531455454821602,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      97
+    ],
+    "timestamp": "2026-08-30T21:08:37.790Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Santiago Morning vs Provincial Ovalle",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.5326799587915588,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T21:09:29.132Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
   }
 ]
