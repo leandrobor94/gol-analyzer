@@ -21103,5 +21103,238 @@
     ],
     "timestamp": "2026-08-30T17:21:50.531Z",
     "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "FC Augsburg vs Schalke 04",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5901503684249313,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un solo gol de diferencia y alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      79,
+      92
+    ],
+    "timestamp": "2026-08-30T17:26:49.520Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Hungría Sub17 vs Italia Sub17",
+    "league": "Amistoso Internacional Sub17",
+    "tier": "AVISO",
+    "probability": 0.5595796749561671,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T17:26:49.588Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Karcagi vs MOL Fehervar",
+    "league": "NB II - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.536978204491153,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T17:27:00.118Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Manchester United vs Ipswich",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6910243256183114,
+    "minute": 66,
+    "scoreAtAlert": "5-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, muchas chances y xG alto. No hay razón para no avisar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29,
+      40,
+      56,
+      61,
+      68,
+      82,
+      91
+    ],
+    "timestamp": "2026-08-30T17:36:55.245Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "ADC Rebordelo vs Bragança",
+    "league": "Copa de Portugal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008574479862125,
+    "minute": 21,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      35,
+      72,
+      79
+    ],
+    "timestamp": "2026-08-30T17:56:59.910Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Sacavenense vs SC Angrense",
+    "league": "Copa de Portugal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008574479862125,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa, marcador ajustado y muchos minutos por delante. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T17:57:00.017Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "S.U. 1º de Dezembro vs Real SC",
+    "league": "Copa de Portugal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008574479862125,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en etapa temprana, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T17:57:10.116Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Eyupspor vs Alanyaspor",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.5435957941346387,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      39,
+      94
+    ],
+    "timestamp": "2026-08-30T17:57:53.717Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "CD Celoricense vs Pevidém",
+    "league": "Copa de Portugal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008574479862125,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2
+    ],
+    "timestamp": "2026-08-30T18:08:22.553Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Cultural Correlhã vs Limianos",
+    "league": "Copa de Portugal - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9008574479862125,
+    "minute": 21,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para descartar. ",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T18:08:22.670Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "CA River Plate vs Rentistas",
+    "league": "Segunda Division - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5297686219792435,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T18:09:30.122Z",
+    "alertTimestamp": "2026-08-30T16:34:35.395Z"
   }
 ]
