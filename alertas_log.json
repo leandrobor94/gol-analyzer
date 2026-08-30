@@ -1,83 +1,5 @@
 [
   {
-    "match": "Komarno vs Spartak Trnava",
-    "league": "Niké liga",
-    "probability": 81,
-    "minute": 74,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "late",
-    "timestamp": "2026-08-02T19:48:08.705Z",
-    "alertTimestamp": "2026-08-02T17:33:48.474Z"
-  },
-  {
-    "match": "Brann vs Rosenborg",
-    "league": "Eliteserien",
-    "probability": 85,
-    "minute": 61,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-02T19:48:08.871Z",
-    "alertTimestamp": "2026-08-02T17:33:48.474Z"
-  },
-  {
-    "match": "Napredak Krusevac vs Graficar Beograd",
-    "league": "Prva Liga",
-    "probability": 85,
-    "minute": 73,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "late",
-    "timestamp": "2026-08-02T19:48:08.954Z",
-    "alertTimestamp": "2026-08-02T17:33:48.474Z"
-  },
-  {
-    "match": "Deportivo Riestra vs Barracas Central",
-    "league": "Liga Profesional Argentina -",
-    "probability": 83,
-    "minute": 49,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "correct": true,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-02T19:48:09.896Z",
-    "alertTimestamp": "2026-08-02T17:33:48.474Z"
-  },
-  {
-    "match": "Lajeadense vs EC Pelotas",
-    "league": "Gaucho A2",
-    "probability": 83,
-    "minute": 59,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-02T20:38:07.972Z",
-    "alertTimestamp": "2026-08-02T18:35:45.096Z"
-  },
-  {
-    "match": "Defensores Belgrano (VR) vs Bartolomé Mitre (Posadas)",
-    "league": "Federal A - Segunda Fase - Zona A",
-    "probability": 95,
-    "minute": 56,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "correct": false,
-    "windowType": "earlySecondHalf",
-    "timestamp": "2026-08-02T20:38:08.001Z",
-    "alertTimestamp": "2026-08-02T18:35:45.096Z"
-  },
-  {
     "match": "Washington Spirit vs San Diego Wave",
     "league": "NWSL",
     "probability": 92,
@@ -21511,5 +21433,167 @@
     ],
     "timestamp": "2026-08-30T19:11:50.779Z",
     "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "KVC Westerlo vs Zulte Waregem",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.8576709474382435,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, y un equipo con una gran ocasión.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      25,
+      48,
+      63
+    ],
+    "timestamp": "2026-08-30T19:28:48.638Z",
+    "alertTimestamp": "2026-08-30T17:26:49.335Z"
+  },
+  {
+    "match": "RC Deportivo vs Valencia CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.930790052969489,
+    "minute": 23,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      17,
+      26,
+      59
+    ],
+    "timestamp": "2026-08-30T19:28:48.852Z",
+    "alertTimestamp": "2026-08-30T17:36:54.872Z"
+  },
+  {
+    "match": "Atlético Baleares vs Porreres",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5379955200533397,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      46,
+      61,
+      81
+    ],
+    "timestamp": "2026-08-30T19:38:16.160Z",
+    "alertTimestamp": "2026-08-30T17:47:23.378Z"
+  },
+  {
+    "match": "FCSB vs UTA Arad",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.5419098142157885,
+    "minute": 77,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      26,
+      49,
+      54,
+      78
+    ],
+    "timestamp": "2026-08-30T19:59:38.162Z",
+    "alertTimestamp": "2026-08-30T18:19:24.105Z"
+  },
+  {
+    "match": "Banfield vs River Plate",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5523711947985706,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T20:01:35.595Z",
+    "alertTimestamp": "2026-08-30T18:19:24.105Z"
+  },
+  {
+    "match": "Qadisiya vs Al Faysaly",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.6552593634718963,
+    "minute": 75,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      12,
+      30,
+      56
+    ],
+    "timestamp": "2026-08-30T20:08:59.438Z",
+    "alertTimestamp": "2026-08-30T18:19:24.105Z"
+  },
+  {
+    "match": "Cambuur vs Twente",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.5725279227756946,
+    "minute": 77,
+    "scoreAtAlert": "0-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      26,
+      47,
+      82,
+      88
+    ],
+    "timestamp": "2026-08-30T20:08:59.569Z",
+    "alertTimestamp": "2026-08-30T18:19:24.105Z"
+  },
+  {
+    "match": "Nafta vs Maribor",
+    "league": "Liga eslovena - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.6550211508537084,
+    "minute": 64,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      18,
+      47,
+      52,
+      78
+    ],
+    "timestamp": "2026-08-30T20:09:17.054Z",
+    "alertTimestamp": "2026-08-30T18:19:24.105Z"
   }
 ]
