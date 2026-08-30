@@ -21336,5 +21336,180 @@
     "goalMinutes": [],
     "timestamp": "2026-08-30T18:09:30.122Z",
     "alertTimestamp": "2026-08-30T16:34:35.395Z"
+  },
+  {
+    "match": "Al Kharitiyat vs Al Khor",
+    "league": "Q League",
+    "tier": "AVISO",
+    "probability": 0.5352777499473371,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T18:42:22.367Z",
+    "alertTimestamp": "2026-08-30T16:42:20.560Z"
+  },
+  {
+    "match": "Etihad Al Gharafa vs Markhiya SC",
+    "league": "Q League",
+    "tier": "AVISO",
+    "probability": 0.6801432843123784,
+    "minute": 64,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T18:42:22.454Z",
+    "alertTimestamp": "2026-08-30T16:42:20.560Z"
+  },
+  {
+    "match": "Mantova vs Empoli",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.5427766999535993,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      51,
+      58,
+      61,
+      90
+    ],
+    "timestamp": "2026-08-30T18:58:52.687Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "Red Bull Salzburgo vs Austria Vienna",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5287261197435749,
+    "minute": 78,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      19,
+      31,
+      47,
+      55
+    ],
+    "timestamp": "2026-08-30T18:59:33.612Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "Deportivo Fraijanes vs Champs Academy Guatemala",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.9219233170255023,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-30T19:11:30.282Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "Don Benito vs Puertollano",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8842092054663776,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      42
+    ],
+    "timestamp": "2026-08-30T19:11:43.955Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "FC Pari Nizhny Novgorod vs Volga Ulyanovsk",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.8810190122857631,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego equilibrado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      14,
+      25,
+      38,
+      62
+    ],
+    "timestamp": "2026-08-30T19:11:48.398Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "Cádiz vs Real Valladolid",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5510664382289407,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      17,
+      42
+    ],
+    "timestamp": "2026-08-30T19:11:50.614Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
+  },
+  {
+    "match": "RCD Mallorca vs Ceuta",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.6355865845075006,
+    "minute": 64,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      50,
+      89
+    ],
+    "timestamp": "2026-08-30T19:11:50.779Z",
+    "alertTimestamp": "2026-08-30T17:07:38.893Z"
   }
 ]
