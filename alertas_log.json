@@ -1,175 +1,5 @@
 [
   {
-    "match": "FH Hafnarfjordur vs KR Reykjavik",
-    "league": "Besta-deild karla",
-    "tier": "AVISO",
-    "probability": 0.766269132687057,
-    "minute": 47,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      32,
-      62
-    ],
-    "timestamp": "2026-08-05T21:39:39.695Z",
-    "alertTimestamp": "2026-08-05T20:20:01.520Z"
-  },
-  {
-    "match": "Vinotinto del Ecuador FC vs Universidad Católica",
-    "league": "Copa Ecuador - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8920926947629338,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      17,
-      19,
-      30,
-      59,
-      95
-    ],
-    "timestamp": "2026-08-05T22:42:53.599Z",
-    "alertTimestamp": "2026-08-05T20:20:01.520Z"
-  },
-  {
-    "match": "Malawi (F) vs Zambia (F)",
-    "league": "Copa Africana de Naciones (F)",
-    "tier": "AVISO",
-    "probability": 0.8867761535043601,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      2,
-      37,
-      72
-    ],
-    "timestamp": "2026-08-05T22:42:53.699Z",
-    "alertTimestamp": "2026-08-05T20:20:01.520Z"
-  },
-  {
-    "match": "Egypt (W) vs Nigeria (F)",
-    "league": "Copa Africana de Naciones (F)",
-    "tier": "AVISO",
-    "probability": 0.879230704938358,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "2-6",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      21,
-      47,
-      55,
-      57,
-      81,
-      84,
-      91,
-      99
-    ],
-    "timestamp": "2026-08-05T22:42:53.808Z",
-    "alertTimestamp": "2026-08-05T20:20:01.520Z"
-  },
-  {
-    "match": "Unsaac (F) vs Atlético Andahuaylas (F)",
-    "league": "Liga Femenina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8780060932861368,
-    "minute": 19,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-05T22:42:53.923Z",
-    "alertTimestamp": "2026-08-05T20:20:01.520Z"
-  },
-  {
-    "match": "Canada Sub20 vs Jamaica Sub20",
-    "league": "CONCACAF Campeonato Sub20 - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.9166438705295324,
-    "minute": 13,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      57,
-      87,
-      94
-    ],
-    "timestamp": "2026-08-06T01:08:46.544Z",
-    "alertTimestamp": "2026-08-05T22:42:53.432Z"
-  },
-  {
-    "match": "Deportivo La Guaira vs Metropolitanos FC",
-    "league": "Liga FUTVE - Clausura",
-    "tier": "AVISO",
-    "probability": 0.9104782279809447,
-    "minute": 13,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, resultado ajustado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      10,
-      15,
-      67
-    ],
-    "timestamp": "2026-08-06T01:08:46.574Z",
-    "alertTimestamp": "2026-08-05T22:42:53.432Z"
-  },
-  {
     "match": "Grêmio vs Mirassol",
     "league": "Copa de Brasil - Octavos de final",
     "tier": "AVISO",
@@ -21592,5 +21422,156 @@
     ],
     "timestamp": "2026-08-31T02:25:55.219Z",
     "alertTimestamp": "2026-08-31T02:05:21.655Z"
+  },
+  {
+    "match": "Erbil FC vs Mina'a Basra",
+    "league": "Liga Iraquí",
+    "tier": "AVISO",
+    "probability": 0.5466409283754105,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      82
+    ],
+    "timestamp": "2026-08-31T20:01:00.709Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Club Atlético Belgrano (Zarate) vs Everton de La Plata",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.5584381384024119,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-31T20:01:01.409Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Montevideo Wanderers (Reserva) vs Montevideo City Torque (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5309093844130177,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de reserva con marcador ajustado y minutos restantes. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-31T20:01:14.869Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Brighton Sub21 vs Arsenal Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.68191337910004,
+    "minute": 63,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-08-31T20:09:30.196Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Racing Club Montevideo vs Albion",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.6403616356306879,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      80
+    ],
+    "timestamp": "2026-08-31T20:30:45.580Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Atalanta vs Bologna",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.5404597884517294,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un xG estimado y pocas llegadas claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      96
+    ],
+    "timestamp": "2026-08-31T20:40:34.168Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Amed SK vs Trabzonspor",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.5292528880925044,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      50,
+      90
+    ],
+    "timestamp": "2026-08-31T20:40:46.776Z",
+    "alertTimestamp": "2026-08-31T19:02:07.349Z"
   }
 ]
