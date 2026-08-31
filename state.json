@@ -62,10 +62,10 @@
     }
   },
   "counters": {
-    "total": 5321,
-    "verified": 5295,
-    "withGoalTimeline": 3536,
+    "total": 5322,
+    "verified": 5311,
+    "withGoalTimeline": 3547,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-08-31T20:49:53.534Z"
+  "lastUpdated": "2026-08-31T21:49:24.343Z"
 }

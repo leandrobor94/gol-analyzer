@@ -1,74 +1,5 @@
 [
   {
-    "match": "Grêmio vs Mirassol",
-    "league": "Copa de Brasil - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.90122075592863,
-    "minute": 12,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, empate a cero",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      37
-    ],
-    "timestamp": "2026-08-06T01:08:46.623Z",
-    "alertTimestamp": "2026-08-05T22:42:53.432Z"
-  },
-  {
-    "match": "EC Pelotas vs União-RS",
-    "league": "Gaucho A2",
-    "tier": "AVISO",
-    "probability": 0.884129743661365,
-    "minute": 13,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, empate a cero",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      0
-    ],
-    "timestamp": "2026-08-06T01:08:46.651Z",
-    "alertTimestamp": "2026-08-05T22:42:53.432Z"
-  },
-  {
-    "match": "Santiago Wanderers vs U. La Calera",
-    "league": "Copa Chile",
-    "tier": "AVISO",
-    "probability": 0.8203871407879445,
-    "minute": 45,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      9,
-      11,
-      47,
-      64
-    ],
-    "timestamp": "2026-08-06T01:08:46.675Z",
-    "alertTimestamp": "2026-08-05T22:42:53.432Z"
-  },
-  {
     "match": "Inter Miami vs Atlético San Luis",
     "league": "Leagues Cup",
     "tier": "AVISO",
@@ -21573,5 +21504,78 @@
     ],
     "timestamp": "2026-08-31T20:40:46.776Z",
     "alertTimestamp": "2026-08-31T19:02:07.349Z"
+  },
+  {
+    "match": "Aston Villa vs Arsenal",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6803414399869528,
+    "minute": 62,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Arsenal con ventaja mínima y oportunidades claras. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      59
+    ],
+    "timestamp": "2026-08-31T20:59:25.310Z",
+    "alertTimestamp": "2026-08-31T19:10:41.491Z"
+  },
+  {
+    "match": "Breidablik vs Stjarnan",
+    "league": "Besta-deild karla",
+    "tier": "AVISO",
+    "probability": 0.5523783029955662,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29,
+      40
+    ],
+    "timestamp": "2026-08-31T21:09:36.076Z",
+    "alertTimestamp": "2026-08-31T19:21:02.145Z"
+  },
+  {
+    "match": "FC Barcelona vs Rayo Vallecano",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.6991706985552172,
+    "minute": 62,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Barcelona lidera, pero el Rayo Vallecano podría sorprender. El xG es estimado, no real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      19,
+      21,
+      51,
+      59,
+      71,
+      90
+    ],
+    "timestamp": "2026-08-31T21:39:24.200Z",
+    "alertTimestamp": "2026-08-31T19:39:59.223Z"
   }
 ]
