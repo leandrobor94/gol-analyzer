@@ -1,151 +1,5 @@
 [
   {
-    "match": "Ponferradina vs Unionistas de Salamanca",
-    "league": "Partido Amistoso",
-    "tier": "VALOR",
-    "probability": 0.9056261259419741,
-    "minute": 8,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      20,
-      52,
-      88
-    ],
-    "timestamp": "2026-08-05T20:20:02.419Z",
-    "alertTimestamp": "2026-08-05T17:08:39.983Z"
-  },
-  {
-    "match": "CD Cieza vs Real Murcia",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9512241175264705,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      8,
-      17,
-      31,
-      64,
-      86
-    ],
-    "timestamp": "2026-08-05T20:20:02.841Z",
-    "alertTimestamp": "2026-08-05T18:41:22.389Z"
-  },
-  {
-    "match": "Panathinaikos vs CSKA 1948 Sofia",
-    "league": "UEFA Conference League - 3ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.883782267886363,
-    "minute": 19,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      21,
-      31
-    ],
-    "timestamp": "2026-08-05T21:39:39.348Z",
-    "alertTimestamp": "2026-08-05T18:41:22.389Z"
-  },
-  {
-    "match": "Vllaznia (F) vs Myjava (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.8516217267943366,
-    "minute": 21,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      42,
-      68,
-      74
-    ],
-    "timestamp": "2026-08-05T21:39:39.369Z",
-    "alertTimestamp": "2026-08-05T18:41:22.389Z"
-  },
-  {
-    "match": "CD Badajoz vs CD Coria",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9028529391071981,
-    "minute": 19,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién empezado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      13,
-      91,
-      94
-    ],
-    "timestamp": "2026-08-05T21:39:39.602Z",
-    "alertTimestamp": "2026-08-05T18:41:22.389Z"
-  },
-  {
-    "match": "Arsenal vs Real Betis",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8837528045677452,
-    "minute": 5,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      9,
-      26,
-      32,
-      43
-    ],
-    "timestamp": "2026-08-05T21:39:39.668Z",
-    "alertTimestamp": "2026-08-05T18:50:36.650Z"
-  },
-  {
     "match": "FH Hafnarfjordur vs KR Reykjavik",
     "league": "Besta-deild karla",
     "tier": "AVISO",
@@ -21625,5 +21479,118 @@
     "goalMinutes": [],
     "timestamp": "2026-08-30T21:09:29.132Z",
     "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Gubbio vs Reggiana",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5706500360411987,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      61,
+      80
+    ],
+    "timestamp": "2026-08-31T02:05:39.511Z",
+    "alertTimestamp": "2026-08-30T19:11:02.636Z"
+  },
+  {
+    "match": "Celta de Vigo vs Athletic Club",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.9466305936018671,
+    "minute": 25,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      22
+    ],
+    "timestamp": "2026-08-31T02:05:50.913Z",
+    "alertTimestamp": "2026-08-30T19:38:15.598Z"
+  },
+  {
+    "match": "Universidad Católica (F) vs Universidad de Chile (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.5838129741182602,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      61
+    ],
+    "timestamp": "2026-08-31T02:05:51.227Z",
+    "alertTimestamp": "2026-08-30T19:38:15.598Z"
+  },
+  {
+    "match": "Universitario vs I.N. San Juan FC",
+    "league": "Copa Simón Bolívar - Grupo E",
+    "tier": "AVISO",
+    "probability": 0.570736864059916,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-08-31T02:05:51.378Z",
+    "alertTimestamp": "2026-08-30T19:38:15.598Z"
+  },
+  {
+    "match": "Deportivo Miranda FC vs Monagas SC B",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.9038178444437217,
+    "minute": 27,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      18
+    ],
+    "timestamp": "2026-08-31T02:05:51.692Z",
+    "alertTimestamp": "2026-08-30T19:38:15.598Z"
+  },
+  {
+    "match": "Independiente Rivadavia vs Racing Club",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5391133569570338,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, marcador ajustado y alto volumen de juego. xG estimado no es factor.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      39,
+      70,
+      92
+    ],
+    "timestamp": "2026-08-31T02:25:55.219Z",
+    "alertTimestamp": "2026-08-31T02:05:21.655Z"
   }
 ]
