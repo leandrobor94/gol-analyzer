@@ -1,32 +1,5 @@
 [
   {
-    "match": "Inter Miami vs Atlético San Luis",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8928387249125197,
-    "minute": 12,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      4,
-      11,
-      26,
-      44,
-      51,
-      52
-    ],
-    "timestamp": "2026-08-06T12:19:21.213Z",
-    "alertTimestamp": "2026-08-05T23:42:43.170Z"
-  },
-  {
     "match": "FC Naples vs Alta",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -21577,5 +21550,30 @@
     ],
     "timestamp": "2026-08-31T21:39:24.200Z",
     "alertTimestamp": "2026-08-31T19:39:59.223Z"
+  },
+  {
+    "match": "Internacional de Bogotá (F) vs Atlético Nacional (F)",
+    "league": "Liga Femenina BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8583367775065136,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      46,
+      47,
+      87
+    ],
+    "timestamp": "2026-08-31T21:59:34.597Z",
+    "alertTimestamp": "2026-08-31T20:09:29.114Z"
   }
 ]
