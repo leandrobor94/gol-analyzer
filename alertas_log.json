@@ -1,140 +1,5 @@
 [
   {
-    "match": "El Paso vs Monterey Bay",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8993464729975538,
-    "minute": 9,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, sin goles",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      30
-    ],
-    "timestamp": "2026-08-06T12:19:21.705Z",
-    "alertTimestamp": "2026-08-06T01:08:46.523Z"
-  },
-  {
-    "match": "Tigre vs Belgrano",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.7479109460766934,
-    "minute": 45,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Empate y minutos restantes",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-06T12:19:23.092Z",
-    "alertTimestamp": "2026-08-06T01:08:46.523Z"
-  },
-  {
-    "match": "Bolívar vs Oriente Petrolero",
-    "league": "División Profesional",
-    "tier": "AVISO",
-    "probability": 0.7382961892976903,
-    "minute": 48,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      23,
-      37,
-      56
-    ],
-    "timestamp": "2026-08-06T12:19:23.232Z",
-    "alertTimestamp": "2026-08-06T01:08:46.523Z"
-  },
-  {
-    "match": "Liga de Portoviejo vs Barcelona SC",
-    "league": "Copa Ecuador - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.6893510745886215,
-    "minute": 49,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Empate y minutos restantes",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      66
-    ],
-    "timestamp": "2026-08-06T12:19:23.710Z",
-    "alertTimestamp": "2026-08-06T01:08:46.523Z"
-  },
-  {
-    "match": "Monterrey vs Orlando City SC",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.670663856391555,
-    "minute": 52,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Empate y minutos restantes",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      27,
-      60,
-      99
-    ],
-    "timestamp": "2026-08-06T12:19:41.053Z",
-    "alertTimestamp": "2026-08-06T01:08:46.523Z"
-  },
-  {
-    "match": "Bate Borisov II Reserve vs Bumprom",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.9178466571468753,
-    "minute": 12,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      2,
-      86
-    ],
-    "timestamp": "2026-08-07T00:19:30.239Z",
-    "alertTimestamp": "2026-08-06T14:42:03.174Z"
-  },
-  {
     "match": "Cruz Azul vs Philadelphia Union",
     "league": "Leagues Cup",
     "tier": "AVISO",
@@ -21577,5 +21442,140 @@
     ],
     "timestamp": "2026-09-01T16:21:32.003Z",
     "alertTimestamp": "2026-08-31T22:39:25.479Z"
+  },
+  {
+    "match": "Estrela Sub23 vs Sporting Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.901598351499689,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      47,
+      81
+    ],
+    "timestamp": "2026-09-01T18:01:05.554Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "Leiria U23 vs Maritimo U23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.8941419831021519,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21,
+      74
+    ],
+    "timestamp": "2026-09-01T18:01:05.915Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "FC Felgueiras 1932 U23 vs Estoril Sub23",
+    "league": "Liga de Portugal Sub23 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8941419831021519,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      24,
+      43,
+      64,
+      95
+    ],
+    "timestamp": "2026-09-01T18:01:06.141Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "Parma vs Cremonese",
+    "league": "Copa Italia - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.87119002319315,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y chances claras. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      41
+    ],
+    "timestamp": "2026-09-01T18:01:06.439Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "Beitar Haifa vs Hapoel Daliat El Karmel",
+    "league": "FA Cup - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.5497083038890299,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, un equipo con 10 jugadores y marcador ajustado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-01T18:01:06.645Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "Singida Black Stars SC vs Namungo FC",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.8591694189049789,
+    "minute": 21,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego bajo pero no estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-01T18:01:06.800Z",
+    "alertTimestamp": "2026-09-01T16:21:27.391Z"
   }
 ]
