@@ -1,54 +1,5 @@
 [
   {
-    "match": "Cruz Azul vs Philadelphia Union",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8992497576606946,
-    "minute": 19,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, ventaja parcial",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      3
-    ],
-    "timestamp": "2026-08-07T13:14:42.342Z",
-    "alertTimestamp": "2026-08-07T00:19:30.169Z"
-  },
-  {
-    "match": "Colombia (F) vs Mexico (F)",
-    "league": "Juegos Centroamericanos y del Caribe (F) - Final",
-    "tier": "AVISO",
-    "probability": 0.8776931037981441,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      118,
-      121,
-      121,
-      122,
-      123,
-      124
-    ],
-    "timestamp": "2026-08-07T13:14:42.430Z",
-    "alertTimestamp": "2026-08-07T00:19:30.169Z"
-  },
-  {
     "match": "Blooming vs Always Ready",
     "league": "División Profesional",
     "tier": "AVISO",
@@ -21577,5 +21528,54 @@
     "goalMinutes": [],
     "timestamp": "2026-09-01T18:01:06.800Z",
     "alertTimestamp": "2026-09-01T16:21:27.391Z"
+  },
+  {
+    "match": "Boluspor vs Keciorengucu",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.8664508593897574,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Keciorengucu leads 0-2 with 3 shots on target, indicating a strong attacking performance.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      21
+    ],
+    "timestamp": "2026-09-01T18:51:25.394Z",
+    "alertTimestamp": "2026-09-01T17:01:29.082Z"
+  },
+  {
+    "match": "Polonia Środa vs Sandecja",
+    "league": "Polish Cup - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8952699373663974,
+    "minute": 21,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa igualado, con goles y remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      19,
+      45,
+      49,
+      65
+    ],
+    "timestamp": "2026-09-01T19:01:46.136Z",
+    "alertTimestamp": "2026-09-01T17:01:29.082Z"
   }
 ]
