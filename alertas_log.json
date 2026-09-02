@@ -1,81 +1,5 @@
 [
   {
-    "match": "SK Prostejov vs Karvina",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.885260429846864,
-    "minute": 15,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      29,
-      35,
-      62
-    ],
-    "timestamp": "2026-08-07T17:54:55.844Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Usti Nad Labem vs Arsenal Česká Lípa",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.9167456828549957,
-    "minute": 15,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      13,
-      31,
-      37,
-      72,
-      77,
-      81
-    ],
-    "timestamp": "2026-08-07T17:54:55.935Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Seravezza Pozzi vs Sestri Levante",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9008825426891983,
-    "minute": 10,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      26,
-      48,
-      79,
-      87
-    ],
-    "timestamp": "2026-08-07T17:54:56.118Z",
-    "alertTimestamp": "2026-08-07T16:14:48.442Z"
-  },
-  {
     "match": "FK Lietava Jonava vs Ekranas",
     "league": "I Lyga",
     "tier": "AVISO",
@@ -21612,5 +21536,76 @@
     ],
     "timestamp": "2026-09-02T18:03:18.727Z",
     "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Servette (F) vs Sparta Praha (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.559626645810281,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      46,
+      92
+    ],
+    "timestamp": "2026-09-02T19:01:18.368Z",
+    "alertTimestamp": "2026-09-02T16:50:05.153Z"
+  },
+  {
+    "match": "Sivasspor vs Mardin 1969",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.8764612164261245,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      35,
+      46,
+      62
+    ],
+    "timestamp": "2026-09-02T19:15:33.508Z",
+    "alertTimestamp": "2026-09-02T17:11:54.576Z"
+  },
+  {
+    "match": "Ceramica Cleopatra vs Modern Sport FC",
+    "league": "Primera División de Egipto",
+    "tier": "AVISO",
+    "probability": 0.8593135875353524,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, pero hay big chance y tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      63
+    ],
+    "timestamp": "2026-09-02T19:15:53.681Z",
+    "alertTimestamp": "2026-09-02T17:11:54.576Z"
   }
 ]
