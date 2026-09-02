@@ -1,45 +1,5 @@
 {
   "alertedMatches": {
-    "4786562_AVISO": {
-      "timestamp": 1788367202870,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4675517_AVISO": {
-      "timestamp": 1788367805153,
-      "minute": 61,
-      "tier": "AVISO"
-    },
-    "4809286_AVISO": {
-      "timestamp": 1788369559137,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4804606_AVISO": {
-      "timestamp": 1788369559137,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4824034_AVISO": {
-      "timestamp": 1788369559137,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4766991_AVISO": {
-      "timestamp": 1788369559137,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4818853_AVISO": {
-      "timestamp": 1788369559137,
-      "minute": 62,
-      "tier": "AVISO"
-    },
-    "4815371_AVISO": {
-      "timestamp": 1788370933886,
-      "minute": 79,
-      "tier": "AVISO"
-    },
     "4731512_AVISO": {
       "timestamp": 1788373458412,
       "minute": 20,
@@ -89,13 +49,43 @@
       "timestamp": 1788377880280,
       "minute": 77,
       "tier": "AVISO"
+    },
+    "4738722_AVISO": {
+      "timestamp": 1788379812632,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4844482_AVISO": {
+      "timestamp": 1788379812632,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4797312_AVISO": {
+      "timestamp": 1788379812632,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4741665_AVISO": {
+      "timestamp": 1788381676056,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4665939_AVISO": {
+      "timestamp": 1788381676056,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4746176_AVISO": {
+      "timestamp": 1788381676056,
+      "minute": 78,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 5601,
-    "verified": 5520,
-    "withGoalTimeline": 3695,
+    "total": 5618,
+    "verified": 5592,
+    "withGoalTimeline": 3747,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-02T19:43:55.606Z"
+  "lastUpdated": "2026-09-02T20:47:36.460Z"
 }

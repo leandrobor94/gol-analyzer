@@ -1,330 +1,5 @@
 [
   {
-    "match": "FK Lietava Jonava vs Ekranas",
-    "league": "I Lyga",
-    "tier": "AVISO",
-    "probability": 0.9504328443641795,
-    "minute": 3,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      43,
-      64,
-      93
-    ],
-    "timestamp": "2026-08-07T22:55:37.629Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Kuressaare vs Harju Jalgpallikool",
-    "league": "Meistriliiga",
-    "tier": "AVISO",
-    "probability": 0.9314725247889799,
-    "minute": 3,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      47,
-      58,
-      70,
-      91,
-      96
-    ],
-    "timestamp": "2026-08-07T22:55:37.672Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Rustavi vs Torpedo Kutaisi",
-    "league": "Erovnuli Liga",
-    "tier": "AVISO",
-    "probability": 0.920334428231446,
-    "minute": 1,
-    "scoreAtAlert": "2-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empezado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      12
-    ],
-    "timestamp": "2026-08-07T22:55:37.715Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Dukla Praha vs Slavia Kromeriz",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.9154246187411993,
-    "minute": 4,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      35,
-      78
-    ],
-    "timestamp": "2026-08-07T22:55:37.734Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "AEK Larnaca vs Karmiotissa",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8903998520517685,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      11,
-      49,
-      84
-    ],
-    "timestamp": "2026-08-07T22:55:37.758Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Gor Mahia vs Rayon Sports",
-    "league": "CECAFA Kagame Cup",
-    "tier": "AVISO",
-    "probability": 0.886328499603442,
-    "minute": 15,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T22:55:37.789Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "Girona FC vs CE Sabadell",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.920334428231446,
-    "minute": 1,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empezando",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      17,
-      47,
-      58,
-      93
-    ],
-    "timestamp": "2026-08-07T22:55:37.813Z",
-    "alertTimestamp": "2026-08-07T16:35:21.732Z"
-  },
-  {
-    "match": "Huesca vs Andorra CF",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.917753318621809,
-    "minute": 3,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      14,
-      54,
-      73,
-      82
-    ],
-    "timestamp": "2026-08-07T22:55:37.836Z",
-    "alertTimestamp": "2026-08-07T16:35:21.732Z"
-  },
-  {
-    "match": "St. Pölten vs Austria Vienna (AM)",
-    "league": "2º División de Austria",
-    "tier": "AVISO",
-    "probability": 0.9082787723048245,
-    "minute": 5,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, sin goles",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      40
-    ],
-    "timestamp": "2026-08-07T22:55:37.935Z",
-    "alertTimestamp": "2026-08-07T16:35:21.732Z"
-  },
-  {
-    "match": "Middlefart vs Brabrand",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.9082787723048245,
-    "minute": 5,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      28,
-      53,
-      90
-    ],
-    "timestamp": "2026-08-07T22:55:37.965Z",
-    "alertTimestamp": "2026-08-07T16:35:21.732Z"
-  },
-  {
-    "match": "FC Liefering vs FC Hertha Wels",
-    "league": "2º División de Austria",
-    "tier": "AVISO",
-    "probability": 0.8338630775001415,
-    "minute": 3,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      14,
-      31,
-      50,
-      79,
-      85
-    ],
-    "timestamp": "2026-08-07T22:55:37.984Z",
-    "alertTimestamp": "2026-08-07T16:35:21.732Z"
-  },
-  {
-    "match": "VFB Oldenburg vs Drochtersen / Assel",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8843360842935271,
-    "minute": 15,
-    "scoreAtAlert": "0-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T22:55:38.004Z",
-    "alertTimestamp": "2026-08-07T16:45:26.259Z"
-  },
-  {
-    "match": "Hannover 96 II vs Hannoverscher SC",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8843360842935271,
-    "minute": 15,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T22:55:38.019Z",
-    "alertTimestamp": "2026-08-07T16:45:26.259Z"
-  },
-  {
-    "match": "Slavia Mozyr vs Dnepr Mogilev",
-    "league": "Vysshaya Liga",
-    "tier": "AVISO",
-    "probability": 0.8807179746647705,
-    "minute": 10,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      43,
-      65,
-      84
-    ],
-    "timestamp": "2026-08-07T22:55:38.075Z",
-    "alertTimestamp": "2026-08-07T16:55:44.039Z"
-  },
-  {
     "match": "B93 Copenhagen vs FC Roskilde",
     "league": "1st Division",
     "tier": "AVISO",
@@ -21607,5 +21282,333 @@
     ],
     "timestamp": "2026-09-02T19:15:53.681Z",
     "alertTimestamp": "2026-09-02T17:11:54.576Z"
+  },
+  {
+    "match": "Koge (F) vs PSV (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8920157188601597,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      46,
+      63
+    ],
+    "timestamp": "2026-09-02T20:02:37.810Z",
+    "alertTimestamp": "2026-09-02T17:11:54.576Z"
+  },
+  {
+    "match": "Feyenoord (F) vs Rsc Anderlecht (F)",
+    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8834117797185305,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador 2-0 y xG estimado alto para el local. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      10,
+      23,
+      37
+    ],
+    "timestamp": "2026-09-02T20:03:10.763Z",
+    "alertTimestamp": "2026-09-02T17:11:54.576Z"
+  },
+  {
+    "match": "Sampaio Corrêa-RJ vs Nova Iguaçu",
+    "league": "Copa Rio - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.5665950197968342,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado en semifinales, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      36,
+      50,
+      95
+    ],
+    "timestamp": "2026-09-02T20:04:31.360Z",
+    "alertTimestamp": "2026-09-02T17:54:00.737Z"
+  },
+  {
+    "match": "Baltika vs Krylya Sovetov Samara",
+    "league": "Copa de Rusia - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.5728771750309842,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-02T20:04:51.763Z",
+    "alertTimestamp": "2026-09-02T18:24:18.412Z"
+  },
+  {
+    "match": "Spartak Moscú vs Rodina Moscow",
+    "league": "Copa de Rusia - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.7226963127387656,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alta probabilidad del modelo, y no hay razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      36,
+      65,
+      78
+    ],
+    "timestamp": "2026-09-02T20:04:54.215Z",
+    "alertTimestamp": "2026-09-02T18:24:18.412Z"
+  },
+  {
+    "match": "Real Sociedad (F) vs Chelsea (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.6362000128015389,
+    "minute": 63,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, Chelsea lidera pero xG estimado y sin goles locales. Oportunidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-09-02T20:11:39.199Z",
+    "alertTimestamp": "2026-09-02T17:11:54.576Z"
+  },
+  {
+    "match": "Sparta Nijkerk vs SV Venray",
+    "league": "KNVB Cup - 1ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.901598351499689,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      86
+    ],
+    "timestamp": "2026-09-02T20:12:36.744Z",
+    "alertTimestamp": "2026-09-02T18:24:18.412Z"
+  },
+  {
+    "match": "Aarhus vs FC Midtjylland",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8855612358003014,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "A pesar del xG estimado, 4 grandes ocasiones para el visitante indican peligro.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      56
+    ],
+    "timestamp": "2026-09-02T20:12:36.991Z",
+    "alertTimestamp": "2026-09-02T18:24:18.412Z"
+  },
+  {
+    "match": "CE Sabadell vs FC Barcelona Atlètic",
+    "league": "Copa Catalunya",
+    "tier": "AVISO",
+    "probability": 0.5514278256529178,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      56,
+      87
+    ],
+    "timestamp": "2026-09-02T20:26:59.927Z",
+    "alertTimestamp": "2026-09-02T18:36:19.770Z"
+  },
+  {
+    "match": "Grasshopper Club vs FC St. Gallen",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.900250072895479,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      69
+    ],
+    "timestamp": "2026-09-02T20:27:00.142Z",
+    "alertTimestamp": "2026-09-02T19:00:17.797Z"
+  },
+  {
+    "match": "Juventus (F) vs St. Polten (F)",
+    "league": "Liga de Campeones Femenina - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8977279033040958,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      40,
+      56
+    ],
+    "timestamp": "2026-09-02T20:27:00.219Z",
+    "alertTimestamp": "2026-09-02T19:00:17.797Z"
+  },
+  {
+    "match": "Widzew Lodz vs Korona Kielce",
+    "league": "Polish Cup - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8941419831021519,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 0-0, y el modelo da alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-09-02T20:27:00.413Z",
+    "alertTimestamp": "2026-09-02T19:00:17.797Z"
+  },
+  {
+    "match": "Luzern vs FC Vaduz",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.5550786301877935,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y muchas ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      46,
+      59,
+      91
+    ],
+    "timestamp": "2026-09-02T20:27:00.830Z",
+    "alertTimestamp": "2026-09-02T19:00:17.797Z"
+  },
+  {
+    "match": "Sportivo Trinidense (F) vs Cerro Porteño (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.591299226163432,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "El marcador 1-3 no es definitivo en el fútbol femenino, y el modelo aún ve valor.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      39,
+      51,
+      57,
+      75,
+      87
+    ],
+    "timestamp": "2026-09-02T20:43:38.217Z",
+    "alertTimestamp": "2026-09-02T20:10:12.633Z"
   }
 ]
