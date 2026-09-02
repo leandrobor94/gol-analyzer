@@ -1,148 +1,5 @@
 [
   {
-    "match": "Kuopion Palloseura II vs Fc Inter Turku 2",
-    "league": "Ykkonen",
-    "tier": "AVISO",
-    "probability": 0.9082787723048245,
-    "minute": 5,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      86
-    ],
-    "timestamp": "2026-08-07T17:24:46.314Z",
-    "alertTimestamp": "2026-08-07T15:34:45.330Z"
-  },
-  {
-    "match": "MTK Budapest vs Puskas FC Academy",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.9111506207996423,
-    "minute": 5,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      18,
-      23,
-      52,
-      78,
-      98
-    ],
-    "timestamp": "2026-08-07T17:34:46.681Z",
-    "alertTimestamp": "2026-08-07T15:34:45.330Z"
-  },
-  {
-    "match": "Etar vs Marek",
-    "league": "Vtora Liga",
-    "tier": "AVISO",
-    "probability": 0.927836095146344,
-    "minute": 1,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      72
-    ],
-    "timestamp": "2026-08-07T17:44:48.061Z",
-    "alertTimestamp": "2026-08-07T15:44:58.616Z"
-  },
-  {
-    "match": "Vysocina Jihlava vs Marila Pribram",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.9284186574937064,
-    "minute": 10,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      2,
-      78
-    ],
-    "timestamp": "2026-08-07T17:44:48.154Z",
-    "alertTimestamp": "2026-08-07T15:54:46.215Z"
-  },
-  {
-    "match": "Polonia Bytom vs Pogon Siedlce",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.9069683521682546,
-    "minute": 13,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      9,
-      68,
-      72,
-      82
-    ],
-    "timestamp": "2026-08-07T17:54:55.352Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
-    "match": "SJK Seinajoki vs Gnistan",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.9140038804555539,
-    "minute": 5,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, sin goles",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      9,
-      10,
-      11,
-      79
-    ],
-    "timestamp": "2026-08-07T17:54:55.451Z",
-    "alertTimestamp": "2026-08-07T16:04:53.010Z"
-  },
-  {
     "match": "SK Prostejov vs Karvina",
     "league": "Division 2",
     "tier": "AVISO",
@@ -21613,6 +21470,147 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-02T16:59:34.663Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "FC ML Vitebsk vs Belshina Bobruisk",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.7101177352742417,
+    "minute": 61,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      44,
+      54
+    ],
+    "timestamp": "2026-09-02T17:32:19.707Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Csikszereda Miercurea Ciuc (W) vs Breidablik (F)",
+    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8941419831021519,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa femenina, 0-0 en el minuto 20. Alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      55
+    ],
+    "timestamp": "2026-09-02T17:54:01.545Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Gubbio vs Vis Pesaro",
+    "league": "Copa Italia - Lega Pro - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8536778299733947,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aunque el marcador es 2-0, el partido está en el minuto 20 y hay mucho tiempo restante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      17,
+      73,
+      86,
+      90
+    ],
+    "timestamp": "2026-09-02T17:54:01.642Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Poprad vs MFK Ruzomberok",
+    "league": "Slovakia Cup - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6697243954250618,
+    "minute": 62,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no fiable, y 3 tiros a puerta del visitante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      30,
+      89
+    ],
+    "timestamp": "2026-09-02T18:03:08.365Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Udinese vs Venezia",
+    "league": "Copa Italia - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.517652823261087,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, ambos equipos con chances claras y xG estimado alto. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      34,
+      53
+    ],
+    "timestamp": "2026-09-02T18:03:08.640Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
+  },
+  {
+    "match": "Yantra Gabrovo vs Pirin Blagoevgrad",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.8868820795065175,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      55,
+      92
+    ],
+    "timestamp": "2026-09-02T18:03:18.727Z",
     "alertTimestamp": "2026-09-02T16:21:20.489Z"
   }
 ]
