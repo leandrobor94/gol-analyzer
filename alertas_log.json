@@ -1,25 +1,5 @@
 [
   {
-    "match": "Kuopion Palloseura II vs Turku Ii",
-    "league": "Ykkonen",
-    "tier": "AVISO",
-    "probability": 0.9092319919381062,
-    "minute": 6,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, sin goles",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T17:24:46.219Z",
-    "alertTimestamp": "2026-08-07T15:34:45.330Z"
-  },
-  {
     "match": "Kuopion Palloseura II vs Fc Inter Turku 2",
     "league": "Ykkonen",
     "tier": "AVISO",
@@ -21614,5 +21594,25 @@
     ],
     "timestamp": "2026-09-02T02:02:04.054Z",
     "alertTimestamp": "2026-09-01T19:12:00.858Z"
+  },
+  {
+    "match": "Jadran LP vs Dubrava",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.5654119502641627,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-02T16:59:34.663Z",
+    "alertTimestamp": "2026-09-02T16:21:20.489Z"
   }
 ]
