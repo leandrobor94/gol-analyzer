@@ -1,25 +1,5 @@
 [
   {
-    "match": "JäPS vs MP Mikkeli",
-    "league": "Ykkosliiga",
-    "tier": "AVISO",
-    "probability": 0.9170997037240449,
-    "minute": 3,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T17:24:46.047Z",
-    "alertTimestamp": "2026-08-07T15:34:45.330Z"
-  },
-  {
     "match": "Kuopion Palloseura II vs Turku Ii",
     "league": "Ykkonen",
     "tier": "AVISO",
@@ -21602,6 +21582,37 @@
       28
     ],
     "timestamp": "2026-09-01T21:01:31.278Z",
+    "alertTimestamp": "2026-09-01T19:12:00.858Z"
+  },
+  {
+    "match": "Bari vs Picerno",
+    "league": "Copa Italia - Lega Pro - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8615886881325318,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      31,
+      90,
+      90,
+      122,
+      122,
+      124,
+      125,
+      129,
+      130
+    ],
+    "timestamp": "2026-09-02T02:02:04.054Z",
     "alertTimestamp": "2026-09-01T19:12:00.858Z"
   }
 ]
