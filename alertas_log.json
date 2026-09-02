@@ -1,29 +1,5 @@
 [
   {
-    "match": "B93 Copenhagen vs FC Roskilde",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.9417384727814712,
-    "minute": 4,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      1,
-      51,
-      78
-    ],
-    "timestamp": "2026-08-07T22:55:38.091Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
     "match": "Sonderjyske vs Viborg",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21609,6 +21585,29 @@
       87
     ],
     "timestamp": "2026-09-02T20:43:38.217Z",
+    "alertTimestamp": "2026-09-02T20:10:12.633Z"
+  },
+  {
+    "match": "Burnley vs Middlesbrough",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.528116060173768,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas chances claras para el visitante, y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      54
+    ],
+    "timestamp": "2026-09-02T21:01:22.760Z",
     "alertTimestamp": "2026-09-02T20:10:12.633Z"
   }
 ]

@@ -680548,12 +680548,28 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
-    "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "finalScore": {
+      "home": 2,
+      "away": 2
+    },
+    "goalAfterAnalysis": true,
+    "goalWithin15": false,
+    "goalMinutes": [
+      29,
+      32,
+      104,
+      112,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125
+    ],
+    "nextGoalMinute": 104,
+    "predictionCorrect": false,
     "alertCorrect": null,
     "probability": 0.3330516997187785,
     "probability15": 0.31066851671543305,
@@ -680633,7 +680649,23 @@
     "lambda": 0.06200550264144843,
     "strength": null,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T19:58:09.359Z"
+    "lastAnalyzedAt": "2026-09-02T19:58:09.359Z",
+    "goalSides": [
+      "away",
+      "home",
+      "away",
+      "home",
+      "away",
+      "away",
+      "home",
+      "away",
+      "home",
+      "away",
+      "home",
+      "away"
+    ],
+    "timelineConsistent": false,
+    "actualScorer": null
   },
   {
     "id": "4808811",
@@ -686024,12 +686056,19 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 2,
+      "away": 1
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      36,
+      53,
+      74
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.24155127843600419,
     "probability15": 0.20984598322654935,
@@ -686118,7 +686157,14 @@
     "lambda": 0.047105478916364574,
     "strength": 0.9706,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:41:16.056Z"
+    "lastAnalyzedAt": "2026-09-02T20:41:16.056Z",
+    "goalSides": [
+      "home",
+      "home",
+      "away"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4746173",
@@ -686381,8 +686427,8 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.789026602324882,
-    "probability15": 0.4296556856861976,
+    "probability": 0.7816741156007887,
+    "probability15": 0.42190947798035283,
     "analysisMinute": 46,
     "scoreAtAnalysis": {
       "home": 2,
@@ -686411,8 +686457,8 @@
       "hitWoodworkAway": null,
       "cornersHome": 0,
       "cornersAway": 0,
-      "possessionHome": 0.64,
-      "possessionAway": 0.36,
+      "possessionHome": 0.63,
+      "possessionAway": 0.37,
       "foulsHome": null,
       "foulsAway": null,
       "yellowCardsHome": 1,
@@ -686421,8 +686467,8 @@
       "redCardsAway": null,
       "offsideHome": null,
       "offsideAway": null,
-      "attacksHome": 57,
-      "attacksAway": 38,
+      "attacksHome": 63,
+      "attacksAway": 44,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -686465,10 +686511,10 @@
       "overround": 0.1034,
       "bookmakerId": 4
     },
-    "lambda": 0.03743433602165413,
-    "strength": 0.9064,
+    "lambda": 0.03653498733876508,
+    "strength": 0.9023,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4801408",
@@ -686492,8 +686538,8 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.7766223254903264,
-    "probability15": 0.4037013569861645,
+    "probability": 0.7709054365686555,
+    "probability15": 0.3979795464096878,
     "analysisMinute": 45,
     "scoreAtAnalysis": {
       "home": 0,
@@ -686522,46 +686568,46 @@
       "hitWoodworkAway": 0,
       "cornersHome": 0,
       "cornersAway": 1,
-      "possessionHome": 0.49,
-      "possessionAway": 0.51,
+      "possessionHome": 0.5,
+      "possessionAway": 0.5,
       "foulsHome": 8,
-      "foulsAway": 6,
+      "foulsAway": 8,
       "yellowCardsHome": 1,
       "yellowCardsAway": 0,
       "redCardsHome": null,
       "redCardsAway": null,
       "offsideHome": 2,
       "offsideAway": 0,
-      "attacksHome": 27,
-      "attacksAway": 34,
+      "attacksHome": 31,
+      "attacksAway": 39,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
       "touchesOppBoxAway": null,
       "savesHome": null,
       "savesAway": null,
-      "passesFinalThirdHome": 28,
-      "passesFinalThirdAway": 25,
+      "passesFinalThirdHome": 32,
+      "passesFinalThirdAway": 26,
       "crossesHome": 0,
       "crossesAway": 2,
       "keyPassesHome": 2,
       "keyPassesAway": 2,
-      "tacklesHome": 7,
+      "tacklesHome": 10,
       "tacklesAway": 5,
-      "interceptionsHome": 5,
-      "interceptionsAway": 4,
+      "interceptionsHome": 7,
+      "interceptionsAway": 5,
       "errorsLeadingToShotHome": null,
       "errorsLeadingToShotAway": null,
-      "clearancesHome": 7,
+      "clearancesHome": 9,
       "clearancesAway": 14,
-      "possessionLostHome": 58,
-      "possessionLostAway": 63,
+      "possessionLostHome": 70,
+      "possessionLostAway": 75,
       "possessionWonFinalThirdHome": null,
       "possessionWonFinalThirdAway": null,
-      "dribblesHome": 6,
-      "dribblesAway": 2,
-      "duelsWonHome": 28,
-      "duelsWonAway": 23,
+      "dribblesHome": 8,
+      "dribblesAway": 3,
+      "duelsWonHome": 36,
+      "duelsWonAway": 24,
       "aerialDuelsWonHome": 5,
       "aerialDuelsWonAway": 5
     },
@@ -686576,17 +686622,17 @@
       "overround": 0.1346,
       "bookmakerId": 4
     },
-    "lambda": 0.03446757723550766,
+    "lambda": 0.03383092387912319,
     "strength": 0.9528,
     "goalsMarket": {
       "line": 2.5,
-      "over": 2.2,
-      "under": 1.53,
+      "over": 1.31,
+      "under": 2.9,
       "bookmakerId": 4,
       "bookmaker": "BWIN",
-      "capturedAt": "2026-09-02T20:45:44.326Z"
+      "capturedAt": "2026-09-02T21:07:32.350Z"
     },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4826714",
@@ -686610,9 +686656,9 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.6308888225026082,
-    "probability15": 0.38511812155347724,
-    "analysisMinute": 60,
+    "probability": 0.4895224051447748,
+    "probability15": 0.4925565819486989,
+    "analysisMinute": 79,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 1
@@ -686694,17 +686740,17 @@
       "overround": 0.1215,
       "bookmakerId": 4
     },
-    "lambda": 0.0324216731459724,
-    "strength": 1.3405,
+    "lambda": 0.048455004700454746,
+    "strength": 1.3344,
     "goalsMarket": {
       "line": 2.5,
       "over": 2.63,
       "under": 1.45,
       "bookmakerId": 4,
       "bookmaker": "BWIN",
-      "capturedAt": "2026-09-02T20:45:44.446Z"
+      "capturedAt": "2026-09-02T21:07:52.483Z"
     },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4826715",
@@ -686728,9 +686774,9 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.6378029778052667,
-    "probability15": 0.40093262763588666,
-    "analysisMinute": 61,
+    "probability": 0.4953636854600682,
+    "probability15": 0.49942596842029585,
+    "analysisMinute": 79,
     "scoreAtAnalysis": {
       "home": 1,
       "away": 1
@@ -686762,14 +686808,14 @@
       "possessionAway": 0.44,
       "foulsHome": null,
       "foulsAway": null,
-      "yellowCardsHome": 0,
+      "yellowCardsHome": 1,
       "yellowCardsAway": 2,
       "redCardsHome": 0,
       "redCardsAway": 1,
       "offsideHome": null,
       "offsideAway": null,
-      "attacksHome": 92,
-      "attacksAway": 74,
+      "attacksHome": 104,
+      "attacksAway": 91,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -686812,17 +686858,17 @@
       "overround": 0.0907,
       "bookmakerId": 4
     },
-    "lambda": 0.034158747497339215,
+    "lambda": 0.04942855542293419,
     "strength": 1.55,
     "goalsMarket": {
       "line": 3.5,
-      "over": 2.26,
-      "under": 1.58,
+      "over": 2.51,
+      "under": 1.5,
       "bookmakerId": 4,
       "bookmaker": "BWIN",
-      "capturedAt": "2026-09-02T20:45:44.405Z"
+      "capturedAt": "2026-09-02T21:07:42.425Z"
     },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4746824",
@@ -686839,12 +686885,21 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 5,
+      "away": 0
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      35,
+      40,
+      44,
+      58,
+      80
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.26773068694103574,
     "probability15": 0.23802107032704434,
@@ -686924,7 +686979,16 @@
     "lambda": 0.0543672750051247,
     "strength": 1.55,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "home",
+      "home",
+      "home",
+      "home",
+      "home"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4822665",
@@ -686948,8 +687012,8 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.7598381395737572,
-    "probability15": 0.38111685767369097,
+    "probability": 0.7533423595495902,
+    "probability15": 0.3749674418479326,
     "analysisMinute": 44,
     "scoreAtAnalysis": {
       "home": 0,
@@ -686957,13 +687021,13 @@
     },
     "stats": {
       "xgHome": 0.15,
-      "xgAway": 0,
+      "xgAway": 0.3,
       "xgotHome": null,
       "xgotAway": null,
       "sotHome": 1,
-      "sotAway": 0,
+      "sotAway": 2,
       "totalShotsHome": 1,
-      "totalShotsAway": 2,
+      "totalShotsAway": 4,
       "shotsInsideBoxHome": null,
       "shotsInsideBoxAway": null,
       "shotsOutsideBoxHome": null,
@@ -686977,7 +687041,7 @@
       "hitWoodworkHome": null,
       "hitWoodworkAway": null,
       "cornersHome": 3,
-      "cornersAway": 1,
+      "cornersAway": 2,
       "possessionHome": 0.5,
       "possessionAway": 0.5,
       "foulsHome": null,
@@ -686986,10 +687050,10 @@
       "yellowCardsAway": 1,
       "redCardsHome": null,
       "redCardsAway": null,
-      "offsideHome": 1,
+      "offsideHome": 2,
       "offsideAway": 1,
-      "attacksHome": 51,
-      "attacksAway": 48,
+      "attacksHome": 58,
+      "attacksAway": 53,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -687032,17 +687096,17 @@
       "overround": 0.1403,
       "bookmakerId": 4
     },
-    "lambda": 0.03198925391531744,
+    "lambda": 0.031330102503948215,
     "strength": null,
     "goalsMarket": {
       "line": 2.5,
-      "over": 5.75,
-      "under": 1.1,
+      "over": 8,
+      "under": 1.05,
       "bookmakerId": 4,
       "bookmaker": "BWIN",
-      "capturedAt": "2026-09-02T20:45:44.365Z"
+      "capturedAt": "2026-09-02T21:07:32.392Z"
     },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4826553",
@@ -687059,12 +687123,19 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 0,
+      "away": 3
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      12,
+      20,
+      59
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.3314091369488119,
     "probability15": 0.3088072676517635,
@@ -687153,7 +687224,14 @@
     "lambda": 0.05276236801286446,
     "strength": null,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "away",
+      "away",
+      "away"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4823819",
@@ -687177,9 +687255,9 @@
     "nextGoalMinute": null,
     "predictionCorrect": null,
     "alertCorrect": null,
-    "probability": 0.4928840776529183,
-    "probability15": 0.40228644187223694,
-    "analysisMinute": 73,
+    "probability": 0.2110684603157177,
+    "probability15": 0.17787614977466848,
+    "analysisMinute": 94,
     "scoreAtAnalysis": {
       "home": 0,
       "away": 0
@@ -687191,21 +687269,21 @@
       "xgotAway": null,
       "sotHome": 5,
       "sotAway": 1,
-      "totalShotsHome": 13,
+      "totalShotsHome": 17,
       "totalShotsAway": 3,
       "shotsInsideBoxHome": null,
       "shotsInsideBoxAway": null,
       "shotsOutsideBoxHome": null,
       "shotsOutsideBoxAway": null,
-      "shotsOffTargetHome": 6,
+      "shotsOffTargetHome": 7,
       "shotsOffTargetAway": 1,
-      "blockedShotsHome": 2,
+      "blockedShotsHome": 5,
       "blockedShotsAway": 1,
       "bigChancesHome": null,
       "bigChancesAway": null,
       "hitWoodworkHome": 0,
       "hitWoodworkAway": 0,
-      "cornersHome": 6,
+      "cornersHome": 7,
       "cornersAway": 1,
       "possessionHome": 0.5,
       "possessionAway": 0.5,
@@ -687217,8 +687295,8 @@
       "redCardsAway": null,
       "offsideHome": 0,
       "offsideAway": 0,
-      "attacksHome": 58,
-      "attacksAway": 48,
+      "attacksHome": 68,
+      "attacksAway": 57,
       "xgHomeA": null,
       "xgAwayA": null,
       "touchesOppBoxHome": null,
@@ -687261,17 +687339,10 @@
       "overround": 0.1095,
       "bookmakerId": 4
     },
-    "lambda": 0.03430957597165997,
+    "lambda": 0.048966056475391165,
     "strength": null,
-    "goalsMarket": {
-      "line": 2.5,
-      "over": 7.5,
-      "under": 1.07,
-      "bookmakerId": 4,
-      "bookmaker": "BWIN",
-      "capturedAt": "2026-09-02T20:45:44.489Z"
-    },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "goalsMarket": null,
+    "lastAnalyzedAt": "2026-09-02T21:07:52.484Z"
   },
   {
     "id": "4818863",
@@ -687679,15 +687750,23 @@
       "ev": 0.2063,
       "bookmaker": "BWIN",
       "minuteAtBet": 78,
-      "goalsAtBet": 2
+      "goalsAtBet": 2,
+      "won": false,
+      "profit": -1
     },
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 1,
+      "away": 1
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      23,
+      54
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
-    "alertCorrect": null,
+    "predictionCorrect": true,
+    "alertCorrect": false,
     "probability": 0.2567448653318231,
     "probability15": 0.22612294589128157,
     "analysisMinute": 88,
@@ -687782,7 +687861,14 @@
       "bookmaker": "BWIN",
       "capturedAt": "2026-09-02T20:46:37.012Z"
     },
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "away",
+      "home"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null,
+    "alertCorrect15": false
   },
   {
     "id": "4812179",
@@ -687799,12 +687885,17 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 0,
+      "away": 1
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      69
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.249577871086356,
     "probability15": 0.21841831543276546,
@@ -687893,7 +687984,12 @@
     "lambda": 0.04928712235679364,
     "strength": null,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "away"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4764174",
@@ -687910,12 +688006,19 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 3,
+      "away": 0
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      7,
+      55,
+      82
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.34722589723044966,
     "probability15": 0.32679167314856916,
@@ -687995,7 +688098,14 @@
     "lambda": 0.04946255596020345,
     "strength": 0.8985,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "home",
+      "home",
+      "home"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4754366",
@@ -688012,12 +688122,21 @@
     "alertMinute": null,
     "aiDecision": null,
     "bet": null,
-    "finalScore": null,
-    "goalAfterAnalysis": null,
-    "goalWithin15": null,
-    "goalMinutes": null,
+    "finalScore": {
+      "home": 4,
+      "away": 1
+    },
+    "goalAfterAnalysis": false,
+    "goalWithin15": false,
+    "goalMinutes": [
+      48,
+      60,
+      68,
+      76,
+      82
+    ],
     "nextGoalMinute": null,
-    "predictionCorrect": null,
+    "predictionCorrect": true,
     "alertCorrect": null,
     "probability": 0.2846022779631102,
     "probability15": 0.2564893242409181,
@@ -688097,7 +688216,16 @@
     "lambda": 0.04939535906612324,
     "strength": 1.55,
     "goalsMarket": null,
-    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z"
+    "lastAnalyzedAt": "2026-09-02T20:46:37.139Z",
+    "goalSides": [
+      "home",
+      "away",
+      "home",
+      "home",
+      "home"
+    ],
+    "timelineConsistent": true,
+    "actualScorer": null
   },
   {
     "id": "4764171",
