@@ -1,109 +1,5 @@
 [
   {
-    "match": "Fulham vs Crystal Palace",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9100318341110395,
-    "minute": 15,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      33,
-      48
-    ],
-    "timestamp": "2026-08-07T22:55:38.475Z",
-    "alertTimestamp": "2026-08-07T17:14:47.210Z"
-  },
-  {
-    "match": "FC Winterthur vs FC Wil 1900",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.9409564734238942,
-    "minute": 4,
-    "scoreAtAlert": "3-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, resultado abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      2,
-      9,
-      18,
-      49,
-      84
-    ],
-    "timestamp": "2026-08-07T22:55:38.558Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "SC Kriens vs Yverdon-Sport FC",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.9338158700102656,
-    "minute": 3,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      38,
-      67
-    ],
-    "timestamp": "2026-08-07T22:55:38.590Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "SCR Altach vs WSG Tirol",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.9252294279954832,
-    "minute": 5,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      13,
-      19,
-      56,
-      86
-    ],
-    "timestamp": "2026-08-07T22:55:38.737Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "07 Vestur vs Streymur",
-    "league": "Formuladeildin",
-    "tier": "AVISO",
-    "probability": 0.924831555700706,
-    "minute": 5,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      22,
-      24,
-      29,
-      70
-    ],
-    "timestamp": "2026-08-07T22:55:38.766Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
     "match": "Hércules vs Castellón",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21640,5 +21536,114 @@
     ],
     "timestamp": "2026-09-03T18:30:21.250Z",
     "alertTimestamp": "2026-09-03T16:41:12.689Z"
+  },
+  {
+    "match": "Gimnasia de Mendoza (Reserva) vs Rosario Central (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8993594653196278,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y xG estimado no fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-03T20:00:11.198Z",
+    "alertTimestamp": "2026-09-03T17:59:59.105Z"
+  },
+  {
+    "match": "Barracas Central (Reserva) vs Banfield (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8608967643205772,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-03T20:00:11.279Z",
+    "alertTimestamp": "2026-09-03T17:59:59.105Z"
+  },
+  {
+    "match": "Albion vs Progreso",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.901598351499689,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador ajustado y sin datos que contradigan la probabilidad del modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      79,
+      95
+    ],
+    "timestamp": "2026-09-03T20:00:11.315Z",
+    "alertTimestamp": "2026-09-03T18:10:12.590Z"
+  },
+  {
+    "match": "Panathinaikos vs Niki Volos",
+    "league": "Copa griega - Fase de Liga",
+    "tier": "AVISO",
+    "probability": 0.5196502009556764,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los minutos restantes.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      59
+    ],
+    "timestamp": "2026-09-03T20:00:11.373Z",
+    "alertTimestamp": "2026-09-03T18:10:12.590Z"
+  },
+  {
+    "match": "Kawkab Marrakech vs CR Khemis Zemamra",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8941419831021519,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      18,
+      32
+    ],
+    "timestamp": "2026-09-03T20:00:11.619Z",
+    "alertTimestamp": "2026-09-03T18:20:35.182Z"
   }
 ]
