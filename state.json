@@ -1,91 +1,16 @@
 {
   "alertedMatches": {
-    "4731512_AVISO": {
-      "timestamp": 1788373458412,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4808813_AVISO": {
-      "timestamp": 1788373458412,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4809281_AVISO": {
-      "timestamp": 1788373458412,
-      "minute": 63,
-      "tier": "AVISO"
-    },
-    "4809288_AVISO": {
-      "timestamp": 1788373458412,
+    "4826725_AVISO": {
+      "timestamp": 1788402779957,
       "minute": 76,
-      "tier": "AVISO"
-    },
-    "4738723_AVISO": {
-      "timestamp": 1788375617797,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4809283_AVISO": {
-      "timestamp": 1788375617797,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4805417_AVISO": {
-      "timestamp": 1788375617797,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4745333_AVISO": {
-      "timestamp": 1788376390054,
-      "minute": 60,
-      "tier": "AVISO"
-    },
-    "4745335_AVISO": {
-      "timestamp": 1788377880280,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4811930_AVISO": {
-      "timestamp": 1788377880280,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4738722_AVISO": {
-      "timestamp": 1788379812632,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4844482_AVISO": {
-      "timestamp": 1788379812632,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4797312_AVISO": {
-      "timestamp": 1788379812632,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4741665_AVISO": {
-      "timestamp": 1788381676056,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4665939_AVISO": {
-      "timestamp": 1788381676056,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4746176_AVISO": {
-      "timestamp": 1788381676056,
-      "minute": 78,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 5618,
-    "verified": 5600,
-    "withGoalTimeline": 3755,
+    "total": 5627,
+    "verified": 5616,
+    "withGoalTimeline": 3767,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-02T21:11:13.933Z"
+  "lastUpdated": "2026-09-03T02:52:25.492Z"
 }

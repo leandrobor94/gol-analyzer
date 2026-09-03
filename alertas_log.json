@@ -1,47 +1,5 @@
 [
   {
-    "match": "Sonderjyske vs Viborg",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.932649880580838,
-    "minute": 3,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T22:55:38.120Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "Östersunds FK vs GIF Sundsvall",
-    "league": "Superettan",
-    "tier": "AVISO",
-    "probability": 0.927838073979506,
-    "minute": 4,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      23
-    ],
-    "timestamp": "2026-08-07T22:55:38.174Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
     "match": "Cd Alfaro vs Tudelano",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21608,6 +21566,58 @@
       54
     ],
     "timestamp": "2026-09-02T21:01:22.760Z",
+    "alertTimestamp": "2026-09-02T20:10:12.633Z"
+  },
+  {
+    "match": "Macara vs Manta",
+    "league": "Liga Pro",
+    "tier": "AVISO",
+    "probability": 0.5469514828312526,
+    "minute": 78,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos, y un expulsado que puede abrir el juego.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      43,
+      55,
+      61,
+      80,
+      85,
+      89
+    ],
+    "timestamp": "2026-09-03T02:02:38.685Z",
+    "alertTimestamp": "2026-09-02T20:10:12.633Z"
+  },
+  {
+    "match": "Falkirk vs Rangers",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.5864058568432969,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      44,
+      79
+    ],
+    "timestamp": "2026-09-03T02:12:38.103Z",
     "alertTimestamp": "2026-09-02T20:10:12.633Z"
   }
 ]
