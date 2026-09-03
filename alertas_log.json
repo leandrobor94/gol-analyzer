@@ -1,109 +1,5 @@
 [
   {
-    "match": "Tienen vs RWDM",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9184115220987227,
-    "minute": 2,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido recién iniciado",
-      "provider": "groq"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-07T22:55:38.229Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "Vaxjo DFF (F) vs FC Rosengard (F)",
-    "league": "Damallsvenskan",
-    "tier": "AVISO",
-    "probability": 0.9380899393245138,
-    "minute": 25,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      17,
-      21
-    ],
-    "timestamp": "2026-08-07T22:55:38.247Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "Levante Badalona (F) vs Villarreal (F)",
-    "league": "Amistosos (F)",
-    "tier": "AVISO",
-    "probability": 0.9178389270423107,
-    "minute": 13,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      7,
-      36,
-      38,
-      48,
-      86,
-      87
-    ],
-    "timestamp": "2026-08-07T22:55:38.309Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "Sandefjord vs KFUM Oslo",
-    "league": "Eliteserien",
-    "tier": "AVISO",
-    "probability": 0.8982437467142944,
-    "minute": 15,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      48
-    ],
-    "timestamp": "2026-08-07T22:55:38.344Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "Zbrojovka Brno vs Slovan Liberec",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.7258873498308339,
-    "minute": 45,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      61
-    ],
-    "timestamp": "2026-08-07T22:55:38.383Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
     "match": "AIK (F) vs Brommapojkarna (F)",
     "league": "Damallsvenskan",
     "tier": "AVISO",
@@ -21618,5 +21514,122 @@
     ],
     "timestamp": "2026-09-03T16:10:59.462Z",
     "alertTimestamp": "2026-09-03T02:02:26.631Z"
+  },
+  {
+    "match": "Fajr Sepasi vs Mes Shahr-E Babak",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.5816264036705714,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      51
+    ],
+    "timestamp": "2026-09-03T17:30:15.874Z",
+    "alertTimestamp": "2026-09-03T16:10:58.524Z"
+  },
+  {
+    "match": "Al Feiha vs Al-Kholood",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.8917262263084478,
+    "minute": 25,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, muchas chances de gol, y xG estimado no es confiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      14,
+      57,
+      88
+    ],
+    "timestamp": "2026-09-03T17:50:15.143Z",
+    "alertTimestamp": "2026-09-03T16:10:58.524Z"
+  },
+  {
+    "match": "FC Thisted vs Sonderjyske",
+    "league": "DBU Pokalen - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8931030902383278,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 0-0, y el modelo da alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      63
+    ],
+    "timestamp": "2026-09-03T17:50:15.175Z",
+    "alertTimestamp": "2026-09-03T16:10:58.524Z"
+  },
+  {
+    "match": "FK Lokomotiv Gorna Oryahovitsa vs Dobrudzha",
+    "league": "Vtora Liga",
+    "tier": "AVISO",
+    "probability": 0.5348041180794817,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      80
+    ],
+    "timestamp": "2026-09-03T17:50:15.206Z",
+    "alertTimestamp": "2026-09-03T16:10:58.524Z"
+  },
+  {
+    "match": "Rakow Czestochowa vs Gornik Zabrze",
+    "league": "Ekstraklasa",
+    "tier": "AVISO",
+    "probability": 0.8652652066232314,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y una gran ocasión ya generada.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      34,
+      79
+    ],
+    "timestamp": "2026-09-03T17:59:59.504Z",
+    "alertTimestamp": "2026-09-03T16:10:58.524Z"
   }
 ]
