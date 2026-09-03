@@ -1,96 +1,5 @@
 [
   {
-    "match": "Hércules vs Castellón",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8923276417792976,
-    "minute": 13,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      121,
-      122,
-      122,
-      123,
-      124,
-      124,
-      125,
-      125,
-      127
-    ],
-    "timestamp": "2026-08-07T22:55:38.792Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "Racing de Santander vs Alavés",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8945676408556633,
-    "minute": 11,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      45,
-      68,
-      121,
-      121,
-      122,
-      122,
-      123,
-      123,
-      124,
-      124,
-      125,
-      125,
-      126,
-      126,
-      129
-    ],
-    "timestamp": "2026-08-07T22:55:38.823Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "FC Stade Lausanne Ouchy vs FC Rapperswil-Jona",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.9057703100752663,
-    "minute": 4,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      89
-    ],
-    "timestamp": "2026-08-07T22:55:38.877Z",
-    "alertTimestamp": "2026-08-07T17:34:46.576Z"
-  },
-  {
-    "match": "Chiclana vs Xerez",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9183976362586282,
-    "minute": 1,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      73
-    ],
-    "timestamp": "2026-08-07T22:55:38.956Z",
-    "alertTimestamp": "2026-08-07T17:44:47.968Z"
-  },
-  {
     "match": "Operário-PR vs São Bernardo",
     "league": "Brasileirão - Série B",
     "tier": "AVISO",
@@ -21645,5 +21554,99 @@
     ],
     "timestamp": "2026-09-03T20:00:11.619Z",
     "alertTimestamp": "2026-09-03T18:20:35.182Z"
+  },
+  {
+    "match": "FC Tzeiri Tira vs SC Sderot",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.895379955651873,
+    "minute": 25,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      9,
+      22,
+      36,
+      56
+    ],
+    "timestamp": "2026-09-03T20:11:05.107Z",
+    "alertTimestamp": "2026-09-03T18:20:35.182Z"
+  },
+  {
+    "match": "Silesia Breslavia vs Pogon",
+    "league": "Polish Cup - 32avos de final",
+    "tier": "AVISO",
+    "probability": 0.8736574215527015,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      64,
+      84
+    ],
+    "timestamp": "2026-09-03T20:30:06.883Z",
+    "alertTimestamp": "2026-09-03T18:30:20.844Z"
+  },
+  {
+    "match": "Anderlecht vs KV Kortrijk",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.87063113976124,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, muchas chances de gol, liga de alto scoring.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      43
+    ],
+    "timestamp": "2026-09-03T20:30:06.971Z",
+    "alertTimestamp": "2026-09-03T18:40:39.435Z"
+  },
+  {
+    "match": "Toulouse vs Lille",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5830451351194557,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG alto para el local a pesar de ser estimado. El modelo da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-09-03T20:40:46.516Z",
+    "alertTimestamp": "2026-09-03T18:50:00.460Z"
   }
 ]
