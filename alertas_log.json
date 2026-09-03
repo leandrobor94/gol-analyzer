@@ -1,29 +1,5 @@
 [
   {
-    "match": "Cd Alfaro vs Tudelano",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.920334428231446,
-    "minute": 1,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empezando",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      44,
-      56,
-      60
-    ],
-    "timestamp": "2026-08-07T22:55:38.202Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
     "match": "Tienen vs RWDM",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21619,5 +21595,28 @@
     ],
     "timestamp": "2026-09-03T02:12:38.103Z",
     "alertTimestamp": "2026-09-02T20:10:12.633Z"
+  },
+  {
+    "match": "Toluca vs León",
+    "league": "Leagues Cup - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.5398955751332912,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, xG estimado no fiable, y volumen de juego bajo pero no estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      41,
+      69
+    ],
+    "timestamp": "2026-09-03T16:10:59.462Z",
+    "alertTimestamp": "2026-09-03T02:02:26.631Z"
   }
 ]
