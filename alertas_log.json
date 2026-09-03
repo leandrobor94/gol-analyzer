@@ -1,41 +1,5 @@
 [
   {
-    "match": "AIK (F) vs Brommapojkarna (F)",
-    "league": "Damallsvenskan",
-    "tier": "AVISO",
-    "probability": 0.8992462863165276,
-    "minute": 15,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-08-07T22:55:38.406Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
-    "match": "SV Waldhof Mannheim 07 e.V. vs Fortuna Düsseldorf",
-    "league": "3. Liga - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8669444902934873,
-    "minute": 14,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      18,
-      48,
-      56
-    ],
-    "timestamp": "2026-08-07T22:55:38.439Z",
-    "alertTimestamp": "2026-08-07T17:05:02.298Z"
-  },
-  {
     "match": "Fulham vs Crystal Palace",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21631,5 +21595,50 @@
     ],
     "timestamp": "2026-09-03T17:59:59.504Z",
     "alertTimestamp": "2026-09-03T16:10:58.524Z"
+  },
+  {
+    "match": "Al Sailiya vs Al Arabi Doha",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.5481874575693222,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45,
+      77
+    ],
+    "timestamp": "2026-09-03T18:20:35.523Z",
+    "alertTimestamp": "2026-09-03T16:19:59.812Z"
+  },
+  {
+    "match": "Omonia vs Pafos FC",
+    "league": "Super Cup - Final",
+    "tier": "AVISO",
+    "probability": 0.8598693455220164,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, Supercopa. Aunque xG es estimado, el modelo da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-09-03T18:30:21.250Z",
+    "alertTimestamp": "2026-09-03T16:41:12.689Z"
   }
 ]
