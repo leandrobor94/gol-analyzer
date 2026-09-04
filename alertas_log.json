@@ -1,192 +1,5 @@
 [
   {
-    "match": "N.E.C. Nijmegen vs Telstar",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.9484827973153197,
-    "minute": 28,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "El marcador 0-2 y la alta probabilidad del modelo sugieren una alerta, a pesar del xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      24,
-      82
-    ],
-    "timestamp": "2026-08-08T16:27:53.847Z",
-    "alertTimestamp": "2026-08-08T14:38:53.379Z"
-  },
-  {
-    "match": "IFK Norrköping vs IK Brage",
-    "league": "Superettan",
-    "tier": "AVISO",
-    "probability": 0.9340137720112321,
-    "minute": 28,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      16,
-      32
-    ],
-    "timestamp": "2026-08-08T16:57:50.924Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Bukovyna vs Obolon Kyiv",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.870842794772214,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T16:57:51.081Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "SJK Akatemia vs PK-35",
-    "league": "Ykkosliiga",
-    "tier": "AVISO",
-    "probability": 0.7032726284358755,
-    "minute": 62,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T16:57:51.116Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Zlin vs Bohemians Praha",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.5731144469586185,
-    "minute": 80,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      9,
-      73
-    ],
-    "timestamp": "2026-08-08T16:57:51.350Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Mainz 05 vs Paris FC",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8813622426007798,
-    "minute": 26,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con xG estimado, pero el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      20,
-      32,
-      83,
-      87
-    ],
-    "timestamp": "2026-08-08T16:57:51.514Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Galanta vs FC Petrzalka",
-    "league": "2. Liga",
-    "tier": "AVISO",
-    "probability": 0.7199164418237259,
-    "minute": 60,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      39,
-      60,
-      63
-    ],
-    "timestamp": "2026-08-08T16:57:51.806Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Bashkimi vs Tikveš",
-    "league": "First League - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.7091055841924245,
-    "minute": 61,
-    "scoreAtAlert": "0-5",
-    "finalScore": "0-5",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T16:57:51.837Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Rennes vs Brentford",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8827902140532619,
-    "minute": 26,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador ajustado y sin datos de xG reales para desestimar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      20,
-      29,
-      46,
-      48,
-      49,
-      71
-    ],
-    "timestamp": "2026-08-08T16:57:51.918Z",
-    "alertTimestamp": "2026-08-08T15:18:29.088Z"
-  },
-  {
     "match": "Grazer AK vs Austria Lustenau",
     "league": "Bundesliga",
     "tier": "AVISO",
@@ -21681,5 +21494,188 @@
     ],
     "timestamp": "2026-09-04T19:57:29.307Z",
     "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Sfera U20 vs Ituano/Sp Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.8914667344957478,
+    "minute": 23,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T20:04:52.619Z",
+    "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Ec São Bernardo S20 vs Bandeirante SP/Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.9068175819265732,
+    "minute": 22,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de 16avos de final, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T20:04:52.715Z",
+    "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Velo Clube Youth vs Botafogo/Sp Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.8914667344957478,
+    "minute": 23,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      37,
+      54,
+      76
+    ],
+    "timestamp": "2026-09-04T20:04:52.911Z",
+    "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Al Shabab Riyadh vs Al Hilal Riyadh",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5276059041260599,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      53,
+      87
+    ],
+    "timestamp": "2026-09-04T20:04:53.539Z",
+    "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Al Ahli Jeddah vs Al Riyadh SC",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5742289386852284,
+    "minute": 77,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      43,
+      47,
+      61,
+      87
+    ],
+    "timestamp": "2026-09-04T20:05:04.657Z",
+    "alertTimestamp": "2026-09-04T18:04:58.399Z"
+  },
+  {
+    "match": "Las Palmas vs CD Leganés",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5208767374303634,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T20:24:58.793Z",
+    "alertTimestamp": "2026-09-04T18:34:56.302Z"
+  },
+  {
+    "match": "Stuttgart vs 1. FC Köln",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8660874940397114,
+    "minute": 22,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39,
+      60,
+      75,
+      81,
+      90
+    ],
+    "timestamp": "2026-09-04T20:36:07.875Z",
+    "alertTimestamp": "2026-09-04T18:34:56.302Z"
+  },
+  {
+    "match": "Genoa vs Como",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.5530256226811516,
+    "minute": 79,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      25,
+      30,
+      40,
+      78
+    ],
+    "timestamp": "2026-09-04T20:45:20.570Z",
+    "alertTimestamp": "2026-09-04T18:56:34.154Z"
+  },
+  {
+    "match": "Treaty United vs Wexford Youths",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.8582320074225471,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29
+    ],
+    "timestamp": "2026-09-04T20:45:21.495Z",
+    "alertTimestamp": "2026-09-04T18:56:34.154Z"
   }
 ]
