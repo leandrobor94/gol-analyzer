@@ -1,98 +1,5 @@
 [
   {
-    "match": "Orlando Pride vs Racing Louisville FC",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.877783214684881,
-    "minute": 26,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      16,
-      68
-    ],
-    "timestamp": "2026-08-08T01:16:11.416Z",
-    "alertTimestamp": "2026-08-07T23:15:42.852Z"
-  },
-  {
-    "match": "Ceará vs Ponte Preta",
-    "league": "Brasileirão - Série B",
-    "tier": "AVISO",
-    "probability": 0.87825559831193,
-    "minute": 25,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      29,
-      78
-    ],
-    "timestamp": "2026-08-08T01:25:48.429Z",
-    "alertTimestamp": "2026-08-07T23:35:47.806Z"
-  },
-  {
-    "match": "Real Tomayapo vs Real Oruro",
-    "league": "División Profesional",
-    "tier": "AVISO",
-    "probability": 0.9017125701038002,
-    "minute": 25,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      13,
-      43,
-      82
-    ],
-    "timestamp": "2026-08-08T01:25:48.463Z",
-    "alertTimestamp": "2026-08-07T23:35:47.806Z"
-  },
-  {
-    "match": "Charlotte FC vs Atlas",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8867960930421619,
-    "minute": 26,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto",
-      "provider": "groq"
-    },
-    "goalMinutes": [
-      78,
-      95
-    ],
-    "timestamp": "2026-08-08T01:45:37.385Z",
-    "alertTimestamp": "2026-08-07T23:45:47.585Z"
-  },
-  {
     "match": "NJ/NY Gotham FC vs San Diego Wave",
     "league": "NWSL",
     "tier": "AVISO",
@@ -21643,5 +21550,95 @@
     "goalMinutes": [],
     "timestamp": "2026-09-04T02:34:27.814Z",
     "alertTimestamp": "2026-09-04T01:53:56.140Z"
+  },
+  {
+    "match": "Matagalpa vs UNAN Managua",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5786808824742861,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T16:04:57.004Z",
+    "alertTimestamp": "2026-09-04T01:53:56.140Z"
+  },
+  {
+    "match": "Tepatitlán de Morelos vs Dorados de Sinaloa",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5490972595155229,
+    "minute": 77,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, un equipo con 10 jugadores y alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      32,
+      46,
+      52,
+      89
+    ],
+    "timestamp": "2026-09-04T16:04:58.117Z",
+    "alertTimestamp": "2026-09-04T01:53:56.140Z"
+  },
+  {
+    "match": "Volna Pinsk vs Dinamo Minsk II Reserve",
+    "league": "Pershaya Liga",
+    "tier": "AVISO",
+    "probability": 0.5693873645563137,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      35,
+      40,
+      47
+    ],
+    "timestamp": "2026-09-04T16:24:55.322Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "CSM Slatina vs CF Chindia Targoviste",
+    "league": "Liga 2 rumana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5388164623172382,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T16:24:55.428Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
   }
 ]
