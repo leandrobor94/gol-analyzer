@@ -1,100 +1,5 @@
 [
   {
-    "match": "NJ/NY Gotham FC vs San Diego Wave",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.8969676413038198,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      44
-    ],
-    "timestamp": "2026-08-08T02:21:19.021Z",
-    "alertTimestamp": "2026-08-08T00:25:37.890Z"
-  },
-  {
-    "match": "Universidad Católica vs Deportes Cobresal",
-    "league": "Liga de Primera",
-    "tier": "AVISO",
-    "probability": 0.555656912865484,
-    "minute": 82,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      60,
-      95
-    ],
-    "timestamp": "2026-08-08T02:30:58.705Z",
-    "alertTimestamp": "2026-08-08T00:35:37.711Z"
-  },
-  {
-    "match": "Independiente Rivadavia vs Estudiantes RC",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8856449312761467,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      71,
-      80,
-      88
-    ],
-    "timestamp": "2026-08-08T02:41:11.709Z",
-    "alertTimestamp": "2026-08-08T00:56:03.344Z"
-  },
-  {
-    "match": "México Sub21 vs Venezuela Sub21",
-    "league": "Juegos Centroamericanos y del Caribe - Final",
-    "tier": "AVISO",
-    "probability": 0.8880236457432494,
-    "minute": 26,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      2,
-      25,
-      30,
-      48
-    ],
-    "timestamp": "2026-08-08T02:50:59.526Z",
-    "alertTimestamp": "2026-08-08T00:05:37.538Z"
-  },
-  {
-    "match": "Tepatitlán de Morelos vs Atletico La Paz",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8811817924414624,
-    "minute": 26,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-5",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      31,
-      43,
-      58,
-      73,
-      92
-    ],
-    "timestamp": "2026-08-08T03:44:51.704Z",
-    "alertTimestamp": "2026-08-08T01:05:38.142Z"
-  },
-  {
     "match": "Atlas (F) vs Pachuca (F)",
     "league": "Liga Femenil BBVA - Apertura",
     "tier": "AVISO",
@@ -21639,6 +21544,111 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-04T16:24:55.428Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "Panthere vs Rayon Sports",
+    "league": "CAF Confederation Cup - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5237237852563719,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido apretado, marcador 1-0, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T17:05:09.899Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "Al Urooba vs Al Jazira Al Hamra",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5339184076627729,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      91
+    ],
+    "timestamp": "2026-09-04T17:05:10.020Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "Juárez Sub21 vs Pachuca Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5642230417643449,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y xG estimado no es fiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T17:14:24.632Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "PK-35 vs Ekenäs IF",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.5393693713869464,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con remates a puerta y xG estimado que sugiere actividad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-04T17:54:24.407Z",
+    "alertTimestamp": "2026-09-04T16:04:55.583Z"
+  },
+  {
+    "match": "Pogoń Grodzisk vs Warta Poznan",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5281189463171476,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, sin goles esperados reales, y con tiempo para un gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-09-04T17:54:25.464Z",
     "alertTimestamp": "2026-09-04T16:04:55.583Z"
   }
 ]
