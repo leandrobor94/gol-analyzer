@@ -1,20 +1,5 @@
 [
   {
-    "match": "Deportes Recoleta (F) vs Coquimbo Unido (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.933516291283307,
-    "minute": 28,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T22:41:45.994Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
     "match": "Austria Wien (W) vs Farul Constanta (F)",
     "league": "Liga de Campeones Femenina - Clasificación",
     "tier": "AVISO",
@@ -21671,5 +21656,23 @@
     ],
     "timestamp": "2026-09-05T01:45:23.521Z",
     "alertTimestamp": "2026-09-04T19:27:07.439Z"
+  },
+  {
+    "match": "Juventud Antoniana vs Kimberley Mar Del Plata",
+    "league": "Federal A - Segunda Fase - Zona B",
+    "tier": "AVISO",
+    "probability": 0.5193505080500843,
+    "minute": 78,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      40
+    ],
+    "timestamp": "2026-09-05T02:55:11.178Z",
+    "alertTimestamp": "2026-09-05T01:45:20.974Z"
   }
 ]
