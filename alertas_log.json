@@ -1,184 +1,5 @@
 [
   {
-    "match": "Grazer AK vs Austria Lustenau",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.9127085520253256,
-    "minute": 27,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      51,
-      66
-    ],
-    "timestamp": "2026-08-08T17:07:49.550Z",
-    "alertTimestamp": "2026-08-08T15:09:08.419Z"
-  },
-  {
-    "match": "Latte Dolce vs Torres",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.884265647385267,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      18,
-      77
-    ],
-    "timestamp": "2026-08-08T17:18:08.780Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Salernitana vs ASD Sambiase 2023",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8920697263487868,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      52,
-      63
-    ],
-    "timestamp": "2026-08-08T17:18:08.809Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Kisvarda vs Ujpest",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.9032849180981632,
-    "minute": 28,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      5,
-      15,
-      31,
-      78,
-      85,
-      92
-    ],
-    "timestamp": "2026-08-08T17:27:49.611Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Merelbeke vs Lierse SK",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9364211577159239,
-    "minute": 26,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      11
-    ],
-    "timestamp": "2026-08-08T17:27:59.666Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Pogon vs Motor Lublin",
-    "league": "Ekstraklasa",
-    "tier": "AVISO",
-    "probability": 0.6214722864024051,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      43,
-      90,
-      90
-    ],
-    "timestamp": "2026-08-08T17:27:59.966Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "SK Sturm AM vs Floridsdorfer AC",
-    "league": "2º División de Austria",
-    "tier": "AVISO",
-    "probability": 0.8904121414856956,
-    "minute": 24,
-    "scoreAtAlert": "3-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      20,
-      24,
-      47,
-      62,
-      88
-    ],
-    "timestamp": "2026-08-08T17:37:49.252Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Farul Constanta vs Csíkszereda Miercurea Ciuc",
-    "league": "Liga1",
-    "tier": "AVISO",
-    "probability": 0.7037246352430508,
-    "minute": 61,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      24,
-      28,
-      35,
-      40,
-      69
-    ],
-    "timestamp": "2026-08-08T17:37:49.292Z",
-    "alertTimestamp": "2026-08-08T15:38:27.065Z"
-  },
-  {
-    "match": "Tiszakecske vs Mezokovesd",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.6146023171658184,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T22:41:45.556Z",
-    "alertTimestamp": "2026-08-08T15:47:55.437Z"
-  },
-  {
     "match": "Deportes Recoleta (F) vs Coquimbo Unido (F)",
     "league": "Campeonato Femenino",
     "tier": "AVISO",
@@ -21677,5 +21498,178 @@
     ],
     "timestamp": "2026-09-04T20:45:21.495Z",
     "alertTimestamp": "2026-09-04T18:56:34.154Z"
+  },
+  {
+    "match": "Real Betis vs Real Madrid",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8738067869880206,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      81
+    ],
+    "timestamp": "2026-09-05T01:45:21.760Z",
+    "alertTimestamp": "2026-09-04T19:05:16.356Z"
+  },
+  {
+    "match": "Fleury 91 (F) vs Lyon (F)",
+    "league": "Campeonato Francés (F)",
+    "tier": "AVISO",
+    "probability": 0.8820688338103612,
+    "minute": 23,
+    "scoreAtAlert": "1-7",
+    "finalScore": "1-7",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      9,
+      11,
+      28,
+      31,
+      41,
+      47,
+      71
+    ],
+    "timestamp": "2026-09-05T01:45:21.865Z",
+    "alertTimestamp": "2026-09-04T19:05:16.356Z"
+  },
+  {
+    "match": "Shamrock vs Shelbourne",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8895859745397762,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T01:45:21.983Z",
+    "alertTimestamp": "2026-09-04T19:05:16.356Z"
+  },
+  {
+    "match": "Ipswich vs Liverpool",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.9019043289224016,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      9
+    ],
+    "timestamp": "2026-09-05T01:45:22.083Z",
+    "alertTimestamp": "2026-09-04T19:05:16.356Z"
+  },
+  {
+    "match": "Real Oruro vs San Antonio",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5337843557951105,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      87
+    ],
+    "timestamp": "2026-09-05T01:45:22.430Z",
+    "alertTimestamp": "2026-09-04T19:05:16.356Z"
+  },
+  {
+    "match": "PSG vs Monaco",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8743346059092847,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      31,
+      58,
+      72
+    ],
+    "timestamp": "2026-09-05T01:45:22.874Z",
+    "alertTimestamp": "2026-09-04T19:15:28.261Z"
+  },
+  {
+    "match": "Tre Penne vs Ss Cosmos",
+    "league": "Campionato - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6397012016607256,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44,
+      89
+    ],
+    "timestamp": "2026-09-05T01:45:23.075Z",
+    "alertTimestamp": "2026-09-04T19:27:07.439Z"
+  },
+  {
+    "match": "FC Porto vs Moreirense",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.6432911248151988,
+    "minute": 62,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      37,
+      58
+    ],
+    "timestamp": "2026-09-05T01:45:23.293Z",
+    "alertTimestamp": "2026-09-04T19:27:07.439Z"
+  },
+  {
+    "match": "Faetano vs Fiori",
+    "league": "Campionato - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8521674330814515,
+    "minute": 20,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      48,
+      71,
+      80
+    ],
+    "timestamp": "2026-09-05T01:45:23.521Z",
+    "alertTimestamp": "2026-09-04T19:27:07.439Z"
   }
 ]
