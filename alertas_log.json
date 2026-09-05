@@ -1,282 +1,5 @@
 [
   {
-    "match": "Coritiba vs Chapecoense",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8932878894821312,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      31,
-      82,
-      95
-    ],
-    "timestamp": "2026-08-09T01:41:43.313Z",
-    "alertTimestamp": "2026-08-08T23:31:43.877Z"
-  },
-  {
-    "match": "One Knoxville vs Sarasota Paradise",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8640432806644649,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      53,
-      84,
-      95
-    ],
-    "timestamp": "2026-08-09T01:41:43.378Z",
-    "alertTimestamp": "2026-08-08T23:42:01.090Z"
-  },
-  {
-    "match": "2 De Mayo (Reserva) vs Olimpia (Reserva)",
-    "league": "División Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.9388801310544794,
-    "minute": 26,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T01:41:43.521Z",
-    "alertTimestamp": "2026-08-08T23:52:35.639Z"
-  },
-  {
-    "match": "Inter Panamá CF (F) vs Santa Fe FC (F)",
-    "league": "Liga Femenina de Fútbol - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8951542178806934,
-    "minute": 22,
-    "scoreAtAlert": "8-0",
-    "finalScore": "9-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T01:52:09.341Z",
-    "alertTimestamp": "2026-08-09T00:01:55.686Z"
-  },
-  {
-    "match": "Deportes Temuco vs Magallanes",
-    "league": "Liga de Ascenso",
-    "tier": "AVISO",
-    "probability": 0.9029352259155182,
-    "minute": 20,
-    "scoreAtAlert": "3-4",
-    "finalScore": "3-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T02:01:43.661Z",
-    "alertTimestamp": "2026-08-09T00:11:44.779Z"
-  },
-  {
-    "match": "Louisville City vs San Antonio FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8895865800794043,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      78
-    ],
-    "timestamp": "2026-08-09T02:01:43.836Z",
-    "alertTimestamp": "2026-08-09T00:11:44.779Z"
-  },
-  {
-    "match": "Grecia vs Quepos Cambute",
-    "league": "Liga de Ascenso - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8959970324395145,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T02:11:42.427Z",
-    "alertTimestamp": "2026-08-09T00:01:55.686Z"
-  },
-  {
-    "match": "Barcelona SC vs Macara",
-    "league": "Liga Pro",
-    "tier": "AVISO",
-    "probability": 0.8954685945009253,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      15,
-      37,
-      54
-    ],
-    "timestamp": "2026-08-09T02:11:42.512Z",
-    "alertTimestamp": "2026-08-09T00:01:55.686Z"
-  },
-  {
-    "match": "Instituto vs Gimnasia de Mendoza",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8609020105003194,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      80
-    ],
-    "timestamp": "2026-08-09T02:31:42.044Z",
-    "alertTimestamp": "2026-08-09T00:32:45.017Z"
-  },
-  {
-    "match": "FC Tulsa vs Detroit City",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.88253234279262,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      51
-    ],
-    "timestamp": "2026-08-09T02:41:42.103Z",
-    "alertTimestamp": "2026-08-09T00:42:06.244Z"
-  },
-  {
-    "match": "Houston Dash vs Kansas City Current",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.8831318279158905,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      44,
-      81
-    ],
-    "timestamp": "2026-08-09T02:51:42.009Z",
-    "alertTimestamp": "2026-08-09T00:52:20.865Z"
-  },
-  {
-    "match": "North Texas vs Tacoma Defiance",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.8741090285158284,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T02:51:42.101Z",
-    "alertTimestamp": "2026-08-09T00:52:20.865Z"
-  },
-  {
-    "match": "Sport Boys vs Alianza Lima",
-    "league": "Liga 1 - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8711967333999393,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      28,
-      65
-    ],
-    "timestamp": "2026-08-09T13:01:30.440Z",
-    "alertTimestamp": "2026-08-09T01:02:20.376Z"
-  },
-  {
-    "match": "Atlético Morelia vs Cancún FC",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8841301336019396,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      51,
-      56,
-      87,
-      94
-    ],
-    "timestamp": "2026-08-09T13:01:30.705Z",
-    "alertTimestamp": "2026-08-09T01:02:20.376Z"
-  },
-  {
-    "match": "Jaiba Brava vs Cruz Azul Hidalgo",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.9067087373093463,
-    "minute": 22,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      26,
-      64
-    ],
-    "timestamp": "2026-08-09T13:01:30.933Z",
-    "alertTimestamp": "2026-08-09T01:02:20.376Z"
-  },
-  {
-    "match": "El Paso vs Oakland Roots",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.9076432336734654,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      9
-    ],
-    "timestamp": "2026-08-09T13:01:32.108Z",
-    "alertTimestamp": "2026-08-09T01:11:56.990Z"
-  },
-  {
     "match": "Chivas de Guadalajara vs FC Dallas",
     "league": "Leagues Cup",
     "tier": "AVISO",
@@ -21772,5 +21495,309 @@
     "goalMinutes": [],
     "timestamp": "2026-09-05T17:46:18.362Z",
     "alertTimestamp": "2026-09-05T15:56:42.775Z"
+  },
+  {
+    "match": "Komarno vs MFK Skalica",
+    "league": "Niké liga",
+    "tier": "AVISO",
+    "probability": 0.5336342390119057,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T17:55:37.140Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "St. Patricks vs Bohemians",
+    "league": "FAI Cup",
+    "tier": "AVISO",
+    "probability": 0.5802423433547415,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles en los minutos finales de una copa. Alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      101,
+      112
+    ],
+    "timestamp": "2026-09-05T18:06:46.738Z",
+    "alertTimestamp": "2026-09-05T15:16:54.134Z"
+  },
+  {
+    "match": "Brann vs Lillestrom",
+    "league": "Eliteserien",
+    "tier": "AVISO",
+    "probability": 0.9022325563589638,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      22,
+      89
+    ],
+    "timestamp": "2026-09-05T18:06:46.880Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "FC Rostov vs Fakel Voronezh",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8920154089202885,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      56,
+      59,
+      64,
+      89
+    ],
+    "timestamp": "2026-09-05T18:06:46.922Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "FK Sochi vs FC Pari Nizhny Novgorod",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.8815884424843031,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      77
+    ],
+    "timestamp": "2026-09-05T18:06:46.957Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "JKT Tanzania vs Pamba Jiji FC",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.9107096146376199,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aunque el xG es estimado y el marcador es 2-0, el modelo aún da un 91% de probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T18:06:47.034Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "FC Vaduz vs FC Lausanne-Sport",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8770759175535016,
+    "minute": 23,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, xG estimado alto para local, y muchas llegadas a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      23,
+      53,
+      60
+    ],
+    "timestamp": "2026-09-05T18:07:10.720Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "Artis Brno vs Viktoria Plzen",
+    "league": "Liga checa",
+    "tier": "AVISO",
+    "probability": 0.5427563081842699,
+    "minute": 77,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      30,
+      43,
+      44
+    ],
+    "timestamp": "2026-09-05T18:07:15.310Z",
+    "alertTimestamp": "2026-09-05T16:05:39.136Z"
+  },
+  {
+    "match": "Correcaminos \"B\" vs Mineros de Fresnillo",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.5666860508582262,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T18:07:15.604Z",
+    "alertTimestamp": "2026-09-05T16:16:03.705Z"
+  },
+  {
+    "match": "The New Saints vs Barry Town",
+    "league": "Cymru Premier",
+    "tier": "AVISO",
+    "probability": 0.8617217990751088,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      88
+    ],
+    "timestamp": "2026-09-05T18:17:19.495Z",
+    "alertTimestamp": "2026-09-05T16:27:42.588Z"
+  },
+  {
+    "match": "Schalke 04 vs Bayern Munich",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8871977099792817,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T18:27:15.858Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Hull City vs Aston Villa",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8782725899648011,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T18:27:15.910Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Keflavik vs Valur Reykjavik",
+    "league": "Besta-deild karla",
+    "tier": "AVISO",
+    "probability": 0.5524396907996643,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      52,
+      69
+    ],
+    "timestamp": "2026-09-05T18:27:23.780Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Rayo Vallecano vs Racing de Santander",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.9115464587881835,
+    "minute": 25,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      17,
+      28,
+      43,
+      47
+    ],
+    "timestamp": "2026-09-05T18:36:26.720Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Ceuta vs Celta de Vigo B",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5235209850731063,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      93
+    ],
+    "timestamp": "2026-09-05T18:36:26.773Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Vllaznia vs Partizani",
+    "league": "Abissnet Superiore",
+    "tier": "AVISO",
+    "probability": 0.5422582498201353,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      21,
+      48,
+      57,
+      98
+    ],
+    "timestamp": "2026-09-05T18:36:37.248Z",
+    "alertTimestamp": "2026-09-05T16:36:17.343Z"
   }
 ]
