@@ -1,212 +1,5 @@
 [
   {
-    "match": "Chivas de Guadalajara vs FC Dallas",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8689298280902028,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      73
-    ],
-    "timestamp": "2026-08-09T13:01:42.476Z",
-    "alertTimestamp": "2026-08-09T01:21:48.355Z"
-  },
-  {
-    "match": "Deportivo Pasto vs Deportivo Cali",
-    "league": "Liga BetPlay Dimayor - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8685446886219761,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      33,
-      65
-    ],
-    "timestamp": "2026-08-09T13:01:42.704Z",
-    "alertTimestamp": "2026-08-09T01:31:43.588Z"
-  },
-  {
-    "match": "UMECIT vs CD Árabe Unido",
-    "league": "Liga Panameña - Apertura - Conferencia Oeste",
-    "tier": "AVISO",
-    "probability": 0.874828945763498,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T13:01:42.930Z",
-    "alertTimestamp": "2026-08-09T01:31:43.588Z"
-  },
-  {
-    "match": "Real CD España vs Genesis Policía Nacional FC",
-    "league": "Liga Nacional - Apertura - Grupo Norte",
-    "tier": "AVISO",
-    "probability": 0.891146111335422,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      15,
-      93
-    ],
-    "timestamp": "2026-08-09T13:01:43.145Z",
-    "alertTimestamp": "2026-08-09T01:31:43.588Z"
-  },
-  {
-    "match": "Puntarenas FC vs Deportivo Saprissa",
-    "league": "Liga Promerica - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8793561201178216,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36,
-      73
-    ],
-    "timestamp": "2026-08-09T13:02:00.554Z",
-    "alertTimestamp": "2026-08-09T02:01:43.070Z"
-  },
-  {
-    "match": "Cashmere Technical vs Coastal Spirit",
-    "league": "National League",
-    "tier": "AVISO",
-    "probability": 0.9437032748016678,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T13:02:00.994Z",
-    "alertTimestamp": "2026-08-09T02:01:43.070Z"
-  },
-  {
-    "match": "Denver Summit vs Utah Royals",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.8947117921022082,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      51,
-      89,
-      94
-    ],
-    "timestamp": "2026-08-09T13:02:01.405Z",
-    "alertTimestamp": "2026-08-09T02:11:42.266Z"
-  },
-  {
-    "match": "Monterey Bay vs New Mexico",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.9190798167365472,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-5",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      31,
-      55,
-      74,
-      77,
-      86,
-      91
-    ],
-    "timestamp": "2026-08-09T13:02:01.722Z",
-    "alertTimestamp": "2026-08-09T02:11:42.266Z"
-  },
-  {
-    "match": "Real Salt Lake vs Atlante",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.874616817331129,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      50,
-      54,
-      90
-    ],
-    "timestamp": "2026-08-09T13:02:01.927Z",
-    "alertTimestamp": "2026-08-09T02:11:42.266Z"
-  },
-  {
-    "match": "Silesia Breslavia vs KS Cracovia",
-    "league": "Ekstraklasa",
-    "tier": "AVISO",
-    "probability": 0.8736228447464512,
-    "minute": 25,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado alto para el visitante y una gran ocasión creada.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T14:51:36.467Z",
-    "alertTimestamp": "2026-08-09T13:01:29.878Z"
-  },
-  {
-    "match": "Slavia Praga vs Pardubice",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.8903158223438008,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, muchas chances claras para el local. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      50,
-      52,
-      80
-    ],
-    "timestamp": "2026-08-09T15:01:16.463Z",
-    "alertTimestamp": "2026-08-09T13:01:29.878Z"
-  },
-  {
     "match": "FK Jelgava vs Auda",
     "league": "Virsliga Letonia",
     "tier": "AVISO",
@@ -21799,5 +21592,213 @@
     ],
     "timestamp": "2026-09-05T18:36:37.248Z",
     "alertTimestamp": "2026-09-05T16:36:17.343Z"
+  },
+  {
+    "match": "Keciorengucu vs Sariyer",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.5543648567916403,
+    "minute": 76,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      63,
+      84
+    ],
+    "timestamp": "2026-09-05T18:55:51.374Z",
+    "alertTimestamp": "2026-09-05T17:05:27.614Z"
+  },
+  {
+    "match": "Omonia Aradippou vs Krasava Ypsonas",
+    "league": "Cyta Championship",
+    "tier": "AVISO",
+    "probability": 0.5636167446694826,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      71,
+      89
+    ],
+    "timestamp": "2026-09-05T19:05:42.493Z",
+    "alertTimestamp": "2026-09-05T17:05:27.614Z"
+  },
+  {
+    "match": "Alverca vs SC Braga",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.5421503431908192,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      27,
+      50,
+      57
+    ],
+    "timestamp": "2026-09-05T19:05:42.744Z",
+    "alertTimestamp": "2026-09-05T17:05:27.614Z"
+  },
+  {
+    "match": "Tiszakecske vs Szentlorinc",
+    "league": "NB II - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8889953233869807,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T19:05:53.018Z",
+    "alertTimestamp": "2026-09-05T17:27:43.883Z"
+  },
+  {
+    "match": "Merreikh Al Sudan vs Power Dynamos",
+    "league": "CAF Champions League - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8878453967118209,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-09-05T19:05:53.081Z",
+    "alertTimestamp": "2026-09-05T17:27:43.883Z"
+  },
+  {
+    "match": "Maccabi Haifa Sub19 vs Hapoel Hadera Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.8811827275750889,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, sin datos de ocasiones claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      37,
+      65,
+      73,
+      89
+    ],
+    "timestamp": "2026-09-05T19:16:06.835Z",
+    "alertTimestamp": "2026-09-05T17:27:43.883Z"
+  },
+  {
+    "match": "Maccabi Tel Aviv Sub19 vs Hapoel Tel Aviv Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.5817893777351955,
+    "minute": 76,
+    "scoreAtAlert": "5-2",
+    "finalScore": "6-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      18,
+      21,
+      38,
+      56,
+      74,
+      82,
+      88
+    ],
+    "timestamp": "2026-09-05T19:16:16.898Z",
+    "alertTimestamp": "2026-09-05T17:27:43.883Z"
+  },
+  {
+    "match": "Union Deportivo Provincial vs Juventud de Bernal",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.8811827275750889,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T19:35:27.140Z",
+    "alertTimestamp": "2026-09-05T17:27:43.883Z"
+  },
+  {
+    "match": "Hapoel Umm El Fahem vs Hapoel Nof Ha'galil",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.5565158890004678,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T19:35:27.247Z",
+    "alertTimestamp": "2026-09-05T17:37:57.055Z"
+  },
+  {
+    "match": "Al Hussein vs Al Jazeera",
+    "league": "Pro League",
+    "tier": "AVISO",
+    "probability": 0.5274787026165425,
+    "minute": 77,
+    "scoreAtAlert": "0-5",
+    "finalScore": "0-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      3,
+      40,
+      50,
+      58,
+      69
+    ],
+    "timestamp": "2026-09-05T19:35:27.283Z",
+    "alertTimestamp": "2026-09-05T17:37:57.055Z"
+  },
+  {
+    "match": "Dinamo Bucuresti vs FCSB",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.5369151641553926,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      36,
+      78,
+      84
+    ],
+    "timestamp": "2026-09-05T19:35:27.325Z",
+    "alertTimestamp": "2026-09-05T17:37:57.055Z"
   }
 ]
