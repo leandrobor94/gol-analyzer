@@ -1,128 +1,5 @@
 [
   {
-    "match": "Austria Wien (W) vs Farul Constanta (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.9242190241779776,
-    "minute": 28,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      2,
-      4,
-      61,
-      66,
-      75
-    ],
-    "timestamp": "2026-08-08T22:41:46.080Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "Platense Municipal Reserva vs INCA-Aruba (Reserva)",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.894908206717195,
-    "minute": 26,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T22:41:46.163Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "FF Jaro vs Vaasa PS",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.9375358044646322,
-    "minute": 28,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      16,
-      34,
-      71
-    ],
-    "timestamp": "2026-08-08T22:41:46.619Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "Kauno Zalgiris vs FC Hegelmann",
-    "league": "A Lyga",
-    "tier": "AVISO",
-    "probability": 0.587244339075579,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      32,
-      37
-    ],
-    "timestamp": "2026-08-08T22:41:46.967Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "Deportes Rancagua vs Cd Constitución Unido",
-    "league": "Tercera División A",
-    "tier": "AVISO",
-    "probability": 0.8976920095680231,
-    "minute": 24,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      17,
-      65
-    ],
-    "timestamp": "2026-08-08T22:41:47.303Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "Gori vs Sioni Bolnisi",
-    "league": "Erovnuli Liga 2",
-    "tier": "AVISO",
-    "probability": 0.5867611148512402,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T22:41:47.516Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
-    "match": "Kakheti Telavi vs Gareji",
-    "league": "Erovnuli Liga 2",
-    "tier": "AVISO",
-    "probability": 0.8770975389011115,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-08T22:41:49.298Z",
-    "alertTimestamp": "2026-08-08T16:08:07.056Z"
-  },
-  {
     "match": "Standard Lieja vs Cercle Brugge",
     "league": "Jupiler Pro League",
     "tier": "AVISO",
@@ -21674,5 +21551,162 @@
     ],
     "timestamp": "2026-09-05T02:55:11.178Z",
     "alertTimestamp": "2026-09-05T01:45:20.974Z"
+  },
+  {
+    "match": "Marte Soyapango vs CD UES Pumas",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.561962715149356,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      51,
+      66,
+      95
+    ],
+    "timestamp": "2026-09-05T14:58:41.582Z",
+    "alertTimestamp": "2026-09-05T01:45:20.974Z"
+  },
+  {
+    "match": "Durango vs Tlaxcala",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.521660985053446,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      95
+    ],
+    "timestamp": "2026-09-05T14:58:41.924Z",
+    "alertTimestamp": "2026-09-05T01:45:20.974Z"
+  },
+  {
+    "match": "Atlético Choloma vs Olancho",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.585632478937018,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alto volumen de remates a puerta y xG estimado significativo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-05T14:58:42.086Z",
+    "alertTimestamp": "2026-09-05T01:45:20.974Z"
+  },
+  {
+    "match": "SC Paderborn 07 vs Friburgo",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5776659653370482,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Friburgo busca asegurar, Paderborn necesita un gol. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26
+    ],
+    "timestamp": "2026-09-05T15:25:05.695Z",
+    "alertTimestamp": "2026-09-05T14:58:38.798Z"
+  },
+  {
+    "match": "Werder Bremen vs RB Leipzig",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5998476552220522,
+    "minute": 77,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Bundesliga de alto scoring, aunque el marcador es 2-0, el xG estimado es alto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      68,
+      80,
+      95
+    ],
+    "timestamp": "2026-09-05T15:35:34.207Z",
+    "alertTimestamp": "2026-09-05T14:58:38.798Z"
+  },
+  {
+    "match": "Stal Rzeszow vs Polonia Warsawa",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.5820717036939275,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido apretado, xG estimado no es fiable, y el modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      39,
+      59
+    ],
+    "timestamp": "2026-09-05T15:35:34.256Z",
+    "alertTimestamp": "2026-09-05T14:58:38.798Z"
+  },
+  {
+    "match": "Zenit vs CSKA Moscú",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.5745713649308904,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, Zenit busca el empate con xG alto y remates al arco.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      84,
+      98
+    ],
+    "timestamp": "2026-09-05T15:44:19.769Z",
+    "alertTimestamp": "2026-09-05T14:58:38.798Z"
   }
 ]
