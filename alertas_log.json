@@ -1,236 +1,5 @@
 [
   {
-    "match": "Heerenveen vs Twente",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.8878858649981793,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, y aunque el xG es estimado, hay llegadas al área.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      52
-    ],
-    "timestamp": "2026-08-09T16:51:32.615Z",
-    "alertTimestamp": "2026-08-09T14:51:36.055Z"
-  },
-  {
-    "match": "MVV Maastricht vs Jong Utrecht",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.8911568759917304,
-    "minute": 24,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no es fiable, no hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      6,
-      46
-    ],
-    "timestamp": "2026-08-09T16:51:32.844Z",
-    "alertTimestamp": "2026-08-09T14:51:36.055Z"
-  },
-  {
-    "match": "Mansfield vs Sheffield Utd",
-    "league": "Copa de la liga - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9258163630908004,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y Sheffield Utd ya generó una gran ocasión.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      4,
-      71,
-      89
-    ],
-    "timestamp": "2026-08-09T16:51:33.055Z",
-    "alertTimestamp": "2026-08-09T15:01:14.740Z"
-  },
-  {
-    "match": "FK Jablonec vs Slovacko",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.8946642139088783,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con 1 tarjeta roja, marcador 0-0 y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      62
-    ],
-    "timestamp": "2026-08-09T17:01:49.617Z",
-    "alertTimestamp": "2026-08-09T15:01:14.740Z"
-  },
-  {
-    "match": "Riga vs Ogre United",
-    "league": "Virsliga Letonia",
-    "tier": "AVISO",
-    "probability": 0.944235550388833,
-    "minute": 21,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, Riga con 2 grandes oportunidades y 2 tiros a puerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      2,
-      16,
-      26,
-      45,
-      49
-    ],
-    "timestamp": "2026-08-09T17:01:50.174Z",
-    "alertTimestamp": "2026-08-09T15:01:14.740Z"
-  },
-  {
-    "match": "Hradec Kralove vs Banik Ostrava",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.8927474856031596,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado bajo pero sin datos concretos para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      27,
-      53,
-      63
-    ],
-    "timestamp": "2026-08-09T17:01:51.988Z",
-    "alertTimestamp": "2026-08-09T15:11:46.785Z"
-  },
-  {
-    "match": "Vihren vs Chernomorets Burgas",
-    "league": "Vtora Liga",
-    "tier": "AVISO",
-    "probability": 0.852488458629271,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-09T17:01:52.760Z",
-    "alertTimestamp": "2026-08-09T15:11:46.785Z"
-  },
-  {
-    "match": "Termalica Nieciecza vs Warta Poznan",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.8749462750256197,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      33,
-      51,
-      60
-    ],
-    "timestamp": "2026-08-09T17:21:36.549Z",
-    "alertTimestamp": "2026-08-09T15:21:32.344Z"
-  },
-  {
-    "match": "Lech Poznan vs Piast Gliwice",
-    "league": "Ekstraklasa",
-    "tier": "AVISO",
-    "probability": 0.8804279584096378,
-    "minute": 20,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      63,
-      79,
-      90
-    ],
-    "timestamp": "2026-08-09T17:30:51.228Z",
-    "alertTimestamp": "2026-08-09T15:41:07.074Z"
-  },
-  {
-    "match": "Debreceni VSC vs Nyiregyhaza",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.8916275916526086,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      55
-    ],
-    "timestamp": "2026-08-09T17:30:51.451Z",
-    "alertTimestamp": "2026-08-09T15:41:07.074Z"
-  },
-  {
-    "match": "Graficar Beograd vs FK Smederevo",
-    "league": "Prva Liga",
-    "tier": "AVISO",
-    "probability": 0.867641527988689,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      61,
-      72,
-      90
-    ],
-    "timestamp": "2026-08-09T17:30:51.683Z",
-    "alertTimestamp": "2026-08-09T15:41:07.074Z"
-  },
-  {
     "match": "Olympique Marsella vs Athletic Club",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21726,6 +21495,202 @@
       98
     ],
     "timestamp": "2026-09-06T01:16:05.069Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Oriente Petrolero vs Always Ready",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5251777102530885,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      18,
+      49,
+      66
+    ],
+    "timestamp": "2026-09-06T01:35:15.658Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Orlando City SC vs San Diego FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5290845507208887,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28
+    ],
+    "timestamp": "2026-09-06T01:45:31.796Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Toronto FC vs Chicago Fire",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5456328355267913,
+    "minute": 78,
+    "scoreAtAlert": "3-4",
+    "finalScore": "4-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      13,
+      27,
+      38,
+      49,
+      54,
+      58,
+      63,
+      92
+    ],
+    "timestamp": "2026-09-06T01:45:31.846Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Columbus Crew vs Colorado Rapids",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5246225763109619,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      81,
+      94
+    ],
+    "timestamp": "2026-09-06T01:45:31.896Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Philadelphia Union vs CF Montréal",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5453191453104995,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      57,
+      75
+    ],
+    "timestamp": "2026-09-06T01:45:31.946Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Atlético Nacional vs América de Cali",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.9079026600506342,
+    "minute": 27,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      7,
+      8,
+      19
+    ],
+    "timestamp": "2026-09-06T01:56:26.080Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Familia FC vs Unión Coclé II",
+    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.5498996824266537,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T01:56:26.118Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "La Tribu de Cd. Juárez vs ACF Zapotlanejo",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.6303937013572168,
+    "minute": 68,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T02:05:56.183Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Union Omaha vs Charlotte Independence",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.561962715149356,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      44
+    ],
+    "timestamp": "2026-09-06T02:05:56.217Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Fluminense vs Vasco Da Gama",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5649718144939068,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61
+    ],
+    "timestamp": "2026-09-06T02:05:56.299Z",
+    "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Academia Quintana vs Metropolitan Fa",
+    "league": "LPR Pro - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5566278030798244,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T02:25:39.687Z",
     "alertTimestamp": "2026-09-06T00:35:16.683Z"
   }
 ]
