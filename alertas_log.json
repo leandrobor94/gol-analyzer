@@ -1,144 +1,5 @@
 [
   {
-    "match": "FC Slonim vs Bumprom",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.874170775929518,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, marcador 0-0, y liga con promedio de goles razonable.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      71,
-      86,
-      88
-    ],
-    "timestamp": "2026-08-10T16:59:36.634Z",
-    "alertTimestamp": "2026-08-10T15:09:35.014Z"
-  },
-  {
-    "match": "Alashkert Martuni vs BKMA Yerevan",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8793284766253111,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 temprano, y 5 tiros a puerta del local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-10T17:49:39.530Z",
-    "alertTimestamp": "2026-08-10T15:59:34.910Z"
-  },
-  {
-    "match": "Fakel Voronezh vs Akhmat Grozny",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.6488995986415257,
-    "minute": 60,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, aunque xG estimado, hay 1 gran chance y 3 tiros al área.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-10T23:01:09.692Z",
-    "alertTimestamp": "2026-08-10T16:39:37.780Z"
-  },
-  {
-    "match": "Rigas FS vs Grobiņa",
-    "league": "Virsliga Letonia",
-    "tier": "AVISO",
-    "probability": 0.8551934295134525,
-    "minute": 20,
-    "scoreAtAlert": "5-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      28,
-      36,
-      47,
-      53,
-      66,
-      75
-    ],
-    "timestamp": "2026-08-10T23:01:09.731Z",
-    "alertTimestamp": "2026-08-10T16:39:37.780Z"
-  },
-  {
-    "match": "Moss vs Odd BK",
-    "league": "OBOS-ligaen",
-    "tier": "AVISO",
-    "probability": 0.8656568118995026,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      44,
-      49,
-      51,
-      73,
-      93
-    ],
-    "timestamp": "2026-08-10T23:01:09.777Z",
-    "alertTimestamp": "2026-08-10T16:59:36.034Z"
-  },
-  {
-    "match": "CA River Plate (Reserva) vs Central Español (Reserva)",
-    "league": "Tercera División - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8577134543154904,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-10T23:01:09.801Z",
-    "alertTimestamp": "2026-08-10T17:09:38.664Z"
-  },
-  {
     "match": "Sirius vs IF Brommapojkarna",
     "league": "Allsvenskan",
     "tier": "AVISO",
@@ -21844,5 +21705,110 @@
     ],
     "timestamp": "2026-09-06T19:07:11.271Z",
     "alertTimestamp": "2026-09-06T17:06:35.789Z"
+  },
+  {
+    "match": "Cremonese vs Padova",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.8870150238024056,
+    "minute": 24,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      5,
+      46,
+      56
+    ],
+    "timestamp": "2026-09-06T19:25:33.193Z",
+    "alertTimestamp": "2026-09-06T17:36:07.063Z"
+  },
+  {
+    "match": "Puente Genil vs Mijas Las Lagunas",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.898292794933842,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15,
+      26,
+      38,
+      60
+    ],
+    "timestamp": "2026-09-06T19:36:21.979Z",
+    "alertTimestamp": "2026-09-06T17:36:07.063Z"
+  },
+  {
+    "match": "Hapoel Bnei Musmus vs Tzeirei Umm al-Fahm",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.8811827275750889,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T19:36:22.079Z",
+    "alertTimestamp": "2026-09-06T17:36:07.063Z"
+  },
+  {
+    "match": "Lynx FC vs College 1975 FC",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.6015847144356261,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T19:36:22.198Z",
+    "alertTimestamp": "2026-09-06T18:35:54.276Z"
+  },
+  {
+    "match": "Justo José Urquiza vs Juventud Unida SM",
+    "league": "Primera C Metropolitana - Zona A",
+    "tier": "AVISO",
+    "probability": 0.5842531408134426,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T19:54:56.203Z",
+    "alertTimestamp": "2026-09-06T18:07:29.577Z"
+  },
+  {
+    "match": "Liniers vs Deportivo Laferrere",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.6398456542302446,
+    "minute": 65,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-06T19:54:56.299Z",
+    "alertTimestamp": "2026-09-06T18:07:29.577Z"
   }
 ]
