@@ -1,42 +1,5 @@
 [
   {
-    "match": "Olympique Marsella vs Athletic Club",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9004033844266718,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      10,
-      34,
-      40,
-      86
-    ],
-    "timestamp": "2026-08-09T17:30:52.104Z",
-    "alertTimestamp": "2026-08-09T15:41:07.074Z"
-  },
-  {
-    "match": "Szentlorinc vs Nagykanizsa",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8528573761125394,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      58
-    ],
-    "timestamp": "2026-08-09T17:30:52.332Z",
-    "alertTimestamp": "2026-08-09T15:41:07.074Z"
-  },
-  {
     "match": "Rotor Volgograd vs FC Chelyabinsk",
     "league": "Russian First League - Regular Season",
     "tier": "AVISO",
@@ -21692,5 +21655,46 @@
     "goalMinutes": [],
     "timestamp": "2026-09-06T02:25:39.687Z",
     "alertTimestamp": "2026-09-06T00:35:16.683Z"
+  },
+  {
+    "match": "Corpus Christi FC vs Forward Madison",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5864287325531047,
+    "minute": 78,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      61,
+      67
+    ],
+    "timestamp": "2026-09-06T02:35:18.657Z",
+    "alertTimestamp": "2026-09-06T00:45:22.031Z"
+  },
+  {
+    "match": "FC Dallas vs Sporting KC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5459559270691272,
+    "minute": 78,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      19,
+      27,
+      30,
+      45,
+      78,
+      97
+    ],
+    "timestamp": "2026-09-06T02:55:19.326Z",
+    "alertTimestamp": "2026-09-06T00:45:22.031Z"
   }
 ]
