@@ -1,58 +1,5 @@
 [
   {
-    "match": "Vysoké Mýto vs Graffin Vlasim",
-    "league": "MOL Cup - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.5402899993752022,
-    "minute": 78,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado 2-2 en el minuto 78, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      21,
-      34,
-      74,
-      80,
-      85
-    ],
-    "timestamp": "2026-08-11T17:57:20.021Z",
-    "alertTimestamp": "2026-08-11T16:06:40.351Z"
-  },
-  {
-    "match": "Bodo Glimt vs Union St. Gilloise",
-    "league": "UEFA Champions League Clasificatorio - Tercera Ronda",
-    "tier": "AVISO",
-    "probability": 0.554977513105499,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, xG estimado no fiable, muchas ocasiones de gol para el visitante.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      51,
-      61,
-      76,
-      88,
-      117
-    ],
-    "timestamp": "2026-08-11T22:57:54.069Z",
-    "alertTimestamp": "2026-08-11T16:06:40.351Z"
-  },
-  {
     "match": "1. FC Magdeburg II vs SV Babelsberg 03",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -21735,5 +21682,43 @@
     ],
     "timestamp": "2026-09-07T00:56:44.682Z",
     "alertTimestamp": "2026-09-06T19:25:27.697Z"
+  },
+  {
+    "match": "Nacional Potosí vs Blooming",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.5568166417740205,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      34,
+      43,
+      74
+    ],
+    "timestamp": "2026-09-07T02:05:46.882Z",
+    "alertTimestamp": "2026-09-07T00:56:00.055Z"
+  },
+  {
+    "match": "Racing Club vs Atlético Tucumán",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5312330050897693,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      71,
+      93
+    ],
+    "timestamp": "2026-09-07T02:36:04.697Z",
+    "alertTimestamp": "2026-09-07T00:56:00.055Z"
   }
 ]
