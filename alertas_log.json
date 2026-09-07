@@ -1,76 +1,5 @@
 [
   {
-    "match": "FC Barcelona (F) vs Montpellier HSC (F)",
-    "league": "Amistosos (F)",
-    "tier": "AVISO",
-    "probability": 0.8527219066487717,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso femenino, 0-0 en el minuto 20. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      47,
-      50,
-      56,
-      83
-    ],
-    "timestamp": "2026-08-12T23:01:44.198Z",
-    "alertTimestamp": "2026-08-12T17:10:22.082Z"
-  },
-  {
-    "match": "Durban City vs Golden Arrows",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8655590863284178,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, modelo da alta probabilidad de gol a FT. No hay razones para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T23:01:46.312Z",
-    "alertTimestamp": "2026-08-12T17:51:36.253Z"
-  },
-  {
-    "match": "Inter Miami vs León",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8568370863739845,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      42,
-      50,
-      53,
-      61,
-      83
-    ],
-    "timestamp": "2026-08-13T01:41:06.839Z",
-    "alertTimestamp": "2026-08-12T23:41:56.513Z"
-  },
-  {
     "match": "Orlando City SC vs Atlético San Luis",
     "league": "Leagues Cup",
     "tier": "AVISO",
@@ -21722,5 +21651,68 @@
     ],
     "timestamp": "2026-09-07T21:16:09.303Z",
     "alertTimestamp": "2026-09-07T19:15:49.655Z"
+  },
+  {
+    "match": "Elche CF vs Real Sociedad",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8864601968033147,
+    "minute": 25,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      31,
+      67,
+      74,
+      90
+    ],
+    "timestamp": "2026-09-07T21:35:44.381Z",
+    "alertTimestamp": "2026-09-07T19:46:19.656Z"
+  },
+  {
+    "match": "Nueva Chicago vs Quilmes",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8742278714953193,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos de xG reales para desestimar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-09-07T22:05:59.785Z",
+    "alertTimestamp": "2026-09-07T20:07:42.158Z"
+  },
+  {
+    "match": "Portland Timbers II vs Vancouver Whitecaps II",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5246392019309412,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con minutos restantes y xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-07T22:06:00.177Z",
+    "alertTimestamp": "2026-09-07T20:07:42.158Z"
   }
 ]
