@@ -1,165 +1,5 @@
 [
   {
-    "match": "Břidličná vs Tatran Vsechovice",
-    "league": "MOL Cup - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.5312951876560448,
-    "minute": 79,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado en los últimos minutos, ambos equipos buscan el gol de la victoria.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T17:20:02.841Z",
-    "alertTimestamp": "2026-08-12T15:10:14.521Z"
-  },
-  {
-    "match": "KS Pogradeci vs Skenderbeu",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8715479607131293,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      35
-    ],
-    "timestamp": "2026-08-12T17:30:00.547Z",
-    "alertTimestamp": "2026-08-12T15:40:39.197Z"
-  },
-  {
-    "match": "Atlético Tordesillas vs Real Ávila",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8557807113998617,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T17:30:00.622Z",
-    "alertTimestamp": "2026-08-12T15:40:39.197Z"
-  },
-  {
-    "match": "Johvi Phoenix vs Pärnu JK Vaprus",
-    "league": "Copa Estonia - Tercera Ronda",
-    "tier": "AVISO",
-    "probability": 0.913223527432281,
-    "minute": 25,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-5",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Pärnu JK Vaprus puede aumentar la ventaja.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      10,
-      20,
-      44,
-      78,
-      88
-    ],
-    "timestamp": "2026-08-12T17:51:38.806Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
-    "match": "Nea Salamis vs Anorthosis",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5644038000571234,
-    "minute": 78,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      46,
-      58,
-      60
-    ],
-    "timestamp": "2026-08-12T18:01:15.771Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
-    "match": "FC Copenhague vs Debreceni VSC",
-    "league": "UEFA Conference League - 3ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8633591749567533,
-    "minute": 20,
-    "scoreAtAlert": "5-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      47,
-      58,
-      76,
-      78,
-      92
-    ],
-    "timestamp": "2026-08-12T18:01:15.909Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
-    "match": "Linense vs UD Montijo",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8715479607131293,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T18:01:16.246Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
     "match": "Barakaldo vs Athletic Bilbao B",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21707,5 +21547,165 @@
     ],
     "timestamp": "2026-09-07T19:15:50.744Z",
     "alertTimestamp": "2026-09-07T17:42:49.024Z"
+  },
+  {
+    "match": "Muñiz vs Sportivo Barracas",
+    "league": "Primera C Metropolitana - Zona B",
+    "tier": "AVISO",
+    "probability": 0.5712056805304753,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      54,
+      72
+    ],
+    "timestamp": "2026-09-07T20:07:44.118Z",
+    "alertTimestamp": "2026-09-07T18:16:07.847Z"
+  },
+  {
+    "match": "Fútbol Club Ezeiza vs Buenos Aires City FC",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.5612190734624454,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      87
+    ],
+    "timestamp": "2026-09-07T20:07:45.045Z",
+    "alertTimestamp": "2026-09-07T18:27:41.612Z"
+  },
+  {
+    "match": "Defensores de Glew vs Club Náutico Hacoaj",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.5718686815141774,
+    "minute": 79,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      22,
+      34,
+      47,
+      67
+    ],
+    "timestamp": "2026-09-07T20:07:45.239Z",
+    "alertTimestamp": "2026-09-07T18:27:41.612Z"
+  },
+  {
+    "match": "Alumni (Los Hornos) vs Uribelarrea FC (Uribelarrea)",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.8909842775197093,
+    "minute": 25,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin datos que sugieran lo contrario.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      71
+    ],
+    "timestamp": "2026-09-07T20:15:46.342Z",
+    "alertTimestamp": "2026-09-07T18:27:41.612Z"
+  },
+  {
+    "match": "Estrella de Berisso vs Social Atlético Televisión",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.8875828381100259,
+    "minute": 26,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      25,
+      59,
+      88
+    ],
+    "timestamp": "2026-09-07T20:15:46.592Z",
+    "alertTimestamp": "2026-09-07T18:27:41.612Z"
+  },
+  {
+    "match": "Everton de La Plata vs Academia Control Orientado",
+    "league": "Torneo Promocional Amateur",
+    "tier": "AVISO",
+    "probability": 0.5612190734624454,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con minutos restantes y alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-09-07T20:15:46.787Z",
+    "alertTimestamp": "2026-09-07T18:39:05.230Z"
+  },
+  {
+    "match": "Recoleta FC (F) vs Guarani (F)",
+    "league": "Campeonato Anual FEM",
+    "tier": "AVISO",
+    "probability": 0.555159917657365,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-07T20:26:26.643Z",
+    "alertTimestamp": "2026-09-07T18:39:05.230Z"
   }
 ]
