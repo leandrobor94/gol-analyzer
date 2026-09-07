@@ -1,55 +1,5 @@
 {
   "alertedMatches": {
-    "4739337_AVISO": {
-      "timestamp": 1788802969024,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4736410_AVISO": {
-      "timestamp": 1788802969024,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4663470_AVISO": {
-      "timestamp": 1788802969024,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4739148_AVISO": {
-      "timestamp": 1788802969024,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4739149_AVISO": {
-      "timestamp": 1788802969024,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4745544_AVISO": {
-      "timestamp": 1788804403374,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4732719_AVISO": {
-      "timestamp": 1788804403374,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4848076_AVISO": {
-      "timestamp": 1788804403374,
-      "minute": 79,
-      "tier": "AVISO"
-    },
-    "4819224_AVISO": {
-      "timestamp": 1788804403374,
-      "minute": 79,
-      "tier": "AVISO"
-    },
-    "4675476_AVISO": {
-      "timestamp": 1788804403374,
-      "minute": 80,
-      "tier": "AVISO"
-    },
     "4843759_AVISO": {
       "timestamp": 1788810008211,
       "minute": 79,
@@ -121,8 +71,8 @@
       "tier": "AVISO"
     },
     "4750877_AVISO": {
-      "timestamp": 1788811001288,
-      "minute": 25,
+      "timestamp": 1788815177221,
+      "minute": 76,
       "tier": "AVISO"
     },
     "4751210_AVISO": {
@@ -144,13 +94,28 @@
       "timestamp": 1788812764340,
       "minute": 22,
       "tier": "AVISO"
+    },
+    "4746821_AVISO": {
+      "timestamp": 1788813380417,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4664848_AVISO": {
+      "timestamp": 1788813380417,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4811886_AVISO": {
+      "timestamp": 1788813380417,
+      "minute": 79,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 6902,
-    "verified": 6877,
-    "withGoalTimeline": 4626,
+    "total": 6905,
+    "verified": 6891,
+    "withGoalTimeline": 4639,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-07T20:26:26.994Z"
+  "lastUpdated": "2026-09-07T21:26:02.307Z"
 }

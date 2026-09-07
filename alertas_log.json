@@ -1,130 +1,5 @@
 [
   {
-    "match": "Barakaldo vs Athletic Bilbao B",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8870473877689777,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso, pero el modelo da alta probabilidad y no hay datos que la contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      18,
-      50,
-      79,
-      85
-    ],
-    "timestamp": "2026-08-12T18:01:16.662Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
-    "match": "Velbert vs Borussia Mönchengladbach",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8557807113998617,
-    "minute": 20,
-    "scoreAtAlert": "0-7",
-    "finalScore": "0-8",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T18:01:16.730Z",
-    "alertTimestamp": "2026-08-12T16:20:57.864Z"
-  },
-  {
-    "match": "Bremer SV vs Phönix Lübeck",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8754730571962306,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T23:01:37.802Z",
-    "alertTimestamp": "2026-08-12T16:10:21.389Z"
-  },
-  {
-    "match": "Bnei Yehuda vs SC Ashdod",
-    "league": "Toto Cup National League - Semifinales",
-    "tier": "AVISO",
-    "probability": 0.905896068440991,
-    "minute": 20,
-    "scoreAtAlert": "5-0",
-    "finalScore": "6-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de copa, marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T23:01:39.675Z",
-    "alertTimestamp": "2026-08-12T16:40:40.048Z"
-  },
-  {
-    "match": "Hapoel Raanana vs Maccabi Ahi Nazeret",
-    "league": "Toto Cup National League - Puesto de Playoffs",
-    "tier": "AVISO",
-    "probability": 0.8452958352814606,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T23:01:42.182Z",
-    "alertTimestamp": "2026-08-12T16:40:40.048Z"
-  },
-  {
-    "match": "Girona B vs Sant Andreu",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8803734663687842,
-    "minute": 24,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-12T23:01:42.458Z",
-    "alertTimestamp": "2026-08-12T16:50:03.564Z"
-  },
-  {
     "match": "FC Barcelona (F) vs Montpellier HSC (F)",
     "league": "Amistosos (F)",
     "tier": "AVISO",
@@ -21707,5 +21582,145 @@
     "goalMinutes": [],
     "timestamp": "2026-09-07T20:26:26.643Z",
     "alertTimestamp": "2026-09-07T18:39:05.230Z"
+  },
+  {
+    "match": "Palermo vs Sampdoria",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.5139047406433989,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      9,
+      33,
+      63,
+      94
+    ],
+    "timestamp": "2026-09-07T20:36:33.070Z",
+    "alertTimestamp": "2026-09-07T18:39:05.230Z"
+  },
+  {
+    "match": "CE Sabadell vs Córdoba CF",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.52776378816518,
+    "minute": 79,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      7,
+      11,
+      26,
+      76,
+      89
+    ],
+    "timestamp": "2026-09-07T20:36:43.283Z",
+    "alertTimestamp": "2026-09-07T18:39:05.230Z"
+  },
+  {
+    "match": "Udinese vs Lazio",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8805467524384302,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con volumen de juego prometedor.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      75,
+      88
+    ],
+    "timestamp": "2026-09-07T20:46:18.888Z",
+    "alertTimestamp": "2026-09-07T18:55:54.048Z"
+  },
+  {
+    "match": "Braga Sub23 vs FC Penafiel U23",
+    "league": "Liga de Portugal Sub23 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5725319729207452,
+    "minute": 79,
+    "scoreAtAlert": "2-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado con alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      21,
+      24,
+      28,
+      60,
+      86
+    ],
+    "timestamp": "2026-09-07T20:55:42.234Z",
+    "alertTimestamp": "2026-09-07T19:07:49.495Z"
+  },
+  {
+    "match": "Bromley vs AFC Wimbledon",
+    "league": "League One",
+    "tier": "AVISO",
+    "probability": 0.5404905235196908,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no fiable, Wimbledon con más llegadas.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      8,
+      67
+    ],
+    "timestamp": "2026-09-07T21:06:29.357Z",
+    "alertTimestamp": "2026-09-07T19:07:49.495Z"
+  },
+  {
+    "match": "HFX Wanderers vs Cavalry",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.5413951107858876,
+    "minute": 79,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es fiable, pero grandes ocasiones y tiros a puerta sugieren peligro.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      48,
+      64,
+      75,
+      87
+    ],
+    "timestamp": "2026-09-07T21:16:09.303Z",
+    "alertTimestamp": "2026-09-07T19:15:49.655Z"
   }
 ]
