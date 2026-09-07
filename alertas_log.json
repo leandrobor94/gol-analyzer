@@ -1,25 +1,5 @@
 [
   {
-    "match": "1. FC Magdeburg II vs SV Babelsberg 03",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.898564892836937,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-11T22:57:54.539Z",
-    "alertTimestamp": "2026-08-11T17:07:04.912Z"
-  },
-  {
     "match": "VSG Altglienicke vs Hertha Berlin II",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -21720,5 +21700,29 @@
     ],
     "timestamp": "2026-09-07T02:36:04.697Z",
     "alertTimestamp": "2026-09-07T00:56:00.055Z"
+  },
+  {
+    "match": "Matagalpa vs Diriangén FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8879365926587673,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, Diriangén FC con ventaja mínima y alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      55,
+      87
+    ],
+    "timestamp": "2026-09-07T02:55:54.826Z",
+    "alertTimestamp": "2026-09-07T01:26:05.261Z"
   }
 ]
