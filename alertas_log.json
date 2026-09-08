@@ -1,344 +1,5 @@
 [
   {
-    "match": "New York City FC vs Necaxa",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.5937472601266831,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y xG estimado no es real.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      37,
-      58,
-      79
-    ],
-    "timestamp": "2026-08-14T01:43:14.717Z",
-    "alertTimestamp": "2026-08-13T23:43:31.532Z"
-  },
-  {
-    "match": "Alianza FC vs UMECIT",
-    "league": "CONCACAF Copa Centroamericana - Fase de grupos - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.5637919261978631,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      30
-    ],
-    "timestamp": "2026-08-14T02:04:50.750Z",
-    "alertTimestamp": "2026-08-14T00:13:13.159Z"
-  },
-  {
-    "match": "Cienciano vs Botafogo",
-    "league": "CONMEBOL Copa Sudamericana - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8901970758875183,
-    "minute": 23,
-    "scoreAtAlert": "6-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, Botafogo sin remates, pero Cienciano con 2 goles y 1 gran chance.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      20,
-      30,
-      35,
-      49,
-      62,
-      78
-    ],
-    "timestamp": "2026-08-14T02:33:16.119Z",
-    "alertTimestamp": "2026-08-14T00:33:43.290Z"
-  },
-  {
-    "match": "Rosario Central vs Corinthians",
-    "league": "CONMEBOL Copa Libertadores - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.540835858939852,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T02:43:25.157Z",
-    "alertTimestamp": "2026-08-14T00:33:43.290Z"
-  },
-  {
-    "match": "Club América vs Austin FC",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.5816440676536948,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      48,
-      67,
-      121,
-      121,
-      122,
-      122,
-      123,
-      123,
-      124,
-      124,
-      125,
-      125,
-      126
-    ],
-    "timestamp": "2026-08-14T02:53:13.624Z",
-    "alertTimestamp": "2026-08-14T00:43:13.824Z"
-  },
-  {
-    "match": "SD Atlético Nacional vs UDELAS FC",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Sur",
-    "tier": "AVISO",
-    "probability": 0.8754776826047248,
-    "minute": 23,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T13:16:54.531Z",
-    "alertTimestamp": "2026-08-14T01:03:25.590Z"
-  },
-  {
-    "match": "Alebrijes vs Tepatitlán de Morelos",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.6275491606621383,
-    "minute": 62,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-08-14T13:16:54.870Z",
-    "alertTimestamp": "2026-08-14T01:03:25.590Z"
-  },
-  {
-    "match": "Cruz Azul vs Chicago Fire",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.5573424222571768,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      67,
-      81,
-      93
-    ],
-    "timestamp": "2026-08-14T13:16:55.093Z",
-    "alertTimestamp": "2026-08-14T01:13:14.916Z"
-  },
-  {
-    "match": "Firpo vs Diriangén FC",
-    "league": "CONCACAF Copa Centroamericana - Fase de grupos - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.8669039516623374,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      16,
-      43,
-      52,
-      85
-    ],
-    "timestamp": "2026-08-14T13:16:55.527Z",
-    "alertTimestamp": "2026-08-14T02:13:14.687Z"
-  },
-  {
-    "match": "São Caetano/Sp Youth vs Aguaí SP/Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.9056649295735181,
-    "minute": 27,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      22,
-      25,
-      69
-    ],
-    "timestamp": "2026-08-14T14:56:54.100Z",
-    "alertTimestamp": "2026-08-14T13:16:54.205Z"
-  },
-  {
-    "match": "Mbeya City vs Geita Gold Fc",
-    "league": "Ligi Kuu Bara",
-    "tier": "AVISO",
-    "probability": 0.8664902867587565,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T15:16:55.384Z",
-    "alertTimestamp": "2026-08-14T13:16:54.205Z"
-  },
-  {
-    "match": "FK Arsenal Dzerzhinsk vs Slavia Mozyr",
-    "league": "Vysshaya Liga",
-    "tier": "AVISO",
-    "probability": 0.5372238851558362,
-    "minute": 79,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y xG estimado no fiable. ",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      70,
-      73,
-      84
-    ],
-    "timestamp": "2026-08-14T15:56:59.085Z",
-    "alertTimestamp": "2026-08-14T14:06:54.890Z"
-  },
-  {
-    "match": "Navbahor vs FC Bunyodkor",
-    "league": "Super Liga de Uzbekistán",
-    "tier": "AVISO",
-    "probability": 0.5893506978926506,
-    "minute": 76,
-    "scoreAtAlert": "4-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 3-3 en el minuto 76 con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      19,
-      39,
-      51,
-      63,
-      70,
-      89
-    ],
-    "timestamp": "2026-08-14T16:07:10.673Z",
-    "alertTimestamp": "2026-08-14T14:06:54.890Z"
-  },
-  {
-    "match": "FC Orenburg vs Lokomotiv Moscu",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.5912749505339658,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, alto xG local y gran volumen de juego, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      62
-    ],
-    "timestamp": "2026-08-14T16:07:10.821Z",
-    "alertTimestamp": "2026-08-14T14:06:54.890Z"
-  },
-  {
     "match": "Al Nasr Dubai vs Kalba",
     "league": "UAE Pro League",
     "tier": "AVISO",
@@ -21732,5 +21393,347 @@
     "goalMinutes": [],
     "timestamp": "2026-09-08T20:02:46.909Z",
     "alertTimestamp": "2026-09-08T18:02:49.089Z"
+  },
+  {
+    "match": "Wrexham vs Burnley",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5837869816787208,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchas ocasiones claras para ambos equipos. xG estimado no es un factor.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26,
+      55
+    ],
+    "timestamp": "2026-09-08T20:42:51.765Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Cove Rangers vs Dumbarton",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.8910423439281684,
+    "minute": 25,
+    "scoreAtAlert": "5-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y muchas oportunidades de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24,
+      25,
+      39,
+      53,
+      57,
+      73,
+      91
+    ],
+    "timestamp": "2026-09-08T20:42:59.161Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Salisbury City vs Slough",
+    "league": "National League N/S - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.894153231785354,
+    "minute": 24,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      43,
+      46,
+      56,
+      59,
+      89
+    ],
+    "timestamp": "2026-09-08T20:42:59.293Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Chester vs Merthyr Town",
+    "league": "National League N/S - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5649555752904947,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44
+    ],
+    "timestamp": "2026-09-08T20:42:59.343Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Peterhead vs Clachnacuddin",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.7026129845398383,
+    "minute": 61,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay big chances.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      21,
+      67
+    ],
+    "timestamp": "2026-09-08T20:43:00.169Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Ross County vs Aberdeen Reserves",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.6764301050526236,
+    "minute": 60,
+    "scoreAtAlert": "2-3",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con goles, xG estimado no fiable, y el modelo ya considera el tiempo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      21,
+      52,
+      62,
+      66,
+      93,
+      94
+    ],
+    "timestamp": "2026-09-08T20:43:17.496Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "Berwick vs Hibernian B",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.6492053965721831,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21
+    ],
+    "timestamp": "2026-09-08T20:43:38.012Z",
+    "alertTimestamp": "2026-09-08T18:52:36.621Z"
+  },
+  {
+    "match": "ABB vs San Antonio",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.5511350051832988,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      58,
+      87
+    ],
+    "timestamp": "2026-09-08T20:52:28.716Z",
+    "alertTimestamp": "2026-09-08T19:03:23.725Z"
+  },
+  {
+    "match": "Hapoel Segev Shalom vs Maccabi Bnei Eilat",
+    "league": "FA Cup - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.9063284287772764,
+    "minute": 22,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-5",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-08T21:02:28.974Z",
+    "alertTimestamp": "2026-09-08T17:32:31.835Z"
+  },
+  {
+    "match": "FC Porto vs Manchester City",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9051132899510443,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      91
+    ],
+    "timestamp": "2026-09-08T21:02:29.034Z",
+    "alertTimestamp": "2026-09-08T19:03:23.725Z"
+  },
+  {
+    "match": "Borussia Dortmund vs Villarreal CF",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9202640049701565,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, muchas chances de gol para el visitante, aunque xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      66,
+      80,
+      85,
+      93
+    ],
+    "timestamp": "2026-09-08T21:02:29.080Z",
+    "alertTimestamp": "2026-09-08T19:03:23.725Z"
+  },
+  {
+    "match": "Bolton vs West Ham United",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.870779911607437,
+    "minute": 23,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, muchas chances de gol y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      18,
+      27,
+      31,
+      77
+    ],
+    "timestamp": "2026-09-08T21:02:29.122Z",
+    "alertTimestamp": "2026-09-08T19:03:23.725Z"
+  },
+  {
+    "match": "Lille vs Real Betis",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8857031285072587,
+    "minute": 21,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles, marcador ajustado y muchas oportunidades en el área.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      33,
+      36,
+      49,
+      53
+    ],
+    "timestamp": "2026-09-08T21:02:29.171Z",
+    "alertTimestamp": "2026-09-08T19:03:23.725Z"
+  },
+  {
+    "match": "Real Madrid vs Inter Milan",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.7404993017011141,
+    "minute": 61,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, muchas chances creadas por ambos equipos. El marcador no está resuelto.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      23,
+      77
+    ],
+    "timestamp": "2026-09-08T21:02:29.216Z",
+    "alertTimestamp": "2026-09-08T19:12:37.210Z"
   }
 ]
