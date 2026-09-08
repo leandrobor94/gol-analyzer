@@ -1,92 +1,5 @@
 [
   {
-    "match": "Orlando City SC vs Atlético San Luis",
-    "league": "Leagues Cup",
-    "tier": "AVISO",
-    "probability": 0.8595396529343661,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con xG estimado bajo pero sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      31,
-      69,
-      79,
-      97,
-      121,
-      121,
-      122,
-      122,
-      123,
-      123,
-      124,
-      125
-    ],
-    "timestamp": "2026-08-13T02:01:12.565Z",
-    "alertTimestamp": "2026-08-12T23:41:56.513Z"
-  },
-  {
-    "match": "Tiga Sport vs Auckland City",
-    "league": "OFC Champions League - Fase preliminar",
-    "tier": "AVISO",
-    "probability": 0.8682472629363244,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      85
-    ],
-    "timestamp": "2026-08-13T02:01:12.751Z",
-    "alertTimestamp": "2026-08-13T00:01:09.346Z"
-  },
-  {
-    "match": "Forward Madison vs Greenville Triumph Sc",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8701066433924732,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      28,
-      44
-    ],
-    "timestamp": "2026-08-13T02:01:30.192Z",
-    "alertTimestamp": "2026-08-13T00:10:56.632Z"
-  },
-  {
-    "match": "Atenas Río Cuarto vs Kimberley Mar Del Plata",
-    "league": "Federal A - Segunda Fase - Zona B",
-    "tier": "AVISO",
-    "probability": 0.8524858185704703,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      55,
-      88,
-      93
-    ],
-    "timestamp": "2026-08-13T02:01:30.604Z",
-    "alertTimestamp": "2026-08-13T00:10:56.632Z"
-  },
-  {
     "match": "Monterrey vs Nashville SC",
     "league": "Leagues Cup",
     "tier": "AVISO",
@@ -21714,5 +21627,94 @@
     "goalMinutes": [],
     "timestamp": "2026-09-07T22:06:00.177Z",
     "alertTimestamp": "2026-09-07T20:07:42.158Z"
+  },
+  {
+    "match": "Ilves vs FF Jaro",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.5325422993270537,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74,
+      84
+    ],
+    "timestamp": "2026-09-08T16:52:50.073Z",
+    "alertTimestamp": "2026-09-08T16:22:35.609Z"
+  },
+  {
+    "match": "Vaasa PS vs AC Oulu",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.5572949167096943,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no fiable, y volumen de juego sugiere oportunidades.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8
+    ],
+    "timestamp": "2026-09-08T17:02:32.130Z",
+    "alertTimestamp": "2026-09-08T16:22:35.609Z"
+  },
+  {
+    "match": "TPS vs SJK Seinajoki",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.5347647821152322,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-08T17:02:32.171Z",
+    "alertTimestamp": "2026-09-08T16:22:35.609Z"
+  },
+  {
+    "match": "Lahti vs IFK Mariehamn",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.5583087763467499,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido ajustado, con un solo gol de diferencia y tiempo restante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      65,
+      87
+    ],
+    "timestamp": "2026-09-08T17:02:32.209Z",
+    "alertTimestamp": "2026-09-08T16:22:35.609Z"
   }
 ]
