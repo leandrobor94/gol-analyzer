@@ -1,141 +1,5 @@
 [
   {
-    "match": "FK Pohronie vs Bytča",
-    "league": "2. Liga",
-    "tier": "AVISO",
-    "probability": 0.9074706144116963,
-    "minute": 27,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      21,
-      32
-    ],
-    "timestamp": "2026-08-14T16:57:57.688Z",
-    "alertTimestamp": "2026-08-14T15:16:55.162Z"
-  },
-  {
-    "match": "Bjelovar vs Inter Zapresic",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.898842829535738,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T17:27:18.370Z",
-    "alertTimestamp": "2026-08-14T15:37:00.266Z"
-  },
-  {
-    "match": "FC Voluntari vs Petrolul Ploiesti",
-    "league": "Liga1",
-    "tier": "AVISO",
-    "probability": 0.534652035219164,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, ambos equipos con chances y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      9,
-      19,
-      71
-    ],
-    "timestamp": "2026-08-14T17:27:18.525Z",
-    "alertTimestamp": "2026-08-14T15:37:00.266Z"
-  },
-  {
-    "match": "JäPS vs Haka",
-    "league": "Ykkosliiga",
-    "tier": "AVISO",
-    "probability": 0.6372021074467692,
-    "minute": 60,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Haka con ventaja mínima y tiros a puerta. xG estimado no es fiable.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T17:27:19.005Z",
-    "alertTimestamp": "2026-08-14T15:37:00.266Z"
-  },
-  {
-    "match": "Be1 Nfa vs Hegelmann Litauen Ii",
-    "league": "I Lyga",
-    "tier": "AVISO",
-    "probability": 0.5410046858978369,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8,
-      16,
-      93
-    ],
-    "timestamp": "2026-08-14T17:27:19.896Z",
-    "alertTimestamp": "2026-08-14T15:37:00.266Z"
-  },
-  {
-    "match": "Kispest Honvéd vs Vasas",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.5468106751724165,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, ambos equipos con llegadas al área. El xG es estimado, no se considera.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      27,
-      78,
-      97
-    ],
-    "timestamp": "2026-08-14T17:37:37.068Z",
-    "alertTimestamp": "2026-08-14T15:37:00.266Z"
-  },
-  {
     "match": "Kauno Zalgiris II vs FK Lietava Jonava",
     "league": "I Lyga",
     "tier": "AVISO",
@@ -21728,6 +21592,138 @@
       40
     ],
     "timestamp": "2026-09-09T17:09:35.269Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "Benfica Sub23 vs Vizela Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.5712056805304753,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-09-09T17:57:53.380Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "Jadran Dekani vs FC Koper",
+    "league": "Hervis Pokal - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5348626054241683,
+    "minute": 79,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El marcador 1-3 no está resuelto, y la liga tiene un alto promedio de goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T17:57:54.251Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "Fiorentina Sub19 vs Atalanta Sub19",
+    "league": "Supercoppa Primavera - Final",
+    "tier": "AVISO",
+    "probability": 0.5257577107152809,
+    "minute": 81,
+    "scoreAtAlert": "2-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T17:57:57.855Z",
+    "alertTimestamp": "2026-09-09T17:09:25.870Z"
+  },
+  {
+    "match": "Hapoel Rishon LeZion Sub19 vs Maccabi Netanya Sub19",
+    "league": "Youth League",
+    "tier": "AVISO",
+    "probability": 0.8974991038498693,
+    "minute": 23,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      34,
+      72
+    ],
+    "timestamp": "2026-09-09T18:08:02.748Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "AS Far Rabat vs El Jadida",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5342419465585264,
+    "minute": 81,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y minutos finales. El modelo indica alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29,
+      44
+    ],
+    "timestamp": "2026-09-09T18:08:02.918Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "Chertanovo Moscow vs Neftekhimik",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.5826206672025959,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos, y muchos tiros a puerta del visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24,
+      34
+    ],
+    "timestamp": "2026-09-09T18:08:03.072Z",
     "alertTimestamp": "2026-09-09T16:19:40.012Z"
   }
 ]
