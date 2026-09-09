@@ -1,56 +1,5 @@
 [
   {
-    "match": "Al Nasr Dubai vs Kalba",
-    "league": "UAE Pro League",
-    "tier": "AVISO",
-    "probability": 0.5609499296020907,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, ambos equipos con chances y xG estimado no es real.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      20,
-      64,
-      77
-    ],
-    "timestamp": "2026-08-14T16:16:59.495Z",
-    "alertTimestamp": "2026-08-14T14:16:54.651Z"
-  },
-  {
-    "match": "E.N. Paralimniou vs Akritas Chloraka",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5440415644019615,
-    "minute": 80,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol en los minutos finales.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      12,
-      65,
-      68,
-      79,
-      88
-    ],
-    "timestamp": "2026-08-14T16:57:47.425Z",
-    "alertTimestamp": "2026-08-14T15:06:54.962Z"
-  },
-  {
     "match": "FK Pohronie vs Bytča",
     "league": "2. Liga",
     "tier": "AVISO",
@@ -21735,5 +21684,50 @@
     ],
     "timestamp": "2026-09-08T21:02:29.216Z",
     "alertTimestamp": "2026-09-08T19:12:37.210Z"
+  },
+  {
+    "match": "Spaeri FC vs Rustavi",
+    "league": "Erovnuli Liga",
+    "tier": "AVISO",
+    "probability": 0.5476739679968934,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26,
+      33
+    ],
+    "timestamp": "2026-09-09T16:58:32.628Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "Huachipato (F) vs Deportes Iquique (F)",
+    "league": "Campeonato Femenino",
+    "tier": "AVISO",
+    "probability": 0.5251344447503414,
+    "minute": 81,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      40
+    ],
+    "timestamp": "2026-09-09T17:09:35.269Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
   }
 ]
