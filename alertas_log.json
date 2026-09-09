@@ -1,181 +1,5 @@
 [
   {
-    "match": "SV Babelsberg 03 vs Rsv Eintracht",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.8993873477560842,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T22:57:52.508Z",
-    "alertTimestamp": "2026-08-14T17:07:37.702Z"
-  },
-  {
-    "match": "FSV Zwickau vs FSV 63 Luckenwalde",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.9057764922278992,
-    "minute": 25,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-14T22:57:52.643Z",
-    "alertTimestamp": "2026-08-14T17:07:37.702Z"
-  },
-  {
-    "match": "Vukovar vs Bijelo Brdo",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8878562443594952,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      15
-    ],
-    "timestamp": "2026-08-14T22:57:52.714Z",
-    "alertTimestamp": "2026-08-14T17:07:37.702Z"
-  },
-  {
-    "match": "Osasco Sporting Youth vs União São João/SP Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.5578813032597894,
-    "minute": 79,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      24,
-      47,
-      50,
-      87
-    ],
-    "timestamp": "2026-08-14T23:57:51.792Z",
-    "alertTimestamp": "2026-08-14T22:57:51.289Z"
-  },
-  {
-    "match": "U. de Concepción vs Deportes La Serena",
-    "league": "Liga de Primera",
-    "tier": "AVISO",
-    "probability": 0.5662669636005185,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      25,
-      60
-    ],
-    "timestamp": "2026-08-15T00:58:08.091Z",
-    "alertTimestamp": "2026-08-14T23:07:51.573Z"
-  },
-  {
-    "match": "Toronto FC II vs Chattanooga FC",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5762044870254802,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T01:08:24.734Z",
-    "alertTimestamp": "2026-08-14T23:07:51.573Z"
-  },
-  {
-    "match": "Racing Club vs Banfield",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5338342457944271,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      24
-    ],
-    "timestamp": "2026-08-15T01:38:04.151Z",
-    "alertTimestamp": "2026-08-14T23:38:19.326Z"
-  },
-  {
-    "match": "Tupapa Maraerenga vs Abm Galaxy",
-    "league": "OFC Champions League - Fase preliminar",
-    "tier": "AVISO",
-    "probability": 0.6526567123049661,
-    "minute": 76,
-    "scoreAtAlert": "1-6",
-    "finalScore": "1-7",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      25,
-      41,
-      47,
-      49,
-      55,
-      70,
-      88,
-      91
-    ],
-    "timestamp": "2026-08-15T01:57:51.335Z",
-    "alertTimestamp": "2026-08-15T00:08:02.466Z"
-  },
-  {
     "match": "Bolívar vs San Antonio",
     "league": "División Profesional",
     "tier": "AVISO",
@@ -21750,5 +21574,192 @@
     ],
     "timestamp": "2026-09-09T18:58:48.297Z",
     "alertTimestamp": "2026-09-09T17:09:25.870Z"
+  },
+  {
+    "match": "Hapoel Hertzliya vs A.S Nordia Jerusalem",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.5593757591567479,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, un equipo con 10 jugadores. Alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      70,
+      76,
+      96
+    ],
+    "timestamp": "2026-09-09T19:17:52.893Z",
+    "alertTimestamp": "2026-09-09T17:18:08.055Z"
+  },
+  {
+    "match": "Hapoel Ironi Baka El Garbia vs Ironi Nesher",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.6718688753586628,
+    "minute": 61,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, equipo local con 4 tiros a puerta y 0-2 en el marcador.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T19:28:01.442Z",
+    "alertTimestamp": "2026-09-09T17:37:56.936Z"
+  },
+  {
+    "match": "12 de Octubre SD vs Club Silvio Pettirossi",
+    "league": "APF Primera B",
+    "tier": "AVISO",
+    "probability": 0.889546150255675,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T19:57:49.173Z",
+    "alertTimestamp": "2026-09-09T18:08:01.829Z"
+  },
+  {
+    "match": "Sergipe Youth vs Falcon/SE Youth",
+    "league": "Copa de Brasil Sub20 - Primera Fase",
+    "tier": "AVISO",
+    "probability": 0.6226151153855359,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, xG estimado no es fiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      44
+    ],
+    "timestamp": "2026-09-09T19:57:49.618Z",
+    "alertTimestamp": "2026-09-09T18:08:01.829Z"
+  },
+  {
+    "match": "Blackburn Sub21 vs QPR U21",
+    "league": "Premier League Cup",
+    "tier": "AVISO",
+    "probability": 0.5453564111238319,
+    "minute": 77,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T19:57:50.278Z",
+    "alertTimestamp": "2026-09-09T18:08:01.829Z"
+  },
+  {
+    "match": "Boston River vs Colon",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.5470174661067274,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      41,
+      64
+    ],
+    "timestamp": "2026-09-09T19:58:10.016Z",
+    "alertTimestamp": "2026-09-09T18:58:45.597Z"
+  },
+  {
+    "match": "Nykobing vs Middlefart",
+    "league": "DBU Pokalen - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5371448780473087,
+    "minute": 81,
+    "scoreAtAlert": "4-4",
+    "finalScore": "5-5",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      30,
+      36,
+      37,
+      63,
+      71,
+      73,
+      85,
+      94,
+      114,
+      121,
+      122,
+      123,
+      123,
+      124,
+      125
+    ],
+    "timestamp": "2026-09-09T20:08:21.387Z",
+    "alertTimestamp": "2026-09-09T17:09:25.870Z"
+  },
+  {
+    "match": "24 de Setiembre VP vs Olimpia De Itá",
+    "league": "APF Primera B",
+    "tier": "AVISO",
+    "probability": 0.5671114593243705,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-09T20:08:32.234Z",
+    "alertTimestamp": "2026-09-09T18:08:01.829Z"
   }
 ]

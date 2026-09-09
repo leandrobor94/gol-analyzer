@@ -1,25 +1,5 @@
 {
   "alertedMatches": {
-    "4820832_AVISO": {
-      "timestamp": 1788971890430,
-      "minute": 23,
-      "tier": "AVISO"
-    },
-    "4826700_AVISO": {
-      "timestamp": 1788971890430,
-      "minute": 81,
-      "tier": "AVISO"
-    },
-    "4657719_AVISO": {
-      "timestamp": 1788971890430,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4679213_AVISO": {
-      "timestamp": 1788971890430,
-      "minute": 81,
-      "tier": "AVISO"
-    },
     "4828495_AVISO": {
       "timestamp": 1788973765869,
       "minute": 21,
@@ -86,8 +66,8 @@
       "tier": "AVISO"
     },
     "4843724_AVISO": {
-      "timestamp": 1788978470723,
-      "minute": 23,
+      "timestamp": 1788982672789,
+      "minute": 79,
       "tier": "AVISO"
     },
     "4640719_AVISO": {
@@ -121,16 +101,56 @@
       "tier": "AVISO"
     },
     "4850869_AVISO": {
-      "timestamp": 1788980325597,
+      "timestamp": 1788984493108,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4828491_AVISO": {
+      "timestamp": 1788982079004,
       "minute": 25,
+      "tier": "AVISO"
+    },
+    "4828493_AVISO": {
+      "timestamp": 1788982079004,
+      "minute": 26,
+      "tier": "AVISO"
+    },
+    "4828494_AVISO": {
+      "timestamp": 1788982079004,
+      "minute": 27,
+      "tier": "AVISO"
+    },
+    "4826961_AVISO": {
+      "timestamp": 1788982672789,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4843725_AVISO": {
+      "timestamp": 1788982672789,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4819199_AVISO": {
+      "timestamp": 1788982672789,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4814548_AVISO": {
+      "timestamp": 1788982672789,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4845489_AVISO": {
+      "timestamp": 1788983285307,
+      "minute": 77,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 7168,
-    "verified": 7110,
-    "withGoalTimeline": 4813,
+    "total": 7181,
+    "verified": 7140,
+    "withGoalTimeline": 4832,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-09T19:07:48.138Z"
+  "lastUpdated": "2026-09-09T20:08:42.860Z"
 }
