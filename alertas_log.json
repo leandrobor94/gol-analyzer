@@ -1,30 +1,5 @@
 [
   {
-    "match": "Chelsea vs Real Sociedad",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5807329417529313,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido amistoso con goles, el marcador no está completamente resuelto.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11,
-      45,
-      47,
-      77
-    ],
-    "timestamp": "2026-08-15T15:11:24.447Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
     "match": "AFC vs Kloetinge",
     "league": "Tweede Divisie",
     "tier": "AVISO",
@@ -21782,5 +21757,30 @@
     ],
     "timestamp": "2026-09-10T18:39:05.278Z",
     "alertTimestamp": "2026-09-10T16:48:56.188Z"
+  },
+  {
+    "match": "BFC Dynamo vs Sv Tasmania Berlin",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.8926908048119943,
+    "minute": 26,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, liga de alto scoring, sin datos que contradigan la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      50,
+      71,
+      90
+    ],
+    "timestamp": "2026-09-10T19:09:52.210Z",
+    "alertTimestamp": "2026-09-10T17:09:14.545Z"
   }
 ]
