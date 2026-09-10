@@ -1,30 +1,5 @@
 [
   {
-    "match": "Yunnan Yukun vs Dalian Yingbo",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.556169253943436,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, un equipo con gran volumen de juego y superioridad numérica.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      13,
-      72,
-      81,
-      97
-    ],
-    "timestamp": "2026-08-15T14:10:27.001Z",
-    "alertTimestamp": "2026-08-15T12:47:24.047Z"
-  },
-  {
     "match": "Shakhter Soligorsk vs Niva Dolbizno",
     "league": "Pershaya Liga",
     "tier": "AVISO",
@@ -21778,5 +21753,28 @@
     "goalMinutes": [],
     "timestamp": "2026-09-10T02:58:44.422Z",
     "alertTimestamp": "2026-09-10T01:58:58.120Z"
+  },
+  {
+    "match": "FK Teleoptik vs Proleter 023 Zrenjanin",
+    "league": "Prva Liga",
+    "tier": "AVISO",
+    "probability": 0.5820482994377091,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      27
+    ],
+    "timestamp": "2026-09-10T16:59:22.528Z",
+    "alertTimestamp": "2026-09-10T16:08:49.333Z"
   }
 ]
