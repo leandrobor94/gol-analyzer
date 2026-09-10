@@ -1,94 +1,5 @@
 [
   {
-    "match": "Leningradets vs Arsenal Tula",
-    "league": "Russian First League - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5409037920296743,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T14:59:26.817Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
-    "match": "Kaizer Chiefs vs Mamelodi Sundowns",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5527556939158343,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      63,
-      75
-    ],
-    "timestamp": "2026-08-15T14:59:56.785Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
-    "match": "Quick Boys vs Rkav Volendam",
-    "league": "Tweede Divisie",
-    "tier": "AVISO",
-    "probability": 0.8721236647299483,
-    "minute": 23,
-    "scoreAtAlert": "4-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, y un equipo domina sin goles.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      14,
-      53,
-      80,
-      89
-    ],
-    "timestamp": "2026-08-15T14:59:58.554Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
-    "match": "Polisi Tanzania FC vs Azam FC",
-    "league": "Ligi Kuu Bara",
-    "tier": "AVISO",
-    "probability": 0.5603325072234505,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T15:00:21.559Z",
-    "alertTimestamp": "2026-08-15T13:16:45.483Z"
-  },
-  {
     "match": "Chelsea vs Real Sociedad",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21772,5 +21683,104 @@
     ],
     "timestamp": "2026-09-10T17:39:37.465Z",
     "alertTimestamp": "2026-09-10T16:08:49.333Z"
+  },
+  {
+    "match": "Al Sailiya vs Al Sadd",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.5609858478559505,
+    "minute": 77,
+    "scoreAtAlert": "2-5",
+    "finalScore": "3-6",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con muchos goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      35,
+      48,
+      50,
+      58,
+      62,
+      75,
+      95,
+      100
+    ],
+    "timestamp": "2026-09-10T18:28:46.032Z",
+    "alertTimestamp": "2026-09-10T16:18:47.141Z"
+  },
+  {
+    "match": "Shinnik Yaroslavl vs Torpedo Moscow",
+    "league": "Copa de Rusia - Regions Path - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.8801624860850809,
+    "minute": 25,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0 en Copa, alta probabilidad de gol en 15 min. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30,
+      76
+    ],
+    "timestamp": "2026-09-10T18:28:46.063Z",
+    "alertTimestamp": "2026-09-10T16:38:47.212Z"
+  },
+  {
+    "match": "Fenerbahce vs AS Roma",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.887719553339133,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      48
+    ],
+    "timestamp": "2026-09-10T18:39:05.236Z",
+    "alertTimestamp": "2026-09-10T16:48:56.188Z"
+  },
+  {
+    "match": "PSV Eindhoven vs Shakhtar Donetsk",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8826201561482038,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      46,
+      48
+    ],
+    "timestamp": "2026-09-10T18:39:05.278Z",
+    "alertTimestamp": "2026-09-10T16:48:56.188Z"
   }
 ]
