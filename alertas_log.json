@@ -1,53 +1,5 @@
 [
   {
-    "match": "Shakhter Soligorsk vs Niva Dolbizno",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.9421361558405213,
-    "minute": 23,
-    "scoreAtAlert": "2-5",
-    "finalScore": "2-6",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con muchos goles, marcador abierto y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T14:59:26.265Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
-    "match": "Mjällby AIF vs Sirius",
-    "league": "Allsvenskan",
-    "tier": "AVISO",
-    "probability": 0.5527806987870834,
-    "minute": 78,
-    "scoreAtAlert": "4-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado con alta probabilidad de gol en liga de alto scoring.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      6,
-      24,
-      34,
-      46,
-      54,
-      77,
-      87
-    ],
-    "timestamp": "2026-08-15T14:59:26.744Z",
-    "alertTimestamp": "2026-08-15T13:07:36.371Z"
-  },
-  {
     "match": "Leningradets vs Arsenal Tula",
     "league": "Russian First League - Regular Season",
     "tier": "AVISO",
@@ -21775,6 +21727,50 @@
       27
     ],
     "timestamp": "2026-09-10T16:59:22.528Z",
+    "alertTimestamp": "2026-09-10T16:08:49.333Z"
+  },
+  {
+    "match": "Esteghlal FC Tehran vs Paykan FC",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.5403777978464026,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de la liga de bajo scoring.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-09-10T17:29:26.813Z",
+    "alertTimestamp": "2026-09-10T16:08:49.333Z"
+  },
+  {
+    "match": "Esteglal Khuzestan vs Tractor FC",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.5842070413377569,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-09-10T17:39:37.465Z",
     "alertTimestamp": "2026-09-10T16:08:49.333Z"
   }
 ]
