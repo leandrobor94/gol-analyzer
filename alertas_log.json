@@ -1,25 +1,5 @@
 [
   {
-    "match": "FC Roskilde vs Middlefart",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.6186874991824647,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T14:10:21.590Z",
-    "alertTimestamp": "2026-08-15T12:47:24.047Z"
-  },
-  {
     "match": "BFC Preussen vs Greifswalder Fc",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -21778,5 +21758,25 @@
     ],
     "timestamp": "2026-09-09T20:58:58.410Z",
     "alertTimestamp": "2026-09-09T19:07:46.487Z"
+  },
+  {
+    "match": "Brda vs Tolmin",
+    "league": "Hervis Pokal - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5648268180883512,
+    "minute": 81,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado en los minutos finales con alta probabilidad de gol del modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-10T01:59:09.120Z",
+    "alertTimestamp": "2026-09-09T16:19:40.012Z"
   }
 ]
