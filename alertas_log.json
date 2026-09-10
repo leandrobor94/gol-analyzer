@@ -1,25 +1,5 @@
 [
   {
-    "match": "BFC Preussen vs Greifswalder Fc",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.6198488867875811,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T14:10:22.479Z",
-    "alertTimestamp": "2026-08-15T12:47:24.047Z"
-  },
-  {
     "match": "Yunnan Yukun vs Dalian Yingbo",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21778,5 +21758,25 @@
     "goalMinutes": [],
     "timestamp": "2026-09-10T01:59:09.120Z",
     "alertTimestamp": "2026-09-09T16:19:40.012Z"
+  },
+  {
+    "match": "North Texas vs Houston Dynamo Academy",
+    "league": "MLS Next Pro",
+    "tier": "AVISO",
+    "probability": 0.5536213753490762,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y un jugador menos. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-10T02:58:44.422Z",
+    "alertTimestamp": "2026-09-10T01:58:58.120Z"
   }
 ]
