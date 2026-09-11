@@ -1,73 +1,5 @@
 [
   {
-    "match": "Barnet vs Salford City",
-    "league": "League Two",
-    "tier": "AVISO",
-    "probability": 0.6485742351283603,
-    "minute": 60,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido 2-0, pero xG estimado y 33 minutos restantes. Salford podría reaccionar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      24,
-      42,
-      87,
-      90
-    ],
-    "timestamp": "2026-08-15T16:06:48.146Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "Solihull Moors vs Boston United",
-    "league": "Liga Nacional inglesa",
-    "tier": "AVISO",
-    "probability": 0.6625803060788333,
-    "minute": 60,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, el equipo local necesita goles y el visitante tiene buen xG.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      29,
-      48
-    ],
-    "timestamp": "2026-08-15T16:06:52.457Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "Chippenham vs Plymouth Parkway",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8937160107195583,
-    "minute": 27,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado en 7ª División, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T16:07:42.425Z",
-    "alertTimestamp": "2026-08-15T14:21:31.215Z"
-  },
-  {
     "match": "Union St. Gilloise vs Zulte Waregem",
     "league": "Jupiler Pro League",
     "tier": "AVISO",
@@ -21794,5 +21726,75 @@
     ],
     "timestamp": "2026-09-11T02:29:45.315Z",
     "alertTimestamp": "2026-09-11T01:49:42.907Z"
+  },
+  {
+    "match": "CD Marathón vs LD Alajuelense",
+    "league": "CONCACAF Copa Centroamericana - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.661273776173402,
+    "minute": 64,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en cuartos de final, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      3,
+      10,
+      50
+    ],
+    "timestamp": "2026-09-11T16:12:40.051Z",
+    "alertTimestamp": "2026-09-11T01:49:42.907Z"
+  },
+  {
+    "match": "Club Xelaju vs Coban Imperial",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.881184518361195,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T16:12:40.332Z",
+    "alertTimestamp": "2026-09-11T02:10:01.028Z"
+  },
+  {
+    "match": "Al Jazira Al Hamra vs City Football Club",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5476783560521225,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27,
+      34,
+      84,
+      93
+    ],
+    "timestamp": "2026-09-11T16:53:17.590Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
   }
 ]
