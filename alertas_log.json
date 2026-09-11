@@ -1,196 +1,5 @@
 [
   {
-    "match": "Guayaquil City vs Libertad",
-    "league": "Liga Pro",
-    "tier": "AVISO",
-    "probability": 0.5377811599541528,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      18,
-      24,
-      62,
-      78
-    ],
-    "timestamp": "2026-08-15T23:34:24.880Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "CD Águila vs Atlético Balboa",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5548357111779264,
-    "minute": 77,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T23:54:25.965Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "América (F) vs Puebla (F)",
-    "league": "Liga Femenil BBVA - Apertura",
-    "tier": "AVISO",
-    "probability": 0.6321849142450533,
-    "minute": 62,
-    "scoreAtAlert": "4-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T23:54:25.995Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "Columbus Crew II vs New York City II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5439125835245444,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, ambos equipos con tiros a puerta. xG estimado, no se considera.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T00:14:49.716Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "Marília vs Linense",
-    "league": "Copa Paulista",
-    "tier": "AVISO",
-    "probability": 0.885993171527209,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      15
-    ],
-    "timestamp": "2026-08-16T00:34:19.645Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "Terremoto vs Bella Vista",
-    "league": "Divisional C - Torneo Final",
-    "tier": "AVISO",
-    "probability": 0.558685501288156,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      87
-    ],
-    "timestamp": "2026-08-16T00:34:19.856Z",
-    "alertTimestamp": "2026-08-15T22:44:45.147Z"
-  },
-  {
-    "match": "Portuguesa FC vs Trujillanos FC",
-    "league": "Liga FUTVE - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5509598247765324,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      74
-    ],
-    "timestamp": "2026-08-16T00:54:14.607Z",
-    "alertTimestamp": "2026-08-15T23:04:32.215Z"
-  },
-  {
-    "match": "Rancho Santana vs CD Walter Ferretti",
-    "league": "Liga Primera - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8952413458754558,
-    "minute": 23,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en curso, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      40,
-      54,
-      59
-    ],
-    "timestamp": "2026-08-16T01:03:50.258Z",
-    "alertTimestamp": "2026-08-15T23:04:32.215Z"
-  },
-  {
-    "match": "Pittsburgh Riverhounds vs Charleston Battery",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.882100604599051,
-    "minute": 24,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay urgencia para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      2,
-      16,
-      18,
-      61
-    ],
-    "timestamp": "2026-08-16T01:03:50.307Z",
-    "alertTimestamp": "2026-08-15T23:14:41.838Z"
-  },
-  {
-    "match": "Hartford vs Miami FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8818412056455905,
-    "minute": 24,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      47,
-      94
-    ],
-    "timestamp": "2026-08-16T01:03:50.469Z",
-    "alertTimestamp": "2026-08-15T23:14:41.838Z"
-  },
-  {
     "match": "Sportivo Trinidense (F) vs CS San Lorenzo (F)",
     "league": "Campeonato Anual FEM",
     "tier": "AVISO",
@@ -21876,5 +21685,215 @@
     ],
     "timestamp": "2026-09-11T19:58:06.599Z",
     "alertTimestamp": "2026-09-11T18:04:24.293Z"
+  },
+  {
+    "match": "Derby Sub21 vs Tottenham Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5533034231673635,
+    "minute": 76,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de alta puntuación, aunque el marcador es 1-3, el xG es estimado y no hay big chances.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2,
+      5,
+      27,
+      47
+    ],
+    "timestamp": "2026-09-11T20:14:54.674Z",
+    "alertTimestamp": "2026-09-11T18:04:24.293Z"
+  },
+  {
+    "match": "Cruz Azul Hidalgo vs Piratas FC",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8491203672259816,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, con una gran chance para el visitante y xG estimado no concluyente.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      33,
+      36
+    ],
+    "timestamp": "2026-09-11T20:15:04.044Z",
+    "alertTimestamp": "2026-09-11T18:14:20.290Z"
+  },
+  {
+    "match": "Jong Ajax vs RKC Waalwijk",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.8454087773541104,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      84,
+      91
+    ],
+    "timestamp": "2026-09-11T20:15:04.162Z",
+    "alertTimestamp": "2026-09-11T18:14:20.290Z"
+  },
+  {
+    "match": "Spartak Subotica vs Napredak Krusevac",
+    "league": "Prva Liga",
+    "tier": "AVISO",
+    "probability": 0.8994139919834885,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      53
+    ],
+    "timestamp": "2026-09-11T20:15:04.876Z",
+    "alertTimestamp": "2026-09-11T18:14:20.290Z"
+  },
+  {
+    "match": "General Diaz vs Pilcomayo",
+    "league": "APF Primera C",
+    "tier": "AVISO",
+    "probability": 0.9036496246570809,
+    "minute": 21,
+    "scoreAtAlert": "0-3",
+    "finalScore": "2-5",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T20:15:05.077Z",
+    "alertTimestamp": "2026-09-11T18:24:54.321Z"
+  },
+  {
+    "match": "Rennes vs Olympique Marsella",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5392595451244496,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-09-11T20:43:43.800Z",
+    "alertTimestamp": "2026-09-11T18:55:26.457Z"
+  },
+  {
+    "match": "Drogheda Utd vs Sligo Rovers",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.5792152206608031,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      48
+    ],
+    "timestamp": "2026-09-11T20:43:48.857Z",
+    "alertTimestamp": "2026-09-11T18:55:26.457Z"
+  },
+  {
+    "match": "Venezia vs Fiorentina",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.5489755007260261,
+    "minute": 80,
+    "scoreAtAlert": "1-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      22,
+      29,
+      30,
+      66,
+      84,
+      86
+    ],
+    "timestamp": "2026-09-11T20:43:48.963Z",
+    "alertTimestamp": "2026-09-11T18:55:26.457Z"
+  },
+  {
+    "match": "Shelbourne vs Derry City",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.5166837666849604,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      93
+    ],
+    "timestamp": "2026-09-11T20:43:51.671Z",
+    "alertTimestamp": "2026-09-11T18:55:26.457Z"
+  },
+  {
+    "match": "St. Patricks vs Shamrock",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.9080529724349692,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, marcador ajustado, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      33
+    ],
+    "timestamp": "2026-09-11T20:52:52.902Z",
+    "alertTimestamp": "2026-09-11T19:04:35.834Z"
   }
 ]
