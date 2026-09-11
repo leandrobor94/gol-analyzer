@@ -1,259 +1,5 @@
 [
   {
-    "match": "Manchester United vs AC Milan",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5642763953030914,
-    "minute": 76,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      37,
-      51,
-      57,
-      68,
-      71
-    ],
-    "timestamp": "2026-08-15T16:52:35.760Z",
-    "alertTimestamp": "2026-08-15T14:59:26.200Z"
-  },
-  {
-    "match": "Hapoel Ra'anana Sub19 vs Ironi Ramat Hasharon Sub19",
-    "league": "Youth League",
-    "tier": "AVISO",
-    "probability": 0.5684686371815014,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, un gol de diferencia y alta probabilidad del modelo. No hay razones para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3
-    ],
-    "timestamp": "2026-08-15T17:02:08.628Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Politehnica UTM vs FC Balti",
-    "league": "Super Liga",
-    "tier": "AVISO",
-    "probability": 0.7125369788024561,
-    "minute": 60,
-    "scoreAtAlert": "6-0",
-    "finalScore": "6-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      29,
-      32,
-      39,
-      44,
-      63
-    ],
-    "timestamp": "2026-08-15T17:02:08.669Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Pardubice vs Mlada Boleslav",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.5418359252117548,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      10,
-      75
-    ],
-    "timestamp": "2026-08-15T17:02:08.821Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Energetik BGU vs FC Lida",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.5391464196361864,
-    "minute": 80,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T17:02:08.909Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Fulham vs Stuttgart",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5536441567180989,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido amistoso con marcador ajustado y tiempo restante. No hay datos de xG reales para descartar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      67
-    ],
-    "timestamp": "2026-08-15T17:02:19.778Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Huachipato (F) vs Universidad Católica (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.9054748464222765,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "El marcador 2-0 no es definitivo y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T17:02:39.457Z",
-    "alertTimestamp": "2026-08-15T15:11:11.813Z"
-  },
-  {
-    "match": "Angers vs Paris FC",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5423847584203818,
-    "minute": 79,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      36,
-      43,
-      65,
-      83
-    ],
-    "timestamp": "2026-08-15T17:31:28.738Z",
-    "alertTimestamp": "2026-08-15T15:42:17.735Z"
-  },
-  {
-    "match": "KF Tirana vs KF Laci",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5979625436844707,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      22,
-      71,
-      74,
-      86
-    ],
-    "timestamp": "2026-08-15T17:31:34.350Z",
-    "alertTimestamp": "2026-08-15T15:42:17.735Z"
-  },
-  {
-    "match": "Nyiregyhaza vs Kisvarda",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.5354056718914253,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      45,
-      82,
-      91
-    ],
-    "timestamp": "2026-08-15T17:31:34.423Z",
-    "alertTimestamp": "2026-08-15T15:42:17.735Z"
-  },
-  {
-    "match": "Sekhukhune United vs Polokwane City",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.663662066832032,
-    "minute": 60,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      20
-    ],
-    "timestamp": "2026-08-15T17:31:42.833Z",
-    "alertTimestamp": "2026-08-15T15:42:17.735Z"
-  },
-  {
-    "match": "Deportes Recoleta (F) vs Magallanes (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.9010909401701784,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no es real, no hay datos de ocasiones claras.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T22:34:19.628Z",
-    "alertTimestamp": "2026-08-15T16:10:36.176Z"
-  },
-  {
-    "match": "Dundalk vs Castlebar Celtic",
-    "league": "FAI Cup",
-    "tier": "AVISO",
-    "probability": 0.616489232222219,
-    "minute": 64,
-    "scoreAtAlert": "5-0",
-    "finalScore": "8-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T22:34:19.743Z",
-    "alertTimestamp": "2026-08-15T16:10:36.176Z"
-  },
-  {
     "match": "Shams Azar Qazvin vs Persepolis",
     "league": "Persian Gulf Pro League",
     "tier": "AVISO",
@@ -21804,5 +21550,308 @@
     ],
     "timestamp": "2026-09-11T18:04:32.646Z",
     "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Al Ittihad Aleppo vs Homs Al Fidaa SC",
+    "league": "Super Cup - Final",
+    "tier": "AVISO",
+    "probability": 0.8927488527916382,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T18:14:29.109Z",
+    "alertTimestamp": "2026-09-11T16:23:02.202Z"
+  },
+  {
+    "match": "VFB Oldenburg vs Hannover 96 II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9007729668613497,
+    "minute": 21,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      29,
+      34,
+      59,
+      70,
+      70,
+      81,
+      88
+    ],
+    "timestamp": "2026-09-11T18:35:05.597Z",
+    "alertTimestamp": "2026-09-11T16:33:46.247Z"
+  },
+  {
+    "match": "Flamurtari Vlore vs KS Burreli",
+    "league": "Kategoria e Parë",
+    "tier": "AVISO",
+    "probability": 0.886986297056774,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no fiable, un tiro a puerta local. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T18:35:07.359Z",
+    "alertTimestamp": "2026-09-11T16:33:46.247Z"
+  },
+  {
+    "match": "SV Darmstadt 98 vs Arminia Bielefeld",
+    "league": "2. Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.9103355323709247,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      59,
+      86
+    ],
+    "timestamp": "2026-09-11T18:35:07.472Z",
+    "alertTimestamp": "2026-09-11T16:33:46.247Z"
+  },
+  {
+    "match": "FC Nürnberg vs Hannover",
+    "league": "2. Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.9121387096367806,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      8,
+      65
+    ],
+    "timestamp": "2026-09-11T18:35:09.951Z",
+    "alertTimestamp": "2026-09-11T16:33:46.247Z"
+  },
+  {
+    "match": "SKU Amstetten vs Austria Vienna (AM)",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.860501414653198,
+    "minute": 20,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 2º División de Austria, con un marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      21,
+      24,
+      59,
+      60,
+      64
+    ],
+    "timestamp": "2026-09-11T18:35:14.087Z",
+    "alertTimestamp": "2026-09-11T16:42:29.305Z"
+  },
+  {
+    "match": "FC Copenhague vs Horsens",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8920235160918519,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles esperados, marcador ajustado y chances claras para ambos equipos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      49
+    ],
+    "timestamp": "2026-09-11T18:55:34.553Z",
+    "alertTimestamp": "2026-09-11T17:02:51.255Z"
+  },
+  {
+    "match": "Vendsyssel FF vs Aarhus Fremad",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.8740623673426912,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T18:55:34.714Z",
+    "alertTimestamp": "2026-09-11T17:02:51.255Z"
+  },
+  {
+    "match": "Bodo Glimt (W) vs Aalesunds FK (W)",
+    "league": "Toppserien",
+    "tier": "AVISO",
+    "probability": 0.55332281730465,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aalesunds FK (W) has high shots on target, indicating potential for more goals despite xG estimation.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T18:55:52.161Z",
+    "alertTimestamp": "2026-09-11T17:02:51.255Z"
+  },
+  {
+    "match": "Weiche Flensburg vs Hamburg SV II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9112307074875325,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      34,
+      61,
+      77
+    ],
+    "timestamp": "2026-09-11T18:55:52.273Z",
+    "alertTimestamp": "2026-09-11T17:13:06.598Z"
+  },
+  {
+    "match": "Besiktas vs Erzurumspor FK",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.880939354977947,
+    "minute": 22,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y aunque el xG es estimado, hay big chances.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21,
+      27,
+      81
+    ],
+    "timestamp": "2026-09-11T19:04:40.713Z",
+    "alertTimestamp": "2026-09-11T17:02:51.255Z"
+  },
+  {
+    "match": "FC Minsk vs Slavia Mozyr",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8815063342448313,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no es fiable, pero hay remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-09-11T19:04:41.376Z",
+    "alertTimestamp": "2026-09-11T17:13:06.598Z"
+  },
+  {
+    "match": "Rot-Weiss Erfurt vs Rsv Eintracht",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.9112307074875325,
+    "minute": 20,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      66,
+      75,
+      80,
+      84
+    ],
+    "timestamp": "2026-09-11T19:04:41.832Z",
+    "alertTimestamp": "2026-09-11T17:13:06.598Z"
   }
 ]
