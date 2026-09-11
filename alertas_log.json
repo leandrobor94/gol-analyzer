@@ -1,116 +1,5 @@
 [
   {
-    "match": "Union St. Gilloise vs Zulte Waregem",
-    "league": "Jupiler Pro League",
-    "tier": "AVISO",
-    "probability": 0.5695181178689367,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T16:11:49.023Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "SC Verl vs MSV Duisburg",
-    "league": "3. Liga - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5606933215136459,
-    "minute": 78,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con muchos goles y una expulsión, lo que puede abrir el juego.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8,
-      46,
-      61,
-      63,
-      69,
-      72
-    ],
-    "timestamp": "2026-08-15T16:31:19.708Z",
-    "alertTimestamp": "2026-08-15T14:43:57.222Z"
-  },
-  {
-    "match": "FC Volendam vs TOP Oss",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.5512415914189057,
-    "minute": 78,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "El marcador 2-0 no es definitivo en esta liga de alto scoring.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      72,
-      81
-    ],
-    "timestamp": "2026-08-15T16:31:19.856Z",
-    "alertTimestamp": "2026-08-15T14:43:57.222Z"
-  },
-  {
-    "match": "Tikveš vs Shkendija Haracine",
-    "league": "First League - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5394786011672786,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T16:31:19.999Z",
-    "alertTimestamp": "2026-08-15T14:43:57.222Z"
-  },
-  {
-    "match": "Alverca vs Estrela da Amadora",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.5341158396721929,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos y un jugador menos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      51,
-      58,
-      62,
-      69
-    ],
-    "timestamp": "2026-08-15T16:31:20.215Z",
-    "alertTimestamp": "2026-08-15T14:43:57.222Z"
-  },
-  {
     "match": "Manchester United vs AC Milan",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21795,6 +21684,125 @@
       93
     ],
     "timestamp": "2026-09-11T16:53:17.590Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Qadisiya vs Al Ettifaq",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.6474282665932147,
+    "minute": 76,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      15,
+      26,
+      64,
+      81,
+      85
+    ],
+    "timestamp": "2026-09-11T17:22:42.046Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Hobro IK vs Vejle",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.8715037118804448,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T17:53:10.347Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Argentina Sub20 (F) vs México Sub20 (F)",
+    "league": "Mundial Femenino Sub-20 - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.5221869853141018,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      29,
+      36,
+      42,
+      78,
+      92
+    ],
+    "timestamp": "2026-09-11T17:53:14.108Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Oman Club vs Al Shabab",
+    "league": "Professional League",
+    "tier": "AVISO",
+    "probability": 0.8974991038498693,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      56
+    ],
+    "timestamp": "2026-09-11T18:04:32.551Z",
+    "alertTimestamp": "2026-09-11T16:12:29.512Z"
+  },
+  {
+    "match": "Sport Boys (Reserva) vs Sporting Cristal (Reserva)",
+    "league": "Liga 3",
+    "tier": "AVISO",
+    "probability": 0.889546150255675,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reservas, sin datos de xG reales, pero el modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      48,
+      88
+    ],
+    "timestamp": "2026-09-11T18:04:32.646Z",
     "alertTimestamp": "2026-09-11T16:12:29.512Z"
   }
 ]
