@@ -1,192 +1,5 @@
 [
   {
-    "match": "Shams Azar Qazvin vs Persepolis",
-    "league": "Persian Gulf Pro League",
-    "tier": "AVISO",
-    "probability": 0.9017794115960456,
-    "minute": 28,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      10,
-      14
-    ],
-    "timestamp": "2026-08-15T22:34:19.910Z",
-    "alertTimestamp": "2026-08-15T16:10:36.176Z"
-  },
-  {
-    "match": "Slavia Kromeriz vs Vysocina Jihlava",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.6655765737829771,
-    "minute": 60,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      12,
-      74,
-      81
-    ],
-    "timestamp": "2026-08-15T22:34:19.958Z",
-    "alertTimestamp": "2026-08-15T16:10:36.176Z"
-  },
-  {
-    "match": "SD Laredo vs Palencia",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8977717563957165,
-    "minute": 26,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-15T22:34:22.534Z",
-    "alertTimestamp": "2026-08-15T16:41:19.325Z"
-  },
-  {
-    "match": "Al Wasl vs Dubai United",
-    "league": "UAE Pro League",
-    "tier": "AVISO",
-    "probability": 0.8765294427756026,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, liga de alto scoring, y modelo indica alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      3,
-      17,
-      63,
-      87,
-      89,
-      96
-    ],
-    "timestamp": "2026-08-15T22:34:40.446Z",
-    "alertTimestamp": "2026-08-15T16:52:31.433Z"
-  },
-  {
-    "match": "Utrecht vs AZ Alkmaar",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.8549456905088898,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en Eredivisie, 0-0 en el minuto 20. El modelo da alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      46,
-      47,
-      49,
-      62,
-      84
-    ],
-    "timestamp": "2026-08-15T22:34:40.509Z",
-    "alertTimestamp": "2026-08-15T17:02:08.157Z"
-  },
-  {
-    "match": "Wiltz vs Differdange 03",
-    "league": "BGL Ligue - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8953756951896262,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      26,
-      87
-    ],
-    "timestamp": "2026-08-15T22:34:40.943Z",
-    "alertTimestamp": "2026-08-15T17:11:31.998Z"
-  },
-  {
-    "match": "Guarani (F) vs Sportivo Luqueño (F)",
-    "league": "Campeonato Anual FEM",
-    "tier": "AVISO",
-    "probability": 0.5877279996423656,
-    "minute": 77,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de fútbol femenino, marcador ajustado y minutos restantes. No hay datos de xG reales.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      47,
-      79,
-      88
-    ],
-    "timestamp": "2026-08-15T23:04:49.476Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "Godoy Cruz vs Deportivo Maipú",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5541529898778003,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      63,
-      93
-    ],
-    "timestamp": "2026-08-15T23:04:49.532Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
-    "match": "Cavalry vs Forge FC",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.537292855687022,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      62,
-      83
-    ],
-    "timestamp": "2026-08-15T23:14:41.967Z",
-    "alertTimestamp": "2026-08-15T22:34:09.556Z"
-  },
-  {
     "match": "Guayaquil City vs Libertad",
     "league": "Liga Pro",
     "tier": "AVISO",
@@ -21853,5 +21666,215 @@
     ],
     "timestamp": "2026-09-11T19:04:41.832Z",
     "alertTimestamp": "2026-09-11T17:13:06.598Z"
+  },
+  {
+    "match": "Rot-weiss Oberhausen vs FC Schalke 04 II",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.8977361839719481,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      39,
+      46,
+      75,
+      94,
+      96
+    ],
+    "timestamp": "2026-09-11T19:34:45.384Z",
+    "alertTimestamp": "2026-09-11T17:32:56.634Z"
+  },
+  {
+    "match": "Stade Nyonnais vs Xamax",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.8787999572051493,
+    "minute": 22,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con xG estimado no concluyente. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      31,
+      33,
+      72,
+      84
+    ],
+    "timestamp": "2026-09-11T19:34:45.515Z",
+    "alertTimestamp": "2026-09-11T17:32:56.634Z"
+  },
+  {
+    "match": "FC Rapperswil-Jona vs Yverdon-Sport FC",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.8812456923651141,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      70,
+      93
+    ],
+    "timestamp": "2026-09-11T19:34:55.731Z",
+    "alertTimestamp": "2026-09-11T17:32:56.634Z"
+  },
+  {
+    "match": "FC Stade Lausanne Ouchy vs FC Wil 1900",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.9075223081782091,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, marcador ajustado y oportunidades claras para ambos equipos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      32,
+      52,
+      67
+    ],
+    "timestamp": "2026-09-11T19:34:55.995Z",
+    "alertTimestamp": "2026-09-11T17:32:56.634Z"
+  },
+  {
+    "match": "Atlas Delmenhorst vs Drochtersen / Assel",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9112307074875325,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      59,
+      95
+    ],
+    "timestamp": "2026-09-11T19:34:56.102Z",
+    "alertTimestamp": "2026-09-11T17:43:17.961Z"
+  },
+  {
+    "match": "Heracles vs Jong AZ Alkmaar",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.9012051899647004,
+    "minute": 22,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, xG estimado no es fiable, y hay grandes oportunidades para ambos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      20,
+      43,
+      53,
+      69
+    ],
+    "timestamp": "2026-09-11T19:58:06.135Z",
+    "alertTimestamp": "2026-09-11T18:04:24.293Z"
+  },
+  {
+    "match": "Clermont Foot vs Boulogne",
+    "league": "Ligue 2",
+    "tier": "AVISO",
+    "probability": 0.5280569440595952,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-11T19:58:06.255Z",
+    "alertTimestamp": "2026-09-11T18:04:24.293Z"
+  },
+  {
+    "match": "Un Kaerjeng 97 vs Victoria Rosport",
+    "league": "BGL Ligue - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5176536738733959,
+    "minute": 79,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      1,
+      11,
+      27,
+      31,
+      76
+    ],
+    "timestamp": "2026-09-11T19:58:06.358Z",
+    "alertTimestamp": "2026-09-11T18:04:24.293Z"
+  },
+  {
+    "match": "Helmond vs Jong PSV Eindhoven",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.5362209231656954,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      27,
+      76,
+      77
+    ],
+    "timestamp": "2026-09-11T19:58:06.599Z",
+    "alertTimestamp": "2026-09-11T18:04:24.293Z"
   }
 ]
