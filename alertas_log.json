@@ -1,105 +1,5 @@
 [
   {
-    "match": "CS Afumati vs CF Chindia Targoviste",
-    "league": "Liga 2 rumana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5514700096647657,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Aunque el marcador es 0-2, el xG estimado del local es alto y quedan minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      5,
-      20,
-      90
-    ],
-    "timestamp": "2026-08-15T15:36:27.083Z",
-    "alertTimestamp": "2026-08-15T13:37:04.018Z"
-  },
-  {
-    "match": "Middlesbrough vs Lincoln",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5390247020540648,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      62,
-      91
-    ],
-    "timestamp": "2026-08-15T16:03:28.805Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "Tottenham vs Hoffenheim",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5298317470712965,
-    "minute": 80,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36,
-      59,
-      80
-    ],
-    "timestamp": "2026-08-15T16:03:51.675Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "Bristol City vs Millwall",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5541038452227953,
-    "minute": 78,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      41,
-      50
-    ],
-    "timestamp": "2026-08-15T16:04:20.280Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
-    "match": "Plymouth vs Stockport",
-    "league": "League One",
-    "tier": "AVISO",
-    "probability": 0.5639975770955405,
-    "minute": 77,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      13,
-      26,
-      49,
-      79
-    ],
-    "timestamp": "2026-08-15T16:06:09.034Z",
-    "alertTimestamp": "2026-08-15T14:10:20.329Z"
-  },
-  {
     "match": "Barnet vs Salford City",
     "league": "League Two",
     "tier": "AVISO",
@@ -21770,5 +21670,129 @@
     "goalMinutes": [],
     "timestamp": "2026-09-10T20:48:45.511Z",
     "alertTimestamp": "2026-09-10T18:48:46.533Z"
+  },
+  {
+    "match": "Slavia Praga vs Lens",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5811640284012348,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos y un expulsado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      51,
+      73,
+      88,
+      91,
+      93
+    ],
+    "timestamp": "2026-09-11T01:49:43.350Z",
+    "alertTimestamp": "2026-09-10T19:09:41.292Z"
+  },
+  {
+    "match": "Bayern Munich vs Bodo Glimt",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8957175851840407,
+    "minute": 26,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      61,
+      77,
+      83,
+      92
+    ],
+    "timestamp": "2026-09-11T01:49:43.472Z",
+    "alertTimestamp": "2026-09-10T19:09:41.292Z"
+  },
+  {
+    "match": "Como vs RB Leipzig",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.90985238100032,
+    "minute": 26,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, y ambos equipos con oportunidades claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      38,
+      54,
+      58,
+      90
+    ],
+    "timestamp": "2026-09-11T01:49:43.589Z",
+    "alertTimestamp": "2026-09-10T19:09:41.292Z"
+  },
+  {
+    "match": "Cerro vs Club Sportivo Cerrito",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.8459652653798048,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      95
+    ],
+    "timestamp": "2026-09-11T01:49:43.827Z",
+    "alertTimestamp": "2026-09-10T19:09:41.292Z"
+  },
+  {
+    "match": "Cienciano vs Montevideo City Torque",
+    "league": "CONMEBOL Copa Sudamericana - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5162986379271504,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, pero gran volumen de juego local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      28,
+      42
+    ],
+    "timestamp": "2026-09-11T02:29:45.315Z",
+    "alertTimestamp": "2026-09-11T01:49:42.907Z"
   }
 ]
