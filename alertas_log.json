@@ -1,94 +1,5 @@
 [
   {
-    "match": "Sportivo Trinidense (F) vs CS San Lorenzo (F)",
-    "league": "Campeonato Anual FEM",
-    "tier": "AVISO",
-    "probability": 0.5917798958824353,
-    "minute": 77,
-    "scoreAtAlert": "0-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      45,
-      67,
-      85,
-      92
-    ],
-    "timestamp": "2026-08-16T01:03:50.521Z",
-    "alertTimestamp": "2026-08-15T23:14:41.838Z"
-  },
-  {
-    "match": "Charlotte Independence vs Sarasota Paradise",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.620599686884415,
-    "minute": 77,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      8,
-      14,
-      82
-    ],
-    "timestamp": "2026-08-16T01:24:14.914Z",
-    "alertTimestamp": "2026-08-15T23:34:12.464Z"
-  },
-  {
-    "match": "Mar de Fondo vs Durazno",
-    "league": "Divisional C - Torneo Final",
-    "tier": "AVISO",
-    "probability": 0.8722961792256712,
-    "minute": 23,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      6,
-      28,
-      81
-    ],
-    "timestamp": "2026-08-16T01:33:49.333Z",
-    "alertTimestamp": "2026-08-15T23:34:12.464Z"
-  },
-  {
-    "match": "Charlotte FC vs Columbus Crew",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.8875776456445054,
-    "minute": 24,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 pero xG estimado y solo minuto 24. Aún hay tiempo para más goles.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      9,
-      41,
-      73
-    ],
-    "timestamp": "2026-08-16T01:43:46.914Z",
-    "alertTimestamp": "2026-08-15T23:43:59.280Z"
-  },
-  {
     "match": "CF Montréal vs DC United",
     "league": "MLS",
     "tier": "AVISO",
@@ -21895,5 +21806,75 @@
     ],
     "timestamp": "2026-09-11T20:52:52.902Z",
     "alertTimestamp": "2026-09-11T19:04:35.834Z"
+  },
+  {
+    "match": "Sportivo Ameliano vs CS San Lorenzo",
+    "league": "Copa de Primera - Clausura",
+    "tier": "AVISO",
+    "probability": 0.861341569856502,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      85
+    ],
+    "timestamp": "2026-09-12T01:54:11.963Z",
+    "alertTimestamp": "2026-09-11T19:04:35.834Z"
+  },
+  {
+    "match": "Sevilla FC vs Valencia CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8970857102224101,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      81
+    ],
+    "timestamp": "2026-09-12T01:54:13.725Z",
+    "alertTimestamp": "2026-09-11T19:14:29.002Z"
+  },
+  {
+    "match": "Pisa vs Virtus Entella",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.8488677055121072,
+    "minute": 20,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      2,
+      32,
+      47,
+      73,
+      80
+    ],
+    "timestamp": "2026-09-12T01:54:14.221Z",
+    "alertTimestamp": "2026-09-11T19:14:29.002Z"
+  },
+  {
+    "match": "Strabane Athletic vs Newry City",
+    "league": "NIFL Championship",
+    "tier": "AVISO",
+    "probability": 0.8519028891746666,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T01:54:14.435Z",
+    "alertTimestamp": "2026-09-11T19:14:29.002Z"
   }
 ]
