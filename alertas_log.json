@@ -1,198 +1,5 @@
 [
   {
-    "match": "Cancún FC vs Durango",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5626740509846283,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      33,
-      37
-    ],
-    "timestamp": "2026-08-16T12:48:47.157Z",
-    "alertTimestamp": "2026-08-16T01:03:50.155Z"
-  },
-  {
-    "match": "Monterrey vs Juárez",
-    "league": "Liga MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.889832447113997,
-    "minute": 24,
-    "scoreAtAlert": "5-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, Monterrey domina y genera peligro constante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      15,
-      29,
-      32,
-      48,
-      62,
-      92
-    ],
-    "timestamp": "2026-08-16T12:48:47.211Z",
-    "alertTimestamp": "2026-08-16T01:14:06.101Z"
-  },
-  {
-    "match": "Spokane Velocity vs Corpus Christi FC",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8933991012498513,
-    "minute": 24,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      57,
-      70,
-      81,
-      96
-    ],
-    "timestamp": "2026-08-16T12:48:47.435Z",
-    "alertTimestamp": "2026-08-16T01:14:06.101Z"
-  },
-  {
-    "match": "San Antonio FC vs El Paso",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5896474496639069,
-    "minute": 77,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      39,
-      44
-    ],
-    "timestamp": "2026-08-16T12:48:47.674Z",
-    "alertTimestamp": "2026-08-16T01:14:06.101Z"
-  },
-  {
-    "match": "Matagalpa vs San Marcos FC",
-    "league": "Liga Primera - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8915811159418813,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T12:48:47.742Z",
-    "alertTimestamp": "2026-08-16T01:14:06.101Z"
-  },
-  {
-    "match": "Colorado Springs Switchbacks vs Birmingham Legion FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5423414377923614,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      24,
-      49,
-      86,
-      95,
-      99
-    ],
-    "timestamp": "2026-08-16T12:48:47.827Z",
-    "alertTimestamp": "2026-08-16T01:14:06.101Z"
-  },
-  {
-    "match": "Orange County SC vs Louisville City",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8815099925796469,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, y Louisville ya tuvo una gran ocasión.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      48,
-      68,
-      70,
-      81
-    ],
-    "timestamp": "2026-08-16T12:48:48.547Z",
-    "alertTimestamp": "2026-08-16T02:14:06.316Z"
-  },
-  {
-    "match": "Djurgårdens IF vs AIK Solna",
-    "league": "Allsvenskan",
-    "tier": "AVISO",
-    "probability": 0.5337192546915781,
-    "minute": 79,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      10,
-      25,
-      39,
-      50
-    ],
-    "timestamp": "2026-08-16T13:58:46.610Z",
-    "alertTimestamp": "2026-08-16T12:48:46.907Z"
-  },
-  {
-    "match": "Sv Tasmania Berlin vs Lokomotive Leipzig",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.5377582301213343,
-    "minute": 80,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con 5 goles, alta probabilidad de gol en los últimos 13 minutos y un expulsado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T14:09:36.566Z",
-    "alertTimestamp": "2026-08-16T12:48:46.907Z"
-  },
-  {
     "match": "FC Kharkiv vs Shakhtar Donetsk",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21894,6 +21701,208 @@
     "ai": null,
     "goalMinutes": [],
     "timestamp": "2026-09-12T16:04:11.448Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Cádiz vs Las Palmas",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5539053939870751,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, Las Palmas busca asegurar, Cádiz necesita un gol. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60
+    ],
+    "timestamp": "2026-09-12T16:21:18.276Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Aachen vs SSV Jahn Regensburg",
+    "league": "3. Liga - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5661103890206368,
+    "minute": 80,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      23,
+      38,
+      50
+    ],
+    "timestamp": "2026-09-12T16:31:53.336Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "VJS vs Fc Inter Turku 2",
+    "league": "Ykkonen - Descenso",
+    "tier": "AVISO",
+    "probability": 0.5667488152048756,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      59,
+      73
+    ],
+    "timestamp": "2026-09-12T17:02:17.650Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "FC Vitebsk vs Belshina Bobruisk",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8976900843908654,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      67
+    ],
+    "timestamp": "2026-09-12T17:02:19.328Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "AS Marsa vs Étoile du Sahel",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.8939261110005113,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23
+    ],
+    "timestamp": "2026-09-12T17:02:19.520Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "ES Hammam Sousse vs Stade Tunisien",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.8939261110005113,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      38,
+      47,
+      63,
+      96
+    ],
+    "timestamp": "2026-09-12T17:02:19.785Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Emirates Club vs Al Bataeh",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.8862503767419551,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-09-12T17:02:19.966Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "FK Krasnodar (W) vs Rubin Kazan (W)",
+    "league": "Supreme Division Women",
+    "tier": "AVISO",
+    "probability": 0.5389071851474242,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T17:02:31.440Z",
+    "alertTimestamp": "2026-09-12T16:41:36.669Z"
+  },
+  {
+    "match": "Catanzaro vs Carrarese",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.8733080414747508,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, con una gran oportunidad ya generada.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T17:11:02.625Z",
     "alertTimestamp": "2026-09-12T15:26:52.131Z"
   }
 ]
