@@ -1,211 +1,5 @@
 [
   {
-    "match": "Sogndal vs Sandnes Ulf",
-    "league": "OBOS-ligaen",
-    "tier": "AVISO",
-    "probability": 0.8504971928987598,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no confiable, sin grandes ocasiones ni tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      43,
-      72
-    ],
-    "timestamp": "2026-08-16T16:59:55.943Z",
-    "alertTimestamp": "2026-08-16T15:09:37.833Z"
-  },
-  {
-    "match": "BSK Banja Luka vs Velez Mostar",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8486672675345148,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      32,
-      65
-    ],
-    "timestamp": "2026-08-16T16:59:56.955Z",
-    "alertTimestamp": "2026-08-16T15:09:37.833Z"
-  },
-  {
-    "match": "Deportes Iquique (F) vs Universidad Concepción (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.588116240493649,
-    "minute": 77,
-    "scoreAtAlert": "4-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T17:09:04.882Z",
-    "alertTimestamp": "2026-08-16T15:09:37.833Z"
-  },
-  {
-    "match": "Santos Laguna Sub19 vs Chivas Sub19",
-    "league": "Liga MX Sub19 - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8881863103196913,
-    "minute": 24,
-    "scoreAtAlert": "1-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T17:09:04.919Z",
-    "alertTimestamp": "2026-08-16T15:09:37.833Z"
-  },
-  {
-    "match": "Molde vs Tromso",
-    "league": "Eliteserien",
-    "tier": "AVISO",
-    "probability": 0.5489722227294852,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, liga de alto scoring, y ambos equipos generando juego.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      41,
-      53,
-      55,
-      92,
-      98
-    ],
-    "timestamp": "2026-08-16T17:09:05.287Z",
-    "alertTimestamp": "2026-08-16T15:09:37.833Z"
-  },
-  {
-    "match": "Palestino (F) vs Santiago Wanderers (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.5428337685075598,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      33
-    ],
-    "timestamp": "2026-08-16T22:32:49.647Z",
-    "alertTimestamp": "2026-08-16T15:40:25.310Z"
-  },
-  {
-    "match": "Kauno Zalgiris vs Transinvest",
-    "league": "A Lyga",
-    "tier": "AVISO",
-    "probability": 0.8788691342762459,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8,
-      48
-    ],
-    "timestamp": "2026-08-16T22:32:49.939Z",
-    "alertTimestamp": "2026-08-16T15:50:17.071Z"
-  },
-  {
-    "match": "Frosinone vs Juve Stabia",
-    "league": "Copa Italia - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.871942900432791,
-    "minute": 24,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchas chances de gol. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      21,
-      29,
-      38,
-      48,
-      71
-    ],
-    "timestamp": "2026-08-16T22:32:50.430Z",
-    "alertTimestamp": "2026-08-16T16:09:50.573Z"
-  },
-  {
-    "match": "Başakşehir vs Kocaelispor",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8553141236793057,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con ritmo, aunque xG estimado. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      72
-    ],
-    "timestamp": "2026-08-16T22:32:52.295Z",
-    "alertTimestamp": "2026-08-16T16:09:50.573Z"
-  },
-  {
     "match": "Baniyas vs Al Ain",
     "league": "UAE Pro League",
     "tier": "AVISO",
@@ -21844,5 +21638,164 @@
     ],
     "timestamp": "2026-09-12T19:01:30.260Z",
     "alertTimestamp": "2026-09-12T17:11:01.494Z"
+  },
+  {
+    "match": "Estudiantes de La Plata vs Platense",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5639500423306161,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      24,
+      91
+    ],
+    "timestamp": "2026-09-12T19:42:17.476Z",
+    "alertTimestamp": "2026-09-12T17:50:12.532Z"
+  },
+  {
+    "match": "CSKA Moscú vs Rubin Kazan",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.9095209544559764,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un expulsado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      58
+    ],
+    "timestamp": "2026-09-12T19:50:58.981Z",
+    "alertTimestamp": "2026-09-12T17:50:12.532Z"
+  },
+  {
+    "match": "Portuguesa/Sp Youth vs Sertãozinho Fc U20",
+    "league": "Paulista U20 - Primera Fase - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.5933007042118045,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T20:00:53.409Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Referência FC Youth vs Mauá Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.5712056805304753,
+    "minute": 79,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T20:00:54.290Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Ferroviária/Sp Youth vs São Bento/Sp Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.9065955760622051,
+    "minute": 20,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T20:00:54.883Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Corinthians/Sp Youth vs América/Sp Youth",
+    "league": "Paulista U20 - Primera Fase - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.9065955760622051,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      31,
+      46,
+      85
+    ],
+    "timestamp": "2026-09-12T20:00:55.036Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Botafogo/Sp Youth vs Ec São Bernardo S20",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.9065955760622051,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T20:00:55.336Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Dunkerque vs Saint-Étienne",
+    "league": "Ligue 2",
+    "tier": "AVISO",
+    "probability": 0.8602856551908544,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      52,
+      58
+    ],
+    "timestamp": "2026-09-12T20:01:00.850Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
+  },
+  {
+    "match": "Al Khaleej Club vs Al Nassr FC Riyadh",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.8443495320840103,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      46,
+      72
+    ],
+    "timestamp": "2026-09-12T20:01:11.971Z",
+    "alertTimestamp": "2026-09-12T18:11:28.597Z"
   }
 ]
