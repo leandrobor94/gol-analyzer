@@ -101,8 +101,8 @@
       "tier": "AVISO"
     },
     "4732706_AVISO": {
-      "timestamp": 1789230710482,
-      "minute": 27,
+      "timestamp": 1789234877034,
+      "minute": 79,
       "tier": "AVISO"
     },
     "4771066_AVISO": {
@@ -136,8 +136,8 @@
       "tier": "AVISO"
     },
     "4755400_AVISO": {
-      "timestamp": 1789231975370,
-      "minute": 20,
+      "timestamp": 1789236688597,
+      "minute": 81,
       "tier": "AVISO"
     },
     "4745542_AVISO": {
@@ -159,13 +159,78 @@
       "timestamp": 1789232525676,
       "minute": 77,
       "tier": "AVISO"
+    },
+    "4764295_AVISO": {
+      "timestamp": 1789233704722,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4805218_AVISO": {
+      "timestamp": 1789233704722,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4853692_AVISO": {
+      "timestamp": 1789233704722,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4805166_AVISO": {
+      "timestamp": 1789233704722,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4759601_AVISO": {
+      "timestamp": 1789233704722,
+      "minute": 62,
+      "tier": "AVISO"
+    },
+    "4759747_AVISO": {
+      "timestamp": 1789234877034,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4759748_AVISO": {
+      "timestamp": 1789234877034,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4820267_AVISO": {
+      "timestamp": 1789234877034,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4805193_AVISO": {
+      "timestamp": 1789234877034,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4750870_AVISO": {
+      "timestamp": 1789235412532,
+      "minute": 63,
+      "tier": "AVISO"
+    },
+    "4740741_AVISO": {
+      "timestamp": 1789235412532,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4745537_AVISO": {
+      "timestamp": 1789236688597,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4770273_AVISO": {
+      "timestamp": 1789236688597,
+      "minute": 81,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 7809,
-    "verified": 7685,
-    "withGoalTimeline": 5244,
+    "total": 7871,
+    "verified": 7757,
+    "withGoalTimeline": 5306,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-12T17:11:04.230Z"
+  "lastUpdated": "2026-09-12T18:11:34.217Z"
 }
