@@ -1,230 +1,5 @@
 [
   {
-    "match": "CF Montréal vs DC United",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.562800384018227,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      50,
-      67
-    ],
-    "timestamp": "2026-08-16T01:43:47.033Z",
-    "alertTimestamp": "2026-08-15T23:43:59.280Z"
-  },
-  {
-    "match": "Orlando City SC vs FC Cincinnati",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5619343218023981,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      23,
-      48
-    ],
-    "timestamp": "2026-08-16T01:43:47.078Z",
-    "alertTimestamp": "2026-08-15T23:43:59.280Z"
-  },
-  {
-    "match": "Atlanta United vs New York Red Bulls",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5489700141663303,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      69,
-      82
-    ],
-    "timestamp": "2026-08-16T01:43:47.121Z",
-    "alertTimestamp": "2026-08-15T23:43:59.280Z"
-  },
-  {
-    "match": "Tampa Bay Rowdies vs Rhode Island",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5482230568778602,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      61,
-      92
-    ],
-    "timestamp": "2026-08-16T01:43:47.171Z",
-    "alertTimestamp": "2026-08-15T23:43:59.280Z"
-  },
-  {
-    "match": "Auckland City vs Vénus",
-    "league": "OFC Champions League - Fase preliminar",
-    "tier": "AVISO",
-    "probability": 0.8952413458754558,
-    "minute": 23,
-    "scoreAtAlert": "4-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      6,
-      25,
-      49,
-      54,
-      77,
-      84,
-      91
-    ],
-    "timestamp": "2026-08-16T02:03:47.450Z",
-    "alertTimestamp": "2026-08-16T00:03:58.051Z"
-  },
-  {
-    "match": "Sporting Kansas City II vs Colorado Rapids II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5650817184254929,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T02:24:07.331Z",
-    "alertTimestamp": "2026-08-16T00:14:32.447Z"
-  },
-  {
-    "match": "Austin Fc II vs Vancouver Whitecaps II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5771635398790717,
-    "minute": 77,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-16T02:33:48.945Z",
-    "alertTimestamp": "2026-08-16T00:34:19.496Z"
-  },
-  {
-    "match": "Portland Thorns vs Orlando Pride",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.6374801703656185,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      58,
-      63,
-      96
-    ],
-    "timestamp": "2026-08-16T02:43:46.823Z",
-    "alertTimestamp": "2026-08-16T00:54:14.471Z"
-  },
-  {
-    "match": "Nashville SC vs Inter Miami",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5620155412819176,
-    "minute": 77,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      48,
-      49,
-      56,
-      63
-    ],
-    "timestamp": "2026-08-16T02:53:56.212Z",
-    "alertTimestamp": "2026-08-16T00:43:47.468Z"
-  },
-  {
-    "match": "Houston Dynamo vs LA Galaxy",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5692864880692144,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      21
-    ],
-    "timestamp": "2026-08-16T02:53:56.253Z",
-    "alertTimestamp": "2026-08-16T00:43:47.468Z"
-  },
-  {
-    "match": "Shimizu S-Pulse vs Shonan Bellmare",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8648637176339394,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      81
-    ],
-    "timestamp": "2026-08-16T02:53:56.327Z",
-    "alertTimestamp": "2026-08-16T01:03:50.155Z"
-  },
-  {
-    "match": "Dorados de Sinaloa vs Tlaxcala",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5574969471418004,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      39,
-      64,
-      90
-    ],
-    "timestamp": "2026-08-16T12:48:47.067Z",
-    "alertTimestamp": "2026-08-16T01:03:50.155Z"
-  },
-  {
     "match": "Cancún FC vs Durango",
     "league": "Liga de Expansión MX - Apertura",
     "tier": "AVISO",
@@ -21876,5 +21651,249 @@
     "goalMinutes": [],
     "timestamp": "2026-09-12T01:54:14.435Z",
     "alertTimestamp": "2026-09-11T19:14:29.002Z"
+  },
+  {
+    "match": "ACF Zapotlanejo vs Real Apodaca Fc",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8766538921858416,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T15:26:55.989Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "New Mexico vs Indy Eleven",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8659843040824478,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles esperados, marcador ajustado y sin razones para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      16,
+      18,
+      50,
+      59
+    ],
+    "timestamp": "2026-09-12T15:26:56.610Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "UMECIT FC Sub20 vs Plaza Amador Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.5872008356055438,
+    "minute": 76,
+    "scoreAtAlert": "4-6",
+    "finalScore": "4-6",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T15:27:12.453Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "Correcaminos vs Cancún FC",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5778258669826164,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      12,
+      23,
+      79,
+      92
+    ],
+    "timestamp": "2026-09-12T15:27:12.641Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "Cruz Azul (F) vs U.N.A.M.- Pumas (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.560775284726558,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      24,
+      35,
+      67,
+      75
+    ],
+    "timestamp": "2026-09-12T15:27:12.918Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "Necaxa vs Puebla",
+    "league": "Liga MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5414702543265235,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      93
+    ],
+    "timestamp": "2026-09-12T15:27:13.079Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "Gimnasia y Tiro vs Tristan Suárez",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5407335187876527,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T15:27:13.378Z",
+    "alertTimestamp": "2026-09-12T01:54:11.001Z"
+  },
+  {
+    "match": "Swansea vs Burnley",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5954059588197862,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con goles y ocasiones, a pesar del marcador, el xG estimado sugiere que aún hay potencial.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      33,
+      58,
+      68
+    ],
+    "timestamp": "2026-09-12T16:01:29.199Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "AFC Wimbledon vs Doncaster",
+    "league": "League One",
+    "tier": "AVISO",
+    "probability": 0.5742464398021982,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Doncaster con xG alto y más tiros a puerta, a pesar de xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      43
+    ],
+    "timestamp": "2026-09-12T16:02:18.285Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Southampton vs Bristol City",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.7197419279941866,
+    "minute": 60,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con xG estimado alto para ambos, muchas llegadas al área y tiros a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38,
+      61,
+      66,
+      82,
+      85
+    ],
+    "timestamp": "2026-09-12T16:02:18.451Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Aston Villa vs Nottingham Forest",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5775614187726654,
+    "minute": 79,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos, y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      46,
+      74,
+      88
+    ],
+    "timestamp": "2026-09-12T16:02:21.976Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
+  },
+  {
+    "match": "Charlton vs Portsmouth",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5187405753205133,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-12T16:04:11.448Z",
+    "alertTimestamp": "2026-09-12T15:26:52.131Z"
   }
 ]
