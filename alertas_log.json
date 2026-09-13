@@ -1,223 +1,5 @@
 [
   {
-    "match": "Deportivo La Guaira vs Zamora FC",
-    "league": "Liga FUTVE - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8824490879425408,
-    "minute": 23,
-    "scoreAtAlert": "4-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      17,
-      35,
-      41,
-      77,
-      87,
-      91
-    ],
-    "timestamp": "2026-08-17T00:22:53.911Z",
-    "alertTimestamp": "2026-08-16T22:32:49.068Z"
-  },
-  {
-    "match": "Juventud (F) vs Defensor Sporting (F)",
-    "league": "Campeonato Femenino A - Clausura",
-    "tier": "AVISO",
-    "probability": 0.9311824330140038,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-7",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T00:22:54.005Z",
-    "alertTimestamp": "2026-08-16T22:42:52.087Z"
-  },
-  {
-    "match": "Rubio Ñu (W) vs Libertad (F)",
-    "league": "Campeonato Anual FEM",
-    "tier": "AVISO",
-    "probability": 0.898842829535738,
-    "minute": 22,
-    "scoreAtAlert": "1-6",
-    "finalScore": "2-6",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      41,
-      44,
-      47,
-      65,
-      84,
-      86,
-      89
-    ],
-    "timestamp": "2026-08-17T00:32:51.537Z",
-    "alertTimestamp": "2026-08-16T22:32:49.068Z"
-  },
-  {
-    "match": "Portland Hearts of Pine vs Forward Madison",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.6315105545781735,
-    "minute": 76,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      21,
-      57,
-      86
-    ],
-    "timestamp": "2026-08-17T00:42:57.405Z",
-    "alertTimestamp": "2026-08-16T22:42:52.087Z"
-  },
-  {
-    "match": "Suchitepequez vs Deportivo Marquense",
-    "league": "Liga Nacional - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8740016191582148,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T01:03:07.347Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "Union Omaha vs Richmond Kickers",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.6420703215889337,
-    "minute": 76,
-    "scoreAtAlert": "4-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      28,
-      34,
-      38,
-      43,
-      67,
-      90
-    ],
-    "timestamp": "2026-08-17T01:12:45.776Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "Montevideo City Torque (F) vs Nacional (F)",
-    "league": "Campeonato Femenino A - Clausura",
-    "tier": "AVISO",
-    "probability": 0.6060240143670196,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T01:12:45.852Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "North Carolina Courage vs Houston Dash",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.5631126652904446,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      37,
-      42,
-      51,
-      80,
-      93
-    ],
-    "timestamp": "2026-08-17T01:12:45.948Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "Huntsville vs Inter Miami II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5361845458063094,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T01:12:46.036Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "New England II vs Philadelphia Union II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.557926860726151,
-    "minute": 76,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T01:22:45.876Z",
-    "alertTimestamp": "2026-08-16T23:12:46.810Z"
-  },
-  {
-    "match": "Colon vs La Luz",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8655245888591712,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      42,
-      83
-    ],
-    "timestamp": "2026-08-17T01:32:54.349Z",
-    "alertTimestamp": "2026-08-16T23:42:46.836Z"
-  },
-  {
-    "match": "Caguas Sporting vs San Juan FC",
-    "league": "LPR Pro - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8775784854134426,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-17T02:32:45.946Z",
-    "alertTimestamp": "2026-08-17T00:32:51.293Z"
-  },
-  {
     "match": "Austin FC vs FC Dallas",
     "league": "MLS",
     "tier": "AVISO",
@@ -21796,5 +21578,237 @@
     ],
     "timestamp": "2026-09-13T02:41:11.683Z",
     "alertTimestamp": "2026-09-13T01:01:25.851Z"
+  },
+  {
+    "match": "Juventus Managua vs Tigres de Chinandega",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5149112960242603,
+    "minute": 81,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-13T15:59:25.914Z",
+    "alertTimestamp": "2026-09-13T01:10:57.334Z"
+  },
+  {
+    "match": "Juárez (F) vs Necaxa (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.851429142191907,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-13T15:59:27.751Z",
+    "alertTimestamp": "2026-09-13T01:21:08.026Z"
+  },
+  {
+    "match": "CD Motagua vs Genesis Policía Nacional FC",
+    "league": "Liga Nacional - Apertura - Grupo Centro",
+    "tier": "AVISO",
+    "probability": 0.8927488527916382,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 22, sin goles esperados reales. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      80
+    ],
+    "timestamp": "2026-09-13T15:59:27.877Z",
+    "alertTimestamp": "2026-09-13T01:30:40.716Z"
+  },
+  {
+    "match": "Colorado Rapids vs CF Montréal",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8761769379786906,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      43
+    ],
+    "timestamp": "2026-09-13T15:59:30.361Z",
+    "alertTimestamp": "2026-09-13T01:41:19.937Z"
+  },
+  {
+    "match": "Real Salt Lake vs New York City FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8806662229935103,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      41,
+      61
+    ],
+    "timestamp": "2026-09-13T15:59:47.825Z",
+    "alertTimestamp": "2026-09-13T01:41:19.937Z"
+  },
+  {
+    "match": "Sacramento Republic vs Detroit City",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8656869370165426,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14
+    ],
+    "timestamp": "2026-09-13T15:59:48.182Z",
+    "alertTimestamp": "2026-09-13T02:10:40.817Z"
+  },
+  {
+    "match": "Phoenix Rising FC vs FC Tulsa",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8794607652339864,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      88,
+      94
+    ],
+    "timestamp": "2026-09-13T15:59:49.070Z",
+    "alertTimestamp": "2026-09-13T02:10:40.817Z"
+  },
+  {
+    "match": "Grecia vs Jicaral Sercoba",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8687978126236299,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-09-13T15:59:49.461Z",
+    "alertTimestamp": "2026-09-13T02:10:40.817Z"
+  },
+  {
+    "match": "LA Galaxy vs Seattle Sounders",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8767452909146869,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles, y la MLS es una liga de alto scoring.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      44,
+      81
+    ],
+    "timestamp": "2026-09-13T15:59:59.940Z",
+    "alertTimestamp": "2026-09-13T02:41:10.853Z"
+  },
+  {
+    "match": "San Jose Earthquakes vs Houston Dynamo",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8662939145008339,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-09-13T16:00:00.014Z",
+    "alertTimestamp": "2026-09-13T02:41:10.853Z"
+  },
+  {
+    "match": "Deportivo Marquense vs San Pedro",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8469829668023784,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-13T16:07:12.505Z",
+    "alertTimestamp": "2026-09-13T02:10:40.817Z"
+  },
+  {
+    "match": "Wehen vs SV Waldhof Mannheim 07 e.V.",
+    "league": "3. Liga - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5183878099388244,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador ajustado y xG estimado no fiable para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      20
+    ],
+    "timestamp": "2026-09-13T16:38:13.228Z",
+    "alertTimestamp": "2026-09-13T15:59:15.714Z"
   }
 ]
