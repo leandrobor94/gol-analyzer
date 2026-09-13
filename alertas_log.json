@@ -1,26 +1,5 @@
 [
   {
-    "match": "New York City FC vs Philadelphia Union",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5733889884648836,
-    "minute": 76,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      47,
-      48,
-      69,
-      75
-    ],
-    "timestamp": "2026-08-17T00:12:49.494Z",
-    "alertTimestamp": "2026-08-16T22:32:49.068Z"
-  },
-  {
     "match": "Deportivo La Guaira vs Zamora FC",
     "league": "Liga FUTVE - Clausura",
     "tier": "AVISO",
@@ -21794,6 +21773,28 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-13T01:50:44.949Z",
+    "alertTimestamp": "2026-09-13T01:01:25.851Z"
+  },
+  {
+    "match": "St. Louis City SC vs Minnesota United",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.6429227261062191,
+    "minute": 64,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      18,
+      22,
+      38,
+      57,
+      61
+    ],
+    "timestamp": "2026-09-13T02:41:11.683Z",
     "alertTimestamp": "2026-09-13T01:01:25.851Z"
   }
 ]
