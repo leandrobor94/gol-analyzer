@@ -71,8 +71,8 @@
       "tier": "AVISO"
     },
     "4745539_AVISO": {
-      "timestamp": 1789318743959,
-      "minute": 25,
+      "timestamp": 1789323160834,
+      "minute": 79,
       "tier": "AVISO"
     },
     "4755399_AVISO": {
@@ -119,13 +119,78 @@
       "timestamp": 1789321780784,
       "minute": 76,
       "tier": "AVISO"
+    },
+    "4789473_AVISO": {
+      "timestamp": 1789322456705,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4750869_AVISO": {
+      "timestamp": 1789323160834,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4853741_AVISO": {
+      "timestamp": 1789324236242,
+      "minute": 26,
+      "tier": "AVISO"
+    },
+    "4822619_AVISO": {
+      "timestamp": 1789324236242,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4849552_AVISO": {
+      "timestamp": 1789324236242,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4844327_AVISO": {
+      "timestamp": 1789324236242,
+      "minute": 26,
+      "tier": "AVISO"
+    },
+    "4849553_AVISO": {
+      "timestamp": 1789324236242,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4764296_AVISO": {
+      "timestamp": 1789324985167,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4735855_AVISO": {
+      "timestamp": 1789324985167,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4764293_AVISO": {
+      "timestamp": 1789324985167,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4853560_AVISO": {
+      "timestamp": 1789324985167,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4805189_AVISO": {
+      "timestamp": 1789324985167,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4675462_AVISO": {
+      "timestamp": 1789325587743,
+      "minute": 77,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 8145,
-    "verified": 8053,
-    "withGoalTimeline": 5524,
+    "total": 8202,
+    "verified": 8099,
+    "withGoalTimeline": 5563,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-13T17:49:48.887Z"
+  "lastUpdated": "2026-09-13T18:53:29.448Z"
 }
