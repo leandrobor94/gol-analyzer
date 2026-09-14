@@ -1,244 +1,5 @@
 [
   {
-    "match": "Kairat Almaty vs Anderlecht",
-    "league": "UEFA Europa League Clasificatorio - Playoff",
-    "tier": "AVISO",
-    "probability": 0.9034799965488804,
-    "minute": 26,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Anderlecht leads 0-2, but it's early (minute 26) and the xG is estimated.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      24,
-      46
-    ],
-    "timestamp": "2026-08-20T16:57:39.051Z",
-    "alertTimestamp": "2026-08-20T15:07:37.844Z"
-  },
-  {
-    "match": "Deportes Iquique (F) vs Universidad de Chile (F)",
-    "league": "Campeonato Femenino",
-    "tier": "AVISO",
-    "probability": 0.5512670990592217,
-    "minute": 79,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      18,
-      86
-    ],
-    "timestamp": "2026-08-20T16:57:50.206Z",
-    "alertTimestamp": "2026-08-20T15:17:36.730Z"
-  },
-  {
-    "match": "Venados vs Dorados de Sinaloa",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8832779129248326,
-    "minute": 21,
-    "scoreAtAlert": "3-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      8,
-      37,
-      40,
-      66,
-      90
-    ],
-    "timestamp": "2026-08-21T00:59:38.215Z",
-    "alertTimestamp": "2026-08-20T23:00:37.302Z"
-  },
-  {
-    "match": "Cavalier FC vs Salcedo",
-    "league": "CONCACAF Copa del Caribe - Fase de grupos",
-    "tier": "AVISO",
-    "probability": 0.859342681400249,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-21T02:09:55.813Z",
-    "alertTimestamp": "2026-08-21T00:09:48.053Z"
-  },
-  {
-    "match": "Alianza FC vs CD Olimpia",
-    "league": "CONCACAF Copa Centroamericana - Fase de grupos - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.8513979200523477,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 20, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      42,
-      71,
-      76,
-      80
-    ],
-    "timestamp": "2026-08-21T02:59:54.023Z",
-    "alertTimestamp": "2026-08-21T01:09:55.671Z"
-  },
-  {
-    "match": "Champions Academy vs Árabe Unido Sub20",
-    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.8971450861158349,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 0-2 y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      18,
-      41
-    ],
-    "timestamp": "2026-08-21T02:59:54.181Z",
-    "alertTimestamp": "2026-08-21T01:09:55.671Z"
-  },
-  {
-    "match": "Atlético Morelia vs Correcaminos",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8659523118350793,
-    "minute": 20,
-    "scoreAtAlert": "0-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador 0-0, sin eventos que justifiquen rechazo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      33,
-      66,
-      74,
-      94
-    ],
-    "timestamp": "2026-08-21T12:56:42.044Z",
-    "alertTimestamp": "2026-08-21T01:09:55.671Z"
-  },
-  {
-    "match": "Eastern SC vs Shatin",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5471376222683563,
-    "minute": 80,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con goles, aunque el marcador es amplio, el modelo aún ve probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      15,
-      44,
-      52,
-      68
-    ],
-    "timestamp": "2026-08-21T13:56:42.675Z",
-    "alertTimestamp": "2026-08-21T13:07:12.701Z"
-  },
-  {
-    "match": "Venda Fc vs Lerumo Lions",
-    "league": "Championship - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5264680507566749,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      30,
-      52
-    ],
-    "timestamp": "2026-08-21T14:56:49.527Z",
-    "alertTimestamp": "2026-08-21T13:07:12.701Z"
-  },
-  {
-    "match": "FC Mesakhte Tkibuli vs Dinamo Batumi",
-    "league": "Erovnuli Liga",
-    "tier": "AVISO",
-    "probability": 0.6491853821981485,
-    "minute": 60,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Dinamo Batumi con llegadas. xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      23
-    ],
-    "timestamp": "2026-08-21T15:06:58.899Z",
-    "alertTimestamp": "2026-08-21T13:07:12.701Z"
-  },
-  {
     "match": "Navbahor vs Nasaf Qarshi",
     "league": "Super Liga de Uzbekistán",
     "tier": "AVISO",
@@ -21784,5 +21545,249 @@
     ],
     "timestamp": "2026-09-14T19:37:06.627Z",
     "alertTimestamp": "2026-09-14T17:57:06.110Z"
+  },
+  {
+    "match": "Deportivo Pinozá vs Sport Colonial",
+    "league": "APF Primera C",
+    "tier": "AVISO",
+    "probability": 0.8828589127994869,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-14T19:57:11.026Z",
+    "alertTimestamp": "2026-09-13T18:12:40.834Z"
+  },
+  {
+    "match": "Jong PSV Eindhoven vs Jong AZ Alkmaar",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.556022765341705,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es fiable, pero las grandes ocasiones y tiros a puerta son altos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      34,
+      84
+    ],
+    "timestamp": "2026-09-14T19:57:11.098Z",
+    "alertTimestamp": "2026-09-14T18:08:58.857Z"
+  },
+  {
+    "match": "FCSB vs Petrolul Ploiesti",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.8994399885940633,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas ocasiones claras y tiros a puerta del equipo local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      14,
+      24,
+      66
+    ],
+    "timestamp": "2026-09-14T20:07:05.423Z",
+    "alertTimestamp": "2026-09-14T18:08:58.857Z"
+  },
+  {
+    "match": "Esteghlal FC Tehran vs Al Sadd",
+    "league": "AFC Liga de Campeones Élite",
+    "tier": "AVISO",
+    "probability": 0.862105832955871,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, y una gran ocasión para el local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      47,
+      95
+    ],
+    "timestamp": "2026-09-14T20:17:02.461Z",
+    "alertTimestamp": "2026-09-14T18:18:11.291Z"
+  },
+  {
+    "match": "Defensores de Belgrano vs Deportivo Madryn",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5720086461024191,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      34,
+      39,
+      60
+    ],
+    "timestamp": "2026-09-14T20:27:11.468Z",
+    "alertTimestamp": "2026-09-14T18:37:37.204Z"
+  },
+  {
+    "match": "Sligo Rovers vs Galway United",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8915397274687462,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      8,
+      18,
+      39,
+      86
+    ],
+    "timestamp": "2026-09-14T20:37:02.826Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Waterford FC vs Derry City",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.885642501478391,
+    "minute": 22,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones claras para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      45,
+      51,
+      57
+    ],
+    "timestamp": "2026-09-14T20:37:02.871Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Dundalk vs St. Patricks",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8852315213439985,
+    "minute": 23,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y la liga tiene un ritmo de goles decente.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21,
+      37,
+      75,
+      82
+    ],
+    "timestamp": "2026-09-14T20:37:02.930Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Inter Milan vs Udinese",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.958971344653941,
+    "minute": 21,
+    "scoreAtAlert": "5-3",
+    "finalScore": "5-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles, marcador ajustado y muchas ocasiones de gol para ambos equipos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      16,
+      26,
+      35,
+      57,
+      67,
+      79,
+      91
+    ],
+    "timestamp": "2026-09-14T20:47:08.410Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Shelbourne vs Drogheda Utd",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8950328324408772,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      22,
+      40,
+      57
+    ],
+    "timestamp": "2026-09-14T20:47:08.453Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
   }
 ]
