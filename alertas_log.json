@@ -1,73 +1,5 @@
 [
   {
-    "match": "Navbahor vs Nasaf Qarshi",
-    "league": "Super Liga de Uzbekistán",
-    "tier": "AVISO",
-    "probability": 0.5394263364791726,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real. Aún hay urgencia.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-21T15:57:12.636Z",
-    "alertTimestamp": "2026-08-21T14:06:43.404Z"
-  },
-  {
-    "match": "Academía Costa Del Este vs Sporting San Miguelito Sub20",
-    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.5752692018208104,
-    "minute": 76,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "El partido no está resuelto y la probabilidad de gol es alta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      20,
-      34
-    ],
-    "timestamp": "2026-08-21T15:57:12.718Z",
-    "alertTimestamp": "2026-08-21T14:06:43.404Z"
-  },
-  {
-    "match": "CF Chindia Targoviste vs CS Dinamo București",
-    "league": "Liga 2 rumana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.534292231638541,
-    "minute": 79,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      81,
-      88
-    ],
-    "timestamp": "2026-08-21T16:27:23.322Z",
-    "alertTimestamp": "2026-08-21T14:36:46.628Z"
-  },
-  {
     "match": "Orsha vs Bate Borisov II Reserve",
     "league": "Pershaya Liga",
     "tier": "AVISO",
@@ -21789,5 +21721,76 @@
     ],
     "timestamp": "2026-09-14T20:47:08.453Z",
     "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Villarreal CF vs Real Betis",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5972500096272625,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, ambos equipos generando, xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      39,
+      43
+    ],
+    "timestamp": "2026-09-14T20:56:59.617Z",
+    "alertTimestamp": "2026-09-14T19:07:41.901Z"
+  },
+  {
+    "match": "Moreirense vs Maritimo",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.8885467188148867,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, pero xG estimado y sin volumen de juego claro. Aún hay tiempo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      28,
+      79,
+      86
+    ],
+    "timestamp": "2026-09-14T21:16:59.577Z",
+    "alertTimestamp": "2026-09-14T19:17:55.230Z"
+  },
+  {
+    "match": "SC Braga vs Estoril",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.858053336363906,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchas chances de gol, y xG estimado no es confiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      83
+    ],
+    "timestamp": "2026-09-14T21:46:59.047Z",
+    "alertTimestamp": "2026-09-14T19:57:10.474Z"
   }
 ]
