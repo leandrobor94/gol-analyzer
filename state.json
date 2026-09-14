@@ -1,10 +1,10 @@
 {
   "alertedMatches": {},
   "counters": {
-    "total": 8280,
-    "verified": 8266,
+    "total": 8281,
+    "verified": 8267,
     "withGoalTimeline": 5676,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-14T02:27:03.469Z"
+  "lastUpdated": "2026-09-14T02:57:59.517Z"
 }
