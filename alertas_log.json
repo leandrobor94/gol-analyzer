@@ -1,118 +1,5 @@
 [
   {
-    "match": "Flora Tallinn II vs Viimsi JK",
-    "league": "Segunda división estonia",
-    "tier": "AVISO",
-    "probability": 0.5270546517027409,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      48,
-      73,
-      90
-    ],
-    "timestamp": "2026-08-21T17:27:19.201Z",
-    "alertTimestamp": "2026-08-21T15:37:04.698Z"
-  },
-  {
-    "match": "Seravezza Pozzi vs Scandicci",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.5361061507400959,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador ajustado y minutos restantes. El xG no es real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      18
-    ],
-    "timestamp": "2026-08-21T22:38:38.496Z",
-    "alertTimestamp": "2026-08-21T16:07:30.682Z"
-  },
-  {
-    "match": "Chrobry Glogow vs Warta Poznan",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.5359197414084197,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      8
-    ],
-    "timestamp": "2026-08-21T22:38:38.705Z",
-    "alertTimestamp": "2026-08-21T16:07:30.682Z"
-  },
-  {
-    "match": "Levadia Tallinn vs Trans Narva",
-    "league": "Meistriliiga",
-    "tier": "AVISO",
-    "probability": 0.6691870894930096,
-    "minute": 62,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no confiable.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      53,
-      67,
-      69
-    ],
-    "timestamp": "2026-08-21T22:38:39.896Z",
-    "alertTimestamp": "2026-08-21T16:07:30.682Z"
-  },
-  {
-    "match": "Albukiryah vs Al Anwar",
-    "league": "First Division",
-    "tier": "AVISO",
-    "probability": 0.8600468517662038,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido sin goles, xG estimado no confiable, sin remates a puerta. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-21T22:38:40.980Z",
-    "alertTimestamp": "2026-08-21T16:27:23.060Z"
-  },
-  {
     "match": "Torpedo Moscow vs Spartak Kostroma",
     "league": "Russian First League",
     "tier": "AVISO",
@@ -21786,5 +21673,122 @@
     ],
     "timestamp": "2026-09-15T18:29:47.594Z",
     "alertTimestamp": "2026-09-15T16:39:27.798Z"
+  },
+  {
+    "match": "Landskrona Bois vs GIF Sundsvall",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.8513563547461261,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      23,
+      46,
+      91
+    ],
+    "timestamp": "2026-09-15T18:52:37.797Z",
+    "alertTimestamp": "2026-09-15T17:09:46.397Z"
+  },
+  {
+    "match": "Altay vs Efeler 09 Sfk",
+    "league": "Copa de Turquía",
+    "tier": "AVISO",
+    "probability": 0.9017039611882257,
+    "minute": 20,
+    "scoreAtAlert": "1-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      43,
+      45,
+      57,
+      68,
+      72,
+      93
+    ],
+    "timestamp": "2026-09-15T18:59:50.379Z",
+    "alertTimestamp": "2026-09-15T17:09:46.397Z"
+  },
+  {
+    "match": "Sonnenhof Großaspach vs SC Verl",
+    "league": "3. Liga - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8683484259763719,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido temprano, marcador ajustado, y aunque el xG es estimado, hay tiros a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      86
+    ],
+    "timestamp": "2026-09-15T18:59:50.790Z",
+    "alertTimestamp": "2026-09-15T17:09:46.397Z"
+  },
+  {
+    "match": "IK Brage vs Sandvikens IF",
+    "league": "Superettan",
+    "tier": "AVISO",
+    "probability": 0.8528938415271348,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, sin remates a puerta. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      38
+    ],
+    "timestamp": "2026-09-15T18:59:51.279Z",
+    "alertTimestamp": "2026-09-15T17:09:46.397Z"
+  },
+  {
+    "match": "Rayo Vallecano vs RCD Espanyol",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.538574342793541,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, xG estimado no fiable, ambos equipos con llegadas.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      26,
+      54
+    ],
+    "timestamp": "2026-09-15T19:11:29.021Z",
+    "alertTimestamp": "2026-09-15T17:09:46.397Z"
   }
 ]
