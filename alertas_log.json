@@ -1,228 +1,5 @@
 [
   {
-    "match": "Inter Santa Tecla vs CD Inca-Aruba",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.6268252116904622,
-    "minute": 62,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, xG estimado no confiable, y un equipo sin remates a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T02:57:42.391Z",
-    "alertTimestamp": "2026-08-22T01:07:42.593Z"
-  },
-  {
-    "match": "Hull City vs Manchester United",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5325687004475583,
-    "minute": 80,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, ambos equipos con oportunidades y xG estimado no fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      17,
-      38
-    ],
-    "timestamp": "2026-08-22T13:28:59.580Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Millwall vs Norwich",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.6515410911400257,
-    "minute": 61,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Millwall domina con 2-0 y xG alto, a pesar de ser estimado. Norwich sin respuesta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      18,
-      58,
-      84
-    ],
-    "timestamp": "2026-08-22T13:29:19.811Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Yeovil vs Gateshead",
-    "league": "Liga Nacional inglesa",
-    "tier": "AVISO",
-    "probability": 0.6391096959412897,
-    "minute": 60,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Yeovil con 12 tiros a puerta y xG estimado alto, Gateshead sin volumen de juego.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      81,
-      90
-    ],
-    "timestamp": "2026-08-22T13:29:39.923Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Kidderminster vs Aldershot Town",
-    "league": "Liga Nacional inglesa",
-    "tier": "AVISO",
-    "probability": 0.5246926523126865,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un solo gol, un expulsado y xG estimado. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      28,
-      87
-    ],
-    "timestamp": "2026-08-22T13:39:39.689Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Ammanford vs Gap Connah's Quay",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.6403241316546212,
-    "minute": 61,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, y quedan 32 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T13:39:40.549Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Harrogate Town vs Barrow",
-    "league": "Liga Nacional inglesa",
-    "tier": "AVISO",
-    "probability": 0.6681593863453855,
-    "minute": 61,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, con goles esperados y remates a puerta, sin indicación de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      15,
-      35,
-      85,
-      96
-    ],
-    "timestamp": "2026-08-22T13:49:22.712Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Arsenal Sub21 vs Crystal Palace Sub21",
-    "league": "Premier League 2 - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5273024027496104,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 1-1 en el minuto 79, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T13:59:09.281Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Inhulets vs Veres Rivne",
-    "league": "Copa Ucrania - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.5288456157929424,
-    "minute": 80,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa con marcador ajustado y alta probabilidad de gol en los minutos finales.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T14:09:12.940Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Koninklijke HFC vs Barendrecht",
-    "league": "Tweede Divisie",
-    "tier": "AVISO",
-    "probability": 0.6754221390404579,
-    "minute": 61,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no fiable, y un solo gol de diferencia.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      32,
-      55,
-      92
-    ],
-    "timestamp": "2026-08-22T14:09:18.496Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
     "match": "Shenzhen Peng City vs Zhejiang",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21793,5 +21570,233 @@
     ],
     "timestamp": "2026-09-15T20:02:15.879Z",
     "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "Chesterfield vs Manchester City Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8468312069788729,
+    "minute": 20,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      16,
+      23,
+      38,
+      49,
+      75,
+      92,
+      93
+    ],
+    "timestamp": "2026-09-15T20:42:28.594Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "Falkirk vs Hearts",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.8889143308456958,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, muchas chances de gol, sin razones para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      22,
+      68
+    ],
+    "timestamp": "2026-09-15T20:42:28.944Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "Motherwell vs Aberdeen",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.5214079463433479,
+    "minute": 77,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      38,
+      46,
+      76,
+      87
+    ],
+    "timestamp": "2026-09-15T20:42:29.179Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "Hibernian vs Kilmarnock",
+    "league": "Liga Escocesa",
+    "tier": "AVISO",
+    "probability": 0.5344572459672142,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Kilmarnock con 2 grandes ocasiones y xG parejo. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      40
+    ],
+    "timestamp": "2026-09-15T20:50:55.803Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "Aldershot Town vs Yeovil",
+    "league": "Liga Nacional inglesa",
+    "tier": "AVISO",
+    "probability": 0.559031953316299,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, con un jugador menos y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      66
+    ],
+    "timestamp": "2026-09-15T20:50:56.038Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "West Ham United vs Fulham",
+    "league": "Copa de la liga - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8638244086988983,
+    "minute": 23,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      16,
+      37,
+      47,
+      78
+    ],
+    "timestamp": "2026-09-15T20:51:47.104Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "Truro City vs Salisbury City",
+    "league": "National League N/S - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.9096731532404346,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8
+    ],
+    "timestamp": "2026-09-15T20:51:47.536Z",
+    "alertTimestamp": "2026-09-15T18:59:41.102Z"
+  },
+  {
+    "match": "Lewes vs Carshalton Athletic",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8982469973920401,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-15T20:52:11.897Z",
+    "alertTimestamp": "2026-09-15T18:59:41.102Z"
+  },
+  {
+    "match": "Eastbourne Borough vs Chatham Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.6123416688985137,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado en los minutos finales, sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-15T21:01:01.521Z",
+    "alertTimestamp": "2026-09-15T18:59:41.102Z"
+  },
+  {
+    "match": "Casarano vs Audace Cerignola",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5222905908795675,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      43
+    ],
+    "timestamp": "2026-09-15T21:01:11.985Z",
+    "alertTimestamp": "2026-09-15T19:11:18.911Z"
   }
 ]
