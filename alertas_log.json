@@ -1,117 +1,5 @@
 [
   {
-    "match": "Torpedo Moscow vs Spartak Kostroma",
-    "league": "Russian First League",
-    "tier": "AVISO",
-    "probability": 0.9006142009074494,
-    "minute": 27,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, aún hay tiempo y el xG es estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      10,
-      60
-    ],
-    "timestamp": "2026-08-21T22:38:41.410Z",
-    "alertTimestamp": "2026-08-21T16:37:15.178Z"
-  },
-  {
-    "match": "San Francisco Fc Sub20 vs Unión Coclé II",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Sur",
-    "tier": "AVISO",
-    "probability": 0.5341646096173865,
-    "minute": 79,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado con alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-21T22:57:42.480Z",
-    "alertTimestamp": "2026-08-21T22:38:37.356Z"
-  },
-  {
-    "match": "Herrera II vs Veraguas Sub20",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.5219872586460756,
-    "minute": 81,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-21T22:57:42.522Z",
-    "alertTimestamp": "2026-08-21T22:38:37.356Z"
-  },
-  {
-    "match": "Puente Alto vs Aguará",
-    "league": "Tercera División A",
-    "tier": "AVISO",
-    "probability": 0.5527163632541174,
-    "minute": 76,
-    "scoreAtAlert": "3-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, marcador ajustado y tiempo restante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      44,
-      45,
-      53,
-      71,
-      74,
-      80,
-      93
-    ],
-    "timestamp": "2026-08-22T02:07:44.405Z",
-    "alertTimestamp": "2026-08-22T00:07:42.123Z"
-  },
-  {
-    "match": "San Marcos vs Rangers De Talca",
-    "league": "Liga de Ascenso",
-    "tier": "AVISO",
-    "probability": 0.5313627834953407,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T02:37:47.860Z",
-    "alertTimestamp": "2026-08-22T00:37:42.447Z"
-  },
-  {
     "match": "Inter Santa Tecla vs CD Inca-Aruba",
     "league": "Primera Division - Apertura",
     "tier": "AVISO",
@@ -21790,5 +21678,120 @@
     ],
     "timestamp": "2026-09-15T19:11:29.021Z",
     "alertTimestamp": "2026-09-15T17:09:46.397Z"
+  },
+  {
+    "match": "Liverpool FC (Reserva) vs Colon FC (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8807331105096617,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El modelo indica alta probabilidad de gol, sin datos que contradigan la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-15T19:52:18.410Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "Alavés vs Valencia CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.574140571180086,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Alavés generando más peligro a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      78
+    ],
+    "timestamp": "2026-09-15T20:02:14.619Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "Leyton Orient vs Arsenal Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8739771830258868,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      25,
+      45,
+      81
+    ],
+    "timestamp": "2026-09-15T20:02:14.725Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "Swindon vs Crystal Palace Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8506870213709178,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      46,
+      55
+    ],
+    "timestamp": "2026-09-15T20:02:15.771Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
+  },
+  {
+    "match": "York vs Newcastle Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8684279128214972,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      8,
+      44,
+      46,
+      83
+    ],
+    "timestamp": "2026-09-15T20:02:15.879Z",
+    "alertTimestamp": "2026-09-15T18:11:09.583Z"
   }
 ]
