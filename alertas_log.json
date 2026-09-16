@@ -1,99 +1,5 @@
 [
   {
-    "match": "LDU Quito (F) vs Dragonas (F)",
-    "league": "Superliga Femenina de Ecuador - Final",
-    "tier": "AVISO",
-    "probability": 0.5613886905997696,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      47
-    ],
-    "timestamp": "2026-08-23T00:03:55.252Z",
-    "alertTimestamp": "2026-08-22T22:33:58.178Z"
-  },
-  {
-    "match": "Argentino Quilmes vs Villa San Carlos",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.5406977431588988,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      55,
-      78
-    ],
-    "timestamp": "2026-08-23T00:03:55.285Z",
-    "alertTimestamp": "2026-08-22T22:33:58.178Z"
-  },
-  {
-    "match": "Kansas City Current vs Seattle Reign",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.529343171845463,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, xG estimado alto para el local, y muchas oportunidades de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      51
-    ],
-    "timestamp": "2026-08-23T00:43:55.529Z",
-    "alertTimestamp": "2026-08-22T22:33:58.178Z"
-  },
-  {
-    "match": "Richmond Kickers vs Portland Hearts of Pine",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5752382380862632,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      37,
-      74
-    ],
-    "timestamp": "2026-08-23T01:04:02.531Z",
-    "alertTimestamp": "2026-08-22T23:14:18.200Z"
-  },
-  {
-    "match": "Detroit City vs Tampa Bay Rowdies",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5272879028943951,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-08-23T01:04:02.573Z",
-    "alertTimestamp": "2026-08-22T23:14:18.200Z"
-  },
-  {
     "match": "Lexington vs Las Vegas Lights",
     "league": "USL Championship",
     "tier": "AVISO",
@@ -21908,5 +21814,101 @@
     ],
     "timestamp": "2026-09-16T20:13:31.716Z",
     "alertTimestamp": "2026-09-16T18:14:32.973Z"
+  },
+  {
+    "match": "Rentistas vs Plaza Colonia",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.5470291577771557,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      48,
+      93,
+      96
+    ],
+    "timestamp": "2026-09-16T20:34:10.425Z",
+    "alertTimestamp": "2026-09-16T18:34:04.261Z"
+  },
+  {
+    "match": "Olympiacos vs Jagiellonia",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.9018102645218423,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      20,
+      43,
+      84
+    ],
+    "timestamp": "2026-09-16T20:54:03.908Z",
+    "alertTimestamp": "2026-09-16T19:04:39.105Z"
+  },
+  {
+    "match": "Sunderland vs AZ Alkmaar",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5324973143678489,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no confiable, y el marcador es ajustado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      66
+    ],
+    "timestamp": "2026-09-16T20:54:04.119Z",
+    "alertTimestamp": "2026-09-16T19:04:39.105Z"
+  },
+  {
+    "match": "Inter Santa Tecla (Reserva) vs Cd Fas Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.9017039611882257,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T21:02:39.282Z",
+    "alertTimestamp": "2026-09-16T19:26:29.380Z"
+  },
+  {
+    "match": "Livorno vs Vado FC",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.863861186657829,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      6,
+      12,
+      21,
+      58,
+      81
+    ],
+    "timestamp": "2026-09-16T21:02:39.486Z",
+    "alertTimestamp": "2026-09-16T19:26:29.380Z"
   }
 ]
