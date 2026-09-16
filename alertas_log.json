@@ -1,91 +1,5 @@
 [
   {
-    "match": "Shenzhen Peng City vs Zhejiang",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5437143837371621,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      58,
-      83
-    ],
-    "timestamp": "2026-08-22T14:19:05.891Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Fakel Voronezh vs FC Orenburg",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.6637035608128179,
-    "minute": 61,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con un xG estimado a favor del visitante y una gran chance.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T14:38:46.780Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Korona Kielce vs Motor Lublin",
-    "league": "Ekstraklasa",
-    "tier": "AVISO",
-    "probability": 0.5616399025310471,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      19,
-      30
-    ],
-    "timestamp": "2026-08-22T14:38:46.945Z",
-    "alertTimestamp": "2026-08-22T12:48:35.507Z"
-  },
-  {
-    "match": "Rollon vs SK Traeff",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.8849927601480368,
-    "minute": 25,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado, sin datos de xG reales para desestimar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T14:59:23.698Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
     "match": "Sekhukhune United vs Orlando Pirates",
     "league": "MTN 8 Cup",
     "tier": "AVISO",
@@ -21798,5 +21712,93 @@
     ],
     "timestamp": "2026-09-15T21:01:11.985Z",
     "alertTimestamp": "2026-09-15T19:11:18.911Z"
+  },
+  {
+    "match": "Cambridge City vs Tilbury",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8956194217110756,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "6-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 22, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T02:20:44.510Z",
+    "alertTimestamp": "2026-09-15T18:52:28.761Z"
+  },
+  {
+    "match": "FC Penafiel U23 vs Santa Clara Sub23",
+    "league": "Liga de Portugal Sub23 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5316270440993992,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 80, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      95
+    ],
+    "timestamp": "2026-09-16T02:20:51.384Z",
+    "alertTimestamp": "2026-09-15T19:41:35.696Z"
+  },
+  {
+    "match": "Elche CF vs Real Madrid",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5826708559629483,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Real Madrid con ventaja mínima y ambos equipos generando ocasiones.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      33,
+      71,
+      83,
+      91
+    ],
+    "timestamp": "2026-09-16T02:20:51.446Z",
+    "alertTimestamp": "2026-09-15T19:41:35.696Z"
+  },
+  {
+    "match": "CD Olimpico Litoral vs AD SESA",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.9033386103389932,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T02:21:08.572Z",
+    "alertTimestamp": "2026-09-15T20:33:08.068Z"
   }
 ]
