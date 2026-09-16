@@ -1,92 +1,5 @@
 [
   {
-    "match": "Sekhukhune United vs Orlando Pirates",
-    "league": "MTN 8 Cup",
-    "tier": "AVISO",
-    "probability": 0.6505590532341732,
-    "minute": 61,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, y 32 minutos restantes.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      43
-    ],
-    "timestamp": "2026-08-22T14:59:24.645Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
-    "match": "Kloetinge vs Kozakken Boys",
-    "league": "Tweede Divisie",
-    "tier": "AVISO",
-    "probability": 0.5523117100097579,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, xG estimado no es fiable, y el marcador no está resuelto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T14:59:26.572Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
-    "match": "IJsselmeervogels vs Quick Boys",
-    "league": "Tweede Divisie",
-    "tier": "AVISO",
-    "probability": 0.5433892181052787,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      26
-    ],
-    "timestamp": "2026-08-22T15:08:55.159Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
-    "match": "Katwijk vs HSV Hoek",
-    "league": "Tweede Divisie",
-    "tier": "AVISO",
-    "probability": 0.5478518003868746,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en liga de alto scoring.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      55,
-      81
-    ],
-    "timestamp": "2026-08-22T15:08:55.318Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
     "match": "FC Hansa Luneburg vs Werder Bremen",
     "league": "DFB-Pokal - Primera Ronda",
     "tier": "AVISO",
@@ -21800,5 +21713,95 @@
     "goalMinutes": [],
     "timestamp": "2026-09-16T02:21:08.572Z",
     "alertTimestamp": "2026-09-15T20:33:08.068Z"
+  },
+  {
+    "match": "Rsv Eintracht vs Greifswalder Fc",
+    "league": "Regionalliga - Nordost",
+    "tier": "AVISO",
+    "probability": 0.6140770030315759,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      15,
+      74
+    ],
+    "timestamp": "2026-09-16T16:53:46.538Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "ASPAC FC vs The Panthers",
+    "league": "CAF Confederation Cup - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.6244441752028181,
+    "minute": 76,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T17:03:57.576Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Greenville Triumph Sc vs Corpus Christi FC",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6079589763003665,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador ajustado y tiempo restante suficiente para un gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      36
+    ],
+    "timestamp": "2026-09-16T17:03:57.759Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Esperance Zarzis vs US Monastir",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.5431366528286243,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      47,
+      51
+    ],
+    "timestamp": "2026-09-16T17:13:45.796Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
   }
 ]
