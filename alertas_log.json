@@ -1,109 +1,5 @@
 [
   {
-    "match": "FC Hansa Luneburg vs Werder Bremen",
-    "league": "DFB-Pokal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.6317400828174079,
-    "minute": 61,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Werder Bremen tiene 4 grandes oportunidades y 9 tiros al área, a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11,
-      53,
-      76
-    ],
-    "timestamp": "2026-08-22T15:31:39.465Z",
-    "alertTimestamp": "2026-08-22T13:39:37.797Z"
-  },
-  {
-    "match": "Nyva Ternopil vs Bukovyna",
-    "league": "Copa Ucrania - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.8978335024722,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T15:42:12.795Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
-    "match": "Lillehammer FK vs Strommen",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.5350819478149444,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, con goles y minutos restantes. No hay razón para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T15:42:12.952Z",
-    "alertTimestamp": "2026-08-22T13:08:37.816Z"
-  },
-  {
-    "match": "Ready vs KFUM Oslo",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.8868443145656177,
-    "minute": 20,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de copa, sin goles, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T15:52:17.073Z",
-    "alertTimestamp": "2026-08-22T14:09:12.713Z"
-  },
-  {
-    "match": "Yate Town vs Bracknell Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8849927601480368,
-    "minute": 25,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-22T16:01:52.668Z",
-    "alertTimestamp": "2026-08-22T14:09:12.713Z"
-  },
-  {
     "match": "Everton vs Crystal Palace",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21802,6 +21698,115 @@
       51
     ],
     "timestamp": "2026-09-16T17:13:45.796Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Stjordals Blink vs Fredrikstad",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6366855493731726,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T17:55:14.243Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Al Hussein vs East Bengal",
+    "league": "AFC Liga de Campeones 2",
+    "tier": "AVISO",
+    "probability": 0.5428424847935701,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, xG estimado no es real, pero el modelo indica alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      40,
+      61,
+      87
+    ],
+    "timestamp": "2026-09-16T17:55:15.573Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Alta vs Tromso",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5434926751944337,
+    "minute": 81,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T18:04:44.170Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Schöningen vs Weiche Flensburg",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.5279932656009362,
+    "minute": 81,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los minutos finales, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      17,
+      38,
+      88
+    ],
+    "timestamp": "2026-09-16T18:04:45.465Z",
+    "alertTimestamp": "2026-09-16T16:33:45.775Z"
+  },
+  {
+    "match": "Brattvag vs Kristiansund FK",
+    "league": "NM Cupen - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5995245570924708,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-16T18:04:45.991Z",
     "alertTimestamp": "2026-09-16T16:33:45.775Z"
   }
 ]
