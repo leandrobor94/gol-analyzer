@@ -1,84 +1,5 @@
 [
   {
-    "match": "Chattanooga Red Wolves vs New York Cosmos",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8883322379664099,
-    "minute": 24,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      32,
-      48,
-      56,
-      61,
-      77
-    ],
-    "timestamp": "2026-08-23T01:23:54.851Z",
-    "alertTimestamp": "2026-08-22T23:14:18.200Z"
-  },
-  {
-    "match": "One Knoxville vs Boise",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5751033377666027,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      28,
-      32,
-      83
-    ],
-    "timestamp": "2026-08-23T01:44:06.526Z",
-    "alertTimestamp": "2026-08-22T23:43:53.570Z"
-  },
-  {
-    "match": "New York Red Bulls vs Chicago Fire",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5308117264922746,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      38,
-      85
-    ],
-    "timestamp": "2026-08-23T01:44:06.587Z",
-    "alertTimestamp": "2026-08-22T23:43:53.570Z"
-  },
-  {
-    "match": "Inter Miami vs Toronto FC",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5704738834241637,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      59,
-      62,
-      82
-    ],
-    "timestamp": "2026-08-23T01:44:06.626Z",
-    "alertTimestamp": "2026-08-22T23:43:53.570Z"
-  },
-  {
     "match": "Orlando City SC vs Real Salt Lake",
     "league": "MLS",
     "tier": "AVISO",
@@ -21931,6 +21852,103 @@
       88
     ],
     "timestamp": "2026-09-17T17:27:50.887Z",
+    "alertTimestamp": "2026-09-17T16:38:27.050Z"
+  },
+  {
+    "match": "Karkh SC vs Naft Maysan",
+    "league": "Liga Iraquí",
+    "tier": "AVISO",
+    "probability": 0.5310503275275373,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      14,
+      23,
+      26,
+      38
+    ],
+    "timestamp": "2026-09-17T17:47:50.884Z",
+    "alertTimestamp": "2026-09-17T16:38:27.050Z"
+  },
+  {
+    "match": "Hapoel Lod vs Beitar Ramat Gan",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.5233452141989293,
+    "minute": 81,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      17
+    ],
+    "timestamp": "2026-09-17T17:57:57.080Z",
+    "alertTimestamp": "2026-09-17T16:38:27.050Z"
+  },
+  {
+    "match": "Torpedo Moscow vs Veles",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.5814105103619571,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y ambos equipos con tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62,
+      78
+    ],
+    "timestamp": "2026-09-17T17:57:57.186Z",
+    "alertTimestamp": "2026-09-17T16:38:27.050Z"
+  },
+  {
+    "match": "Beitar Kfar Saba FC vs Amishav Petah Tikva",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.9012084948806957,
+    "minute": 23,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en Division 4, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21,
+      25,
+      59,
+      78,
+      97
+    ],
+    "timestamp": "2026-09-17T18:18:54.382Z",
     "alertTimestamp": "2026-09-17T16:38:27.050Z"
   }
 ]
