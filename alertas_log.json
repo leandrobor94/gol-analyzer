@@ -1,64 +1,5 @@
 [
   {
-    "match": "Orlando City SC vs Real Salt Lake",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5371629499624992,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36,
-      53,
-      81
-    ],
-    "timestamp": "2026-08-23T01:44:06.711Z",
-    "alertTimestamp": "2026-08-22T23:43:53.570Z"
-  },
-  {
-    "match": "CF Montréal vs LA Galaxy",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.525944015309284,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      19,
-      48,
-      79
-    ],
-    "timestamp": "2026-08-23T01:44:06.763Z",
-    "alertTimestamp": "2026-08-22T23:43:53.570Z"
-  },
-  {
-    "match": "Universitario De Tarija vs Universitario",
-    "league": "Copa Simón Bolívar - Grupo E",
-    "tier": "AVISO",
-    "probability": 0.5357438550499376,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-23T01:54:14.085Z",
-    "alertTimestamp": "2026-08-23T00:03:55.180Z"
-  },
-  {
     "match": "Forward Madison vs Charlotte Independence",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -21950,5 +21891,69 @@
     ],
     "timestamp": "2026-09-17T18:18:54.382Z",
     "alertTimestamp": "2026-09-17T16:38:27.050Z"
+  },
+  {
+    "match": "Levski Sofia vs Red Bull Salzburgo",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5592261473211411,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Salzburgo domina con 4 grandes ocasiones y 6 tiros a puerta. El partido no está resuelto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-09-17T18:38:02.262Z",
+    "alertTimestamp": "2026-09-17T16:47:49.106Z"
+  },
+  {
+    "match": "Real Betis vs Getafe CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8713606257638894,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, y aunque xG es estimado, hay tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45
+    ],
+    "timestamp": "2026-09-17T19:08:25.455Z",
+    "alertTimestamp": "2026-09-17T17:08:24.942Z"
+  },
+  {
+    "match": "SC Arad vs MS Shikun HaMizrah",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.5233452141989293,
+    "minute": 81,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-17T19:08:25.515Z",
+    "alertTimestamp": "2026-09-17T17:08:24.942Z"
   }
 ]
