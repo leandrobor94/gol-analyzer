@@ -1,65 +1,5 @@
 [
   {
-    "match": "St. Louis City SC vs Houston Dynamo",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5540703268395176,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      23,
-      75,
-      85
-    ],
-    "timestamp": "2026-08-23T02:43:53.789Z",
-    "alertTimestamp": "2026-08-23T00:43:55.440Z"
-  },
-  {
-    "match": "Corpus Christi FC vs Westchester SC",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5751033377666027,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      23,
-      37,
-      57,
-      89
-    ],
-    "timestamp": "2026-08-23T02:53:53.736Z",
-    "alertTimestamp": "2026-08-23T00:43:55.440Z"
-  },
-  {
-    "match": "Nashville SC vs Columbus Crew",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5466892581858472,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      27,
-      58,
-      68,
-      93,
-      95
-    ],
-    "timestamp": "2026-08-23T02:53:53.779Z",
-    "alertTimestamp": "2026-08-23T00:43:55.440Z"
-  },
-  {
     "match": "Jaiba Brava vs Alebrijes",
     "league": "Liga de Expansión MX - Apertura",
     "tier": "AVISO",
@@ -21958,5 +21898,74 @@
     ],
     "timestamp": "2026-09-17T19:58:16.730Z",
     "alertTimestamp": "2026-09-17T18:07:59.414Z"
+  },
+  {
+    "match": "Bastia vs Cannes",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8987061719820572,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      27
+    ],
+    "timestamp": "2026-09-17T20:48:43.617Z",
+    "alertTimestamp": "2026-09-17T18:48:06.970Z"
+  },
+  {
+    "match": "Cr Temouchent vs JS Kabylie",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5571898543373134,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-09-17T20:58:08.341Z",
+    "alertTimestamp": "2026-09-17T19:08:23.813Z"
+  },
+  {
+    "match": "Lillestrom vs Torreense",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5164510187589639,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23,
+      49,
+      79
+    ],
+    "timestamp": "2026-09-17T20:58:08.703Z",
+    "alertTimestamp": "2026-09-17T19:08:23.813Z"
   }
 ]
