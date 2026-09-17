@@ -1,23 +1,5 @@
 [
   {
-    "match": "Lexington vs Las Vegas Lights",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5376618191685116,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      51,
-      53
-    ],
-    "timestamp": "2026-08-23T01:04:02.710Z",
-    "alertTimestamp": "2026-08-22T23:14:18.200Z"
-  },
-  {
     "match": "Union Omaha vs Sarasota Paradise",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -21910,5 +21892,30 @@
     ],
     "timestamp": "2026-09-16T21:02:39.486Z",
     "alertTimestamp": "2026-09-16T19:26:29.380Z"
+  },
+  {
+    "match": "FC Barcelona vs Racing de Santander",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.661454546485688,
+    "minute": 76,
+    "scoreAtAlert": "5-2",
+    "finalScore": "7-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      25,
+      30,
+      36,
+      42,
+      65,
+      67,
+      79,
+      89
+    ],
+    "timestamp": "2026-09-17T02:13:31.048Z",
+    "alertTimestamp": "2026-09-16T19:44:35.301Z"
   }
 ]
