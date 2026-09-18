@@ -1,73 +1,5 @@
 [
   {
-    "match": "Austin FC vs Philadelphia Union",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.560258008377038,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      18,
-      21
-    ],
-    "timestamp": "2026-08-23T12:49:57.813Z",
-    "alertTimestamp": "2026-08-23T01:14:14.752Z"
-  },
-  {
-    "match": "San Jose Earthquakes vs Minnesota United",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.8806165098717168,
-    "minute": 24,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-5",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, muchas chances de gol, y el modelo predice alta probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      10,
-      40,
-      44,
-      65,
-      86
-    ],
-    "timestamp": "2026-08-23T12:50:04.696Z",
-    "alertTimestamp": "2026-08-23T02:43:53.709Z"
-  },
-  {
-    "match": "Miedz Legnica vs Arka Gdynia",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.8811843211956321,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en desarrollo, marcador ajustado, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      94
-    ],
-    "timestamp": "2026-08-23T14:29:52.438Z",
-    "alertTimestamp": "2026-08-23T12:49:54.902Z"
-  },
-  {
     "match": "Vittsjö GIK (F) vs Norrkoping (F)",
     "league": "Damallsvenskan",
     "tier": "AVISO",
@@ -21982,6 +21914,76 @@
       74
     ],
     "timestamp": "2026-09-18T17:01:28.827Z",
+    "alertTimestamp": "2026-09-18T16:09:36.990Z"
+  },
+  {
+    "match": "Shinnik Yaroslavl vs Kamaz",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.6978045568951833,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      58
+    ],
+    "timestamp": "2026-09-18T17:29:21.872Z",
+    "alertTimestamp": "2026-09-18T16:09:36.990Z"
+  },
+  {
+    "match": "Warta Poznan vs Puszcza Niepolomice",
+    "league": "I Liga",
+    "tier": "AVISO",
+    "probability": 0.8742254112860443,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, xG estimado no es fiable, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      12,
+      45,
+      50,
+      89
+    ],
+    "timestamp": "2026-09-18T17:59:24.192Z",
+    "alertTimestamp": "2026-09-18T16:09:36.990Z"
+  },
+  {
+    "match": "AC Oulu vs Inter Turku",
+    "league": "Veikkausliiga",
+    "tier": "AVISO",
+    "probability": 0.8556639795692754,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin grandes ocasiones aún.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-09-18T17:59:24.298Z",
     "alertTimestamp": "2026-09-18T16:09:36.990Z"
   }
 ]
