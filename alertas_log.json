@@ -1,35 +1,5 @@
 [
   {
-    "match": "Juárez (F) vs Santos Laguna (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5526191024474386,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-23T12:49:57.098Z",
-    "alertTimestamp": "2026-08-23T01:14:14.752Z"
-  },
-  {
-    "match": "CD Bocas FC vs Academia Mario Mendez",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.8586369806749679,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-23T12:49:57.592Z",
-    "alertTimestamp": "2026-08-23T01:14:14.752Z"
-  },
-  {
     "match": "Austin FC vs Philadelphia Union",
     "league": "MLS",
     "tier": "AVISO",
@@ -21971,5 +21941,47 @@
     "goalMinutes": [],
     "timestamp": "2026-09-18T02:18:46.576Z",
     "alertTimestamp": "2026-09-17T20:57:47.859Z"
+  },
+  {
+    "match": "A.D. Moravia (F) vs Alajuelense (F)",
+    "league": "Liga Promerica femenina",
+    "tier": "AVISO",
+    "probability": 0.8659962061996455,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-18T16:09:54.730Z",
+    "alertTimestamp": "2026-09-18T02:38:43.283Z"
+  },
+  {
+    "match": "Neftekhimik vs Ural Yekaterinburg",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.5393555887628994,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador ajustado, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-09-18T17:01:28.827Z",
+    "alertTimestamp": "2026-09-18T16:09:36.990Z"
   }
 ]
