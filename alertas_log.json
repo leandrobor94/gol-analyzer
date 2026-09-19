@@ -1,240 +1,5 @@
 [
   {
-    "match": "Avarta vs Hillerød",
-    "league": "DBU Pokalen - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.8948268396129292,
-    "minute": 23,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de copa, marcador 0-0, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      45,
-      57,
-      74,
-      90
-    ],
-    "timestamp": "2026-08-25T22:39:13.989Z",
-    "alertTimestamp": "2026-08-25T15:35:25.710Z"
-  },
-  {
-    "match": "Vatanspor vs Aalborg",
-    "league": "DBU Pokalen - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.5818386152065005,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      68,
-      84,
-      95
-    ],
-    "timestamp": "2026-08-25T22:39:14.166Z",
-    "alertTimestamp": "2026-08-25T15:35:25.710Z"
-  },
-  {
-    "match": "Academico De Viseu Sub23 vs Vizela Sub23",
-    "league": "Liga de Portugal Sub23",
-    "tier": "AVISO",
-    "probability": 0.5595796749561671,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      2,
-      31,
-      51
-    ],
-    "timestamp": "2026-08-25T22:39:14.796Z",
-    "alertTimestamp": "2026-08-25T16:05:53.838Z"
-  },
-  {
-    "match": "Leixoes Sub23 vs Leiria U23",
-    "league": "Liga de Portugal Sub23",
-    "tier": "AVISO",
-    "probability": 0.8939295420612672,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      51,
-      66,
-      74
-    ],
-    "timestamp": "2026-08-25T22:39:14.967Z",
-    "alertTimestamp": "2026-08-25T16:05:53.838Z"
-  },
-  {
-    "match": "Skovshoved If vs Tarnby FF",
-    "league": "DBU Pokalen - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.8916030468603658,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      25,
-      61
-    ],
-    "timestamp": "2026-08-25T22:39:15.108Z",
-    "alertTimestamp": "2026-08-25T16:05:53.838Z"
-  },
-  {
-    "match": "Hluboká Nad Vltavou vs Viktoria Zizkov",
-    "league": "MOL Cup - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.6333957523563849,
-    "minute": 60,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Viktoria Zizkov domina con 6 SOT. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-25T22:39:15.292Z",
-    "alertTimestamp": "2026-08-25T16:05:53.838Z"
-  },
-  {
-    "match": "Unirea Slobozia vs FC Metaloglobus Bucharest",
-    "league": "Liga 2 rumana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5249775090933203,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, y ambos equipos con remates a puerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      8,
-      62,
-      93
-    ],
-    "timestamp": "2026-08-25T22:39:15.450Z",
-    "alertTimestamp": "2026-08-25T16:05:53.838Z"
-  },
-  {
-    "match": "Abha Club vs Al Khaleej Club",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.867766888639437,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y chances claras. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      17,
-      24
-    ],
-    "timestamp": "2026-08-25T22:39:16.353Z",
-    "alertTimestamp": "2026-08-25T16:15:22.306Z"
-  },
-  {
-    "match": "Fuglebakken Kfum vs Vendsyssel FF",
-    "league": "DBU Pokalen - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.9076714423274086,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      45,
-      67
-    ],
-    "timestamp": "2026-08-25T22:39:16.530Z",
-    "alertTimestamp": "2026-08-25T16:36:22.300Z"
-  },
-  {
-    "match": "Bayern Munich II vs FC Memmingen",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.9232050682293181,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, marcador 0-2 con 70 minutos restantes. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      18,
-      47
-    ],
-    "timestamp": "2026-08-25T22:39:16.722Z",
-    "alertTimestamp": "2026-08-25T16:36:22.300Z"
-  },
-  {
     "match": "Al Waab vs Al Rayyan Next Generation",
     "league": "Q League",
     "tier": "AVISO",
@@ -21964,5 +21729,198 @@
     ],
     "timestamp": "2026-09-19T19:35:19.544Z",
     "alertTimestamp": "2026-09-19T18:55:36.411Z"
+  },
+  {
+    "match": "Hapoel Kiryat Ono vs Bnei Shefi Yehod",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.8951801215812994,
+    "minute": 25,
+    "scoreAtAlert": "2-5",
+    "finalScore": "2-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      28,
+      46,
+      52,
+      76,
+      79,
+      87
+    ],
+    "timestamp": "2026-09-19T19:44:18.205Z",
+    "alertTimestamp": "2026-09-19T17:55:01.704Z"
+  },
+  {
+    "match": "Argentina Sub19 vs Uruguay Sub19",
+    "league": "Juegos Suramericanos",
+    "tier": "AVISO",
+    "probability": 0.5233452141989293,
+    "minute": 81,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-09-19T20:03:25.911Z",
+    "alertTimestamp": "2026-09-19T18:05:24.285Z"
+  },
+  {
+    "match": "Capivariano/Sp Youth vs Agua Santa/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5233452141989293,
+    "minute": 81,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:03:25.944Z",
+    "alertTimestamp": "2026-09-19T18:05:24.285Z"
+  },
+  {
+    "match": "Portuguesa Santista/Sp Youth vs Novorizontino Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.9020270198662385,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminatoria, marcador 2-0 no es definitivo, y el modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:03:26.023Z",
+    "alertTimestamp": "2026-09-19T18:05:24.285Z"
+  },
+  {
+    "match": "Osasco Sporting Youth vs Desportivo Brasil/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.90073393438133,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:03:26.059Z",
+    "alertTimestamp": "2026-09-19T18:05:24.285Z"
+  },
+  {
+    "match": "Real Pilar vs Arsenal de Sarandí",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8996025283842268,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      11,
+      87,
+      95
+    ],
+    "timestamp": "2026-09-19T20:03:30.474Z",
+    "alertTimestamp": "2026-09-19T18:16:37.789Z"
+  },
+  {
+    "match": "San Martín Burzaco vs Deportivo Laferrere",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.9094748545698246,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      45,
+      56
+    ],
+    "timestamp": "2026-09-19T20:03:51.087Z",
+    "alertTimestamp": "2026-09-19T18:16:37.789Z"
+  },
+  {
+    "match": "Defensores de Glew vs Buenos Aires City FC",
+    "league": "Torneo Promocional Amateur - Reducido - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.6123416688985137,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:14:13.591Z",
+    "alertTimestamp": "2026-09-19T18:16:37.789Z"
+  },
+  {
+    "match": "Hapoel Ironi Arabe vs Maccabi Bialik Ata",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.8951801215812994,
+    "minute": 25,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:14:13.961Z",
+    "alertTimestamp": "2026-09-19T18:24:13.844Z"
+  },
+  {
+    "match": "Beitar Ironi Kiryat Gat vs Sekzia Nes Ziona",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.8857995887682046,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T20:23:03.001Z",
+    "alertTimestamp": "2026-09-19T18:24:13.844Z"
   }
 ]
