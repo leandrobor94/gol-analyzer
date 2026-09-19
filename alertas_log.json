@@ -1,114 +1,5 @@
 [
   {
-    "match": "Herrera vs CD Universitario",
-    "league": "Liga Panameña - Apertura - Conferencia Este",
-    "tier": "AVISO",
-    "probability": 0.543037721845291,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-23T23:03:57.592Z",
-    "alertTimestamp": "2026-08-23T22:33:57.321Z"
-  },
-  {
-    "match": "Santos vs Mirassol",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.5836693515072646,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, ambos equipos con chances de ganar. xG estimado, no es base para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      36,
-      68
-    ],
-    "timestamp": "2026-08-23T23:33:55.458Z",
-    "alertTimestamp": "2026-08-23T22:33:57.321Z"
-  },
-  {
-    "match": "Chapecoense vs São Paulo",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.5567257120838125,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto, xG estimado no es fiable, São Paulo busca el empate.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      26
-    ],
-    "timestamp": "2026-08-23T23:33:55.642Z",
-    "alertTimestamp": "2026-08-23T22:33:57.321Z"
-  },
-  {
-    "match": "Pachuca (F) vs Chivas (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5294736241549777,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido apretado, alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-24T00:04:14.988Z",
-    "alertTimestamp": "2026-08-23T22:33:57.321Z"
-  },
-  {
-    "match": "Coritiba vs Corinthians",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.5674373397189124,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo, a pesar del xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      40,
-      75,
-      93
-    ],
-    "timestamp": "2026-08-24T00:34:00.724Z",
-    "alertTimestamp": "2026-08-23T22:33:57.321Z"
-  },
-  {
     "match": "Atlanta United vs Sporting KC",
     "league": "MLS",
     "tier": "AVISO",
@@ -21991,5 +21882,118 @@
     ],
     "timestamp": "2026-09-19T02:10:17.712Z",
     "alertTimestamp": "2026-09-19T01:50:20.736Z"
+  },
+  {
+    "match": "San Diego Wave vs Kansas City Current",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.8686081750274801,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      91
+    ],
+    "timestamp": "2026-09-19T15:51:16.318Z",
+    "alertTimestamp": "2026-09-19T02:21:23.345Z"
+  },
+  {
+    "match": "Oud-Heverlee Leuven vs La Louvière Centre",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.5181427133039556,
+    "minute": 80,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      32,
+      89
+    ],
+    "timestamp": "2026-09-19T16:04:28.328Z",
+    "alertTimestamp": "2026-09-19T15:50:42.538Z"
+  },
+  {
+    "match": "Newcastle United vs Hull City",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5164556824324971,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      3,
+      7,
+      67
+    ],
+    "timestamp": "2026-09-19T16:04:28.402Z",
+    "alertTimestamp": "2026-09-19T15:50:42.538Z"
+  },
+  {
+    "match": "Athletic Club vs Alavés",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.591302206905926,
+    "minute": 68,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando claramente en remates y ocasiones.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-19T16:14:16.661Z",
+    "alertTimestamp": "2026-09-19T15:50:42.538Z"
+  },
+  {
+    "match": "ADO Den Haag vs Cambuur",
+    "league": "Eredivisie",
+    "tier": "AVISO",
+    "probability": 0.6759262229536959,
+    "minute": 64,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un solo gol, xG estimado alto para el local, y muchas llegadas al área.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44,
+      74
+    ],
+    "timestamp": "2026-09-19T16:34:37.360Z",
+    "alertTimestamp": "2026-09-19T15:50:42.538Z"
   }
 ]
