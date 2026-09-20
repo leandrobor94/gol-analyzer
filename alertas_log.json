@@ -1,98 +1,5 @@
 [
   {
-    "match": "Bibiani Gold Stars FC vs Medeama SC",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9043252435514295,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8,
-      33,
-      40
-    ],
-    "timestamp": "2026-08-26T17:02:24.932Z",
-    "alertTimestamp": "2026-08-26T15:11:28.686Z"
-  },
-  {
-    "match": "SFK 2000 (F) vs Slovan Liberec (W)",
-    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8973312983740169,
-    "minute": 22,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa femenina, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      13,
-      47,
-      57,
-      65,
-      82
-    ],
-    "timestamp": "2026-08-26T17:02:25.028Z",
-    "alertTimestamp": "2026-08-26T15:11:28.686Z"
-  },
-  {
-    "match": "Uherský Brod vs Artis Brno",
-    "league": "MOL Cup - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8799460548500059,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es concluyente.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-26T17:24:15.279Z",
-    "alertTimestamp": "2026-08-26T15:31:38.960Z"
-  },
-  {
-    "match": "KRFK vs Brabrand",
-    "league": "DBU Pokalen - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.9341168112935959,
-    "minute": 20,
-    "scoreAtAlert": "1-5",
-    "finalScore": "1-5",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa con marcador igualado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      14
-    ],
-    "timestamp": "2026-08-26T17:24:15.753Z",
-    "alertTimestamp": "2026-08-26T15:41:29.080Z"
-  },
-  {
     "match": "Petro Luanda vs Recreativo Libolo",
     "league": "Girabola",
     "tier": "AVISO",
@@ -21823,5 +21730,87 @@
     "goalMinutes": [],
     "timestamp": "2026-09-20T01:24:20.129Z",
     "alertTimestamp": "2026-09-19T20:03:13.946Z"
+  },
+  {
+    "match": "Sarasota Paradise vs Greenville Triumph Sc",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6702113719797965,
+    "minute": 63,
+    "scoreAtAlert": "6-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      4,
+      13,
+      42,
+      48,
+      54,
+      59
+    ],
+    "timestamp": "2026-09-20T02:23:10.231Z",
+    "alertTimestamp": "2026-09-20T01:23:20.069Z"
+  },
+  {
+    "match": "Academia Quintana vs Edusoccer",
+    "league": "LPR Pro - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5491707749512644,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-20T02:23:10.427Z",
+    "alertTimestamp": "2026-09-20T01:23:20.069Z"
+  },
+  {
+    "match": "Instituto vs Talleres de Córdoba",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.6490903237695776,
+    "minute": 60,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      58,
+      66,
+      80
+    ],
+    "timestamp": "2026-09-20T02:23:10.631Z",
+    "alertTimestamp": "2026-09-20T01:23:20.069Z"
+  },
+  {
+    "match": "St. Louis City SC vs Toronto FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.620903483475795,
+    "minute": 65,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      41,
+      54,
+      68,
+      97
+    ],
+    "timestamp": "2026-09-20T02:42:37.029Z",
+    "alertTimestamp": "2026-09-20T01:23:20.069Z"
   }
 ]
