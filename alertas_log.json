@@ -1,155 +1,5 @@
 [
   {
-    "match": "Mardin 1969 vs Van Spor FK",
-    "league": "1. Lig",
-    "tier": "AVISO",
-    "probability": 0.879668823994239,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      60,
-      93
-    ],
-    "timestamp": "2026-08-29T20:31:43.040Z",
-    "alertTimestamp": "2026-08-29T18:42:37.780Z"
-  },
-  {
-    "match": "Young Boys vs FC Basilea",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8681155785235989,
-    "minute": 20,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 temprano, y xG estimado alto para el local.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      7,
-      14,
-      32,
-      37,
-      46,
-      71
-    ],
-    "timestamp": "2026-08-29T20:31:43.445Z",
-    "alertTimestamp": "2026-08-29T18:42:37.780Z"
-  },
-  {
-    "match": "Oud-Heverlee Leuven vs Standard Lieja",
-    "league": "Jupiler Pro League",
-    "tier": "AVISO",
-    "probability": 0.889761586221162,
-    "minute": 25,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      66,
-      68
-    ],
-    "timestamp": "2026-08-29T20:42:13.942Z",
-    "alertTimestamp": "2026-08-29T18:53:20.667Z"
-  },
-  {
-    "match": "Brest vs Toulouse",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.9335382482445737,
-    "minute": 26,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, con oportunidades de gol y sin un claro dominador.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      18,
-      62,
-      95
-    ],
-    "timestamp": "2026-08-29T20:50:51.499Z",
-    "alertTimestamp": "2026-08-29T18:53:20.667Z"
-  },
-  {
-    "match": "GV San Jose vs Real Oruro",
-    "league": "Copa Paceña",
-    "tier": "AVISO",
-    "probability": 0.8900434466832622,
-    "minute": 20,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, y un remate a puerta indica actividad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      39,
-      45,
-      47,
-      51,
-      72
-    ],
-    "timestamp": "2026-08-29T21:01:55.771Z",
-    "alertTimestamp": "2026-08-29T19:01:32.473Z"
-  },
-  {
-    "match": "Madrid CFF (F) vs Granada CF (F)",
-    "league": "Liga Femenina Iberdrola",
-    "tier": "AVISO",
-    "probability": 0.8991669626776801,
-    "minute": 21,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      23,
-      75,
-      91
-    ],
-    "timestamp": "2026-08-29T21:01:55.943Z",
-    "alertTimestamp": "2026-08-29T19:01:32.473Z"
-  },
-  {
     "match": "Sportivo Trinidense vs 2 de Mayo",
     "league": "Copa de Primera - Clausura",
     "tier": "AVISO",
@@ -21723,5 +21573,131 @@
     ],
     "timestamp": "2026-09-21T18:05:02.194Z",
     "alertTimestamp": "2026-09-21T01:27:22.996Z"
+  },
+  {
+    "match": "Lusail Sports Club vs Markhiya SC",
+    "league": "QSL Cup",
+    "tier": "AVISO",
+    "probability": 0.564255380870935,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-21T19:15:30.222Z",
+    "alertTimestamp": "2026-09-21T18:05:01.121Z"
+  },
+  {
+    "match": "Progreso (Reserva) vs Montevideo Wanderers (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con xG estimado, pero el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-21T19:55:04.121Z",
+    "alertTimestamp": "2026-09-21T18:05:01.121Z"
+  },
+  {
+    "match": "Bandeirante SP/Youth vs RB Bragantino/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de eliminatoria, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-21T19:55:04.312Z",
+    "alertTimestamp": "2026-09-21T18:05:01.121Z"
+  },
+  {
+    "match": "Xv De Jaú Youth vs Corinthians/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8826169602083076,
+    "minute": 26,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador ajustado y muchos minutos por delante. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-21T19:55:04.504Z",
+    "alertTimestamp": "2026-09-21T18:05:01.121Z"
+  },
+  {
+    "match": "Petrolul Ploiesti vs Csíkszereda Miercurea Ciuc",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.5294971062435198,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      69
+    ],
+    "timestamp": "2026-09-21T19:55:16.056Z",
+    "alertTimestamp": "2026-09-21T18:05:01.121Z"
+  },
+  {
+    "match": "Peru Sub19 vs Panamá Sub19",
+    "league": "Juegos Suramericanos",
+    "tier": "AVISO",
+    "probability": 0.8978350017017142,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de selecciones juveniles, 0-0, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45,
+      59
+    ],
+    "timestamp": "2026-09-21T19:55:17.295Z",
+    "alertTimestamp": "2026-09-21T18:14:58.590Z"
   }
 ]
