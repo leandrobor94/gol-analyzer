@@ -1,25 +1,5 @@
 [
   {
-    "match": "Defensores Unidos vs Camioneros",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8735033459408866,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-29T20:10:51.147Z",
-    "alertTimestamp": "2026-08-29T18:25:12.323Z"
-  },
-  {
     "match": "Mardin 1969 vs Van Spor FK",
     "league": "1. Lig",
     "tier": "AVISO",
@@ -21721,5 +21701,27 @@
     ],
     "timestamp": "2026-09-21T01:27:42.235Z",
     "alertTimestamp": "2026-09-20T20:06:45.592Z"
+  },
+  {
+    "match": "A.D. San Carlos vs CS Cartaginés",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5911915605652148,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, el modelo indica alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29
+    ],
+    "timestamp": "2026-09-21T18:05:02.194Z",
+    "alertTimestamp": "2026-09-21T01:27:22.996Z"
   }
 ]
