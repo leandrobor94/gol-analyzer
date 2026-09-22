@@ -1,33 +1,5 @@
 [
   {
-    "match": "Girona FC vs Las Palmas",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.8783539688147902,
-    "minute": 21,
-    "scoreAtAlert": "4-1",
-    "finalScore": "5-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Early in the match, score 0-0, high model probability for goal despite estimated xG.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      22,
-      48,
-      55,
-      60,
-      72,
-      85,
-      91
-    ],
-    "timestamp": "2026-08-30T02:11:50.449Z",
-    "alertTimestamp": "2026-08-29T19:31:43.576Z"
-  },
-  {
     "match": "Sevilla FC vs Atlético de Madrid",
     "league": "LaLiga",
     "tier": "AVISO",
@@ -21699,5 +21671,25 @@
     ],
     "timestamp": "2026-09-21T20:35:42.528Z",
     "alertTimestamp": "2026-09-21T18:35:03.054Z"
+  },
+  {
+    "match": "Kara Gostar SC vs Mes Rafsanjan",
+    "league": "Azadegan League",
+    "tier": "AVISO",
+    "probability": 0.5927803666185647,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-22T17:19:09.131Z",
+    "alertTimestamp": "2026-09-22T16:39:19.350Z"
   }
 ]
