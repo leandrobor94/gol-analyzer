@@ -1,30 +1,5 @@
 [
   {
-    "match": "Sevilla FC vs Atlético de Madrid",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.9237579346586923,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y ambos equipos con ocasiones claras.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      26,
-      33,
-      66
-    ],
-    "timestamp": "2026-08-30T02:12:00.962Z",
-    "alertTimestamp": "2026-08-29T19:41:18.225Z"
-  },
-  {
     "match": "Karkh SC vs Al Kahrabaa",
     "league": "Liga Iraquí",
     "tier": "AVISO",
@@ -21690,6 +21665,29 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-22T17:19:09.131Z",
+    "alertTimestamp": "2026-09-22T16:39:19.350Z"
+  },
+  {
+    "match": "Academico De Viseu Sub23 vs Estoril Sub23",
+    "league": "Liga de Portugal Sub23 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5845609360317534,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      42,
+      54
+    ],
+    "timestamp": "2026-09-22T18:10:37.261Z",
     "alertTimestamp": "2026-09-22T16:39:19.350Z"
   }
 ]
