@@ -1,30 +1,5 @@
 [
   {
-    "match": "Karkh SC vs Al Kahrabaa",
-    "league": "Liga Iraquí",
-    "tier": "AVISO",
-    "probability": 0.8871110175601103,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es real, sin datos de ocasiones claras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      37,
-      43,
-      65,
-      96
-    ],
-    "timestamp": "2026-08-30T02:12:01.158Z",
-    "alertTimestamp": "2026-08-29T19:41:18.225Z"
-  },
-  {
     "match": "Midland vs Nueva Chicago",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -21689,5 +21664,25 @@
     ],
     "timestamp": "2026-09-22T18:10:37.261Z",
     "alertTimestamp": "2026-09-22T16:39:19.350Z"
+  },
+  {
+    "match": "Muaither vs Al Khor",
+    "league": "QSL Cup",
+    "tier": "AVISO",
+    "probability": 0.5711561243477562,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-22T19:10:33.563Z",
+    "alertTimestamp": "2026-09-22T17:19:08.706Z"
   }
 ]
