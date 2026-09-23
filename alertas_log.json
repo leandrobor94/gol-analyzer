@@ -1,32 +1,5 @@
 [
   {
-    "match": "Derry City vs Shamrock",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.5942562009017465,
-    "minute": 77,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol, marcador ajustado y volumen de juego significativo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      2,
-      16,
-      28,
-      33,
-      72,
-      80
-    ],
-    "timestamp": "2026-08-30T17:07:41.963Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
     "match": "FK Sochi vs FC Chelyabinsk",
     "league": "Russian First League",
     "tier": "AVISO",
@@ -21709,5 +21682,28 @@
     "goalMinutes": [],
     "timestamp": "2026-09-22T21:19:19.766Z",
     "alertTimestamp": "2026-09-22T18:49:14.779Z"
+  },
+  {
+    "match": "Dep Puerto Montt vs Ñublense",
+    "league": "Copa Chile - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8544008406202087,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin datos de xG reales ni ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      63,
+      72
+    ],
+    "timestamp": "2026-09-23T02:20:18.648Z",
+    "alertTimestamp": "2026-09-22T21:09:09.213Z"
   }
 ]
