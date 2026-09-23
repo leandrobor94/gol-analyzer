@@ -1,30 +1,5 @@
 [
   {
-    "match": "Ham-kam vs Kristiansund FK",
-    "league": "Eliteserien",
-    "tier": "AVISO",
-    "probability": 0.5436530855048314,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      49,
-      51,
-      62,
-      73
-    ],
-    "timestamp": "2026-08-30T17:07:46.372Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
     "match": "Al Hamriyah vs Forte Virtus FC",
     "league": "Division 1",
     "tier": "AVISO",
@@ -21700,6 +21675,32 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-23T17:11:43.445Z",
+    "alertTimestamp": "2026-09-23T16:31:33.525Z"
+  },
+  {
+    "match": "Sparta Praha (F) vs Farul Constanta (F)",
+    "league": "UEFA Women's Europa Cup - 2da ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.5114688266712463,
+    "minute": 76,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      42,
+      52,
+      70,
+      83
+    ],
+    "timestamp": "2026-09-23T17:51:48.148Z",
     "alertTimestamp": "2026-09-23T16:31:33.525Z"
   }
 ]
