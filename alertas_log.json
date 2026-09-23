@@ -1,29 +1,5 @@
 [
   {
-    "match": "FK Sochi vs FC Chelyabinsk",
-    "league": "Russian First League",
-    "tier": "AVISO",
-    "probability": 0.5797056725003518,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      75,
-      89,
-      97
-    ],
-    "timestamp": "2026-08-30T17:07:42.812Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
     "match": "Ham-kam vs Kristiansund FK",
     "league": "Eliteserien",
     "tier": "AVISO",
@@ -21705,5 +21681,25 @@
     ],
     "timestamp": "2026-09-23T02:20:18.648Z",
     "alertTimestamp": "2026-09-22T21:09:09.213Z"
+  },
+  {
+    "match": "Doma United vs Plateau United",
+    "league": "NPFL - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5985511674480367,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado con alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T17:11:43.445Z",
+    "alertTimestamp": "2026-09-23T16:31:33.525Z"
   }
 ]
