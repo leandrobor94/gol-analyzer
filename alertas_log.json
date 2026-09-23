@@ -1,91 +1,5 @@
 [
   {
-    "match": "Al Hamriyah vs Forte Virtus FC",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.5515060489110313,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      28
-    ],
-    "timestamp": "2026-08-30T17:21:50.531Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "FC Augsburg vs Schalke 04",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.5901503684249313,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto con un solo gol de diferencia y alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      18,
-      79,
-      92
-    ],
-    "timestamp": "2026-08-30T17:26:49.520Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Hungría Sub17 vs Italia Sub17",
-    "league": "Amistoso Internacional Sub17",
-    "tier": "AVISO",
-    "probability": 0.5595796749561671,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T17:26:49.588Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Karcagi vs MOL Fehervar",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.536978204491153,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T17:27:00.118Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
     "match": "Manchester United vs Ipswich",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21702,5 +21616,91 @@
     ],
     "timestamp": "2026-09-23T17:51:48.148Z",
     "alertTimestamp": "2026-09-23T16:31:33.525Z"
+  },
+  {
+    "match": "Argentina Sub19 vs Peru Sub19",
+    "league": "Juegos Suramericanos - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8947712131664556,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de semifinales, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      90
+    ],
+    "timestamp": "2026-09-23T19:01:51.074Z",
+    "alertTimestamp": "2026-09-23T17:01:42.255Z"
+  },
+  {
+    "match": "PSV (F) vs Fortuna Hjorring (F)",
+    "league": "UEFA Women's Europa Cup - 2da ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.5638076431811023,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, con un solo gol de diferencia y tiempo restante. El xG es estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-09-23T19:01:51.137Z",
+    "alertTimestamp": "2026-09-23T17:01:42.255Z"
+  },
+  {
+    "match": "Hapoel Hertzliya vs FC Tzeiri Tira",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.6516635652188367,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-09-23T19:12:44.793Z",
+    "alertTimestamp": "2026-09-23T17:21:33.854Z"
+  },
+  {
+    "match": "SC Tira vs Hapoel Bnei Musmus",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.8543694669802989,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido 0-0, xG estimado no confiable, sin datos de ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T19:21:42.591Z",
+    "alertTimestamp": "2026-09-23T17:21:33.854Z"
   }
 ]
