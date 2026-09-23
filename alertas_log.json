@@ -1,204 +1,5 @@
 [
   {
-    "match": "Manchester United vs Ipswich",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6910243256183114,
-    "minute": 66,
-    "scoreAtAlert": "5-2",
-    "finalScore": "5-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, muchas chances y xG alto. No hay razón para no avisar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      29,
-      40,
-      56,
-      61,
-      68,
-      82,
-      91
-    ],
-    "timestamp": "2026-08-30T17:36:55.245Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "ADC Rebordelo vs Bragança",
-    "league": "Copa de Portugal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9008574479862125,
-    "minute": 21,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      2,
-      35,
-      72,
-      79
-    ],
-    "timestamp": "2026-08-30T17:56:59.910Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Sacavenense vs SC Angrense",
-    "league": "Copa de Portugal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9008574479862125,
-    "minute": 21,
-    "scoreAtAlert": "4-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa, marcador ajustado y muchos minutos por delante. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T17:57:00.017Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "S.U. 1º de Dezembro vs Real SC",
-    "league": "Copa de Portugal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9008574479862125,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en etapa temprana, marcador ajustado y xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T17:57:10.116Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Eyupspor vs Alanyaspor",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5435957941346387,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      39,
-      94
-    ],
-    "timestamp": "2026-08-30T17:57:53.717Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "CD Celoricense vs Pevidém",
-    "league": "Copa de Portugal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9008574479862125,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      2
-    ],
-    "timestamp": "2026-08-30T18:08:22.553Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Cultural Correlhã vs Limianos",
-    "league": "Copa de Portugal - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.9008574479862125,
-    "minute": 21,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para descartar. ",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T18:08:22.670Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "CA River Plate vs Rentistas",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5297686219792435,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T18:09:30.122Z",
-    "alertTimestamp": "2026-08-30T16:34:35.395Z"
-  },
-  {
-    "match": "Al Kharitiyat vs Al Khor",
-    "league": "Q League",
-    "tier": "AVISO",
-    "probability": 0.5352777499473371,
-    "minute": 79,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T18:42:22.367Z",
-    "alertTimestamp": "2026-08-30T16:42:20.560Z"
-  },
-  {
-    "match": "Etihad Al Gharafa vs Markhiya SC",
-    "league": "Q League",
-    "tier": "AVISO",
-    "probability": 0.6801432843123784,
-    "minute": 64,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T18:42:22.454Z",
-    "alertTimestamp": "2026-08-30T16:42:20.560Z"
-  },
-  {
     "match": "Mantova vs Empoli",
     "league": "Serie B italiana",
     "tier": "AVISO",
@@ -21702,5 +21503,241 @@
     "goalMinutes": [],
     "timestamp": "2026-09-23T19:21:42.591Z",
     "alertTimestamp": "2026-09-23T17:21:33.854Z"
+  },
+  {
+    "match": "Inglaterra Sub17 vs Irlanda Sub17",
+    "league": "Amistoso Internacional Sub17",
+    "tier": "AVISO",
+    "probability": 0.8893990250467955,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      47,
+      55,
+      74,
+      89,
+      91
+    ],
+    "timestamp": "2026-09-23T19:31:34.461Z",
+    "alertTimestamp": "2026-09-23T17:41:34.265Z"
+  },
+  {
+    "match": "Germania vs Kozakken Boys",
+    "league": "KNVB Cup - 2da ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8916703640880749,
+    "minute": 21,
+    "scoreAtAlert": "1-5",
+    "finalScore": "1-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador 0-2 y 73 minutos restantes. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      16,
+      40,
+      51,
+      75,
+      82
+    ],
+    "timestamp": "2026-09-23T19:51:33.231Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Sparta Nijkerk vs UDI'19",
+    "league": "KNVB Cup - 2da ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8683333234252081,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      39,
+      50,
+      67
+    ],
+    "timestamp": "2026-09-23T19:51:33.264Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Grêmio Prudente U20 vs Juventus/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8947712131664556,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de 16avos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T20:01:34.394Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Liverpool (F) vs Sunderland (W)",
+    "league": "Womens League Cup",
+    "tier": "AVISO",
+    "probability": 0.8876747774872754,
+    "minute": 22,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es fiable, pero el modelo da alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T20:01:41.694Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Aldosivi (Reserva) vs Quilmes AC (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.6154782784891308,
+    "minute": 63,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, xG estimado no es real, pero 5 tiros a puerta locales sugieren peligro.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T20:01:41.753Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Tottenham (F) vs West Ham (F)",
+    "league": "Womens League Cup",
+    "tier": "AVISO",
+    "probability": 0.5255478510947937,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, xG estimado bajo pero no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T20:01:42.324Z",
+    "alertTimestamp": "2026-09-23T18:01:32.810Z"
+  },
+  {
+    "match": "Togb vs Rohda Raalte",
+    "league": "KNVB Cup - 2da ronda de clasificación",
+    "tier": "AVISO",
+    "probability": 0.8488300444436655,
+    "minute": 20,
+    "scoreAtAlert": "3-6",
+    "finalScore": "4-6",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      29,
+      51,
+      56,
+      60,
+      70,
+      76,
+      78,
+      85,
+      93
+    ],
+    "timestamp": "2026-09-23T20:01:43.021Z",
+    "alertTimestamp": "2026-09-23T18:11:33.023Z"
+  },
+  {
+    "match": "Chile Sub20 (F) vs Venezuela Sub17 (F)",
+    "league": "Juegos Suramericanos (F) - Final",
+    "tier": "AVISO",
+    "probability": 0.518196204861639,
+    "minute": 81,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-5",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de final, marcador ajustado 1-0, y minutos finales. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-23T20:11:32.972Z",
+    "alertTimestamp": "2026-09-23T18:11:33.023Z"
+  },
+  {
+    "match": "Boston River vs Fenix",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.5385912290456746,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y minutos restantes.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      18,
+      26,
+      38,
+      65
+    ],
+    "timestamp": "2026-09-23T20:21:34.459Z",
+    "alertTimestamp": "2026-09-23T18:31:34.779Z"
   }
 ]
