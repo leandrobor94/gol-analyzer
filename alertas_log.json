@@ -1,81 +1,5 @@
 [
   {
-    "match": "Nafta vs Maribor",
-    "league": "Liga eslovena - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.6550211508537084,
-    "minute": 64,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      18,
-      47,
-      52,
-      78
-    ],
-    "timestamp": "2026-08-30T20:09:17.054Z",
-    "alertTimestamp": "2026-08-30T18:19:24.105Z"
-  },
-  {
-    "match": "Samsunspor vs Fenerbahce",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.6197287446073896,
-    "minute": 65,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      49
-    ],
-    "timestamp": "2026-08-30T20:29:11.954Z",
-    "alertTimestamp": "2026-08-30T18:42:04.635Z"
-  },
-  {
-    "match": "Villa Mitre vs Huracán Las Heras",
-    "league": "Federal A - Segunda Fase - Zona B",
-    "tier": "AVISO",
-    "probability": 0.8851074328972517,
-    "minute": 22,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      29,
-      42
-    ],
-    "timestamp": "2026-08-30T20:29:19.969Z",
-    "alertTimestamp": "2026-08-30T18:48:06.784Z"
-  },
-  {
-    "match": "El Linqueño vs Atlético Escobar",
-    "league": "Federal A - Reválida - Zona A",
-    "tier": "AVISO",
-    "probability": 0.8813758883164552,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      43,
-      92
-    ],
-    "timestamp": "2026-08-30T20:29:20.105Z",
-    "alertTimestamp": "2026-08-30T18:48:06.784Z"
-  },
-  {
     "match": "Patronato vs Almagro",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -21754,5 +21678,90 @@
     "goalMinutes": [],
     "timestamp": "2026-09-24T19:32:51.317Z",
     "alertTimestamp": "2026-09-24T17:41:55.949Z"
+  },
+  {
+    "match": "Deportivo Riestra (Reserva) vs Barracas Central (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8877967074040729,
+    "minute": 23,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-24T19:52:31.987Z",
+    "alertTimestamp": "2026-09-24T18:02:18.160Z"
+  },
+  {
+    "match": "Bélgica Sub-21 vs Bielorrusia Sub-21",
+    "league": "Clasificatorio Euro Sub-21",
+    "tier": "AVISO",
+    "probability": 0.5132196911778502,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un solo gol y un expulsado, lo que aumenta la probabilidad de cambios.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      70
+    ],
+    "timestamp": "2026-09-24T19:52:32.189Z",
+    "alertTimestamp": "2026-09-24T18:02:18.160Z"
+  },
+  {
+    "match": "Hapoel Bnei Ashdod vs Ihud Tzerei Abu - Gosh",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.8678334692769962,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en Division 4, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-24T20:01:59.758Z",
+    "alertTimestamp": "2026-09-24T18:02:18.160Z"
+  },
+  {
+    "match": "Liechtenstein vs Lituania",
+    "league": "Liga de las Naciones - UEFA - Liga D - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.6029475505575396,
+    "minute": 61,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Lituania domina con 1.44 xG y 4 tiros a puerta, manteniendo la presión.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      53,
+      66
+    ],
+    "timestamp": "2026-09-24T20:41:55.492Z",
+    "alertTimestamp": "2026-09-24T18:52:17.023Z"
   }
 ]
