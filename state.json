@@ -1,86 +1,16 @@
 {
   "alertedMatches": {
-    "4861769_AVISO": {
-      "timestamp": 1790191302392,
-      "minute": 63,
-      "tier": "AVISO"
-    },
-    "4858086_AVISO": {
-      "timestamp": 1790187696996,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4846555_AVISO": {
-      "timestamp": 1790187696996,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4846549_AVISO": {
-      "timestamp": 1790187696996,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4846554_AVISO": {
-      "timestamp": 1790187696996,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4848093_AVISO": {
-      "timestamp": 1790188294778,
-      "minute": 60,
-      "tier": "AVISO"
-    },
-    "4855610_AVISO": {
-      "timestamp": 1790188294778,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4847201_AVISO": {
-      "timestamp": 1790191302392,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4845650_AVISO": {
-      "timestamp": 1790191302392,
-      "minute": 63,
-      "tier": "AVISO"
-    },
-    "4814507_AVISO": {
-      "timestamp": 1790191894334,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4861948_AVISO": {
-      "timestamp": 1790192545857,
-      "minute": 81,
-      "tier": "AVISO"
-    },
-    "4850518_AVISO": {
-      "timestamp": 1790193694203,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4861119_AVISO": {
-      "timestamp": 1790194894164,
+    "4664841_AVISO": {
+      "timestamp": 1790216550653,
       "minute": 22,
-      "tier": "AVISO"
-    },
-    "4860066_AVISO": {
-      "timestamp": 1790194894164,
-      "minute": 80,
-      "tier": "AVISO"
-    },
-    "4861299_AVISO": {
-      "timestamp": 1790196710301,
-      "minute": 21,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 9962,
-    "verified": 9948,
-    "withGoalTimeline": 6900,
+    "total": 9969,
+    "verified": 9958,
+    "withGoalTimeline": 6906,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-23T21:11:43.851Z"
+  "lastUpdated": "2026-09-24T02:52:29.300Z"
 }

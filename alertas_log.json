@@ -1,47 +1,5 @@
 [
   {
-    "match": "Deportivo Fraijanes vs Champs Academy Guatemala",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.9219233170255023,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T19:11:30.282Z",
-    "alertTimestamp": "2026-08-30T17:07:38.893Z"
-  },
-  {
-    "match": "Don Benito vs Puertollano",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8842092054663776,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      42
-    ],
-    "timestamp": "2026-08-30T19:11:43.955Z",
-    "alertTimestamp": "2026-08-30T17:07:38.893Z"
-  },
-  {
     "match": "FC Pari Nizhny Novgorod vs Volga Ulyanovsk",
     "league": "Russian First League",
     "tier": "AVISO",
@@ -21740,5 +21698,47 @@
     "goalMinutes": [],
     "timestamp": "2026-09-23T21:01:49.947Z",
     "alertTimestamp": "2026-09-23T19:21:42.393Z"
+  },
+  {
+    "match": "Paraguay Sub19 vs Chile Sub19",
+    "league": "Juegos Suramericanos - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8916182963691932,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, sin datos de xG reales. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      93
+    ],
+    "timestamp": "2026-09-24T02:12:29.109Z",
+    "alertTimestamp": "2026-09-23T20:01:34.204Z"
+  },
+  {
+    "match": "CD Neo Pipil vs Orión FC",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.8947712131664556,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-24T02:12:29.445Z",
+    "alertTimestamp": "2026-09-23T20:31:33.100Z"
   }
 ]
