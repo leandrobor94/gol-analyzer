@@ -1,74 +1,5 @@
 [
   {
-    "match": "Patronato vs Almagro",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.8724020673825394,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      55
-    ],
-    "timestamp": "2026-08-30T20:36:52.439Z",
-    "alertTimestamp": "2026-08-30T18:42:04.635Z"
-  },
-  {
-    "match": "Monaco vs Olympique Marsella",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.9080728682575208,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      13,
-      53
-    ],
-    "timestamp": "2026-08-30T20:46:54.724Z",
-    "alertTimestamp": "2026-08-30T18:48:06.784Z"
-  },
-  {
-    "match": "Cagliari vs Inter Milan",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.8944275835291816,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      9
-    ],
-    "timestamp": "2026-08-30T20:47:26.948Z",
-    "alertTimestamp": "2026-08-30T18:57:51.159Z"
-  },
-  {
-    "match": "Lazio vs Genoa",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.8995539908320999,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      25
-    ],
-    "timestamp": "2026-08-30T20:47:27.141Z",
-    "alertTimestamp": "2026-08-30T18:57:51.159Z"
-  },
-  {
     "match": "Pisa vs Catanzaro",
     "league": "Serie B italiana",
     "tier": "AVISO",
@@ -21763,5 +21694,100 @@
     ],
     "timestamp": "2026-09-24T20:41:55.492Z",
     "alertTimestamp": "2026-09-24T18:52:17.023Z"
+  },
+  {
+    "match": "Serbia vs Grecia",
+    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5144477778100862,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, xG estimado alto para el visitante, muchos tiros a puerta y en el área.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      74,
+      94
+    ],
+    "timestamp": "2026-09-24T20:51:55.259Z",
+    "alertTimestamp": "2026-09-24T18:52:17.023Z"
+  },
+  {
+    "match": "Austria vs Israel",
+    "league": "Liga de las Naciones - UEFA - Liga B - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.6543800074888,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, pero hay 3 big chances del local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      43,
+      55,
+      90,
+      93
+    ],
+    "timestamp": "2026-09-24T20:51:55.867Z",
+    "alertTimestamp": "2026-09-24T18:52:17.023Z"
+  },
+  {
+    "match": "Danubio FC vs Peñarol",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.548774498130132,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      81
+    ],
+    "timestamp": "2026-09-24T21:01:53.846Z",
+    "alertTimestamp": "2026-09-24T19:02:17.081Z"
+  },
+  {
+    "match": "Atlético FC vs Cuenca Juniors",
+    "league": "Serie B - Fase de grupos - Grupo Ascenso",
+    "tier": "AVISO",
+    "probability": 0.8441894195703952,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase de grupos, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      24
+    ],
+    "timestamp": "2026-09-24T21:01:54.494Z",
+    "alertTimestamp": "2026-09-24T19:12:35.066Z"
   }
 ]
