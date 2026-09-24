@@ -1,42 +1,5 @@
 [
   {
-    "match": "Cádiz vs Real Valladolid",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.5510664382289407,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      17,
-      42
-    ],
-    "timestamp": "2026-08-30T19:11:50.614Z",
-    "alertTimestamp": "2026-08-30T17:07:38.893Z"
-  },
-  {
-    "match": "RCD Mallorca vs Ceuta",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.6355865845075006,
-    "minute": 64,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      50,
-      89
-    ],
-    "timestamp": "2026-08-30T19:11:50.779Z",
-    "alertTimestamp": "2026-08-30T17:07:38.893Z"
-  },
-  {
     "match": "KVC Westerlo vs Zulte Waregem",
     "league": "Jupiler Pro League",
     "tier": "AVISO",
@@ -21742,5 +21705,48 @@
     ],
     "timestamp": "2026-09-24T16:52:56.001Z",
     "alertTimestamp": "2026-09-24T02:22:30.653Z"
+  },
+  {
+    "match": "Hapoel Rishon Lezion vs Maccabi Ahi Nazeret",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.5321639527078351,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-24T17:52:45.947Z",
+    "alertTimestamp": "2026-09-24T16:52:53.610Z"
+  },
+  {
+    "match": "Sekzia Nes Ziona vs Hapoel Bnei Kuseife",
+    "league": "Division 4",
+    "tier": "AVISO",
+    "probability": 0.6255068309958631,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      67,
+      96
+    ],
+    "timestamp": "2026-09-24T18:02:19.372Z",
+    "alertTimestamp": "2026-09-24T16:52:53.610Z"
   }
 ]
