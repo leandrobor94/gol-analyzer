@@ -1,30 +1,5 @@
 [
   {
-    "match": "FC Pari Nizhny Novgorod vs Volga Ulyanovsk",
-    "league": "Russian First League",
-    "tier": "AVISO",
-    "probability": 0.8810190122857631,
-    "minute": 24,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego equilibrado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      14,
-      25,
-      38,
-      62
-    ],
-    "timestamp": "2026-08-30T19:11:48.398Z",
-    "alertTimestamp": "2026-08-30T17:07:38.893Z"
-  },
-  {
     "match": "Cádiz vs Real Valladolid",
     "league": "LaLiga 2",
     "tier": "AVISO",
@@ -21740,5 +21715,32 @@
     "goalMinutes": [],
     "timestamp": "2026-09-24T02:12:29.445Z",
     "alertTimestamp": "2026-09-23T20:31:33.100Z"
+  },
+  {
+    "match": "Vancouver Fc vs Inter Toronto FC",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.9076497917126619,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos y sin razones para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      24,
+      44,
+      71,
+      92,
+      97
+    ],
+    "timestamp": "2026-09-24T16:52:56.001Z",
+    "alertTimestamp": "2026-09-24T02:22:30.653Z"
   }
 ]
