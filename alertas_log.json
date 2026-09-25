@@ -1,24 +1,5 @@
 [
   {
-    "match": "Pisa vs Catanzaro",
-    "league": "Serie B italiana",
-    "tier": "AVISO",
-    "probability": 0.8813165370804377,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      22,
-      28,
-      30
-    ],
-    "timestamp": "2026-08-30T20:57:42.222Z",
-    "alertTimestamp": "2026-08-30T19:11:02.636Z"
-  },
-  {
     "match": "Glacis United vs Lincoln Red Imps",
     "league": "Premier Division",
     "tier": "AVISO",
@@ -21789,5 +21770,31 @@
     ],
     "timestamp": "2026-09-24T21:01:54.494Z",
     "alertTimestamp": "2026-09-24T19:12:35.066Z"
+  },
+  {
+    "match": "Independiente Juniors vs Vinotinto del Ecuador FC",
+    "league": "Serie B - Fase de grupos - Grupo Ascenso",
+    "tier": "AVISO",
+    "probability": 0.8806973414400885,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 22, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      42,
+      56,
+      61,
+      73
+    ],
+    "timestamp": "2026-09-25T02:32:57.441Z",
+    "alertTimestamp": "2026-09-24T20:41:53.938Z"
   }
 ]
