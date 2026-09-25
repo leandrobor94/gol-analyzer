@@ -1,329 +1,5 @@
 [
   {
-    "match": "Club Atlético Belgrano (Zarate) vs Everton de La Plata",
-    "league": "Torneo Promocional Amateur",
-    "tier": "AVISO",
-    "probability": 0.5584381384024119,
-    "minute": 78,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-31T20:01:01.409Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Montevideo Wanderers (Reserva) vs Montevideo City Torque (Reserva)",
-    "league": "Tercera División - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5309093844130177,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de reserva con marcador ajustado y minutos restantes. xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-31T20:01:14.869Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Brighton Sub21 vs Arsenal Sub21",
-    "league": "Premier League 2 - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.68191337910004,
-    "minute": 63,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-08-31T20:09:30.196Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Racing Club Montevideo vs Albion",
-    "league": "Liga AUF Uruguaya - Clausura",
-    "tier": "AVISO",
-    "probability": 0.6403616356306879,
-    "minute": 61,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      80
-    ],
-    "timestamp": "2026-08-31T20:30:45.580Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Atalanta vs Bologna",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.5404597884517294,
-    "minute": 78,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con un xG estimado y pocas llegadas claras.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      96
-    ],
-    "timestamp": "2026-08-31T20:40:34.168Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Amed SK vs Trabzonspor",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5292528880925044,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      50,
-      90
-    ],
-    "timestamp": "2026-08-31T20:40:46.776Z",
-    "alertTimestamp": "2026-08-31T19:02:07.349Z"
-  },
-  {
-    "match": "Aston Villa vs Arsenal",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6803414399869528,
-    "minute": 62,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Arsenal con ventaja mínima y oportunidades claras. xG estimado no es fiable.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      59
-    ],
-    "timestamp": "2026-08-31T20:59:25.310Z",
-    "alertTimestamp": "2026-08-31T19:10:41.491Z"
-  },
-  {
-    "match": "Breidablik vs Stjarnan",
-    "league": "Besta-deild karla",
-    "tier": "AVISO",
-    "probability": 0.5523783029955662,
-    "minute": 76,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      29,
-      40
-    ],
-    "timestamp": "2026-08-31T21:09:36.076Z",
-    "alertTimestamp": "2026-08-31T19:21:02.145Z"
-  },
-  {
-    "match": "FC Barcelona vs Rayo Vallecano",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.6991706985552172,
-    "minute": 62,
-    "scoreAtAlert": "4-2",
-    "finalScore": "5-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Barcelona lidera, pero el Rayo Vallecano podría sorprender. El xG es estimado, no real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      19,
-      21,
-      51,
-      59,
-      71,
-      90
-    ],
-    "timestamp": "2026-08-31T21:39:24.200Z",
-    "alertTimestamp": "2026-08-31T19:39:59.223Z"
-  },
-  {
-    "match": "Internacional de Bogotá (F) vs Atlético Nacional (F)",
-    "league": "Liga Femenina BetPlay Dimayor - Cuadrangulares",
-    "tier": "AVISO",
-    "probability": 0.8583367775065136,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      46,
-      47,
-      87
-    ],
-    "timestamp": "2026-08-31T21:59:34.597Z",
-    "alertTimestamp": "2026-08-31T20:09:29.114Z"
-  },
-  {
-    "match": "Universidad Central FC vs Rayo Zuliano",
-    "league": "Liga FUTVE - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8705173595644147,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, alta probabilidad de gol según el modelo, y ocasiones claras del local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      21,
-      54,
-      62,
-      81,
-      93
-    ],
-    "timestamp": "2026-09-01T16:21:32.003Z",
-    "alertTimestamp": "2026-08-31T22:39:25.479Z"
-  },
-  {
-    "match": "Estrela Sub23 vs Sporting Sub23",
-    "league": "Liga de Portugal Sub23",
-    "tier": "AVISO",
-    "probability": 0.901598351499689,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      19,
-      47,
-      81
-    ],
-    "timestamp": "2026-09-01T18:01:05.554Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
-    "match": "Leiria U23 vs Maritimo U23",
-    "league": "Liga de Portugal Sub23",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      74
-    ],
-    "timestamp": "2026-09-01T18:01:05.915Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
-    "match": "FC Felgueiras 1932 U23 vs Estoril Sub23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en fase inicial, sin goles, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      24,
-      43,
-      64,
-      95
-    ],
-    "timestamp": "2026-09-01T18:01:06.141Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
     "match": "Parma vs Cremonese",
     "league": "Copa Italia - 16avos de final",
     "tier": "AVISO",
@@ -21882,5 +21558,325 @@
     ],
     "timestamp": "2026-09-25T19:26:21.360Z",
     "alertTimestamp": "2026-09-25T17:36:00.001Z"
+  },
+  {
+    "match": "São Paulo Sub20 vs Ec São Bernardo S20",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5184229512075978,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de eliminación directa, un gol cambia todo. xG no es real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-25T19:56:00.666Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "FC Penafiel vs RC Deportivo",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.540061527255634,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-25T19:56:00.862Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Binacional vs Academia Cantolao",
+    "league": "Liga 2 - Descenso - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8845484936525366,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado bajo, pero sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      56,
+      93,
+      100
+    ],
+    "timestamp": "2026-09-25T20:05:54.206Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Desportivo Brasil/Sp Youth vs Osasco Sporting Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8815995558352574,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de eliminatoria, marcador 0-0, sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-25T20:05:54.403Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Agua Santa/Sp Youth vs Capivariano/Sp Youth",
+    "league": "Paulista U20 - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5587896631763746,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminación directa, marcador ajustado y tiempo restante. El xG no es real.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-25T20:05:55.523Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Colón (Reserva) vs Unión Santa Fé (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5167622733970604,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de reserva con un jugador menos, marcador igualado y alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      31,
+      44,
+      76
+    ],
+    "timestamp": "2026-09-25T20:05:55.953Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Inglaterra Sub19 vs Irlanda Sub-19",
+    "league": "Amistoso Internacional Sub19",
+    "tier": "AVISO",
+    "probability": 0.8797368931854853,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso sub-19, sin goles, con xG estimado bajo. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      70
+    ],
+    "timestamp": "2026-09-25T20:15:49.669Z",
+    "alertTimestamp": "2026-09-25T18:05:46.417Z"
+  },
+  {
+    "match": "Inglaterra Sub-21 vs Kazakhstan U21",
+    "league": "Clasificatorio Euro Sub-21",
+    "tier": "AVISO",
+    "probability": 0.5209984094395808,
+    "minute": 77,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      26,
+      32,
+      43,
+      60,
+      91
+    ],
+    "timestamp": "2026-09-25T20:25:49.393Z",
+    "alertTimestamp": "2026-09-25T18:36:32.756Z"
+  },
+  {
+    "match": "Girona FC vs Albacete",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5126934574300738,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "El Albacete tiene un xG estimado alto y más tiros a puerta, indicando potencial de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      6,
+      43
+    ],
+    "timestamp": "2026-09-25T20:25:49.601Z",
+    "alertTimestamp": "2026-09-25T18:36:32.756Z"
+  },
+  {
+    "match": "Biggleswade FC vs Three Bridges",
+    "league": "Trofeo FA - Fase preliminar",
+    "tier": "AVISO",
+    "probability": 0.8576934782744788,
+    "minute": 21,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      60,
+      68,
+      73
+    ],
+    "timestamp": "2026-09-25T20:45:44.866Z",
+    "alertTimestamp": "2026-09-25T18:47:00.643Z"
+  },
+  {
+    "match": "Suecia vs Rumania",
+    "league": "Liga de las Naciones - UEFA - Liga B - Grupo 4",
+    "tier": "AVISO",
+    "probability": 0.8514371213984471,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, pero aún en los primeros minutos y con alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      20,
+      29,
+      43
+    ],
+    "timestamp": "2026-09-25T20:45:45.095Z",
+    "alertTimestamp": "2026-09-25T18:47:00.643Z"
+  },
+  {
+    "match": "Galway United vs Shelbourne",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.9014493738814074,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, con una gran ocasión para el visitante. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      58
+    ],
+    "timestamp": "2026-09-25T20:45:45.943Z",
+    "alertTimestamp": "2026-09-25T18:55:48.717Z"
+  },
+  {
+    "match": "Spartans vs Dundee FC B",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.6202517080700284,
+    "minute": 63,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un xG estimado a favor del local y 4 tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      91
+    ],
+    "timestamp": "2026-09-25T20:45:46.149Z",
+    "alertTimestamp": "2026-09-25T18:55:48.717Z"
+  },
+  {
+    "match": "UC Dublin FC vs Bray Wanderers",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.848529673889815,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30,
+      56,
+      60,
+      74
+    ],
+    "timestamp": "2026-09-25T20:45:46.360Z",
+    "alertTimestamp": "2026-09-25T18:55:48.717Z"
   }
 ]
