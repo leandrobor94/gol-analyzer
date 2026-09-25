@@ -1,54 +1,5 @@
 [
   {
-    "match": "Gama vs ASA-AL",
-    "league": "Serie D - Semifinales",
-    "tier": "AVISO",
-    "probability": 0.8855024971104595,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T21:07:59.346Z",
-    "alertTimestamp": "2026-08-30T19:11:02.636Z"
-  },
-  {
-    "match": "Corinthians vs Santos",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.5369220722150355,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      33
-    ],
-    "timestamp": "2026-08-30T21:07:59.642Z",
-    "alertTimestamp": "2026-08-30T19:11:02.636Z"
-  },
-  {
-    "match": "9 De Julio Rafaela vs Defensores Belgrano (VR)",
-    "league": "Federal A - Segunda Fase - Zona A",
-    "tier": "AVISO",
-    "probability": 0.8844110392159246,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      1
-    ],
-    "timestamp": "2026-08-30T21:08:16.880Z",
-    "alertTimestamp": "2026-08-30T19:11:02.636Z"
-  },
-  {
     "match": "Sportivo Belgrano vs Bartolomé Mitre (Posadas)",
     "league": "Federal A - Segunda Fase - Zona A",
     "tier": "AVISO",
@@ -21804,6 +21755,83 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-25T17:36:00.991Z",
+    "alertTimestamp": "2026-09-25T16:55:47.084Z"
+  },
+  {
+    "match": "Malawi vs Sudán del Sur",
+    "league": "Copa de África de Naciones - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5433498194242743,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos. xG estimado no relevante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      48,
+      64
+    ],
+    "timestamp": "2026-09-25T18:05:47.436Z",
+    "alertTimestamp": "2026-09-25T16:55:47.084Z"
+  },
+  {
+    "match": "Sport Boys (Reserva) vs Centro Social de Pariacoto",
+    "league": "Liga 3",
+    "tier": "AVISO",
+    "probability": 0.565784453665404,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos restantes y 3 tarjetas rojas, lo que puede abrir el juego.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      30,
+      76,
+      95
+    ],
+    "timestamp": "2026-09-25T18:05:47.925Z",
+    "alertTimestamp": "2026-09-25T16:55:47.084Z"
+  },
+  {
+    "match": "Bayern Munich II vs Schwaben Augsburg",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.8841761321870854,
+    "minute": 25,
+    "scoreAtAlert": "2-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27,
+      36,
+      51,
+      73,
+      75,
+      89,
+      93
+    ],
+    "timestamp": "2026-09-25T18:26:18.137Z",
     "alertTimestamp": "2026-09-25T16:55:47.084Z"
   }
 ]
