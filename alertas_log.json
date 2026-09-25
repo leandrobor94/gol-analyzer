@@ -1,68 +1,5 @@
 [
   {
-    "match": "Parma vs Cremonese",
-    "league": "Copa Italia - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.87119002319315,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y chances claras. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      41
-    ],
-    "timestamp": "2026-09-01T18:01:06.439Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
-    "match": "Beitar Haifa vs Hapoel Daliat El Karmel",
-    "league": "FA Cup - Fase preliminar",
-    "tier": "AVISO",
-    "probability": 0.5497083038890299,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, un equipo con 10 jugadores y marcador ajustado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-01T18:01:06.645Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
-    "match": "Singida Black Stars SC vs Namungo FC",
-    "league": "Ligi Kuu Bara",
-    "tier": "AVISO",
-    "probability": 0.8591694189049789,
-    "minute": 21,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego bajo pero no estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-01T18:01:06.800Z",
-    "alertTimestamp": "2026-09-01T16:21:27.391Z"
-  },
-  {
     "match": "Boluspor vs Keciorengucu",
     "league": "1. Lig",
     "tier": "AVISO",
@@ -21878,5 +21815,74 @@
     ],
     "timestamp": "2026-09-25T20:45:46.360Z",
     "alertTimestamp": "2026-09-25T18:55:48.717Z"
+  },
+  {
+    "match": "Independiente FBC vs Sportivo Carapeguá",
+    "league": "Division Intermedia",
+    "tier": "AVISO",
+    "probability": 0.5095774365034276,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 78, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      78
+    ],
+    "timestamp": "2026-09-25T20:55:43.427Z",
+    "alertTimestamp": "2026-09-25T19:07:28.763Z"
+  },
+  {
+    "match": "Bermuda vs Guadalupe",
+    "league": "CONCACAF Liga de Naciones - Liga B - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5281027654551328,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un solo gol y un expulsado, lo que aumenta la probabilidad de cambios.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      84,
+      89
+    ],
+    "timestamp": "2026-09-25T21:05:44.398Z",
+    "alertTimestamp": "2026-09-25T19:07:28.763Z"
+  },
+  {
+    "match": "Puerto Cabello B vs Atletico El Vigia",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.5092460682408901,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      31,
+      40
+    ],
+    "timestamp": "2026-09-25T21:25:43.805Z",
+    "alertTimestamp": "2026-09-25T19:37:16.245Z"
   }
 ]
