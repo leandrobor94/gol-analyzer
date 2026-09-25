@@ -1,39 +1,5 @@
 [
   {
-    "match": "Glacis United vs Lincoln Red Imps",
-    "league": "Premier Division",
-    "tier": "AVISO",
-    "probability": 0.5644715467694946,
-    "minute": 79,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-08-30T20:57:52.426Z",
-    "alertTimestamp": "2026-08-30T19:20:09.742Z"
-  },
-  {
-    "match": "U. de Concepción vs Universidad de Chile",
-    "league": "Liga de Primera",
-    "tier": "AVISO",
-    "probability": 0.9145082572033169,
-    "minute": 25,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      17,
-      90
-    ],
-    "timestamp": "2026-08-30T21:07:59.267Z",
-    "alertTimestamp": "2026-08-30T19:11:02.636Z"
-  },
-  {
     "match": "Gama vs ASA-AL",
     "league": "Serie D - Semifinales",
     "tier": "AVISO",
@@ -21796,5 +21762,48 @@
     ],
     "timestamp": "2026-09-25T02:32:57.441Z",
     "alertTimestamp": "2026-09-24T20:41:53.938Z"
+  },
+  {
+    "match": "FC KTP vs MP Mikkeli",
+    "league": "Ykkosliiga",
+    "tier": "AVISO",
+    "probability": 0.5371560957275782,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      89
+    ],
+    "timestamp": "2026-09-25T17:26:39.482Z",
+    "alertTimestamp": "2026-09-25T16:55:47.084Z"
+  },
+  {
+    "match": "Killas (F) vs Flamengo FBC (F)",
+    "league": "Liga Femenina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5121467529353834,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-25T17:36:00.991Z",
+    "alertTimestamp": "2026-09-25T16:55:47.084Z"
   }
 ]
