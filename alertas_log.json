@@ -1,81 +1,5 @@
 [
   {
-    "match": "Sheffield Utd vs Bolton",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5361499555650496,
-    "minute": 78,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones claras y xG alto. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      1,
-      4,
-      67,
-      68,
-      93
-    ],
-    "timestamp": "2026-09-01T20:41:41.214Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
-    "match": "West Ham United vs Wolves",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5269177457174465,
-    "minute": 78,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, xG estimado alto para local, y chances claras. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      33,
-      42,
-      44,
-      53,
-      64,
-      69
-    ],
-    "timestamp": "2026-09-01T20:41:44.362Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
-    "match": "Swansea vs Watford FC",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.54011607270527,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8,
-      29
-    ],
-    "timestamp": "2026-09-01T20:42:02.236Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
     "match": "Bradford vs Cambridge United",
     "league": "League One",
     "tier": "AVISO",
@@ -21849,5 +21773,67 @@
     ],
     "timestamp": "2026-09-26T17:57:59.406Z",
     "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "Lautaro De Buin vs Puente Alto",
+    "league": "Tercera División A",
+    "tier": "AVISO",
+    "probability": 0.5421260740109975,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T18:07:53.605Z",
+    "alertTimestamp": "2026-09-26T16:27:27.767Z"
+  },
+  {
+    "match": "Xanthi vs Kavala",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.5290347792794411,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso 0-0 en el minuto 80, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T18:27:59.160Z",
+    "alertTimestamp": "2026-09-26T16:18:19.900Z"
+  },
+  {
+    "match": "Cienciano (Reserva) vs FC Sporting Company San Antonio",
+    "league": "Liga 3",
+    "tier": "AVISO",
+    "probability": 0.5188528873887104,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de un gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40
+    ],
+    "timestamp": "2026-09-26T18:59:44.526Z",
+    "alertTimestamp": "2026-09-26T17:08:06.924Z"
   }
 ]
