@@ -1,171 +1,5 @@
 [
   {
-    "match": "Bradford vs Cambridge United",
-    "league": "League One",
-    "tier": "AVISO",
-    "probability": 0.5192840988637248,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, ambos equipos con chances claras y alto volumen de juego.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      58,
-      76,
-      88
-    ],
-    "timestamp": "2026-09-01T20:42:03.076Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
-    "match": "Littlehampton Town vs Winchester City",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8914667344957478,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      83
-    ],
-    "timestamp": "2026-09-01T20:51:46.568Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
-    "match": "Cheltenham vs York",
-    "league": "League Two",
-    "tier": "AVISO",
-    "probability": 0.5581747310664992,
-    "minute": 76,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y ambos equipos con remates a puerta. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12
-    ],
-    "timestamp": "2026-09-01T20:51:47.152Z",
-    "alertTimestamp": "2026-09-01T18:51:23.054Z"
-  },
-  {
-    "match": "FC Penafiel U23 vs Leixoes Sub23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.898292794933842,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      28
-    ],
-    "timestamp": "2026-09-01T21:01:31.278Z",
-    "alertTimestamp": "2026-09-01T19:12:00.858Z"
-  },
-  {
-    "match": "Bari vs Picerno",
-    "league": "Copa Italia - Lega Pro - Tercera Ronda",
-    "tier": "AVISO",
-    "probability": 0.8615886881325318,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido temprano, marcador ajustado, y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      31,
-      90,
-      90,
-      122,
-      122,
-      124,
-      125,
-      129,
-      130
-    ],
-    "timestamp": "2026-09-02T02:02:04.054Z",
-    "alertTimestamp": "2026-09-01T19:12:00.858Z"
-  },
-  {
-    "match": "Jadran LP vs Dubrava",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.5654119502641627,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-02T16:59:34.663Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "FC ML Vitebsk vs Belshina Bobruisk",
-    "league": "Vysshaya Liga",
-    "tier": "AVISO",
-    "probability": 0.7101177352742417,
-    "minute": 61,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      44,
-      54
-    ],
-    "timestamp": "2026-09-02T17:32:19.707Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
     "match": "Csikszereda Miercurea Ciuc (W) vs Breidablik (F)",
     "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
     "tier": "AVISO",
@@ -21835,5 +21669,158 @@
     ],
     "timestamp": "2026-09-26T18:59:44.526Z",
     "alertTimestamp": "2026-09-26T17:08:06.924Z"
+  },
+  {
+    "match": "HNK Rijeka vs Union Berlin",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.899588889534984,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T19:10:19.683Z",
+    "alertTimestamp": "2026-09-26T17:27:50.718Z"
+  },
+  {
+    "match": "Union Yacoub El Mansour vs SCC Mohammédia",
+    "league": "Botola 2",
+    "tier": "AVISO",
+    "probability": 0.6255068309958631,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T19:57:42.102Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Stade D'abidjan vs Mouna",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5694425500614692,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T19:57:42.894Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Cruz Azul Hidalgo vs Leones Negros",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5332373140235034,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchos remates y grandes ocasiones para el visitante. El xG es estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      23,
+      56,
+      92
+    ],
+    "timestamp": "2026-09-26T19:58:00.793Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Emmen vs TOP Oss",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.6520459455251227,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con xG estimado alto para el local y muchas llegadas a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      32
+    ],
+    "timestamp": "2026-09-26T19:58:19.211Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "NAC Breda vs FC Eindhoven",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.632167074237808,
+    "minute": 60,
+    "scoreAtAlert": "2-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, y un equipo domina en oportunidades.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      61,
+      69,
+      84,
+      86,
+      92
+    ],
+    "timestamp": "2026-09-26T19:58:19.810Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "K.SK. Heist vs KV Kortrijk",
+    "league": "Copa de Bélgica - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5595959359737946,
+    "minute": 79,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de copa con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T19:58:22.951Z",
+    "alertTimestamp": "2026-09-26T18:59:31.256Z"
   }
 ]
