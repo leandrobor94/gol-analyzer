@@ -1,127 +1,5 @@
 [
   {
-    "match": "Fc Bocholt vs Bonner SC",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.9012235621202608,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      33,
-      52,
-      70
-    ],
-    "timestamp": "2026-09-01T19:31:08.381Z",
-    "alertTimestamp": "2026-09-01T17:31:13.778Z"
-  },
-  {
-    "match": "Dortmund II vs FC Schalke 04 II",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.9012235621202608,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      21,
-      75,
-      92
-    ],
-    "timestamp": "2026-09-01T19:31:08.584Z",
-    "alertTimestamp": "2026-09-01T17:31:13.778Z"
-  },
-  {
-    "match": "Stade Nyonnais vs FC Winterthur",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.8660613925912842,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido temprano, marcador ajustado, y xG estimado no es base para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      3,
-      22,
-      44,
-      60
-    ],
-    "timestamp": "2026-09-01T19:31:08.900Z",
-    "alertTimestamp": "2026-09-01T17:31:13.778Z"
-  },
-  {
-    "match": "Xamax vs Yverdon-Sport FC",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.8827616131713512,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Yverdon-Sport con 2 grandes chances y 2 tiros a puerta, a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      36,
-      92
-    ],
-    "timestamp": "2026-09-01T19:31:09.609Z",
-    "alertTimestamp": "2026-09-01T17:41:03.278Z"
-  },
-  {
-    "match": "FC Rapperswil-Jona vs SC Kriens",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.8616441100809927,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, muchas chances creadas y xG estimado alto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      62,
-      75
-    ],
-    "timestamp": "2026-09-01T19:31:09.771Z",
-    "alertTimestamp": "2026-09-01T17:41:03.278Z"
-  },
-  {
     "match": "FC Rostov vs CSKA Moscú",
     "league": "Copa de Rusia - Grupo D",
     "tier": "AVISO",
@@ -21877,5 +21755,114 @@
     ],
     "timestamp": "2026-09-26T02:56:45.212Z",
     "alertTimestamp": "2026-09-26T02:37:55.845Z"
+  },
+  {
+    "match": "Logroño United vs FC Barcelona (F)",
+    "league": "Liga Femenina Iberdrola",
+    "tier": "AVISO",
+    "probability": 0.5571878046546058,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      71
+    ],
+    "timestamp": "2026-09-26T16:37:32.617Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "52 Orduspor vs Maras Istiklal",
+    "league": "2. Lig",
+    "tier": "AVISO",
+    "probability": 0.6281252786492229,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos de xG que sugieran esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21
+    ],
+    "timestamp": "2026-09-26T16:57:32.691Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "Paradou AC vs Nrb Telaghema",
+    "league": "Ligue 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6386968055159646,
+    "minute": 66,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo suficiente para cambios. xG estimado, no se considera.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      26,
+      41
+    ],
+    "timestamp": "2026-09-26T16:57:33.076Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "NC Magra vs US Chaouia",
+    "league": "Ligue 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5755797948006237,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T16:57:33.684Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "Rodelindo vs Naval",
+    "league": "Tercera División A",
+    "tier": "AVISO",
+    "probability": 0.5399737825467972,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T16:57:34.072Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
   }
 ]
