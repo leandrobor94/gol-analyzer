@@ -1,242 +1,5 @@
 [
   {
-    "match": "Csikszereda Miercurea Ciuc (W) vs Breidablik (F)",
-    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de copa femenina, 0-0 en el minuto 20. Alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      55
-    ],
-    "timestamp": "2026-09-02T17:54:01.545Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "Gubbio vs Vis Pesaro",
-    "league": "Copa Italia - Lega Pro - Tercera Ronda",
-    "tier": "AVISO",
-    "probability": 0.8536778299733947,
-    "minute": 20,
-    "scoreAtAlert": "3-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Aunque el marcador es 2-0, el partido está en el minuto 20 y hay mucho tiempo restante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      17,
-      73,
-      86,
-      90
-    ],
-    "timestamp": "2026-09-02T17:54:01.642Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "Poprad vs MFK Ruzomberok",
-    "league": "Slovakia Cup - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.6697243954250618,
-    "minute": 62,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, y 3 tiros a puerta del visitante.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      30,
-      89
-    ],
-    "timestamp": "2026-09-02T18:03:08.365Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "Udinese vs Venezia",
-    "league": "Copa Italia - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.517652823261087,
-    "minute": 79,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto, ambos equipos con chances claras y xG estimado alto. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      34,
-      53
-    ],
-    "timestamp": "2026-09-02T18:03:08.640Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "Yantra Gabrovo vs Pirin Blagoevgrad",
-    "league": "Vtora Liga",
-    "tier": "AVISO",
-    "probability": 0.8868820795065175,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      55,
-      92
-    ],
-    "timestamp": "2026-09-02T18:03:18.727Z",
-    "alertTimestamp": "2026-09-02T16:21:20.489Z"
-  },
-  {
-    "match": "Servette (F) vs Sparta Praha (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.559626645810281,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      46,
-      92
-    ],
-    "timestamp": "2026-09-02T19:01:18.368Z",
-    "alertTimestamp": "2026-09-02T16:50:05.153Z"
-  },
-  {
-    "match": "Sivasspor vs Mardin 1969",
-    "league": "1. Lig",
-    "tier": "AVISO",
-    "probability": 0.8764612164261245,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      35,
-      46,
-      62
-    ],
-    "timestamp": "2026-09-02T19:15:33.508Z",
-    "alertTimestamp": "2026-09-02T17:11:54.576Z"
-  },
-  {
-    "match": "Ceramica Cleopatra vs Modern Sport FC",
-    "league": "Primera División de Egipto",
-    "tier": "AVISO",
-    "probability": 0.8593135875353524,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, pero hay big chance y tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      63
-    ],
-    "timestamp": "2026-09-02T19:15:53.681Z",
-    "alertTimestamp": "2026-09-02T17:11:54.576Z"
-  },
-  {
-    "match": "Koge (F) vs PSV (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.8920157188601597,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos. No hay razones para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      46,
-      63
-    ],
-    "timestamp": "2026-09-02T20:02:37.810Z",
-    "alertTimestamp": "2026-09-02T17:11:54.576Z"
-  },
-  {
-    "match": "Feyenoord (F) vs Rsc Anderlecht (F)",
-    "league": "UEFA Women's Europa Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8834117797185305,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 y xG estimado alto para el local. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      10,
-      23,
-      37
-    ],
-    "timestamp": "2026-09-02T20:03:10.763Z",
-    "alertTimestamp": "2026-09-02T17:11:54.576Z"
-  },
-  {
     "match": "Sampaio Corrêa-RJ vs Nova Iguaçu",
     "league": "Copa Rio - Semifinales",
     "tier": "AVISO",
@@ -21821,6 +21584,235 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-26T19:58:22.951Z",
+    "alertTimestamp": "2026-09-26T18:59:31.256Z"
+  },
+  {
+    "match": "Talleres RE vs San Martín Burzaco",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8750563432376777,
+    "minute": 25,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      42,
+      62,
+      66,
+      73
+    ],
+    "timestamp": "2026-09-26T20:08:39.476Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Charlotte Independence vs Fort Wayne",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.7021291390520831,
+    "minute": 60,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0 en el minuto 60, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      82,
+      89
+    ],
+    "timestamp": "2026-09-26T20:08:40.122Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Cañoneros Marina vs Guerreros del Pacifico",
+    "league": "Premier A - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.7096710694722458,
+    "minute": 60,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0 en el minuto 60, con 8 tiros a puerta del visitante. Hay urgencia.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T20:08:59.914Z",
+    "alertTimestamp": "2026-09-26T18:18:11.487Z"
+  },
+  {
+    "match": "Nijlen vs Rupel Boom",
+    "league": "Copa de Bélgica - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5775240289128835,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, minutos restantes y probabilidad de gol alta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T20:18:03.661Z",
+    "alertTimestamp": "2026-09-26T18:59:31.256Z"
+  },
+  {
+    "match": "Deportivo Armenio vs Deportivo Merlo",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.5122140332602945,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, a pesar del xG estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      42
+    ],
+    "timestamp": "2026-09-26T20:28:40.719Z",
+    "alertTimestamp": "2026-09-26T18:37:52.810Z"
+  },
+  {
+    "match": "Estudiantes vs San Miguel",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5187176059989184,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      69,
+      81
+    ],
+    "timestamp": "2026-09-26T20:38:18.440Z",
+    "alertTimestamp": "2026-09-26T18:37:52.810Z"
+  },
+  {
+    "match": "Sambenedettese vs Citta Di Campobasso",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5297607753396629,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      47,
+      52,
+      68
+    ],
+    "timestamp": "2026-09-26T20:38:18.722Z",
+    "alertTimestamp": "2026-09-26T18:37:52.810Z"
+  },
+  {
+    "match": "Thionville vs Vendee La Roche sur Yon",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8756712139181181,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60,
+      89,
+      92
+    ],
+    "timestamp": "2026-09-26T20:47:21.703Z",
+    "alertTimestamp": "2026-09-26T18:59:31.256Z"
+  },
+  {
+    "match": "Villefranche vs Versailles 78",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8588640689118408,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, xG estimado no confiable, sin razones claras para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      17,
+      53
+    ],
+    "timestamp": "2026-09-26T20:47:22.158Z",
+    "alertTimestamp": "2026-09-26T18:59:31.256Z"
+  },
+  {
+    "match": "Paris 13 Atletico vs Bastia",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8404997213736407,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado bajo pero sin datos de posesión estéril. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      37
+    ],
+    "timestamp": "2026-09-26T20:47:22.954Z",
     "alertTimestamp": "2026-09-26T18:59:31.256Z"
   }
 ]
