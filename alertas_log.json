@@ -1,146 +1,5 @@
 [
   {
-    "match": "FC Rostov vs CSKA Moscú",
-    "league": "Copa de Rusia - Grupo D",
-    "tier": "AVISO",
-    "probability": 0.8802539464837914,
-    "minute": 23,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es fiable, pero el modelo da alta probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      75,
-      85
-    ],
-    "timestamp": "2026-09-01T19:51:25.306Z",
-    "alertTimestamp": "2026-09-01T17:51:55.198Z"
-  },
-  {
-    "match": "NSVV vs Kloetinge",
-    "league": "KNVB Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      54,
-      69,
-      80,
-      90
-    ],
-    "timestamp": "2026-09-01T19:51:25.834Z",
-    "alertTimestamp": "2026-09-01T18:11:43.651Z"
-  },
-  {
-    "match": "Al Hilal Riyadh vs Al Ahli Jeddah",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.9066788623431777,
-    "minute": 20,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y oportunidades claras de gol para ambos equipos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      23,
-      86
-    ],
-    "timestamp": "2026-09-01T20:02:22.695Z",
-    "alertTimestamp": "2026-09-01T18:11:43.651Z"
-  },
-  {
-    "match": "Be Quick 1887 vs AFC",
-    "league": "KNVB Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.5371123748647483,
-    "minute": 79,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles en los minutos finales, alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      82,
-      88
-    ],
-    "timestamp": "2026-09-01T20:02:22.866Z",
-    "alertTimestamp": "2026-09-01T18:11:43.651Z"
-  },
-  {
-    "match": "Longa '30 vs Koninklijke HFC",
-    "league": "KNVB Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.898292794933842,
-    "minute": 21,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-01T20:02:23.387Z",
-    "alertTimestamp": "2026-09-01T18:11:43.651Z"
-  },
-  {
-    "match": "Sportlust '46 vs Blauw Geel '38",
-    "league": "KNVB Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8634571694091276,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no es real, no hay datos de volumen de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      16,
-      68,
-      69
-    ],
-    "timestamp": "2026-09-01T20:02:23.868Z",
-    "alertTimestamp": "2026-09-01T18:11:43.651Z"
-  },
-  {
     "match": "Sheffield Utd vs Bolton",
     "league": "Championship",
     "tier": "AVISO",
@@ -21863,6 +21722,132 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-09-26T16:57:34.072Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "AS Khroub vs USM Annaba",
+    "league": "Ligue 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5421260740109975,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T17:08:08.022Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "MSP Batna vs Mo Constantine",
+    "league": "Ligue 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5247473948574866,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T17:08:08.596Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "ES Mostaganem vs NA Hussein Dey",
+    "league": "Ligue 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6732425256536387,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un solo gol, xG estimado no confiable, y 33 minutos restantes.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T17:08:08.822Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "Pogon vs Udinese",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.539940977899171,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-26T17:27:52.299Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "Ayacucho FC vs Unión Minas",
+    "league": "Liga 2 - Ascenso - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.551540668953101,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, minutos restantes y una tarjeta roja. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-09-26T17:57:48.427Z",
+    "alertTimestamp": "2026-09-26T16:07:33.239Z"
+  },
+  {
+    "match": "US Touarga vs FUS Rabat",
+    "league": "Botola Pro",
+    "tier": "AVISO",
+    "probability": 0.5213659199551254,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      28,
+      70
+    ],
+    "timestamp": "2026-09-26T17:57:59.406Z",
     "alertTimestamp": "2026-09-26T16:07:33.239Z"
   }
 ]
