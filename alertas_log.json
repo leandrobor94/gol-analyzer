@@ -1,119 +1,5 @@
 [
   {
-    "match": "Sampaio Corrêa-RJ vs Nova Iguaçu",
-    "league": "Copa Rio - Semifinales",
-    "tier": "AVISO",
-    "probability": 0.5665950197968342,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado en semifinales, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      36,
-      50,
-      95
-    ],
-    "timestamp": "2026-09-02T20:04:31.360Z",
-    "alertTimestamp": "2026-09-02T17:54:00.737Z"
-  },
-  {
-    "match": "Baltika vs Krylya Sovetov Samara",
-    "league": "Copa de Rusia - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.5728771750309842,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-02T20:04:51.763Z",
-    "alertTimestamp": "2026-09-02T18:24:18.412Z"
-  },
-  {
-    "match": "Spartak Moscú vs Rodina Moscow",
-    "league": "Copa de Rusia - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.7226963127387656,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, alta probabilidad del modelo, y no hay razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      31,
-      36,
-      65,
-      78
-    ],
-    "timestamp": "2026-09-02T20:04:54.215Z",
-    "alertTimestamp": "2026-09-02T18:24:18.412Z"
-  },
-  {
-    "match": "Real Sociedad (F) vs Chelsea (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.6362000128015389,
-    "minute": 63,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, Chelsea lidera pero xG estimado y sin goles locales. Oportunidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-09-02T20:11:39.199Z",
-    "alertTimestamp": "2026-09-02T17:11:54.576Z"
-  },
-  {
-    "match": "Sparta Nijkerk vs SV Venray",
-    "league": "KNVB Cup - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.901598351499689,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      86
-    ],
-    "timestamp": "2026-09-02T20:12:36.744Z",
-    "alertTimestamp": "2026-09-02T18:24:18.412Z"
-  },
-  {
     "match": "Aarhus vs FC Midtjylland",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21814,5 +21700,119 @@
     ],
     "timestamp": "2026-09-26T20:47:22.954Z",
     "alertTimestamp": "2026-09-26T18:59:31.256Z"
+  },
+  {
+    "match": "Deportivo Laferrere vs Sportivo Italiano",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8815995558352574,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      44,
+      59
+    ],
+    "timestamp": "2026-09-27T01:49:25.630Z",
+    "alertTimestamp": "2026-09-26T18:07:50.811Z"
+  },
+  {
+    "match": "Tigres vs Real Santander",
+    "league": "Torneo BetPlay Dimayor - Finalización",
+    "tier": "AVISO",
+    "probability": 0.5627750149575019,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador ajustado y tiempo restante suficiente para un gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      62,
+      81
+    ],
+    "timestamp": "2026-09-27T01:49:25.673Z",
+    "alertTimestamp": "2026-09-26T19:09:34.641Z"
+  },
+  {
+    "match": "Santiago City vs Brujas Salamanca",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.5230676245376488,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T01:49:25.808Z",
+    "alertTimestamp": "2026-09-26T19:09:34.641Z"
+  },
+  {
+    "match": "Quilmes vs Güemes",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5394432040758996,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      91
+    ],
+    "timestamp": "2026-09-27T01:49:26.017Z",
+    "alertTimestamp": "2026-09-26T19:09:34.641Z"
+  },
+  {
+    "match": "Corpus Christi FC vs Boise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6897219572520517,
+    "minute": 61,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin evidencia clara de esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      63,
+      97
+    ],
+    "timestamp": "2026-09-27T02:38:18.456Z",
+    "alertTimestamp": "2026-09-27T01:49:15.377Z"
   }
 ]
