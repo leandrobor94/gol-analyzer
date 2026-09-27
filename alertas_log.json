@@ -1,252 +1,5 @@
 [
   {
-    "match": "Kawkab Marrakech vs CR Khemis Zemamra",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      18,
-      32
-    ],
-    "timestamp": "2026-09-03T20:00:11.619Z",
-    "alertTimestamp": "2026-09-03T18:20:35.182Z"
-  },
-  {
-    "match": "FC Tzeiri Tira vs SC Sderot",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.895379955651873,
-    "minute": 25,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      9,
-      22,
-      36,
-      56
-    ],
-    "timestamp": "2026-09-03T20:11:05.107Z",
-    "alertTimestamp": "2026-09-03T18:20:35.182Z"
-  },
-  {
-    "match": "Silesia Breslavia vs Pogon",
-    "league": "Polish Cup - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.8736574215527015,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      64,
-      84
-    ],
-    "timestamp": "2026-09-03T20:30:06.883Z",
-    "alertTimestamp": "2026-09-03T18:30:20.844Z"
-  },
-  {
-    "match": "Anderlecht vs KV Kortrijk",
-    "league": "Jupiler Pro League",
-    "tier": "AVISO",
-    "probability": 0.87063113976124,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, muchas chances de gol, liga de alto scoring.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      43
-    ],
-    "timestamp": "2026-09-03T20:30:06.971Z",
-    "alertTimestamp": "2026-09-03T18:40:39.435Z"
-  },
-  {
-    "match": "Toulouse vs Lille",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.5830451351194557,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG alto para el local a pesar de ser estimado. El modelo da alta probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      73
-    ],
-    "timestamp": "2026-09-03T20:40:46.516Z",
-    "alertTimestamp": "2026-09-03T18:50:00.460Z"
-  },
-  {
-    "match": "Real Sociedad vs Celta de Vigo",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.5300017543616605,
-    "minute": 79,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, ambos equipos buscan la victoria. xG estimado no es real.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T01:53:57.677Z",
-    "alertTimestamp": "2026-09-03T19:12:09.776Z"
-  },
-  {
-    "match": "Guaynabo Fc vs San Juan FC",
-    "league": "LPR Pro - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5535010001574382,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de eventos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T02:34:27.814Z",
-    "alertTimestamp": "2026-09-04T01:53:56.140Z"
-  },
-  {
-    "match": "Matagalpa vs UNAN Managua",
-    "league": "Liga Primera - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5786808824742861,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T16:04:57.004Z",
-    "alertTimestamp": "2026-09-04T01:53:56.140Z"
-  },
-  {
-    "match": "Tepatitlán de Morelos vs Dorados de Sinaloa",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5490972595155229,
-    "minute": 77,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, un equipo con 10 jugadores y alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      9,
-      32,
-      46,
-      52,
-      89
-    ],
-    "timestamp": "2026-09-04T16:04:58.117Z",
-    "alertTimestamp": "2026-09-04T01:53:56.140Z"
-  },
-  {
-    "match": "Volna Pinsk vs Dinamo Minsk II Reserve",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.5693873645563137,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      35,
-      40,
-      47
-    ],
-    "timestamp": "2026-09-04T16:24:55.322Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "CSM Slatina vs CF Chindia Targoviste",
-    "league": "Liga 2 rumana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5388164623172382,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T16:24:55.428Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
     "match": "Panthere vs Rayon Sports",
     "league": "CAF Confederation Cup - Clasificación",
     "tier": "AVISO",
@@ -21791,5 +21544,220 @@
     "goalMinutes": [],
     "timestamp": "2026-09-27T19:16:42.324Z",
     "alertTimestamp": "2026-09-27T17:34:53.473Z"
+  },
+  {
+    "match": "RB Bragantino/Sp Youth vs Bandeirante SP/Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.885742650584628,
+    "minute": 25,
+    "scoreAtAlert": "5-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de octavos de final, marcador ajustado y alta probabilidad del modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T19:54:45.295Z",
+    "alertTimestamp": "2026-09-27T18:04:32.970Z"
+  },
+  {
+    "match": "Veranopolis vs Passo Fundo (RS)",
+    "league": "Gaucho A2",
+    "tier": "AVISO",
+    "probability": 0.5113540454186871,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T20:04:02.723Z",
+    "alertTimestamp": "2026-09-27T18:04:32.970Z"
+  },
+  {
+    "match": "San Luis FC (F) vs Lanús (F)",
+    "league": "Campeonato Femenino - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5190890838209112,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T20:04:32.669Z",
+    "alertTimestamp": "2026-09-27T18:14:51.964Z"
+  },
+  {
+    "match": "CO Korhogo vs Agboville",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8883737633952643,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 23, sin datos de xG o tiros a puerta que sugieran esterilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T20:14:19.789Z",
+    "alertTimestamp": "2026-09-27T18:14:51.964Z"
+  },
+  {
+    "match": "Societe Omnisport vs Stella Adjame",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5652583938573162,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T20:14:24.122Z",
+    "alertTimestamp": "2026-09-27T18:14:51.964Z"
+  },
+  {
+    "match": "Inter Toronto FC vs Pacific",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.8851248967057931,
+    "minute": 24,
+    "scoreAtAlert": "3-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con 1 tarjeta roja, marcador 0-0 y xG estimado. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      15,
+      28,
+      41,
+      44,
+      56,
+      60
+    ],
+    "timestamp": "2026-09-27T20:24:20.618Z",
+    "alertTimestamp": "2026-09-27T18:14:51.964Z"
+  },
+  {
+    "match": "Defensores de Belgrano vs Ferro Carril Oeste",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.873673535782166,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11
+    ],
+    "timestamp": "2026-09-27T20:24:20.806Z",
+    "alertTimestamp": "2026-09-27T18:34:23.758Z"
+  },
+  {
+    "match": "Mar de Fondo vs Sud America",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.5430876230534274,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      66,
+      69,
+      73
+    ],
+    "timestamp": "2026-09-27T20:24:31.343Z",
+    "alertTimestamp": "2026-09-27T18:34:23.758Z"
+  },
+  {
+    "match": "Sport Colonial vs Humaitá",
+    "league": "APF Primera C",
+    "tier": "AVISO",
+    "probability": 0.8883737633952643,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, minuto 23, sin datos de xG o chances que contradigan la alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T20:35:07.385Z",
+    "alertTimestamp": "2026-09-27T18:04:32.970Z"
+  },
+  {
+    "match": "Casarano vs Monopoli",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5510162704010518,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      92
+    ],
+    "timestamp": "2026-09-27T20:35:08.061Z",
+    "alertTimestamp": "2026-09-27T18:34:23.758Z"
+  },
+  {
+    "match": "Olimpo vs CSCyD Gimnasia y Esgrima (Chivilcoy)",
+    "league": "Federal A - Tercera fase",
+    "tier": "AVISO",
+    "probability": 0.5265504455788126,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      69,
+      73,
+      95
+    ],
+    "timestamp": "2026-09-27T20:35:08.771Z",
+    "alertTimestamp": "2026-09-27T18:43:59.183Z"
   }
 ]
