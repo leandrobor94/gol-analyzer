@@ -1,28 +1,5 @@
 [
   {
-    "match": "Aarhus vs FC Midtjylland",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8855612358003014,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "A pesar del xG estimado, 4 grandes ocasiones para el visitante indican peligro.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11,
-      56
-    ],
-    "timestamp": "2026-09-02T20:12:36.991Z",
-    "alertTimestamp": "2026-09-02T18:24:18.412Z"
-  },
-  {
     "match": "CE Sabadell vs FC Barcelona Atlètic",
     "league": "Copa Catalunya",
     "tier": "AVISO",
@@ -21813,6 +21790,33 @@
       97
     ],
     "timestamp": "2026-09-27T02:38:18.456Z",
+    "alertTimestamp": "2026-09-27T01:49:15.377Z"
+  },
+  {
+    "match": "Austin FC vs San Diego FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.6505535369751452,
+    "minute": 61,
+    "scoreAtAlert": "1-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 61, MLS (alta anotación). Austin con 1 gran chance y 6 toques en el área.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      50,
+      57,
+      64,
+      73,
+      82,
+      86
+    ],
+    "timestamp": "2026-09-27T02:48:55.337Z",
     "alertTimestamp": "2026-09-27T01:49:15.377Z"
   }
 ]
