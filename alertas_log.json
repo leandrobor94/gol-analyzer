@@ -1,97 +1,5 @@
 [
   {
-    "match": "CE Sabadell vs FC Barcelona Atlètic",
-    "league": "Copa Catalunya",
-    "tier": "AVISO",
-    "probability": 0.5514278256529178,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      56,
-      87
-    ],
-    "timestamp": "2026-09-02T20:26:59.927Z",
-    "alertTimestamp": "2026-09-02T18:36:19.770Z"
-  },
-  {
-    "match": "Grasshopper Club vs FC St. Gallen",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.900250072895479,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      36,
-      69
-    ],
-    "timestamp": "2026-09-02T20:27:00.142Z",
-    "alertTimestamp": "2026-09-02T19:00:17.797Z"
-  },
-  {
-    "match": "Juventus (F) vs St. Polten (F)",
-    "league": "Liga de Campeones Femenina - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.8977279033040958,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      40,
-      56
-    ],
-    "timestamp": "2026-09-02T20:27:00.219Z",
-    "alertTimestamp": "2026-09-02T19:00:17.797Z"
-  },
-  {
-    "match": "Widzew Lodz vs Korona Kielce",
-    "league": "Polish Cup - 32avos de final",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de copa, marcador 0-0, y el modelo da alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      73
-    ],
-    "timestamp": "2026-09-02T20:27:00.413Z",
-    "alertTimestamp": "2026-09-02T19:00:17.797Z"
-  },
-  {
     "match": "Luzern vs FC Vaduz",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21818,5 +21726,90 @@
     ],
     "timestamp": "2026-09-27T02:48:55.337Z",
     "alertTimestamp": "2026-09-27T01:49:15.377Z"
+  },
+  {
+    "match": "Junior FC vs Independiente Medellín",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5111254571292375,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un solo gol, un expulsado y xG estimado alto para el local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      75,
+      79
+    ],
+    "timestamp": "2026-09-27T16:44:09.588Z",
+    "alertTimestamp": "2026-09-27T01:49:15.377Z"
+  },
+  {
+    "match": "Chelsea (F) vs Arsenal (F)",
+    "league": "Premier League femenina",
+    "tier": "AVISO",
+    "probability": 0.5270375087705108,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-09-27T17:24:57.071Z",
+    "alertTimestamp": "2026-09-27T16:44:07.206Z"
+  },
+  {
+    "match": "San Pédro vs Zoman",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5927803666185647,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T17:34:54.587Z",
+    "alertTimestamp": "2026-09-27T16:44:07.206Z"
+  },
+  {
+    "match": "Numancia vs Guadalajara",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.6057905633978521,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T17:34:54.932Z",
+    "alertTimestamp": "2026-09-27T16:44:07.206Z"
   }
 ]

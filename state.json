@@ -1,26 +1,91 @@
 {
   "alertedMatches": {
-    "4621332_AVISO": {
-      "timestamp": 1790473755376,
-      "minute": 61,
+    "4865411_AVISO": {
+      "timestamp": 1790528031954,
+      "minute": 23,
       "tier": "AVISO"
     },
-    "4710671_AVISO": {
-      "timestamp": 1790473755376,
-      "minute": 61,
+    "4798883_AVISO": {
+      "timestamp": 1790528634539,
+      "minute": 76,
       "tier": "AVISO"
     },
-    "4731982_AVISO": {
-      "timestamp": 1790477899445,
-      "minute": 78,
+    "4860827_AVISO": {
+      "timestamp": 1790528634539,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4754171_AVISO": {
+      "timestamp": 1790528634539,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4860829_AVISO": {
+      "timestamp": 1790528634539,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4860830_AVISO": {
+      "timestamp": 1790528634539,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4754182_AVISO": {
+      "timestamp": 1790529895908,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4754017_AVISO": {
+      "timestamp": 1790529895908,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4863773_AVISO": {
+      "timestamp": 1790529895908,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4827017_AVISO": {
+      "timestamp": 1790529895908,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4826520_AVISO": {
+      "timestamp": 1790529895908,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4672376_AVISO": {
+      "timestamp": 1790530493473,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4697796_AVISO": {
+      "timestamp": 1790530493473,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4771034_AVISO": {
+      "timestamp": 1790530493473,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4772405_AVISO": {
+      "timestamp": 1790530493473,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4772410_AVISO": {
+      "timestamp": 1790530493473,
+      "minute": 77,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 10348,
-    "verified": 10324,
-    "withGoalTimeline": 7141,
+    "total": 10443,
+    "verified": 10383,
+    "withGoalTimeline": 7181,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-09-27T02:58:20.119Z"
+  "lastUpdated": "2026-09-27T17:34:56.475Z"
 }
