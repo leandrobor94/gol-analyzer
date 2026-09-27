@@ -1,180 +1,5 @@
 [
   {
-    "match": "Panthere vs Rayon Sports",
-    "league": "CAF Confederation Cup - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5237237852563719,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido apretado, marcador 1-0, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T17:05:09.899Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Al Urooba vs Al Jazira Al Hamra",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.5339184076627729,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      47,
-      91
-    ],
-    "timestamp": "2026-09-04T17:05:10.020Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Juárez Sub21 vs Pachuca Sub21",
-    "league": "Liga MX Sub21 - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5642230417643449,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales y xG estimado no es fiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T17:14:24.632Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "PK-35 vs Ekenäs IF",
-    "league": "Ykkosliiga",
-    "tier": "AVISO",
-    "probability": 0.5393693713869464,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con remates a puerta y xG estimado que sugiere actividad.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T17:54:24.407Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Pogoń Grodzisk vs Warta Poznan",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.5281189463171476,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, sin goles esperados reales, y con tiempo para un gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      76
-    ],
-    "timestamp": "2026-09-04T17:54:25.464Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Omonia 29th May vs Karmiotissa",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.5709781574457756,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos tiros a puerta y una tarjeta roja. El xG es estimado, no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      30,
-      54,
-      67
-    ],
-    "timestamp": "2026-09-04T18:05:05.574Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Noah vs Gandzasar Kapan",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8733883769624781,
-    "minute": 22,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, marcador ajustado y xG estimado no es base para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T18:05:05.672Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Al Khalidiyah vs Ali Csc",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5475923673103923,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, muchos tiros a puerta del local, y el xG es estimado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      26,
-      67,
-      72,
-      84
-    ],
-    "timestamp": "2026-09-04T18:05:05.770Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
     "match": "Abha Club vs Al Ettifaq",
     "league": "Liga Profesional Saudí",
     "tier": "AVISO",
@@ -21759,5 +21584,168 @@
     ],
     "timestamp": "2026-09-27T20:35:08.771Z",
     "alertTimestamp": "2026-09-27T18:43:59.183Z"
+  },
+  {
+    "match": "Foz do Iguaçu vs Athletico Paranaense",
+    "league": "Copa Paraná",
+    "tier": "AVISO",
+    "probability": 0.8887498682480743,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10
+    ],
+    "timestamp": "2026-09-27T20:44:30.190Z",
+    "alertTimestamp": "2026-09-27T18:54:53.548Z"
+  },
+  {
+    "match": "Real Oviedo vs Sporting de Gijón",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5125580313333968,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      82
+    ],
+    "timestamp": "2026-09-27T21:03:59.875Z",
+    "alertTimestamp": "2026-09-27T19:04:37.021Z"
+  },
+  {
+    "match": "Aguará vs Comunal Cabrero",
+    "league": "Tercera División A",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T21:04:00.064Z",
+    "alertTimestamp": "2026-09-27T19:16:41.175Z"
+  },
+  {
+    "match": "Club Hiska Nacional 1919 vs Club 26 de Febrero",
+    "league": "Copa Simón Bolívar - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T21:13:56.630Z",
+    "alertTimestamp": "2026-09-27T19:16:41.175Z"
+  },
+  {
+    "match": "1 de Mayo FC vs Ciudad Nueva Santa Cruz Academia",
+    "league": "Copa Simón Bolívar - Grupo F",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-27T21:13:56.800Z",
+    "alertTimestamp": "2026-09-27T19:16:41.175Z"
+  },
+  {
+    "match": "Aragua FC vs Atletico Ávila FC",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.885035058472023,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      79
+    ],
+    "timestamp": "2026-09-27T21:24:29.457Z",
+    "alertTimestamp": "2026-09-27T19:34:56.305Z"
+  },
+  {
+    "match": "Monagas SC B vs Mineros De Guayana",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8887498682480743,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      7,
+      39,
+      49
+    ],
+    "timestamp": "2026-09-27T21:24:29.626Z",
+    "alertTimestamp": "2026-09-27T19:34:56.305Z"
+  },
+  {
+    "match": "AD Sarchi vs Jicaral Sercoba",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5338225359336707,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-09-27T21:24:29.805Z",
+    "alertTimestamp": "2026-09-27T19:34:56.305Z"
   }
 ]
