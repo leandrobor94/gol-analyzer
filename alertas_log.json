@@ -1,180 +1,5 @@
 [
   {
-    "match": "Abha Club vs Al Ettifaq",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.5397205946383733,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      80
-    ],
-    "timestamp": "2026-09-04T18:05:06.470Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Polissya vs Kudrivka",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5456990418951337,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia, alta probabilidad del modelo y un expulsado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      42,
-      47,
-      72,
-      76,
-      87
-    ],
-    "timestamp": "2026-09-04T18:05:06.582Z",
-    "alertTimestamp": "2026-09-04T16:04:55.583Z"
-  },
-  {
-    "match": "Hannover 96 II vs FC St. Pauli II",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9150424529333221,
-    "minute": 23,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      10,
-      43,
-      46
-    ],
-    "timestamp": "2026-09-04T18:25:02.759Z",
-    "alertTimestamp": "2026-09-04T16:34:25.259Z"
-  },
-  {
-    "match": "Vasas vs Nyiregyhaza",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.5368875654591406,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto con alta probabilidad de gol, a pesar de xG estimado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      8,
-      11,
-      46,
-      58,
-      73
-    ],
-    "timestamp": "2026-09-04T18:25:03.094Z",
-    "alertTimestamp": "2026-09-04T16:34:25.259Z"
-  },
-  {
-    "match": "Arminia Bielefeld vs St. Pauli",
-    "league": "2. Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.5673224686698818,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, alta probabilidad de gol en liga de alto scoring.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      20,
-      51,
-      65
-    ],
-    "timestamp": "2026-09-04T18:25:03.209Z",
-    "alertTimestamp": "2026-09-04T16:34:25.259Z"
-  },
-  {
-    "match": "Tekstilshtik Ivanovo vs Torpedo Moscow",
-    "league": "Russian First League",
-    "tier": "AVISO",
-    "probability": 0.8945690926472287,
-    "minute": 22,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, y Torpedo Moscow mostrando iniciativa con 3 tiros a puerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      19,
-      42,
-      69,
-      76,
-      79
-    ],
-    "timestamp": "2026-09-04T18:35:02.227Z",
-    "alertTimestamp": "2026-09-04T16:34:25.259Z"
-  },
-  {
-    "match": "KF Egnatia vs Skenderbeu",
-    "league": "Abissnet Superiore",
-    "tier": "AVISO",
-    "probability": 0.8890663305792668,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, y un gol de ventaja no es definitivo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      34,
-      84
-    ],
-    "timestamp": "2026-09-04T18:35:02.318Z",
-    "alertTimestamp": "2026-09-04T16:34:25.259Z"
-  },
-  {
     "match": "Hannover vs Karlsruher",
     "league": "2. Bundesliga",
     "tier": "AVISO",
@@ -21747,5 +21572,149 @@
     ],
     "timestamp": "2026-09-27T21:24:29.805Z",
     "alertTimestamp": "2026-09-27T19:34:56.305Z"
+  },
+  {
+    "match": "Virginia USC vs Municipal Tiquipaya",
+    "league": "Copa Simón Bolívar - Grupo D",
+    "tier": "AVISO",
+    "probability": 0.8887498682480743,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-28T02:24:54.467Z",
+    "alertTimestamp": "2026-09-27T19:16:41.175Z"
+  },
+  {
+    "match": "Midland vs Tristan Suárez",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5469111807995902,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-09-28T02:24:54.753Z",
+    "alertTimestamp": "2026-09-27T19:44:10.071Z"
+  },
+  {
+    "match": "Deportivo Maipú vs Temperley",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5112666008550029,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-09-28T02:24:54.832Z",
+    "alertTimestamp": "2026-09-27T19:44:10.071Z"
+  },
+  {
+    "match": "Rio Verde vs Bom Jesus - GO",
+    "league": "Goiano 2",
+    "tier": "AVISO",
+    "probability": 0.8970598140794613,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-28T02:24:54.924Z",
+    "alertTimestamp": "2026-09-27T20:03:53.112Z"
+  },
+  {
+    "match": "New York Cosmos vs Richmond Kickers",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8886812747340365,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      21,
+      32,
+      66,
+      95
+    ],
+    "timestamp": "2026-09-28T02:24:57.362Z",
+    "alertTimestamp": "2026-09-27T20:14:08.348Z"
+  },
+  {
+    "match": "CD San Martin vs Universitario Beni",
+    "league": "Copa Simón Bolívar - Grupo D",
+    "tier": "AVISO",
+    "probability": 0.6063278274897388,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-28T02:24:57.430Z",
+    "alertTimestamp": "2026-09-27T20:14:08.348Z"
+  },
+  {
+    "match": "Trinidad y Tobago vs República Dominicana",
+    "league": "CONCACAF Liga de Naciones - Liga A - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.519448968668044,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      42,
+      50
+    ],
+    "timestamp": "2026-09-28T02:54:44.187Z",
+    "alertTimestamp": "2026-09-28T02:24:54.019Z"
   }
 ]
