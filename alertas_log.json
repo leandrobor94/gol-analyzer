@@ -1,54 +1,5 @@
 [
   {
-    "match": "Floridsdorfer AC vs SC Bregenz",
-    "league": "Copa de Austria - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.5555063361322707,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      121,
-      122,
-      122,
-      123,
-      124,
-      124,
-      125,
-      126
-    ],
-    "timestamp": "2026-09-04T19:57:21.976Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Al Arabi Kuwait vs Sulaibikhat",
-    "league": "Premier Division",
-    "tier": "AVISO",
-    "probability": 0.91079773507661,
-    "minute": 24,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, xG estimado no fiable, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      14,
-      43,
-      56
-    ],
-    "timestamp": "2026-09-04T19:57:22.088Z",
-    "alertTimestamp": "2026-09-04T17:54:22.401Z"
-  },
-  {
     "match": "FC Cajamarca vs Cienciano",
     "league": "Liga 1 - Clausura",
     "tier": "AVISO",
@@ -21706,5 +21657,50 @@
     ],
     "timestamp": "2026-09-29T21:15:17.367Z",
     "alertTimestamp": "2026-09-29T19:15:36.287Z"
+  },
+  {
+    "match": "Islas Vírgenes (EEUU) vs Bahamas",
+    "league": "CONCACAF Liga de Naciones - Liga C - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.8837810864918693,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      48,
+      62,
+      68
+    ],
+    "timestamp": "2026-09-29T21:55:17.861Z",
+    "alertTimestamp": "2026-09-29T20:05:49.562Z"
+  },
+  {
+    "match": "AD Izalco vs CD Vendaval",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.5733347384878019,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en liga de ascenso, con alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-29T22:35:18.824Z",
+    "alertTimestamp": "2026-09-29T20:36:02.801Z"
   }
 ]
