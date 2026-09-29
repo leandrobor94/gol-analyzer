@@ -1,23 +1,5 @@
 [
   {
-    "match": "Viborg vs Lyngby",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5282820968698569,
-    "minute": 76,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      32,
-      62
-    ],
-    "timestamp": "2026-09-04T18:56:58.915Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
     "match": "Başakşehir vs Galatasaray",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21717,5 +21699,30 @@
     ],
     "timestamp": "2026-09-29T17:55:26.363Z",
     "alertTimestamp": "2026-09-28T22:38:44.373Z"
+  },
+  {
+    "match": "SpVgg Unterhaching vs TSV Buchbach",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.5590888818395674,
+    "minute": 79,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      24,
+      28,
+      55
+    ],
+    "timestamp": "2026-09-29T19:05:31.812Z",
+    "alertTimestamp": "2026-09-29T17:55:17.497Z"
   }
 ]
