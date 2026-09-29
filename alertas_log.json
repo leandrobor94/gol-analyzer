@@ -1,213 +1,5 @@
 [
   {
-    "match": "Başakşehir vs Galatasaray",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8819075380774427,
-    "minute": 24,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Galatasaray domina con 2 grandes chances y 4 tiros a puerta, a pesar del xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      66,
-      71,
-      76,
-      90
-    ],
-    "timestamp": "2026-09-04T19:05:16.987Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Lyon vs Auxerre",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.8917274729144229,
-    "minute": 25,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      28,
-      31,
-      42,
-      53
-    ],
-    "timestamp": "2026-09-04T19:05:17.098Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Vilzing vs 1860 München",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.8978985503362137,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      9,
-      55,
-      63,
-      94
-    ],
-    "timestamp": "2026-09-04T19:05:17.184Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Eintracht Frankfurt II vs FC Astoria Walldorf",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.8978985503362137,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      47
-    ],
-    "timestamp": "2026-09-04T19:05:17.274Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "SSV Ulm 1846 vs SGV Freiberg",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.9182983564798052,
-    "minute": 22,
-    "scoreAtAlert": "4-4",
-    "finalScore": "4-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador 0-2 y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      8,
-      41,
-      49,
-      52,
-      56,
-      63,
-      73
-    ],
-    "timestamp": "2026-09-04T19:05:17.371Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Al Swehly SC vs KVZ",
-    "league": "CAF Champions League - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5786808824742861,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T19:15:30.166Z",
-    "alertTimestamp": "2026-09-04T17:05:03.558Z"
-  },
-  {
-    "match": "Bonner SC vs Koln II",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.8876884237230073,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo. No hay razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      39,
-      76
-    ],
-    "timestamp": "2026-09-04T19:36:25.991Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
-    "match": "Aarau vs FC Rapperswil-Jona",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.5455909019693442,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      53,
-      56,
-      63,
-      87
-    ],
-    "timestamp": "2026-09-04T19:36:43.301Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
-    "match": "Al Ahli vs Shabab Hwarah",
-    "league": "Jordan Cup - 2nd preliminary round",
-    "tier": "AVISO",
-    "probability": 0.5331477423213403,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T19:36:43.395Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
     "match": "Marumo Gallants vs Polokwane City",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21724,5 +21516,201 @@
     ],
     "timestamp": "2026-09-29T19:05:31.812Z",
     "alertTimestamp": "2026-09-29T17:55:17.497Z"
+  },
+  {
+    "match": "Club Deportivo Metalúrgico vs Social Atlético Televisión",
+    "league": "Torneo Promocional Amateur - Reducido - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8978350017017142,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de semifinales, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-29T20:05:50.053Z",
+    "alertTimestamp": "2026-09-27T18:14:51.964Z"
+  },
+  {
+    "match": "Wimborne Town vs Yate Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-29T20:36:03.591Z",
+    "alertTimestamp": "2026-09-29T18:35:19.828Z"
+  },
+  {
+    "match": "Bishop's Stortford vs Bury Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8540656278589881,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 21. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-29T20:45:17.540Z",
+    "alertTimestamp": "2026-09-29T18:45:20.065Z"
+  },
+  {
+    "match": "Brightlingsea Regent vs AFC Sudbury",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.5620363979895194,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales, sin datos de xG reales para descartar. ",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      19
+    ],
+    "timestamp": "2026-09-29T20:45:18.138Z",
+    "alertTimestamp": "2026-09-29T18:45:20.065Z"
+  },
+  {
+    "match": "Cardiff Metropolitan vs Haverfordwest",
+    "league": "Cymru Premier",
+    "tier": "AVISO",
+    "probability": 0.5464955416254337,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      56
+    ],
+    "timestamp": "2026-09-29T20:45:18.528Z",
+    "alertTimestamp": "2026-09-29T18:45:20.065Z"
+  },
+  {
+    "match": "Bath City vs Malvern Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8997788873788306,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en 7ª división, marcador ajustado 0-1, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-29T20:45:18.888Z",
+    "alertTimestamp": "2026-09-29T18:55:23.499Z"
+  },
+  {
+    "match": "Racing Club Warwick vs Worcester",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.5067031455163721,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      48,
+      53,
+      87,
+      91
+    ],
+    "timestamp": "2026-09-29T20:45:19.391Z",
+    "alertTimestamp": "2026-09-29T18:55:23.499Z"
+  },
+  {
+    "match": "Havant & waterloovile vs Hanwell Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8569926905338076,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 20. Aunque xG es estimado, el modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      43,
+      74
+    ],
+    "timestamp": "2026-09-29T20:45:19.719Z",
+    "alertTimestamp": "2026-09-29T18:55:23.499Z"
+  },
+  {
+    "match": "Yeovil vs Worthing United",
+    "league": "Liga Nacional inglesa",
+    "tier": "AVISO",
+    "probability": 0.8546193924973153,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      28,
+      47
+    ],
+    "timestamp": "2026-09-29T20:45:19.821Z",
+    "alertTimestamp": "2026-09-29T18:55:23.499Z"
   }
 ]
