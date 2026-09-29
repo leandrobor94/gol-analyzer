@@ -1,80 +1,5 @@
 [
   {
-    "match": "Marumo Gallants vs Polokwane City",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5373900543864368,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      17,
-      25,
-      44
-    ],
-    "timestamp": "2026-09-04T19:36:43.606Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
-    "match": "Racing Club (F) vs Newell's Old Boys (F)",
-    "league": "Campeonato Femenino - Clausura",
-    "tier": "AVISO",
-    "probability": 0.864376992678976,
-    "minute": 22,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, con alta probabilidad de gol según el modelo, y xG estimado no es fiable.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      14,
-      20,
-      33,
-      72,
-      83
-    ],
-    "timestamp": "2026-09-04T19:36:46.549Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
-    "match": "Drochtersen / Assel vs Eimsbutteler TV",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8944981639336707,
-    "minute": 23,
-    "scoreAtAlert": "6-1",
-    "finalScore": "7-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      21,
-      33,
-      47,
-      50,
-      80,
-      85,
-      93
-    ],
-    "timestamp": "2026-09-04T19:47:20.913Z",
-    "alertTimestamp": "2026-09-04T17:34:54.446Z"
-  },
-  {
     "match": "Floridsdorfer AC vs SC Bregenz",
     "league": "Copa de Austria - 16avos de final",
     "tier": "AVISO",
@@ -21712,5 +21637,74 @@
     ],
     "timestamp": "2026-09-29T20:45:19.821Z",
     "alertTimestamp": "2026-09-29T18:55:23.499Z"
+  },
+  {
+    "match": "Canvey Island vs Newmarket Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8875307362153074,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 20. No hay razones claras para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      48,
+      80
+    ],
+    "timestamp": "2026-09-29T21:05:17.796Z",
+    "alertTimestamp": "2026-09-29T19:05:31.177Z"
+  },
+  {
+    "match": "Gabón vs Niger",
+    "league": "Copa de África de Naciones - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.521001002946681,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, el modelo da alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      77
+    ],
+    "timestamp": "2026-09-29T21:15:17.271Z",
+    "alertTimestamp": "2026-09-29T19:05:31.177Z"
+  },
+  {
+    "match": "Rio Ave Sub23 vs FC Penafiel U23",
+    "league": "Liga de Portugal Sub23 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8920209518427756,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32
+    ],
+    "timestamp": "2026-09-29T21:15:17.367Z",
+    "alertTimestamp": "2026-09-29T19:15:36.287Z"
   }
 ]
