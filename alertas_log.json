@@ -1,33 +1,5 @@
 [
   {
-    "match": "FC Cajamarca vs Cienciano",
-    "league": "Liga 1 - Clausura",
-    "tier": "AVISO",
-    "probability": 0.9012162981896062,
-    "minute": 25,
-    "scoreAtAlert": "2-5",
-    "finalScore": "2-5",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, chances claras y volumen de juego. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      19,
-      21,
-      36,
-      40,
-      74,
-      84
-    ],
-    "timestamp": "2026-09-04T19:57:22.202Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
     "match": "Cfa De Porto Ferreira U20 vs Grêmio Prudente U20",
     "league": "Paulista U20 - Primera Fase - Grupo 3",
     "tier": "AVISO",
@@ -21702,5 +21674,25 @@
     "goalMinutes": [],
     "timestamp": "2026-09-29T22:35:18.824Z",
     "alertTimestamp": "2026-09-29T20:36:02.801Z"
+  },
+  {
+    "match": "Once Lobos vs AD FORFUT",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.8887757444260006,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T17:51:41.975Z",
+    "alertTimestamp": "2026-09-29T21:05:17.046Z"
   }
 ]
