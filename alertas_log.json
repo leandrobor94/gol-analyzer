@@ -1,94 +1,5 @@
 [
   {
-    "match": "Cfa De Porto Ferreira U20 vs Grêmio Prudente U20",
-    "league": "Paulista U20 - Primera Fase - Grupo 3",
-    "tier": "AVISO",
-    "probability": 0.905493166128532,
-    "minute": 25,
-    "scoreAtAlert": "1-7",
-    "finalScore": "1-7",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Grêmio Prudente U20 puede aumentar ventaja.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      7,
-      12,
-      27,
-      46,
-      48,
-      56,
-      71,
-      77
-    ],
-    "timestamp": "2026-09-04T19:57:23.629Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Sparta Rotterdam vs PEC Zwolle",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.5354939780549963,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      21,
-      24,
-      69,
-      80
-    ],
-    "timestamp": "2026-09-04T19:57:29.307Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Sfera U20 vs Ituano/Sp Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 3",
-    "tier": "AVISO",
-    "probability": 0.8914667344957478,
-    "minute": 23,
-    "scoreAtAlert": "4-2",
-    "finalScore": "5-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T20:04:52.619Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Ec São Bernardo S20 vs Bandeirante SP/Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.9068175819265732,
-    "minute": 22,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de 16avos de final, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T20:04:52.715Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
     "match": "Velo Clube Youth vs Botafogo/Sp Youth",
     "league": "Paulista U20 - Primera Fase - Grupo 2",
     "tier": "AVISO",
@@ -21694,5 +21605,96 @@
     "goalMinutes": [],
     "timestamp": "2026-09-30T17:51:41.975Z",
     "alertTimestamp": "2026-09-29T21:05:17.046Z"
+  },
+  {
+    "match": "A.S Nordia Jerusalem vs Hapoel Hadera",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.6385456663759068,
+    "minute": 63,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Hapoel Hadera con ventaja mínima y remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T18:51:11.649Z",
+    "alertTimestamp": "2026-09-30T17:51:14.808Z"
+  },
+  {
+    "match": "Hapoel Nof Ha'galil vs SC Tzeirei Tamra",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.5103856572502898,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos tiros a puerta y xG estimado alto para el local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      43,
+      47,
+      59,
+      77
+    ],
+    "timestamp": "2026-09-30T19:01:38.613Z",
+    "alertTimestamp": "2026-09-30T17:51:14.808Z"
+  },
+  {
+    "match": "SC Wiedenbrück vs Sportfreunde Siegen",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.8984834342289012,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      33,
+      35,
+      57,
+      90
+    ],
+    "timestamp": "2026-09-30T19:32:01.385Z",
+    "alertTimestamp": "2026-09-30T17:51:14.808Z"
+  },
+  {
+    "match": "Hapoel Beit She'an Mesilot vs Hapoel Ironi Baka El Garbia",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.5124257106470057,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido apretado, marcador ajustado y tiempo restante. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T19:32:01.423Z",
+    "alertTimestamp": "2026-09-30T17:51:14.808Z"
   }
 ]
