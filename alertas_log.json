@@ -1,20 +1,5 @@
 [
   {
-    "match": "Shamrock vs Shelbourne",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.8895859745397762,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T01:45:21.983Z",
-    "alertTimestamp": "2026-09-04T19:05:16.356Z"
-  },
-  {
     "match": "Ipswich vs Liverpool",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21707,5 +21692,29 @@
     "goalMinutes": [],
     "timestamp": "2026-09-30T21:30:52.406Z",
     "alertTimestamp": "2026-09-30T19:41:40.507Z"
+  },
+  {
+    "match": "Yaracuyanos vs Puerto Cabello B",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      41,
+      52,
+      88
+    ],
+    "timestamp": "2026-09-30T22:01:22.437Z",
+    "alertTimestamp": "2026-09-30T20:10:52.918Z"
   }
 ]
