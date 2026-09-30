@@ -1,84 +1,5 @@
 [
   {
-    "match": "Velo Clube Youth vs Botafogo/Sp Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.8914667344957478,
-    "minute": 23,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      6,
-      37,
-      54,
-      76
-    ],
-    "timestamp": "2026-09-04T20:04:52.911Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Al Shabab Riyadh vs Al Hilal Riyadh",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.5276059041260599,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      53,
-      87
-    ],
-    "timestamp": "2026-09-04T20:04:53.539Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Al Ahli Jeddah vs Al Riyadh SC",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.5742289386852284,
-    "minute": 77,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      43,
-      47,
-      61,
-      87
-    ],
-    "timestamp": "2026-09-04T20:05:04.657Z",
-    "alertTimestamp": "2026-09-04T18:04:58.399Z"
-  },
-  {
-    "match": "Las Palmas vs CD Leganés",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.5208767374303634,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-04T20:24:58.793Z",
-    "alertTimestamp": "2026-09-04T18:34:56.302Z"
-  },
-  {
     "match": "Stuttgart vs 1. FC Köln",
     "league": "Bundesliga",
     "tier": "AVISO",
@@ -21696,5 +21617,91 @@
     "goalMinutes": [],
     "timestamp": "2026-09-30T19:32:01.423Z",
     "alertTimestamp": "2026-09-30T17:51:14.808Z"
+  },
+  {
+    "match": "12 de Octubre SD vs Olimpia De Itá",
+    "league": "APF Primera B",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T20:01:30.571Z",
+    "alertTimestamp": "2026-09-30T18:01:20.068Z"
+  },
+  {
+    "match": "FC Tzeiri Tira vs FC Jerusalem",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.841536553070748,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      71
+    ],
+    "timestamp": "2026-09-30T20:02:17.771Z",
+    "alertTimestamp": "2026-09-30T18:10:54.645Z"
+  },
+  {
+    "match": "Águila Reserva vs Inter Santa Tecla (Reserva)",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8555341760758451,
+    "minute": 21,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, sin datos de llegadas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T20:41:38.035Z",
+    "alertTimestamp": "2026-09-30T18:41:10.434Z"
+  },
+  {
+    "match": "Gosport Borough vs Bracknell Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.5148366824838254,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      55,
+      61
+    ],
+    "timestamp": "2026-09-30T20:41:55.391Z",
+    "alertTimestamp": "2026-09-30T18:51:09.583Z"
   }
 ]
