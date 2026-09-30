@@ -1,110 +1,5 @@
 [
   {
-    "match": "Stuttgart vs 1. FC Köln",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.8660874940397114,
-    "minute": 22,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      39,
-      60,
-      75,
-      81,
-      90
-    ],
-    "timestamp": "2026-09-04T20:36:07.875Z",
-    "alertTimestamp": "2026-09-04T18:34:56.302Z"
-  },
-  {
-    "match": "Genoa vs Como",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.5530256226811516,
-    "minute": 79,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      19,
-      25,
-      30,
-      40,
-      78
-    ],
-    "timestamp": "2026-09-04T20:45:20.570Z",
-    "alertTimestamp": "2026-09-04T18:56:34.154Z"
-  },
-  {
-    "match": "Treaty United vs Wexford Youths",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.8582320074225471,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      29
-    ],
-    "timestamp": "2026-09-04T20:45:21.495Z",
-    "alertTimestamp": "2026-09-04T18:56:34.154Z"
-  },
-  {
-    "match": "Real Betis vs Real Madrid",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8738067869880206,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      81
-    ],
-    "timestamp": "2026-09-05T01:45:21.760Z",
-    "alertTimestamp": "2026-09-04T19:05:16.356Z"
-  },
-  {
-    "match": "Fleury 91 (F) vs Lyon (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8820688338103612,
-    "minute": 23,
-    "scoreAtAlert": "1-7",
-    "finalScore": "1-7",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      9,
-      11,
-      28,
-      31,
-      41,
-      47,
-      71
-    ],
-    "timestamp": "2026-09-05T01:45:21.865Z",
-    "alertTimestamp": "2026-09-04T19:05:16.356Z"
-  },
-  {
     "match": "Shamrock vs Shelbourne",
     "league": "Liga de Irlanda",
     "tier": "AVISO",
@@ -21703,5 +21598,114 @@
     ],
     "timestamp": "2026-09-30T20:41:55.391Z",
     "alertTimestamp": "2026-09-30T18:51:09.583Z"
+  },
+  {
+    "match": "Defensor Sporting vs Plaza Colonia",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.8578426976151163,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      21
+    ],
+    "timestamp": "2026-09-30T21:01:27.181Z",
+    "alertTimestamp": "2026-09-30T19:11:15.941Z"
+  },
+  {
+    "match": "Cerro Largo vs Rentistas",
+    "league": "Copa Uruguay",
+    "tier": "AVISO",
+    "probability": 0.8670520481422458,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      80
+    ],
+    "timestamp": "2026-09-30T21:01:27.252Z",
+    "alertTimestamp": "2026-09-30T19:11:15.941Z"
+  },
+  {
+    "match": "Real Oruro vs Always Ready",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.8906281435525437,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      60,
+      62,
+      84
+    ],
+    "timestamp": "2026-09-30T21:11:04.637Z",
+    "alertTimestamp": "2026-09-30T19:11:15.941Z"
+  },
+  {
+    "match": "Coatepeque vs Deportivo Quiché",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8525908660788534,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T21:11:04.671Z",
+    "alertTimestamp": "2026-09-30T19:11:15.941Z"
+  },
+  {
+    "match": "Club Atletico Barinas vs Barquisimeto SC",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.5297089713985507,
+    "minute": 80,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-09-30T21:30:52.406Z",
+    "alertTimestamp": "2026-09-30T19:41:40.507Z"
   }
 ]
