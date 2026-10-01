@@ -1,48 +1,5 @@
 [
   {
-    "match": "Faetano vs Fiori",
-    "league": "Campionato - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8521674330814515,
-    "minute": 20,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      48,
-      71,
-      80
-    ],
-    "timestamp": "2026-09-05T01:45:23.521Z",
-    "alertTimestamp": "2026-09-04T19:27:07.439Z"
-  },
-  {
-    "match": "Juventud Antoniana vs Kimberley Mar Del Plata",
-    "league": "Federal A - Segunda Fase - Zona B",
-    "tier": "AVISO",
-    "probability": 0.5193505080500843,
-    "minute": 78,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      19,
-      40
-    ],
-    "timestamp": "2026-09-05T02:55:11.178Z",
-    "alertTimestamp": "2026-09-05T01:45:20.974Z"
-  },
-  {
     "match": "Marte Soyapango vs CD UES Pumas",
     "league": "Liga de Ascenso - Centro Occidente",
     "tier": "AVISO",
@@ -21729,6 +21686,46 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-01T19:06:41.644Z",
+    "alertTimestamp": "2026-10-01T18:16:36.239Z"
+  },
+  {
+    "match": "Barracas Central (Reserva) vs Gimnasia de Mendoza (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5604219245493003,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un jugador menos, y xG estimado no confiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T19:56:34.946Z",
+    "alertTimestamp": "2026-10-01T18:16:36.239Z"
+  },
+  {
+    "match": "Maccabi Ashkelon vs Ironi Ashkelon",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8819988725105582,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T20:06:38.046Z",
     "alertTimestamp": "2026-10-01T18:16:36.239Z"
   }
 ]
