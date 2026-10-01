@@ -1,29 +1,5 @@
 [
   {
-    "match": "Zenit vs CSKA Moscú",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.5745713649308904,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto, Zenit busca el empate con xG alto y remates al arco.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      53,
-      84,
-      98
-    ],
-    "timestamp": "2026-09-05T15:44:19.769Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
     "match": "Brighton vs Leeds United",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21733,5 +21709,25 @@
     ],
     "timestamp": "2026-10-01T20:46:35.429Z",
     "alertTimestamp": "2026-10-01T18:56:34.800Z"
+  },
+  {
+    "match": "Envigado FC vs Orsomarso",
+    "league": "Torneo BetPlay Dimayor - Finalización",
+    "tier": "AVISO",
+    "probability": 0.5206344468924079,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 77 con un jugador menos. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T22:26:33.288Z",
+    "alertTimestamp": "2026-10-01T20:36:34.127Z"
   }
 ]
