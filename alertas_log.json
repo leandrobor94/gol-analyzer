@@ -1,97 +1,5 @@
 [
   {
-    "match": "Ipswich vs Liverpool",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.9019043289224016,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      9
-    ],
-    "timestamp": "2026-09-05T01:45:22.083Z",
-    "alertTimestamp": "2026-09-04T19:05:16.356Z"
-  },
-  {
-    "match": "Real Oruro vs San Antonio",
-    "league": "División Profesional",
-    "tier": "AVISO",
-    "probability": 0.5337843557951105,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      87
-    ],
-    "timestamp": "2026-09-05T01:45:22.430Z",
-    "alertTimestamp": "2026-09-04T19:05:16.356Z"
-  },
-  {
-    "match": "PSG vs Monaco",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.8743346059092847,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      31,
-      58,
-      72
-    ],
-    "timestamp": "2026-09-05T01:45:22.874Z",
-    "alertTimestamp": "2026-09-04T19:15:28.261Z"
-  },
-  {
-    "match": "Tre Penne vs Ss Cosmos",
-    "league": "Campionato - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.6397012016607256,
-    "minute": 62,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      44,
-      89
-    ],
-    "timestamp": "2026-09-05T01:45:23.075Z",
-    "alertTimestamp": "2026-09-04T19:27:07.439Z"
-  },
-  {
-    "match": "FC Porto vs Moreirense",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.6432911248151988,
-    "minute": 62,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      37,
-      58
-    ],
-    "timestamp": "2026-09-05T01:45:23.293Z",
-    "alertTimestamp": "2026-09-04T19:27:07.439Z"
-  },
-  {
     "match": "Faetano vs Fiori",
     "league": "Campionato - Temporada Regular",
     "tier": "AVISO",
@@ -21716,5 +21624,111 @@
     ],
     "timestamp": "2026-09-30T22:01:22.437Z",
     "alertTimestamp": "2026-09-30T20:10:52.918Z"
+  },
+  {
+    "match": "Union San Felipe vs San Luis de Quillota",
+    "league": "Liga de Ascenso",
+    "tier": "AVISO",
+    "probability": 0.895340891512198,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      89
+    ],
+    "timestamp": "2026-10-01T18:16:36.884Z",
+    "alertTimestamp": "2026-09-30T21:00:59.965Z"
+  },
+  {
+    "match": "INCA-Aruba (Reserva) vs Municipal Limeño Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8869201314970339,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reservas, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T18:16:37.866Z",
+    "alertTimestamp": "2026-09-30T21:41:15.495Z"
+  },
+  {
+    "match": "Central Córdoba (Reserva) vs Newell's Old Boys (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8920209518427756,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, xG estimado no es real, sin datos de grandes ocasiones o tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T18:16:38.176Z",
+    "alertTimestamp": "2026-09-30T22:01:02.233Z"
+  },
+  {
+    "match": "Hungría Sub-21 vs Lituania Sub-21",
+    "league": "Clasificatorio Euro Sub-21",
+    "tier": "AVISO",
+    "probability": 0.5718303767147473,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      30,
+      75
+    ],
+    "timestamp": "2026-10-01T18:56:35.541Z",
+    "alertTimestamp": "2026-10-01T18:16:36.239Z"
+  },
+  {
+    "match": "Hapoel Kiryat Ono vs Beitar Ramat Gan",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5606662790083634,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 1-1 en el minuto 79 con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T19:06:41.644Z",
+    "alertTimestamp": "2026-10-01T18:16:36.239Z"
   }
 ]
