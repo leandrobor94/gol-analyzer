@@ -1,138 +1,5 @@
 [
   {
-    "match": "Marte Soyapango vs CD UES Pumas",
-    "league": "Liga de Ascenso - Centro Occidente",
-    "tier": "AVISO",
-    "probability": 0.561962715149356,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      51,
-      66,
-      95
-    ],
-    "timestamp": "2026-09-05T14:58:41.582Z",
-    "alertTimestamp": "2026-09-05T01:45:20.974Z"
-  },
-  {
-    "match": "Durango vs Tlaxcala",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.521660985053446,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      95
-    ],
-    "timestamp": "2026-09-05T14:58:41.924Z",
-    "alertTimestamp": "2026-09-05T01:45:20.974Z"
-  },
-  {
-    "match": "Atlético Choloma vs Olancho",
-    "league": "Liga Nacional - Apertura - Grupo Norte",
-    "tier": "AVISO",
-    "probability": 0.585632478937018,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con alto volumen de remates a puerta y xG estimado significativo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T14:58:42.086Z",
-    "alertTimestamp": "2026-09-05T01:45:20.974Z"
-  },
-  {
-    "match": "SC Paderborn 07 vs Friburgo",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.5776659653370482,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Friburgo busca asegurar, Paderborn necesita un gol. xG estimado no es fiable.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      26
-    ],
-    "timestamp": "2026-09-05T15:25:05.695Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Werder Bremen vs RB Leipzig",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.5998476552220522,
-    "minute": 77,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Bundesliga de alto scoring, aunque el marcador es 2-0, el xG estimado es alto.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      4,
-      68,
-      80,
-      95
-    ],
-    "timestamp": "2026-09-05T15:35:34.207Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Stal Rzeszow vs Polonia Warsawa",
-    "league": "I Liga",
-    "tier": "AVISO",
-    "probability": 0.5820717036939275,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido apretado, xG estimado no es fiable, y el modelo da alta probabilidad.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11,
-      39,
-      59
-    ],
-    "timestamp": "2026-09-05T15:35:34.256Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
     "match": "Zenit vs CSKA Moscú",
     "league": "Premier Liga",
     "tier": "AVISO",
@@ -21727,5 +21594,144 @@
     "goalMinutes": [],
     "timestamp": "2026-10-01T20:06:38.046Z",
     "alertTimestamp": "2026-10-01T18:16:36.239Z"
+  },
+  {
+    "match": "Vélez Sarsfield (Reserva) vs Argentinos Juniors (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8675921397098797,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, xG estimado, marcador 0-0. No hay razón concreta para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-01T20:36:44.971Z",
+    "alertTimestamp": "2026-10-01T18:46:35.072Z"
+  },
+  {
+    "match": "Alemania vs Serbia",
+    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.594830907690146,
+    "minute": 64,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Alemania domina con 6 grandes ocasiones y 17 toques en el área, a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      61
+    ],
+    "timestamp": "2026-10-01T20:36:45.302Z",
+    "alertTimestamp": "2026-10-01T18:56:34.800Z"
+  },
+  {
+    "match": "Bastia vs US Orléans",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8920779613605022,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Early in the game, score 0-0, and model shows high probability of a goal.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      66,
+      87
+    ],
+    "timestamp": "2026-10-01T20:46:34.632Z",
+    "alertTimestamp": "2026-10-01T18:46:35.072Z"
+  },
+  {
+    "match": "Irlanda del Norte Sub-21 vs Georgia Sub21",
+    "league": "Clasificatorio Euro Sub-21",
+    "tier": "AVISO",
+    "probability": 0.8818603966768137,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      54,
+      72
+    ],
+    "timestamp": "2026-10-01T20:46:34.766Z",
+    "alertTimestamp": "2026-10-01T18:46:35.072Z"
+  },
+  {
+    "match": "Grecia vs Países Bajos",
+    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.841535938164657,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      47,
+      59,
+      89
+    ],
+    "timestamp": "2026-10-01T20:46:34.927Z",
+    "alertTimestamp": "2026-10-01T18:56:34.800Z"
+  },
+  {
+    "match": "Irlanda vs Austria",
+    "league": "Liga de las Naciones - UEFA - Liga B - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.840285477217473,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, pero xG estimado y muchos minutos por jugar. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      46,
+      71,
+      77
+    ],
+    "timestamp": "2026-10-01T20:46:35.429Z",
+    "alertTimestamp": "2026-10-01T18:56:34.800Z"
   }
 ]
