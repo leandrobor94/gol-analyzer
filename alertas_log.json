@@ -1,74 +1,5 @@
 [
   {
-    "match": "West Brom vs Watford FC",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.6103308330524416,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido apretado, muchas ocasiones claras para ambos equipos. El xG es estimado, pero las big chances son reales.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-09-05T16:06:19.360Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "N.E.C. Nijmegen vs Feyenoord",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.8860618433949067,
-    "minute": 24,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en Eredivisie, 0-0, minuto 24. xG estimado no es fiable, pero hay 1 gran ocasión y 1 tiro a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      52,
-      55,
-      61,
-      64
-    ],
-    "timestamp": "2026-09-05T16:27:43.888Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Rot-Weiss Essen vs Viktoria Köln",
-    "league": "3. Liga - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8853432236928942,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      27
-    ],
-    "timestamp": "2026-09-05T16:27:43.933Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
     "match": "FC Dordrecht vs Jong AZ Alkmaar",
     "league": "Eerste Divisie",
     "tier": "AVISO",
@@ -21726,5 +21657,81 @@
     "goalMinutes": [],
     "timestamp": "2026-10-02T19:33:15.104Z",
     "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "Mönchengladbach II vs Bochum II",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.9014964019197959,
+    "minute": 20,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      17,
+      23,
+      28,
+      46,
+      48
+    ],
+    "timestamp": "2026-10-02T19:42:47.525Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "Bonner SC vs Westfalia Rhynern",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.9014964019197959,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      38,
+      74
+    ],
+    "timestamp": "2026-10-02T19:52:30.779Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "CD Eldense vs Real Oviedo",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.5503344353664555,
+    "minute": 76,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      56,
+      68,
+      91,
+      95
+    ],
+    "timestamp": "2026-10-02T20:32:29.977Z",
+    "alertTimestamp": "2026-10-02T18:32:35.092Z"
   }
 ]
