@@ -1,28 +1,5 @@
 [
   {
-    "match": "Brighton vs Leeds United",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6441859821099499,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, muchas ocasiones claras para ambos, y xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      15,
-      71
-    ],
-    "timestamp": "2026-09-05T15:57:10.293Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
     "match": "Millwall vs Bolton",
     "league": "Championship",
     "tier": "AVISO",
@@ -21729,5 +21706,25 @@
     "goalMinutes": [],
     "timestamp": "2026-10-01T22:26:33.288Z",
     "alertTimestamp": "2026-10-01T20:36:34.127Z"
+  },
+  {
+    "match": "Portugal U18 vs Romania U18",
+    "league": "Amistoso Internacional Sub18",
+    "tier": "AVISO",
+    "probability": 0.5297089713985507,
+    "minute": 80,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-02T18:12:30.010Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
   }
 ]
