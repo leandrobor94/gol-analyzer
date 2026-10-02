@@ -1,93 +1,5 @@
 [
   {
-    "match": "Millwall vs Bolton",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5919348492343558,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      38,
-      83,
-      88,
-      92
-    ],
-    "timestamp": "2026-09-05T15:58:06.340Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Sharjah SC vs Dubai United",
-    "league": "UAE Pro League",
-    "tier": "AVISO",
-    "probability": 0.7549290891761299,
-    "minute": 62,
-    "scoreAtAlert": "3-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado 3-3 en el minuto 62 con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      15,
-      33,
-      35,
-      49,
-      50,
-      88
-    ],
-    "timestamp": "2026-09-05T15:59:17.039Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Luton vs Leyton Orient",
-    "league": "League One",
-    "tier": "AVISO",
-    "probability": 0.6040852995537529,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones de gol y xG alto para el equipo local.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      25,
-      34
-    ],
-    "timestamp": "2026-09-05T15:59:48.376Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
-    "match": "Manchester City vs Coventry",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.5902591481403204,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      26
-    ],
-    "timestamp": "2026-09-05T16:06:16.632Z",
-    "alertTimestamp": "2026-09-05T14:58:38.798Z"
-  },
-  {
     "match": "West Brom vs Watford FC",
     "league": "Championship",
     "tier": "AVISO",
@@ -21725,6 +21637,94 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-02T18:12:30.010Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "Naestved vs Nykobing",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.6009143850982607,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, Nykobing ganando por la mínima. Alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      61,
+      88
+    ],
+    "timestamp": "2026-10-02T18:52:35.219Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "SpVgg Unterhaching vs 1. FC Schweinfurt 05",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.6237873422194947,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      67,
+      89
+    ],
+    "timestamp": "2026-10-02T19:03:04.641Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "SV Sandhausen vs 1. FC Kaiserslautern II",
+    "league": "Regionalliga - Sudwest",
+    "tier": "AVISO",
+    "probability": 0.6123810684736923,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      79
+    ],
+    "timestamp": "2026-10-02T19:03:04.694Z",
+    "alertTimestamp": "2026-10-02T17:42:41.475Z"
+  },
+  {
+    "match": "VfB Lübeck vs Eimsbutteler TV",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9014964019197959,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-02T19:33:15.104Z",
     "alertTimestamp": "2026-10-02T17:42:41.475Z"
   }
 ]
