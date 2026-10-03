@@ -1,24 +1,5 @@
 [
   {
-    "match": "Brann vs Lillestrom",
-    "league": "Eliteserien",
-    "tier": "AVISO",
-    "probability": 0.9022325563589638,
-    "minute": 22,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      22,
-      89
-    ],
-    "timestamp": "2026-09-05T18:06:46.880Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
     "match": "FC Rostov vs Fakel Voronezh",
     "league": "Premier Liga",
     "tier": "AVISO",
@@ -21745,5 +21726,25 @@
     ],
     "timestamp": "2026-10-03T18:21:23.713Z",
     "alertTimestamp": "2026-10-03T16:21:44.032Z"
+  },
+  {
+    "match": "Mineros de Fresnillo vs Saltillo Soccer",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8679468236382721,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo. xG estimado no es un factor decisivo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T19:11:43.965Z",
+    "alertTimestamp": "2026-10-03T17:11:01.289Z"
   }
 ]
