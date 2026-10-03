@@ -1,71 +1,5 @@
 [
   {
-    "match": "Kozarmisleny vs Mezokovesd",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5838468632588328,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T16:55:19.628Z",
-    "alertTimestamp": "2026-09-05T15:56:42.775Z"
-  },
-  {
-    "match": "Deportivo Alavés B vs Coruxo FC",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8845610947391666,
-    "minute": 23,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      43,
-      67
-    ],
-    "timestamp": "2026-09-05T17:05:38.957Z",
-    "alertTimestamp": "2026-09-05T15:05:27.179Z"
-  },
-  {
-    "match": "Otrant-Olympic vs Buducnost Podgorica",
-    "league": "First League",
-    "tier": "AVISO",
-    "probability": 0.887327765317862,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8,
-      90
-    ],
-    "timestamp": "2026-09-05T17:05:39.926Z",
-    "alertTimestamp": "2026-09-05T15:05:27.179Z"
-  },
-  {
     "match": "Al Fujairah Club vs Emirates Club",
     "league": "Division 1",
     "tier": "AVISO",
@@ -21729,5 +21663,67 @@
     "goalMinutes": [],
     "timestamp": "2026-10-02T21:22:29.519Z",
     "alertTimestamp": "2026-10-02T19:22:31.460Z"
+  },
+  {
+    "match": "Huracanes Izcalli vs Atletico Hidalgo",
+    "league": "Premier B - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.9001317651821944,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T16:01:28.098Z",
+    "alertTimestamp": "2026-10-02T21:42:29.870Z"
+  },
+  {
+    "match": "Puente Alto vs Quintero Unido",
+    "league": "Tercera División A",
+    "tier": "AVISO",
+    "probability": 0.8907953389445272,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "4-6",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T16:01:28.689Z",
+    "alertTimestamp": "2026-10-02T22:22:30.866Z"
+  },
+  {
+    "match": "Atlético Astorga vs SD Amorebieta",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.5360756816302654,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      67
+    ],
+    "timestamp": "2026-10-03T16:51:09.491Z",
+    "alertTimestamp": "2026-10-03T16:01:10.024Z"
   }
 ]
