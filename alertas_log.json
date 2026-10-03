@@ -1,158 +1,5 @@
 [
   {
-    "match": "FC Rostov vs Fakel Voronezh",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.8920154089202885,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      56,
-      59,
-      64,
-      89
-    ],
-    "timestamp": "2026-09-05T18:06:46.922Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
-    "match": "FK Sochi vs FC Pari Nizhny Novgorod",
-    "league": "Russian First League",
-    "tier": "AVISO",
-    "probability": 0.8815884424843031,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      77
-    ],
-    "timestamp": "2026-09-05T18:06:46.957Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
-    "match": "JKT Tanzania vs Pamba Jiji FC",
-    "league": "Ligi Kuu Bara",
-    "tier": "AVISO",
-    "probability": 0.9107096146376199,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Aunque el xG es estimado y el marcador es 2-0, el modelo aún da un 91% de probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T18:06:47.034Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
-    "match": "FC Vaduz vs FC Lausanne-Sport",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8770759175535016,
-    "minute": 23,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, xG estimado alto para local, y muchas llegadas a puerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      19,
-      23,
-      53,
-      60
-    ],
-    "timestamp": "2026-09-05T18:07:10.720Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
-    "match": "Artis Brno vs Viktoria Plzen",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.5427563081842699,
-    "minute": 77,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      30,
-      43,
-      44
-    ],
-    "timestamp": "2026-09-05T18:07:15.310Z",
-    "alertTimestamp": "2026-09-05T16:05:39.136Z"
-  },
-  {
-    "match": "Correcaminos \"B\" vs Mineros de Fresnillo",
-    "league": "Premier A - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.5666860508582262,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T18:07:15.604Z",
-    "alertTimestamp": "2026-09-05T16:16:03.705Z"
-  },
-  {
-    "match": "The New Saints vs Barry Town",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.8617217990751088,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido temprano, marcador 0-0, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      88
-    ],
-    "timestamp": "2026-09-05T18:17:19.495Z",
-    "alertTimestamp": "2026-09-05T16:27:42.588Z"
-  },
-  {
-    "match": "Schalke 04 vs Bayern Munich",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.8871977099792817,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T18:27:15.858Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
     "match": "Hull City vs Aston Villa",
     "league": "Premier League",
     "tier": "AVISO",
@@ -21746,5 +21593,185 @@
     "goalMinutes": [],
     "timestamp": "2026-10-03T19:11:43.965Z",
     "alertTimestamp": "2026-10-03T17:11:01.289Z"
+  },
+  {
+    "match": "Águila Reserva vs Cacahuatique Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8615572868132345,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, sin datos de ocasiones claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T20:01:12.838Z",
+    "alertTimestamp": "2026-10-03T18:10:53.178Z"
+  },
+  {
+    "match": "Mouloudia Oujda vs Olympique Dcheira",
+    "league": "Botola 2",
+    "tier": "AVISO",
+    "probability": 0.8429294011365923,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, no hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T20:01:23.440Z",
+    "alertTimestamp": "2026-10-03T18:10:53.178Z"
+  },
+  {
+    "match": "Temperley vs Gimnasia de Jujuy",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.890151621171759,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, modelo da alta probabilidad de gol a pesar de xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      21,
+      27,
+      45
+    ],
+    "timestamp": "2026-10-03T20:10:18.513Z",
+    "alertTimestamp": "2026-10-03T18:10:53.178Z"
+  },
+  {
+    "match": "Real San Joaquín vs Lota Schwager",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.6415106716331308,
+    "minute": 63,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Lota Schwager con ventaja mínima y remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-03T20:10:18.546Z",
+    "alertTimestamp": "2026-10-03T18:10:53.178Z"
+  },
+  {
+    "match": "Canadá vs Perú",
+    "league": "Amistoso Internacional",
+    "tier": "AVISO",
+    "probability": 0.8673035886807997,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad de gol. No hay razones para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      35
+    ],
+    "timestamp": "2026-10-03T20:10:18.622Z",
+    "alertTimestamp": "2026-10-03T18:21:23.557Z"
+  },
+  {
+    "match": "Catania vs Crotone",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8970687951975753,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      69,
+      94
+    ],
+    "timestamp": "2026-10-03T20:30:35.787Z",
+    "alertTimestamp": "2026-10-03T18:41:06.496Z"
+  },
+  {
+    "match": "Folgore Caratese vs Desenzano",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8604791467003687,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido temprano, marcador ajustado, sin datos de xG reales para descartar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      29,
+      79
+    ],
+    "timestamp": "2026-10-03T20:30:35.829Z",
+    "alertTimestamp": "2026-10-03T18:41:06.496Z"
+  },
+  {
+    "match": "España vs Republica Checa",
+    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.5323878885607601,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, España domina y busca asegurar la victoria. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      35,
+      69,
+      89
+    ],
+    "timestamp": "2026-10-03T20:41:27.784Z",
+    "alertTimestamp": "2026-10-03T18:50:36.093Z"
   }
 ]
