@@ -1,27 +1,5 @@
 [
   {
-    "match": "Al Fujairah Club vs Emirates Club",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.898292794933842,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8
-    ],
-    "timestamp": "2026-09-05T17:16:20.788Z",
-    "alertTimestamp": "2026-09-05T15:05:27.179Z"
-  },
-  {
     "match": "Palm City vs Al Hamriyah",
     "league": "Division 1",
     "tier": "AVISO",
@@ -21724,6 +21702,28 @@
       67
     ],
     "timestamp": "2026-10-03T16:51:09.491Z",
+    "alertTimestamp": "2026-10-03T16:01:10.024Z"
+  },
+  {
+    "match": "Eintracht Frankfurt (F) vs Bayern Munich (F)",
+    "league": "Frauen Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5095635334246331,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y tiempo suficiente para cambios.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18
+    ],
+    "timestamp": "2026-10-03T17:50:58.086Z",
     "alertTimestamp": "2026-10-03T16:01:10.024Z"
   }
 ]
