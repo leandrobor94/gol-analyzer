@@ -1,118 +1,5 @@
 [
   {
-    "match": "Hull City vs Aston Villa",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8782725899648011,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T18:27:15.910Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
-    "match": "Keflavik vs Valur Reykjavik",
-    "league": "Besta-deild karla",
-    "tier": "AVISO",
-    "probability": 0.5524396907996643,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36,
-      52,
-      69
-    ],
-    "timestamp": "2026-09-05T18:27:23.780Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
-    "match": "Rayo Vallecano vs Racing de Santander",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.9115464587881835,
-    "minute": 25,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      17,
-      28,
-      43,
-      47
-    ],
-    "timestamp": "2026-09-05T18:36:26.720Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
-    "match": "Ceuta vs Celta de Vigo B",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.5235209850731063,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      43,
-      93
-    ],
-    "timestamp": "2026-09-05T18:36:26.773Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
-    "match": "Vllaznia vs Partizani",
-    "league": "Abissnet Superiore",
-    "tier": "AVISO",
-    "probability": 0.5422582498201353,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      21,
-      48,
-      57,
-      98
-    ],
-    "timestamp": "2026-09-05T18:36:37.248Z",
-    "alertTimestamp": "2026-09-05T16:36:17.343Z"
-  },
-  {
-    "match": "Keciorengucu vs Sariyer",
-    "league": "1. Lig",
-    "tier": "AVISO",
-    "probability": 0.5543648567916403,
-    "minute": 76,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      38,
-      63,
-      84
-    ],
-    "timestamp": "2026-09-05T18:55:51.374Z",
-    "alertTimestamp": "2026-09-05T17:05:27.614Z"
-  },
-  {
     "match": "Omonia Aradippou vs Krasava Ypsonas",
     "league": "Cyta Championship",
     "tier": "AVISO",
@@ -21773,5 +21660,149 @@
     ],
     "timestamp": "2026-10-03T20:41:27.784Z",
     "alertTimestamp": "2026-10-03T18:50:36.093Z"
+  },
+  {
+    "match": "Amiens vs Villefranche",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.5068209002256728,
+    "minute": 79,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido apretado, xG estimado no confiable, y ambos equipos con tiros a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      71,
+      81,
+      87
+    ],
+    "timestamp": "2026-10-04T01:41:44.449Z",
+    "alertTimestamp": "2026-10-03T18:50:36.093Z"
+  },
+  {
+    "match": "Atlético Goianiense vs América Mineiro",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.8810589779457113,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, xG estimado no fiable, pero Goianiense domina con 2 grandes chances.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      53
+    ],
+    "timestamp": "2026-10-04T01:41:45.087Z",
+    "alertTimestamp": "2026-10-03T19:11:43.528Z"
+  },
+  {
+    "match": "Boise vs Greenville Triumph Sc",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.9001317651821944,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11
+    ],
+    "timestamp": "2026-10-04T01:41:45.287Z",
+    "alertTimestamp": "2026-10-03T19:11:43.528Z"
+  },
+  {
+    "match": "Always Ready vs Real Tomayapo",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.8797945083113848,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      30,
+      40,
+      85,
+      88
+    ],
+    "timestamp": "2026-10-04T01:41:45.743Z",
+    "alertTimestamp": "2026-10-03T19:11:43.528Z"
+  },
+  {
+    "match": "Cuiabá vs Ponte Preta",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.8502841370275137,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, modelo da 85% de probabilidad hasta el final. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      26,
+      73
+    ],
+    "timestamp": "2026-10-04T01:41:48.818Z",
+    "alertTimestamp": "2026-10-03T20:10:18.373Z"
+  },
+  {
+    "match": "Forge FC vs HFX Wanderers",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.8831540655288794,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y un equipo con clara superioridad en llegadas.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      78,
+      81,
+      90,
+      94,
+      103
+    ],
+    "timestamp": "2026-10-04T01:41:50.200Z",
+    "alertTimestamp": "2026-10-03T20:21:42.065Z"
   }
 ]
