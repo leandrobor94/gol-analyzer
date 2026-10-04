@@ -1,146 +1,5 @@
 [
   {
-    "match": "Stabaek vs Moss",
-    "league": "OBOS-ligaen",
-    "tier": "AVISO",
-    "probability": 0.5626597579373712,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      20,
-      33,
-      46,
-      82
-    ],
-    "timestamp": "2026-09-06T00:35:17.686Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
-    "match": "Ajax vs PSV Eindhoven",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.8737917732694873,
-    "minute": 23,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      5,
-      23,
-      46,
-      92
-    ],
-    "timestamp": "2026-09-06T00:35:18.431Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
-    "match": "Jezero vs FK Arsenal Tivat",
-    "league": "First League",
-    "tier": "AVISO",
-    "probability": 0.5609843085282876,
-    "minute": 76,
-    "scoreAtAlert": "4-2",
-    "finalScore": "5-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T00:35:19.135Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
-    "match": "Paksi vs Debreceni VSC",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.8730190243345864,
-    "minute": 23,
-    "scoreAtAlert": "1-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      22,
-      24,
-      39,
-      71,
-      81
-    ],
-    "timestamp": "2026-09-06T00:35:19.195Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
-    "match": "AEK Atenas vs Aris Salonica",
-    "league": "Superliga Griega",
-    "tier": "AVISO",
-    "probability": 0.6197402483769902,
-    "minute": 64,
-    "scoreAtAlert": "3-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      62,
-      67,
-      75,
-      90
-    ],
-    "timestamp": "2026-09-06T00:35:19.277Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
-    "match": "Ec São Bernardo vs Comercial-SP",
-    "league": "Copa Paulista - Segunda Fase",
-    "tier": "AVISO",
-    "probability": 0.5715635356979085,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      68,
-      96,
-      124
-    ],
-    "timestamp": "2026-09-06T00:35:19.910Z",
-    "alertTimestamp": "2026-09-05T18:26:50.223Z"
-  },
-  {
-    "match": "Marsaxlokk vs Mosta FC",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8814431210817124,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido igualado, xG estimado no es fiable, y no hay razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      11
-    ],
-    "timestamp": "2026-09-06T00:35:20.132Z",
-    "alertTimestamp": "2026-09-05T18:36:06.712Z"
-  },
-  {
     "match": "Foz do Iguaçu vs Azuriz",
     "league": "Copa Paraná",
     "tier": "AVISO",
@@ -21799,5 +21658,163 @@
     ],
     "timestamp": "2026-10-04T19:11:25.877Z",
     "alertTimestamp": "2026-10-04T17:12:26.078Z"
+  },
+  {
+    "match": "Huracán vs Aldosivi",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5114570523776225,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      36
+    ],
+    "timestamp": "2026-10-04T19:41:52.980Z",
+    "alertTimestamp": "2026-10-04T17:51:25.092Z"
+  },
+  {
+    "match": "MS Netanya vs Hapoel Daliat El Karmel",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5076393923710173,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 79, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-04T19:51:46.511Z",
+    "alertTimestamp": "2026-10-04T18:01:42.282Z"
+  },
+  {
+    "match": "Colo Colo (F) vs Deportes Iquique (F)",
+    "league": "Campeonato Femenino - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8600428407422942,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de cuartos de final, marcador 0-0, sin xG real. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23,
+      26,
+      53,
+      56
+    ],
+    "timestamp": "2026-10-04T20:02:13.821Z",
+    "alertTimestamp": "2026-10-04T18:11:25.392Z"
+  },
+  {
+    "match": "Defensores de Glew vs Uribelarrea FC",
+    "league": "Torneo Promocional Amateur - Reducido - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de semifinales, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26
+    ],
+    "timestamp": "2026-10-04T20:12:21.081Z",
+    "alertTimestamp": "2026-10-04T18:11:25.392Z"
+  },
+  {
+    "match": "CA Lugano vs Argentino Rosario",
+    "league": "Primera C Metropolitana - Zona A",
+    "tier": "AVISO",
+    "probability": 0.8519706643259614,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      55,
+      62,
+      79,
+      85
+    ],
+    "timestamp": "2026-10-04T20:12:21.113Z",
+    "alertTimestamp": "2026-10-04T18:11:25.392Z"
+  },
+  {
+    "match": "O'Higgins vs Deportes Concepción",
+    "league": "Copa Chile - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8957571886540798,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76,
+      86
+    ],
+    "timestamp": "2026-10-04T20:32:12.869Z",
+    "alertTimestamp": "2026-10-04T18:31:35.766Z"
+  },
+  {
+    "match": "Audace Cerignola vs Altamura",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8474419669900197,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-04T20:32:12.931Z",
+    "alertTimestamp": "2026-10-04T18:31:35.766Z"
   }
 ]
