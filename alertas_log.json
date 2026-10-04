@@ -1,85 +1,5 @@
 [
   {
-    "match": "Foz do Iguaçu vs Azuriz",
-    "league": "Copa Paraná",
-    "tier": "AVISO",
-    "probability": 0.8879365926587673,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y tiempo restante. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T00:35:20.438Z",
-    "alertTimestamp": "2026-09-05T18:46:59.134Z"
-  },
-  {
-    "match": "Niza vs Le Mans",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.9014349451339798,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      13,
-      44
-    ],
-    "timestamp": "2026-09-06T00:35:21.064Z",
-    "alertTimestamp": "2026-09-05T18:55:40.196Z"
-  },
-  {
-    "match": "Villarreal CF vs RC Deportivo",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8916240294730101,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      19,
-      43,
-      76,
-      79,
-      88
-    ],
-    "timestamp": "2026-09-06T00:35:21.460Z",
-    "alertTimestamp": "2026-09-05T19:05:24.055Z"
-  },
-  {
-    "match": "Sportivo Ameliano (F) vs Sportivo Trinidense (F)",
-    "league": "Campeonato Anual FEM",
-    "tier": "AVISO",
-    "probability": 0.8879365926587673,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      47,
-      50,
-      76,
-      80
-    ],
-    "timestamp": "2026-09-06T00:35:21.491Z",
-    "alertTimestamp": "2026-09-05T19:05:24.055Z"
-  },
-  {
     "match": "Bragantino vs Bahia",
     "league": "Brasileirão",
     "tier": "AVISO",
@@ -21816,5 +21736,96 @@
     "goalMinutes": [],
     "timestamp": "2026-10-04T20:32:12.931Z",
     "alertTimestamp": "2026-10-04T18:31:35.766Z"
+  },
+  {
+    "match": "Alvarado vs Defensores Belgrano (VR)",
+    "league": "Federal A - Tercera fase",
+    "tier": "AVISO",
+    "probability": 0.8650393985878725,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      71,
+      94
+    ],
+    "timestamp": "2026-10-04T20:42:37.370Z",
+    "alertTimestamp": "2026-10-04T18:41:35.322Z"
+  },
+  {
+    "match": "Bolívar SC vs Monagas SC B",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8971581816504012,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-04T21:01:42.086Z",
+    "alertTimestamp": "2026-10-04T19:01:35.444Z"
+  },
+  {
+    "match": "GV San Jose vs Blooming",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.6912932558155488,
+    "minute": 60,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      22,
+      36,
+      50,
+      74
+    ],
+    "timestamp": "2026-10-04T21:12:28.818Z",
+    "alertTimestamp": "2026-10-04T19:11:25.740Z"
+  },
+  {
+    "match": "Universidad Católica (F) vs Unión Española (F)",
+    "league": "Campeonato Femenino - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de cuartos de final, marcador 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15
+    ],
+    "timestamp": "2026-10-04T21:21:28.169Z",
+    "alertTimestamp": "2026-10-04T19:11:25.740Z"
   }
 ]
