@@ -1,29 +1,5 @@
 [
   {
-    "match": "Genk U23 vs Sporting Hasselt",
-    "league": "Challenger Pro League",
-    "tier": "AVISO",
-    "probability": 0.8930312126674317,
-    "minute": 23,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      19,
-      25,
-      47
-    ],
-    "timestamp": "2026-09-06T00:35:17.243Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
     "match": "Stabaek vs Moss",
     "league": "OBOS-ligaen",
     "tier": "AVISO",
@@ -21800,5 +21776,28 @@
     ],
     "timestamp": "2026-10-04T18:31:35.897Z",
     "alertTimestamp": "2026-10-04T16:42:32.883Z"
+  },
+  {
+    "match": "NJ/NY Gotham FC vs Angel City",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.8645035167355921,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con pocas llegadas pero una gran chance y xG estimado a favor del visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      66,
+      91
+    ],
+    "timestamp": "2026-10-04T19:11:25.877Z",
+    "alertTimestamp": "2026-10-04T17:12:26.078Z"
   }
 ]
