@@ -1,24 +1,5 @@
 [
   {
-    "match": "Omonia Aradippou vs Krasava Ypsonas",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.5636167446694826,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      71,
-      89
-    ],
-    "timestamp": "2026-09-05T19:05:42.493Z",
-    "alertTimestamp": "2026-09-05T17:05:27.614Z"
-  },
-  {
     "match": "Alverca vs SC Braga",
     "league": "Primeira Liga",
     "tier": "AVISO",
@@ -21804,5 +21785,24 @@
     ],
     "timestamp": "2026-10-04T01:41:50.200Z",
     "alertTimestamp": "2026-10-03T20:21:42.065Z"
+  },
+  {
+    "match": "Real Cartagena vs Boca Juniors Cali",
+    "league": "Torneo BetPlay Dimayor - Finalización",
+    "tier": "AVISO",
+    "probability": 0.7124732013795073,
+    "minute": 60,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      14,
+      19,
+      61
+    ],
+    "timestamp": "2026-10-04T02:51:53.104Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
   }
 ]
