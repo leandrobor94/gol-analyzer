@@ -1,28 +1,5 @@
 [
   {
-    "match": "Spartak Subotica vs Vršac",
-    "league": "Prva Liga",
-    "tier": "AVISO",
-    "probability": 0.8866758287880688,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, con 2 tiros a puerta del local. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      38,
-      55
-    ],
-    "timestamp": "2026-09-06T00:35:17.178Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
     "match": "Genk U23 vs Sporting Hasselt",
     "league": "Challenger Pro League",
     "tier": "AVISO",
@@ -21800,6 +21777,28 @@
       75
     ],
     "timestamp": "2026-10-04T17:31:26.409Z",
+    "alertTimestamp": "2026-10-04T16:42:32.883Z"
+  },
+  {
+    "match": "Atlético Central vs Linares Deportivo",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.8979911946793978,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62
+    ],
+    "timestamp": "2026-10-04T18:31:35.897Z",
     "alertTimestamp": "2026-10-04T16:42:32.883Z"
   }
 ]
