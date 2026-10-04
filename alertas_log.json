@@ -1,195 +1,5 @@
 [
   {
-    "match": "Alverca vs SC Braga",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.5421503431908192,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      27,
-      50,
-      57
-    ],
-    "timestamp": "2026-09-05T19:05:42.744Z",
-    "alertTimestamp": "2026-09-05T17:05:27.614Z"
-  },
-  {
-    "match": "Tiszakecske vs Szentlorinc",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8889953233869807,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T19:05:53.018Z",
-    "alertTimestamp": "2026-09-05T17:27:43.883Z"
-  },
-  {
-    "match": "Merreikh Al Sudan vs Power Dynamos",
-    "league": "CAF Champions League - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.8878453967118209,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      39
-    ],
-    "timestamp": "2026-09-05T19:05:53.081Z",
-    "alertTimestamp": "2026-09-05T17:27:43.883Z"
-  },
-  {
-    "match": "Maccabi Haifa Sub19 vs Hapoel Hadera Sub19",
-    "league": "Youth League",
-    "tier": "AVISO",
-    "probability": 0.8811827275750889,
-    "minute": 24,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no confiable, sin datos de ocasiones claras.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      37,
-      65,
-      73,
-      89
-    ],
-    "timestamp": "2026-09-05T19:16:06.835Z",
-    "alertTimestamp": "2026-09-05T17:27:43.883Z"
-  },
-  {
-    "match": "Maccabi Tel Aviv Sub19 vs Hapoel Tel Aviv Sub19",
-    "league": "Youth League",
-    "tier": "AVISO",
-    "probability": 0.5817893777351955,
-    "minute": 76,
-    "scoreAtAlert": "5-2",
-    "finalScore": "6-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      18,
-      21,
-      38,
-      56,
-      74,
-      82,
-      88
-    ],
-    "timestamp": "2026-09-05T19:16:16.898Z",
-    "alertTimestamp": "2026-09-05T17:27:43.883Z"
-  },
-  {
-    "match": "Union Deportivo Provincial vs Juventud de Bernal",
-    "league": "Torneo Promocional Amateur",
-    "tier": "AVISO",
-    "probability": 0.8811827275750889,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T19:35:27.140Z",
-    "alertTimestamp": "2026-09-05T17:27:43.883Z"
-  },
-  {
-    "match": "Hapoel Umm El Fahem vs Hapoel Nof Ha'galil",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.5565158890004678,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-05T19:35:27.247Z",
-    "alertTimestamp": "2026-09-05T17:37:57.055Z"
-  },
-  {
-    "match": "Al Hussein vs Al Jazeera",
-    "league": "Pro League",
-    "tier": "AVISO",
-    "probability": 0.5274787026165425,
-    "minute": 77,
-    "scoreAtAlert": "0-5",
-    "finalScore": "0-5",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      3,
-      40,
-      50,
-      58,
-      69
-    ],
-    "timestamp": "2026-09-05T19:35:27.283Z",
-    "alertTimestamp": "2026-09-05T17:37:57.055Z"
-  },
-  {
-    "match": "Dinamo Bucuresti vs FCSB",
-    "league": "Liga1",
-    "tier": "AVISO",
-    "probability": 0.5369151641553926,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36,
-      78,
-      84
-    ],
-    "timestamp": "2026-09-05T19:35:27.325Z",
-    "alertTimestamp": "2026-09-05T17:37:57.055Z"
-  },
-  {
-    "match": "Lens (W) vs PSG (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8901068971769481,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin razones claras para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T00:35:17.108Z",
-    "alertTimestamp": "2026-09-05T18:06:23.258Z"
-  },
-  {
     "match": "Spartak Subotica vs Vršac",
     "league": "Prva Liga",
     "tier": "AVISO",
@@ -21804,5 +21614,192 @@
     ],
     "timestamp": "2026-10-04T02:51:53.104Z",
     "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "CD Plaza Amador vs CD Universitario",
+    "league": "Liga Panameña - Apertura - Conferencia Oeste",
+    "tier": "AVISO",
+    "probability": 0.8924270312758289,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      45,
+      61,
+      64
+    ],
+    "timestamp": "2026-10-04T16:42:33.004Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "Grecia vs Santa Cruz PFA",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8574449023811401,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      15
+    ],
+    "timestamp": "2026-10-04T16:42:33.072Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "Nueva Santa Rosa CDF vs Deportivo Sayaxche",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5356140965711915,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-04T16:42:33.125Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "Tijuana (F) vs Atlante (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5345854780376706,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23
+    ],
+    "timestamp": "2026-10-04T16:42:33.160Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "Portland Thorns vs Boston Legacy FC",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.5139184365087516,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      35,
+      39,
+      59,
+      88,
+      91,
+      93
+    ],
+    "timestamp": "2026-10-04T16:42:50.675Z",
+    "alertTimestamp": "2026-10-04T01:41:25.893Z"
+  },
+  {
+    "match": "Estados Unidos vs México",
+    "league": "Amistoso Internacional",
+    "tier": "AVISO",
+    "probability": 0.8576139581016311,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      28,
+      62,
+      84
+    ],
+    "timestamp": "2026-10-04T16:42:50.751Z",
+    "alertTimestamp": "2026-10-04T02:12:19.396Z"
+  },
+  {
+    "match": "Orange County SC vs Monterey Bay",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8801594198924516,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      5,
+      61,
+      65
+    ],
+    "timestamp": "2026-10-04T16:42:50.805Z",
+    "alertTimestamp": "2026-10-04T02:12:19.396Z"
+  },
+  {
+    "match": "Las Vegas Lights vs San Antonio FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.8862492643897427,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      48
+    ],
+    "timestamp": "2026-10-04T16:43:08.021Z",
+    "alertTimestamp": "2026-10-04T02:41:46.654Z"
+  },
+  {
+    "match": "ASEC Mimosas vs Stella Adjame",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.607706085683279,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-04T17:31:26.199Z",
+    "alertTimestamp": "2026-10-04T16:42:32.883Z"
+  },
+  {
+    "match": "Reggiana vs Spezia Calcio",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5134472026147958,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-10-04T17:31:26.409Z",
+    "alertTimestamp": "2026-10-04T16:42:32.883Z"
   }
 ]
