@@ -1,246 +1,5 @@
 [
   {
-    "match": "Bragantino vs Bahia",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8875923488558404,
-    "minute": 24,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      14,
-      34,
-      38,
-      46,
-      50
-    ],
-    "timestamp": "2026-09-06T00:35:21.548Z",
-    "alertTimestamp": "2026-09-05T19:05:24.055Z"
-  },
-  {
-    "match": "Novorizontino vs Avai",
-    "league": "Brasileirão - Série B",
-    "tier": "AVISO",
-    "probability": 0.8828867028702986,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      9,
-      24,
-      39,
-      52
-    ],
-    "timestamp": "2026-09-06T00:35:21.907Z",
-    "alertTimestamp": "2026-09-05T19:05:24.055Z"
-  },
-  {
-    "match": "Chattanooga Red Wolves vs Greenville Triumph Sc",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5864287325531047,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      31,
-      47,
-      85,
-      92
-    ],
-    "timestamp": "2026-09-06T01:05:29.526Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Forge FC vs Inter Toronto FC",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.5597323874539236,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      70
-    ],
-    "timestamp": "2026-09-06T01:05:29.570Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Independiente Del Valle vs Macara",
-    "league": "Liga Pro",
-    "tier": "AVISO",
-    "probability": 0.5401936461468234,
-    "minute": 78,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      10,
-      15,
-      75
-    ],
-    "timestamp": "2026-09-06T01:05:29.697Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Cúcuta Deportivo vs Deportivo Pasto",
-    "league": "Liga BetPlay Dimayor - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5503366228344162,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      14,
-      16,
-      31,
-      84
-    ],
-    "timestamp": "2026-09-06T01:16:05.006Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Indy Eleven vs Birmingham Legion FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5229917775715818,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      40,
-      66,
-      98
-    ],
-    "timestamp": "2026-09-06T01:16:05.069Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Oriente Petrolero vs Always Ready",
-    "league": "División Profesional",
-    "tier": "AVISO",
-    "probability": 0.5251777102530885,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      18,
-      49,
-      66
-    ],
-    "timestamp": "2026-09-06T01:35:15.658Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Orlando City SC vs San Diego FC",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5290845507208887,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      28
-    ],
-    "timestamp": "2026-09-06T01:45:31.796Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Toronto FC vs Chicago Fire",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5456328355267913,
-    "minute": 78,
-    "scoreAtAlert": "3-4",
-    "finalScore": "4-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      13,
-      27,
-      38,
-      49,
-      54,
-      58,
-      63,
-      92
-    ],
-    "timestamp": "2026-09-06T01:45:31.846Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Columbus Crew vs Colorado Rapids",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5246225763109619,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      22,
-      81,
-      94
-    ],
-    "timestamp": "2026-09-06T01:45:31.896Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Philadelphia Union vs CF Montréal",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5453191453104995,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      57,
-      75
-    ],
-    "timestamp": "2026-09-06T01:45:31.946Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
     "match": "Atlético Nacional vs América de Cali",
     "league": "Partido Amistoso",
     "tier": "AVISO",
@@ -21827,5 +21586,274 @@
     ],
     "timestamp": "2026-10-04T21:21:28.169Z",
     "alertTimestamp": "2026-10-04T19:11:25.740Z"
+  },
+  {
+    "match": "Atletico Ávila FC vs Dynamo Puerto FC",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin datos de xG reales ni ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      93
+    ],
+    "timestamp": "2026-10-05T02:22:23.915Z",
+    "alertTimestamp": "2026-10-04T19:31:53.144Z"
+  },
+  {
+    "match": "Puerto Cabello B vs Deportivo Lara",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8971581816504012,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      61
+    ],
+    "timestamp": "2026-10-05T02:22:24.045Z",
+    "alertTimestamp": "2026-10-04T19:31:53.144Z"
+  },
+  {
+    "match": "Central Norte vs Racing de Córdoba",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8924032169676073,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      33,
+      91
+    ],
+    "timestamp": "2026-10-05T02:22:24.180Z",
+    "alertTimestamp": "2026-10-04T19:31:53.144Z"
+  },
+  {
+    "match": "Mineros De Guayana vs Deportivo Miranda FC",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8997788873788306,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      33,
+      36,
+      38,
+      54
+    ],
+    "timestamp": "2026-10-05T02:22:24.455Z",
+    "alertTimestamp": "2026-10-04T19:51:46.405Z"
+  },
+  {
+    "match": "Ureña SC vs Club Atletico Barinas",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8982378065214265,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-05T02:22:24.602Z",
+    "alertTimestamp": "2026-10-04T19:51:46.405Z"
+  },
+  {
+    "match": "Supra du Québec vs Pacific",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.8501114614192569,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, pero hay remates a puerta y presencia en el área.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      17,
+      50,
+      57,
+      78,
+      93
+    ],
+    "timestamp": "2026-10-05T02:22:25.569Z",
+    "alertTimestamp": "2026-10-04T20:12:20.874Z"
+  },
+  {
+    "match": "San Martín San Juan vs Almagro",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8470095610215552,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      47,
+      50,
+      67
+    ],
+    "timestamp": "2026-10-05T02:22:25.711Z",
+    "alertTimestamp": "2026-10-04T20:12:20.874Z"
+  },
+  {
+    "match": "General Velásquez vs Atlético Colina",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.8643457058613739,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es fiable, pero hay un remate a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-05T02:22:26.122Z",
+    "alertTimestamp": "2026-10-04T20:12:20.874Z"
+  },
+  {
+    "match": "Treasure Beach Fc vs Humble Lions",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8641633081960962,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol, pero xG estimado y sin grandes ocasiones. Aún hay tiempo y el marcador es ajustado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-05T02:22:26.729Z",
+    "alertTimestamp": "2026-10-04T20:42:20.172Z"
+  },
+  {
+    "match": "Futuro vs Comunal Cabrero",
+    "league": "Tercera División A",
+    "tier": "AVISO",
+    "probability": 0.8951741357825376,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-05T02:22:27.224Z",
+    "alertTimestamp": "2026-10-04T21:12:28.648Z"
+  },
+  {
+    "match": "Platense Municipal vs Municipal Limeño",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.895090707206952,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      43,
+      64,
+      66
+    ],
+    "timestamp": "2026-10-05T02:22:27.508Z",
+    "alertTimestamp": "2026-10-04T21:12:28.648Z"
+  },
+  {
+    "match": "Matiguás vs Real Madriz",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8555341760758451,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-05T02:22:27.651Z",
+    "alertTimestamp": "2026-10-04T21:12:28.648Z"
   }
 ]
