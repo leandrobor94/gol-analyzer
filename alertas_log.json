@@ -1,40 +1,5 @@
 [
   {
-    "match": "Atlético Nacional vs América de Cali",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.9079026600506342,
-    "minute": 27,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      7,
-      8,
-      19
-    ],
-    "timestamp": "2026-09-06T01:56:26.080Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Familia FC vs Unión Coclé II",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.5498996824266537,
-    "minute": 79,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T01:56:26.118Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
     "match": "La Tribu de Cd. Juárez vs ACF Zapotlanejo",
     "league": "Premier A - Grupo A",
     "tier": "AVISO",
@@ -21855,5 +21820,52 @@
     "goalMinutes": [],
     "timestamp": "2026-10-05T02:22:27.651Z",
     "alertTimestamp": "2026-10-04T21:12:28.648Z"
+  },
+  {
+    "match": "Pachuca (F) vs Toluca (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.519372948183939,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido apretado con un gol de diferencia y 15 minutos restantes. Un equipo tiene una tarjeta roja.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      46,
+      53
+    ],
+    "timestamp": "2026-10-05T23:07:05.892Z",
+    "alertTimestamp": "2026-10-05T02:22:23.089Z"
+  },
+  {
+    "match": "Martinica vs El Salvador",
+    "league": "CONCACAF Liga de Naciones - Liga A - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5161294007945395,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      56
+    ],
+    "timestamp": "2026-10-05T23:56:52.222Z",
+    "alertTimestamp": "2026-10-05T23:07:04.501Z"
   }
 ]
