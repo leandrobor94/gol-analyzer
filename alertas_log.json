@@ -1,20 +1,5 @@
 [
   {
-    "match": "La Tribu de Cd. Juárez vs ACF Zapotlanejo",
-    "league": "Premier A - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.6303937013572168,
-    "minute": 68,
-    "scoreAtAlert": "3-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T02:05:56.183Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
     "match": "Union Omaha vs Charlotte Independence",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -21867,5 +21852,27 @@
     ],
     "timestamp": "2026-10-05T23:56:52.222Z",
     "alertTimestamp": "2026-10-05T23:07:04.501Z"
+  },
+  {
+    "match": "Guatemala vs Surinam",
+    "league": "CONCACAF Liga de Naciones - Liga A - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5238334974324808,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido 0-0, minuto 77, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      96
+    ],
+    "timestamp": "2026-10-06T02:06:52.818Z",
+    "alertTimestamp": "2026-10-06T00:06:52.661Z"
   }
 ]
