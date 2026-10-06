@@ -1,194 +1,5 @@
 [
   {
-    "match": "Piratas FC vs Correcaminos",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5260966377633238,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      23,
-      58,
-      90,
-      94,
-      98
-    ],
-    "timestamp": "2026-09-06T15:17:36.613Z",
-    "alertTimestamp": "2026-09-06T01:05:25.309Z"
-  },
-  {
-    "match": "Tijuana (F) vs Pachuca (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.6638178660834322,
-    "minute": 62,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      20,
-      28,
-      44
-    ],
-    "timestamp": "2026-09-06T15:17:37.129Z",
-    "alertTimestamp": "2026-09-06T01:16:04.659Z"
-  },
-  {
-    "match": "Metapán vs CD Inca-Aruba",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5263627857599662,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T15:17:37.254Z",
-    "alertTimestamp": "2026-09-06T01:16:04.659Z"
-  },
-  {
-    "match": "Junior FC vs Jaguares de Córdoba",
-    "league": "Liga BetPlay Dimayor - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8892065026393966,
-    "minute": 25,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      9,
-      62,
-      77,
-      80,
-      90
-    ],
-    "timestamp": "2026-09-06T15:17:48.422Z",
-    "alertTimestamp": "2026-09-06T01:35:05.179Z"
-  },
-  {
-    "match": "Real Salt Lake vs Los Angeles FC",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.8850854910592173,
-    "minute": 25,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      14,
-      18,
-      38,
-      75
-    ],
-    "timestamp": "2026-09-06T15:17:58.775Z",
-    "alertTimestamp": "2026-09-06T01:45:31.167Z"
-  },
-  {
-    "match": "Sacachispas Chiquimula vs Deportivo Sayaxche",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8914667344957478,
-    "minute": 23,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12
-    ],
-    "timestamp": "2026-09-06T15:17:59.022Z",
-    "alertTimestamp": "2026-09-06T02:05:44.771Z"
-  },
-  {
-    "match": "Portland Timbers vs Minnesota United",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.8970041316463959,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "5-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      20,
-      26,
-      32,
-      37,
-      50,
-      55,
-      71,
-      92
-    ],
-    "timestamp": "2026-09-06T15:18:32.180Z",
-    "alertTimestamp": "2026-09-06T02:45:21.170Z"
-  },
-  {
-    "match": "St. Johnstone vs Hibernian",
-    "league": "Liga Escocesa",
-    "tier": "AVISO",
-    "probability": 0.5652337208729629,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      17,
-      29,
-      41
-    ],
-    "timestamp": "2026-09-06T16:00:17.785Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
-    "match": "IA Akranes vs KR Reykjavik",
-    "league": "Besta-deild karla",
-    "tier": "AVISO",
-    "probability": 0.5245949055394842,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      24,
-      53,
-      62,
-      83
-    ],
-    "timestamp": "2026-09-06T16:01:04.452Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
     "match": "Coritiba vs Mirassol",
     "league": "Brasileirão",
     "tier": "AVISO",
@@ -21894,5 +21705,215 @@
     ],
     "timestamp": "2026-10-06T20:00:28.920Z",
     "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Accrington vs Salford City",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.608553728658276,
+    "minute": 62,
+    "scoreAtAlert": "0-1",
+    "finalScore": "5-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      51,
+      98,
+      121,
+      121,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125,
+      125
+    ],
+    "timestamp": "2026-10-06T20:09:12.714Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Unión Minas vs Unión Comercio",
+    "league": "Liga 2 - Ascenso - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.5190627467124379,
+    "minute": 77,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:29:11.680Z",
+    "alertTimestamp": "2026-10-06T18:30:05.437Z"
+  },
+  {
+    "match": "Stockton Town vs Bury",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8996248158895983,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:39:11.560Z",
+    "alertTimestamp": "2026-10-06T18:49:49.537Z"
+  },
+  {
+    "match": "Chatham Town vs Leatherhead",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8900824774940265,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 24. No hay razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:39:12.137Z",
+    "alertTimestamp": "2026-10-06T19:01:13.965Z"
+  },
+  {
+    "match": "Warrington Town vs Workington",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8939788263831584,
+    "minute": 23,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      43,
+      45,
+      75
+    ],
+    "timestamp": "2026-10-06T20:49:10.531Z",
+    "alertTimestamp": "2026-10-06T18:49:49.537Z"
+  },
+  {
+    "match": "Cheshunt FC vs Aveley",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8676776174455029,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª división, 0-0, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      36,
+      58,
+      60
+    ],
+    "timestamp": "2026-10-06T20:49:10.591Z",
+    "alertTimestamp": "2026-10-06T18:49:49.537Z"
+  },
+  {
+    "match": "Quorn vs Ashton United",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.5405563460995588,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en 7ª división, con 17 minutos restantes y alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      27,
+      64,
+      73,
+      78
+    ],
+    "timestamp": "2026-10-06T20:49:10.658Z",
+    "alertTimestamp": "2026-10-06T18:49:49.537Z"
+  },
+  {
+    "match": "Albania vs San Marino",
+    "league": "Liga de las Naciones - UEFA - Liga C - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.5117504127545743,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      66,
+      93
+    ],
+    "timestamp": "2026-10-06T20:49:10.899Z",
+    "alertTimestamp": "2026-10-06T18:49:49.537Z"
+  },
+  {
+    "match": "Maldon & Tiptree vs Welling Utd",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8900824774940265,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, 0-0 en el minuto 24. No hay razones claras para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:49:11.088Z",
+    "alertTimestamp": "2026-10-06T19:01:13.965Z"
   }
 ]
