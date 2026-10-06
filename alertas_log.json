@@ -1,54 +1,5 @@
 [
   {
-    "match": "Union Omaha vs Charlotte Independence",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.561962715149356,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      44
-    ],
-    "timestamp": "2026-09-06T02:05:56.217Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Fluminense vs Vasco Da Gama",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.5649718144939068,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      61
-    ],
-    "timestamp": "2026-09-06T02:05:56.299Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
-    "match": "Academia Quintana vs Metropolitan Fa",
-    "league": "LPR Pro - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5566278030798244,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T02:25:39.687Z",
-    "alertTimestamp": "2026-09-06T00:35:16.683Z"
-  },
-  {
     "match": "Corpus Christi FC vs Forward Madison",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -21874,5 +21825,67 @@
     ],
     "timestamp": "2026-10-06T02:06:52.818Z",
     "alertTimestamp": "2026-10-06T00:06:52.661Z"
+  },
+  {
+    "match": "Arnett Gardens vs Portmore United",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.511343403233205,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T18:09:38.351Z",
+    "alertTimestamp": "2026-10-06T01:06:56.945Z"
+  },
+  {
+    "match": "Celaya FC vs Jaguares De Chiapas",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8478674250344171,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T18:09:38.404Z",
+    "alertTimestamp": "2026-10-06T02:06:52.075Z"
+  },
+  {
+    "match": "CA Fenix vs CA Atlas",
+    "league": "Primera C Metropolitana - Zona B",
+    "tier": "AVISO",
+    "probability": 0.5166857609438834,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-10-06T19:01:14.148Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
   }
 ]
