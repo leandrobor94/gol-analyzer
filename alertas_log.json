@@ -1,108 +1,5 @@
 [
   {
-    "match": "Corpus Christi FC vs Forward Madison",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5864287325531047,
-    "minute": 78,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      61,
-      67
-    ],
-    "timestamp": "2026-09-06T02:35:18.657Z",
-    "alertTimestamp": "2026-09-06T00:45:22.031Z"
-  },
-  {
-    "match": "FC Dallas vs Sporting KC",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.5459559270691272,
-    "minute": 78,
-    "scoreAtAlert": "3-2",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      19,
-      27,
-      30,
-      45,
-      78,
-      97
-    ],
-    "timestamp": "2026-09-06T02:55:19.326Z",
-    "alertTimestamp": "2026-09-06T00:45:22.031Z"
-  },
-  {
-    "match": "Orange County SC vs Sacramento Republic",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.5960549572132494,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      61,
-      83
-    ],
-    "timestamp": "2026-09-06T15:17:35.566Z",
-    "alertTimestamp": "2026-09-06T01:05:25.309Z"
-  },
-  {
-    "match": "Atlético Morelia vs Alebrijes",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5272151185540437,
-    "minute": 78,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      22,
-      27,
-      51,
-      57,
-      78
-    ],
-    "timestamp": "2026-09-06T15:17:36.144Z",
-    "alertTimestamp": "2026-09-06T01:05:25.309Z"
-  },
-  {
-    "match": "U.A.N.L. - Tigres vs Necaxa",
-    "league": "Liga MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5288028978399187,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      40
-    ],
-    "timestamp": "2026-09-06T15:17:36.275Z",
-    "alertTimestamp": "2026-09-06T01:05:25.309Z"
-  },
-  {
     "match": "Piratas FC vs Correcaminos",
     "league": "Liga de Expansión MX - Apertura",
     "tier": "AVISO",
@@ -21886,6 +21783,116 @@
       76
     ],
     "timestamp": "2026-10-06T19:01:14.148Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Unión Santa Fé (Reserva) vs Banfield (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8662220266993834,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con marcador ajustado y xG estimado, no hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T19:49:30.852Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Defensa y Justicia (Reserva) vs Quilmes AC (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8457964330124363,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, xG estimado no confiable. Marcador 0-0, minutos restantes altos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:00:11.340Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Huracán (Reserva) vs Atlético de Rafaela (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8560043169115046,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva, xG estimado no confiable, pero el modelo da alta probabilidad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-06T20:00:11.467Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Cambridge United vs Northampton",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8430181088573373,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      51,
+      62
+    ],
+    "timestamp": "2026-10-06T20:00:28.616Z",
+    "alertTimestamp": "2026-10-06T18:09:38.231Z"
+  },
+  {
+    "match": "Peterborough vs Ipswich U21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.8711937843673689,
+    "minute": 20,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles, y la liga tiene un alto promedio de goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      28,
+      31,
+      35,
+      51
+    ],
+    "timestamp": "2026-10-06T20:00:28.920Z",
     "alertTimestamp": "2026-10-06T18:09:38.231Z"
   }
 ]
