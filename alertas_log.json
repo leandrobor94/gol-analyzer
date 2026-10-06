@@ -1,49 +1,5 @@
 [
   {
-    "match": "Coritiba vs Mirassol",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.581178691524715,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones claras y xG alto (aunque estimado).",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      61,
-      64,
-      84
-    ],
-    "timestamp": "2026-09-06T16:08:07.849Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
-    "match": "Nesebar vs Rilski Sportist",
-    "league": "Vtora Liga",
-    "tier": "AVISO",
-    "probability": 0.5863226217098358,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T16:17:50.583Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
     "match": "FC Sion vs FC Thun",
     "league": "Superliga",
     "tier": "AVISO",
@@ -21915,5 +21871,54 @@
     "goalMinutes": [],
     "timestamp": "2026-10-06T20:49:11.088Z",
     "alertTimestamp": "2026-10-06T19:01:13.965Z"
+  },
+  {
+    "match": "Real Frontera vs Atletico El Vigia",
+    "league": "Copa Venezuela",
+    "tier": "AVISO",
+    "probability": 0.504604212429211,
+    "minute": 81,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no fiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      89
+    ],
+    "timestamp": "2026-10-06T21:29:30.721Z",
+    "alertTimestamp": "2026-10-06T19:40:03.458Z"
+  },
+  {
+    "match": "Benjamín Aceval vs Independiente FBC",
+    "league": "Division Intermedia",
+    "tier": "AVISO",
+    "probability": 0.8419315304450082,
+    "minute": 20,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      21,
+      46,
+      58,
+      74
+    ],
+    "timestamp": "2026-10-06T21:59:11.182Z",
+    "alertTimestamp": "2026-10-06T20:09:12.449Z"
   }
 ]
