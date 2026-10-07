@@ -1,15 +1,5 @@
 {
   "alertedMatches": {
-    "4850477_AVISO": {
-      "timestamp": 1791400968954,
-      "minute": 22,
-      "tier": "AVISO"
-    },
-    "4863239_AVISO": {
-      "timestamp": 1791400968954,
-      "minute": 61,
-      "tier": "AVISO"
-    },
     "4864643_AVISO": {
       "timestamp": 1791401551069,
       "minute": 76,
@@ -34,13 +24,23 @@
       "timestamp": 1791408150452,
       "minute": 22,
       "tier": "AVISO"
+    },
+    "4812223_AVISO": {
+      "timestamp": 1791409950815,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4743165_AVISO": {
+      "timestamp": 1791411750319,
+      "minute": 22,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 11371,
-    "verified": 11356,
-    "withGoalTimeline": 7849,
+    "total": 11383,
+    "verified": 11360,
+    "withGoalTimeline": 7852,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-07T21:32:40.056Z"
+  "lastUpdated": "2026-10-07T22:32:40.544Z"
 }
