@@ -1,53 +1,5 @@
 [
   {
-    "match": "FC Sion vs FC Thun",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5754213698761522,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones claras y un expulsado. Alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      10,
-      21,
-      53,
-      71,
-      94
-    ],
-    "timestamp": "2026-09-06T16:26:52.449Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
-    "match": "Sonnenhof Großaspach vs Hoffenheim II",
-    "league": "3. Liga - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5329668372676564,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      22
-    ],
-    "timestamp": "2026-09-06T16:26:54.504Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
     "match": "Real Sireti vs Zimbru Chisinau",
     "league": "Super Liga",
     "tier": "AVISO",
@@ -21920,5 +21872,47 @@
     ],
     "timestamp": "2026-10-06T21:59:11.182Z",
     "alertTimestamp": "2026-10-06T20:09:12.449Z"
+  },
+  {
+    "match": "Ferro Carril Oeste (Reserva) vs Independiente (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5193288398486352,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-07T19:52:31.534Z",
+    "alertTimestamp": "2026-10-07T18:42:30.171Z"
+  },
+  {
+    "match": "Ceará/Ce Youth vs Ferroviário Youth",
+    "league": "Copa de Brasil Sub20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6132441708936118,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en octavos de final, con alto xG estimado y remates a puerta del local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-10-07T20:02:30.320Z",
+    "alertTimestamp": "2026-10-07T18:42:30.171Z"
   }
 ]
