@@ -1,48 +1,5 @@
 [
   {
-    "match": "Kun Khalifat vs Barau",
-    "league": "NPFL - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8883300632936233,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T17:06:43.795Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
-    "match": "Enugu Rangers vs AS Sobemap",
-    "league": "CAF Champions League - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.8811827275750889,
-    "minute": 24,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0 en minuto 24, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      32,
-      46
-    ],
-    "timestamp": "2026-09-06T17:06:46.855Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
     "match": "Forte Virtus FC vs Dubba Al Husun",
     "league": "Division 1",
     "tier": "AVISO",
@@ -21922,5 +21879,47 @@
     ],
     "timestamp": "2026-10-07T21:52:30.952Z",
     "alertTimestamp": "2026-10-07T20:02:30.015Z"
+  },
+  {
+    "match": "AFF Guatemala vs Nueva Santa Rosa CDF",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8624932239525918,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-07T23:02:30.256Z",
+    "alertTimestamp": "2026-10-07T21:12:29.134Z"
+  },
+  {
+    "match": "Independiente Petrolero vs GV San Jose",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.8829975886575919,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con remates a puerta y sin tarjetas rojas.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32
+    ],
+    "timestamp": "2026-10-07T23:22:34.433Z",
+    "alertTimestamp": "2026-10-07T21:32:39.623Z"
   }
 ]

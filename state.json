@@ -1,25 +1,5 @@
 {
   "alertedMatches": {
-    "4864643_AVISO": {
-      "timestamp": 1791401551069,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4743168_AVISO": {
-      "timestamp": 1791402751335,
-      "minute": 22,
-      "tier": "AVISO"
-    },
-    "4743170_AVISO": {
-      "timestamp": 1791402751335,
-      "minute": 22,
-      "tier": "AVISO"
-    },
-    "4868411_AVISO": {
-      "timestamp": 1791404550996,
-      "minute": 22,
-      "tier": "AVISO"
-    },
     "4850479_AVISO": {
       "timestamp": 1791408150452,
       "minute": 22,
@@ -34,13 +14,63 @@
       "timestamp": 1791411750319,
       "minute": 22,
       "tier": "AVISO"
+    },
+    "4632660_AVISO": {
+      "timestamp": 1791413571213,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4632662_AVISO": {
+      "timestamp": 1791413571213,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4632657_AVISO": {
+      "timestamp": 1791413571213,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4669119_AVISO": {
+      "timestamp": 1791413571213,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4669909_AVISO": {
+      "timestamp": 1791413571213,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4712207_AVISO": {
+      "timestamp": 1791415354100,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4710661_AVISO": {
+      "timestamp": 1791415354100,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4632658_AVISO": {
+      "timestamp": 1791415354100,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4865389_AVISO": {
+      "timestamp": 1791415354100,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4664872_AVISO": {
+      "timestamp": 1791415354100,
+      "minute": 22,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 11383,
-    "verified": 11360,
-    "withGoalTimeline": 7852,
+    "total": 11390,
+    "verified": 11364,
+    "withGoalTimeline": 7854,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-07T22:32:40.544Z"
+  "lastUpdated": "2026-10-07T23:22:34.653Z"
 }
