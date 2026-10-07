@@ -1,48 +1,5 @@
 [
   {
-    "match": "Real Sireti vs Zimbru Chisinau",
-    "league": "Super Liga",
-    "tier": "AVISO",
-    "probability": 0.5644596427876578,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, el modelo da alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      42,
-      92
-    ],
-    "timestamp": "2026-09-06T16:56:50.326Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
-    "match": "Kustosija vs Dinamo Zagreb II",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.8751765519265235,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con remates a puerta. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T16:57:00.460Z",
-    "alertTimestamp": "2026-09-06T15:17:32.230Z"
-  },
-  {
     "match": "SK Vorwarts Steyr vs TSV Hartberg",
     "league": "Copa de Austria - 16avos de final",
     "tier": "AVISO",
@@ -21914,5 +21871,45 @@
     ],
     "timestamp": "2026-10-07T20:02:30.320Z",
     "alertTimestamp": "2026-10-07T18:42:30.171Z"
+  },
+  {
+    "match": "Coatepeque vs Santa Lucia Cotzumalguapa FC",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8806433630452186,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-07T21:12:29.325Z",
+    "alertTimestamp": "2026-10-07T19:22:48.954Z"
+  },
+  {
+    "match": "Zamora FC vs Club Atletico Barinas",
+    "league": "Copa Venezuela",
+    "tier": "AVISO",
+    "probability": 0.8948175079796583,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un equipo dominando los tiros a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-07T21:32:39.762Z",
+    "alertTimestamp": "2026-10-07T19:32:31.069Z"
   }
 ]
