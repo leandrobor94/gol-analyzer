@@ -1,26 +1,5 @@
 [
   {
-    "match": "Sporting Cristal vs Los Chankas",
-    "league": "Liga 1 - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5448664340165038,
-    "minute": 77,
-    "scoreAtAlert": "4-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      42,
-      64,
-      75,
-      91
-    ],
-    "timestamp": "2026-09-06T17:57:07.300Z",
-    "alertTimestamp": "2026-09-06T16:07:36.279Z"
-  },
-  {
     "match": "Bologna vs Sassuolo",
     "league": "Serie A",
     "tier": "AVISO",
@@ -21925,5 +21904,25 @@
     ],
     "timestamp": "2026-10-08T18:42:25.964Z",
     "alertTimestamp": "2026-10-07T23:12:33.103Z"
+  },
+  {
+    "match": "Sarmiento (Reserva) vs Vélez Sarsfield (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5297754651939951,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con marcador ajustado y tiempo restante. xG estimado, no real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-08T20:01:35.904Z",
+    "alertTimestamp": "2026-10-08T18:42:05.211Z"
   }
 ]
