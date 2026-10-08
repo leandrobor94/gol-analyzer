@@ -1,52 +1,5 @@
 [
   {
-    "match": "Sanliurfaspor vs Ankaraspor",
-    "league": "2. Lig",
-    "tier": "AVISO",
-    "probability": 0.8941419831021519,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T18:07:50.709Z",
-    "alertTimestamp": "2026-09-06T16:17:38.578Z"
-  },
-  {
-    "match": "APOEL Nicosia vs A.E.L.",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.9008931984121257,
-    "minute": 21,
-    "scoreAtAlert": "4-0",
-    "finalScore": "6-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con goles, marcador 2-0 pero xG estimado no es fiable. Minuto 21, hay tiempo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      10,
-      20,
-      61,
-      79,
-      84,
-      92
-    ],
-    "timestamp": "2026-09-06T18:07:50.856Z",
-    "alertTimestamp": "2026-09-06T16:17:38.578Z"
-  },
-  {
     "match": "Al Rayyan Next Generation vs Markhiya SC",
     "league": "Q League",
     "tier": "AVISO",
@@ -21935,5 +21888,50 @@
     ],
     "timestamp": "2026-10-08T21:01:19.820Z",
     "alertTimestamp": "2026-10-08T19:01:36.111Z"
+  },
+  {
+    "match": "São Paulo Sub20 vs Athletico-PR Youth",
+    "league": "Copa de Brasil Sub20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8559862917212565,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 0-0, modelo da alta probabilidad a gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      68,
+      75,
+      84
+    ],
+    "timestamp": "2026-10-08T22:30:58.423Z",
+    "alertTimestamp": "2026-10-08T20:30:59.085Z"
+  },
+  {
+    "match": "Portmore United vs Waterhouse FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8449425265728918,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Early in the match, score 0-0, and model probability is high for a goal.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-08T22:30:58.947Z",
+    "alertTimestamp": "2026-10-08T20:41:24.694Z"
   }
 ]
