@@ -1,45 +1,5 @@
 [
   {
-    "match": "Bologna vs Sassuolo",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.5871081783444253,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      19,
-      50,
-      56,
-      91
-    ],
-    "timestamp": "2026-09-06T18:07:33.217Z",
-    "alertTimestamp": "2026-09-06T16:07:36.279Z"
-  },
-  {
-    "match": "NK Rudes vs HNK Hajduk Split",
-    "league": "Liga de Croacia",
-    "tier": "AVISO",
-    "probability": 0.6471313866449836,
-    "minute": 63,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      28,
-      48,
-      87
-    ],
-    "timestamp": "2026-09-06T18:07:37.302Z",
-    "alertTimestamp": "2026-09-06T16:07:36.279Z"
-  },
-  {
     "match": "Sanliurfaspor vs Ankaraspor",
     "league": "2. Lig",
     "tier": "AVISO",
@@ -21924,5 +21884,56 @@
     "goalMinutes": [],
     "timestamp": "2026-10-08T20:01:35.904Z",
     "alertTimestamp": "2026-10-08T18:42:05.211Z"
+  },
+  {
+    "match": "Shamrock vs Drogheda Utd",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8905581645307339,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado, y un equipo dominando en llegadas.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      20,
+      42,
+      88
+    ],
+    "timestamp": "2026-10-08T20:51:02.281Z",
+    "alertTimestamp": "2026-10-08T19:11:11.213Z"
+  },
+  {
+    "match": "Always Ready vs Nacional Potosí",
+    "league": "Copa Paceña",
+    "tier": "AVISO",
+    "probability": 0.8822454026933144,
+    "minute": 22,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y xG estimado no es base para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      30,
+      37,
+      57,
+      94
+    ],
+    "timestamp": "2026-10-08T21:01:19.820Z",
+    "alertTimestamp": "2026-10-08T19:01:36.111Z"
   }
 ]
