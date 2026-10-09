@@ -1,184 +1,5 @@
 [
   {
-    "match": "Justo José Urquiza vs Juventud Unida SM",
-    "league": "Primera C Metropolitana - Zona A",
-    "tier": "AVISO",
-    "probability": 0.5842531408134426,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin evidencia de juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T19:54:56.203Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Liniers vs Deportivo Laferrere",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.6398456542302446,
-    "minute": 65,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T19:54:56.299Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Karabukspor vs Kartal Bulvarspor",
-    "league": "3. Lig",
-    "tier": "AVISO",
-    "probability": 0.591299226163432,
-    "minute": 78,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-5",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "El modelo indica alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-07T00:56:01.052Z",
-    "alertTimestamp": "2026-09-06T17:36:07.063Z"
-  },
-  {
-    "match": "Eskisehirspor vs Kestelspor",
-    "league": "3. Lig",
-    "tier": "AVISO",
-    "probability": 0.588862448605154,
-    "minute": 78,
-    "scoreAtAlert": "3-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-07T00:56:02.809Z",
-    "alertTimestamp": "2026-09-06T17:36:07.063Z"
-  },
-  {
-    "match": "Lito vs Deportivo Colonia",
-    "league": "Divisional C - Torneo Final",
-    "tier": "AVISO",
-    "probability": 0.8878453967118209,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-09-07T00:56:03.228Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Atlético Central vs Recreativo de Huelva",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8845610947391666,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      26,
-      70
-    ],
-    "timestamp": "2026-09-07T00:56:03.369Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Juventud Unida San Luis vs Santamarina Tandil",
-    "league": "Federal A - Reválida - Zona B",
-    "tier": "AVISO",
-    "probability": 0.8889177189690792,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      19
-    ],
-    "timestamp": "2026-09-07T00:56:03.619Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Deportivo Rincón vs Costa Brava (Gral Pico)",
-    "league": "Federal A - Reválida - Zona B",
-    "tier": "AVISO",
-    "probability": 0.9009665503062424,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      14,
-      20
-    ],
-    "timestamp": "2026-09-07T00:56:03.788Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "Alvarado vs Atenas Río Cuarto",
-    "league": "Federal A - Segunda Fase - Zona B",
-    "tier": "AVISO",
-    "probability": 0.5304116173874156,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      52,
-      69,
-      81,
-      89,
-      92
-    ],
-    "timestamp": "2026-09-07T00:56:08.218Z",
-    "alertTimestamp": "2026-09-06T18:07:29.577Z"
-  },
-  {
-    "match": "UAI Urquiza vs Argentino Merlo",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8786483565528592,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      17
-    ],
-    "timestamp": "2026-09-07T00:56:12.304Z",
-    "alertTimestamp": "2026-09-06T18:17:39.314Z"
-  },
-  {
     "match": "Círculo Deportivo vs Sol de Mayo",
     "league": "Federal A - Reválida - Zona B",
     "tier": "AVISO",
@@ -21990,5 +21811,236 @@
     ],
     "timestamp": "2026-10-09T20:02:52.712Z",
     "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Flamengo/Sp Youth vs RB Bragantino/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8996248158895983,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de octavos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-09T20:12:56.746Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Bélgica (F) vs Polonia (F)",
+    "league": "UEFA Women WC Qualifiers - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.5600232994224392,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      48
+    ],
+    "timestamp": "2026-10-09T20:22:19.212Z",
+    "alertTimestamp": "2026-10-09T18:24:16.546Z"
+  },
+  {
+    "match": "Borussia Dortmund vs Werder Bremen",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8982585732379239,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, xG estimado no confiable, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      80,
+      85,
+      88,
+      92
+    ],
+    "timestamp": "2026-10-09T20:31:51.650Z",
+    "alertTimestamp": "2026-10-09T18:33:48.023Z"
+  },
+  {
+    "match": "Lens vs Lyon",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.6258693552268625,
+    "minute": 67,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Lens domina pero Lyon puede reaccionar. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      76,
+      85
+    ],
+    "timestamp": "2026-10-09T20:42:04.001Z",
+    "alertTimestamp": "2026-10-09T18:52:46.117Z"
+  },
+  {
+    "match": "Haverfordwest vs Caernarfon",
+    "league": "Cymru Premier",
+    "tier": "AVISO",
+    "probability": 0.5418656352400453,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y alto xG estimado para el visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      83,
+      85
+    ],
+    "timestamp": "2026-10-09T20:42:04.765Z",
+    "alertTimestamp": "2026-10-09T18:52:46.117Z"
+  },
+  {
+    "match": "Cobh Ramblers vs Kerry",
+    "league": "Division 1",
+    "tier": "AVISO",
+    "probability": 0.6771484197450255,
+    "minute": 60,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Kerry con ventaja pero sin gran volumen de juego. xG estimado, no real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      22,
+      34
+    ],
+    "timestamp": "2026-10-09T20:42:05.529Z",
+    "alertTimestamp": "2026-10-09T18:52:46.117Z"
+  },
+  {
+    "match": "SK Beveren vs Lommel United",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.5335243466879449,
+    "minute": 77,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alto xG estimado y muchas ocasiones de gol para ambos equipos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24,
+      41,
+      48,
+      56
+    ],
+    "timestamp": "2026-10-09T20:42:05.729Z",
+    "alertTimestamp": "2026-10-09T18:52:46.117Z"
+  },
+  {
+    "match": "Penybont vs Barry Town",
+    "league": "Cymru Premier",
+    "tier": "AVISO",
+    "probability": 0.6666921845407793,
+    "minute": 60,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y alto volumen de remates a puerta del local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      18,
+      39,
+      53
+    ],
+    "timestamp": "2026-10-09T20:52:17.509Z",
+    "alertTimestamp": "2026-10-09T18:52:46.117Z"
+  },
+  {
+    "match": "Málaga CF vs RCD Espanyol",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8998409822716048,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      93
+    ],
+    "timestamp": "2026-10-09T21:01:45.023Z",
+    "alertTimestamp": "2026-10-09T19:03:13.132Z"
+  },
+  {
+    "match": "UD Ibiza vs Real Madrid Castilla",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.6476422735742998,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, un gol de ventaja, y un equipo sin remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-09T21:01:46.007Z",
+    "alertTimestamp": "2026-10-09T19:14:14.904Z"
   }
 ]
