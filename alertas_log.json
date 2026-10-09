@@ -1,109 +1,5 @@
 [
   {
-    "match": "Tacuarembó FC vs Oriental",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8845610947391666,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T19:07:09.777Z",
-    "alertTimestamp": "2026-09-06T17:06:35.789Z"
-  },
-  {
-    "match": "Estrella Roja Belgrado vs Partizan Belgrade",
-    "league": "Super Liga",
-    "tier": "AVISO",
-    "probability": 0.91677292049944,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      17,
-      28
-    ],
-    "timestamp": "2026-09-06T19:07:11.271Z",
-    "alertTimestamp": "2026-09-06T17:06:35.789Z"
-  },
-  {
-    "match": "Cremonese vs Padova",
-    "league": "Serie B italiana",
-    "tier": "AVISO",
-    "probability": 0.8870150238024056,
-    "minute": 24,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      5,
-      46,
-      56
-    ],
-    "timestamp": "2026-09-06T19:25:33.193Z",
-    "alertTimestamp": "2026-09-06T17:36:07.063Z"
-  },
-  {
-    "match": "Puente Genil vs Mijas Las Lagunas",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.898292794933842,
-    "minute": 21,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      15,
-      26,
-      38,
-      60
-    ],
-    "timestamp": "2026-09-06T19:36:21.979Z",
-    "alertTimestamp": "2026-09-06T17:36:07.063Z"
-  },
-  {
-    "match": "Hapoel Bnei Musmus vs Tzeirei Umm al-Fahm",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.8811827275750889,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T19:36:22.079Z",
-    "alertTimestamp": "2026-09-06T17:36:07.063Z"
-  },
-  {
-    "match": "Lynx FC vs College 1975 FC",
-    "league": "Premier Division",
-    "tier": "AVISO",
-    "probability": 0.6015847144356261,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-06T19:36:22.198Z",
-    "alertTimestamp": "2026-09-06T18:35:54.276Z"
-  },
-  {
     "match": "Justo José Urquiza vs Juventud Unida SM",
     "league": "Primera C Metropolitana - Zona A",
     "tier": "AVISO",
@@ -21963,6 +21859,136 @@
       96
     ],
     "timestamp": "2026-10-09T19:03:15.673Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "SC Kriens vs FC Wil 1900",
+    "league": "Challenge League",
+    "tier": "AVISO",
+    "probability": 0.5166078602930406,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      61,
+      70
+    ],
+    "timestamp": "2026-10-09T19:23:32.754Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Roda JC Kerkrade vs Jong PSV Eindhoven",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.5122716838733283,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      76,
+      84
+    ],
+    "timestamp": "2026-10-09T19:52:52.178Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Moreirense vs Gil Vicente FC",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.522683653798455,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      90
+    ],
+    "timestamp": "2026-10-09T19:52:52.615Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Portuguesa Santista/Sp Youth vs Corinthians/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8965370738266716,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de eliminatoria, marcador 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-09T20:02:52.268Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Santo André/Sp Youth vs Juventus/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8965370738266716,
+    "minute": 22,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de octavos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-09T20:02:52.501Z",
+    "alertTimestamp": "2026-10-09T18:13:15.183Z"
+  },
+  {
+    "match": "Jong AZ Alkmaar vs Den Bosch",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.8894443682546685,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      41
+    ],
+    "timestamp": "2026-10-09T20:02:52.712Z",
     "alertTimestamp": "2026-10-09T18:13:15.183Z"
   }
 ]
