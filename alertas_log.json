@@ -1,119 +1,5 @@
 [
   {
-    "match": "RCD Espanyol vs Sevilla FC",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8772581243060823,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      85,
-      98
-    ],
-    "timestamp": "2026-09-07T00:56:21.704Z",
-    "alertTimestamp": "2026-09-06T19:07:08.602Z"
-  },
-  {
-    "match": "Boca Unidos de Corrientes vs Gimnasia de Concepción",
-    "league": "Federal A - Reválida - Zona A",
-    "tier": "AVISO",
-    "probability": 0.8845610947391666,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      47
-    ],
-    "timestamp": "2026-09-07T00:56:21.859Z",
-    "alertTimestamp": "2026-09-06T19:07:08.602Z"
-  },
-  {
-    "match": "Remo vs Flamengo",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8991379414397533,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      65
-    ],
-    "timestamp": "2026-09-07T00:56:44.682Z",
-    "alertTimestamp": "2026-09-06T19:25:27.697Z"
-  },
-  {
-    "match": "Nacional Potosí vs Blooming",
-    "league": "División Profesional",
-    "tier": "AVISO",
-    "probability": 0.5568166417740205,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      34,
-      43,
-      74
-    ],
-    "timestamp": "2026-09-07T02:05:46.882Z",
-    "alertTimestamp": "2026-09-07T00:56:00.055Z"
-  },
-  {
-    "match": "Racing Club vs Atlético Tucumán",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5312330050897693,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      24,
-      71,
-      93
-    ],
-    "timestamp": "2026-09-07T02:36:04.697Z",
-    "alertTimestamp": "2026-09-07T00:56:00.055Z"
-  },
-  {
-    "match": "Matagalpa vs Diriangén FC",
-    "league": "Liga Primera - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8879365926587673,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, Diriangén FC con ventaja mínima y alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      55,
-      87
-    ],
-    "timestamp": "2026-09-07T02:55:54.826Z",
-    "alertTimestamp": "2026-09-07T01:26:05.261Z"
-  },
-  {
     "match": "A.D. San Carlos vs Sporting FC",
     "league": "Liga Promerica - Apertura",
     "tier": "AVISO",
@@ -22056,6 +21942,145 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-10T18:05:34.770Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "Sporting JAX vs Birmingham Legion FC",
+    "league": "USL Championship",
+    "tier": "AVISO",
+    "probability": 0.86832082784238,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con pocas llegadas pero una gran chance para el visitante. El marcador sigue 0-0.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      36
+    ],
+    "timestamp": "2026-10-10T18:35:03.521Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "Manchester United vs Tottenham",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.674575058011675,
+    "minute": 64,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alto xG estimado para el visitante y 3 grandes ocasiones.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      73,
+      92
+    ],
+    "timestamp": "2026-10-10T18:35:31.968Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "Maccabi Tel Aviv vs Bnei Sakhnin",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6435484167223791,
+    "minute": 63,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alto xG estimado para el local y dominio claro.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-10T18:35:32.500Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "CD Eldense vs Córdoba CF",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.690391865296607,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no fiable, y Córdoba con más llegadas y ocasiones claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      62,
+      96
+    ],
+    "timestamp": "2026-10-10T18:35:32.731Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "Al-Ahli Doha vs Al Sailiya",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.8543233418125087,
+    "minute": 21,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y muchas llegadas al área. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      34,
+      39,
+      48,
+      83
+    ],
+    "timestamp": "2026-10-10T19:02:28.953Z",
+    "alertTimestamp": "2026-10-10T17:14:23.448Z"
+  },
+  {
+    "match": "Maritimo vs FC Porto",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.8417249752253246,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia clara de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      42,
+      84
+    ],
+    "timestamp": "2026-10-10T19:02:29.155Z",
     "alertTimestamp": "2026-10-10T17:14:23.448Z"
   }
 ]
