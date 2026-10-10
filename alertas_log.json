@@ -1,164 +1,5 @@
 [
   {
-    "match": "Estrella de Berisso vs Social Atlético Televisión",
-    "league": "Torneo Promocional Amateur",
-    "tier": "AVISO",
-    "probability": 0.8875828381100259,
-    "minute": 26,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      10,
-      25,
-      59,
-      88
-    ],
-    "timestamp": "2026-09-07T20:15:46.592Z",
-    "alertTimestamp": "2026-09-07T18:27:41.612Z"
-  },
-  {
-    "match": "Everton de La Plata vs Academia Control Orientado",
-    "league": "Torneo Promocional Amateur",
-    "tier": "AVISO",
-    "probability": 0.5612190734624454,
-    "minute": 79,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con minutos restantes y alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      52
-    ],
-    "timestamp": "2026-09-07T20:15:46.787Z",
-    "alertTimestamp": "2026-09-07T18:39:05.230Z"
-  },
-  {
-    "match": "Recoleta FC (F) vs Guarani (F)",
-    "league": "Campeonato Anual FEM",
-    "tier": "AVISO",
-    "probability": 0.555159917657365,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-07T20:26:26.643Z",
-    "alertTimestamp": "2026-09-07T18:39:05.230Z"
-  },
-  {
-    "match": "Palermo vs Sampdoria",
-    "league": "Serie B italiana",
-    "tier": "AVISO",
-    "probability": 0.5139047406433989,
-    "minute": 79,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      9,
-      33,
-      63,
-      94
-    ],
-    "timestamp": "2026-09-07T20:36:33.070Z",
-    "alertTimestamp": "2026-09-07T18:39:05.230Z"
-  },
-  {
-    "match": "CE Sabadell vs Córdoba CF",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.52776378816518,
-    "minute": 79,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      7,
-      11,
-      26,
-      76,
-      89
-    ],
-    "timestamp": "2026-09-07T20:36:43.283Z",
-    "alertTimestamp": "2026-09-07T18:39:05.230Z"
-  },
-  {
-    "match": "Udinese vs Lazio",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.8805467524384302,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con volumen de juego prometedor.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      49,
-      75,
-      88
-    ],
-    "timestamp": "2026-09-07T20:46:18.888Z",
-    "alertTimestamp": "2026-09-07T18:55:54.048Z"
-  },
-  {
-    "match": "Braga Sub23 vs FC Penafiel U23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5725319729207452,
-    "minute": 79,
-    "scoreAtAlert": "2-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado con alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      21,
-      24,
-      28,
-      60,
-      86
-    ],
-    "timestamp": "2026-09-07T20:55:42.234Z",
-    "alertTimestamp": "2026-09-07T19:07:49.495Z"
-  },
-  {
     "match": "Bromley vs AFC Wimbledon",
     "league": "League One",
     "tier": "AVISO",
@@ -22130,5 +21971,164 @@
     ],
     "timestamp": "2026-10-10T21:07:11.916Z",
     "alertTimestamp": "2026-10-10T19:02:27.581Z"
+  },
+  {
+    "match": "Wilstermann Cooperativas vs Virginia USC",
+    "league": "Copa Simón Bolívar - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5486573838892482,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en fase eliminatoria, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-10T21:14:12.251Z",
+    "alertTimestamp": "2026-10-10T19:02:27.581Z"
+  },
+  {
+    "match": "Amal Tiznit vs El Jadida",
+    "league": "Botola Pro",
+    "tier": "AVISO",
+    "probability": 0.8736813860033726,
+    "minute": 22,
+    "scoreAtAlert": "2-5",
+    "finalScore": "2-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin datos que contradigan la probabilidad del modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      34,
+      36,
+      41,
+      49,
+      79,
+      80
+    ],
+    "timestamp": "2026-10-10T21:14:12.471Z",
+    "alertTimestamp": "2026-10-10T19:02:27.581Z"
+  },
+  {
+    "match": "General Caballero CG vs Sportivo Valois Rivarola",
+    "league": "APF Primera C",
+    "tier": "AVISO",
+    "probability": 0.8882004713664092,
+    "minute": 25,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y minutos restantes considerables.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-10T21:31:57.750Z",
+    "alertTimestamp": "2026-10-10T19:02:27.581Z"
+  },
+  {
+    "match": "Sport Colonial vs Capitan Figari FBC",
+    "league": "APF Primera C",
+    "tier": "AVISO",
+    "probability": 0.9026229656930965,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-10T21:31:58.136Z",
+    "alertTimestamp": "2026-10-10T19:14:40.672Z"
+  },
+  {
+    "match": "Monagas SC B vs Atletico Ávila FC",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.9026229656930965,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60
+    ],
+    "timestamp": "2026-10-10T21:31:58.333Z",
+    "alertTimestamp": "2026-10-10T19:42:50.643Z"
+  },
+  {
+    "match": "Viseu vs Estoril",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.8522332910904052,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin big chances pero con un tiro a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      29,
+      56,
+      88
+    ],
+    "timestamp": "2026-10-10T21:31:58.539Z",
+    "alertTimestamp": "2026-10-10T19:42:50.643Z"
+  },
+  {
+    "match": "Midland vs Atlético Rafaela",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8845671952931593,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      13,
+      25,
+      78,
+      92
+    ],
+    "timestamp": "2026-10-10T21:51:20.723Z",
+    "alertTimestamp": "2026-10-10T19:52:52.206Z"
   }
 ]
