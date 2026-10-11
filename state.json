@@ -56,13 +56,13 @@
       "tier": "AVISO"
     },
     "4789465_AVISO": {
-      "timestamp": 1791743192758,
-      "minute": 24,
+      "timestamp": 1791747363882,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4855544_AVISO": {
-      "timestamp": 1791743192758,
-      "minute": 21,
+      "timestamp": 1791747363882,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4640488_AVISO": {
@@ -101,13 +101,13 @@
       "tier": "AVISO"
     },
     "4860649_AVISO": {
-      "timestamp": 1791744942980,
-      "minute": 20,
+      "timestamp": 1791749113167,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4870381_AVISO": {
-      "timestamp": 1791744942980,
-      "minute": 20,
+      "timestamp": 1791749113167,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4828970_AVISO": {
@@ -126,8 +126,8 @@
       "tier": "AVISO"
     },
     "4750834_AVISO": {
-      "timestamp": 1791746773242,
-      "minute": 24,
+      "timestamp": 1791750351729,
+      "minute": 64,
       "tier": "AVISO"
     },
     "4855556_AVISO": {
@@ -144,13 +144,73 @@
       "timestamp": 1791746773242,
       "minute": 22,
       "tier": "AVISO"
+    },
+    "4850492_AVISO": {
+      "timestamp": 1791747363882,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4855545_AVISO": {
+      "timestamp": 1791747363882,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4810598_AVISO": {
+      "timestamp": 1791747363882,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4874464_AVISO": {
+      "timestamp": 1791748488750,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4874463_AVISO": {
+      "timestamp": 1791748488750,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4732689_AVISO": {
+      "timestamp": 1791749113167,
+      "minute": 60,
+      "tier": "AVISO"
+    },
+    "4870384_AVISO": {
+      "timestamp": 1791749113167,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4844685_AVISO": {
+      "timestamp": 1791749113167,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4874466_AVISO": {
+      "timestamp": 1791750351729,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4855542_AVISO": {
+      "timestamp": 1791750351729,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4863818_AVISO": {
+      "timestamp": 1791750351729,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4853247_AVISO": {
+      "timestamp": 1791750351729,
+      "minute": 22,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 11932,
-    "verified": 11859,
-    "withGoalTimeline": 8229,
+    "total": 11953,
+    "verified": 11883,
+    "withGoalTimeline": 8249,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-11T19:26:34.218Z"
+  "lastUpdated": "2026-10-11T20:26:09.658Z"
 }

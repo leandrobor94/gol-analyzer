@@ -1,179 +1,5 @@
 [
   {
-    "match": "Cove Rangers vs Dumbarton",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.8910423439281684,
-    "minute": 25,
-    "scoreAtAlert": "5-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchas oportunidades de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      24,
-      25,
-      39,
-      53,
-      57,
-      73,
-      91
-    ],
-    "timestamp": "2026-09-08T20:42:59.161Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "Salisbury City vs Slough",
-    "league": "National League N/S - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.894153231785354,
-    "minute": 24,
-    "scoreAtAlert": "4-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      25,
-      43,
-      46,
-      56,
-      59,
-      89
-    ],
-    "timestamp": "2026-09-08T20:42:59.293Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "Chester vs Merthyr Town",
-    "league": "National League N/S - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5649555752904947,
-    "minute": 79,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      44
-    ],
-    "timestamp": "2026-09-08T20:42:59.343Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "Peterhead vs Clachnacuddin",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.7026129845398383,
-    "minute": 61,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay big chances.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      15,
-      21,
-      67
-    ],
-    "timestamp": "2026-09-08T20:43:00.169Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "Ross County vs Aberdeen Reserves",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.6764301050526236,
-    "minute": 60,
-    "scoreAtAlert": "2-3",
-    "finalScore": "3-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto con goles, xG estimado no fiable, y el modelo ya considera el tiempo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      13,
-      21,
-      52,
-      62,
-      66,
-      93,
-      94
-    ],
-    "timestamp": "2026-09-08T20:43:17.496Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "Berwick vs Hibernian B",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.6492053965721831,
-    "minute": 61,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21
-    ],
-    "timestamp": "2026-09-08T20:43:38.012Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
-    "match": "ABB vs San Antonio",
-    "league": "Copa Paceña",
-    "tier": "AVISO",
-    "probability": 0.5511350051832988,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      58,
-      87
-    ],
-    "timestamp": "2026-09-08T20:52:28.716Z",
-    "alertTimestamp": "2026-09-08T19:03:23.725Z"
-  },
-  {
     "match": "Hapoel Segev Shalom vs Maccabi Bnei Eilat",
     "league": "FA Cup - Fase preliminar",
     "tier": "AVISO",
@@ -22107,5 +21933,164 @@
     ],
     "timestamp": "2026-10-11T19:26:33.951Z",
     "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Atl��tic Club D'escaldes vs Esperanca",
+    "league": "Primera Divisió",
+    "tier": "AVISO",
+    "probability": 0.5228343415549093,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      93
+    ],
+    "timestamp": "2026-10-11T20:05:13.751Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Argentino Merlo vs Sportivo Italiano",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8721287011433055,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      64,
+      80,
+      96
+    ],
+    "timestamp": "2026-10-11T20:05:13.953Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Al Shabab Riyadh vs Al Taawoun",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.8742970063020064,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol, a pesar de xG estimado. Al Shabab con 4 grandes ocasiones.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      51,
+      85
+    ],
+    "timestamp": "2026-10-11T20:05:14.189Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Atlanta vs San Martín Tucumán",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8756509052573388,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin eventos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-10-11T20:05:14.488Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Salus Fc vs Deportivo LSM",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.8468176925407005,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-10-11T20:05:14.737Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
+  },
+  {
+    "match": "Coatepeque vs Deportivo Iztapa",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5504721721733862,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T20:05:15.042Z",
+    "alertTimestamp": "2026-10-11T18:15:37.826Z"
+  },
+  {
+    "match": "Deportivo Madryn vs Chaco For Ever",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5382828572380599,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      14,
+      93
+    ],
+    "timestamp": "2026-10-11T20:05:15.131Z",
+    "alertTimestamp": "2026-10-11T18:15:37.826Z"
   }
 ]
