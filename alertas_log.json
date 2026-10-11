@@ -1,205 +1,5 @@
 [
   {
-    "match": "Bromley vs AFC Wimbledon",
-    "league": "League One",
-    "tier": "AVISO",
-    "probability": 0.5404905235196908,
-    "minute": 79,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no fiable, Wimbledon con más llegadas.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      8,
-      67
-    ],
-    "timestamp": "2026-09-07T21:06:29.357Z",
-    "alertTimestamp": "2026-09-07T19:07:49.495Z"
-  },
-  {
-    "match": "HFX Wanderers vs Cavalry",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.5413951107858876,
-    "minute": 79,
-    "scoreAtAlert": "0-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no es fiable, pero grandes ocasiones y tiros a puerta sugieren peligro.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      48,
-      64,
-      75,
-      87
-    ],
-    "timestamp": "2026-09-07T21:16:09.303Z",
-    "alertTimestamp": "2026-09-07T19:15:49.655Z"
-  },
-  {
-    "match": "Elche CF vs Real Sociedad",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8864601968033147,
-    "minute": 25,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      31,
-      67,
-      74,
-      90
-    ],
-    "timestamp": "2026-09-07T21:35:44.381Z",
-    "alertTimestamp": "2026-09-07T19:46:19.656Z"
-  },
-  {
-    "match": "Nueva Chicago vs Quilmes",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.8742278714953193,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin datos de xG reales para desestimar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      9
-    ],
-    "timestamp": "2026-09-07T22:05:59.785Z",
-    "alertTimestamp": "2026-09-07T20:07:42.158Z"
-  },
-  {
-    "match": "Portland Timbers II vs Vancouver Whitecaps II",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5246392019309412,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con minutos restantes y xG estimado. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-07T22:06:00.177Z",
-    "alertTimestamp": "2026-09-07T20:07:42.158Z"
-  },
-  {
-    "match": "Ilves vs FF Jaro",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.5325422993270537,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      74,
-      84
-    ],
-    "timestamp": "2026-09-08T16:52:50.073Z",
-    "alertTimestamp": "2026-09-08T16:22:35.609Z"
-  },
-  {
-    "match": "Vaasa PS vs AC Oulu",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.5572949167096943,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no fiable, y volumen de juego sugiere oportunidades.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8
-    ],
-    "timestamp": "2026-09-08T17:02:32.130Z",
-    "alertTimestamp": "2026-09-08T16:22:35.609Z"
-  },
-  {
-    "match": "TPS vs SJK Seinajoki",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.5347647821152322,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-08T17:02:32.171Z",
-    "alertTimestamp": "2026-09-08T16:22:35.609Z"
-  },
-  {
-    "match": "Lahti vs IFK Mariehamn",
-    "league": "Veikkausliiga",
-    "tier": "AVISO",
-    "probability": 0.5583087763467499,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido ajustado, con un solo gol de diferencia y tiempo restante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      38,
-      65,
-      87
-    ],
-    "timestamp": "2026-09-08T17:02:32.209Z",
-    "alertTimestamp": "2026-09-08T16:22:35.609Z"
-  },
-  {
     "match": "Tromsdalen Uil vs Strommen",
     "league": "NM Cupen - Primera Ronda",
     "tier": "AVISO",
@@ -22130,5 +21930,181 @@
     ],
     "timestamp": "2026-10-10T21:51:20.723Z",
     "alertTimestamp": "2026-10-10T19:52:52.206Z"
+  },
+  {
+    "match": "Supra du Québec vs Vancouver Fc",
+    "league": "Canadian Premier League",
+    "tier": "AVISO",
+    "probability": 0.8623983438914984,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y un equipo dominando en llegadas.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      59,
+      88,
+      96
+    ],
+    "timestamp": "2026-10-11T02:53:18.016Z",
+    "alertTimestamp": "2026-10-10T20:13:15.082Z"
+  },
+  {
+    "match": "Guaynabo Fc vs Academia Quintana",
+    "league": "LPR Pro - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8460554499065621,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T02:53:19.174Z",
+    "alertTimestamp": "2026-10-10T20:42:49.822Z"
+  },
+  {
+    "match": "Portland Hearts of Pine vs Boise",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8968847920795164,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      54,
+      74,
+      94
+    ],
+    "timestamp": "2026-10-11T02:53:35.422Z",
+    "alertTimestamp": "2026-10-10T21:14:10.576Z"
+  },
+  {
+    "match": "Genesis Policía Nacional FC vs CD Olimpia",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.8992723011680421,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10
+    ],
+    "timestamp": "2026-10-11T02:53:35.582Z",
+    "alertTimestamp": "2026-10-10T21:14:10.576Z"
+  },
+  {
+    "match": "Orgánica Masachapa vs CD Junior",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8478674250344171,
+    "minute": 21,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T02:53:35.738Z",
+    "alertTimestamp": "2026-10-10T21:14:10.576Z"
+  },
+  {
+    "match": "Vasco Da Gama vs Remo",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8944012762429464,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, xG estimado no confiable, y sin grandes ocasiones. Aún hay tiempo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T02:53:35.913Z",
+    "alertTimestamp": "2026-10-10T21:14:10.576Z"
+  },
+  {
+    "match": "Union Omaha vs Fort Wayne",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8996248158895983,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25
+    ],
+    "timestamp": "2026-10-11T02:53:36.872Z",
+    "alertTimestamp": "2026-10-10T21:22:04.806Z"
+  },
+  {
+    "match": "Racing de Veracruz vs Celaya FC",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.862062118679206,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T02:53:37.242Z",
+    "alertTimestamp": "2026-10-10T21:41:54.417Z"
+  },
+  {
+    "match": "Peñarol vs Progreso",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8469572108394154,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      26,
+      92
+    ],
+    "timestamp": "2026-10-11T02:53:37.549Z",
+    "alertTimestamp": "2026-10-10T21:41:54.417Z"
   }
 ]
