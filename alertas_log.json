@@ -1,253 +1,5 @@
 [
   {
-    "match": "Kickers Offenbach vs Steinbach Haiger",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.9102977073819053,
-    "minute": 22,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      12,
-      36,
-      42,
-      81
-    ],
-    "timestamp": "2026-09-08T19:03:25.016Z",
-    "alertTimestamp": "2026-09-08T17:13:52.141Z"
-  },
-  {
-    "match": "FC Astoria Walldorf vs Stuttgarter Kickers",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.9039797090681728,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      32,
-      47,
-      64
-    ],
-    "timestamp": "2026-09-08T19:03:25.071Z",
-    "alertTimestamp": "2026-09-08T17:13:52.141Z"
-  },
-  {
-    "match": "SV Sandhausen vs SGV Freiberg",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.8980023205212607,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-08T19:03:25.099Z",
-    "alertTimestamp": "2026-09-08T17:13:52.141Z"
-  },
-  {
-    "match": "VFR Aalen vs SSV Ulm 1846",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.8980023205212607,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      38
-    ],
-    "timestamp": "2026-09-08T19:03:25.130Z",
-    "alertTimestamp": "2026-09-08T17:13:52.141Z"
-  },
-  {
-    "match": "Vélez Sarsfield (Reserva) vs Gimnasia La Plata (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5547476346932289,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0 en el minuto 77, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-08T19:52:46.449Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "São Caetano/Sp Youth vs Osasco Sporting Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.8974991038498693,
-    "minute": 23,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de eliminatoria, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      47,
-      51
-    ],
-    "timestamp": "2026-09-08T20:02:45.887Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "Qadisiya vs Al Ahli Jeddah",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.8774529851818609,
-    "minute": 23,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, un equipo domina claramente con ocasiones y tiros a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      46,
-      48,
-      63,
-      82
-    ],
-    "timestamp": "2026-09-08T20:02:46.083Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "Exeter vs Tottenham Sub21",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.5928499081978276,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un solo gol, xG estimado no confiable, y 17 minutos restantes.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      35,
-      86
-    ],
-    "timestamp": "2026-09-08T20:02:46.185Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "Atlético de Rafaela (Reserva) vs Independiente (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8631450901716965,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva con un gol y una tarjeta roja, lo que indica un juego dinámico.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-08T20:02:46.469Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "Colón (Reserva) vs Belgrano (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8659298247907719,
-    "minute": 23,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva, xG estimado no confiable, pero el marcador está igualado y el modelo da alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-08T20:02:46.909Z",
-    "alertTimestamp": "2026-09-08T18:02:49.089Z"
-  },
-  {
-    "match": "Wrexham vs Burnley",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5837869816787208,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, muchas ocasiones claras para ambos equipos. xG estimado no es un factor.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      26,
-      55
-    ],
-    "timestamp": "2026-09-08T20:42:51.765Z",
-    "alertTimestamp": "2026-09-08T18:52:36.621Z"
-  },
-  {
     "match": "Cove Rangers vs Dumbarton",
     "league": "Challenge Cup",
     "tier": "AVISO",
@@ -22108,5 +21860,252 @@
     ],
     "timestamp": "2026-10-11T18:26:33.280Z",
     "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Rubin Kazan vs Dinamo Moscú",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.6772014595245165,
+    "minute": 63,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un jugador menos para el local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-10-11T18:35:10.005Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Real Betis vs Osasuna",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5757658151490327,
+    "minute": 77,
+    "scoreAtAlert": "4-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, xG estimado alto, y el marcador aún permite cambios.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      31,
+      48,
+      51,
+      56,
+      67,
+      96
+    ],
+    "timestamp": "2026-10-11T18:35:10.133Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Celik Zenica vs FK Sarajevo",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5114742043141691,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, ambos equipos buscan la victoria. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T18:35:10.354Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Vipers vs Maroons",
+    "league": "Premier League - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5246911805709804,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27,
+      66
+    ],
+    "timestamp": "2026-10-11T18:56:00.662Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "ETO FC Győr vs Puskas FC Academy",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5164896996922803,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Puskas con ventaja mínima y oportunidades claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11
+    ],
+    "timestamp": "2026-10-11T19:06:04.271Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "H2O Purépechas vs Lobos Ulmx",
+    "league": "Primera Premier - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.5360960863848525,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      76
+    ],
+    "timestamp": "2026-10-11T19:06:04.388Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Atlético Balboa (Reserva) vs Cd Fas Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5327517783894197,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T19:06:14.487Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Zamalek SC vs Al Ahly SC",
+    "league": "Primera División de Egipto",
+    "tier": "AVISO",
+    "probability": 0.5229387242646026,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39,
+      80
+    ],
+    "timestamp": "2026-10-11T19:06:14.737Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Ferroviária vs Inter de Limeira",
+    "league": "Serie C - Segunda Fase - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.5287807981170514,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, xG estimado no confiable, y un equipo sin remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60,
+      86
+    ],
+    "timestamp": "2026-10-11T19:15:35.189Z",
+    "alertTimestamp": "2026-10-11T18:26:32.759Z"
+  },
+  {
+    "match": "Glacis United vs Hound Dogs",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.8900824774940265,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-11T19:26:33.843Z",
+    "alertTimestamp": "2026-10-11T17:35:26.516Z"
+  },
+  {
+    "match": "Brusque vs Paysandu",
+    "league": "Serie C - Segunda Fase - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.5606266063717429,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      72
+    ],
+    "timestamp": "2026-10-11T19:26:33.951Z",
+    "alertTimestamp": "2026-10-11T18:05:16.784Z"
   }
 ]
