@@ -1,25 +1,5 @@
 [
   {
-    "match": "Exmouth vs Banbury United",
-    "league": "Copa de Inglaterra - Preliminar - 1ra ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.585695980433681,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido apretado en copa, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-09T20:38:14.307Z",
-    "alertTimestamp": "2026-09-09T18:48:14.288Z"
-  },
-  {
     "match": "AD San Juan vs Terrassa FC",
     "league": "Copa Federacion",
     "tier": "AVISO",
@@ -22011,6 +21991,28 @@
       90
     ],
     "timestamp": "2026-10-12T21:57:09.127Z",
+    "alertTimestamp": "2026-10-12T21:08:10.770Z"
+  },
+  {
+    "match": "Orsomarso vs Boca Juniors Cali",
+    "league": "Torneo BetPlay Dimayor - Finalización",
+    "tier": "AVISO",
+    "probability": 0.5787458607036634,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      48
+    ],
+    "timestamp": "2026-10-12T22:27:19.231Z",
     "alertTimestamp": "2026-10-12T21:08:10.770Z"
   }
 ]
