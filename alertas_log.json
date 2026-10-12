@@ -1,238 +1,5 @@
 [
   {
-    "match": "Landskrona Bois vs Helsingborg",
-    "league": "Superettan",
-    "tier": "AVISO",
-    "probability": 0.5514238263494172,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y ambos equipos con remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      19,
-      94
-    ],
-    "timestamp": "2026-09-09T18:58:48.297Z",
-    "alertTimestamp": "2026-09-09T17:09:25.870Z"
-  },
-  {
-    "match": "Hapoel Hertzliya vs A.S Nordia Jerusalem",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.5593757591567479,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, un equipo con 10 jugadores. Alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      19,
-      70,
-      76,
-      96
-    ],
-    "timestamp": "2026-09-09T19:17:52.893Z",
-    "alertTimestamp": "2026-09-09T17:18:08.055Z"
-  },
-  {
-    "match": "Hapoel Ironi Baka El Garbia vs Ironi Nesher",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.6718688753586628,
-    "minute": 61,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, equipo local con 4 tiros a puerta y 0-2 en el marcador.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-09T19:28:01.442Z",
-    "alertTimestamp": "2026-09-09T17:37:56.936Z"
-  },
-  {
-    "match": "12 de Octubre SD vs Club Silvio Pettirossi",
-    "league": "APF Primera B",
-    "tier": "AVISO",
-    "probability": 0.889546150255675,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-09T19:57:49.173Z",
-    "alertTimestamp": "2026-09-09T18:08:01.829Z"
-  },
-  {
-    "match": "Sergipe Youth vs Falcon/SE Youth",
-    "league": "Copa de Brasil Sub20 - Primera Fase",
-    "tier": "AVISO",
-    "probability": 0.6226151153855359,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, xG estimado no es fiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      44
-    ],
-    "timestamp": "2026-09-09T19:57:49.618Z",
-    "alertTimestamp": "2026-09-09T18:08:01.829Z"
-  },
-  {
-    "match": "Blackburn Sub21 vs QPR U21",
-    "league": "Premier League Cup",
-    "tier": "AVISO",
-    "probability": 0.5453564111238319,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-09T19:57:50.278Z",
-    "alertTimestamp": "2026-09-09T18:08:01.829Z"
-  },
-  {
-    "match": "Boston River vs Colon",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.5470174661067274,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      41,
-      64
-    ],
-    "timestamp": "2026-09-09T19:58:10.016Z",
-    "alertTimestamp": "2026-09-09T18:58:45.597Z"
-  },
-  {
-    "match": "Nykobing vs Middlefart",
-    "league": "DBU Pokalen - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.5371448780473087,
-    "minute": 81,
-    "scoreAtAlert": "4-4",
-    "finalScore": "5-5",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con muchos goles y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      30,
-      36,
-      37,
-      63,
-      71,
-      73,
-      85,
-      94,
-      114,
-      121,
-      122,
-      123,
-      123,
-      124,
-      125
-    ],
-    "timestamp": "2026-09-09T20:08:21.387Z",
-    "alertTimestamp": "2026-09-09T17:09:25.870Z"
-  },
-  {
-    "match": "24 de Setiembre VP vs Olimpia De Itá",
-    "league": "APF Primera B",
-    "tier": "AVISO",
-    "probability": 0.5671114593243705,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-09T20:08:32.234Z",
-    "alertTimestamp": "2026-09-09T18:08:01.829Z"
-  },
-  {
-    "match": "CD Guiniguada Apolinario (W) vs Femarguín (W)",
-    "league": "Copa De La Reina",
-    "tier": "AVISO",
-    "probability": 0.8828589127994869,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      66
-    ],
-    "timestamp": "2026-09-09T20:28:22.416Z",
-    "alertTimestamp": "2026-09-09T18:38:04.076Z"
-  },
-  {
     "match": "Exmouth vs Banbury United",
     "league": "Copa de Inglaterra - Preliminar - 1ra ronda de clasificación",
     "tier": "AVISO",
@@ -22041,5 +21808,209 @@
     "goalMinutes": [],
     "timestamp": "2026-10-11T22:15:23.136Z",
     "alertTimestamp": "2026-10-11T20:16:07.657Z"
+  },
+  {
+    "match": "Grêmio vs Internacional",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8815497591552097,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      33,
+      73
+    ],
+    "timestamp": "2026-10-12T21:08:17.511Z",
+    "alertTimestamp": "2026-10-11T20:35:18.316Z"
+  },
+  {
+    "match": "Flamengo vs Fluminense",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8685626257626192,
+    "minute": 24,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      65
+    ],
+    "timestamp": "2026-10-12T21:08:17.753Z",
+    "alertTimestamp": "2026-10-11T20:35:18.316Z"
+  },
+  {
+    "match": "Palmeiras vs Corinthians",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8698672865750197,
+    "minute": 24,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      46,
+      46,
+      51,
+      91
+    ],
+    "timestamp": "2026-10-12T21:08:17.980Z",
+    "alertTimestamp": "2026-10-11T20:35:18.316Z"
+  },
+  {
+    "match": "Sport Boys vs Alianza Atletico",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5245666908980536,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      59,
+      68,
+      93
+    ],
+    "timestamp": "2026-10-12T21:08:18.184Z",
+    "alertTimestamp": "2026-10-11T20:35:18.316Z"
+  },
+  {
+    "match": "Deportivo Lara vs Zamora FC B",
+    "league": "Liga FUTVE 2",
+    "tier": "AVISO",
+    "probability": 0.8933571734325116,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      61,
+      74
+    ],
+    "timestamp": "2026-10-12T21:08:36.038Z",
+    "alertTimestamp": "2026-10-11T21:04:21.747Z"
+  },
+  {
+    "match": "San Pedro vs Comunicaciones FC",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8765877447560482,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con 73 minutos restantes y un modelo que da 88% de probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      37,
+      59,
+      80
+    ],
+    "timestamp": "2026-10-12T21:08:36.233Z",
+    "alertTimestamp": "2026-10-11T21:04:21.747Z"
+  },
+  {
+    "match": "Deportivo Achuapa vs Sacachispas Chiquimula",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8570324013575235,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-12T21:08:36.822Z",
+    "alertTimestamp": "2026-10-11T21:04:21.747Z"
+  },
+  {
+    "match": "Jalapa Art vs Managua FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8965370738266716,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      82
+    ],
+    "timestamp": "2026-10-12T21:08:37.272Z",
+    "alertTimestamp": "2026-10-11T21:14:25.964Z"
+  },
+  {
+    "match": "Liga de Quito vs Barcelona SC",
+    "league": "Liga Pro - Primer Hexagonal",
+    "tier": "AVISO",
+    "probability": 0.8889539346303124,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      39,
+      53,
+      81
+    ],
+    "timestamp": "2026-10-12T21:08:54.782Z",
+    "alertTimestamp": "2026-10-11T21:34:40.887Z"
+  },
+  {
+    "match": "Hassania Agadir vs AS Far Rabat",
+    "league": "Botola Pro",
+    "tier": "AVISO",
+    "probability": 0.5130988257501085,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es fiable, y el modelo ya considera el tiempo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      34,
+      72,
+      90
+    ],
+    "timestamp": "2026-10-12T21:57:09.127Z",
+    "alertTimestamp": "2026-10-12T21:08:10.770Z"
   }
 ]
