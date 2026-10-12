@@ -1,27 +1,5 @@
 [
   {
-    "match": "AD San Juan vs Terrassa FC",
-    "league": "Copa Federacion",
-    "tier": "AVISO",
-    "probability": 0.5189149150826006,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      98
-    ],
-    "timestamp": "2026-09-09T20:48:21.393Z",
-    "alertTimestamp": "2026-09-09T18:17:53.631Z"
-  },
-  {
     "match": "Norwich vs Birmingham",
     "league": "Championship",
     "tier": "AVISO",
@@ -22014,5 +21992,32 @@
     ],
     "timestamp": "2026-10-12T22:27:19.231Z",
     "alertTimestamp": "2026-10-12T21:08:10.770Z"
+  },
+  {
+    "match": "Novorizontino vs Ponte Preta",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.6605116959698634,
+    "minute": 60,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, un equipo con 10 jugadores y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      25,
+      45,
+      53,
+      81,
+      90
+    ],
+    "timestamp": "2026-10-12T23:57:27.024Z",
+    "alertTimestamp": "2026-10-12T22:07:36.183Z"
   }
 ]
