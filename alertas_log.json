@@ -1,100 +1,5 @@
 [
   {
-    "match": "Liverpool vs Atlético de Madrid",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9063861481384746,
-    "minute": 26,
-    "scoreAtAlert": "3-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, xG estimado no fiable, y ambos equipos con grandes ocasiones.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      40,
-      50
-    ],
-    "timestamp": "2026-09-09T20:58:30.857Z",
-    "alertTimestamp": "2026-09-09T19:07:46.487Z"
-  },
-  {
-    "match": "PSG vs Slovan Bratislava",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9239673676165274,
-    "minute": 25,
-    "scoreAtAlert": "6-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "PSG domina con 2-0 y 4 grandes ocasiones, el partido no está resuelto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      17,
-      23,
-      31,
-      47,
-      57,
-      58,
-      87
-    ],
-    "timestamp": "2026-09-09T20:58:31.024Z",
-    "alertTimestamp": "2026-09-09T19:07:46.487Z"
-  },
-  {
-    "match": "Real Oruro vs Nacional Potosí",
-    "league": "Copa Paceña",
-    "tier": "AVISO",
-    "probability": 0.552609035175922,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      48,
-      89
-    ],
-    "timestamp": "2026-09-09T20:58:58.410Z",
-    "alertTimestamp": "2026-09-09T19:07:46.487Z"
-  },
-  {
-    "match": "Brda vs Tolmin",
-    "league": "Hervis Pokal - Segunda Ronda",
-    "tier": "AVISO",
-    "probability": 0.5648268180883512,
-    "minute": 81,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado en los minutos finales con alta probabilidad de gol del modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-10T01:59:09.120Z",
-    "alertTimestamp": "2026-09-09T16:19:40.012Z"
-  },
-  {
     "match": "North Texas vs Houston Dynamo Academy",
     "league": "MLS Next Pro",
     "tier": "AVISO",
@@ -22018,5 +21923,100 @@
     ],
     "timestamp": "2026-10-13T00:37:10.554Z",
     "alertTimestamp": "2026-10-12T22:37:19.908Z"
+  },
+  {
+    "match": "Krasnodar vs Fakel Voronezh",
+    "league": "Copa de Rusia - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.506895587354432,
+    "minute": 80,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, con ambos equipos generando tiros a puerta. El marcador es 0-1 y quedan 13 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      69,
+      81
+    ],
+    "timestamp": "2026-10-13T19:46:10.715Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Instituto (Reserva) vs River Plate (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.526739623818939,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de reserva con marcador ajustado y alto volumen de remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      40,
+      77,
+      80,
+      86
+    ],
+    "timestamp": "2026-10-13T19:56:10.054Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Walsall vs Fulham Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.5295157622453124,
+    "minute": 77,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y muchos minutos restantes.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      30,
+      44,
+      54,
+      71
+    ],
+    "timestamp": "2026-10-13T19:56:10.201Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Al Ahed vs Al Mabarrah",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6447820706462105,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-13T19:56:11.321Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
   }
 ]
