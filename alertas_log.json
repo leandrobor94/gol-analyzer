@@ -1,28 +1,5 @@
 [
   {
-    "match": "Cienciano vs Montevideo City Torque",
-    "league": "CONMEBOL Copa Sudamericana - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.5162986379271504,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, xG estimado no fiable, pero gran volumen de juego local.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      28,
-      42
-    ],
-    "timestamp": "2026-09-11T02:29:45.315Z",
-    "alertTimestamp": "2026-09-11T01:49:42.907Z"
-  },
-  {
     "match": "CD Marathón vs LD Alajuelense",
     "league": "CONCACAF Copa Centroamericana - Cuartos de Final",
     "tier": "AVISO",
@@ -22038,6 +22015,34 @@
       89
     ],
     "timestamp": "2026-10-13T20:56:03.161Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Inter Milan vs Brujas",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5718316114356804,
+    "minute": 77,
+    "scoreAtAlert": "2-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto con goles, xG alto (aunque estimado) y muchas ocasiones. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      30,
+      44,
+      63,
+      74,
+      81,
+      87,
+      93
+    ],
+    "timestamp": "2026-10-13T21:06:01.932Z",
     "alertTimestamp": "2026-10-13T19:06:30.528Z"
   }
 ]
