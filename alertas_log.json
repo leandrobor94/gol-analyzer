@@ -1,77 +1,5 @@
 [
   {
-    "match": "Club Xelaju vs Coban Imperial",
-    "league": "Liga Nacional - Apertura",
-    "tier": "AVISO",
-    "probability": 0.881184518361195,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T16:12:40.332Z",
-    "alertTimestamp": "2026-09-11T02:10:01.028Z"
-  },
-  {
-    "match": "Al Jazira Al Hamra vs City Football Club",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.5476783560521225,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      27,
-      34,
-      84,
-      93
-    ],
-    "timestamp": "2026-09-11T16:53:17.590Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
-    "match": "Qadisiya vs Al Ettifaq",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.6474282665932147,
-    "minute": 76,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      15,
-      26,
-      64,
-      81,
-      85
-    ],
-    "timestamp": "2026-09-11T17:22:42.046Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
     "match": "Hobro IK vs Vejle",
     "league": "1st Division",
     "tier": "AVISO",
@@ -22038,6 +21966,70 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-13T22:56:02.051Z",
+    "alertTimestamp": "2026-10-13T21:26:04.164Z"
+  },
+  {
+    "match": "Venezuela (F) vs Colombia (F)",
+    "league": "Amistosos Femeninos",
+    "tier": "AVISO",
+    "probability": 0.8954692760671159,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y muchos minutos por jugar. xG no es real.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      50,
+      88
+    ],
+    "timestamp": "2026-10-13T23:06:01.544Z",
+    "alertTimestamp": "2026-10-13T21:06:01.203Z"
+  },
+  {
+    "match": "CD Fuerte Aguilares vs CD UES Pumas",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.8924760339762079,
+    "minute": 25,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-13T23:06:01.673Z",
+    "alertTimestamp": "2026-10-13T21:06:01.203Z"
+  },
+  {
+    "match": "CD Once Municipal vs Nacional FC",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.538712649531465,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0 en el minuto 79 con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-13T23:06:01.806Z",
     "alertTimestamp": "2026-10-13T21:26:04.164Z"
   }
 ]
