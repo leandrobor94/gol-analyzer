@@ -1,30 +1,5 @@
 [
   {
-    "match": "CD Marathón vs LD Alajuelense",
-    "league": "CONCACAF Copa Centroamericana - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.661273776173402,
-    "minute": 64,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado en cuartos de final, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      2,
-      3,
-      10,
-      50
-    ],
-    "timestamp": "2026-09-11T16:12:40.051Z",
-    "alertTimestamp": "2026-09-11T01:49:42.907Z"
-  },
-  {
     "match": "Club Xelaju vs Coban Imperial",
     "league": "Liga Nacional - Apertura",
     "tier": "AVISO",
@@ -22044,5 +22019,25 @@
     ],
     "timestamp": "2026-10-13T21:06:01.932Z",
     "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Orión FC vs Independiente San Vicente",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.8842017349765062,
+    "minute": 25,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador 0-2 con muchos minutos por jugar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-13T22:56:02.051Z",
+    "alertTimestamp": "2026-10-13T21:26:04.164Z"
   }
 ]
