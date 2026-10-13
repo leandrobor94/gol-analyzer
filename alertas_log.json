@@ -1,426 +1,5 @@
 [
   {
-    "match": "North Texas vs Houston Dynamo Academy",
-    "league": "MLS Next Pro",
-    "tier": "AVISO",
-    "probability": 0.5536213753490762,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y un jugador menos. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-10T02:58:44.422Z",
-    "alertTimestamp": "2026-09-10T01:58:58.120Z"
-  },
-  {
-    "match": "FK Teleoptik vs Proleter 023 Zrenjanin",
-    "league": "Prva Liga",
-    "tier": "AVISO",
-    "probability": 0.5820482994377091,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      27
-    ],
-    "timestamp": "2026-09-10T16:59:22.528Z",
-    "alertTimestamp": "2026-09-10T16:08:49.333Z"
-  },
-  {
-    "match": "Esteghlal FC Tehran vs Paykan FC",
-    "league": "Persian Gulf Pro League",
-    "tier": "AVISO",
-    "probability": 0.5403777978464026,
-    "minute": 80,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de la liga de bajo scoring.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      76
-    ],
-    "timestamp": "2026-09-10T17:29:26.813Z",
-    "alertTimestamp": "2026-09-10T16:08:49.333Z"
-  },
-  {
-    "match": "Esteglal Khuzestan vs Tractor FC",
-    "league": "Persian Gulf Pro League",
-    "tier": "AVISO",
-    "probability": 0.5842070413377569,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-09-10T17:39:37.465Z",
-    "alertTimestamp": "2026-09-10T16:08:49.333Z"
-  },
-  {
-    "match": "Al Sailiya vs Al Sadd",
-    "league": "Liga de Catar",
-    "tier": "AVISO",
-    "probability": 0.5609858478559505,
-    "minute": 77,
-    "scoreAtAlert": "2-5",
-    "finalScore": "3-6",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con muchos goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      19,
-      35,
-      48,
-      50,
-      58,
-      62,
-      75,
-      95,
-      100
-    ],
-    "timestamp": "2026-09-10T18:28:46.032Z",
-    "alertTimestamp": "2026-09-10T16:18:47.141Z"
-  },
-  {
-    "match": "Shinnik Yaroslavl vs Torpedo Moscow",
-    "league": "Copa de Rusia - Regions Path - Playoffs",
-    "tier": "AVISO",
-    "probability": 0.8801624860850809,
-    "minute": 25,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0 en Copa, alta probabilidad de gol en 15 min. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      30,
-      76
-    ],
-    "timestamp": "2026-09-10T18:28:46.063Z",
-    "alertTimestamp": "2026-09-10T16:38:47.212Z"
-  },
-  {
-    "match": "Fenerbahce vs AS Roma",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.887719553339133,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      39,
-      48
-    ],
-    "timestamp": "2026-09-10T18:39:05.236Z",
-    "alertTimestamp": "2026-09-10T16:48:56.188Z"
-  },
-  {
-    "match": "PSV Eindhoven vs Shakhtar Donetsk",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8826201561482038,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      46,
-      48
-    ],
-    "timestamp": "2026-09-10T18:39:05.278Z",
-    "alertTimestamp": "2026-09-10T16:48:56.188Z"
-  },
-  {
-    "match": "BFC Dynamo vs Sv Tasmania Berlin",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.8926908048119943,
-    "minute": 26,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, liga de alto scoring, sin datos que contradigan la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      50,
-      71,
-      90
-    ],
-    "timestamp": "2026-09-10T19:09:52.210Z",
-    "alertTimestamp": "2026-09-10T17:09:14.545Z"
-  },
-  {
-    "match": "Santos/Sp Youth vs Cuiabá/MT Youth",
-    "league": "Copa de Brasil Sub20 - Primera Fase",
-    "tier": "AVISO",
-    "probability": 0.5465571684301501,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      88,
-      125
-    ],
-    "timestamp": "2026-09-10T20:19:16.812Z",
-    "alertTimestamp": "2026-09-10T18:08:48.622Z"
-  },
-  {
-    "match": "Operário-PR Youth vs Chapecoense/Sc Youth",
-    "league": "Copa de Brasil Sub20 - Primera Fase",
-    "tier": "AVISO",
-    "probability": 0.5565291770049623,
-    "minute": 79,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-10T20:19:17.052Z",
-    "alertTimestamp": "2026-09-10T18:08:48.622Z"
-  },
-  {
-    "match": "Panathinaikos vs Kifisia",
-    "league": "Superliga Griega",
-    "tier": "AVISO",
-    "probability": 0.8725600915737113,
-    "minute": 22,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, xG estimado no fiable, sin grandes ocasiones pero con tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      53,
-      74,
-      81,
-      91
-    ],
-    "timestamp": "2026-09-10T20:19:17.110Z",
-    "alertTimestamp": "2026-09-10T18:18:58.342Z"
-  },
-  {
-    "match": "Municipal Limeño Reserva vs Águila Reserva",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5253055718051517,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-10T20:19:17.141Z",
-    "alertTimestamp": "2026-09-10T18:28:45.854Z"
-  },
-  {
-    "match": "Cannes vs Amiens",
-    "league": "Ligue 3",
-    "tier": "AVISO",
-    "probability": 0.5274941809101874,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con un jugador menos y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-10T20:48:45.511Z",
-    "alertTimestamp": "2026-09-10T18:48:46.533Z"
-  },
-  {
-    "match": "Slavia Praga vs Lens",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.5811640284012348,
-    "minute": 79,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos y un expulsado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      51,
-      73,
-      88,
-      91,
-      93
-    ],
-    "timestamp": "2026-09-11T01:49:43.350Z",
-    "alertTimestamp": "2026-09-10T19:09:41.292Z"
-  },
-  {
-    "match": "Bayern Munich vs Bodo Glimt",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8957175851840407,
-    "minute": 26,
-    "scoreAtAlert": "4-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      47,
-      61,
-      77,
-      83,
-      92
-    ],
-    "timestamp": "2026-09-11T01:49:43.472Z",
-    "alertTimestamp": "2026-09-10T19:09:41.292Z"
-  },
-  {
-    "match": "Como vs RB Leipzig",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.90985238100032,
-    "minute": 26,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, xG estimado no fiable, y ambos equipos con oportunidades claras.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      15,
-      38,
-      54,
-      58,
-      90
-    ],
-    "timestamp": "2026-09-11T01:49:43.589Z",
-    "alertTimestamp": "2026-09-10T19:09:41.292Z"
-  },
-  {
-    "match": "Cerro vs Club Sportivo Cerrito",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.8459652653798048,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      95
-    ],
-    "timestamp": "2026-09-11T01:49:43.827Z",
-    "alertTimestamp": "2026-09-10T19:09:41.292Z"
-  },
-  {
     "match": "Cienciano vs Montevideo City Torque",
     "league": "CONMEBOL Copa Sudamericana - Cuartos de Final",
     "tier": "AVISO",
@@ -22017,6 +21596,448 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-13T19:56:11.321Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Irlanda (F) vs Kazajistán (F)",
+    "league": "UEFA Women WC Qualifiers - Playoffs",
+    "tier": "AVISO",
+    "probability": 0.6121850388908575,
+    "minute": 67,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, xG estimado no fiable, Irlanda con 9 tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40,
+      48,
+      70,
+      73
+    ],
+    "timestamp": "2026-10-13T20:26:10.566Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Banks O' Dee vs Motherwell FC B",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.5715452263693976,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      41,
+      82
+    ],
+    "timestamp": "2026-10-13T20:36:12.509Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Bristol City vs Blackburn Rovers",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.864944520110763,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, con un equipo generando oportunidades claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-10-13T20:36:12.675Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Cove Rangers vs Formartine Utd",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.5611147553160549,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      28,
+      50
+    ],
+    "timestamp": "2026-10-13T20:36:12.992Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Stranraer vs Kilmarnock Reserves",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.9097352685494543,
+    "minute": 20,
+    "scoreAtAlert": "3-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      23,
+      28,
+      42,
+      80,
+      85
+    ],
+    "timestamp": "2026-10-13T20:46:02.614Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Fraserburgh vs Dundee United B",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.6056376714964349,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos goles en la liga, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      30,
+      62,
+      68,
+      90
+    ],
+    "timestamp": "2026-10-13T20:46:02.752Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Three Bridges vs Lewes",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.6118391034921508,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-13T20:46:03.065Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Cumbernauld Colts vs East Fife",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.8997913831333317,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      29,
+      68,
+      86
+    ],
+    "timestamp": "2026-10-13T20:46:03.837Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Cardiff vs Watford FC",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.8762606231021375,
+    "minute": 21,
+    "scoreAtAlert": "5-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, muchas chances y xG alto. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      35,
+      41,
+      50,
+      85,
+      87
+    ],
+    "timestamp": "2026-10-13T20:46:04.455Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Spartans vs Bonnyrigg Rose",
+    "league": "Challenge Cup",
+    "tier": "AVISO",
+    "probability": 0.6141611828016003,
+    "minute": 65,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un solo gol, xG estimado no confiable, y 28 minutos restantes.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      65,
+      68
+    ],
+    "timestamp": "2026-10-13T20:46:05.462Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Wolves vs Bolton",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.8504357173646935,
+    "minute": 21,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con una gran ocasión para el equipo visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      28,
+      50,
+      72,
+      82
+    ],
+    "timestamp": "2026-10-13T20:46:05.747Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Galatasaray vs FC Barcelona",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8947602549214915,
+    "minute": 25,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, con una gran ocasión y xG estimado para el Barcelona.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      28,
+      43,
+      50,
+      53,
+      65
+    ],
+    "timestamp": "2026-10-13T20:56:01.716Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Villarreal CF vs Nápoles",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8957209292682623,
+    "minute": 26,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, muchas ocasiones de gol y xG alto a pesar de ser estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      23,
+      26,
+      86
+    ],
+    "timestamp": "2026-10-13T20:56:01.918Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Arsenal vs Lille",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.6013666481424889,
+    "minute": 69,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 75,
+      "reason": "Partido no resuelto, xG estimado no fiable, y volumen de juego del Arsenal es alto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      64,
+      67,
+      71
+    ],
+    "timestamp": "2026-10-13T20:56:02.118Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "RB Leipzig vs PSV Eindhoven",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8941339909776024,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, ambos equipos con oportunidades y remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-10-13T20:56:02.276Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Atlético de Madrid vs Manchester United",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8962990296915047,
+    "minute": 24,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      79
+    ],
+    "timestamp": "2026-10-13T20:56:02.856Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Viking vs Bayern Munich",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5580926664456586,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      38,
+      54,
+      60,
+      71,
+      90
+    ],
+    "timestamp": "2026-10-13T20:56:03.014Z",
+    "alertTimestamp": "2026-10-13T19:06:30.528Z"
+  },
+  {
+    "match": "Haiti (F) vs Australia (F)",
+    "league": "Amistosos Femeninos",
+    "tier": "AVISO",
+    "probability": 0.6951582938745583,
+    "minute": 60,
+    "scoreAtAlert": "1-6",
+    "finalScore": "1-7",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no confiable, y modelo indica alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      3,
+      44,
+      53,
+      65,
+      72,
+      79,
+      89
+    ],
+    "timestamp": "2026-10-13T20:56:03.161Z",
     "alertTimestamp": "2026-10-13T19:06:30.528Z"
   }
 ]
