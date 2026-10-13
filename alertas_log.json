@@ -1,54 +1,5 @@
 [
   {
-    "match": "Norwich vs Birmingham",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5412934014123855,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no confiable, y ambos equipos con pocas ocasiones claras.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      28,
-      39,
-      64
-    ],
-    "timestamp": "2026-09-09T20:48:21.723Z",
-    "alertTimestamp": "2026-09-09T18:48:14.288Z"
-  },
-  {
-    "match": "Sporting CP vs Galatasaray",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9012194466782569,
-    "minute": 27,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Galatasaray con 2 grandes chances y 2 tiros a puerta, a pesar del xG estimado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      5,
-      27,
-      57,
-      63
-    ],
-    "timestamp": "2026-09-09T20:58:30.521Z",
-    "alertTimestamp": "2026-09-09T19:07:46.487Z"
-  },
-  {
     "match": "Liverpool vs Atlético de Madrid",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22019,5 +21970,53 @@
     ],
     "timestamp": "2026-10-12T23:57:27.024Z",
     "alertTimestamp": "2026-10-12T22:07:36.183Z"
+  },
+  {
+    "match": "Chapecoense vs Athletico Paranaense",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.5760202485554998,
+    "minute": 77,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con chances claras. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      29,
+      31,
+      72,
+      78
+    ],
+    "timestamp": "2026-10-13T00:27:09.793Z",
+    "alertTimestamp": "2026-10-12T22:37:19.908Z"
+  },
+  {
+    "match": "Criciúma vs América Mineiro",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.6540245846312799,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49
+    ],
+    "timestamp": "2026-10-13T00:37:10.554Z",
+    "alertTimestamp": "2026-10-12T22:37:19.908Z"
   }
 ]
