@@ -1,97 +1,5 @@
 [
   {
-    "match": "Argentina Sub20 (F) vs México Sub20 (F)",
-    "league": "Mundial Femenino Sub-20 - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.5221869853141018,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      29,
-      36,
-      42,
-      78,
-      92
-    ],
-    "timestamp": "2026-09-11T17:53:14.108Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
-    "match": "Oman Club vs Al Shabab",
-    "league": "Professional League",
-    "tier": "AVISO",
-    "probability": 0.8974991038498693,
-    "minute": 23,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      56
-    ],
-    "timestamp": "2026-09-11T18:04:32.551Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
-    "match": "Sport Boys (Reserva) vs Sporting Cristal (Reserva)",
-    "league": "Liga 3",
-    "tier": "AVISO",
-    "probability": 0.889546150255675,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reservas, sin datos de xG reales, pero el modelo da alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      48,
-      88
-    ],
-    "timestamp": "2026-09-11T18:04:32.646Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
-    "match": "Al Ittihad Aleppo vs Homs Al Fidaa SC",
-    "league": "Super Cup - Final",
-    "tier": "AVISO",
-    "probability": 0.8927488527916382,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de copa, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T18:14:29.109Z",
-    "alertTimestamp": "2026-09-11T16:23:02.202Z"
-  },
-  {
     "match": "VFB Oldenburg vs Hannover 96 II",
     "league": "Regionalliga - Norte",
     "tier": "AVISO",
@@ -22034,6 +21942,102 @@
       66
     ],
     "timestamp": "2026-10-14T17:33:38.522Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "Al Taawoun vs Al Rayyan",
+    "league": "AFC Liga de Campeones 2",
+    "tier": "AVISO",
+    "probability": 0.5151461820532107,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido ajustado, muchas ocasiones claras para el visitante. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      32,
+      38
+    ],
+    "timestamp": "2026-10-14T17:53:36.743Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "Al Ettifaq vs Kazma SC",
+    "league": "Gulf Club Champions League",
+    "tier": "AVISO",
+    "probability": 0.5318533006740644,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-10-14T18:03:36.950Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "Paide Linnameeskond vs JK Tammeka Tartu",
+    "league": "Meistriliiga",
+    "tier": "AVISO",
+    "probability": 0.5171581078763322,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y muchos tiros a puerta del visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      41,
+      44,
+      93
+    ],
+    "timestamp": "2026-10-14T18:03:37.229Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "Feyenoord vs Como",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5837928599086165,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      18,
+      20,
+      52,
+      81,
+      93
+    ],
+    "timestamp": "2026-10-14T18:43:35.378Z",
     "alertTimestamp": "2026-10-14T16:53:34.127Z"
   }
 ]
