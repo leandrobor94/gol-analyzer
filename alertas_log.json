@@ -1,25 +1,5 @@
 [
   {
-    "match": "Hobro IK vs Vejle",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.8715037118804448,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T17:53:10.347Z",
-    "alertTimestamp": "2026-09-11T16:12:29.512Z"
-  },
-  {
     "match": "Argentina Sub20 (F) vs México Sub20 (F)",
     "league": "Mundial Femenino Sub-20 - Grupo A",
     "tier": "AVISO",
@@ -22031,5 +22011,29 @@
     "goalMinutes": [],
     "timestamp": "2026-10-13T23:06:01.806Z",
     "alertTimestamp": "2026-10-13T21:26:04.164Z"
+  },
+  {
+    "match": "Dynamo Makhachkala vs Zenit",
+    "league": "Copa de Rusia - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.6052108985941734,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      37,
+      66
+    ],
+    "timestamp": "2026-10-14T17:33:38.522Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
   }
 ]
