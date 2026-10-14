@@ -1,212 +1,5 @@
 [
   {
-    "match": "FC Rapperswil-Jona vs Yverdon-Sport FC",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.8812456923651141,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      70,
-      93
-    ],
-    "timestamp": "2026-09-11T19:34:55.731Z",
-    "alertTimestamp": "2026-09-11T17:32:56.634Z"
-  },
-  {
-    "match": "FC Stade Lausanne Ouchy vs FC Wil 1900",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.9075223081782091,
-    "minute": 21,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto, marcador ajustado y oportunidades claras para ambos equipos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      19,
-      32,
-      52,
-      67
-    ],
-    "timestamp": "2026-09-11T19:34:55.995Z",
-    "alertTimestamp": "2026-09-11T17:32:56.634Z"
-  },
-  {
-    "match": "Atlas Delmenhorst vs Drochtersen / Assel",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9112307074875325,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      10,
-      59,
-      95
-    ],
-    "timestamp": "2026-09-11T19:34:56.102Z",
-    "alertTimestamp": "2026-09-11T17:43:17.961Z"
-  },
-  {
-    "match": "Heracles vs Jong AZ Alkmaar",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.9012051899647004,
-    "minute": 22,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, xG estimado no es fiable, y hay grandes oportunidades para ambos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      6,
-      20,
-      43,
-      53,
-      69
-    ],
-    "timestamp": "2026-09-11T19:58:06.135Z",
-    "alertTimestamp": "2026-09-11T18:04:24.293Z"
-  },
-  {
-    "match": "Clermont Foot vs Boulogne",
-    "league": "Ligue 2",
-    "tier": "AVISO",
-    "probability": 0.5280569440595952,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T19:58:06.255Z",
-    "alertTimestamp": "2026-09-11T18:04:24.293Z"
-  },
-  {
-    "match": "Un Kaerjeng 97 vs Victoria Rosport",
-    "league": "BGL Ligue - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5176536738733959,
-    "minute": 79,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      1,
-      11,
-      27,
-      31,
-      76
-    ],
-    "timestamp": "2026-09-11T19:58:06.358Z",
-    "alertTimestamp": "2026-09-11T18:04:24.293Z"
-  },
-  {
-    "match": "Helmond vs Jong PSV Eindhoven",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.5362209231656954,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      10,
-      27,
-      76,
-      77
-    ],
-    "timestamp": "2026-09-11T19:58:06.599Z",
-    "alertTimestamp": "2026-09-11T18:04:24.293Z"
-  },
-  {
-    "match": "Derby Sub21 vs Tottenham Sub21",
-    "league": "Premier League 2 - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5533034231673635,
-    "minute": 76,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de alta puntuación, aunque el marcador es 1-3, el xG es estimado y no hay big chances.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      2,
-      5,
-      27,
-      47
-    ],
-    "timestamp": "2026-09-11T20:14:54.674Z",
-    "alertTimestamp": "2026-09-11T18:04:24.293Z"
-  },
-  {
-    "match": "Cruz Azul Hidalgo vs Piratas FC",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8491203672259816,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, con una gran chance para el visitante y xG estimado no concluyente.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      33,
-      36
-    ],
-    "timestamp": "2026-09-11T20:15:04.044Z",
-    "alertTimestamp": "2026-09-11T18:14:20.290Z"
-  },
-  {
     "match": "Jong Ajax vs RKC Waalwijk",
     "league": "Eerste Divisie",
     "tier": "AVISO",
@@ -22028,5 +21821,231 @@
     ],
     "timestamp": "2026-10-14T20:43:32.404Z",
     "alertTimestamp": "2026-10-14T18:43:34.606Z"
+  },
+  {
+    "match": "Aston Villa vs Fenerbahce",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9018641557299526,
+    "minute": 23,
+    "scoreAtAlert": "5-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no fiable, y 2 grandes ocasiones para el visitante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      31,
+      39,
+      68,
+      72,
+      90
+    ],
+    "timestamp": "2026-10-14T20:53:31.817Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Slovan Bratislava vs Stuttgart",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9061855197835591,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas chances de gol y xG estimado alto para el visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      65,
+      90
+    ],
+    "timestamp": "2026-10-14T20:53:32.013Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Bodo Glimt vs Borussia Dortmund",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.6489951355708211,
+    "minute": 67,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado, muchas chances de gol para el local. El xG es estimado, pero las grandes chances no.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      52
+    ],
+    "timestamp": "2026-10-14T20:53:32.170Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Manchester City vs PSG",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9015964867785263,
+    "minute": 21,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      15,
+      32,
+      53,
+      62,
+      75
+    ],
+    "timestamp": "2026-10-14T21:03:58.825Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Shakhtar Donetsk vs AEK Atenas",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.6164715403993116,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas ocasiones de gol y xG estimado alto para ambos equipos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      28,
+      34,
+      80,
+      86
+    ],
+    "timestamp": "2026-10-14T21:03:58.972Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Real Betis vs FC Porto",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.896543058267859,
+    "minute": 23,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, sin goles, y con oportunidades claras para ambos equipos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      54,
+      61,
+      74,
+      84
+    ],
+    "timestamp": "2026-10-14T21:03:59.124Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "AS Roma vs Real Madrid",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8996579875480799,
+    "minute": 23,
+    "scoreAtAlert": "3-4",
+    "finalScore": "3-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, marcador ajustado y sin señales de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      25,
+      51,
+      57,
+      83,
+      85,
+      90
+    ],
+    "timestamp": "2026-10-14T21:03:59.277Z",
+    "alertTimestamp": "2026-10-14T19:03:33.139Z"
+  },
+  {
+    "match": "Club Atletico Barinas vs Real Frontera",
+    "league": "Copa Venezuela",
+    "tier": "AVISO",
+    "probability": 0.5266130714206325,
+    "minute": 76,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 1-0, xG estimado no fiable, pero el modelo da alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      67,
+      79
+    ],
+    "timestamp": "2026-10-14T21:23:31.050Z",
+    "alertTimestamp": "2026-10-14T19:33:39.506Z"
+  },
+  {
+    "match": "Atletico Ávila FC vs Anzoategui Futbol Club",
+    "league": "Copa Venezuela",
+    "tier": "AVISO",
+    "probability": 0.5161352014318573,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, con minutos restantes y xG estimado, no hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      43,
+      50,
+      71
+    ],
+    "timestamp": "2026-10-14T21:33:30.727Z",
+    "alertTimestamp": "2026-10-14T19:43:33.816Z"
   }
 ]
