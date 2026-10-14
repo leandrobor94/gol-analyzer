@@ -1,191 +1,5 @@
 [
   {
-    "match": "VFB Oldenburg vs Hannover 96 II",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9007729668613497,
-    "minute": 21,
-    "scoreAtAlert": "4-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, sin goles, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      29,
-      34,
-      59,
-      70,
-      70,
-      81,
-      88
-    ],
-    "timestamp": "2026-09-11T18:35:05.597Z",
-    "alertTimestamp": "2026-09-11T16:33:46.247Z"
-  },
-  {
-    "match": "Flamurtari Vlore vs KS Burreli",
-    "league": "Kategoria e Parë",
-    "tier": "AVISO",
-    "probability": 0.886986297056774,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no fiable, un tiro a puerta local. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T18:35:07.359Z",
-    "alertTimestamp": "2026-09-11T16:33:46.247Z"
-  },
-  {
-    "match": "SV Darmstadt 98 vs Arminia Bielefeld",
-    "league": "2. Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.9103355323709247,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      59,
-      86
-    ],
-    "timestamp": "2026-09-11T18:35:07.472Z",
-    "alertTimestamp": "2026-09-11T16:33:46.247Z"
-  },
-  {
-    "match": "FC Nürnberg vs Hannover",
-    "league": "2. Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.9121387096367806,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      8,
-      65
-    ],
-    "timestamp": "2026-09-11T18:35:09.951Z",
-    "alertTimestamp": "2026-09-11T16:33:46.247Z"
-  },
-  {
-    "match": "SKU Amstetten vs Austria Vienna (AM)",
-    "league": "2º División de Austria",
-    "tier": "AVISO",
-    "probability": 0.860501414653198,
-    "minute": 20,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 2º División de Austria, con un marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      1,
-      21,
-      24,
-      59,
-      60,
-      64
-    ],
-    "timestamp": "2026-09-11T18:35:14.087Z",
-    "alertTimestamp": "2026-09-11T16:42:29.305Z"
-  },
-  {
-    "match": "FC Copenhague vs Horsens",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8920235160918519,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles esperados, marcador ajustado y chances claras para ambos equipos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      49
-    ],
-    "timestamp": "2026-09-11T18:55:34.553Z",
-    "alertTimestamp": "2026-09-11T17:02:51.255Z"
-  },
-  {
-    "match": "Vendsyssel FF vs Aarhus Fremad",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.8740623673426912,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T18:55:34.714Z",
-    "alertTimestamp": "2026-09-11T17:02:51.255Z"
-  },
-  {
-    "match": "Bodo Glimt (W) vs Aalesunds FK (W)",
-    "league": "Toppserien",
-    "tier": "AVISO",
-    "probability": 0.55332281730465,
-    "minute": 76,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Aalesunds FK (W) has high shots on target, indicating potential for more goals despite xG estimation.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T18:55:52.161Z",
-    "alertTimestamp": "2026-09-11T17:02:51.255Z"
-  },
-  {
     "match": "Weiche Flensburg vs Hamburg SV II",
     "league": "Regionalliga - Norte",
     "tier": "AVISO",
@@ -22039,5 +21853,186 @@
     ],
     "timestamp": "2026-10-14T18:43:35.378Z",
     "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "Al Waab vs Umm Salal",
+    "league": "Q League",
+    "tier": "AVISO",
+    "probability": 0.5511981450136492,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un jugador menos y xG estimado. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-14T18:53:34.467Z",
+    "alertTimestamp": "2026-10-14T16:53:34.127Z"
+  },
+  {
+    "match": "SC Verl vs SSV Jahn Regensburg",
+    "league": "3. Liga - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5426974233996252,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      43,
+      65,
+      73
+    ],
+    "timestamp": "2026-10-14T18:53:34.943Z",
+    "alertTimestamp": "2026-10-14T17:03:37.927Z"
+  },
+  {
+    "match": "Bryne vs Raufoss",
+    "league": "OBOS-ligaen",
+    "tier": "AVISO",
+    "probability": 0.5263727963551884,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en liga de alto scoring.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      42,
+      64
+    ],
+    "timestamp": "2026-10-14T18:53:35.954Z",
+    "alertTimestamp": "2026-10-14T17:03:37.927Z"
+  },
+  {
+    "match": "Eintracht Frankfurt II vs VfR Mannheim",
+    "league": "Regionalliga - Sudwest",
+    "tier": "AVISO",
+    "probability": 0.9042856560112282,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      83
+    ],
+    "timestamp": "2026-10-14T19:03:33.788Z",
+    "alertTimestamp": "2026-10-14T17:03:37.927Z"
+  },
+  {
+    "match": "Gzira United vs Mosta FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8566876428420219,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, sin grandes ocasiones ni tiros a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      82,
+      95
+    ],
+    "timestamp": "2026-10-14T19:03:34.066Z",
+    "alertTimestamp": "2026-10-14T17:03:37.927Z"
+  },
+  {
+    "match": "Hodd vs Ranheim",
+    "league": "OBOS-ligaen",
+    "tier": "AVISO",
+    "probability": 0.5463833144345032,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      51,
+      85
+    ],
+    "timestamp": "2026-10-14T19:03:34.202Z",
+    "alertTimestamp": "2026-10-14T17:03:37.927Z"
+  },
+  {
+    "match": "1. FC Kaiserslautern II vs FSV Frankfurt",
+    "league": "Regionalliga - Sudwest",
+    "tier": "AVISO",
+    "probability": 0.6092231571658457,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      17,
+      29,
+      37
+    ],
+    "timestamp": "2026-10-14T19:03:34.890Z",
+    "alertTimestamp": "2026-10-14T17:13:34.681Z"
+  },
+  {
+    "match": "Al Shomooa SC vs Al Ittihad",
+    "league": "Premier League - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.6116128383739046,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-14T19:13:33.777Z",
+    "alertTimestamp": "2026-10-14T17:23:38.215Z"
   }
 ]
