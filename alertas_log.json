@@ -1,153 +1,5 @@
 [
   {
-    "match": "Weiche Flensburg vs Hamburg SV II",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9112307074875325,
-    "minute": 20,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      34,
-      61,
-      77
-    ],
-    "timestamp": "2026-09-11T18:55:52.273Z",
-    "alertTimestamp": "2026-09-11T17:13:06.598Z"
-  },
-  {
-    "match": "Besiktas vs Erzurumspor FK",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.880939354977947,
-    "minute": 22,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, y aunque el xG es estimado, hay big chances.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      27,
-      81
-    ],
-    "timestamp": "2026-09-11T19:04:40.713Z",
-    "alertTimestamp": "2026-09-11T17:02:51.255Z"
-  },
-  {
-    "match": "FC Minsk vs Slavia Mozyr",
-    "league": "Vysshaya Liga",
-    "tier": "AVISO",
-    "probability": 0.8815063342448313,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no es fiable, pero hay remates a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      76
-    ],
-    "timestamp": "2026-09-11T19:04:41.376Z",
-    "alertTimestamp": "2026-09-11T17:13:06.598Z"
-  },
-  {
-    "match": "Rot-Weiss Erfurt vs Rsv Eintracht",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.9112307074875325,
-    "minute": 20,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      66,
-      75,
-      80,
-      84
-    ],
-    "timestamp": "2026-09-11T19:04:41.832Z",
-    "alertTimestamp": "2026-09-11T17:13:06.598Z"
-  },
-  {
-    "match": "Rot-weiss Oberhausen vs FC Schalke 04 II",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.8977361839719481,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      39,
-      46,
-      75,
-      94,
-      96
-    ],
-    "timestamp": "2026-09-11T19:34:45.384Z",
-    "alertTimestamp": "2026-09-11T17:32:56.634Z"
-  },
-  {
-    "match": "Stade Nyonnais vs Xamax",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.8787999572051493,
-    "minute": 22,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con xG estimado no concluyente. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      31,
-      33,
-      72,
-      84
-    ],
-    "timestamp": "2026-09-11T19:34:45.515Z",
-    "alertTimestamp": "2026-09-11T17:32:56.634Z"
-  },
-  {
     "match": "FC Rapperswil-Jona vs Yverdon-Sport FC",
     "league": "Challenge League",
     "tier": "AVISO",
@@ -22034,5 +21886,147 @@
     "goalMinutes": [],
     "timestamp": "2026-10-14T19:13:33.777Z",
     "alertTimestamp": "2026-10-14T17:23:38.215Z"
+  },
+  {
+    "match": "Tigre (Reserva) vs Argentinos Juniors (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8741432144399847,
+    "minute": 24,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de reserva 0-0, xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-14T19:53:33.860Z",
+    "alertTimestamp": "2026-10-14T18:03:35.483Z"
+  },
+  {
+    "match": "Flamengo Sub20 vs Criciúma/Sc Youth",
+    "league": "Copa de Brasil Sub20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5255700018145807,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, aunque el marcador es 3-1, el modelo aún da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      41,
+      48,
+      64,
+      90
+    ],
+    "timestamp": "2026-10-14T19:53:34.181Z",
+    "alertTimestamp": "2026-10-14T18:03:35.483Z"
+  },
+  {
+    "match": "Santa Cruz/Pe Youth vs São Raimundo/Rr Youth",
+    "league": "Copa de Brasil Sub20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8869947704930036,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 2-0 no es definitivo. El modelo da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      22,
+      64
+    ],
+    "timestamp": "2026-10-14T20:03:35.650Z",
+    "alertTimestamp": "2026-10-14T18:03:35.483Z"
+  },
+  {
+    "match": "Colón (Reserva) vs Independiente Rivadavia (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5268075141437593,
+    "minute": 76,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con un gol de diferencia y un jugador menos, aún hay posibilidades.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-14T20:03:36.096Z",
+    "alertTimestamp": "2026-10-14T18:03:35.483Z"
+  },
+  {
+    "match": "América-Rn Youth vs Paysandu/Pa Youth",
+    "league": "Copa de Brasil Sub20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5222238838876939,
+    "minute": 76,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa con un equipo con 10 jugadores y marcador 0-2. Aún hay tiempo para un gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      42,
+      73
+    ],
+    "timestamp": "2026-10-14T20:03:36.359Z",
+    "alertTimestamp": "2026-10-14T18:13:35.108Z"
+  },
+  {
+    "match": "Boston River vs CA River Plate",
+    "league": "Copa Uruguay - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5126401441059347,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      121,
+      121,
+      123,
+      123,
+      124,
+      125,
+      125
+    ],
+    "timestamp": "2026-10-14T20:43:32.404Z",
+    "alertTimestamp": "2026-10-14T18:43:34.606Z"
   }
 ]
