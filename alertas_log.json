@@ -1,70 +1,5 @@
 [
   {
-    "match": "Jong Ajax vs RKC Waalwijk",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.8454087773541104,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      84,
-      91
-    ],
-    "timestamp": "2026-09-11T20:15:04.162Z",
-    "alertTimestamp": "2026-09-11T18:14:20.290Z"
-  },
-  {
-    "match": "Spartak Subotica vs Napredak Krusevac",
-    "league": "Prva Liga",
-    "tier": "AVISO",
-    "probability": 0.8994139919834885,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      53
-    ],
-    "timestamp": "2026-09-11T20:15:04.876Z",
-    "alertTimestamp": "2026-09-11T18:14:20.290Z"
-  },
-  {
-    "match": "General Diaz vs Pilcomayo",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.9036496246570809,
-    "minute": 21,
-    "scoreAtAlert": "0-3",
-    "finalScore": "2-5",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-11T20:15:05.077Z",
-    "alertTimestamp": "2026-09-11T18:24:54.321Z"
-  },
-  {
     "match": "Rennes vs Olympique Marsella",
     "league": "Ligue 1",
     "tier": "AVISO",
@@ -22047,5 +21982,76 @@
     ],
     "timestamp": "2026-10-14T21:33:30.727Z",
     "alertTimestamp": "2026-10-14T19:43:33.816Z"
+  },
+  {
+    "match": "Marte Soyapango vs AD FORFUT",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.5719403632683109,
+    "minute": 78,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-15T16:41:39.771Z",
+    "alertTimestamp": "2026-10-15T02:34:40.836Z"
+  },
+  {
+    "match": "Al Hazm vs Al Fateh",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5593888011365952,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto con xG estimado alto y muchas ocasiones claras para ambos equipos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      27,
+      49,
+      88,
+      95
+    ],
+    "timestamp": "2026-10-15T17:21:03.231Z",
+    "alertTimestamp": "2026-10-15T16:41:39.022Z"
+  },
+  {
+    "match": "Dinamo Minsk vs Slavia Mozyr",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.66534616817508,
+    "minute": 63,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no fiable, y un solo gol de diferencia.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      53,
+      65,
+      78,
+      93
+    ],
+    "timestamp": "2026-10-15T17:30:33.157Z",
+    "alertTimestamp": "2026-10-15T16:41:39.022Z"
   }
 ]
