@@ -1,41 +1,5 @@
 [
   {
-    "match": "Pisa vs Virtus Entella",
-    "league": "Serie B italiana",
-    "tier": "AVISO",
-    "probability": 0.8488677055121072,
-    "minute": 20,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      2,
-      32,
-      47,
-      73,
-      80
-    ],
-    "timestamp": "2026-09-12T01:54:14.221Z",
-    "alertTimestamp": "2026-09-11T19:14:29.002Z"
-  },
-  {
-    "match": "Strabane Athletic vs Newry City",
-    "league": "NIFL Championship",
-    "tier": "AVISO",
-    "probability": 0.8519028891746666,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T01:54:14.435Z",
-    "alertTimestamp": "2026-09-11T19:14:29.002Z"
-  },
-  {
     "match": "ACF Zapotlanejo vs Real Apodaca Fc",
     "league": "Premier A - Grupo A",
     "tier": "AVISO",
@@ -22086,5 +22050,56 @@
     ],
     "timestamp": "2026-10-15T19:30:29.885Z",
     "alertTimestamp": "2026-10-15T17:30:32.577Z"
+  },
+  {
+    "match": "Rodina Moscow vs Spartak Moscú",
+    "league": "Copa de Rusia - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8990923512663107,
+    "minute": 21,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      40,
+      42,
+      48,
+      64,
+      98
+    ],
+    "timestamp": "2026-10-15T19:50:29.365Z",
+    "alertTimestamp": "2026-10-15T17:50:32.098Z"
+  },
+  {
+    "match": "Club Xelaju vs Deportivo Malacateco",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8546788090192667,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      32,
+      51
+    ],
+    "timestamp": "2026-10-15T20:10:29.809Z",
+    "alertTimestamp": "2026-10-15T18:10:31.330Z"
   }
 ]
