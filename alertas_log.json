@@ -1,101 +1,5 @@
 [
   {
-    "match": "Venezia vs Fiorentina",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.5489755007260261,
-    "minute": 80,
-    "scoreAtAlert": "1-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      22,
-      29,
-      30,
-      66,
-      84,
-      86
-    ],
-    "timestamp": "2026-09-11T20:43:48.963Z",
-    "alertTimestamp": "2026-09-11T18:55:26.457Z"
-  },
-  {
-    "match": "Shelbourne vs Derry City",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.5166837666849604,
-    "minute": 80,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      93
-    ],
-    "timestamp": "2026-09-11T20:43:51.671Z",
-    "alertTimestamp": "2026-09-11T18:55:26.457Z"
-  },
-  {
-    "match": "St. Patricks vs Shamrock",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.9080529724349692,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, marcador ajustado, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      4,
-      33
-    ],
-    "timestamp": "2026-09-11T20:52:52.902Z",
-    "alertTimestamp": "2026-09-11T19:04:35.834Z"
-  },
-  {
-    "match": "Sportivo Ameliano vs CS San Lorenzo",
-    "league": "Copa de Primera - Clausura",
-    "tier": "AVISO",
-    "probability": 0.861341569856502,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      85
-    ],
-    "timestamp": "2026-09-12T01:54:11.963Z",
-    "alertTimestamp": "2026-09-11T19:04:35.834Z"
-  },
-  {
-    "match": "Sevilla FC vs Valencia CF",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8970857102224101,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      81
-    ],
-    "timestamp": "2026-09-12T01:54:13.725Z",
-    "alertTimestamp": "2026-09-11T19:14:29.002Z"
-  },
-  {
     "match": "Pisa vs Virtus Entella",
     "league": "Serie B italiana",
     "tier": "AVISO",
@@ -22067,5 +21971,120 @@
     ],
     "timestamp": "2026-10-15T18:30:30.369Z",
     "alertTimestamp": "2026-10-15T16:50:32.591Z"
+  },
+  {
+    "match": "Al Ahli Benghazi vs Tahaddy Benghazi",
+    "league": "Premier League - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.9044584637715252,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-15T18:41:01.975Z",
+    "alertTimestamp": "2026-10-15T16:41:39.022Z"
+  },
+  {
+    "match": "Torreense vs Sunderland",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5176616072769239,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      37,
+      67,
+      93
+    ],
+    "timestamp": "2026-10-15T18:50:29.795Z",
+    "alertTimestamp": "2026-10-15T16:50:32.591Z"
+  },
+  {
+    "match": "Muglaspor vs Bursaspor",
+    "league": "1. Lig",
+    "tier": "AVISO",
+    "probability": 0.8503279589331633,
+    "minute": 21,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51,
+      58,
+      83
+    ],
+    "timestamp": "2026-10-15T19:01:07.406Z",
+    "alertTimestamp": "2026-10-15T17:01:05.925Z"
+  },
+  {
+    "match": "FC ML Vitebsk vs Torpedo-BelAZ Zhodino",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.8984307138536459,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no real, sin datos de ocasiones claras. No hay razón para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38,
+      73
+    ],
+    "timestamp": "2026-10-15T19:21:09.149Z",
+    "alertTimestamp": "2026-10-15T17:41:34.974Z"
+  },
+  {
+    "match": "AS Holon vs Beitar Petah Tikva",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8505616396976473,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      26,
+      36,
+      92
+    ],
+    "timestamp": "2026-10-15T19:30:29.885Z",
+    "alertTimestamp": "2026-10-15T17:30:32.577Z"
   }
 ]
