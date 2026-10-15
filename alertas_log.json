@@ -1,105 +1,5 @@
 [
   {
-    "match": "ACF Zapotlanejo vs Real Apodaca Fc",
-    "league": "Premier A - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.8766538921858416,
-    "minute": 23,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T15:26:55.989Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "New Mexico vs Indy Eleven",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8659843040824478,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles esperados, marcador ajustado y sin razones para rechazar la alerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      16,
-      18,
-      50,
-      59
-    ],
-    "timestamp": "2026-09-12T15:26:56.610Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "UMECIT FC Sub20 vs Plaza Amador Sub20",
-    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.5872008356055438,
-    "minute": 76,
-    "scoreAtAlert": "4-6",
-    "finalScore": "4-6",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T15:27:12.453Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "Correcaminos vs Cancún FC",
-    "league": "Liga de Expansión MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5778258669826164,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      23,
-      79,
-      92
-    ],
-    "timestamp": "2026-09-12T15:27:12.641Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "Cruz Azul (F) vs U.N.A.M.- Pumas (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.560775284726558,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      24,
-      35,
-      67,
-      75
-    ],
-    "timestamp": "2026-09-12T15:27:12.918Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
     "match": "Necaxa vs Puebla",
     "league": "Liga MX - Apertura",
     "tier": "AVISO",
@@ -22101,5 +22001,124 @@
     ],
     "timestamp": "2026-10-15T20:10:29.809Z",
     "alertTimestamp": "2026-10-15T18:10:31.330Z"
+  },
+  {
+    "match": "Bournemouth vs Sturm Graz",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8575544701030299,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      43,
+      76,
+      92
+    ],
+    "timestamp": "2026-10-15T21:00:56.390Z",
+    "alertTimestamp": "2026-10-15T19:10:29.456Z"
+  },
+  {
+    "match": "STVV vs FC Iberia 1999",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.8633862470535819,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      88
+    ],
+    "timestamp": "2026-10-15T21:00:56.474Z",
+    "alertTimestamp": "2026-10-15T19:10:29.456Z"
+  },
+  {
+    "match": "Ferencvaros vs Viktoria Plzen",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8486465346919279,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, con chances claras para ambos equipos. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      81,
+      90
+    ],
+    "timestamp": "2026-10-15T21:00:56.766Z",
+    "alertTimestamp": "2026-10-15T19:10:29.456Z"
+  },
+  {
+    "match": "N.E.C. Nijmegen vs Levski Sofia",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8595746451132993,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      35,
+      64
+    ],
+    "timestamp": "2026-10-15T21:00:56.841Z",
+    "alertTimestamp": "2026-10-15T19:10:29.456Z"
+  },
+  {
+    "match": "Jagiellonia vs FC Ararat-Armenia",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8554843043093706,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      13,
+      38,
+      51
+    ],
+    "timestamp": "2026-10-15T21:00:56.884Z",
+    "alertTimestamp": "2026-10-15T19:10:29.456Z"
   }
 ]
