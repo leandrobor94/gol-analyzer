@@ -24,13 +24,93 @@
       "timestamp": 1792169612184,
       "minute": 21,
       "tier": "AVISO"
+    },
+    "4635993_AVISO": {
+      "timestamp": 1792171425132,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4856486_AVISO": {
+      "timestamp": 1792171425132,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4877565_AVISO": {
+      "timestamp": 1792171425132,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4769250_AVISO": {
+      "timestamp": 1792171425132,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4769252_AVISO": {
+      "timestamp": 1792171425132,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4736375_AVISO": {
+      "timestamp": 1792172020934,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4760413_AVISO": {
+      "timestamp": 1792172020934,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4874277_AVISO": {
+      "timestamp": 1792172020934,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4742578_AVISO": {
+      "timestamp": 1792172020934,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4866384_AVISO": {
+      "timestamp": 1792172020934,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4762733_AVISO": {
+      "timestamp": 1792173214809,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4769246_AVISO": {
+      "timestamp": 1792173214809,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4747953_AVISO": {
+      "timestamp": 1792173214809,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4876367_AVISO": {
+      "timestamp": 1792173214809,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4757650_AVISO": {
+      "timestamp": 1792173817886,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4775911_AVISO": {
+      "timestamp": 1792173817886,
+      "minute": 76,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 12270,
-    "verified": 12210,
-    "withGoalTimeline": 8503,
+    "total": 12279,
+    "verified": 12209,
+    "withGoalTimeline": 8504,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-16T17:13:35.924Z"
+  "lastUpdated": "2026-10-16T18:13:35.668Z"
 }
