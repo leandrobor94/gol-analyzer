@@ -1,84 +1,5 @@
 [
   {
-    "match": "Necaxa vs Puebla",
-    "league": "Liga MX - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5414702543265235,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      93
-    ],
-    "timestamp": "2026-09-12T15:27:13.079Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "Gimnasia y Tiro vs Tristan Suárez",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5407335187876527,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T15:27:13.378Z",
-    "alertTimestamp": "2026-09-12T01:54:11.001Z"
-  },
-  {
-    "match": "Swansea vs Burnley",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.5954059588197862,
-    "minute": 78,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con goles y ocasiones, a pesar del marcador, el xG estimado sugiere que aún hay potencial.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      33,
-      58,
-      68
-    ],
-    "timestamp": "2026-09-12T16:01:29.199Z",
-    "alertTimestamp": "2026-09-12T15:26:52.131Z"
-  },
-  {
-    "match": "AFC Wimbledon vs Doncaster",
-    "league": "League One",
-    "tier": "AVISO",
-    "probability": 0.5742464398021982,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Doncaster con xG alto y más tiros a puerta, a pesar de xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      43
-    ],
-    "timestamp": "2026-09-12T16:02:18.285Z",
-    "alertTimestamp": "2026-09-12T15:26:52.131Z"
-  },
-  {
     "match": "Southampton vs Bristol City",
     "league": "Championship",
     "tier": "AVISO",
@@ -22120,5 +22041,97 @@
     ],
     "timestamp": "2026-10-15T21:00:56.884Z",
     "alertTimestamp": "2026-10-15T19:10:29.456Z"
+  },
+  {
+    "match": "Cumbaya vs 22 de Julio",
+    "league": "Serie B - Fase de grupos - Grupo Descenso",
+    "tier": "AVISO",
+    "probability": 0.886861489946459,
+    "minute": 20,
+    "scoreAtAlert": "6-0",
+    "finalScore": "7-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      8,
+      42,
+      43,
+      45,
+      59,
+      87,
+      89
+    ],
+    "timestamp": "2026-10-16T02:21:38.207Z",
+    "alertTimestamp": "2026-10-15T20:10:29.660Z"
+  },
+  {
+    "match": "Dragonas (F) vs Belgrano (F)",
+    "league": "CONMEBOL Libertadores Femenina - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.8525179607333401,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24,
+      41
+    ],
+    "timestamp": "2026-10-16T02:21:38.401Z",
+    "alertTimestamp": "2026-10-15T20:10:29.660Z"
+  },
+  {
+    "match": "Academia BP vs CD Vendaval",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.9044584637715252,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-16T02:21:39.155Z",
+    "alertTimestamp": "2026-10-15T21:10:28.482Z"
+  },
+  {
+    "match": "CS Sébaco vs Rancho Santana",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.9014806493889114,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no confiable, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-16T02:21:39.784Z",
+    "alertTimestamp": "2026-10-15T21:21:24.729Z"
   }
 ]
