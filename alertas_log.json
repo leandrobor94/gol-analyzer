@@ -1,266 +1,5 @@
 [
   {
-    "match": "Karmiotissa vs Omonia Aradippou",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.8889069669396401,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      41,
-      88
-    ],
-    "timestamp": "2026-09-12T18:01:31.564Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Kickers Emden vs SSV Jeddeloh",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8877936042873661,
-    "minute": 25,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, minuto 25, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      28,
-      43,
-      48,
-      49,
-      67
-    ],
-    "timestamp": "2026-09-12T18:01:31.715Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Toulouse (W) vs Le Havre (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.5982390510515279,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      45,
-      59
-    ],
-    "timestamp": "2026-09-12T18:01:54.023Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Petrocub S-G vs Real Sireti",
-    "league": "Super Liga",
-    "tier": "AVISO",
-    "probability": 0.5972416139944537,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      63,
-      65,
-      69
-    ],
-    "timestamp": "2026-09-12T18:01:59.351Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "CSKA 1948 Sofia vs Dunav Rousse",
-    "league": "Liga de Bulgaria",
-    "tier": "AVISO",
-    "probability": 0.9076085221096363,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      46,
-      90
-    ],
-    "timestamp": "2026-09-12T18:02:09.345Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Young Africans vs Gaborone United",
-    "league": "CAF Champions League - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.9065955760622051,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      7,
-      84,
-      87
-    ],
-    "timestamp": "2026-09-12T18:02:09.719Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Nantes (W) vs Fleury 91 (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.5949563937588841,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      49,
-      92
-    ],
-    "timestamp": "2026-09-12T18:02:10.415Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Differdange 03 vs Etzella Ettelbruck",
-    "league": "BGL Ligue - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.9125841035693949,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      13
-    ],
-    "timestamp": "2026-09-12T18:02:13.176Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Rosenborg vs Tromso",
-    "league": "Eliteserien",
-    "tier": "AVISO",
-    "probability": 0.8930924994794425,
-    "minute": 20,
-    "scoreAtAlert": "5-3",
-    "finalScore": "5-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 pero xG estimado y muchos minutos por jugar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      5,
-      34,
-      43,
-      47,
-      71,
-      75,
-      77
-    ],
-    "timestamp": "2026-09-12T18:02:13.554Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "Lazio vs AC Milan",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.9028007089707275,
-    "minute": 27,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Lazio lidera 1-0 con 3 grandes oportunidades y xG estimado alto, el partido no está resuelto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      10,
-      39,
-      65,
-      67
-    ],
-    "timestamp": "2026-09-12T18:02:16.486Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
-    "match": "FC Thun vs Grasshopper Club",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.9047692428769458,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      23
-    ],
-    "timestamp": "2026-09-12T18:11:32.862Z",
-    "alertTimestamp": "2026-09-12T16:11:20.761Z"
-  },
-  {
     "match": "Urartu vs Noah",
     "league": "Premier League",
     "tier": "AVISO",
@@ -22159,5 +21898,266 @@
     ],
     "timestamp": "2026-10-16T19:03:43.901Z",
     "alertTimestamp": "2026-10-16T17:13:34.567Z"
+  },
+  {
+    "match": "Weiche Flensburg vs Drochtersen / Assel",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.9012635638067265,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido 0-0 en minuto 22, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      33,
+      43,
+      85
+    ],
+    "timestamp": "2026-10-16T19:23:39.634Z",
+    "alertTimestamp": "2026-10-16T17:33:40.934Z"
+  },
+  {
+    "match": "Ac Bellinzona vs Collina D'oro",
+    "league": "Partido Amistoso",
+    "tier": "AVISO",
+    "probability": 0.8886412598389809,
+    "minute": 25,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27,
+      93
+    ],
+    "timestamp": "2026-10-16T19:23:39.824Z",
+    "alertTimestamp": "2026-10-16T17:33:40.934Z"
+  },
+  {
+    "match": "SV Rödinghausen vs Koln II",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.8983910771792516,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      17,
+      28,
+      63,
+      88
+    ],
+    "timestamp": "2026-10-16T19:33:43.770Z",
+    "alertTimestamp": "2026-10-16T17:33:40.934Z"
+  },
+  {
+    "match": "Rapid Vienna vs TSV Hartberg",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8673815240304688,
+    "minute": 23,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y chances claras a favor del local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      46,
+      49,
+      81
+    ],
+    "timestamp": "2026-10-16T19:33:44.010Z",
+    "alertTimestamp": "2026-10-16T17:33:40.934Z"
+  },
+  {
+    "match": "FC Annecy vs Nancy",
+    "league": "Ligue 2",
+    "tier": "AVISO",
+    "probability": 0.524773351186537,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas llegadas al área y grandes ocasiones para el visitante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      41,
+      59,
+      89
+    ],
+    "timestamp": "2026-10-16T19:53:37.042Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
+  },
+  {
+    "match": "Rotkreuz vs Servette FC",
+    "league": "Copa Suiza - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6194225773302379,
+    "minute": 76,
+    "scoreAtAlert": "0-4",
+    "finalScore": "0-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aunque el marcador es 0-2, la Copa Suiza tiene un alto promedio de goles y aún quedan 17 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      39,
+      74,
+      80
+    ],
+    "timestamp": "2026-10-16T19:53:37.805Z",
+    "alertTimestamp": "2026-10-16T18:13:34.561Z"
+  },
+  {
+    "match": "VVV-Venlo vs Jong AZ Alkmaar",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.8840674888460087,
+    "minute": 21,
+    "scoreAtAlert": "4-3",
+    "finalScore": "4-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y sin datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13,
+      22,
+      33,
+      49,
+      55,
+      66,
+      70,
+      93
+    ],
+    "timestamp": "2026-10-16T20:03:36.192Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
+  },
+  {
+    "match": "Corinthians/Sp Youth vs Portuguesa Santista/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8930175353574247,
+    "minute": 23,
+    "scoreAtAlert": "6-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de octavos de final, marcador igualado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-16T20:03:36.388Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
+  },
+  {
+    "match": "RB Bragantino/Sp Youth vs Flamengo/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8954692760671159,
+    "minute": 24,
+    "scoreAtAlert": "9-0",
+    "finalScore": "9-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de octavos de final, marcador ajustado y alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-16T20:03:36.575Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
+  },
+  {
+    "match": "MTK Budapest vs Vasas",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5108273893684562,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, xG estimado no fiable, y volumen de juego en el área visitante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26
+    ],
+    "timestamp": "2026-10-16T20:03:37.558Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
+  },
+  {
+    "match": "Grenoble vs Boulogne",
+    "league": "Ligue 2",
+    "tier": "AVISO",
+    "probability": 0.510008828659878,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      79,
+      92
+    ],
+    "timestamp": "2026-10-16T20:03:38.341Z",
+    "alertTimestamp": "2026-10-16T18:03:37.886Z"
   }
 ]
