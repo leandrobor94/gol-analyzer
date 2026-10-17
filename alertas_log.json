@@ -1,40 +1,5 @@
 [
   {
-    "match": "Ferroviária/Sp Youth vs São Bento/Sp Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.9065955760622051,
-    "minute": 20,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T20:00:54.883Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
-    "match": "Corinthians/Sp Youth vs América/Sp Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.9065955760622051,
-    "minute": 20,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      31,
-      46,
-      85
-    ],
-    "timestamp": "2026-09-12T20:00:55.036Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
     "match": "Botafogo/Sp Youth vs Ec São Bernardo S20",
     "league": "Paulista U20 - 16avos de final",
     "tier": "AVISO",
@@ -22176,5 +22141,42 @@
     ],
     "timestamp": "2026-10-16T21:03:26.572Z",
     "alertTimestamp": "2026-10-16T19:03:40.734Z"
+  },
+  {
+    "match": "Alcorcón vs Huesca",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.5255592860785345,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T02:04:37.377Z",
+    "alertTimestamp": "2026-10-16T19:23:38.496Z"
+  },
+  {
+    "match": "Guadalupe vs Cariari",
+    "league": "Liga de Ascenso - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5131237629059238,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      85
+    ],
+    "timestamp": "2026-10-17T02:54:35.442Z",
+    "alertTimestamp": "2026-10-17T02:04:36.007Z"
   }
 ]
