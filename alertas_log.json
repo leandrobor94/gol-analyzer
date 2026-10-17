@@ -1,194 +1,5 @@
 [
   {
-    "match": "Botafogo/Sp Youth vs Ec São Bernardo S20",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.9065955760622051,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-12T20:00:55.336Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
-    "match": "Dunkerque vs Saint-Étienne",
-    "league": "Ligue 2",
-    "tier": "AVISO",
-    "probability": 0.8602856551908544,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      43,
-      52,
-      58
-    ],
-    "timestamp": "2026-09-12T20:01:00.850Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
-    "match": "Al Khaleej Club vs Al Nassr FC Riyadh",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.8443495320840103,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      46,
-      72
-    ],
-    "timestamp": "2026-09-12T20:01:11.971Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
-    "match": "Juventus/Sp Youth vs Jabaquara Sp/Youth",
-    "league": "Paulista U20 - Primera Fase - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.5933007042118045,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      12,
-      49,
-      65,
-      91
-    ],
-    "timestamp": "2026-09-13T01:01:27.185Z",
-    "alertTimestamp": "2026-09-12T18:11:28.597Z"
-  },
-  {
-    "match": "Zaglebie Lubin vs GKS Katowice",
-    "league": "Ekstraklasa",
-    "tier": "AVISO",
-    "probability": 0.5686535754817527,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      42,
-      78,
-      94
-    ],
-    "timestamp": "2026-09-13T01:01:28.129Z",
-    "alertTimestamp": "2026-09-12T18:21:22.655Z"
-  },
-  {
-    "match": "CSKA Sofia vs Arda",
-    "league": "Liga de Bulgaria",
-    "tier": "AVISO",
-    "probability": 0.5220043387192861,
-    "minute": 77,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      2,
-      41,
-      48,
-      52,
-      72
-    ],
-    "timestamp": "2026-09-13T01:01:28.449Z",
-    "alertTimestamp": "2026-09-12T18:21:22.655Z"
-  },
-  {
-    "match": "Atalanta vs Cagliari",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.8927766820497616,
-    "minute": 25,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      19,
-      41,
-      61
-    ],
-    "timestamp": "2026-09-13T01:01:29.556Z",
-    "alertTimestamp": "2026-09-12T18:50:06.995Z"
-  },
-  {
-    "match": "Oud-Heverlee Leuven vs Cercle Brugge",
-    "league": "Jupiler Pro League",
-    "tier": "AVISO",
-    "probability": 0.8891810397758506,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      25,
-      96
-    ],
-    "timestamp": "2026-09-13T01:01:30.256Z",
-    "alertTimestamp": "2026-09-12T18:50:06.995Z"
-  },
-  {
-    "match": "Atlético Mineiro vs Fluminense",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8786997788148198,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no es real, y el modelo ya considera el ritmo de la liga.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      61,
-      63,
-      81,
-      90
-    ],
-    "timestamp": "2026-09-13T01:01:32.233Z",
-    "alertTimestamp": "2026-09-12T19:01:23.089Z"
-  },
-  {
-    "match": "Municipal Tiquipaya vs CD San Martin",
-    "league": "Copa Simón Bolívar - Grupo D",
-    "tier": "AVISO",
-    "probability": 0.8875828381100259,
-    "minute": 26,
-    "scoreAtAlert": "1-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T01:01:49.440Z",
-    "alertTimestamp": "2026-09-12T19:12:01.790Z"
-  },
-  {
     "match": "Sunderland vs Arsenal",
     "league": "Premier League",
     "tier": "AVISO",
@@ -22178,5 +21989,238 @@
     ],
     "timestamp": "2026-10-17T02:54:35.442Z",
     "alertTimestamp": "2026-10-17T02:04:36.007Z"
+  },
+  {
+    "match": "UMECIT FC Sub20 vs Sporting San Miguelito Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
+    "tier": "AVISO",
+    "probability": 0.5341241009293244,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T15:18:05.819Z",
+    "alertTimestamp": "2026-10-17T02:04:36.007Z"
+  },
+  {
+    "match": "Gimnasia y Tiro vs Atlanta",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.5227720004716333,
+    "minute": 78,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      29,
+      77,
+      92
+    ],
+    "timestamp": "2026-10-17T15:18:06.036Z",
+    "alertTimestamp": "2026-10-17T02:04:36.007Z"
+  },
+  {
+    "match": "Thor Akureyri vs Stjarnan",
+    "league": "Besta-deild karla",
+    "tier": "AVISO",
+    "probability": 0.5540606617095112,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alto ritmo de goles, muchas llegadas al área y chances claras para ambos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      11,
+      19,
+      58
+    ],
+    "timestamp": "2026-10-17T15:57:54.206Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Fulham vs Hull City",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.7089944011163527,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, a pesar de xG estimado. Fulham domina con 3 grandes chances.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      33
+    ],
+    "timestamp": "2026-10-17T15:57:54.737Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Bengaluru FC vs Chennaiyin FC",
+    "league": "Indian Super League",
+    "tier": "AVISO",
+    "probability": 0.5110818653628674,
+    "minute": 80,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG estimado es alto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      24,
+      52
+    ],
+    "timestamp": "2026-10-17T15:57:54.890Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Dinamo Brest vs Gomel",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.6719464266204241,
+    "minute": 63,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y tiempo restante. xG estimado, no relevante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      6,
+      12,
+      37,
+      77
+    ],
+    "timestamp": "2026-10-17T15:57:55.691Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Peterhead vs Cove Rangers",
+    "league": "League One Escocia",
+    "tier": "AVISO",
+    "probability": 0.6685040743606473,
+    "minute": 60,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia clara de esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      78
+    ],
+    "timestamp": "2026-10-17T15:57:56.095Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Radnik Bijeljina vs FK Sarajevo",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6461166045462536,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T15:57:57.750Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Manchester City vs Ipswich",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.567515734548753,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con goles, xG estimado no es factor decisivo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      21,
+      34,
+      69,
+      90
+    ],
+    "timestamp": "2026-10-17T16:08:10.121Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
+  },
+  {
+    "match": "Brentford vs Liverpool",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.7085673215402769,
+    "minute": 61,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado. Aún hay urgencia.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44,
+      62,
+      70
+    ],
+    "timestamp": "2026-10-17T16:08:11.919Z",
+    "alertTimestamp": "2026-10-17T15:18:05.425Z"
   }
 ]
