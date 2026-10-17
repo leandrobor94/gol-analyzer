@@ -1,121 +1,5 @@
 [
   {
-    "match": "Getafe CF vs RC Deportivo",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.5620526433607131,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido apretado, ambos equipos con pocas llegadas pero el marcador es ajustado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      66,
-      78
-    ],
-    "timestamp": "2026-09-13T18:30:50.411Z",
-    "alertTimestamp": "2026-09-13T16:38:11.145Z"
-  },
-  {
-    "match": "Krasnodar vs Akron Tolyatti",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.8850354926639985,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, marcador ajustado y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      13,
-      87
-    ],
-    "timestamp": "2026-09-13T18:43:29.733Z",
-    "alertTimestamp": "2026-09-13T16:38:11.145Z"
-  },
-  {
-    "match": "La Nucía vs Real Murcia Imperial",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8861821886451539,
-    "minute": 26,
-    "scoreAtAlert": "5-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      13,
-      18,
-      52,
-      61,
-      65,
-      71
-    ],
-    "timestamp": "2026-09-13T19:03:38.366Z",
-    "alertTimestamp": "2026-09-13T17:10:21.391Z"
-  },
-  {
-    "match": "Galatasaray vs Kocaelispor",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5312114089711388,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, Galatasaray generando muchas ocasiones a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      71
-    ],
-    "timestamp": "2026-09-13T19:03:42.176Z",
-    "alertTimestamp": "2026-09-13T17:10:21.391Z"
-  },
-  {
-    "match": "Amed SK vs Başakşehir",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5231518480230516,
-    "minute": 79,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      46,
-      52,
-      56,
-      75,
-      84
-    ],
-    "timestamp": "2026-09-13T19:03:42.213Z",
-    "alertTimestamp": "2026-09-13T17:10:21.391Z"
-  },
-  {
     "match": "Prishtina vs Feronikeli",
     "league": "Superliga de Kosovo - Regular Season",
     "tier": "AVISO",
@@ -22194,5 +22078,93 @@
     ],
     "timestamp": "2026-10-17T19:07:53.076Z",
     "alertTimestamp": "2026-10-17T17:07:51.216Z"
+  },
+  {
+    "match": "Quwa Al Jawiya vs Al Karma",
+    "league": "Liga Iraquí",
+    "tier": "AVISO",
+    "probability": 0.6142916444675072,
+    "minute": 61,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T19:37:54.954Z",
+    "alertTimestamp": "2026-10-17T17:37:58.417Z"
+  },
+  {
+    "match": "Juventus/Sp Youth vs Santo André/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.6048956694696819,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T19:57:49.063Z",
+    "alertTimestamp": "2026-10-17T18:07:53.697Z"
+  },
+  {
+    "match": "Marruecos Sub17 (F) vs Nueva Zelanda Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.6819321098949086,
+    "minute": 61,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      57,
+      70,
+      76,
+      82
+    ],
+    "timestamp": "2026-10-17T19:57:49.232Z",
+    "alertTimestamp": "2026-10-17T18:07:53.697Z"
+  },
+  {
+    "match": "Diriyah vs Al Taawoun",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.544407663083026,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      50,
+      65
+    ],
+    "timestamp": "2026-10-17T19:57:49.571Z",
+    "alertTimestamp": "2026-10-17T18:07:53.697Z"
+  },
+  {
+    "match": "Ibrachina/Sp Youth vs Capivariano/Sp Youth",
+    "league": "Paulista U20 - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8409532565208749,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de octavos de final, marcador ajustado y muchos minutos por delante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-17T19:57:49.901Z",
+    "alertTimestamp": "2026-10-17T18:07:53.697Z"
   }
 ]
