@@ -1,242 +1,5 @@
 [
   {
-    "match": "Panathinaikos vs Panetolikos",
-    "league": "Superliga Griega",
-    "tier": "AVISO",
-    "probability": 0.879285288315738,
-    "minute": 25,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      14,
-      39,
-      92
-    ],
-    "timestamp": "2026-09-13T20:26:14.823Z",
-    "alertTimestamp": "2026-09-13T18:43:05.167Z"
-  },
-  {
-    "match": "Montevideo Wanderers (F) vs Juventud (F)",
-    "league": "Campeonato Femenino A",
-    "tier": "AVISO",
-    "probability": 0.8955442619347386,
-    "minute": 26,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T20:26:14.849Z",
-    "alertTimestamp": "2026-09-13T18:43:05.167Z"
-  },
-  {
-    "match": "Atenas San Carlos vs Club Sportivo Cerrito",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5217034837784373,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T20:26:15.127Z",
-    "alertTimestamp": "2026-09-13T18:43:05.167Z"
-  },
-  {
-    "match": "Sportivo Valois Rivarola vs General Caballero ZC",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.8925358490055202,
-    "minute": 25,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T20:36:27.778Z",
-    "alertTimestamp": "2026-09-13T18:12:40.834Z"
-  },
-  {
-    "match": "Estudiantes vs Acassuso",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5193532921044197,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      82
-    ],
-    "timestamp": "2026-09-13T20:36:28.005Z",
-    "alertTimestamp": "2026-09-13T18:43:05.167Z"
-  },
-  {
-    "match": "Cipolletti vs Alvarado",
-    "league": "Federal A - Segunda Fase - Zona B",
-    "tier": "AVISO",
-    "probability": 0.5458918854729221,
-    "minute": 79,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-09-13T20:36:28.206Z",
-    "alertTimestamp": "2026-09-13T18:53:07.743Z"
-  },
-  {
-    "match": "Foz do Iguaçu vs Londrina",
-    "league": "Copa Paraná",
-    "tier": "AVISO",
-    "probability": 0.8890979402058883,
-    "minute": 26,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      10,
-      17,
-      61
-    ],
-    "timestamp": "2026-09-13T20:36:28.290Z",
-    "alertTimestamp": "2026-09-13T19:02:48.454Z"
-  },
-  {
-    "match": "Sassuolo vs Juventus",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.8921720430951157,
-    "minute": 21,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador 0-0, sin eventos que justifiquen rechazar la alerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      65,
-      82,
-      89,
-      91,
-      94
-    ],
-    "timestamp": "2026-09-14T01:37:05.426Z",
-    "alertTimestamp": "2026-09-13T18:53:07.743Z"
-  },
-  {
-    "match": "Brest vs PSG",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.8723824478958138,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, PSG ya marcó y tiene ocasiones claras. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      5
-    ],
-    "timestamp": "2026-09-14T01:37:05.612Z",
-    "alertTimestamp": "2026-09-13T19:02:48.454Z"
-  },
-  {
-    "match": "Mirassol vs Vitória",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.9199085437242129,
-    "minute": 25,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Vitória con 3 grandes chances y 4 tiros a puerta, el partido no está resuelto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      12,
-      68,
-      90
-    ],
-    "timestamp": "2026-09-14T01:37:06.244Z",
-    "alertTimestamp": "2026-09-13T19:12:56.998Z"
-  },
-  {
-    "match": "Real Sociedad vs Atlético de Madrid",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8737837455753099,
-    "minute": 24,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, modelo da alta probabilidad de gol a pesar de xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      84,
-      90,
-      95
-    ],
-    "timestamp": "2026-09-14T01:37:16.446Z",
-    "alertTimestamp": "2026-09-13T19:12:56.998Z"
-  },
-  {
-    "match": "Sol de Mayo vs Juventud Unida San Luis",
-    "league": "Federal A - Reválida - Zona B",
-    "tier": "AVISO",
-    "probability": 0.8862503767419551,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      35
-    ],
-    "timestamp": "2026-09-14T01:37:16.633Z",
-    "alertTimestamp": "2026-09-13T19:12:56.998Z"
-  },
-  {
     "match": "SC Gaucho vs Veranopolis",
     "league": "Gaucho A2",
     "tier": "AVISO",
@@ -22136,5 +21899,255 @@
     ],
     "timestamp": "2026-10-18T02:58:52.795Z",
     "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Boise vs Alta",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6875309073296602,
+    "minute": 62,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      74,
+      78
+    ],
+    "timestamp": "2026-10-18T15:39:29.609Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Lobos Ulmx vs Cordobes FC",
+    "league": "Primera Premier - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.6344902299368129,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T15:39:29.661Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Atlético Morelia vs Jaiba Brava",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6444924981775567,
+    "minute": 62,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, xG estimado no es concluyente.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      44,
+      73,
+      83
+    ],
+    "timestamp": "2026-10-18T15:39:29.841Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Irapuato vs Zacatepec",
+    "league": "Primera Premier - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.6353586437859005,
+    "minute": 62,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T15:39:29.949Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Monterrey (F) vs Cruz Azul (F)",
+    "league": "Liga Femenil - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5199795850924901,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T15:39:30.044Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Cancún FC vs Venados",
+    "league": "Liga de Expansión MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5093359116096324,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      34,
+      92
+    ],
+    "timestamp": "2026-10-18T15:39:30.124Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Zenit (W) vs Chertanovo Moscow (W)",
+    "league": "Supreme Division Women",
+    "tier": "AVISO",
+    "probability": 0.5036971018207398,
+    "minute": 81,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T15:59:21.380Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "Celta de Vigo vs Alavés",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5798831892280973,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Aunque el marcador es 2-0, el xG estimado del Alavés es alto y el partido aún no está resuelto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      53,
+      71,
+      87
+    ],
+    "timestamp": "2026-10-18T16:09:25.378Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "Oman Club vs Bahla Club",
+    "league": "Professional League",
+    "tier": "AVISO",
+    "probability": 0.5922923742631576,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, Bahla Club ganando por la mínima. Alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22
+    ],
+    "timestamp": "2026-10-18T16:09:25.407Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "FC Luanda vs Desportivo Huila",
+    "league": "Liga Unitel Girabola",
+    "tier": "AVISO",
+    "probability": 0.524220231506655,
+    "minute": 78,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      81
+    ],
+    "timestamp": "2026-10-18T16:29:22.579Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "Calamocha vs Peña Sport FC",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.5092045842165052,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, con un jugador menos y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      56
+    ],
+    "timestamp": "2026-10-18T16:29:22.609Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "Panathinaikos vs Asteras Aktor",
+    "league": "Superliga Griega",
+    "tier": "AVISO",
+    "probability": 0.6541404281205501,
+    "minute": 62,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Panathinaikos sigue generando ocasiones claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      27,
+      31,
+      60,
+      62,
+      72,
+      83
+    ],
+    "timestamp": "2026-10-18T16:29:22.642Z",
+    "alertTimestamp": "2026-10-18T15:39:29.360Z"
   }
 ]
