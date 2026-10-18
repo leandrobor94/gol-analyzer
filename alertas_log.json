@@ -1,42 +1,5 @@
 [
   {
-    "match": "Carlos Manucci (F) vs Sporting Cristal (F)",
-    "league": "Liga Femenina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8927488527916382,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T20:08:20.017Z",
-    "alertTimestamp": "2026-09-13T18:12:40.834Z"
-  },
-  {
-    "match": "Leones FC vs Técnico Universitario",
-    "league": "Liga Pro",
-    "tier": "AVISO",
-    "probability": 0.5274816424782733,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-09-13T20:08:51.787Z",
-    "alertTimestamp": "2026-09-13T18:12:40.834Z"
-  },
-  {
     "match": "Panathinaikos vs Panetolikos",
     "league": "Superliga Griega",
     "tier": "AVISO",
@@ -22138,5 +22101,40 @@
     ],
     "timestamp": "2026-10-18T02:48:54.871Z",
     "alertTimestamp": "2026-10-18T00:58:54.080Z"
+  },
+  {
+    "match": "Spokane Velocity vs Chattanooga Red Wolves",
+    "league": "USL League One - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5655148163893862,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      90
+    ],
+    "timestamp": "2026-10-18T02:58:52.491Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
+  },
+  {
+    "match": "Toluca vs Atlético San Luis",
+    "league": "Liga MX - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5372380034451688,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      67,
+      73
+    ],
+    "timestamp": "2026-10-18T02:58:52.795Z",
+    "alertTimestamp": "2026-10-18T01:08:54.960Z"
   }
 ]
