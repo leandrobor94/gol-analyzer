@@ -1,25 +1,5 @@
 [
   {
-    "match": "FC Nouadhibou vs Vipers",
-    "league": "CAF Champions League - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5612190734624454,
-    "minute": 79,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-13T20:00:44.219Z",
-    "alertTimestamp": "2026-09-13T18:12:40.834Z"
-  },
-  {
     "match": "Carlos Manucci (F) vs Sporting Cristal (F)",
     "league": "Liga Femenina - Clausura",
     "tier": "AVISO",
@@ -22133,5 +22113,30 @@
     ],
     "timestamp": "2026-10-18T00:59:00.057Z",
     "alertTimestamp": "2026-10-17T18:47:51.028Z"
+  },
+  {
+    "match": "Houston Dynamo vs FC Dallas",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.6610006092608619,
+    "minute": 62,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado, y FC Dallas con oportunidades claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      49,
+      94,
+      101
+    ],
+    "timestamp": "2026-10-18T02:48:54.871Z",
+    "alertTimestamp": "2026-10-18T00:58:54.080Z"
   }
 ]
