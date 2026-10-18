@@ -1,55 +1,5 @@
 [
   {
-    "match": "Waterford FC vs Derry City",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.885642501478391,
-    "minute": 22,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin razones claras para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      45,
-      51,
-      57
-    ],
-    "timestamp": "2026-09-14T20:37:02.871Z",
-    "alertTimestamp": "2026-09-14T19:07:41.901Z"
-  },
-  {
-    "match": "Dundalk vs St. Patricks",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.8852315213439985,
-    "minute": 23,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, y la liga tiene un ritmo de goles decente.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      37,
-      75,
-      82
-    ],
-    "timestamp": "2026-09-14T20:37:02.930Z",
-    "alertTimestamp": "2026-09-14T19:07:41.901Z"
-  },
-  {
     "match": "Inter Milan vs Udinese",
     "league": "Serie A",
     "tier": "AVISO",
@@ -22165,5 +22115,47 @@
     ],
     "timestamp": "2026-10-18T18:29:22.091Z",
     "alertTimestamp": "2026-10-18T16:39:26.750Z"
+  },
+  {
+    "match": "Al Swehly SC vs Esperance ST",
+    "league": "CAF Champions League - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8520635382378585,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T18:59:20.672Z",
+    "alertTimestamp": "2026-10-18T16:59:21.457Z"
+  },
+  {
+    "match": "FC ML Vitebsk vs Neman Grodno",
+    "league": "Vysshaya Liga",
+    "tier": "AVISO",
+    "probability": 0.9041730200171635,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-10-18T18:59:20.741Z",
+    "alertTimestamp": "2026-10-18T17:09:22.818Z"
   }
 ]
