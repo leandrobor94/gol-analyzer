@@ -1,242 +1,5 @@
 [
   {
-    "match": "FC Midtjylland vs Brondby IF",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5464337013380364,
-    "minute": 76,
-    "scoreAtAlert": "3-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, ambos equipos con oportunidades, xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      23,
-      69,
-      74,
-      89
-    ],
-    "timestamp": "2026-09-14T18:58:45.385Z",
-    "alertTimestamp": "2026-09-14T17:57:06.110Z"
-  },
-  {
-    "match": "Krasava Ypsonas vs Aris Limasol",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.5371253464416651,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      84
-    ],
-    "timestamp": "2026-09-14T18:59:12.540Z",
-    "alertTimestamp": "2026-09-14T17:57:06.110Z"
-  },
-  {
-    "match": "Östersunds FK vs Helsingborg",
-    "league": "Superettan",
-    "tier": "AVISO",
-    "probability": 0.6196824498545827,
-    "minute": 64,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, xG estimado no es fiable, pero 3 tiros a puerta locales.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      68
-    ],
-    "timestamp": "2026-09-14T19:07:42.601Z",
-    "alertTimestamp": "2026-09-14T17:57:06.110Z"
-  },
-  {
-    "match": "Maccabi Tel Aviv vs Hapoel Tel Aviv",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.689199933607336,
-    "minute": 60,
-    "scoreAtAlert": "2-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, un expulsado y chances claras. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      19,
-      33,
-      36,
-      88,
-      95
-    ],
-    "timestamp": "2026-09-14T19:37:06.627Z",
-    "alertTimestamp": "2026-09-14T17:57:06.110Z"
-  },
-  {
-    "match": "Deportivo Pinozá vs Sport Colonial",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.8828589127994869,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-14T19:57:11.026Z",
-    "alertTimestamp": "2026-09-13T18:12:40.834Z"
-  },
-  {
-    "match": "Jong PSV Eindhoven vs Jong AZ Alkmaar",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.556022765341705,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no es fiable, pero las grandes ocasiones y tiros a puerta son altos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      34,
-      84
-    ],
-    "timestamp": "2026-09-14T19:57:11.098Z",
-    "alertTimestamp": "2026-09-14T18:08:58.857Z"
-  },
-  {
-    "match": "FCSB vs Petrolul Ploiesti",
-    "league": "Liga1",
-    "tier": "AVISO",
-    "probability": 0.8994399885940633,
-    "minute": 24,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones claras y tiros a puerta del equipo local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      14,
-      24,
-      66
-    ],
-    "timestamp": "2026-09-14T20:07:05.423Z",
-    "alertTimestamp": "2026-09-14T18:08:58.857Z"
-  },
-  {
-    "match": "Esteghlal FC Tehran vs Al Sadd",
-    "league": "AFC Liga de Campeones Élite",
-    "tier": "AVISO",
-    "probability": 0.862105832955871,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido temprano, marcador ajustado, y una gran ocasión para el local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      47,
-      95
-    ],
-    "timestamp": "2026-09-14T20:17:02.461Z",
-    "alertTimestamp": "2026-09-14T18:18:11.291Z"
-  },
-  {
-    "match": "Defensores de Belgrano vs Deportivo Madryn",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5720086461024191,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      34,
-      39,
-      60
-    ],
-    "timestamp": "2026-09-14T20:27:11.468Z",
-    "alertTimestamp": "2026-09-14T18:37:37.204Z"
-  },
-  {
-    "match": "Sligo Rovers vs Galway United",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.8915397274687462,
-    "minute": 22,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      8,
-      18,
-      39,
-      86
-    ],
-    "timestamp": "2026-09-14T20:37:02.826Z",
-    "alertTimestamp": "2026-09-14T19:07:41.901Z"
-  },
-  {
     "match": "Waterford FC vs Derry City",
     "league": "Liga de Irlanda",
     "tier": "AVISO",
@@ -22170,5 +21933,237 @@
     ],
     "timestamp": "2026-10-18T17:29:20.597Z",
     "alertTimestamp": "2026-10-18T15:39:29.360Z"
+  },
+  {
+    "match": "Foolad Khuzestan vs Nassaji Mazandaran",
+    "league": "Persian Gulf Pro League",
+    "tier": "AVISO",
+    "probability": 0.8863145660303121,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T17:49:22.503Z",
+    "alertTimestamp": "2026-10-18T15:49:23.562Z"
+  },
+  {
+    "match": "Spartak Moscú vs Rubin Kazan",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8777079485068783,
+    "minute": 24,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18,
+      43,
+      65,
+      90
+    ],
+    "timestamp": "2026-10-18T17:49:22.589Z",
+    "alertTimestamp": "2026-10-18T15:59:21.219Z"
+  },
+  {
+    "match": "AC Milan vs Atalanta",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.5467323743718643,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos con chances claras. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      24,
+      43,
+      57,
+      66,
+      81
+    ],
+    "timestamp": "2026-10-18T17:59:19.598Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "Karabukspor vs Silivrispor",
+    "league": "3. Lig",
+    "tier": "AVISO",
+    "probability": 0.5719403632683109,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      18
+    ],
+    "timestamp": "2026-10-18T17:59:19.626Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "Horoya AC vs Merreikh Al Sudan",
+    "league": "CAF Champions League - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.5278272701189843,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido apretado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T17:59:19.688Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "Muş Spor vs Ankaraspor",
+    "league": "2. Lig",
+    "tier": "AVISO",
+    "probability": 0.5684138057922086,
+    "minute": 78,
+    "scoreAtAlert": "3-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      45,
+      47,
+      77,
+      81,
+      97
+    ],
+    "timestamp": "2026-10-18T17:59:19.718Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "Başakşehir vs Gaziantep FK",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.8736801829069764,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no es fiable, y hay big chances y tiros a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      66,
+      81
+    ],
+    "timestamp": "2026-10-18T17:59:20.323Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "JKT Tanzania vs Mbeya City",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.6896050593831935,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, xG estimado no es fiable, pero hay remates a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T18:09:21.061Z",
+    "alertTimestamp": "2026-10-18T16:09:25.228Z"
+  },
+  {
+    "match": "Real Jaén vs Rayo Majadahonda",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.8764082896171963,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin razones claras para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-18T18:19:28.613Z",
+    "alertTimestamp": "2026-10-18T16:29:22.339Z"
+  },
+  {
+    "match": "Málaga CF vs Real Sociedad",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.6838902518721706,
+    "minute": 62,
+    "scoreAtAlert": "2-5",
+    "finalScore": "2-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, xG estimado alto, y Real Sociedad con muchas llegadas a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      26,
+      54,
+      59,
+      66,
+      67,
+      73
+    ],
+    "timestamp": "2026-10-18T18:29:22.091Z",
+    "alertTimestamp": "2026-10-18T16:39:26.750Z"
   }
 ]
