@@ -1,139 +1,5 @@
 [
   {
-    "match": "FC Penafiel U23 vs Santa Clara Sub23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5316270440993992,
-    "minute": 80,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 0-0 en el minuto 80, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      95
-    ],
-    "timestamp": "2026-09-16T02:20:51.384Z",
-    "alertTimestamp": "2026-09-15T19:41:35.696Z"
-  },
-  {
-    "match": "Elche CF vs Real Madrid",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.5826708559629483,
-    "minute": 78,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Real Madrid con ventaja mínima y ambos equipos generando ocasiones.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      25,
-      33,
-      71,
-      83,
-      91
-    ],
-    "timestamp": "2026-09-16T02:20:51.446Z",
-    "alertTimestamp": "2026-09-15T19:41:35.696Z"
-  },
-  {
-    "match": "CD Olimpico Litoral vs AD SESA",
-    "league": "Liga de Ascenso - Centro Oriente",
-    "tier": "AVISO",
-    "probability": 0.9033386103389932,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T02:21:08.572Z",
-    "alertTimestamp": "2026-09-15T20:33:08.068Z"
-  },
-  {
-    "match": "Rsv Eintracht vs Greifswalder Fc",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.6140770030315759,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      15,
-      74
-    ],
-    "timestamp": "2026-09-16T16:53:46.538Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "ASPAC FC vs The Panthers",
-    "league": "CAF Confederation Cup - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.6244441752028181,
-    "minute": 76,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T17:03:57.576Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Greenville Triumph Sc vs Corpus Christi FC",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.6079589763003665,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, marcador ajustado y tiempo restante suficiente para un gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-09-16T17:03:57.759Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
     "match": "Esperance Zarzis vs US Monastir",
     "league": "Division 1",
     "tier": "AVISO",
@@ -22125,6 +21991,139 @@
       85
     ],
     "timestamp": "2026-10-19T19:24:19.898Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Leixoes Sub23 vs Estoril Sub23",
+    "league": "Liga de Portugal Sub23",
+    "tier": "AVISO",
+    "probability": 0.5823596423963464,
+    "minute": 77,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo suficiente para cambios. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      63,
+      72,
+      78
+    ],
+    "timestamp": "2026-10-19T20:04:43.963Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Australia U17 (F) vs Chile Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.5951042992739025,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      33,
+      63
+    ],
+    "timestamp": "2026-10-19T20:04:43.997Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "CA Lugano vs Cañuelas",
+    "league": "Primera C Metropolitana - Reducido - 8vos de Final",
+    "tier": "AVISO",
+    "probability": 0.5870149176699531,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de eliminación directa, marcador ajustado y tiempo restante suficiente para un gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30
+    ],
+    "timestamp": "2026-10-19T20:04:44.131Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Deportivo Italiano vs Huracan Buceo",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.5210373231801045,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38,
+      79
+    ],
+    "timestamp": "2026-10-19T20:04:44.188Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "La Luz (Reserva) vs Peñarol (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5371363309349463,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de reserva con xG estimado, marcador ajustado y tiempo restante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T20:14:15.789Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "San Telmo vs Defensores de Belgrano",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8907443978653993,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T20:24:16.269Z",
     "alertTimestamp": "2026-10-19T18:34:21.348Z"
   }
 ]
