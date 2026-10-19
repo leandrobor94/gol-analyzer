@@ -1,52 +1,5 @@
 [
   {
-    "match": "Brattvag vs Kristiansund FK",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.5995245570924708,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T18:04:45.991Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Eintracht Norderstedt vs Hannoverscher SC",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9076126041053649,
-    "minute": 22,
-    "scoreAtAlert": "2-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      24,
-      48,
-      57,
-      75,
-      96
-    ],
-    "timestamp": "2026-09-16T18:34:25.702Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
     "match": "SSV Jeddeloh vs Atlas Delmenhorst",
     "league": "Regionalliga - Norte",
     "tier": "AVISO",
@@ -22130,5 +22083,49 @@
     ],
     "timestamp": "2026-10-19T21:04:14.498Z",
     "alertTimestamp": "2026-10-19T19:04:22.035Z"
+  },
+  {
+    "match": "Deportivo Cali (F) vs Nacional (F)",
+    "league": "CONMEBOL Libertadores Femenina - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.5500459491185519,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T21:44:14.380Z",
+    "alertTimestamp": "2026-10-19T20:04:43.777Z"
+  },
+  {
+    "match": "Cruzeiro (F) vs Bolívar (F)",
+    "league": "CONMEBOL Libertadores Femenina - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.8791823373873676,
+    "minute": 25,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51,
+      75,
+      89
+    ],
+    "timestamp": "2026-10-19T21:54:14.786Z",
+    "alertTimestamp": "2026-10-19T20:04:43.777Z"
   }
 ]
