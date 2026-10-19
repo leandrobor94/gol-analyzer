@@ -1,57 +1,5 @@
 [
   {
-    "match": "SSV Jeddeloh vs Atlas Delmenhorst",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.8993277518742692,
-    "minute": 22,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, alta probabilidad de gol en los próximos 15 minutos según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      47,
-      48,
-      57,
-      68,
-      88
-    ],
-    "timestamp": "2026-09-16T18:34:25.885Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Eimsbutteler TV vs Werder Bremen II",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9056136505080994,
-    "minute": 22,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador 2-0 no es definitivo. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      9,
-      12,
-      52,
-      59,
-      80
-    ],
-    "timestamp": "2026-09-16T18:34:26.737Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
     "match": "Phönix Lübeck vs Sv Todesfelde",
     "league": "Regionalliga - Norte",
     "tier": "AVISO",
@@ -22127,5 +22075,48 @@
     ],
     "timestamp": "2026-10-19T21:54:14.786Z",
     "alertTimestamp": "2026-10-19T20:04:43.777Z"
+  },
+  {
+    "match": "Mushuc Runa vs Orense SC",
+    "league": "Liga Pro - Hexagonal del Descenso",
+    "tier": "AVISO",
+    "probability": 0.8618405198891478,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      22
+    ],
+    "timestamp": "2026-10-19T22:34:14.637Z",
+    "alertTimestamp": "2026-10-19T20:44:14.463Z"
+  },
+  {
+    "match": "Potros del Este vs Tauro FC Sub20",
+    "league": "Liga Prom - Apertura - Conferencia Este - Zona Sur",
+    "tier": "AVISO",
+    "probability": 0.8960531732788751,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T22:54:14.731Z",
+    "alertTimestamp": "2026-10-19T21:04:14.322Z"
   }
 ]
