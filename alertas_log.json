@@ -1,118 +1,5 @@
 [
   {
-    "match": "Esperance Zarzis vs US Monastir",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.5431366528286243,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      47,
-      51
-    ],
-    "timestamp": "2026-09-16T17:13:45.796Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Stjordals Blink vs Fredrikstad",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.6366855493731726,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T17:55:14.243Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Al Hussein vs East Bengal",
-    "league": "AFC Liga de Campeones 2",
-    "tier": "AVISO",
-    "probability": 0.5428424847935701,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, xG estimado no es real, pero el modelo indica alta probabilidad.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      40,
-      61,
-      87
-    ],
-    "timestamp": "2026-09-16T17:55:15.573Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Alta vs Tromso",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.5434926751944337,
-    "minute": 81,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado en los minutos finales, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T18:04:44.170Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Schöningen vs Weiche Flensburg",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.5279932656009362,
-    "minute": 81,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado en los minutos finales, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      38,
-      88
-    ],
-    "timestamp": "2026-09-16T18:04:45.465Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
     "match": "Brattvag vs Kristiansund FK",
     "league": "NM Cupen - Primera Ronda",
     "tier": "AVISO",
@@ -22125,5 +22012,123 @@
     "goalMinutes": [],
     "timestamp": "2026-10-19T20:24:16.269Z",
     "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "AS Giana Erminio vs Union Brescia",
+    "league": "Serie C italiana - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.518325955381049,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido apretado, marcador mínimo y tiempo restante considerable. No hay razones claras para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      86,
+      94
+    ],
+    "timestamp": "2026-10-19T20:34:16.816Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Parma vs Torino",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.6764122530399647,
+    "minute": 62,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Parma down 0-2 at home, will push for a goal despite estimated xG. High shots on target.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      24,
+      69
+    ],
+    "timestamp": "2026-10-19T20:44:14.713Z",
+    "alertTimestamp": "2026-10-19T18:54:17.309Z"
+  },
+  {
+    "match": "Derry City vs St. Patricks",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.5540206433917131,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no es fiable, y el modelo ya considera el tiempo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62
+    ],
+    "timestamp": "2026-10-19T20:54:15.812Z",
+    "alertTimestamp": "2026-10-19T19:04:22.035Z"
+  },
+  {
+    "match": "Tottenham vs Coventry",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8697240574576992,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin razones claras para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      50,
+      58,
+      96
+    ],
+    "timestamp": "2026-10-19T21:04:14.460Z",
+    "alertTimestamp": "2026-10-19T19:04:22.035Z"
+  },
+  {
+    "match": "Getafe CF vs Rayo Vallecano",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8929660906495139,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador ajustado y una gran ocasión para el equipo visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      56
+    ],
+    "timestamp": "2026-10-19T21:04:14.498Z",
+    "alertTimestamp": "2026-10-19T19:04:22.035Z"
   }
 ]
