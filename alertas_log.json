@@ -1,87 +1,5 @@
 [
   {
-    "match": "Lewes vs Carshalton Athletic",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8982469973920401,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-15T20:52:11.897Z",
-    "alertTimestamp": "2026-09-15T18:59:41.102Z"
-  },
-  {
-    "match": "Eastbourne Borough vs Chatham Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.6123416688985137,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado en los minutos finales, sin datos de xG reales para desestimar la alerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-15T21:01:01.521Z",
-    "alertTimestamp": "2026-09-15T18:59:41.102Z"
-  },
-  {
-    "match": "Casarano vs Audace Cerignola",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5222905908795675,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y xG estimado, no hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      43
-    ],
-    "timestamp": "2026-09-15T21:01:11.985Z",
-    "alertTimestamp": "2026-09-15T19:11:18.911Z"
-  },
-  {
-    "match": "Cambridge City vs Tilbury",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8956194217110756,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "6-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 22, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T02:20:44.510Z",
-    "alertTimestamp": "2026-09-15T18:52:28.761Z"
-  },
-  {
     "match": "FC Penafiel U23 vs Santa Clara Sub23",
     "league": "Liga de Portugal Sub23 - Regular Season",
     "tier": "AVISO",
@@ -22123,5 +22041,90 @@
     ],
     "timestamp": "2026-10-19T01:21:29.201Z",
     "alertTimestamp": "2026-10-18T20:09:21.196Z"
+  },
+  {
+    "match": "Deportivo Cali vs Junior FC",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8445679947863566,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T18:34:21.478Z",
+    "alertTimestamp": "2026-10-19T01:21:02.908Z"
+  },
+  {
+    "match": "FC Tzeiri Tira vs Hapoel Hadera",
+    "league": "Division 3",
+    "tier": "AVISO",
+    "probability": 0.5184325983073151,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos con bajo xG pero estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T18:54:17.545Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Beitar Kfar Saba FC vs Bnei Jaffa",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5870149176699531,
+    "minute": 77,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-19T19:14:16.447Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
+  },
+  {
+    "match": "Diosgyori VTK vs Kazincbarcikai",
+    "league": "NB II - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5359504049604312,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      58,
+      78,
+      85
+    ],
+    "timestamp": "2026-10-19T19:24:19.898Z",
+    "alertTimestamp": "2026-10-19T18:34:21.348Z"
   }
 ]
