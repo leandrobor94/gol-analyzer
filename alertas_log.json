@@ -1,100 +1,5 @@
 [
   {
-    "match": "España Sub20 (F) vs Portugal Sub20 (F)",
-    "league": "Mundial Femenino Sub-20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.5678641211957074,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de eliminación directa, marcador ajustado y un equipo con 10 jugadoras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      70
-    ],
-    "timestamp": "2026-09-16T18:34:47.166Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Pineto vs Forli",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5363730798686428,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, un equipo con 10 jugadores, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      21,
-      40
-    ],
-    "timestamp": "2026-09-16T18:34:48.780Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Sandviken vs Asane",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.5877843113064833,
-    "minute": 79,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado en copa, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      19,
-      29,
-      56,
-      71,
-      121,
-      121,
-      122,
-      122,
-      123,
-      124,
-      124,
-      125,
-      125
-    ],
-    "timestamp": "2026-09-16T18:43:14.559Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Prevalje vs Maribor",
-    "league": "Hervis Pokal - Segunda Ronda",
-    "tier": "AVISO",
-    "probability": 0.6268296550331275,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T18:55:02.209Z",
-    "alertTimestamp": "2026-09-16T17:03:45.357Z"
-  },
-  {
     "match": "FC Lugano vs FC St. Gallen",
     "league": "Superliga",
     "tier": "AVISO",
@@ -22106,5 +22011,100 @@
     "goalMinutes": [],
     "timestamp": "2026-10-20T17:17:28.953Z",
     "alertTimestamp": "2026-10-20T16:37:43.416Z"
+  },
+  {
+    "match": "Fenerbahce vs Slavia Praga",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8901726835914195,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      11,
+      15,
+      90
+    ],
+    "timestamp": "2026-10-20T18:37:32.358Z",
+    "alertTimestamp": "2026-10-20T16:47:28.093Z"
+  },
+  {
+    "match": "Sabah vs Borussia Dortmund",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9046654908862073,
+    "minute": 23,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, Dortmund domina y crea ocasiones claras. xG estimado no es factor.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      39,
+      53
+    ],
+    "timestamp": "2026-10-20T18:37:32.489Z",
+    "alertTimestamp": "2026-10-20T16:47:28.093Z"
+  },
+  {
+    "match": "Yemen U17 vs Arabia Saudita Sub17",
+    "league": "GFF U17 Gulf Cup",
+    "tier": "AVISO",
+    "probability": 0.5451980007144541,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32
+    ],
+    "timestamp": "2026-10-20T19:07:42.971Z",
+    "alertTimestamp": "2026-10-20T17:07:29.063Z"
+  },
+  {
+    "match": "Amishav Petah Tikva vs Beitar Ramat Gan",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.533914016908357,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los minutos finales, sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      31,
+      88
+    ],
+    "timestamp": "2026-10-20T19:07:43.422Z",
+    "alertTimestamp": "2026-10-20T17:17:28.042Z"
   }
 ]
