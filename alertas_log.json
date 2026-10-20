@@ -1,79 +1,5 @@
 [
   {
-    "match": "Phönix Lübeck vs Sv Todesfelde",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9076126041053649,
-    "minute": 22,
-    "scoreAtAlert": "9-0",
-    "finalScore": "9-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8,
-      24,
-      36,
-      41,
-      50,
-      53,
-      66,
-      75,
-      81
-    ],
-    "timestamp": "2026-09-16T18:34:33.836Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Torres vs Pianese",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8811086218280408,
-    "minute": 22,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y sin urgencia, pero con xG estimado y sin grandes ocasiones.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      48,
-      83
-    ],
-    "timestamp": "2026-09-16T18:34:34.724Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
-    "match": "Pors Grenland vs Stabaek",
-    "league": "NM Cupen - Primera Ronda",
-    "tier": "AVISO",
-    "probability": 0.617309899756458,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado 0-0, alta probabilidad de gol en los últimos minutos. xG no es real.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T18:34:45.367Z",
-    "alertTimestamp": "2026-09-16T16:33:45.775Z"
-  },
-  {
     "match": "España Sub20 (F) vs Portugal Sub20 (F)",
     "league": "Mundial Femenino Sub-20 - Octavos de final",
     "tier": "AVISO",
@@ -22118,5 +22044,67 @@
     "goalMinutes": [],
     "timestamp": "2026-10-19T22:54:14.731Z",
     "alertTimestamp": "2026-10-19T21:04:14.322Z"
+  },
+  {
+    "match": "Diriyah vs Al Riyadh SC",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5291418727943168,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, xG estimado no es fiable, pero hay chances claras y tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      13
+    ],
+    "timestamp": "2026-10-20T17:07:30.121Z",
+    "alertTimestamp": "2026-10-20T16:37:43.416Z"
+  },
+  {
+    "match": "Chivas Sub21 vs Necaxa Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5161912274942829,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-20T17:07:30.405Z",
+    "alertTimestamp": "2026-10-20T16:37:43.416Z"
+  },
+  {
+    "match": "Atlético San Luis Sub21 vs Querétaro Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5183047426599988,
+    "minute": 80,
+    "scoreAtAlert": "1-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de alta probabilidad de gol en los próximos 15 minutos y hasta el final.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-20T17:17:28.953Z",
+    "alertTimestamp": "2026-10-20T16:37:43.416Z"
   }
 ]
