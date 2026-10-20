@@ -1,73 +1,5 @@
 [
   {
-    "match": "FC Lugano vs FC St. Gallen",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.5549185042843704,
-    "minute": 76,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      4,
-      14,
-      28,
-      36,
-      74
-    ],
-    "timestamp": "2026-09-16T18:55:34.893Z",
-    "alertTimestamp": "2026-09-16T17:03:45.357Z"
-  },
-  {
-    "match": "RC Deportivo vs Sevilla FC",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8943834111473226,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con xG estimado y sin grandes ocasiones. Aún hay tiempo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      52
-    ],
-    "timestamp": "2026-09-16T19:04:42.217Z",
-    "alertTimestamp": "2026-09-16T17:03:45.357Z"
-  },
-  {
-    "match": "Lokomotive Leipzig vs BFC Dynamo",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.9048110642050116,
-    "minute": 23,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      37,
-      76,
-      92
-    ],
-    "timestamp": "2026-09-16T19:04:57.660Z",
-    "alertTimestamp": "2026-09-16T17:03:45.357Z"
-  },
-  {
     "match": "1. FC Magdeburg II vs FC Erzgebirge Aue",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -22106,5 +22038,71 @@
     ],
     "timestamp": "2026-10-20T19:07:43.422Z",
     "alertTimestamp": "2026-10-20T17:17:28.042Z"
+  },
+  {
+    "match": "Nigeria Sub17 (F) vs Puerto Rico Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.6815016677677088,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia clara de esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      93
+    ],
+    "timestamp": "2026-10-20T19:57:33.558Z",
+    "alertTimestamp": "2026-10-20T18:07:29.120Z"
+  },
+  {
+    "match": "Newell's Old Boys (Reserva) vs Platense (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.506823698506463,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-20T19:57:33.888Z",
+    "alertTimestamp": "2026-10-20T18:07:29.120Z"
+  },
+  {
+    "match": "América-PE vs Ibis",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.5077096110587128,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      82,
+      93
+    ],
+    "timestamp": "2026-10-20T20:17:46.463Z",
+    "alertTimestamp": "2026-10-20T18:07:29.120Z"
   }
 ]
