@@ -1,20 +1,5 @@
 [
   {
-    "match": "San Martín San Juan vs Tristan Suárez",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5611944857074386,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T20:04:41.548Z",
-    "alertTimestamp": "2026-09-16T18:14:32.973Z"
-  },
-  {
     "match": "Atert Bissen vs Wiltz",
     "league": "BGL Ligue - Regular Season",
     "tier": "AVISO",
@@ -22106,5 +22091,27 @@
     ],
     "timestamp": "2026-10-21T02:58:40.889Z",
     "alertTimestamp": "2026-10-21T02:18:40.991Z"
+  },
+  {
+    "match": "Cherno More Varna vs Lokomotiv Plovdiv",
+    "league": "Pro Cup - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5056343056588454,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en cuartos de final, con alta probabilidad de gol en los últimos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12
+    ],
+    "timestamp": "2026-10-21T17:25:59.242Z",
+    "alertTimestamp": "2026-10-21T16:55:58.944Z"
   }
 ]
