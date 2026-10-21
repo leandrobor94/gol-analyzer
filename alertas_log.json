@@ -1,109 +1,5 @@
 [
   {
-    "match": "Inter Santa Tecla (Reserva) vs Cd Fas Reserva",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.9017039611882257,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-16T21:02:39.282Z",
-    "alertTimestamp": "2026-09-16T19:26:29.380Z"
-  },
-  {
-    "match": "Livorno vs Vado FC",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.863861186657829,
-    "minute": 20,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      6,
-      12,
-      21,
-      58,
-      81
-    ],
-    "timestamp": "2026-09-16T21:02:39.486Z",
-    "alertTimestamp": "2026-09-16T19:26:29.380Z"
-  },
-  {
-    "match": "FC Barcelona vs Racing de Santander",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.661454546485688,
-    "minute": 76,
-    "scoreAtAlert": "5-2",
-    "finalScore": "7-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      25,
-      30,
-      36,
-      42,
-      65,
-      67,
-      79,
-      89
-    ],
-    "timestamp": "2026-09-17T02:13:31.048Z",
-    "alertTimestamp": "2026-09-16T19:44:35.301Z"
-  },
-  {
-    "match": "Boise vs Charlotte Independence",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5995728236884439,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real. Aún hay urgencia.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      58,
-      62
-    ],
-    "timestamp": "2026-09-17T16:38:28.210Z",
-    "alertTimestamp": "2026-09-17T02:13:30.659Z"
-  },
-  {
-    "match": "SD Atlético Nacional vs Academia Mario Mendez",
-    "league": "Liga Prom - Apertura - Conferencia Oeste - Zona Sur",
-    "tier": "AVISO",
-    "probability": 0.562782274615653,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-17T16:38:28.339Z",
-    "alertTimestamp": "2026-09-17T02:13:30.659Z"
-  },
-  {
     "match": "FC Rostov vs Dinamo Moscú",
     "league": "Premier Liga",
     "tier": "AVISO",
@@ -22123,5 +22019,116 @@
     "goalMinutes": [],
     "timestamp": "2026-10-21T19:16:03.388Z",
     "alertTimestamp": "2026-10-21T17:06:01.946Z"
+  },
+  {
+    "match": "Norwich Sub21 vs Bristol City U21",
+    "league": "Premier League Cup",
+    "tier": "AVISO",
+    "probability": 0.5466891755677498,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-21T19:56:02.516Z",
+    "alertTimestamp": "2026-10-21T18:06:00.859Z"
+  },
+  {
+    "match": "1º de Maio vs Salgueiro",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.899165303639716,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-21T20:06:00.702Z",
+    "alertTimestamp": "2026-10-21T18:06:00.859Z"
+  },
+  {
+    "match": "Levante UD vs Athletic Club",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8706371374375474,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, Athletic Club puede reaccionar. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      22,
+      67,
+      98
+    ],
+    "timestamp": "2026-10-21T20:06:00.913Z",
+    "alertTimestamp": "2026-10-21T18:06:00.859Z"
+  },
+  {
+    "match": "Venezuela Sub17 (F) vs Zambia Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.5420072742962857,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      13,
+      54,
+      63,
+      100
+    ],
+    "timestamp": "2026-10-21T20:06:01.358Z",
+    "alertTimestamp": "2026-10-21T18:06:00.859Z"
+  },
+  {
+    "match": "Hapoel Segev Shalom vs Maccabi Ashkelon",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8861466968298437,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 25, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-21T20:26:02.021Z",
+    "alertTimestamp": "2026-10-21T18:36:19.897Z"
   }
 ]
