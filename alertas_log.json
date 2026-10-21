@@ -1,69 +1,5 @@
 [
   {
-    "match": "Atert Bissen vs Wiltz",
-    "league": "BGL Ligue - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.6399278746430209,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      9,
-      16,
-      31,
-      48,
-      75,
-      79
-    ],
-    "timestamp": "2026-09-16T20:13:31.356Z",
-    "alertTimestamp": "2026-09-16T18:14:32.973Z"
-  },
-  {
-    "match": "Hostert vs Jeunesse Esch",
-    "league": "BGL Ligue - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.9058273615293171,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      11,
-      75
-    ],
-    "timestamp": "2026-09-16T20:13:31.716Z",
-    "alertTimestamp": "2026-09-16T18:14:32.973Z"
-  },
-  {
-    "match": "Rentistas vs Plaza Colonia",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.5470291577771557,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      48,
-      93,
-      96
-    ],
-    "timestamp": "2026-09-16T20:34:10.425Z",
-    "alertTimestamp": "2026-09-16T18:34:04.261Z"
-  },
-  {
     "match": "Olympiacos vs Jagiellonia",
     "league": "UEFA Europa League",
     "tier": "AVISO",
@@ -22112,6 +22048,79 @@
       12
     ],
     "timestamp": "2026-10-21T17:25:59.242Z",
+    "alertTimestamp": "2026-10-21T16:55:58.944Z"
+  },
+  {
+    "match": "Hapoel Lod vs Beitar Petah Tikva",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5402179556347079,
+    "minute": 79,
+    "scoreAtAlert": "1-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-21T18:06:01.742Z",
+    "alertTimestamp": "2026-10-21T16:55:58.944Z"
+  },
+  {
+    "match": "Lille vs Galatasaray",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.9344894206015277,
+    "minute": 21,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchas chances de gol y xG estimado no es real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      7,
+      39,
+      44,
+      52,
+      61
+    ],
+    "timestamp": "2026-10-21T18:46:03.104Z",
+    "alertTimestamp": "2026-10-21T16:55:58.944Z"
+  },
+  {
+    "match": "Como vs Manchester United",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8916011096860796,
+    "minute": 20,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      49,
+      57,
+      76,
+      91
+    ],
+    "timestamp": "2026-10-21T18:46:03.314Z",
     "alertTimestamp": "2026-10-21T16:55:58.944Z"
   }
 ]
