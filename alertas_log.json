@@ -1,46 +1,5 @@
 [
   {
-    "match": "Olympiacos vs Jagiellonia",
-    "league": "UEFA Europa League",
-    "tier": "AVISO",
-    "probability": 0.9018102645218423,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      20,
-      43,
-      84
-    ],
-    "timestamp": "2026-09-16T20:54:03.908Z",
-    "alertTimestamp": "2026-09-16T19:04:39.105Z"
-  },
-  {
-    "match": "Sunderland vs AZ Alkmaar",
-    "league": "UEFA Europa League",
-    "tier": "AVISO",
-    "probability": 0.5324973143678489,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no confiable, y el marcador es ajustado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      66
-    ],
-    "timestamp": "2026-09-16T20:54:04.119Z",
-    "alertTimestamp": "2026-09-16T19:04:39.105Z"
-  },
-  {
     "match": "Inter Santa Tecla (Reserva) vs Cd Fas Reserva",
     "league": "Torneo Reservas - Apertura",
     "tier": "AVISO",
@@ -22122,5 +22081,47 @@
     ],
     "timestamp": "2026-10-21T18:46:03.314Z",
     "alertTimestamp": "2026-10-21T16:55:58.944Z"
+  },
+  {
+    "match": "Jeddah Club vs Al Jabalain",
+    "league": "First Division",
+    "tier": "AVISO",
+    "probability": 0.5106616088813786,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-10-21T18:56:02.528Z",
+    "alertTimestamp": "2026-10-21T16:55:58.944Z"
+  },
+  {
+    "match": "Santos Laguna Sub21 vs Pumas Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5045511531848558,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por jugar, alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-21T19:16:03.388Z",
+    "alertTimestamp": "2026-10-21T17:06:01.946Z"
   }
 ]
