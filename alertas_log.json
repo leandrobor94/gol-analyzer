@@ -1,29 +1,5 @@
 [
   {
-    "match": "Skive vs B93 Copenhagen",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.8988114421967842,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      25,
-      59,
-      72
-    ],
-    "timestamp": "2026-09-18T18:59:24.514Z",
-    "alertTimestamp": "2026-09-18T17:01:19.046Z"
-  },
-  {
     "match": "TSV Buchbach vs 1. FC Schweinfurt 05",
     "league": "Regionalliga - Bayern",
     "tier": "AVISO",
@@ -22138,5 +22114,29 @@
     ],
     "timestamp": "2026-10-22T20:35:39.598Z",
     "alertTimestamp": "2026-10-22T18:35:40.652Z"
+  },
+  {
+    "match": "Bournemouth vs AC Milan",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.636479441407531,
+    "minute": 64,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, a pesar del 2-0 y la expulsión, el xG es estimado y no confiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      32,
+      84
+    ],
+    "timestamp": "2026-10-22T20:55:37.122Z",
+    "alertTimestamp": "2026-10-22T19:05:40.330Z"
   }
 ]
