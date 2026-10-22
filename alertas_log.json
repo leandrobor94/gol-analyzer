@@ -1,25 +1,5 @@
 [
   {
-    "match": "Hapoel Kfar Kassem vs Bnei Jaffa",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.5077600143904455,
-    "minute": 81,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-17T19:37:58.934Z",
-    "alertTimestamp": "2026-09-17T17:38:29.525Z"
-  },
-  {
     "match": "Dynamo Makhachkala vs CSKA Moscú",
     "league": "Premier Liga",
     "tier": "AVISO",
@@ -22135,5 +22115,29 @@
     "goalMinutes": [],
     "timestamp": "2026-10-22T02:43:56.824Z",
     "alertTimestamp": "2026-10-21T21:05:56.409Z"
+  },
+  {
+    "match": "Independiente Santa Fe vs Jaguares de Córdoba",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5161681253540937,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no confiable, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      81,
+      92
+    ],
+    "timestamp": "2026-10-22T16:55:42.456Z",
+    "alertTimestamp": "2026-10-22T02:43:56.632Z"
   }
 ]
