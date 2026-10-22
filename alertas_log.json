@@ -1,47 +1,5 @@
 [
   {
-    "match": "Real Betis vs Getafe CF",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8713606257638894,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador 0-0, y aunque xG es estimado, hay tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      45
-    ],
-    "timestamp": "2026-09-17T19:08:25.455Z",
-    "alertTimestamp": "2026-09-17T17:08:24.942Z"
-  },
-  {
-    "match": "SC Arad vs MS Shikun HaMizrah",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.5233452141989293,
-    "minute": 81,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-17T19:08:25.515Z",
-    "alertTimestamp": "2026-09-17T17:08:24.942Z"
-  },
-  {
     "match": "Hapoel Kfar Kassem vs Bnei Jaffa",
     "league": "Division 4",
     "tier": "AVISO",
@@ -22133,5 +22091,49 @@
     ],
     "timestamp": "2026-10-21T21:05:57.544Z",
     "alertTimestamp": "2026-10-21T19:06:02.308Z"
+  },
+  {
+    "match": "Colo Colo (F) vs Caracas (F)",
+    "league": "CONMEBOL Libertadores Femenina - Fase de grupos",
+    "tier": "AVISO",
+    "probability": 0.5487888252231649,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      37,
+      46,
+      92
+    ],
+    "timestamp": "2026-10-22T02:43:56.793Z",
+    "alertTimestamp": "2026-10-21T20:55:55.370Z"
+  },
+  {
+    "match": "Deportivo Mixco vs CSD Municipal",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.899165303639716,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-22T02:43:56.824Z",
+    "alertTimestamp": "2026-10-21T21:05:56.409Z"
   }
 ]
