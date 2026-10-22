@@ -1,169 +1,5 @@
 [
   {
-    "match": "Dynamo Makhachkala vs CSKA Moscú",
-    "league": "Premier Liga",
-    "tier": "AVISO",
-    "probability": 0.9030277203586667,
-    "minute": 21,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, xG estimado no confiable, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      13,
-      20,
-      69,
-      79
-    ],
-    "timestamp": "2026-09-17T19:47:57.886Z",
-    "alertTimestamp": "2026-09-17T17:47:50.523Z"
-  },
-  {
-    "match": "Uruguay Sub19 vs Venezuela Sub19",
-    "league": "Juegos Suramericanos",
-    "tier": "AVISO",
-    "probability": 0.5077600143904455,
-    "minute": 81,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      71
-    ],
-    "timestamp": "2026-09-17T19:58:16.730Z",
-    "alertTimestamp": "2026-09-17T18:07:59.414Z"
-  },
-  {
-    "match": "Bastia vs Cannes",
-    "league": "Ligue 3",
-    "tier": "AVISO",
-    "probability": 0.8987061719820572,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      27
-    ],
-    "timestamp": "2026-09-17T20:48:43.617Z",
-    "alertTimestamp": "2026-09-17T18:48:06.970Z"
-  },
-  {
-    "match": "Cr Temouchent vs JS Kabylie",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.5571898543373134,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      74
-    ],
-    "timestamp": "2026-09-17T20:58:08.341Z",
-    "alertTimestamp": "2026-09-17T19:08:23.813Z"
-  },
-  {
-    "match": "Lillestrom vs Torreense",
-    "league": "UEFA Europa League",
-    "tier": "AVISO",
-    "probability": 0.5164510187589639,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      23,
-      49,
-      79
-    ],
-    "timestamp": "2026-09-17T20:58:08.703Z",
-    "alertTimestamp": "2026-09-17T19:08:23.813Z"
-  },
-  {
-    "match": "Real Frontera vs Club Atletico Barinas",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.5464693262497998,
-    "minute": 80,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      29,
-      92
-    ],
-    "timestamp": "2026-09-18T02:18:45.444Z",
-    "alertTimestamp": "2026-09-17T19:47:57.473Z"
-  },
-  {
-    "match": "Málaga CF vs Villarreal CF",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.6580810182460465,
-    "minute": 67,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Villarreal tiene 4 grandes oportunidades y 6 tiros a puerta, indicando un ataque fuerte.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      40,
-      47,
-      86
-    ],
-    "timestamp": "2026-09-18T02:18:45.823Z",
-    "alertTimestamp": "2026-09-17T19:47:57.473Z"
-  },
-  {
     "match": "Independiente San Vicente vs CD Neo Pipil",
     "league": "Liga de Ascenso - Centro Oriente",
     "tier": "AVISO",
@@ -22139,5 +21975,167 @@
     ],
     "timestamp": "2026-10-22T16:55:42.456Z",
     "alertTimestamp": "2026-10-22T02:43:56.632Z"
+  },
+  {
+    "match": "SC Arad vs Hapoel Yeruham",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5407934682908642,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-22T18:15:41.264Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "Ironi Ashkelon vs Sekzia Nes Ziona",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5387179043156706,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-22T18:15:41.446Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "Inter Escaldes vs CS Universitatea Craiova",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.8767605190357141,
+    "minute": 21,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Aunque el marcador es 0-2, el partido está en el minuto 21 y la probabilidad del modelo es alta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      3,
+      5,
+      77,
+      86
+    ],
+    "timestamp": "2026-10-22T18:35:42.726Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "Kauno Zalgiris vs Brann",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.8841850392428481,
+    "minute": 21,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, muchas ocasiones claras y xG alto (aunque estimado).",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      12,
+      25,
+      40,
+      85
+    ],
+    "timestamp": "2026-10-22T18:45:39.091Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "Pafos FC vs Riga",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.8556941208699819,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y con chances claras. No hay razón para no alertar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      67,
+      76
+    ],
+    "timestamp": "2026-10-22T18:45:39.311Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "OFI Crete vs Bayer Leverkusen",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8566237989234144,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador 0-0, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35,
+      37
+    ],
+    "timestamp": "2026-10-22T18:45:39.501Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
+  },
+  {
+    "match": "Juventus vs Rennes",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.8619209286197761,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, muchas chances de gol y xG estimado. No hay razón para no alertar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      15,
+      43,
+      67
+    ],
+    "timestamp": "2026-10-22T18:45:40.248Z",
+    "alertTimestamp": "2026-10-22T16:55:40.784Z"
   }
 ]
