@@ -1,119 +1,5 @@
 [
   {
-    "match": "FC Amager vs Naestved",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.9018075956472197,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      52,
-      71
-    ],
-    "timestamp": "2026-09-18T18:59:25.181Z",
-    "alertTimestamp": "2026-09-18T17:11:06.839Z"
-  },
-  {
-    "match": "Kasimpasa vs Konyaspor",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.8550674698942085,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado alto para visitante con 1 gran ocasión y 2 tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-18T18:59:25.478Z",
-    "alertTimestamp": "2026-09-18T17:11:06.839Z"
-  },
-  {
-    "match": "Strasbourg (W) vs Paris FC (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8639925285449859,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, xG estimado no es fiable, sin razones concretas para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      22,
-      50
-    ],
-    "timestamp": "2026-09-18T18:59:25.824Z",
-    "alertTimestamp": "2026-09-18T17:11:06.839Z"
-  },
-  {
-    "match": "Omonia 29th May vs AEK Larnaca",
-    "league": "Cyta Championship",
-    "tier": "AVISO",
-    "probability": 0.5319973757586481,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, ambos equipos con tiros a puerta, y alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      23,
-      41,
-      84
-    ],
-    "timestamp": "2026-09-18T18:59:26.049Z",
-    "alertTimestamp": "2026-09-18T17:11:06.839Z"
-  },
-  {
-    "match": "Sportfreunde Siegen vs Wattenscheid",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.525428517611028,
-    "minute": 81,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado en los minutos finales, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      16,
-      31,
-      65
-    ],
-    "timestamp": "2026-09-18T19:29:38.104Z",
-    "alertTimestamp": "2026-09-18T17:39:27.361Z"
-  },
-  {
     "match": "Rapid Vienna vs WSG Tirol",
     "league": "Bundesliga",
     "tier": "AVISO",
@@ -22141,6 +22027,120 @@
       77
     ],
     "timestamp": "2026-10-23T17:27:47.654Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Radnicki 1923 vs Radnik Surdulica",
+    "league": "Super Liga",
+    "tier": "AVISO",
+    "probability": 0.5236215953433967,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es real, y el modelo ya considera el tiempo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-10-23T17:57:46.103Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Al Khalidiyah vs Ittifaq Maqaba",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5440150064224453,
+    "minute": 76,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos sin remates a puerta, xG estimado no confiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      23,
+      46,
+      60,
+      80
+    ],
+    "timestamp": "2026-10-23T18:07:50.976Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Tishreen SC vs Hottin",
+    "league": "Premier League siria",
+    "tier": "AVISO",
+    "probability": 0.5803962403636023,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-23T18:17:47.879Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Akhmat Grozny vs FC Orenburg",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.5487127529754118,
+    "minute": 78,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38
+    ],
+    "timestamp": "2026-10-23T18:27:47.104Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Al Jazeera vs Al Faisaly",
+    "league": "Pro League",
+    "tier": "AVISO",
+    "probability": 0.6472513928250386,
+    "minute": 62,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos tiros a puerta del visitante, y el modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      7,
+      29,
+      35
+    ],
+    "timestamp": "2026-10-23T18:27:48.621Z",
     "alertTimestamp": "2026-10-23T16:47:48.207Z"
   }
 ]
