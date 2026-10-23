@@ -1,296 +1,5 @@
 [
   {
-    "match": "Jong AZ Alkmaar vs FC Volendam",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.7227003811962606,
-    "minute": 61,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, pero alto volumen de juego local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      17,
-      30,
-      61,
-      70,
-      75
-    ],
-    "timestamp": "2026-09-18T20:01:44.337Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Atlético Colegiales vs Sportivo Limpeño",
-    "league": "APF Primera B",
-    "tier": "AVISO",
-    "probability": 0.9017039611882257,
-    "minute": 20,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-18T20:01:54.487Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Reims vs Montpellier",
-    "league": "Ligue 2",
-    "tier": "AVISO",
-    "probability": 0.8615342226933933,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y un xG estimado que no es concluyente.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      7,
-      33
-    ],
-    "timestamp": "2026-09-18T20:01:54.630Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Manchester United Sub21 vs Brentford U21",
-    "league": "Premier League 2 - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8759451578711178,
-    "minute": 20,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      22,
-      49,
-      63,
-      76,
-      82
-    ],
-    "timestamp": "2026-09-18T20:01:54.730Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Manchester City (F) vs Liverpool (F)",
-    "league": "Premier League femenina",
-    "tier": "AVISO",
-    "probability": 0.5453952327671001,
-    "minute": 78,
-    "scoreAtAlert": "2-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos, y muchas ocasiones claras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      19,
-      29,
-      47,
-      90,
-      95
-    ],
-    "timestamp": "2026-09-18T20:01:58.511Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Chile Sub19 vs Peru Sub19",
-    "league": "Juegos Suramericanos",
-    "tier": "AVISO",
-    "probability": 0.9017039611882257,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de selecciones juveniles, sin datos de xG reales. El modelo da alta probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      55
-    ],
-    "timestamp": "2026-09-18T20:09:27.491Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "Bayern Munich vs Union Berlin",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.9066975318162916,
-    "minute": 20,
-    "scoreAtAlert": "7-0",
-    "finalScore": "7-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      39,
-      43,
-      54,
-      70,
-      73,
-      76
-    ],
-    "timestamp": "2026-09-18T20:30:29.117Z",
-    "alertTimestamp": "2026-09-18T18:40:23.242Z"
-  },
-  {
-    "match": "Derry City vs Galway United",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.8787825200083577,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      46
-    ],
-    "timestamp": "2026-09-18T20:39:59.661Z",
-    "alertTimestamp": "2026-09-18T18:50:27.335Z"
-  },
-  {
-    "match": "Dundalk vs Shelbourne",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.5764827322541652,
-    "minute": 78,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, xG estimado alto para visitante, y muchas chances en el área.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      12,
-      39,
-      71,
-      80,
-      90
-    ],
-    "timestamp": "2026-09-18T20:39:59.769Z",
-    "alertTimestamp": "2026-09-18T18:50:27.335Z"
-  },
-  {
-    "match": "Briton Ferry vs Trefelin",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.5468502133724048,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      44,
-      65
-    ],
-    "timestamp": "2026-09-18T20:40:00.481Z",
-    "alertTimestamp": "2026-09-18T18:50:27.335Z"
-  },
-  {
-    "match": "Monza vs Sassuolo",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.914486031229015,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, sin goles, y con oportunidades claras para ambos equipos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      51,
-      63,
-      88
-    ],
-    "timestamp": "2026-09-18T20:50:29.773Z",
-    "alertTimestamp": "2026-09-18T18:50:27.335Z"
-  },
-  {
-    "match": "Monaco vs Lens",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.7154738373087383,
-    "minute": 63,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y muchas ocasiones claras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      32,
-      57,
-      84
-    ],
-    "timestamp": "2026-09-18T20:50:47.017Z",
-    "alertTimestamp": "2026-09-18T18:50:27.335Z"
-  },
-  {
     "match": "KAA Gent vs Standard Lieja",
     "league": "Jupiler Pro League",
     "tier": "AVISO",
@@ -22160,5 +21869,301 @@
     ],
     "timestamp": "2026-10-23T19:27:48.369Z",
     "alertTimestamp": "2026-10-23T17:37:48.847Z"
+  },
+  {
+    "match": "Chaves vs Vizela",
+    "league": "Segunda división de Portugal",
+    "tier": "AVISO",
+    "probability": 0.5242159921618791,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      27,
+      85,
+      95
+    ],
+    "timestamp": "2026-10-23T19:57:43.052Z",
+    "alertTimestamp": "2026-10-23T17:57:44.324Z"
+  },
+  {
+    "match": "Orlando Pirates vs African Stars",
+    "league": "CAF Champions League - Clasificación",
+    "tier": "AVISO",
+    "probability": 0.8842053437240639,
+    "minute": 26,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado, sin datos de xG reales para desestimar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      45,
+      46,
+      77
+    ],
+    "timestamp": "2026-10-23T19:57:43.209Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "NAC Breda vs Heracles",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.5491970980393401,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos restantes y chances claras para ambos equipos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      19
+    ],
+    "timestamp": "2026-10-23T19:57:43.383Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Nueva Zelanda Sub17 (F) vs Alemania (F) Sub17",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.613389530752262,
+    "minute": 68,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Alemania tiene 12 tiros a puerta y una tarjeta roja, lo que indica un juego abierto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      47,
+      56
+    ],
+    "timestamp": "2026-10-23T19:57:43.922Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Manchester City Sub21 vs Stoke City Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.6897355543663173,
+    "minute": 61,
+    "scoreAtAlert": "3-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con marcador ajustado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      62,
+      66,
+      75,
+      80,
+      90,
+      94
+    ],
+    "timestamp": "2026-10-23T19:57:44.092Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Qadisiya vs Al Hilal Riyadh",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5280342319866583,
+    "minute": 77,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos generando. El xG es estimado, no es un factor para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      21,
+      31,
+      77,
+      84,
+      87
+    ],
+    "timestamp": "2026-10-23T19:57:44.898Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "UTC Cajamarca vs FBC Melgar",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5113102700153608,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con chances y xG estimado no confiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      68,
+      87
+    ],
+    "timestamp": "2026-10-23T19:57:46.862Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Al Ahli Jeddah vs Al Khaleej Club",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.6377754929822474,
+    "minute": 61,
+    "scoreAtAlert": "3-0",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y volumen de juego del local prometedor.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      57,
+      61,
+      87,
+      96
+    ],
+    "timestamp": "2026-10-23T20:07:46.685Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Fulham Sub21 vs Brighton Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5142250749938376,
+    "minute": 76,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      2,
+      11,
+      15,
+      70,
+      80,
+      83
+    ],
+    "timestamp": "2026-10-23T20:07:46.859Z",
+    "alertTimestamp": "2026-10-23T18:07:49.900Z"
+  },
+  {
+    "match": "Stuttgart vs Borussia Mönchengladbach",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5784905024010473,
+    "minute": 77,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo y volumen de juego considerable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      5,
+      38,
+      51,
+      66,
+      83
+    ],
+    "timestamp": "2026-10-23T20:27:44.891Z",
+    "alertTimestamp": "2026-10-23T18:37:48.521Z"
+  },
+  {
+    "match": "Galway United vs St. Patricks",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8859414205667234,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-23T20:37:46.741Z",
+    "alertTimestamp": "2026-10-23T18:47:49.505Z"
+  },
+  {
+    "match": "Derry City vs Dundalk",
+    "league": "Liga de Irlanda",
+    "tier": "AVISO",
+    "probability": 0.8857898361445738,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      71,
+      79
+    ],
+    "timestamp": "2026-10-23T20:37:46.981Z",
+    "alertTimestamp": "2026-10-23T18:47:49.505Z"
   }
 ]
