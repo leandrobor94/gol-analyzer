@@ -1,27 +1,5 @@
 [
   {
-    "match": "FSV Frankfurt vs Stuttgarter Kickers",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.552915374024274,
-    "minute": 80,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      42
-    ],
-    "timestamp": "2026-09-18T18:59:24.975Z",
-    "alertTimestamp": "2026-09-18T17:11:06.839Z"
-  },
-  {
     "match": "FC Amager vs Naestved",
     "league": "1st Division",
     "tier": "AVISO",
@@ -22141,5 +22119,28 @@
     ],
     "timestamp": "2026-10-23T02:56:45.441Z",
     "alertTimestamp": "2026-10-23T02:36:45.706Z"
+  },
+  {
+    "match": "Ittihad Jeddah vs Diriyah",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.526592945243631,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30,
+      77
+    ],
+    "timestamp": "2026-10-23T17:27:47.654Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
   }
 ]
