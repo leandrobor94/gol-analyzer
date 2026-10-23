@@ -1,114 +1,5 @@
 [
   {
-    "match": "Rapid Vienna vs WSG Tirol",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.6672965385883175,
-    "minute": 61,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, xG estimado no es real, pero hay 2 grandes chances del local.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      33,
-      67,
-      86
-    ],
-    "timestamp": "2026-09-18T19:29:38.408Z",
-    "alertTimestamp": "2026-09-18T17:39:27.361Z"
-  },
-  {
-    "match": "Xv Piracicaba/Sp Youth vs Sfera U20",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.8987061719820572,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de 16avos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-18T20:01:43.623Z",
-    "alertTimestamp": "2026-09-18T17:59:23.064Z"
-  },
-  {
-    "match": "Zeljeznicar Sarajevo vs Celik Zenica",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6250705899578936,
-    "minute": 64,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, y el modelo ya considera el ritmo de la liga.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      56,
-      80
-    ],
-    "timestamp": "2026-09-18T20:01:43.831Z",
-    "alertTimestamp": "2026-09-18T17:59:23.064Z"
-  },
-  {
-    "match": "Uruguay Sub20 (F) vs Paraguay Sub20 (F)",
-    "league": "Juegos Suramericanos (F)",
-    "tier": "AVISO",
-    "probability": 0.5755539159073947,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      89
-    ],
-    "timestamp": "2026-09-18T20:01:44.033Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
-    "match": "União Suzano Youth vs Guarani/Sp Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.569985692576632,
-    "minute": 79,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado en fase eliminatoria, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-18T20:01:44.217Z",
-    "alertTimestamp": "2026-09-18T18:10:02.988Z"
-  },
-  {
     "match": "Jong AZ Alkmaar vs FC Volendam",
     "league": "Eerste Divisie",
     "tier": "AVISO",
@@ -22142,5 +22033,132 @@
     ],
     "timestamp": "2026-10-23T18:27:48.621Z",
     "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Al Sailiya vs Al Rayyan",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.8761450923125442,
+    "minute": 21,
+    "scoreAtAlert": "1-6",
+    "finalScore": "1-6",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, muchas chances de gol, xG estimado no es real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      22,
+      43,
+      51,
+      58,
+      67,
+      70
+    ],
+    "timestamp": "2026-10-23T18:47:50.554Z",
+    "alertTimestamp": "2026-10-23T16:47:48.207Z"
+  },
+  {
+    "match": "Egipto Sub17 vs Yemen U17",
+    "league": "GFF U17 Gulf Cup",
+    "tier": "AVISO",
+    "probability": 0.8895465828662441,
+    "minute": 24,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      43,
+      73,
+      79,
+      81
+    ],
+    "timestamp": "2026-10-23T18:57:45.444Z",
+    "alertTimestamp": "2026-10-23T17:07:49.778Z"
+  },
+  {
+    "match": "Randers FC vs Brondby IF",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.5175526346460141,
+    "minute": 77,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      15,
+      45,
+      60,
+      64
+    ],
+    "timestamp": "2026-10-23T18:57:46.690Z",
+    "alertTimestamp": "2026-10-23T17:07:49.778Z"
+  },
+  {
+    "match": "FC Gutersloh vs SC Wiedenbrück",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.8852992300403595,
+    "minute": 26,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      28,
+      45,
+      73,
+      76
+    ],
+    "timestamp": "2026-10-23T19:27:48.213Z",
+    "alertTimestamp": "2026-10-23T17:37:48.847Z"
+  },
+  {
+    "match": "Dortmund II vs Bonner SC",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.8852992300403595,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      36,
+      84
+    ],
+    "timestamp": "2026-10-23T19:27:48.369Z",
+    "alertTimestamp": "2026-10-23T17:37:48.847Z"
   }
 ]
