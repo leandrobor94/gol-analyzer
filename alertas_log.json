@@ -1,197 +1,5 @@
 [
   {
-    "match": "Defensores de Glew vs Buenos Aires City FC",
-    "league": "Torneo Promocional Amateur - Reducido - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.6123416688985137,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T20:14:13.591Z",
-    "alertTimestamp": "2026-09-19T18:16:37.789Z"
-  },
-  {
-    "match": "Hapoel Ironi Arabe vs Maccabi Bialik Ata",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.8951801215812994,
-    "minute": 25,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T20:14:13.961Z",
-    "alertTimestamp": "2026-09-19T18:24:13.844Z"
-  },
-  {
-    "match": "Beitar Ironi Kiryat Gat vs Sekzia Nes Ziona",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.8857995887682046,
-    "minute": 25,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T20:23:03.001Z",
-    "alertTimestamp": "2026-09-19T18:24:13.844Z"
-  },
-  {
-    "match": "Sportivo Valois Rivarola vs General Diaz",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.9017039611882257,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-20T01:23:21.231Z",
-    "alertTimestamp": "2026-09-19T18:16:37.789Z"
-  },
-  {
-    "match": "Ferro Carril Oeste vs Ciudad De Bolivar",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.8753792774545903,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es fiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      18
-    ],
-    "timestamp": "2026-09-20T01:23:24.143Z",
-    "alertTimestamp": "2026-09-19T18:43:52.521Z"
-  },
-  {
-    "match": "Venezia vs Lazio",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.7146524545296543,
-    "minute": 60,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Venezia con xG alto y más tiros a puerta, busca el empate.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      51,
-      60
-    ],
-    "timestamp": "2026-09-20T01:23:54.480Z",
-    "alertTimestamp": "2026-09-19T18:55:36.411Z"
-  },
-  {
-    "match": "Defensor Sporting (F) vs Canadian (F)",
-    "league": "Campeonato Femenino A",
-    "tier": "AVISO",
-    "probability": 0.8937412350097461,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-20T01:23:54.717Z",
-    "alertTimestamp": "2026-09-19T18:55:36.411Z"
-  },
-  {
-    "match": "Sligo Rovers vs St. Patricks",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.6575227668216639,
-    "minute": 62,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con volumen de juego en el área y remates a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      74
-    ],
-    "timestamp": "2026-09-20T01:23:55.214Z",
-    "alertTimestamp": "2026-09-19T18:55:36.411Z"
-  },
-  {
-    "match": "Plaza Colonia vs Paysandu FC",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.9068213583333461,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-20T01:23:56.282Z",
-    "alertTimestamp": "2026-09-19T19:04:15.191Z"
-  },
-  {
-    "match": "Montpellier HSC (F) vs Marseille (W)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8641333259922828,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-20T01:23:57.073Z",
-    "alertTimestamp": "2026-09-19T19:04:15.191Z"
-  },
-  {
     "match": "Sevilla FC vs FC Barcelona",
     "league": "LaLiga",
     "tier": "AVISO",
@@ -22178,5 +21986,179 @@
     ],
     "timestamp": "2026-10-24T19:30:48.587Z",
     "alertTimestamp": "2026-10-24T17:41:29.948Z"
+  },
+  {
+    "match": "Namungo FC vs Coastal Union",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.8847861875848335,
+    "minute": 26,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T19:41:23.575Z",
+    "alertTimestamp": "2026-10-24T17:41:29.948Z"
+  },
+  {
+    "match": "CF Montréal vs Nashville SC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.8878367820477358,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      51,
+      76
+    ],
+    "timestamp": "2026-10-24T19:41:23.734Z",
+    "alertTimestamp": "2026-10-24T17:41:29.948Z"
+  },
+  {
+    "match": "Zambia Sub17 (F) vs Francia Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.895504233728563,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      16
+    ],
+    "timestamp": "2026-10-24T19:50:51.803Z",
+    "alertTimestamp": "2026-10-24T18:10:52.795Z"
+  },
+  {
+    "match": "Al Hikma vs Al Mabarrah",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8788081977125245,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T20:01:22.979Z",
+    "alertTimestamp": "2026-10-24T18:01:24.909Z"
+  },
+  {
+    "match": "Al Riyadh SC vs Al Taawoun",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.8566493323617406,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39,
+      76,
+      78
+    ],
+    "timestamp": "2026-10-24T20:01:23.301Z",
+    "alertTimestamp": "2026-10-24T18:01:24.909Z"
+  },
+  {
+    "match": "Venezuela Sub17 (F) vs Japón Sub17 (F)",
+    "league": "Mundial Sub17 (F)",
+    "tier": "AVISO",
+    "probability": 0.67490979382673,
+    "minute": 64,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      66
+    ],
+    "timestamp": "2026-10-24T20:01:24.076Z",
+    "alertTimestamp": "2026-10-24T18:10:52.795Z"
+  },
+  {
+    "match": "Excursionistas vs Sportivo Italiano",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.6911446086702256,
+    "minute": 61,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      2,
+      31,
+      39,
+      77
+    ],
+    "timestamp": "2026-10-24T20:01:24.548Z",
+    "alertTimestamp": "2026-10-24T18:10:52.795Z"
+  },
+  {
+    "match": "Argentino Merlo vs Deportivo Merlo",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.6323751493111751,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-10-24T20:01:24.701Z",
+    "alertTimestamp": "2026-10-24T18:10:52.795Z"
+  },
+  {
+    "match": "Ibis vs Guarany-PE",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.8994580155822639,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T20:10:48.855Z",
+    "alertTimestamp": "2026-10-24T18:21:28.189Z"
+  },
+  {
+    "match": "Club Deportivo Llacuabamba vs ADA Jaén",
+    "league": "Liga 2 - Ascenso - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.899165303639716,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T20:21:28.219Z",
+    "alertTimestamp": "2026-10-24T18:21:28.189Z"
   }
 ]
