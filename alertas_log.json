@@ -1,158 +1,5 @@
 [
   {
-    "match": "Hafia FC vs AS Douanes",
-    "league": "CAF Confederation Cup - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5233452141989293,
-    "minute": 81,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, poco tiempo restante y xG estimado no confiable.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T18:05:52.900Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "Drochtersen / Assel vs FC St. Pauli II",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.597471272204905,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      60
-    ],
-    "timestamp": "2026-09-19T18:06:02.929Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "Sanliurfaspor vs Adana Demirspor",
-    "league": "2. Lig",
-    "tier": "AVISO",
-    "probability": 0.5516847613365488,
-    "minute": 80,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, minutos finales, y la liga tiene un promedio de goles alto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      30,
-      35
-    ],
-    "timestamp": "2026-09-19T18:06:13.113Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "US Saint-Malo (W) vs Fleury 91 (F)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8492615257089599,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin razones claras para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      98
-    ],
-    "timestamp": "2026-09-19T18:06:41.200Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "Slovacko vs Banik Ostrava",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.8546029220514003,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, muchas ocasiones de gol para el visitante. El xG es estimado, pero las big chances no.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      25,
-      49,
-      51,
-      87
-    ],
-    "timestamp": "2026-09-19T18:07:06.204Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "AS Far Rabat vs Maghreb Fès",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8987061719820572,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T18:07:50.428Z",
-    "alertTimestamp": "2026-09-19T16:24:19.969Z"
-  },
-  {
-    "match": "Correcaminos \"B\" vs ACF Zapotlanejo",
-    "league": "Premier A - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.8887651904248924,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T18:17:10.754Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
     "match": "Throttur Reykjavik vs Fylkir",
     "league": "Inkasso Deildin - Final",
     "tier": "AVISO",
@@ -22139,6 +21986,164 @@
       88
     ],
     "timestamp": "2026-10-24T16:30:58.704Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Huesca vs Antequera CF",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.6194754938939669,
+    "minute": 62,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y sin urgencia clara para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T16:41:36.140Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "NK Turnisce vs NK Dob",
+    "league": "Hervis Pokal - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6089568784049108,
+    "minute": 76,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      29,
+      41,
+      78,
+      86
+    ],
+    "timestamp": "2026-10-24T16:51:04.267Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Neftchi Baku vs Turan-Tovuz IK",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5224909387568043,
+    "minute": 80,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, pocos minutos restantes y un jugador menos. La probabilidad de gol es alta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      44,
+      73
+    ],
+    "timestamp": "2026-10-24T17:01:30.332Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "CD Arnedo vs Calamocha",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.6118207332127706,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y la liga tiene un promedio de goles razonable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T17:01:30.666Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Al-Kholood vs Al Ettifaq",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5417185235417542,
+    "minute": 76,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no fiable, y Al-Kholood con 4 grandes ocasiones.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      48,
+      78
+    ],
+    "timestamp": "2026-10-24T17:01:31.449Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Redditch Utd vs Gloucester",
+    "league": "Trofeo FA - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5183047426599988,
+    "minute": 80,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T17:11:16.160Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Hapoel Kauhav vs Maccabi Ihud Bnei Ivtin",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8685152060154874,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en Division 4, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      20,
+      48,
+      56
+    ],
+    "timestamp": "2026-10-24T17:30:57.775Z",
     "alertTimestamp": "2026-10-24T15:41:27.618Z"
   }
 ]
