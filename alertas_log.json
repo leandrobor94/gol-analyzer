@@ -1,214 +1,5 @@
 [
   {
-    "match": "FC Ajka vs Csakvari TK",
-    "league": "NB II - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.525049549864149,
-    "minute": 81,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, el modelo indica alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T16:55:36.341Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "Katsina United vs Niger Tornadoes",
-    "league": "NPFL - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5233452141989293,
-    "minute": 81,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos finales, sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T17:05:04.398Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "FC Minsk II vs Osipovichy",
-    "league": "Pershaya Liga",
-    "tier": "AVISO",
-    "probability": 0.5335741752461568,
-    "minute": 80,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con un jugador menos y xG estimado. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      87,
-      94
-    ],
-    "timestamp": "2026-09-19T17:05:04.428Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Olympique Akbou vs USM Alger",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.6916062490298176,
-    "minute": 62,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, un equipo con 10 jugadores, y alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      21,
-      37,
-      48,
-      61,
-      79
-    ],
-    "timestamp": "2026-09-19T17:05:04.465Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Paris FC vs Estrasburgo",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.896035659478355,
-    "minute": 25,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      57,
-      88
-    ],
-    "timestamp": "2026-09-19T17:22:49.732Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Sampdoria vs Catanzaro",
-    "league": "Serie B italiana",
-    "tier": "AVISO",
-    "probability": 0.8951741673027787,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      47,
-      56,
-      85
-    ],
-    "timestamp": "2026-09-19T17:22:49.775Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Örgryte IS vs Sirius",
-    "league": "Allsvenskan",
-    "tier": "AVISO",
-    "probability": 0.8462625185581618,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y liga de alto scoring. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      62,
-      94
-    ],
-    "timestamp": "2026-09-19T17:34:37.195Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Al Anwar vs Al-Najma",
-    "league": "First Division",
-    "tier": "AVISO",
-    "probability": 0.5257095611434848,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      56
-    ],
-    "timestamp": "2026-09-19T17:34:41.071Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
-    "match": "AS Roma vs Inter Milan",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.6876997763059847,
-    "minute": 64,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto con xG estimado alto y varias ocasiones claras para ambos equipos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      6,
-      37,
-      46,
-      79
-    ],
-    "timestamp": "2026-09-19T18:05:39.892Z",
-    "alertTimestamp": "2026-09-19T16:14:14.310Z"
-  },
-  {
     "match": "Hafia FC vs AS Douanes",
     "league": "CAF Confederation Cup - Clasificación",
     "tier": "AVISO",
@@ -22155,5 +21946,199 @@
     "goalMinutes": [],
     "timestamp": "2026-10-24T02:58:46.623Z",
     "alertTimestamp": "2026-10-24T02:28:46.497Z"
+  },
+  {
+    "match": "Utah Royals vs Seattle Reign",
+    "league": "NWSL",
+    "tier": "AVISO",
+    "probability": 0.6224191346702552,
+    "minute": 62,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando los remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T15:41:29.380Z",
+    "alertTimestamp": "2026-10-24T02:28:46.497Z"
+  },
+  {
+    "match": "Junior FC vs Águilas Doradas",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5300358070115352,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un solo gol de diferencia y ambos equipos generando oportunidades.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      45
+    ],
+    "timestamp": "2026-10-24T15:41:29.573Z",
+    "alertTimestamp": "2026-10-24T02:28:46.497Z"
+  },
+  {
+    "match": "Bourne Town vs Banbury United",
+    "league": "Trofeo FA - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5532931462948801,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, 14 minutos restantes y un equipo con 10 jugadores.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T16:01:41.992Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Berkhamsted vs Cray Wanderers",
+    "league": "Trofeo FA - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5451980007144541,
+    "minute": 79,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T16:01:42.169Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Faversham Town vs Newmarket Town",
+    "league": "Trofeo FA - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5225663373137884,
+    "minute": 80,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T16:11:03.857Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Avro vs Hyde",
+    "league": "Trofeo FA - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5183047426599988,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado en los minutos finales, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T16:11:04.245Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Slavia Kromeriz vs Viktoria Zizkov",
+    "league": "Division 2",
+    "tier": "AVISO",
+    "probability": 0.5209255593550911,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      54,
+      79
+    ],
+    "timestamp": "2026-10-24T16:21:51.235Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Racing de Santander vs RCD Espanyol",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5749517886317951,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, ambos equipos buscan la victoria. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      62,
+      69,
+      84
+    ],
+    "timestamp": "2026-10-24T16:21:51.398Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
+  },
+  {
+    "match": "Aigle Moungo vs Apejes Academy",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.6722002638186152,
+    "minute": 64,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, con un equipo dominando en tiros a puerta y xG (aunque estimado).",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      42,
+      47,
+      88
+    ],
+    "timestamp": "2026-10-24T16:30:58.704Z",
+    "alertTimestamp": "2026-10-24T15:41:27.618Z"
   }
 ]
