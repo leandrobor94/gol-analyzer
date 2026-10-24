@@ -1,48 +1,5 @@
 [
   {
-    "match": "ADO Den Haag vs Cambuur",
-    "league": "Eredivisie",
-    "tier": "AVISO",
-    "probability": 0.6759262229536959,
-    "minute": 64,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un solo gol, xG estimado alto para el local, y muchas llegadas al área.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      44,
-      74
-    ],
-    "timestamp": "2026-09-19T16:34:37.360Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
-    "match": "Vukovar vs Jadran LP",
-    "league": "Division 2",
-    "tier": "AVISO",
-    "probability": 0.5184389932258194,
-    "minute": 81,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 2-2 en el minuto 81, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-19T16:45:44.903Z",
-    "alertTimestamp": "2026-09-19T15:50:42.538Z"
-  },
-  {
     "match": "FC Ajka vs Csakvari TK",
     "league": "NB II - Regular Season",
     "tier": "AVISO",
@@ -22158,5 +22115,45 @@
     "goalMinutes": [],
     "timestamp": "2026-10-23T21:17:39.407Z",
     "alertTimestamp": "2026-10-23T19:17:49.210Z"
+  },
+  {
+    "match": "Binacional vs Santos FC",
+    "league": "Liga 2 - Descenso - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8907817972483305,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T02:28:47.352Z",
+    "alertTimestamp": "2026-10-23T20:07:45.205Z"
+  },
+  {
+    "match": "Marte Soyapango vs CD Vendaval",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.5277468424667974,
+    "minute": 80,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en los minutos finales, ambos equipos buscarán el gol de la victoria.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-24T02:58:46.623Z",
+    "alertTimestamp": "2026-10-24T02:28:46.497Z"
   }
 ]
