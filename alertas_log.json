@@ -1,20 +1,5 @@
 [
   {
-    "match": "Academia Quintana vs Edusoccer",
-    "league": "LPR Pro - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5491707749512644,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-20T02:23:10.427Z",
-    "alertTimestamp": "2026-09-20T01:23:20.069Z"
-  },
-  {
     "match": "Instituto vs Talleres de Córdoba",
     "league": "Liga Profesional Argentina - Clausura",
     "tier": "AVISO",
@@ -22184,5 +22169,20 @@
     ],
     "timestamp": "2026-10-25T01:21:49.605Z",
     "alertTimestamp": "2026-10-24T20:10:46.975Z"
+  },
+  {
+    "match": "Houston Dynamo vs Minnesota United",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.617163275507165,
+    "minute": 65,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-25T02:41:41.669Z",
+    "alertTimestamp": "2026-10-25T01:21:44.575Z"
   }
 ]
