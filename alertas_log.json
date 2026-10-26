@@ -1,49 +1,5 @@
 [
   {
-    "match": "Paulinense U20 vs Ibrachina/Sp Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.6159047522539237,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de 16avos de final empatado 2-2 en el minuto 76. Alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-21T20:05:08.339Z",
-    "alertTimestamp": "2026-09-21T18:05:01.121Z"
-  },
-  {
-    "match": "Ac Dolomiti Bellunesi vs Lumezzane",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5177831100710453,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, xG estimado no confiable, pero muchos tiros a puerta locales.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      21,
-      36,
-      88
-    ],
-    "timestamp": "2026-09-21T20:35:42.528Z",
-    "alertTimestamp": "2026-09-21T18:35:03.054Z"
-  },
-  {
     "match": "Kara Gostar SC vs Mes Rafsanjan",
     "league": "Azadegan League",
     "tier": "AVISO",
@@ -22255,5 +22211,56 @@
     "goalMinutes": [],
     "timestamp": "2026-10-26T18:31:27.124Z",
     "alertTimestamp": "2026-10-26T02:12:14.154Z"
+  },
+  {
+    "match": "Qadisiya vs Al Sadd",
+    "league": "AFC Liga de Campeones Élite",
+    "tier": "AVISO",
+    "probability": 0.5102222751374824,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y chances claras para el visitante. No hay razón para no alertar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      74,
+      84
+    ],
+    "timestamp": "2026-10-26T20:11:24.215Z",
+    "alertTimestamp": "2026-10-26T18:31:26.543Z"
+  },
+  {
+    "match": "Maccabi Ramat Hasharon vs AS Holon",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.864005532755677,
+    "minute": 21,
+    "scoreAtAlert": "1-5",
+    "finalScore": "1-6",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23,
+      37,
+      46,
+      59,
+      71,
+      75,
+      85
+    ],
+    "timestamp": "2026-10-26T20:21:26.344Z",
+    "alertTimestamp": "2026-10-26T18:31:26.543Z"
   }
 ]
