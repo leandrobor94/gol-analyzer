@@ -1,68 +1,5 @@
 [
   {
-    "match": "Kara Gostar SC vs Mes Rafsanjan",
-    "league": "Azadegan League",
-    "tier": "AVISO",
-    "probability": 0.5927803666185647,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T17:19:09.131Z",
-    "alertTimestamp": "2026-09-22T16:39:19.350Z"
-  },
-  {
-    "match": "Academico De Viseu Sub23 vs Estoril Sub23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5845609360317534,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      42,
-      54
-    ],
-    "timestamp": "2026-09-22T18:10:37.261Z",
-    "alertTimestamp": "2026-09-22T16:39:19.350Z"
-  },
-  {
-    "match": "Muaither vs Al Khor",
-    "league": "QSL Cup",
-    "tier": "AVISO",
-    "probability": 0.5711561243477562,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T19:10:33.563Z",
-    "alertTimestamp": "2026-09-22T17:19:08.706Z"
-  },
-  {
     "match": "3 de Febrero F.B.C. vs River Plate Asunción",
     "league": "APF Primera B",
     "tier": "AVISO",
@@ -22262,5 +22199,84 @@
     ],
     "timestamp": "2026-10-26T20:21:26.344Z",
     "alertTimestamp": "2026-10-26T18:31:26.543Z"
+  },
+  {
+    "match": "Santa Clara vs Benfica",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.5068668352866365,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es fiable, y el modelo ya considera el tiempo restante.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      32,
+      62,
+      68
+    ],
+    "timestamp": "2026-10-26T20:41:25.054Z",
+    "alertTimestamp": "2026-10-26T18:51:25.260Z"
+  },
+  {
+    "match": "Crystal Palace Sub21 vs Southampton Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8646431780600576,
+    "minute": 22,
+    "scoreAtAlert": "2-5",
+    "finalScore": "2-5",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      26,
+      37,
+      39,
+      50,
+      55,
+      65,
+      66
+    ],
+    "timestamp": "2026-10-26T20:51:25.495Z",
+    "alertTimestamp": "2026-10-26T19:01:24.105Z"
+  },
+  {
+    "match": "Blackburn Sub21 vs West Bromwich Albion Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8709299022788805,
+    "minute": 22,
+    "scoreAtAlert": "4-2",
+    "finalScore": "4-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      32,
+      36,
+      46,
+      62,
+      72,
+      79
+    ],
+    "timestamp": "2026-10-26T21:01:25.820Z",
+    "alertTimestamp": "2026-10-26T19:01:24.105Z"
   }
 ]
