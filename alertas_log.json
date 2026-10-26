@@ -1,47 +1,5 @@
 [
   {
-    "match": "3 de Febrero F.B.C. vs River Plate Asunción",
-    "league": "APF Primera B",
-    "tier": "AVISO",
-    "probability": 0.56048258402528,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T19:40:50.371Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
-    "match": "Noordwijk vs LAC Frisia 1883",
-    "league": "KNVB Cup - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.5484079818303552,
-    "minute": 80,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      27
-    ],
-    "timestamp": "2026-09-22T19:59:13.662Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
     "match": "Eemdijk vs Roosendaal",
     "league": "KNVB Cup - 2da ronda de clasificación",
     "tier": "AVISO",
@@ -22278,5 +22236,51 @@
     ],
     "timestamp": "2026-10-26T21:01:25.820Z",
     "alertTimestamp": "2026-10-26T19:01:24.105Z"
+  },
+  {
+    "match": "PSG vs Lyon",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8853169636974569,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con xG estimado, no hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      72,
+      84
+    ],
+    "timestamp": "2026-10-26T21:31:23.531Z",
+    "alertTimestamp": "2026-10-26T19:31:24.565Z"
+  },
+  {
+    "match": "Sevilla FC vs Osasuna",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.7054538365658689,
+    "minute": 60,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, xG estimado no es fiable, Osasuna tuvo una gran ocasión.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      24,
+      82
+    ],
+    "timestamp": "2026-10-26T22:01:23.819Z",
+    "alertTimestamp": "2026-10-26T20:11:23.928Z"
   }
 ]
