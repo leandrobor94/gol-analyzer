@@ -1,51 +1,5 @@
 [
   {
-    "match": "Peru Sub19 vs Panamá Sub19",
-    "league": "Juegos Suramericanos",
-    "tier": "AVISO",
-    "probability": 0.8978350017017142,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de selecciones juveniles, 0-0, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      45,
-      59
-    ],
-    "timestamp": "2026-09-21T19:55:17.295Z",
-    "alertTimestamp": "2026-09-21T18:14:58.590Z"
-  },
-  {
-    "match": "Argentina Sub19 vs Venezuela Sub19",
-    "league": "Juegos Suramericanos",
-    "tier": "AVISO",
-    "probability": 0.8815995558352574,
-    "minute": 25,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      27,
-      94
-    ],
-    "timestamp": "2026-09-21T20:05:08.149Z",
-    "alertTimestamp": "2026-09-21T18:05:01.121Z"
-  },
-  {
     "match": "Paulinense U20 vs Ibrachina/Sp Youth",
     "league": "Paulista U20 - 16avos de final",
     "tier": "AVISO",
@@ -22261,5 +22215,45 @@
     "goalMinutes": [],
     "timestamp": "2026-10-26T02:32:15.851Z",
     "alertTimestamp": "2026-10-26T01:32:16.581Z"
+  },
+  {
+    "match": "Real Estelí FC vs Managua FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5480045254645557,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos restantes y 2 tarjetas rojas, lo que puede abrir el juego.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-26T18:31:26.992Z",
+    "alertTimestamp": "2026-10-26T01:32:16.581Z"
+  },
+  {
+    "match": "Portland Timbers II vs Ventura County FC",
+    "league": "MLS Next Pro - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8478043680204975,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de cuartos de final, marcador 0-0, sin razones concretas para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-26T18:31:27.124Z",
+    "alertTimestamp": "2026-10-26T02:12:14.154Z"
   }
 ]
