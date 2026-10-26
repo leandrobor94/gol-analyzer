@@ -1,76 +1,5 @@
 [
   {
-    "match": "Eemdijk vs Roosendaal",
-    "league": "KNVB Cup - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.5188728380880276,
-    "minute": 79,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      17,
-      53,
-      81
-    ],
-    "timestamp": "2026-09-22T19:59:13.908Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
-    "match": "Vélez Sarsfield (Reserva) vs Ferro Carril Oeste (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8667553409112199,
-    "minute": 20,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva, marcador ajustado y xG estimado no confiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      61,
-      68,
-      76
-    ],
-    "timestamp": "2026-09-22T19:59:14.287Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
-    "match": "HHC vs Barendrecht",
-    "league": "KNVB Cup - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8647726576222218,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-09-22T19:59:14.442Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
     "match": "Acv Assen vs Hoogeveen",
     "league": "KNVB Cup - 2da ronda de clasificación",
     "tier": "AVISO",
@@ -22282,5 +22211,77 @@
     ],
     "timestamp": "2026-10-26T22:01:23.819Z",
     "alertTimestamp": "2026-10-26T20:11:23.928Z"
+  },
+  {
+    "match": "Técnico Universitario vs Mushuc Runa",
+    "league": "Liga Pro - Hexagonal del Descenso",
+    "tier": "AVISO",
+    "probability": 0.8599530073602576,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      42,
+      53
+    ],
+    "timestamp": "2026-10-26T22:31:24.043Z",
+    "alertTimestamp": "2026-10-26T20:41:24.533Z"
+  },
+  {
+    "match": "Torreense vs Amarante FC",
+    "league": "Segunda división de Portugal",
+    "tier": "AVISO",
+    "probability": 0.5146328367138726,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-10-26T22:41:23.711Z",
+    "alertTimestamp": "2026-10-26T20:51:25.198Z"
+  },
+  {
+    "match": "Universidad de Chile vs Everton",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.8598865353088424,
+    "minute": 21,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y con tiempo suficiente para que el juego se abra.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30,
+      49,
+      57,
+      80,
+      81
+    ],
+    "timestamp": "2026-10-26T23:01:26.542Z",
+    "alertTimestamp": "2026-10-26T21:01:25.609Z"
   }
 ]
