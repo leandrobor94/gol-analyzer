@@ -1,88 +1,5 @@
 [
   {
-    "match": "Acv Assen vs Hoogeveen",
-    "league": "KNVB Cup - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8469410307809736,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no confiable, sin grandes ocasiones aún. La probabilidad del modelo es alta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      30,
-      84,
-      90
-    ],
-    "timestamp": "2026-09-22T19:59:14.594Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
-    "match": "Plymouth vs Crystal Palace Sub21",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.851873412137074,
-    "minute": 20,
-    "scoreAtAlert": "5-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      11,
-      26,
-      37,
-      57,
-      66,
-      84
-    ],
-    "timestamp": "2026-09-22T19:59:14.919Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
-    "match": "Cheltenham vs Exeter",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.842498597047296,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      46,
-      77,
-      86,
-      89,
-      121,
-      122,
-      123,
-      123,
-      124,
-      124,
-      125
-    ],
-    "timestamp": "2026-09-22T20:19:36.991Z",
-    "alertTimestamp": "2026-09-22T18:10:36.641Z"
-  },
-  {
     "match": "Bromley vs Brentford U21",
     "league": "EFL Trophy",
     "tier": "AVISO",
@@ -22283,5 +22200,73 @@
     ],
     "timestamp": "2026-10-26T23:01:26.542Z",
     "alertTimestamp": "2026-10-26T21:01:25.609Z"
+  },
+  {
+    "match": "Deportivo Capiata vs Tacuary",
+    "league": "Division Intermedia",
+    "tier": "AVISO",
+    "probability": 0.5129103260192938,
+    "minute": 76,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con tiempo y volumen de juego para un gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      52,
+      62,
+      83
+    ],
+    "timestamp": "2026-10-27T17:46:50.470Z",
+    "alertTimestamp": "2026-10-26T21:31:23.237Z"
+  },
+  {
+    "match": "Brown de Adrogué vs Defensores Unidos",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.8567168157885288,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin remates a puerta ni grandes ocasiones. El xG es estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53
+    ],
+    "timestamp": "2026-10-27T17:46:50.873Z",
+    "alertTimestamp": "2026-10-26T22:11:23.575Z"
+  },
+  {
+    "match": "Coritiba vs Grêmio",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8955098648812732,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido parejo, con chances claras y sin goles. El modelo indica alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      92
+    ],
+    "timestamp": "2026-10-27T17:46:51.953Z",
+    "alertTimestamp": "2026-10-26T22:41:23.431Z"
   }
 ]
