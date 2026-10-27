@@ -1,125 +1,5 @@
 [
   {
-    "match": "Maidstone United vs Cray Wanderers",
-    "league": "Copa de Inglaterra - Preliminar - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.6255068309958631,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:49:11.622Z",
-    "alertTimestamp": "2026-09-22T18:59:13.103Z"
-  },
-  {
-    "match": "Taunton Town vs Bath City",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.6175629966914872,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de 7ª división con marcador ajustado y minutos restantes. No hay datos de xG reales.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:49:11.773Z",
-    "alertTimestamp": "2026-09-22T18:59:13.103Z"
-  },
-  {
-    "match": "Farnborough FC vs Uxbridge",
-    "league": "Copa de Inglaterra - Preliminar - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8947712131664556,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de copa, marcador 0-0, sin datos de xG reales. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:59:08.072Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
-    "match": "Newmarket Town vs Brightlingsea Regent",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.5985511674480367,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado en 7ª división, con alta probabilidad de gol en los últimos 16 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:59:08.145Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
-    "match": "Wroxham vs Gorleston",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8883737633952643,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, minuto 23, alta probabilidad de gol según el modelo. No hay razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:59:08.312Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
-    "match": "Cambridge City vs Witham Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8944091577935273,
-    "minute": 22,
-    "scoreAtAlert": "3-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado, sin datos de xG o grandes ocasiones que sugieran esterilidad.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T21:19:19.766Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
     "match": "Dep Puerto Montt vs Ñublense",
     "league": "Copa Chile - Octavos de final",
     "tier": "AVISO",
@@ -22286,5 +22166,140 @@
     ],
     "timestamp": "2026-10-27T19:26:49.036Z",
     "alertTimestamp": "2026-10-27T17:46:49.414Z"
+  },
+  {
+    "match": "FC Nürnberg II vs Bayern Munich II",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.8915956157101004,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      30
+    ],
+    "timestamp": "2026-10-27T19:56:55.951Z",
+    "alertTimestamp": "2026-10-27T18:06:47.416Z"
+  },
+  {
+    "match": "SC Freiburg II vs Eintracht Frankfurt II",
+    "league": "Regionalliga - Sudwest",
+    "tier": "AVISO",
+    "probability": 0.8915956157101004,
+    "minute": 25,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      46,
+      83
+    ],
+    "timestamp": "2026-10-27T19:56:56.174Z",
+    "alertTimestamp": "2026-10-27T18:06:47.416Z"
+  },
+  {
+    "match": "Pinatar Cf vs Elche CF",
+    "league": "Copa del Rey - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.6280539534791012,
+    "minute": 68,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, Elche con alto xG y ocasiones, a pesar de xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      32,
+      54,
+      81
+    ],
+    "timestamp": "2026-10-27T19:56:56.964Z",
+    "alertTimestamp": "2026-10-27T18:06:47.416Z"
+  },
+  {
+    "match": "Dodoma Jiji vs JKT Tanzania",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.5063400099065302,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con tiempo restante y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-27T20:07:04.274Z",
+    "alertTimestamp": "2026-10-27T18:16:47.078Z"
+  },
+  {
+    "match": "Benevento vs Catanzaro",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.621380391165174,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando y generando oportunidades.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      51,
+      92
+    ],
+    "timestamp": "2026-10-27T20:17:23.762Z",
+    "alertTimestamp": "2026-10-27T18:16:47.078Z"
+  },
+  {
+    "match": "Talleres (Reserva) vs Aldosivi (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5700385012097037,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva 0-0 en el minuto 77, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-27T20:26:54.876Z",
+    "alertTimestamp": "2026-10-27T18:16:47.078Z"
   }
 ]
