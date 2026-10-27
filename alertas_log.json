@@ -1,48 +1,5 @@
 [
   {
-    "match": "Dep Puerto Montt vs Ñublense",
-    "league": "Copa Chile - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8544008406202087,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, sin datos de xG reales ni ocasiones claras.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      63,
-      72
-    ],
-    "timestamp": "2026-09-23T02:20:18.648Z",
-    "alertTimestamp": "2026-09-22T21:09:09.213Z"
-  },
-  {
-    "match": "Doma United vs Plateau United",
-    "league": "NPFL - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5985511674480367,
-    "minute": 77,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado con alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T17:11:43.445Z",
-    "alertTimestamp": "2026-09-23T16:31:33.525Z"
-  },
-  {
     "match": "Sparta Praha (F) vs Farul Constanta (F)",
     "league": "UEFA Women's Europa Cup - 2da ronda de clasificación",
     "tier": "AVISO",
@@ -22301,5 +22258,55 @@
     "goalMinutes": [],
     "timestamp": "2026-10-27T20:26:54.876Z",
     "alertTimestamp": "2026-10-27T18:16:47.078Z"
+  },
+  {
+    "match": "Blackpool vs Aston Villa Sub21",
+    "league": "EFL Trophy",
+    "tier": "AVISO",
+    "probability": 0.6926663150034892,
+    "minute": 60,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, muchos minutos por jugar y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      42,
+      71,
+      79,
+      94
+    ],
+    "timestamp": "2026-10-27T20:56:52.354Z",
+    "alertTimestamp": "2026-10-27T19:06:50.276Z"
+  },
+  {
+    "match": "Bray Wanderers vs Kerry",
+    "league": "Division 1 - Playoffs ascenso",
+    "tier": "AVISO",
+    "probability": 0.5531918162265747,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido de playoffs, un gol cambia todo. El modelo lo ve probable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      33,
+      73,
+      86
+    ],
+    "timestamp": "2026-10-27T21:36:50.362Z",
+    "alertTimestamp": "2026-10-27T19:46:55.313Z"
   }
 ]
