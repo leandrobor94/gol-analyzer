@@ -1,113 +1,5 @@
 [
   {
-    "match": "Bromley vs Brentford U21",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.8625412124458546,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, sin goles, y la liga tiene un alto promedio de goles.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      85
-    ],
-    "timestamp": "2026-09-22T20:30:02.150Z",
-    "alertTimestamp": "2026-09-22T18:39:11.351Z"
-  },
-  {
-    "match": "Gala Fairydean vs Spartans",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.8815414594949692,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:39:37.028Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
-    "match": "Alloa Athletic vs Hibernian B",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.672734546577698,
-    "minute": 60,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay big chances.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      50,
-      63,
-      68,
-      70
-    ],
-    "timestamp": "2026-09-22T20:39:47.670Z",
-    "alertTimestamp": "2026-09-22T18:49:14.779Z"
-  },
-  {
-    "match": "Bury Town vs Hitchin Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.6063278274897388,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, 7ª división, y el modelo da alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:49:11.448Z",
-    "alertTimestamp": "2026-09-22T18:59:13.103Z"
-  },
-  {
-    "match": "Plymouth Parkway vs Frome Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8887498682480743,
-    "minute": 24,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, marcador ajustado 1-0, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-22T20:49:11.550Z",
-    "alertTimestamp": "2026-09-22T18:59:13.103Z"
-  },
-  {
     "match": "Maidstone United vs Cray Wanderers",
     "league": "Copa de Inglaterra - Preliminar - 2da ronda de clasificación",
     "tier": "AVISO",
@@ -22268,5 +22160,131 @@
     ],
     "timestamp": "2026-10-27T17:46:51.953Z",
     "alertTimestamp": "2026-10-26T22:41:23.431Z"
+  },
+  {
+    "match": "Rot-Weiss Essen vs RB Leipzig",
+    "league": "DFB-Pokal - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5219797116941485,
+    "minute": 78,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, pocos minutos restantes, y un equipo con un jugador menos. ",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9,
+      78,
+      82
+    ],
+    "timestamp": "2026-10-27T18:56:47.278Z",
+    "alertTimestamp": "2026-10-27T17:46:49.414Z"
+  },
+  {
+    "match": "Sonnenhof Großaspach vs FC Augsburg",
+    "league": "DFB-Pokal - Segunda Ronda",
+    "tier": "AVISO",
+    "probability": 0.5175126636221232,
+    "minute": 76,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles y xG estimado, el marcador no está completamente resuelto.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      21,
+      22,
+      46,
+      69,
+      74
+    ],
+    "timestamp": "2026-10-27T18:56:48.541Z",
+    "alertTimestamp": "2026-10-27T17:46:49.414Z"
+  },
+  {
+    "match": "FC Hertha Wels vs Wolfsberger",
+    "league": "Copa de Austria - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.5257249626305459,
+    "minute": 80,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4
+    ],
+    "timestamp": "2026-10-27T19:26:48.581Z",
+    "alertTimestamp": "2026-10-27T17:46:49.414Z"
+  },
+  {
+    "match": "Sassuolo vs Lazio",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8897814738675119,
+    "minute": 26,
+    "scoreAtAlert": "2-6",
+    "finalScore": "2-6",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador abierto y chances claras. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      7,
+      13,
+      16,
+      43,
+      46,
+      55,
+      65
+    ],
+    "timestamp": "2026-10-27T19:26:48.800Z",
+    "alertTimestamp": "2026-10-27T17:46:49.414Z"
+  },
+  {
+    "match": "Krasnodar vs Dinamo Moscú",
+    "league": "Copa de Rusia - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.5865519442319486,
+    "minute": 76,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos con remates a puerta. La Copa de Rusia tiene un ritmo de goles decente.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      12,
+      43,
+      93
+    ],
+    "timestamp": "2026-10-27T19:26:49.036Z",
+    "alertTimestamp": "2026-10-27T17:46:49.414Z"
   }
 ]
