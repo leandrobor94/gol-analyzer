@@ -1,65 +1,5 @@
 [
   {
-    "match": "Grêmio Prudente U20 vs Juventus/Sp Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.8947712131664556,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de 16avos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T20:01:34.394Z",
-    "alertTimestamp": "2026-09-23T18:01:32.810Z"
-  },
-  {
-    "match": "Liverpool (F) vs Sunderland (W)",
-    "league": "Womens League Cup",
-    "tier": "AVISO",
-    "probability": 0.8876747774872754,
-    "minute": 22,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es fiable, pero el modelo da alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T20:01:41.694Z",
-    "alertTimestamp": "2026-09-23T18:01:32.810Z"
-  },
-  {
-    "match": "Aldosivi (Reserva) vs Quilmes AC (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.6154782784891308,
-    "minute": 63,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, xG estimado no es real, pero 5 tiros a puerta locales sugieren peligro.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T20:01:41.753Z",
-    "alertTimestamp": "2026-09-23T18:01:32.810Z"
-  },
-  {
     "match": "Tottenham (F) vs West Ham (F)",
     "league": "Womens League Cup",
     "tier": "AVISO",
@@ -22320,5 +22260,68 @@
     ],
     "timestamp": "2026-10-27T22:16:40.167Z",
     "alertTimestamp": "2026-10-27T20:26:53.460Z"
+  },
+  {
+    "match": "Stanway Rovers vs Cray Wanderers",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.9015090410803621,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "-1--1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T18:11:00.783Z",
+    "alertTimestamp": "2026-10-27T19:56:51.913Z"
+  },
+  {
+    "match": "CD Neo Pipil vs Independiente San Vicente",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.8951904846286073,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con 72 minutos restantes y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      17
+    ],
+    "timestamp": "2026-10-28T18:11:01.404Z",
+    "alertTimestamp": "2026-10-27T21:06:55.127Z"
+  },
+  {
+    "match": "Posusje vs Vitez",
+    "league": "Bosnia Hezergovina Cup - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5230260945822035,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T19:01:20.366Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
   }
 ]
