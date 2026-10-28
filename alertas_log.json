@@ -1,166 +1,5 @@
 [
   {
-    "match": "Tottenham (F) vs West Ham (F)",
-    "league": "Womens League Cup",
-    "tier": "AVISO",
-    "probability": 0.5255478510947937,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, xG estimado bajo pero no hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T20:01:42.324Z",
-    "alertTimestamp": "2026-09-23T18:01:32.810Z"
-  },
-  {
-    "match": "Togb vs Rohda Raalte",
-    "league": "KNVB Cup - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.8488300444436655,
-    "minute": 20,
-    "scoreAtAlert": "3-6",
-    "finalScore": "4-6",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      29,
-      51,
-      56,
-      60,
-      70,
-      76,
-      78,
-      85,
-      93
-    ],
-    "timestamp": "2026-09-23T20:01:43.021Z",
-    "alertTimestamp": "2026-09-23T18:11:33.023Z"
-  },
-  {
-    "match": "Chile Sub20 (F) vs Venezuela Sub17 (F)",
-    "league": "Juegos Suramericanos (F) - Final",
-    "tier": "AVISO",
-    "probability": 0.518196204861639,
-    "minute": 81,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-5",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de final, marcador ajustado 1-0, y minutos finales. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T20:11:32.972Z",
-    "alertTimestamp": "2026-09-23T18:11:33.023Z"
-  },
-  {
-    "match": "Boston River vs Fenix",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.5385912290456746,
-    "minute": 76,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol, marcador ajustado y minutos restantes.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11,
-      18,
-      26,
-      38,
-      65
-    ],
-    "timestamp": "2026-09-23T20:21:34.459Z",
-    "alertTimestamp": "2026-09-23T18:31:34.779Z"
-  },
-  {
-    "match": "Chelsea (F) vs Austria Wien (W)",
-    "league": "Liga de Campeones Femenina",
-    "tier": "AVISO",
-    "probability": 0.8802828506286944,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      11
-    ],
-    "timestamp": "2026-09-23T20:51:50.566Z",
-    "alertTimestamp": "2026-09-23T19:01:50.824Z"
-  },
-  {
-    "match": "Exmouth vs Thame United",
-    "league": "Copa de Inglaterra - Preliminar - 2da ronda de clasificación",
-    "tier": "AVISO",
-    "probability": 0.5407339656379443,
-    "minute": 80,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado en los minutos finales de una copa, alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-23T21:01:49.947Z",
-    "alertTimestamp": "2026-09-23T19:21:42.393Z"
-  },
-  {
-    "match": "Paraguay Sub19 vs Chile Sub19",
-    "league": "Juegos Suramericanos - Semifinales",
-    "tier": "AVISO",
-    "probability": 0.8916182963691932,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de semifinales, marcador 0-0, sin datos de xG reales. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      93
-    ],
-    "timestamp": "2026-09-24T02:12:29.109Z",
-    "alertTimestamp": "2026-09-23T20:01:34.204Z"
-  },
-  {
     "match": "CD Neo Pipil vs Orión FC",
     "league": "Liga de Ascenso - Centro Oriente",
     "tier": "AVISO",
@@ -22322,6 +22161,169 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-10-28T19:01:20.366Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Parma vs Udinese",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.6463316364182664,
+    "minute": 64,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, Udinese con más llegadas y chances. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T19:21:26.785Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "AC Milan vs Bologna",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.7207725012149938,
+    "minute": 61,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y chances claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      14,
+      27,
+      60,
+      62,
+      86
+    ],
+    "timestamp": "2026-10-28T19:30:47.149Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "52 Orduspor vs 1461 Trabzon",
+    "league": "Copa de Turquía",
+    "tier": "AVISO",
+    "probability": 0.6283106953750374,
+    "minute": 62,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El partido no está resuelto y el equipo visitante tiene un alto volumen de tiros a puerta.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      29
+    ],
+    "timestamp": "2026-10-28T19:30:47.748Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Hammarby U19 vs Super Nova U19",
+    "league": "Liga Juvenil de la UEFA",
+    "tier": "AVISO",
+    "probability": 0.5162400100851143,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-10-28T19:50:51.567Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Tromso vs FK Haugesund",
+    "league": "NM Cupen - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.9096109269851645,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      34,
+      74,
+      92,
+      94
+    ],
+    "timestamp": "2026-10-28T20:01:18.192Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Liga de Portoviejo vs Cumbaya",
+    "league": "Serie B - Fase de grupos - Grupo Descenso",
+    "tier": "AVISO",
+    "probability": 0.49915366845330095,
+    "minute": 81,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con 2 tarjetas rojas y alta probabilidad de gol en los últimos minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T20:01:18.489Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Polonia Środa vs Slask Wroclaw Ii",
+    "league": "Polish Cup - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.8890550416735485,
+    "minute": 20,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      37,
+      38,
+      44,
+      50
+    ],
+    "timestamp": "2026-10-28T20:01:18.607Z",
     "alertTimestamp": "2026-10-28T18:10:57.929Z"
   }
 ]
