@@ -1,182 +1,5 @@
 [
   {
-    "match": "CD Neo Pipil vs Orión FC",
-    "league": "Liga de Ascenso - Centro Oriente",
-    "tier": "AVISO",
-    "probability": 0.8947712131664556,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-24T02:12:29.445Z",
-    "alertTimestamp": "2026-09-23T20:31:33.100Z"
-  },
-  {
-    "match": "Vancouver Fc vs Inter Toronto FC",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.9076497917126619,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos y sin razones para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8,
-      24,
-      44,
-      71,
-      92,
-      97
-    ],
-    "timestamp": "2026-09-24T16:52:56.001Z",
-    "alertTimestamp": "2026-09-24T02:22:30.653Z"
-  },
-  {
-    "match": "Hapoel Rishon Lezion vs Maccabi Ahi Nazeret",
-    "league": "National League",
-    "tier": "AVISO",
-    "probability": 0.5321639527078351,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-24T17:52:45.947Z",
-    "alertTimestamp": "2026-09-24T16:52:53.610Z"
-  },
-  {
-    "match": "Sekzia Nes Ziona vs Hapoel Bnei Kuseife",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.6255068309958631,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      67,
-      96
-    ],
-    "timestamp": "2026-09-24T18:02:19.372Z",
-    "alertTimestamp": "2026-09-24T16:52:53.610Z"
-  },
-  {
-    "match": "Bnei Jaljulia vs AS Holon",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.8978350017017142,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-24T19:02:28.255Z",
-    "alertTimestamp": "2026-09-24T17:11:56.484Z"
-  },
-  {
-    "match": "MS Shikun HaMizrah vs Maccabi Bnei Eilat",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.8638216049555775,
-    "minute": 20,
-    "scoreAtAlert": "6-0",
-    "finalScore": "6-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no fiable, sin datos de ocasiones claras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      22,
-      30,
-      50,
-      53,
-      66,
-      81
-    ],
-    "timestamp": "2026-09-24T19:02:28.453Z",
-    "alertTimestamp": "2026-09-24T17:11:56.484Z"
-  },
-  {
-    "match": "Hapoel Segev Shalom vs SC Arad",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.899588889534984,
-    "minute": 20,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en Division 4, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-24T19:12:36.564Z",
-    "alertTimestamp": "2026-09-24T17:41:55.949Z"
-  },
-  {
-    "match": "Hapoel Kauhav vs MS Bnei Hagolan",
-    "league": "Division 4",
-    "tier": "AVISO",
-    "probability": 0.8978350017017142,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-24T19:32:50.674Z",
-    "alertTimestamp": "2026-09-24T16:52:53.610Z"
-  },
-  {
     "match": "Amishav Petah Tikva vs Hapoel Kiryat Ono",
     "league": "Division 4",
     "tier": "AVISO",
@@ -22325,5 +22148,209 @@
     ],
     "timestamp": "2026-10-28T20:01:18.607Z",
     "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Petrolina vs 1º de Maio",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      51,
+      79,
+      83,
+      94
+    ],
+    "timestamp": "2026-10-28T20:10:46.991Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Belo Jardim vs Chã Grande",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T20:21:19.927Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "Brasil Sub17 (F) vs Polonia Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.900501053055954,
+    "minute": 20,
+    "scoreAtAlert": "3-2",
+    "finalScore": "11-10",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminación directa, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      34,
+      36,
+      52,
+      73,
+      83,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125,
+      126,
+      126,
+      127,
+      127,
+      128,
+      128,
+      129
+    ],
+    "timestamp": "2026-10-28T20:30:44.967Z",
+    "alertTimestamp": "2026-10-28T18:10:57.929Z"
+  },
+  {
+    "match": "MVV Maastricht vs Excelsior",
+    "league": "KNVB Cup - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8509751147692095,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en primera ronda de copa, marcador ajustado y sin indicios de partido resuelto.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      15,
+      60,
+      89
+    ],
+    "timestamp": "2026-10-28T20:50:47.011Z",
+    "alertTimestamp": "2026-10-28T19:10:44.572Z"
+  },
+  {
+    "match": "VVSB vs EVV Echt",
+    "league": "KNVB Cup - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8686727535336385,
+    "minute": 21,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      7,
+      37,
+      71
+    ],
+    "timestamp": "2026-10-28T21:01:40.891Z",
+    "alertTimestamp": "2026-10-28T19:10:44.572Z"
+  },
+  {
+    "match": "Atlético FC vs Vinotinto del Ecuador FC",
+    "league": "Serie B - Fase de grupos - Grupo Ascenso",
+    "tier": "AVISO",
+    "probability": 0.8618226234673705,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase de grupos, marcador 0-0, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-28T21:01:41.292Z",
+    "alertTimestamp": "2026-10-28T19:10:44.572Z"
+  },
+  {
+    "match": "Independiente Juniors vs San Antonio",
+    "league": "Serie B - Fase de grupos - Grupo Ascenso",
+    "tier": "AVISO",
+    "probability": 0.5048037165050108,
+    "minute": 80,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      36,
+      73
+    ],
+    "timestamp": "2026-10-28T21:01:41.590Z",
+    "alertTimestamp": "2026-10-28T19:10:44.572Z"
+  },
+  {
+    "match": "PEC Zwolle vs TOP Oss",
+    "league": "KNVB Cup - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8400812966709141,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado, y liga de alto scoring. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      18,
+      34,
+      50
+    ],
+    "timestamp": "2026-10-28T21:01:41.784Z",
+    "alertTimestamp": "2026-10-28T19:10:44.572Z"
   }
 ]
