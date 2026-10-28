@@ -1,50 +1,5 @@
 {
   "alertedMatches": {
-    "4858205_AVISO": {
-      "timestamp": 1793215285748,
-      "minute": 62,
-      "tier": "AVISO"
-    },
-    "4885213_AVISO": {
-      "timestamp": 1793216498056,
-      "minute": 79,
-      "tier": "AVISO"
-    },
-    "4866366_AVISO": {
-      "timestamp": 1793216498056,
-      "minute": 80,
-      "tier": "AVISO"
-    },
-    "4864659_AVISO": {
-      "timestamp": 1793215285748,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4864673_AVISO": {
-      "timestamp": 1793215285748,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4823137_AVISO": {
-      "timestamp": 1793215285748,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4864672_AVISO": {
-      "timestamp": 1793215285748,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4886603_AVISO": {
-      "timestamp": 1793215846230,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4883519_AVISO": {
-      "timestamp": 1793216498056,
-      "minute": 81,
-      "tier": "AVISO"
-    },
     "4886605_AVISO": {
       "timestamp": 1793220646172,
       "minute": 63,
@@ -96,8 +51,8 @@
       "tier": "AVISO"
     },
     "4744248_AVISO": {
-      "timestamp": 1793222482050,
-      "minute": 21,
+      "timestamp": 1793226059953,
+      "minute": 64,
       "tier": "AVISO"
     },
     "4847187_AVISO": {
@@ -114,13 +69,28 @@
       "timestamp": 1793222482050,
       "minute": 77,
       "tier": "AVISO"
+    },
+    "4886078_AVISO": {
+      "timestamp": 1793227253452,
+      "minute": 80,
+      "tier": "AVISO"
+    },
+    "4632622_AVISO": {
+      "timestamp": 1793227841362,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4632627_AVISO": {
+      "timestamp": 1793227841362,
+      "minute": 21,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 14833,
-    "verified": 14817,
-    "withGoalTimeline": 10470,
+    "total": 14838,
+    "verified": 14822,
+    "withGoalTimeline": 10475,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-28T22:00:54.120Z"
+  "lastUpdated": "2026-10-28T22:50:42.394Z"
 }

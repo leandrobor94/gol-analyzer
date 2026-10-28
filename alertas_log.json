@@ -1,28 +1,5 @@
 [
   {
-    "match": "Danubio FC vs Peñarol",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.548774498130132,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      53,
-      81
-    ],
-    "timestamp": "2026-09-24T21:01:53.846Z",
-    "alertTimestamp": "2026-09-24T19:02:17.081Z"
-  },
-  {
     "match": "Atlético FC vs Cuenca Juniors",
     "league": "Serie B - Fase de grupos - Grupo Ascenso",
     "tier": "AVISO",
@@ -22375,5 +22352,35 @@
     ],
     "timestamp": "2026-10-28T22:00:53.797Z",
     "alertTimestamp": "2026-10-28T20:21:18.816Z"
+  },
+  {
+    "match": "LASK Linz vs Ried",
+    "league": "Copa de Austria - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8527086968760333,
+    "minute": 21,
+    "scoreAtAlert": "2-3",
+    "finalScore": "5-4",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      36,
+      47,
+      51,
+      76,
+      84,
+      92,
+      111,
+      120,
+      122
+    ],
+    "timestamp": "2026-10-28T22:10:39.680Z",
+    "alertTimestamp": "2026-10-28T19:41:38.057Z"
   }
 ]
