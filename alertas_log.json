@@ -1,174 +1,5 @@
 [
   {
-    "match": "Sport Boys (Reserva) vs Centro Social de Pariacoto",
-    "league": "Liga 3",
-    "tier": "AVISO",
-    "probability": 0.565784453665404,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, muchos minutos restantes y 3 tarjetas rojas, lo que puede abrir el juego.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      30,
-      76,
-      95
-    ],
-    "timestamp": "2026-09-25T18:05:47.925Z",
-    "alertTimestamp": "2026-09-25T16:55:47.084Z"
-  },
-  {
-    "match": "Bayern Munich II vs Schwaben Augsburg",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.8841761321870854,
-    "minute": 25,
-    "scoreAtAlert": "2-3",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      27,
-      36,
-      51,
-      73,
-      75,
-      89,
-      93
-    ],
-    "timestamp": "2026-09-25T18:26:18.137Z",
-    "alertTimestamp": "2026-09-25T16:55:47.084Z"
-  },
-  {
-    "match": "SC Eltersdorf vs SpVgg Bayreuth",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.8875749454831063,
-    "minute": 24,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      26,
-      42,
-      55,
-      66,
-      79,
-      83
-    ],
-    "timestamp": "2026-09-25T18:55:49.807Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "FC Memmingen vs TSV Buchbach",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.8875749454831063,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      50
-    ],
-    "timestamp": "2026-09-25T18:55:50.008Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "BFC Dynamo vs Greifswalder Fc",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.8875749454831063,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en etapa temprana, sin goles, y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      70
-    ],
-    "timestamp": "2026-09-25T18:55:50.240Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "1. FC Magdeburg II vs VSG Altglienicke",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.5680471406303292,
-    "minute": 79,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, pocos minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      70
-    ],
-    "timestamp": "2026-09-25T18:55:50.432Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "Hik Hellerup vs FC Roskilde",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.5189520333012316,
-    "minute": 81,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      59,
-      81
-    ],
-    "timestamp": "2026-09-25T18:55:50.989Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
     "match": "Greuther Fürth II vs FC Nürnberg II",
     "league": "Regionalliga - Bayern",
     "tier": "AVISO",
@@ -22378,5 +22209,182 @@
     ],
     "timestamp": "2026-10-29T18:17:08.311Z",
     "alertTimestamp": "2026-10-28T22:30:38.950Z"
+  },
+  {
+    "match": "Frosinone vs Lecce",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.7294652786913245,
+    "minute": 60,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, xG estimado no es fiable, y hay chances claras de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      46,
+      59,
+      72,
+      82,
+      94
+    ],
+    "timestamp": "2026-10-29T19:37:08.225Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Ironi Kfar Yona vs Beitar Haifa",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5063400099065302,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 80, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-29T19:37:08.464Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Austria Wien (W) vs Juventus (F)",
+    "league": "Liga de Campeones Femenina",
+    "tier": "AVISO",
+    "probability": 0.6610897145015584,
+    "minute": 65,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Juventus busca ampliar ventaja. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      39,
+      63,
+      78,
+      81,
+      91
+    ],
+    "timestamp": "2026-10-29T19:47:00.677Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Ub Lebrijana vs Getafe CF",
+    "league": "Copa del Rey - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5058421572595434,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol según el modelo y sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      23,
+      45,
+      47,
+      68
+    ],
+    "timestamp": "2026-10-29T19:56:59.383Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "España Sub17 (F) vs EEUU Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8787034684091403,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de eliminación directa, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      43,
+      48,
+      71
+    ],
+    "timestamp": "2026-10-29T20:07:00.539Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Japón Sub17 (F) vs Kenia Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8772294218311726,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado en octavos de final, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29,
+      36,
+      59,
+      75
+    ],
+    "timestamp": "2026-10-29T20:07:00.920Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Al Nassr FC Riyadh vs Al-Kholood",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5507815441408745,
+    "minute": 76,
+    "scoreAtAlert": "5-3",
+    "finalScore": "5-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido con muchos goles y oportunidades, el marcador no está completamente resuelto.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      24,
+      38,
+      47,
+      66,
+      72,
+      81,
+      94
+    ],
+    "timestamp": "2026-10-29T20:07:01.116Z",
+    "alertTimestamp": "2026-10-29T18:17:06.144Z"
   }
 ]
