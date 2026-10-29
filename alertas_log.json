@@ -1,29 +1,5 @@
 [
   {
-    "match": "FC Gutersloh vs SC Paderborn 07 II",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.5382072555117356,
-    "minute": 80,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado con alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      10,
-      77,
-      98
-    ],
-    "timestamp": "2026-09-25T19:26:21.360Z",
-    "alertTimestamp": "2026-09-25T17:36:00.001Z"
-  },
-  {
     "match": "São Paulo Sub20 vs Ec São Bernardo S20",
     "league": "Paulista U20 - 16avos de final",
     "tier": "AVISO",
@@ -22394,5 +22370,31 @@
     ],
     "timestamp": "2026-10-29T21:56:53.861Z",
     "alertTimestamp": "2026-10-29T20:06:59.264Z"
+  },
+  {
+    "match": "Sporting Cristal vs Alianza Lima",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5137583632594402,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      24,
+      42,
+      46,
+      92
+    ],
+    "timestamp": "2026-10-29T22:36:53.903Z",
+    "alertTimestamp": "2026-10-29T20:36:59.173Z"
   }
 ]
