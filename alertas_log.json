@@ -1,56 +1,5 @@
 [
   {
-    "match": "Greuther Fürth II vs FC Nürnberg II",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.6019442362525782,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      3,
-      24,
-      69
-    ],
-    "timestamp": "2026-09-25T18:55:51.360Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "Sv Tasmania Berlin vs Carl Zeiss Jena",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.8912487881463937,
-    "minute": 24,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-5",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      19,
-      28,
-      30,
-      74,
-      80,
-      91
-    ],
-    "timestamp": "2026-09-25T19:07:29.778Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
     "match": "FC Astoria Walldorf vs SV Sandhausen",
     "league": "Regionalliga - Sudwest",
     "tier": "AVISO",
@@ -22386,5 +22335,60 @@
     ],
     "timestamp": "2026-10-29T20:07:01.116Z",
     "alertTimestamp": "2026-10-29T18:17:06.144Z"
+  },
+  {
+    "match": "Baltika vs Zenit",
+    "league": "Copa de Rusia - Grupo C",
+    "tier": "AVISO",
+    "probability": 0.8869330635440841,
+    "minute": 22,
+    "scoreAtAlert": "1-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30,
+      69,
+      73,
+      83,
+      91
+    ],
+    "timestamp": "2026-10-29T20:46:57.873Z",
+    "alertTimestamp": "2026-10-29T18:47:00.921Z"
+  },
+  {
+    "match": "SC Braga vs Famalicão",
+    "league": "Copa de la Liga - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8550015118895118,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador ajustado, y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      37,
+      49,
+      89,
+      122,
+      123,
+      124,
+      125
+    ],
+    "timestamp": "2026-10-29T20:56:54.990Z",
+    "alertTimestamp": "2026-10-29T18:56:58.385Z"
   }
 ]
