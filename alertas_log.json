@@ -1,49 +1,5 @@
 [
   {
-    "match": "FC Astoria Walldorf vs SV Sandhausen",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.8912487881463937,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      37,
-      93
-    ],
-    "timestamp": "2026-09-25T19:07:29.979Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
-    "match": "France U18 vs Ukraine U18",
-    "league": "Amistoso Internacional Sub18",
-    "tier": "AVISO",
-    "probability": 0.6255068309958631,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-25T19:07:30.214Z",
-    "alertTimestamp": "2026-09-25T17:05:48.864Z"
-  },
-  {
     "match": "FC Gutersloh vs SC Paderborn 07 II",
     "league": "Regionalliga - West",
     "tier": "AVISO",
@@ -22390,5 +22346,53 @@
     ],
     "timestamp": "2026-10-29T20:56:54.990Z",
     "alertTimestamp": "2026-10-29T18:56:58.385Z"
+  },
+  {
+    "match": "Amiens vs Thionville",
+    "league": "Ligue 3",
+    "tier": "AVISO",
+    "probability": 0.8958528292737962,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador 0-0, sin datos de xG reales ni ocasiones claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35,
+      48
+    ],
+    "timestamp": "2026-10-29T21:46:54.170Z",
+    "alertTimestamp": "2026-10-29T19:56:56.488Z"
+  },
+  {
+    "match": "Xerez vs Cádiz",
+    "league": "Copa del Rey - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.519193242652218,
+    "minute": 77,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, con ambos equipos generando peligro. El xG es estimado, no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      25,
+      59,
+      83
+    ],
+    "timestamp": "2026-10-29T21:56:53.861Z",
+    "alertTimestamp": "2026-10-29T20:06:59.264Z"
   }
 ]
