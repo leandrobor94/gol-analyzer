@@ -1,71 +1,5 @@
 [
   {
-    "match": "Agua Santa/Sp Youth vs Capivariano/Sp Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.5587896631763746,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de eliminación directa, marcador ajustado y tiempo restante. El xG no es real.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-25T20:05:55.523Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
-    "match": "Colón (Reserva) vs Unión Santa Fé (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5167622733970604,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de reserva con un jugador menos, marcador igualado y alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      31,
-      44,
-      76
-    ],
-    "timestamp": "2026-09-25T20:05:55.953Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
-    "match": "Inglaterra Sub19 vs Irlanda Sub-19",
-    "league": "Amistoso Internacional Sub19",
-    "tier": "AVISO",
-    "probability": 0.8797368931854853,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso sub-19, sin goles, con xG estimado bajo. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      70
-    ],
-    "timestamp": "2026-09-25T20:15:49.669Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
     "match": "Inglaterra Sub-21 vs Kazakhstan U21",
     "league": "Clasificatorio Euro Sub-21",
     "tier": "AVISO",
@@ -22402,6 +22336,77 @@
       80
     ],
     "timestamp": "2026-10-30T18:32:58.440Z",
+    "alertTimestamp": "2026-10-30T17:52:55.856Z"
+  },
+  {
+    "match": "FC Pari Nizhny Novgorod vs Arsenal Tula",
+    "league": "Russian First League",
+    "tier": "AVISO",
+    "probability": 0.7082140182616756,
+    "minute": 61,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      23,
+      72,
+      77
+    ],
+    "timestamp": "2026-10-30T19:13:02.533Z",
+    "alertTimestamp": "2026-10-30T17:52:55.856Z"
+  },
+  {
+    "match": "Karmiotissa vs Olympiakos Nicosia",
+    "league": "Cyta Championship",
+    "tier": "AVISO",
+    "probability": 0.5556072048396924,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      9
+    ],
+    "timestamp": "2026-10-30T19:13:02.629Z",
+    "alertTimestamp": "2026-10-30T17:52:55.856Z"
+  },
+  {
+    "match": "St. Pölten vs FC Hertha Wels",
+    "league": "2º División de Austria",
+    "tier": "AVISO",
+    "probability": 0.8821307908147039,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      23,
+      71
+    ],
+    "timestamp": "2026-10-30T19:22:57.821Z",
     "alertTimestamp": "2026-10-30T17:52:55.856Z"
   }
 ]
