@@ -1,90 +1,5 @@
 [
   {
-    "match": "São Paulo Sub20 vs Ec São Bernardo S20",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.5184229512075978,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de eliminación directa, un gol cambia todo. xG no es real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-25T19:56:00.666Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
-    "match": "FC Penafiel vs RC Deportivo",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.540061527255634,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador igualado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-25T19:56:00.862Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
-    "match": "Binacional vs Academia Cantolao",
-    "league": "Liga 2 - Descenso - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.8845484936525366,
-    "minute": 23,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado bajo, pero sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      32,
-      56,
-      93,
-      100
-    ],
-    "timestamp": "2026-09-25T20:05:54.206Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
-    "match": "Desportivo Brasil/Sp Youth vs Osasco Sporting Youth",
-    "league": "Paulista U20 - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.8815995558352574,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de eliminatoria, marcador 0-0, sin datos de xG reales para desestimar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-25T20:05:54.403Z",
-    "alertTimestamp": "2026-09-25T18:05:46.417Z"
-  },
-  {
     "match": "Agua Santa/Sp Youth vs Capivariano/Sp Youth",
     "league": "Paulista U20 - 16avos de final",
     "tier": "AVISO",
@@ -22396,5 +22311,97 @@
     ],
     "timestamp": "2026-10-29T22:36:53.903Z",
     "alertTimestamp": "2026-10-29T20:36:59.173Z"
+  },
+  {
+    "match": "CD San Marcos vs San Rafael Cedros",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.5214677540105479,
+    "minute": 80,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-30T17:52:56.701Z",
+    "alertTimestamp": "2026-10-29T21:56:51.372Z"
+  },
+  {
+    "match": "Atlético Mineiro vs Cruzeiro",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.9088137319098346,
+    "minute": 27,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles esperados, marcador ajustado y tiempo suficiente para cambios.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4
+    ],
+    "timestamp": "2026-10-30T17:52:57.028Z",
+    "alertTimestamp": "2026-10-29T22:36:52.688Z"
+  },
+  {
+    "match": "ASC HLM vs Stade Mbour",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5877431154937083,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      30,
+      40,
+      58
+    ],
+    "timestamp": "2026-10-30T18:32:58.146Z",
+    "alertTimestamp": "2026-10-30T17:52:55.856Z"
+  },
+  {
+    "match": "Al Sadd vs Al Shamal",
+    "league": "Liga de Catar",
+    "tier": "AVISO",
+    "probability": 0.534836871369842,
+    "minute": 76,
+    "scoreAtAlert": "4-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, muchas chances y un expulsado. El xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      52,
+      62,
+      68,
+      80
+    ],
+    "timestamp": "2026-10-30T18:32:58.440Z",
+    "alertTimestamp": "2026-10-30T17:52:55.856Z"
   }
 ]
