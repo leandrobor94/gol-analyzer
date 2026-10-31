@@ -1,185 +1,5 @@
 [
   {
-    "match": "Emmen vs TOP Oss",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.6520459455251227,
-    "minute": 61,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con xG estimado alto para el local y muchas llegadas a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      32
-    ],
-    "timestamp": "2026-09-26T19:58:19.211Z",
-    "alertTimestamp": "2026-09-26T18:07:50.811Z"
-  },
-  {
-    "match": "NAC Breda vs FC Eindhoven",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.632167074237808,
-    "minute": 60,
-    "scoreAtAlert": "2-2",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, xG estimado no fiable, y un equipo domina en oportunidades.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      61,
-      69,
-      84,
-      86,
-      92
-    ],
-    "timestamp": "2026-09-26T19:58:19.810Z",
-    "alertTimestamp": "2026-09-26T18:07:50.811Z"
-  },
-  {
-    "match": "K.SK. Heist vs KV Kortrijk",
-    "league": "Copa de Bélgica - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5595959359737946,
-    "minute": 79,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de copa con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-26T19:58:22.951Z",
-    "alertTimestamp": "2026-09-26T18:59:31.256Z"
-  },
-  {
-    "match": "Talleres RE vs San Martín Burzaco",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8750563432376777,
-    "minute": 25,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      42,
-      62,
-      66,
-      73
-    ],
-    "timestamp": "2026-09-26T20:08:39.476Z",
-    "alertTimestamp": "2026-09-26T18:07:50.811Z"
-  },
-  {
-    "match": "Charlotte Independence vs Fort Wayne",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.7021291390520831,
-    "minute": 60,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0 en el minuto 60, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      82,
-      89
-    ],
-    "timestamp": "2026-09-26T20:08:40.122Z",
-    "alertTimestamp": "2026-09-26T18:07:50.811Z"
-  },
-  {
-    "match": "Cañoneros Marina vs Guerreros del Pacifico",
-    "league": "Premier A - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.7096710694722458,
-    "minute": 60,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0 en el minuto 60, con 8 tiros a puerta del visitante. Hay urgencia.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-26T20:08:59.914Z",
-    "alertTimestamp": "2026-09-26T18:18:11.487Z"
-  },
-  {
-    "match": "Nijlen vs Rupel Boom",
-    "league": "Copa de Bélgica - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.5775240289128835,
-    "minute": 78,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, minutos restantes y probabilidad de gol alta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-26T20:18:03.661Z",
-    "alertTimestamp": "2026-09-26T18:59:31.256Z"
-  },
-  {
-    "match": "Deportivo Armenio vs Deportivo Merlo",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.5122140332602945,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, a pesar del xG estimado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      42
-    ],
-    "timestamp": "2026-09-26T20:28:40.719Z",
-    "alertTimestamp": "2026-09-26T18:37:52.810Z"
-  },
-  {
     "match": "Estudiantes vs San Miguel",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -22452,6 +22272,193 @@
       86
     ],
     "timestamp": "2026-10-31T17:54:10.471Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "CS Constantine vs USM Alger",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5139342530720005,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "A pesar del marcador, el xG estimado y los tiros a puerta del local sugieren actividad.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      40
+    ],
+    "timestamp": "2026-10-31T18:04:23.027Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Catanzaro vs Padova",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.6276631352729544,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27,
+      66
+    ],
+    "timestamp": "2026-10-31T18:14:07.264Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Lech Poznan vs Wisła Cracovia",
+    "league": "Ekstraklasa",
+    "tier": "AVISO",
+    "probability": 0.5044380066600805,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos generando ocasiones. xG estimado no es un factor decisivo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      54,
+      56,
+      57,
+      64
+    ],
+    "timestamp": "2026-10-31T18:24:32.289Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Al Shorta Baghdad vs Newroz",
+    "league": "Liga Iraquí",
+    "tier": "AVISO",
+    "probability": 0.526029707780481,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      32
+    ],
+    "timestamp": "2026-10-31T18:34:17.065Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Delfin vs Deportivo Cuenca",
+    "league": "Liga Pro - Hexagonal del Descenso",
+    "tier": "AVISO",
+    "probability": 0.5363228197393586,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, un equipo con 10 jugadores, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      3,
+      20,
+      80,
+      85
+    ],
+    "timestamp": "2026-10-31T18:44:08.392Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Naestved vs FC Roskilde",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T18:54:09.799Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Flora Tallinn II vs Tartu JK Welko Electer",
+    "league": "Segunda división estonia",
+    "tier": "AVISO",
+    "probability": 0.5525892729933155,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      10,
+      19,
+      47
+    ],
+    "timestamp": "2026-10-31T18:54:09.858Z",
+    "alertTimestamp": "2026-10-31T17:04:53.429Z"
+  },
+  {
+    "match": "Rodina Moscow vs Krasnodar",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.6795947023216539,
+    "minute": 62,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando las oportunidades de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      64,
+      69,
+      86
+    ],
+    "timestamp": "2026-10-31T18:54:10.093Z",
     "alertTimestamp": "2026-10-31T17:04:53.429Z"
   }
 ]

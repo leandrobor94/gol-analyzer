@@ -76,16 +76,91 @@
       "tier": "AVISO"
     },
     "4742029_AVISO": {
-      "timestamp": 1793469249914,
+      "timestamp": 1793472849402,
+      "minute": 66,
+      "tier": "AVISO"
+    },
+    "4745496_AVISO": {
+      "timestamp": 1793469861902,
+      "minute": 62,
+      "tier": "AVISO"
+    },
+    "4736351_AVISO": {
+      "timestamp": 1793469861902,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4856528_AVISO": {
+      "timestamp": 1793469861902,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4806850_AVISO": {
+      "timestamp": 1793469861902,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4854849_AVISO": {
+      "timestamp": 1793471071352,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4886622_AVISO": {
+      "timestamp": 1793471071352,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4887801_AVISO": {
+      "timestamp": 1793471071352,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4754323_AVISO": {
+      "timestamp": 1793471071352,
       "minute": 24,
+      "tier": "AVISO"
+    },
+    "4854850_AVISO": {
+      "timestamp": 1793471071352,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4732293_AVISO": {
+      "timestamp": 1793471656590,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4621246_AVISO": {
+      "timestamp": 1793471656590,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4883562_AVISO": {
+      "timestamp": 1793471656590,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4668641_AVISO": {
+      "timestamp": 1793471656590,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4883543_AVISO": {
+      "timestamp": 1793471656590,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4884673_AVISO": {
+      "timestamp": 1793472849402,
+      "minute": 23,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 15054,
-    "verified": 14965,
-    "withGoalTimeline": 10592,
+    "total": 15042,
+    "verified": 14957,
+    "withGoalTimeline": 10593,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-31T17:54:11.272Z"
+  "lastUpdated": "2026-10-31T18:54:10.734Z"
 }
