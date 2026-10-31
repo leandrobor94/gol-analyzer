@@ -1,227 +1,5 @@
 [
   {
-    "match": "Lorca Deportiva vs Castellonense",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8879759673709873,
-    "minute": 23,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      51
-    ],
-    "timestamp": "2026-09-27T18:54:54.624Z",
-    "alertTimestamp": "2026-09-27T17:03:54.539Z"
-  },
-  {
-    "match": "Recreativo de Huelva vs Xerez",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.5576648258187443,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      8
-    ],
-    "timestamp": "2026-09-27T19:04:37.900Z",
-    "alertTimestamp": "2026-09-27T17:03:54.539Z"
-  },
-  {
-    "match": "Deportivo Mictlan vs Sacachispas Chiquimula",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5571246280729358,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      48
-    ],
-    "timestamp": "2026-09-27T19:04:38.079Z",
-    "alertTimestamp": "2026-09-27T17:03:54.539Z"
-  },
-  {
-    "match": "Huachipato (F) vs Universidad de Chile (F)",
-    "league": "Campeonato Femenino - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.8769630062587556,
-    "minute": 21,
-    "scoreAtAlert": "1-5",
-    "finalScore": "1-5",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de cuartos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T19:04:38.270Z",
-    "alertTimestamp": "2026-09-27T17:03:54.539Z"
-  },
-  {
-    "match": "A.D. Moravia (F) vs Carrillo FF (F)",
-    "league": "Liga Promerica femenina",
-    "tier": "AVISO",
-    "probability": 0.8491384911774682,
-    "minute": 21,
-    "scoreAtAlert": "3-1",
-    "finalScore": "6-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin datos que sugieran juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T19:04:48.604Z",
-    "alertTimestamp": "2026-09-27T17:03:54.539Z"
-  },
-  {
-    "match": "Atlético Central vs Sevilla Atlético",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8883527325436251,
-    "minute": 24,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de ventaja, pero con muchos minutos por delante y alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      36
-    ],
-    "timestamp": "2026-09-27T19:04:48.959Z",
-    "alertTimestamp": "2026-09-27T17:14:08.961Z"
-  },
-  {
-    "match": "H2O Purépechas vs Los Cabos United",
-    "league": "Primera Premier - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.8560394117945634,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, marcador 0-0, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      44
-    ],
-    "timestamp": "2026-09-27T19:04:59.145Z",
-    "alertTimestamp": "2026-09-27T17:14:08.961Z"
-  },
-  {
-    "match": "Drita vs Bashkimi",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.6047288850120774,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con marcador igualado y minutos restantes. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T19:16:42.324Z",
-    "alertTimestamp": "2026-09-27T17:34:53.473Z"
-  },
-  {
-    "match": "RB Bragantino/Sp Youth vs Bandeirante SP/Youth",
-    "league": "Paulista U20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.885742650584628,
-    "minute": 25,
-    "scoreAtAlert": "5-1",
-    "finalScore": "5-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de octavos de final, marcador ajustado y alta probabilidad del modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T19:54:45.295Z",
-    "alertTimestamp": "2026-09-27T18:04:32.970Z"
-  },
-  {
-    "match": "Veranopolis vs Passo Fundo (RS)",
-    "league": "Gaucho A2",
-    "tier": "AVISO",
-    "probability": 0.5113540454186871,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T20:04:02.723Z",
-    "alertTimestamp": "2026-09-27T18:04:32.970Z"
-  },
-  {
-    "match": "San Luis FC (F) vs Lanús (F)",
-    "league": "Campeonato Femenino - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5190890838209112,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T20:04:32.669Z",
-    "alertTimestamp": "2026-09-27T18:14:51.964Z"
-  },
-  {
     "match": "CO Korhogo vs Agboville",
     "league": "Ligue 1",
     "tier": "AVISO",
@@ -22444,5 +22222,241 @@
     ],
     "timestamp": "2026-10-31T20:34:12.622Z",
     "alertTimestamp": "2026-10-31T18:44:07.800Z"
+  },
+  {
+    "match": "Deportivo Merlo vs Arsenal de Sarandí",
+    "league": "Primera B Metropolitana",
+    "tier": "AVISO",
+    "probability": 0.5505250933877518,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales y xG estimado no es real. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      32,
+      46
+    ],
+    "timestamp": "2026-10-31T21:04:09.038Z",
+    "alertTimestamp": "2026-10-31T18:34:16.590Z"
+  },
+  {
+    "match": "Coritiba vs Vitória",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.884089251834047,
+    "minute": 24,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y con un equipo mostrando iniciativa y oportunidades claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      58,
+      69
+    ],
+    "timestamp": "2026-10-31T21:04:09.100Z",
+    "alertTimestamp": "2026-10-31T19:04:10.904Z"
+  },
+  {
+    "match": "St. Louis City SC vs San Diego FC",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.512350973507996,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-10-31T21:04:09.410Z",
+    "alertTimestamp": "2026-10-31T19:14:06.501Z"
+  },
+  {
+    "match": "Deportivo Morón vs Ciudad De Bolivar",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.840611303630323,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      22,
+      46
+    ],
+    "timestamp": "2026-10-31T21:04:09.481Z",
+    "alertTimestamp": "2026-10-31T19:14:06.501Z"
+  },
+  {
+    "match": "River Plate Sub16 vs Atlético de Madrid Sub16",
+    "league": "Messi Cup - Semifinales - Copa Oro",
+    "tier": "AVISO",
+    "probability": 0.8920765829027734,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de semifinales, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3,
+      16,
+      42,
+      50
+    ],
+    "timestamp": "2026-10-31T21:04:09.514Z",
+    "alertTimestamp": "2026-10-31T19:24:09.909Z"
+  },
+  {
+    "match": "Sportivo Iteno vs Club Silvio Pettirossi",
+    "league": "APF Primera B",
+    "tier": "AVISO",
+    "probability": 0.5140706292907931,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T21:14:06.904Z",
+    "alertTimestamp": "2026-10-31T19:04:10.904Z"
+  },
+  {
+    "match": "Sporting KC vs FC Dallas",
+    "league": "MLS",
+    "tier": "AVISO",
+    "probability": 0.5249205775186356,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      47
+    ],
+    "timestamp": "2026-10-31T21:14:06.950Z",
+    "alertTimestamp": "2026-10-31T19:14:06.501Z"
+  },
+  {
+    "match": "Esperanca vs Sporting Escaldes",
+    "league": "Primera Divisió",
+    "tier": "AVISO",
+    "probability": 0.5216019629944805,
+    "minute": 76,
+    "scoreAtAlert": "5-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T21:24:06.710Z",
+    "alertTimestamp": "2026-10-31T19:34:13.874Z"
+  },
+  {
+    "match": "Petrolina vs Ferroviário do Cabo",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.585746860944528,
+    "minute": 77,
+    "scoreAtAlert": "4-1",
+    "finalScore": "7-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      14,
+      40,
+      46,
+      51,
+      66,
+      78,
+      84,
+      93
+    ],
+    "timestamp": "2026-10-31T21:24:06.799Z",
+    "alertTimestamp": "2026-10-31T19:34:13.874Z"
+  },
+  {
+    "match": "AC Milan vs Inter Milan",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8894438540293618,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles, xG estimado no confiable, y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      4,
+      10,
+      22,
+      43
+    ],
+    "timestamp": "2026-10-31T21:44:05.435Z",
+    "alertTimestamp": "2026-10-31T19:54:06.413Z"
+  },
+  {
+    "match": "Troyes vs Le Mans",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.9015090410803621,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin goles esperados reales. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      33,
+      71
+    ],
+    "timestamp": "2026-10-31T21:44:05.471Z",
+    "alertTimestamp": "2026-10-31T19:54:06.413Z"
   }
 ]
