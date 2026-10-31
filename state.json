@@ -1,70 +1,5 @@
 {
   "alertedMatches": {
-    "4734545_AVISO": {
-      "timestamp": 1793466293429,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4884203_AVISO": {
-      "timestamp": 1793466293429,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4757192_AVISO": {
-      "timestamp": 1793466293429,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4734203_AVISO": {
-      "timestamp": 1793466293429,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4638368_AVISO": {
-      "timestamp": 1793467455705,
-      "minute": 23,
-      "tier": "AVISO"
-    },
-    "4748403_AVISO": {
-      "timestamp": 1793467455705,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4753841_AVISO": {
-      "timestamp": 1793467455705,
-      "minute": 20,
-      "tier": "AVISO"
-    },
-    "4762711_AVISO": {
-      "timestamp": 1793467455705,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4888193_AVISO": {
-      "timestamp": 1793467455705,
-      "minute": 21,
-      "tier": "AVISO"
-    },
-    "4795399_AVISO": {
-      "timestamp": 1793468053326,
-      "minute": 78,
-      "tier": "AVISO"
-    },
-    "4784331_AVISO": {
-      "timestamp": 1793468053326,
-      "minute": 60,
-      "tier": "AVISO"
-    },
-    "4737577_AVISO": {
-      "timestamp": 1793468053326,
-      "minute": 76,
-      "tier": "AVISO"
-    },
-    "4878141_AVISO": {
-      "timestamp": 1793468053326,
-      "minute": 77,
-      "tier": "AVISO"
-    },
     "4750809_AVISO": {
       "timestamp": 1793473450903,
       "minute": 77,
@@ -151,8 +86,8 @@
       "tier": "AVISO"
     },
     "4884673_AVISO": {
-      "timestamp": 1793472849402,
-      "minute": 23,
+      "timestamp": 1793477050406,
+      "minute": 80,
       "tier": "AVISO"
     },
     "4751292_AVISO": {
@@ -161,13 +96,13 @@
       "tier": "AVISO"
     },
     "4632619_AVISO": {
-      "timestamp": 1793474649909,
-      "minute": 24,
+      "timestamp": 1793478248938,
+      "minute": 65,
       "tier": "AVISO"
     },
     "4886632_AVISO": {
-      "timestamp": 1793474649909,
-      "minute": 24,
+      "timestamp": 1793478851537,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4854845_AVISO": {
@@ -189,13 +124,83 @@
       "timestamp": 1793475253874,
       "minute": 77,
       "tier": "AVISO"
+    },
+    "4735218_AVISO": {
+      "timestamp": 1793477050406,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4747942_AVISO": {
+      "timestamp": 1793477050406,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4784325_AVISO": {
+      "timestamp": 1793477050406,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4640457_AVISO": {
+      "timestamp": 1793477050406,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4732643_AVISO": {
+      "timestamp": 1793477647486,
+      "minute": 25,
+      "tier": "AVISO"
+    },
+    "4887288_AVISO": {
+      "timestamp": 1793477647486,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4742019_AVISO": {
+      "timestamp": 1793478248938,
+      "minute": 23,
+      "tier": "AVISO"
+    },
+    "4750807_AVISO": {
+      "timestamp": 1793478248938,
+      "minute": 22,
+      "tier": "AVISO"
+    },
+    "4776997_AVISO": {
+      "timestamp": 1793478248938,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4854851_AVISO": {
+      "timestamp": 1793478248938,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4621243_AVISO": {
+      "timestamp": 1793478851537,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4621242_AVISO": {
+      "timestamp": 1793478851537,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4868431_AVISO": {
+      "timestamp": 1793478851537,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4886772_AVISO": {
+      "timestamp": 1793478851537,
+      "minute": 77,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 15043,
-    "verified": 14971,
-    "withGoalTimeline": 10604,
+    "total": 15048,
+    "verified": 14988,
+    "withGoalTimeline": 10619,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-31T19:54:07.171Z"
+  "lastUpdated": "2026-10-31T20:54:06.443Z"
 }

@@ -1,250 +1,5 @@
 [
   {
-    "match": "San Pédro vs Zoman",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.5927803666185647,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T17:34:54.587Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Numancia vs Guadalajara",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.6057905633978521,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T17:34:54.932Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Bouaké Fc vs AFAD-Plateau",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.6063278274897388,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T17:44:05.803Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Tchologo vs ISCA",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.5927803666185647,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 0-0 en el minuto 77, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T17:44:05.976Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Gibraltar vs Andorra",
-    "league": "Liga de las Naciones - UEFA - Liga D - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.5149398604744727,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T17:53:49.591Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Dinamarca vs Gales",
-    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 4",
-    "tier": "AVISO",
-    "probability": 0.5286605763831973,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, Gales tuvo 2 grandes chances y el xG es estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      53,
-      66
-    ],
-    "timestamp": "2026-09-27T17:53:49.961Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "1928 Bucaspor vs Altay",
-    "league": "3. Lig",
-    "tier": "AVISO",
-    "probability": 0.5985511674480367,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      46,
-      59,
-      68
-    ],
-    "timestamp": "2026-09-27T18:04:33.914Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Mersin Idman Yurdu vs Diyarbakirspor",
-    "league": "3. Lig",
-    "tier": "AVISO",
-    "probability": 0.5985511674480367,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      46,
-      60
-    ],
-    "timestamp": "2026-09-27T18:04:34.091Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Muş Spor vs 68 Yeni Aksarayspor",
-    "league": "2. Lig",
-    "tier": "AVISO",
-    "probability": 0.6004255674561596,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, ambos equipos con chances. No hay razón para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      14,
-      20,
-      40,
-      83,
-      87
-    ],
-    "timestamp": "2026-09-27T18:04:34.265Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Antequera CF vs Real Jaén",
-    "league": "Primera División RFEF",
-    "tier": "AVISO",
-    "probability": 0.5522743671315445,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T18:15:02.854Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
-    "match": "Maccabi Ramat Hasharon vs Beitar Petah Tikva",
-    "league": "Division 4 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8836669224228069,
-    "minute": 23,
-    "scoreAtAlert": "1-6",
-    "finalScore": "1-6",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado en Division 4, sin datos de xG reales para desestimar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      21,
-      47,
-      53,
-      55,
-      67,
-      86
-    ],
-    "timestamp": "2026-09-27T18:34:24.548Z",
-    "alertTimestamp": "2026-09-27T16:44:07.206Z"
-  },
-  {
     "match": "Lorca Deportiva vs Castellonense",
     "league": "Segunda RFEF",
     "tier": "AVISO",
@@ -22459,5 +22214,235 @@
     "goalMinutes": [],
     "timestamp": "2026-10-31T19:44:06.362Z",
     "alertTimestamp": "2026-10-31T17:44:07.549Z"
+  },
+  {
+    "match": "San Telmo vs Central Norte",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin remates a puerta ni grandes ocasiones.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      60
+    ],
+    "timestamp": "2026-10-31T20:04:11.662Z",
+    "alertTimestamp": "2026-10-31T18:04:21.903Z"
+  },
+  {
+    "match": "Al Hilal Riyadh vs Al Fateh",
+    "league": "Liga Profesional Saudí",
+    "tier": "AVISO",
+    "probability": 0.5173058091053986,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo y xG estimado favorable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      91
+    ],
+    "timestamp": "2026-10-31T20:04:12.032Z",
+    "alertTimestamp": "2026-10-31T18:04:21.903Z"
+  },
+  {
+    "match": "Atlanta vs Midland",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.8762678366304452,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, sin goles esperados, pero es temprano y el modelo predice alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T20:04:12.228Z",
+    "alertTimestamp": "2026-10-31T18:14:06.934Z"
+  },
+  {
+    "match": "Cacahuatique Reserva vs INCA-Aruba (Reserva)",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5814807161700816,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T20:04:12.605Z",
+    "alertTimestamp": "2026-10-31T18:14:06.934Z"
+  },
+  {
+    "match": "Palmacia vs Tirol",
+    "league": "Fares Lopes",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      66
+    ],
+    "timestamp": "2026-10-31T20:14:08.351Z",
+    "alertTimestamp": "2026-10-31T18:04:21.903Z"
+  },
+  {
+    "match": "Bnei Mejar vs FC Shfaram",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8950230645675233,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-5",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en Division 4, marcador ajustado y muchos minutos por jugar. No hay datos para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T20:24:09.327Z",
+    "alertTimestamp": "2026-10-31T18:04:21.903Z"
+  },
+  {
+    "match": "Sliema Wanderers vs Hamrun Spartans",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8888046142378214,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      86,
+      91
+    ],
+    "timestamp": "2026-10-31T20:24:09.364Z",
+    "alertTimestamp": "2026-10-31T18:14:06.934Z"
+  },
+  {
+    "match": "College 1975 FC vs Mons Calpe",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.892122254128659,
+    "minute": 23,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-10-31T20:24:09.415Z",
+    "alertTimestamp": "2026-10-31T18:34:16.590Z"
+  },
+  {
+    "match": "LASK Linz vs WSG Tirol",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.5315502291677296,
+    "minute": 76,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos con chances y xG estimado no es real.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      16,
+      23,
+      48
+    ],
+    "timestamp": "2026-10-31T20:24:09.450Z",
+    "alertTimestamp": "2026-10-31T18:34:16.590Z"
+  },
+  {
+    "match": "Sampdoria vs Virtus Entella",
+    "league": "Serie B italiana",
+    "tier": "AVISO",
+    "probability": 0.5173721408177184,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      23,
+      42
+    ],
+    "timestamp": "2026-10-31T20:34:12.560Z",
+    "alertTimestamp": "2026-10-31T18:34:16.590Z"
+  },
+  {
+    "match": "Hakoah Amidar Ramat Gan F.C. vs Ironi Bet Dagan",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5151959038967013,
+    "minute": 77,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      25,
+      46
+    ],
+    "timestamp": "2026-10-31T20:34:12.622Z",
+    "alertTimestamp": "2026-10-31T18:44:07.800Z"
   }
 ]
