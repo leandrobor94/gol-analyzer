@@ -66,13 +66,13 @@
       "tier": "AVISO"
     },
     "4750809_AVISO": {
-      "timestamp": 1793469249914,
-      "minute": 20,
+      "timestamp": 1793473450903,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4755364_AVISO": {
-      "timestamp": 1793469249914,
-      "minute": 23,
+      "timestamp": 1793473450903,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4742029_AVISO": {
@@ -106,18 +106,18 @@
       "tier": "AVISO"
     },
     "4886622_AVISO": {
-      "timestamp": 1793471071352,
-      "minute": 21,
+      "timestamp": 1793475253874,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4887801_AVISO": {
-      "timestamp": 1793471071352,
-      "minute": 23,
+      "timestamp": 1793475253874,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4754323_AVISO": {
-      "timestamp": 1793471071352,
-      "minute": 24,
+      "timestamp": 1793475253874,
+      "minute": 77,
       "tier": "AVISO"
     },
     "4854850_AVISO": {
@@ -154,13 +154,48 @@
       "timestamp": 1793472849402,
       "minute": 23,
       "tier": "AVISO"
+    },
+    "4751292_AVISO": {
+      "timestamp": 1793473450903,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4632619_AVISO": {
+      "timestamp": 1793474649909,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4886632_AVISO": {
+      "timestamp": 1793474649909,
+      "minute": 24,
+      "tier": "AVISO"
+    },
+    "4854845_AVISO": {
+      "timestamp": 1793474649909,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4752258_AVISO": {
+      "timestamp": 1793474649909,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4789435_AVISO": {
+      "timestamp": 1793475253874,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4887007_AVISO": {
+      "timestamp": 1793475253874,
+      "minute": 77,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 15042,
-    "verified": 14957,
-    "withGoalTimeline": 10593,
+    "total": 15043,
+    "verified": 14971,
+    "withGoalTimeline": 10604,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-10-31T18:54:10.734Z"
+  "lastUpdated": "2026-10-31T19:54:07.171Z"
 }
