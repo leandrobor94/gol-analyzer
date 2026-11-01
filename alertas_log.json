@@ -1,65 +1,5 @@
 [
   {
-    "match": "Foz do Iguaçu vs Athletico Paranaense",
-    "league": "Copa Paraná",
-    "tier": "AVISO",
-    "probability": 0.8887498682480743,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      10
-    ],
-    "timestamp": "2026-09-27T20:44:30.190Z",
-    "alertTimestamp": "2026-09-27T18:54:53.548Z"
-  },
-  {
-    "match": "Real Oviedo vs Sporting de Gijón",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.5125580313333968,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      8,
-      82
-    ],
-    "timestamp": "2026-09-27T21:03:59.875Z",
-    "alertTimestamp": "2026-09-27T19:04:37.021Z"
-  },
-  {
-    "match": "Aguará vs Comunal Cabrero",
-    "league": "Tercera División A",
-    "tier": "AVISO",
-    "probability": 0.885035058472023,
-    "minute": 24,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T21:04:00.064Z",
-    "alertTimestamp": "2026-09-27T19:16:41.175Z"
-  },
-  {
     "match": "Club Hiska Nacional 1919 vs Club 26 de Febrero",
     "league": "Copa Simón Bolívar - Grupo B",
     "tier": "AVISO",
@@ -22453,5 +22393,75 @@
     ],
     "timestamp": "2026-11-01T02:45:10.398Z",
     "alertTimestamp": "2026-10-31T21:14:06.134Z"
+  },
+  {
+    "match": "Lyon vs Angers",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5954906053247219,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      86
+    ],
+    "timestamp": "2026-11-01T18:08:38.806Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Liverpool vs Arsenal",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5246909236077073,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      16
+    ],
+    "timestamp": "2026-11-01T18:28:36.510Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Eintracht Frankfurt vs Hamburgo SV",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.6253533072355281,
+    "minute": 68,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol según el modelo, a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      10,
+      14,
+      47,
+      69
+    ],
+    "timestamp": "2026-11-01T18:38:40.911Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
   }
 ]
