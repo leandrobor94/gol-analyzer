@@ -1,145 +1,5 @@
 [
   {
-    "match": "Club Hiska Nacional 1919 vs Club 26 de Febrero",
-    "league": "Copa Simón Bolívar - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.885035058472023,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T21:13:56.630Z",
-    "alertTimestamp": "2026-09-27T19:16:41.175Z"
-  },
-  {
-    "match": "1 de Mayo FC vs Ciudad Nueva Santa Cruz Academia",
-    "league": "Copa Simón Bolívar - Grupo F",
-    "tier": "AVISO",
-    "probability": 0.885035058472023,
-    "minute": 24,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T21:13:56.800Z",
-    "alertTimestamp": "2026-09-27T19:16:41.175Z"
-  },
-  {
-    "match": "Aragua FC vs Atletico Ávila FC",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.885035058472023,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      79
-    ],
-    "timestamp": "2026-09-27T21:24:29.457Z",
-    "alertTimestamp": "2026-09-27T19:34:56.305Z"
-  },
-  {
-    "match": "Monagas SC B vs Mineros De Guayana",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8887498682480743,
-    "minute": 24,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      7,
-      39,
-      49
-    ],
-    "timestamp": "2026-09-27T21:24:29.626Z",
-    "alertTimestamp": "2026-09-27T19:34:56.305Z"
-  },
-  {
-    "match": "AD Sarchi vs Jicaral Sercoba",
-    "league": "Liga de Ascenso - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5338225359336707,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      54
-    ],
-    "timestamp": "2026-09-27T21:24:29.805Z",
-    "alertTimestamp": "2026-09-27T19:34:56.305Z"
-  },
-  {
-    "match": "Virginia USC vs Municipal Tiquipaya",
-    "league": "Copa Simón Bolívar - Grupo D",
-    "tier": "AVISO",
-    "probability": 0.8887498682480743,
-    "minute": 24,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-28T02:24:54.467Z",
-    "alertTimestamp": "2026-09-27T19:16:41.175Z"
-  },
-  {
-    "match": "Midland vs Tristan Suárez",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5469111807995902,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      30
-    ],
-    "timestamp": "2026-09-28T02:24:54.753Z",
-    "alertTimestamp": "2026-09-27T19:44:10.071Z"
-  },
-  {
     "match": "Deportivo Maipú vs Temperley",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -22462,6 +22322,163 @@
       69
     ],
     "timestamp": "2026-11-01T18:38:40.911Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "CS Cartaginés vs A.D. San Carlos",
+    "league": "Liga Promerica - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5214677540105479,
+    "minute": 80,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "El modelo indica alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      19,
+      86
+    ],
+    "timestamp": "2026-11-01T18:58:33.667Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "AS Pikine vs Teungueth",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5835849302685013,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-01T18:58:34.109Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Lecce vs Genoa",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.7006710304896252,
+    "minute": 61,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con ambos equipos generando, el marcador es ajustado y hay tiempo para cambios.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      28,
+      40
+    ],
+    "timestamp": "2026-11-01T18:58:34.567Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Como 2000 (F) vs AC Milan (F)",
+    "league": "Serie A Femenino - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5142645060789828,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con marcador ajustado y xG estimado similar para ambos equipos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      54
+    ],
+    "timestamp": "2026-11-01T18:58:35.821Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Fc Bocholt vs Koln II",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.5419420950269666,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      57,
+      72,
+      86
+    ],
+    "timestamp": "2026-11-01T19:08:36.755Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "H2O Purépechas vs Montañeses",
+    "league": "Primera Premier - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.6608789862904426,
+    "minute": 61,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de eventos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-01T19:08:37.056Z",
+    "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Elche CF vs Valencia CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5319551292852291,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, Valencia con ventaja mínima y ambos equipos generando oportunidades.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      69
+    ],
+    "timestamp": "2026-11-01T19:28:33.776Z",
     "alertTimestamp": "2026-11-01T17:48:47.752Z"
   }
 ]
