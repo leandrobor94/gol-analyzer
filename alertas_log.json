@@ -1,90 +1,5 @@
 [
   {
-    "match": "Wimborne Town vs Yate Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8951741357825376,
-    "minute": 21,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado sin goles, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-29T20:36:03.591Z",
-    "alertTimestamp": "2026-09-29T18:35:19.828Z"
-  },
-  {
-    "match": "Bishop's Stortford vs Bury Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8540656278589881,
-    "minute": 21,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 21. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-29T20:45:17.540Z",
-    "alertTimestamp": "2026-09-29T18:45:20.065Z"
-  },
-  {
-    "match": "Brightlingsea Regent vs AFC Sudbury",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.5620363979895194,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado en los minutos finales, sin datos de xG reales para descartar. ",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      19
-    ],
-    "timestamp": "2026-09-29T20:45:18.138Z",
-    "alertTimestamp": "2026-09-29T18:45:20.065Z"
-  },
-  {
-    "match": "Cardiff Metropolitan vs Haverfordwest",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.5464955416254337,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      56
-    ],
-    "timestamp": "2026-09-29T20:45:18.528Z",
-    "alertTimestamp": "2026-09-29T18:45:20.065Z"
-  },
-  {
     "match": "Bath City vs Malvern Town",
     "league": "7ª División",
     "tier": "AVISO",
@@ -22495,5 +22410,96 @@
     ],
     "timestamp": "2026-11-01T21:38:30.924Z",
     "alertTimestamp": "2026-11-01T19:48:34.367Z"
+  },
+  {
+    "match": "Olympique Marsella vs Toulouse",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8906178062849358,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, xG estimado no confiable, Toulouse con más llegadas y una gran chance.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      25
+    ],
+    "timestamp": "2026-11-01T21:48:31.133Z",
+    "alertTimestamp": "2026-11-01T19:48:34.367Z"
+  },
+  {
+    "match": "Athletic Club vs Real Sociedad",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.9135831044171013,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con alta probabilidad de gol, muchas chances y xG alto (aunque estimado).",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      30,
+      47
+    ],
+    "timestamp": "2026-11-01T22:08:29.305Z",
+    "alertTimestamp": "2026-11-01T20:08:35.222Z"
+  },
+  {
+    "match": "Tru-Juice FC vs Chapelton",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6302139766197792,
+    "minute": 61,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-01T22:18:31.382Z",
+    "alertTimestamp": "2026-11-01T20:08:35.222Z"
+  },
+  {
+    "match": "SC Braga vs Famalicão",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.6190508237887234,
+    "minute": 62,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no es fiable, y el marcador es ajustado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      53,
+      67,
+      88
+    ],
+    "timestamp": "2026-11-01T22:28:30.039Z",
+    "alertTimestamp": "2026-11-01T20:38:49.619Z"
   }
 ]
