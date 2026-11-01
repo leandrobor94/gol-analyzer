@@ -1,197 +1,5 @@
 [
   {
-    "match": "Deportivo Maipú vs Temperley",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5112666008550029,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      73
-    ],
-    "timestamp": "2026-09-28T02:24:54.832Z",
-    "alertTimestamp": "2026-09-27T19:44:10.071Z"
-  },
-  {
-    "match": "Rio Verde vs Bom Jesus - GO",
-    "league": "Goiano 2",
-    "tier": "AVISO",
-    "probability": 0.8970598140794613,
-    "minute": 21,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-28T02:24:54.924Z",
-    "alertTimestamp": "2026-09-27T20:03:53.112Z"
-  },
-  {
-    "match": "New York Cosmos vs Richmond Kickers",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8886812747340365,
-    "minute": 24,
-    "scoreAtAlert": "2-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      15,
-      21,
-      32,
-      66,
-      95
-    ],
-    "timestamp": "2026-09-28T02:24:57.362Z",
-    "alertTimestamp": "2026-09-27T20:14:08.348Z"
-  },
-  {
-    "match": "CD San Martin vs Universitario Beni",
-    "league": "Copa Simón Bolívar - Grupo D",
-    "tier": "AVISO",
-    "probability": 0.6063278274897388,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-28T02:24:57.430Z",
-    "alertTimestamp": "2026-09-27T20:14:08.348Z"
-  },
-  {
-    "match": "Trinidad y Tobago vs República Dominicana",
-    "league": "CONCACAF Liga de Naciones - Liga A - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.519448968668044,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto con alta probabilidad de gol, a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      37,
-      42,
-      50
-    ],
-    "timestamp": "2026-09-28T02:54:44.187Z",
-    "alertTimestamp": "2026-09-28T02:24:54.019Z"
-  },
-  {
-    "match": "Cuba vs Bonaire",
-    "league": "CONCACAF Liga de Naciones - Liga B - Grupo 3",
-    "tier": "AVISO",
-    "probability": 0.8545567823400104,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, marcador ajustado y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      49
-    ],
-    "timestamp": "2026-09-28T22:58:40.927Z",
-    "alertTimestamp": "2026-09-28T21:08:40.186Z"
-  },
-  {
-    "match": "Atlante (F) vs U.N.A.M.- Pumas (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.893351055150605,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, xG estimado no confiable, pero 4 tiros a puerta en 22 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-28T23:48:42.898Z",
-    "alertTimestamp": "2026-09-28T21:48:40.815Z"
-  },
-  {
-    "match": "Guaireña FC vs Fernando de la Mora",
-    "league": "Division Intermedia",
-    "tier": "AVISO",
-    "probability": 0.5305691635814364,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-29T17:55:26.248Z",
-    "alertTimestamp": "2026-09-28T22:18:57.730Z"
-  },
-  {
-    "match": "América Mineiro vs Juventude",
-    "league": "Brasileirão - Série B",
-    "tier": "AVISO",
-    "probability": 0.5180687963289065,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      61
-    ],
-    "timestamp": "2026-09-29T17:55:26.363Z",
-    "alertTimestamp": "2026-09-28T22:38:44.373Z"
-  },
-  {
     "match": "SpVgg Unterhaching vs TSV Buchbach",
     "league": "Regionalliga - Bayern",
     "tier": "AVISO",
@@ -22480,5 +22288,209 @@
     ],
     "timestamp": "2026-11-01T19:28:33.776Z",
     "alertTimestamp": "2026-11-01T17:48:47.752Z"
+  },
+  {
+    "match": "Nigeria Sub17 (F) vs Venezuela Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.541452511127493,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en cuartos de final, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      89
+    ],
+    "timestamp": "2026-11-01T19:58:32.081Z",
+    "alertTimestamp": "2026-11-01T18:08:37.808Z"
+  },
+  {
+    "match": "China Sub17 (F) vs Brasil Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5517956613039681,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en cuartos de final, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      42,
+      46,
+      87
+    ],
+    "timestamp": "2026-11-01T19:58:32.446Z",
+    "alertTimestamp": "2026-11-01T18:08:37.808Z"
+  },
+  {
+    "match": "Sevilla FC (F) vs Real Madrid (F)",
+    "league": "Liga Femenina Iberdrola",
+    "tier": "AVISO",
+    "probability": 0.6211655214461601,
+    "minute": 60,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, muchos tiros a puerta del visitante, y xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      32,
+      86,
+      88
+    ],
+    "timestamp": "2026-11-01T19:58:33.434Z",
+    "alertTimestamp": "2026-11-01T18:08:37.808Z"
+  },
+  {
+    "match": "Boca Juniors vs River Plate",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.644837183776409,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado no real. Aún hay urgencia.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      27
+    ],
+    "timestamp": "2026-11-01T20:08:36.774Z",
+    "alertTimestamp": "2026-11-01T18:08:37.808Z"
+  },
+  {
+    "match": "Cusco FC vs Sport Boys",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5121229887994114,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando y dos tarjetas rojas. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-11-01T20:18:32.634Z",
+    "alertTimestamp": "2026-11-01T18:18:38.084Z"
+  },
+  {
+    "match": "KAS Eupen vs Royal Excelsior Virton",
+    "league": "Challenger Pro League",
+    "tier": "AVISO",
+    "probability": 0.8668614110749671,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con pocas ocasiones claras. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      44,
+      58,
+      79
+    ],
+    "timestamp": "2026-11-01T20:18:33.008Z",
+    "alertTimestamp": "2026-11-01T18:18:38.084Z"
+  },
+  {
+    "match": "Bakaridjan vs Afrique Football Elite",
+    "league": "Premiere Division",
+    "tier": "AVISO",
+    "probability": 0.8633657617569482,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-01T20:28:32.862Z",
+    "alertTimestamp": "2026-11-01T18:28:35.257Z"
+  },
+  {
+    "match": "Dinamo Bucuresti vs UTA Arad",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.8832549306960923,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con chances claras. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      44,
+      67
+    ],
+    "timestamp": "2026-11-01T20:28:33.205Z",
+    "alertTimestamp": "2026-11-01T18:38:39.943Z"
+  },
+  {
+    "match": "Foz do Iguaçu vs Parana",
+    "league": "Copa Paraná - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.898471832153424,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39
+    ],
+    "timestamp": "2026-11-01T20:38:50.756Z",
+    "alertTimestamp": "2026-11-01T18:28:35.257Z"
   }
 ]
