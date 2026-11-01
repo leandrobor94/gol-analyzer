@@ -1,170 +1,5 @@
 [
   {
-    "match": "CO Korhogo vs Agboville",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.8883737633952643,
-    "minute": 23,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 23, sin datos de xG o tiros a puerta que sugieran esterilidad.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T20:14:19.789Z",
-    "alertTimestamp": "2026-09-27T18:14:51.964Z"
-  },
-  {
-    "match": "Societe Omnisport vs Stella Adjame",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.5652583938573162,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T20:14:24.122Z",
-    "alertTimestamp": "2026-09-27T18:14:51.964Z"
-  },
-  {
-    "match": "Inter Toronto FC vs Pacific",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.8851248967057931,
-    "minute": 24,
-    "scoreAtAlert": "3-4",
-    "finalScore": "3-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con 1 tarjeta roja, marcador 0-0 y xG estimado. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      13,
-      15,
-      28,
-      41,
-      44,
-      56,
-      60
-    ],
-    "timestamp": "2026-09-27T20:24:20.618Z",
-    "alertTimestamp": "2026-09-27T18:14:51.964Z"
-  },
-  {
-    "match": "Defensores de Belgrano vs Ferro Carril Oeste",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.873673535782166,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11
-    ],
-    "timestamp": "2026-09-27T20:24:20.806Z",
-    "alertTimestamp": "2026-09-27T18:34:23.758Z"
-  },
-  {
-    "match": "Mar de Fondo vs Sud America",
-    "league": "Divisional C - Torneo Final",
-    "tier": "AVISO",
-    "probability": 0.5430876230534274,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      66,
-      69,
-      73
-    ],
-    "timestamp": "2026-09-27T20:24:31.343Z",
-    "alertTimestamp": "2026-09-27T18:34:23.758Z"
-  },
-  {
-    "match": "Sport Colonial vs Humaitá",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.8883737633952643,
-    "minute": 23,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, minuto 23, sin datos de xG o chances que contradigan la alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-27T20:35:07.385Z",
-    "alertTimestamp": "2026-09-27T18:04:32.970Z"
-  },
-  {
-    "match": "Casarano vs Monopoli",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5510162704010518,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      92
-    ],
-    "timestamp": "2026-09-27T20:35:08.061Z",
-    "alertTimestamp": "2026-09-27T18:34:23.758Z"
-  },
-  {
-    "match": "Olimpo vs CSCyD Gimnasia y Esgrima (Chivilcoy)",
-    "league": "Federal A - Tercera fase",
-    "tier": "AVISO",
-    "probability": 0.5265504455788126,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      69,
-      73,
-      95
-    ],
-    "timestamp": "2026-09-27T20:35:08.771Z",
-    "alertTimestamp": "2026-09-27T18:43:59.183Z"
-  },
-  {
     "match": "Foz do Iguaçu vs Athletico Paranaense",
     "league": "Copa Paraná",
     "tier": "AVISO",
@@ -22458,5 +22293,165 @@
     ],
     "timestamp": "2026-10-31T21:44:05.471Z",
     "alertTimestamp": "2026-10-31T19:54:06.413Z"
+  },
+  {
+    "match": "FC Barcelona vs Alavés",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.9105255670181055,
+    "minute": 22,
+    "scoreAtAlert": "5-0",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      8,
+      23,
+      41,
+      46,
+      64,
+      81,
+      84
+    ],
+    "timestamp": "2026-11-01T02:45:08.957Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "Aston Villa vs Fulham",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8861860737351727,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      39,
+      64
+    ],
+    "timestamp": "2026-11-01T02:45:09.071Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "Blumenau vs Figueirense",
+    "league": "Copa Santa Catarina",
+    "tier": "AVISO",
+    "probability": 0.8920765829027734,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con goles y sin datos que justifiquen rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      51,
+      52,
+      72,
+      93
+    ],
+    "timestamp": "2026-11-01T02:45:09.121Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "FUS Rabat vs Hassania Agadir",
+    "league": "Botola Pro",
+    "tier": "AVISO",
+    "probability": 0.5109508303053877,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      41
+    ],
+    "timestamp": "2026-11-01T02:45:09.531Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "Universidad O&M vs Cibao",
+    "league": "Liga Dominicana de Fútbol - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5377377499970919,
+    "minute": 77,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": null,
+    "goalMinutes": [],
+    "timestamp": "2026-11-01T02:45:09.610Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "Independiente Santa Fe (F) vs Olimpia (F)",
+    "league": "CONMEBOL Libertadores Femenina - 3er puesto",
+    "tier": "AVISO",
+    "probability": 0.506371504122077,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "4-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      19,
+      23,
+      25,
+      40,
+      49,
+      91,
+      96
+    ],
+    "timestamp": "2026-11-01T02:45:09.685Z",
+    "alertTimestamp": "2026-10-31T20:04:10.406Z"
+  },
+  {
+    "match": "Chaco For Ever vs Racing de Córdoba",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.844962211661106,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": null,
+    "goalMinutes": [
+      16,
+      73,
+      82,
+      86
+    ],
+    "timestamp": "2026-11-01T02:45:09.759Z",
+    "alertTimestamp": "2026-10-31T20:14:07.486Z"
+  },
+  {
+    "match": "Colón vs Defensores de Belgrano",
+    "league": "Primera Nacional",
+    "tier": "AVISO",
+    "probability": 0.9015090410803621,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": null,
+    "goalMinutes": [
+      71,
+      80
+    ],
+    "timestamp": "2026-11-01T02:45:10.398Z",
+    "alertTimestamp": "2026-10-31T21:14:06.134Z"
   }
 ]
