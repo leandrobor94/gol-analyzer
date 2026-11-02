@@ -1,28 +1,5 @@
 [
   {
-    "match": "Havant & waterloovile vs Hanwell Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8569926905338076,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 20. Aunque xG es estimado, el modelo da alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      43,
-      74
-    ],
-    "timestamp": "2026-09-29T20:45:19.719Z",
-    "alertTimestamp": "2026-09-29T18:55:23.499Z"
-  },
-  {
     "match": "Yeovil vs Worthing United",
     "league": "Liga Nacional inglesa",
     "tier": "AVISO",
@@ -22499,6 +22476,29 @@
       49
     ],
     "timestamp": "2026-11-02T22:05:10.734Z",
+    "alertTimestamp": "2026-11-02T21:35:12.455Z"
+  },
+  {
+    "match": "Deportes Limache vs Audax Italiano",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.557946476125412,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con xG estimado alto para el visitante y varias oportunidades de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      15,
+      99
+    ],
+    "timestamp": "2026-11-02T23:05:09.555Z",
     "alertTimestamp": "2026-11-02T21:35:12.455Z"
   }
 ]
