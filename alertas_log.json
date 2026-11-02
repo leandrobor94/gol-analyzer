@@ -1,50 +1,5 @@
 [
   {
-    "match": "Bath City vs Malvern Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8997788873788306,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en 7ª división, marcador ajustado 0-1, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-29T20:45:18.888Z",
-    "alertTimestamp": "2026-09-29T18:55:23.499Z"
-  },
-  {
-    "match": "Racing Club Warwick vs Worcester",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.5067031455163721,
-    "minute": 79,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      48,
-      53,
-      87,
-      91
-    ],
-    "timestamp": "2026-09-29T20:45:19.391Z",
-    "alertTimestamp": "2026-09-29T18:55:23.499Z"
-  },
-  {
     "match": "Havant & waterloovile vs Hanwell Town",
     "league": "7ª División",
     "tier": "AVISO",
@@ -22501,5 +22456,49 @@
     ],
     "timestamp": "2026-11-01T22:28:30.039Z",
     "alertTimestamp": "2026-11-01T20:38:49.619Z"
+  },
+  {
+    "match": "San Pedro vs CSD Municipal",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6385866028288367,
+    "minute": 61,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un xG estimado y tiros a puerta del equipo local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      74
+    ],
+    "timestamp": "2026-11-02T21:35:12.986Z",
+    "alertTimestamp": "2026-11-01T21:08:30.731Z"
+  },
+  {
+    "match": "Newcastle United vs Everton",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5637845815251591,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Everton lidera 0-1, con xG estimado alto y 3 grandes oportunidades. Newcastle sin tiros al arco.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49
+    ],
+    "timestamp": "2026-11-02T22:05:10.734Z",
+    "alertTimestamp": "2026-11-02T21:35:12.455Z"
   }
 ]
