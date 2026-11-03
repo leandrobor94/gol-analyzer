@@ -1,72 +1,5 @@
 [
   {
-    "match": "Rio Ave Sub23 vs FC Penafiel U23",
-    "league": "Liga de Portugal Sub23 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8920209518427756,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      32
-    ],
-    "timestamp": "2026-09-29T21:15:17.367Z",
-    "alertTimestamp": "2026-09-29T19:15:36.287Z"
-  },
-  {
-    "match": "Islas Vírgenes (EEUU) vs Bahamas",
-    "league": "CONCACAF Liga de Naciones - Liga C - Grupo 3",
-    "tier": "AVISO",
-    "probability": 0.8837810864918693,
-    "minute": 25,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con goles, marcador ajustado y muchos minutos por jugar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      14,
-      48,
-      62,
-      68
-    ],
-    "timestamp": "2026-09-29T21:55:17.861Z",
-    "alertTimestamp": "2026-09-29T20:05:49.562Z"
-  },
-  {
-    "match": "AD Izalco vs CD Vendaval",
-    "league": "Liga de Ascenso - Centro Occidente",
-    "tier": "AVISO",
-    "probability": 0.5733347384878019,
-    "minute": 78,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado en liga de ascenso, con alta probabilidad de gol en los últimos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-29T22:35:18.824Z",
-    "alertTimestamp": "2026-09-29T20:36:02.801Z"
-  },
-  {
     "match": "Once Lobos vs AD FORFUT",
     "league": "Liga de Ascenso - Centro Occidente",
     "tier": "AVISO",
@@ -22496,5 +22429,72 @@
     "goalMinutes": [],
     "timestamp": "2026-11-03T00:25:08.545Z",
     "alertTimestamp": "2026-11-02T22:15:08.719Z"
+  },
+  {
+    "match": "Albion vs Deportivo Maldonado",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5466818633081109,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, ambos equipos con remates al arco y tiempo para un gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-03T00:55:09.359Z",
+    "alertTimestamp": "2026-11-02T23:05:09.274Z"
+  },
+  {
+    "match": "Bragantino vs Santos",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8812194071573697,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4,
+      37,
+      41
+    ],
+    "timestamp": "2026-11-03T01:05:12.082Z",
+    "alertTimestamp": "2026-11-02T23:05:09.274Z"
+  },
+  {
+    "match": "Union Magdalena vs Envigado FC",
+    "league": "Torneo BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8734646926497499,
+    "minute": 25,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin goles esperados reales y con alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      69,
+      95
+    ],
+    "timestamp": "2026-11-03T01:15:09.443Z",
+    "alertTimestamp": "2026-11-02T23:15:08.384Z"
   }
 ]
