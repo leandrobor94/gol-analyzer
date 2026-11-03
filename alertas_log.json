@@ -1,244 +1,5 @@
 [
   {
-    "match": "Hapoel Beit She'an Mesilot vs Hapoel Ironi Baka El Garbia",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.5124257106470057,
-    "minute": 79,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido apretado, marcador ajustado y tiempo restante. xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T19:32:01.423Z",
-    "alertTimestamp": "2026-09-30T17:51:14.808Z"
-  },
-  {
-    "match": "12 de Octubre SD vs Olimpia De Itá",
-    "league": "APF Primera B",
-    "tier": "AVISO",
-    "probability": 0.8951741357825376,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T20:01:30.571Z",
-    "alertTimestamp": "2026-09-30T18:01:20.068Z"
-  },
-  {
-    "match": "FC Tzeiri Tira vs FC Jerusalem",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.841536553070748,
-    "minute": 20,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      37,
-      71
-    ],
-    "timestamp": "2026-09-30T20:02:17.771Z",
-    "alertTimestamp": "2026-09-30T18:10:54.645Z"
-  },
-  {
-    "match": "Águila Reserva vs Inter Santa Tecla (Reserva)",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8555341760758451,
-    "minute": 21,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no confiable, sin datos de llegadas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T20:41:38.035Z",
-    "alertTimestamp": "2026-09-30T18:41:10.434Z"
-  },
-  {
-    "match": "Gosport Borough vs Bracknell Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.5148366824838254,
-    "minute": 78,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      55,
-      61
-    ],
-    "timestamp": "2026-09-30T20:41:55.391Z",
-    "alertTimestamp": "2026-09-30T18:51:09.583Z"
-  },
-  {
-    "match": "Defensor Sporting vs Plaza Colonia",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.8578426976151163,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador ajustado y sin datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      21
-    ],
-    "timestamp": "2026-09-30T21:01:27.181Z",
-    "alertTimestamp": "2026-09-30T19:11:15.941Z"
-  },
-  {
-    "match": "Cerro Largo vs Rentistas",
-    "league": "Copa Uruguay",
-    "tier": "AVISO",
-    "probability": 0.8670520481422458,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      80
-    ],
-    "timestamp": "2026-09-30T21:01:27.252Z",
-    "alertTimestamp": "2026-09-30T19:11:15.941Z"
-  },
-  {
-    "match": "Real Oruro vs Always Ready",
-    "league": "Copa Paceña",
-    "tier": "AVISO",
-    "probability": 0.8906281435525437,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin evidencia de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      60,
-      62,
-      84
-    ],
-    "timestamp": "2026-09-30T21:11:04.637Z",
-    "alertTimestamp": "2026-09-30T19:11:15.941Z"
-  },
-  {
-    "match": "Coatepeque vs Deportivo Quiché",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8525908660788534,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T21:11:04.671Z",
-    "alertTimestamp": "2026-09-30T19:11:15.941Z"
-  },
-  {
-    "match": "Club Atletico Barinas vs Barquisimeto SC",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.5297089713985507,
-    "minute": 80,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T21:30:52.406Z",
-    "alertTimestamp": "2026-09-30T19:41:40.507Z"
-  },
-  {
-    "match": "Yaracuyanos vs Puerto Cabello B",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8951741357825376,
-    "minute": 21,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      41,
-      52,
-      88
-    ],
-    "timestamp": "2026-09-30T22:01:22.437Z",
-    "alertTimestamp": "2026-09-30T20:10:52.918Z"
-  },
-  {
     "match": "Union San Felipe vs San Luis de Quillota",
     "league": "Liga de Ascenso",
     "tier": "AVISO",
@@ -22499,5 +22260,255 @@
     ],
     "timestamp": "2026-11-03T20:58:08.597Z",
     "alertTimestamp": "2026-11-03T19:18:05.855Z"
+  },
+  {
+    "match": "Farnborough FC vs Ebbsfleet United",
+    "league": "National League N/S - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8863827640183173,
+    "minute": 22,
+    "scoreAtAlert": "0-6",
+    "finalScore": "0-6",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      19,
+      38,
+      43,
+      53,
+      56,
+      79
+    ],
+    "timestamp": "2026-11-03T21:38:12.760Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Clydebank vs Alloa Athletic",
+    "league": "Challenge Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8837911725397175,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      22
+    ],
+    "timestamp": "2026-11-03T21:38:12.804Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Arbroath vs Queen Of The South",
+    "league": "Challenge Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5444115757800282,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y tiempo suficiente para cambios. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      68
+    ],
+    "timestamp": "2026-11-03T21:38:13.272Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Formartine Utd vs Cove Rangers",
+    "league": "Challenge Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.846250692441721,
+    "minute": 21,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      2,
+      52
+    ],
+    "timestamp": "2026-11-03T21:38:13.389Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Inverness CT vs Montrose",
+    "league": "Challenge Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5272221564782328,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un equipo dominando en tiros a puerta y xG estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      79
+    ],
+    "timestamp": "2026-11-03T21:38:13.432Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Bracknell Town vs Chertsey Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8821513900543592,
+    "minute": 26,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª división, marcador ajustado y muchos minutos por delante. No hay datos que sugieran juego estéril.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-03T21:48:07.471Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Poole Town vs Hanwell Town",
+    "league": "7ª División",
+    "tier": "AVISO",
+    "probability": 0.8821513900543592,
+    "minute": 26,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en 7ª División, marcador ajustado y muchos minutos por jugar. No hay datos para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-03T21:48:07.544Z",
+    "alertTimestamp": "2026-11-03T19:48:07.294Z"
+  },
+  {
+    "match": "Manchester United vs AS Roma",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5270073823110563,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol en los próximos 15 minutos y al final.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      11,
+      17,
+      58,
+      83,
+      86
+    ],
+    "timestamp": "2026-11-03T21:58:06.075Z",
+    "alertTimestamp": "2026-11-03T20:08:12.714Z"
+  },
+  {
+    "match": "Bodo Glimt vs Lille",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.6811047068778582,
+    "minute": 62,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un xG estimado bajo pero sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-03T21:58:06.128Z",
+    "alertTimestamp": "2026-11-03T20:08:12.714Z"
+  },
+  {
+    "match": "Atlético de Madrid vs Bayern Munich",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5250052366389417,
+    "minute": 79,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      54,
+      74
+    ],
+    "timestamp": "2026-11-03T21:58:06.266Z",
+    "alertTimestamp": "2026-11-03T20:08:12.714Z"
+  },
+  {
+    "match": "Comerciantes Unidos vs ADT Tarma",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8542704090558464,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      8,
+      51,
+      63,
+      96
+    ],
+    "timestamp": "2026-11-03T21:58:06.353Z",
+    "alertTimestamp": "2026-11-03T20:08:12.714Z"
   }
 ]
