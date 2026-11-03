@@ -1,51 +1,5 @@
 [
   {
-    "match": "A.S Nordia Jerusalem vs Hapoel Hadera",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.6385456663759068,
-    "minute": 63,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Hapoel Hadera con ventaja mínima y remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T18:51:11.649Z",
-    "alertTimestamp": "2026-09-30T17:51:14.808Z"
-  },
-  {
-    "match": "Hapoel Nof Ha'galil vs SC Tzeirei Tamra",
-    "league": "Division 3",
-    "tier": "AVISO",
-    "probability": 0.5103856572502898,
-    "minute": 78,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos tiros a puerta y xG estimado alto para el local.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      14,
-      43,
-      47,
-      59,
-      77
-    ],
-    "timestamp": "2026-09-30T19:01:38.613Z",
-    "alertTimestamp": "2026-09-30T17:51:14.808Z"
-  },
-  {
     "match": "SC Wiedenbrück vs Sportfreunde Siegen",
     "league": "Regionalliga - West",
     "tier": "AVISO",
@@ -22498,5 +22452,51 @@
     ],
     "timestamp": "2026-11-03T01:35:10.189Z",
     "alertTimestamp": "2026-11-02T23:35:11.921Z"
+  },
+  {
+    "match": "Waterhouse FC vs Cavalier FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8778729736609433,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con xG estimado, no hay razón para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      36,
+      49
+    ],
+    "timestamp": "2026-11-03T19:18:06.404Z",
+    "alertTimestamp": "2026-11-03T01:05:11.744Z"
+  },
+  {
+    "match": "Atlético Bucaramanga vs Atlético Nacional",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.899493604124975,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      76
+    ],
+    "timestamp": "2026-11-03T19:18:06.494Z",
+    "alertTimestamp": "2026-11-03T01:25:10.352Z"
   }
 ]
