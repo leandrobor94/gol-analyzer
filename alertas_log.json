@@ -1,75 +1,5 @@
 [
   {
-    "match": "Yeovil vs Worthing United",
-    "league": "Liga Nacional inglesa",
-    "tier": "AVISO",
-    "probability": 0.8546193924973153,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      28,
-      47
-    ],
-    "timestamp": "2026-09-29T20:45:19.821Z",
-    "alertTimestamp": "2026-09-29T18:55:23.499Z"
-  },
-  {
-    "match": "Canvey Island vs Newmarket Town",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8875307362153074,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 20. No hay razones claras para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5,
-      48,
-      80
-    ],
-    "timestamp": "2026-09-29T21:05:17.796Z",
-    "alertTimestamp": "2026-09-29T19:05:31.177Z"
-  },
-  {
-    "match": "Gabón vs Niger",
-    "league": "Copa de África de Naciones - Clasificación",
-    "tier": "AVISO",
-    "probability": 0.521001002946681,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, el modelo da alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      53,
-      77
-    ],
-    "timestamp": "2026-09-29T21:15:17.271Z",
-    "alertTimestamp": "2026-09-29T19:05:31.177Z"
-  },
-  {
     "match": "Rio Ave Sub23 vs FC Penafiel U23",
     "league": "Liga de Portugal Sub23 - Regular Season",
     "tier": "AVISO",
@@ -22500,5 +22430,71 @@
     ],
     "timestamp": "2026-11-02T23:05:09.555Z",
     "alertTimestamp": "2026-11-02T21:35:12.455Z"
+  },
+  {
+    "match": "Platense vs Central Córdoba SdE",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5497502484861121,
+    "minute": 78,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, ambos equipos con chances claras y volumen de juego.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      58,
+      74
+    ],
+    "timestamp": "2026-11-02T23:55:10.574Z",
+    "alertTimestamp": "2026-11-02T22:05:10.244Z"
+  },
+  {
+    "match": "Defensa y Justicia vs Independiente",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8857909876537181,
+    "minute": 24,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      44
+    ],
+    "timestamp": "2026-11-03T00:05:08.649Z",
+    "alertTimestamp": "2026-11-02T22:05:10.244Z"
+  },
+  {
+    "match": "Molynes United vs Mount Pleasant",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8485417092211626,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con remates a puerta de ambos equipos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-03T00:25:08.545Z",
+    "alertTimestamp": "2026-11-02T22:15:08.719Z"
   }
 ]
