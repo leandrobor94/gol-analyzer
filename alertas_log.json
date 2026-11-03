@@ -1,27 +1,5 @@
 [
   {
-    "match": "Union San Felipe vs San Luis de Quillota",
-    "league": "Liga de Ascenso",
-    "tier": "AVISO",
-    "probability": 0.895340891512198,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      89
-    ],
-    "timestamp": "2026-10-01T18:16:36.884Z",
-    "alertTimestamp": "2026-09-30T21:00:59.965Z"
-  },
-  {
     "match": "INCA-Aruba (Reserva) vs Municipal Limeño Reserva",
     "league": "Torneo Reservas - Apertura",
     "tier": "AVISO",
@@ -22510,5 +22488,28 @@
     ],
     "timestamp": "2026-11-03T21:58:06.353Z",
     "alertTimestamp": "2026-11-03T20:08:12.714Z"
+  },
+  {
+    "match": "Club Xelaju vs Deportivo Marquense",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.6592765816977503,
+    "minute": 61,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y un equipo sin remates a puerta, lo que indica posible ruptura.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      47,
+      75
+    ],
+    "timestamp": "2026-11-03T23:08:06.295Z",
+    "alertTimestamp": "2026-11-03T21:08:08.110Z"
   }
 ]
