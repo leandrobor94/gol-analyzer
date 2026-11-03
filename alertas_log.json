@@ -1,25 +1,5 @@
 [
   {
-    "match": "Once Lobos vs AD FORFUT",
-    "league": "Liga de Ascenso - Centro Occidente",
-    "tier": "AVISO",
-    "probability": 0.8887757444260006,
-    "minute": 23,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-09-30T17:51:41.975Z",
-    "alertTimestamp": "2026-09-29T21:05:17.046Z"
-  },
-  {
     "match": "A.S Nordia Jerusalem vs Hapoel Hadera",
     "league": "Division 3",
     "tier": "AVISO",
@@ -22496,5 +22476,27 @@
     ],
     "timestamp": "2026-11-03T01:15:09.443Z",
     "alertTimestamp": "2026-11-02T23:15:08.384Z"
+  },
+  {
+    "match": "Deportes Concepción vs Palestino",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.8844467196887594,
+    "minute": 23,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, y aunque el xG es estimado, hay remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35
+    ],
+    "timestamp": "2026-11-03T01:35:10.189Z",
+    "alertTimestamp": "2026-11-02T23:35:11.921Z"
   }
 ]
