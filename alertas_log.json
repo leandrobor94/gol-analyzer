@@ -1,49 +1,5 @@
 [
   {
-    "match": "Central Córdoba (Reserva) vs Newell's Old Boys (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8920209518427756,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, xG estimado no es real, sin datos de grandes ocasiones o tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-01T18:16:38.176Z",
-    "alertTimestamp": "2026-09-30T22:01:02.233Z"
-  },
-  {
-    "match": "Hungría Sub-21 vs Lituania Sub-21",
-    "league": "Clasificatorio Euro Sub-21",
-    "tier": "AVISO",
-    "probability": 0.5718303767147473,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos. xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      30,
-      75
-    ],
-    "timestamp": "2026-10-01T18:56:35.541Z",
-    "alertTimestamp": "2026-10-01T18:16:36.239Z"
-  },
-  {
     "match": "Hapoel Kiryat Ono vs Beitar Ramat Gan",
     "league": "Division 4 - Regular Season",
     "tier": "AVISO",
@@ -22514,5 +22470,45 @@
     ],
     "timestamp": "2026-11-03T23:58:05.726Z",
     "alertTimestamp": "2026-11-03T22:18:07.974Z"
+  },
+  {
+    "match": "Bahia (F) vs Flamengo (F)",
+    "league": "Copa do Brasil Women - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8470440529699304,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-04T19:35:26.224Z",
+    "alertTimestamp": "2026-11-03T21:58:05.671Z"
+  },
+  {
+    "match": "Deportivo Riestra (Reserva) vs Quilmes AC (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5397569896429663,
+    "minute": 78,
+    "scoreAtAlert": "2-4",
+    "finalScore": "2-4",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con marcador 1-3 y 15 minutos restantes, aún hay posibilidad de goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-04T19:55:25.095Z",
+    "alertTimestamp": "2026-11-04T19:35:25.657Z"
   }
 ]
