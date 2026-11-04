@@ -11,13 +11,13 @@
       "tier": "AVISO"
     },
     "4828433_AVISO": {
-      "timestamp": 1793823927477,
-      "minute": 24,
+      "timestamp": 1793827526727,
+      "minute": 65,
       "tier": "AVISO"
     },
     "4828434_AVISO": {
-      "timestamp": 1793823927477,
-      "minute": 24,
+      "timestamp": 1793827526727,
+      "minute": 68,
       "tier": "AVISO"
     },
     "4828438_AVISO": {
@@ -29,13 +29,28 @@
       "timestamp": 1793823927477,
       "minute": 25,
       "tier": "AVISO"
+    },
+    "4740433_AVISO": {
+      "timestamp": 1793824524143,
+      "minute": 76,
+      "tier": "AVISO"
+    },
+    "4740714_AVISO": {
+      "timestamp": 1793826323822,
+      "minute": 77,
+      "tier": "AVISO"
+    },
+    "4849582_AVISO": {
+      "timestamp": 1793827526727,
+      "minute": 23,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 15020,
-    "verified": 14995,
-    "withGoalTimeline": 10659,
+    "total": 15024,
+    "verified": 15000,
+    "withGoalTimeline": 10664,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-11-04T20:25:28.594Z"
+  "lastUpdated": "2026-11-04T21:25:27.773Z"
 }
