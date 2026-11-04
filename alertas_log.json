@@ -1,25 +1,5 @@
 [
   {
-    "match": "INCA-Aruba (Reserva) vs Municipal Limeño Reserva",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8869201314970339,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reservas, marcador ajustado y muchos minutos por delante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-01T18:16:37.866Z",
-    "alertTimestamp": "2026-09-30T21:41:15.495Z"
-  },
-  {
     "match": "Central Córdoba (Reserva) vs Newell's Old Boys (Reserva)",
     "league": "Liga Profesional - Reserva - Clausura",
     "tier": "AVISO",
@@ -22511,5 +22491,28 @@
     ],
     "timestamp": "2026-11-03T23:08:06.295Z",
     "alertTimestamp": "2026-11-03T21:08:08.110Z"
+  },
+  {
+    "match": "Athletico Paranaense vs Paranavaí",
+    "league": "Copa Paraná - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8853149665531566,
+    "minute": 25,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de semifinales, marcador ajustado y muchos minutos por jugar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      55
+    ],
+    "timestamp": "2026-11-03T23:58:05.726Z",
+    "alertTimestamp": "2026-11-03T22:18:07.974Z"
   }
 ]
