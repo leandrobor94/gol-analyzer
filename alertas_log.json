@@ -1,25 +1,5 @@
 [
   {
-    "match": "Envigado FC vs Orsomarso",
-    "league": "Torneo BetPlay Dimayor - Finalización",
-    "tier": "AVISO",
-    "probability": 0.5206344468924079,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 0-0 en el minuto 77 con un jugador menos. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-01T22:26:33.288Z",
-    "alertTimestamp": "2026-10-01T20:36:34.127Z"
-  },
-  {
     "match": "Portugal U18 vs Romania U18",
     "league": "Amistoso Internacional Sub18",
     "tier": "AVISO",
@@ -22532,5 +22512,25 @@
     ],
     "timestamp": "2026-11-04T22:05:22.830Z",
     "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "CS Sébaco vs Matagalpa",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8912781139769063,
+    "minute": 23,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-04T23:05:23.195Z",
+    "alertTimestamp": "2026-11-04T21:05:23.822Z"
   }
 ]
