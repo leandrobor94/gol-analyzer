@@ -1,164 +1,5 @@
 [
   {
-    "match": "Maccabi Ashkelon vs Ironi Ashkelon",
-    "league": "Division 4 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8819988725105582,
-    "minute": 25,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-01T20:06:38.046Z",
-    "alertTimestamp": "2026-10-01T18:16:36.239Z"
-  },
-  {
-    "match": "Vélez Sarsfield (Reserva) vs Argentinos Juniors (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8675921397098797,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva, xG estimado, marcador 0-0. No hay razón concreta para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-01T20:36:44.971Z",
-    "alertTimestamp": "2026-10-01T18:46:35.072Z"
-  },
-  {
-    "match": "Alemania vs Serbia",
-    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.594830907690146,
-    "minute": 64,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Alemania domina con 6 grandes ocasiones y 17 toques en el área, a pesar del xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      39,
-      61
-    ],
-    "timestamp": "2026-10-01T20:36:45.302Z",
-    "alertTimestamp": "2026-10-01T18:56:34.800Z"
-  },
-  {
-    "match": "Bastia vs US Orléans",
-    "league": "Ligue 3",
-    "tier": "AVISO",
-    "probability": 0.8920779613605022,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Early in the game, score 0-0, and model shows high probability of a goal.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      66,
-      87
-    ],
-    "timestamp": "2026-10-01T20:46:34.632Z",
-    "alertTimestamp": "2026-10-01T18:46:35.072Z"
-  },
-  {
-    "match": "Irlanda del Norte Sub-21 vs Georgia Sub21",
-    "league": "Clasificatorio Euro Sub-21",
-    "tier": "AVISO",
-    "probability": 0.8818603966768137,
-    "minute": 22,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      54,
-      72
-    ],
-    "timestamp": "2026-10-01T20:46:34.766Z",
-    "alertTimestamp": "2026-10-01T18:46:35.072Z"
-  },
-  {
-    "match": "Grecia vs Países Bajos",
-    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.841535938164657,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      23,
-      47,
-      59,
-      89
-    ],
-    "timestamp": "2026-10-01T20:46:34.927Z",
-    "alertTimestamp": "2026-10-01T18:56:34.800Z"
-  },
-  {
-    "match": "Irlanda vs Austria",
-    "league": "Liga de las Naciones - UEFA - Liga B - Grupo 3",
-    "tier": "AVISO",
-    "probability": 0.840285477217473,
-    "minute": 20,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol, pero xG estimado y muchos minutos por jugar. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      46,
-      71,
-      77
-    ],
-    "timestamp": "2026-10-01T20:46:35.429Z",
-    "alertTimestamp": "2026-10-01T18:56:34.800Z"
-  },
-  {
     "match": "Envigado FC vs Orsomarso",
     "league": "Torneo BetPlay Dimayor - Finalización",
     "tier": "AVISO",
@@ -22517,5 +22358,179 @@
     ],
     "timestamp": "2026-11-04T21:25:27.391Z",
     "alertTimestamp": "2026-11-04T19:35:25.657Z"
+  },
+  {
+    "match": "RB Leipzig vs Manchester City",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.882727382981261,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      37,
+      49,
+      58,
+      61,
+      78
+    ],
+    "timestamp": "2026-11-04T21:55:23.807Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "PSV Eindhoven vs Brujas",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.885157450211831,
+    "minute": 24,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, y con oportunidades claras para el equipo local.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      54,
+      65
+    ],
+    "timestamp": "2026-11-04T21:55:23.930Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "Slavia Praga vs Arsenal",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8920716049242382,
+    "minute": 24,
+    "scoreAtAlert": "0-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido abierto, Arsenal con ventaja mínima y oportunidades claras.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      38,
+      90
+    ],
+    "timestamp": "2026-11-04T21:55:24.030Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "Viking vs Sabah",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8811988014816153,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y un equipo con ventaja en oportunidades de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      27,
+      69,
+      81,
+      94
+    ],
+    "timestamp": "2026-11-04T21:55:24.131Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "FC Porto vs Nápoles",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5828564559083312,
+    "minute": 76,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      11,
+      43,
+      71,
+      80,
+      90
+    ],
+    "timestamp": "2026-11-04T21:55:24.332Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "Bristol City vs Wolves",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5223809079886984,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no confiable, y el modelo ya considera el tiempo restante.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      34,
+      82,
+      89
+    ],
+    "timestamp": "2026-11-04T21:55:24.575Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
+  },
+  {
+    "match": "Borussia Dortmund vs Real Betis",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.8967525420821961,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, sin goles, con oportunidades claras para el equipo local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      67,
+      72
+    ],
+    "timestamp": "2026-11-04T22:05:22.830Z",
+    "alertTimestamp": "2026-11-04T20:05:22.630Z"
   }
 ]
