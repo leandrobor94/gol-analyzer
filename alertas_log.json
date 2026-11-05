@@ -1,31 +1,5 @@
 [
   {
-    "match": "Mönchengladbach II vs Bochum II",
-    "league": "Regionalliga - West",
-    "tier": "AVISO",
-    "probability": 0.9014964019197959,
-    "minute": 20,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      17,
-      23,
-      28,
-      46,
-      48
-    ],
-    "timestamp": "2026-10-02T19:42:47.525Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
     "match": "Bonner SC vs Westfalia Rhynern",
     "league": "Regionalliga - West",
     "tier": "AVISO",
@@ -22541,6 +22515,26 @@
       65
     ],
     "timestamp": "2026-11-05T20:34:22.825Z",
+    "alertTimestamp": "2026-11-05T19:44:18.778Z"
+  },
+  {
+    "match": "Liverpool FC (Reserva) vs Peñarol (Reserva)",
+    "league": "Tercera División - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5302826465344125,
+    "minute": 76,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con marcador ajustado y minutos restantes. No hay datos de xG reales.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-05T21:04:20.276Z",
     "alertTimestamp": "2026-11-05T19:44:18.778Z"
   }
 ]
