@@ -1,25 +1,5 @@
 [
   {
-    "match": "Portugal U18 vs Romania U18",
-    "league": "Amistoso Internacional Sub18",
-    "tier": "AVISO",
-    "probability": 0.5297089713985507,
-    "minute": 80,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-02T18:12:30.010Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
     "match": "Naestved vs Nykobing",
     "league": "1st Division",
     "tier": "AVISO",
@@ -22532,5 +22512,29 @@
     "goalMinutes": [],
     "timestamp": "2026-11-04T23:05:23.195Z",
     "alertTimestamp": "2026-11-04T21:05:23.822Z"
+  },
+  {
+    "match": "Portuguesa FC vs Deportivo La Guaira",
+    "league": "Liga FUTVE - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8839743978441398,
+    "minute": 22,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y una gran chance creada.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      56,
+      80
+    ],
+    "timestamp": "2026-11-04T23:55:22.390Z",
+    "alertTimestamp": "2026-11-04T21:35:26.619Z"
   }
 ]
