@@ -1,93 +1,5 @@
 [
   {
-    "match": "Naestved vs Nykobing",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.6009143850982607,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, Nykobing ganando por la mínima. Alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      61,
-      88
-    ],
-    "timestamp": "2026-10-02T18:52:35.219Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
-    "match": "SpVgg Unterhaching vs 1. FC Schweinfurt 05",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.6237873422194947,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos de xG reales para desestimar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      67,
-      89
-    ],
-    "timestamp": "2026-10-02T19:03:04.641Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
-    "match": "SV Sandhausen vs 1. FC Kaiserslautern II",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.6123810684736923,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      79
-    ],
-    "timestamp": "2026-10-02T19:03:04.694Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
-    "match": "VfB Lübeck vs Eimsbutteler TV",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9014964019197959,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-02T19:33:15.104Z",
-    "alertTimestamp": "2026-10-02T17:42:41.475Z"
-  },
-  {
     "match": "Mönchengladbach II vs Bochum II",
     "league": "Regionalliga - West",
     "tier": "AVISO",
@@ -22536,5 +22448,99 @@
     ],
     "timestamp": "2026-11-04T23:55:22.390Z",
     "alertTimestamp": "2026-11-04T21:35:26.619Z"
+  },
+  {
+    "match": "Athletico Paranaense vs Vasco Da Gama",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8792101858942519,
+    "minute": 25,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      61,
+      63,
+      67
+    ],
+    "timestamp": "2026-11-05T19:44:20.131Z",
+    "alertTimestamp": "2026-11-04T22:35:23.802Z"
+  },
+  {
+    "match": "Flamengo vs Grêmio",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8781544751951649,
+    "minute": 25,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y con chances claras. El xG es estimado, no se considera.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      20,
+      28,
+      47,
+      69
+    ],
+    "timestamp": "2026-11-05T19:44:20.535Z",
+    "alertTimestamp": "2026-11-04T22:45:21.968Z"
+  },
+  {
+    "match": "Unión de Santa Fé (F) vs Talleres de Córdoba (F)",
+    "league": "Campeonato Femenino - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5411759741156609,
+    "minute": 77,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, marcador ajustado y tiempo restante. No hay razón para no alertar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-05T20:34:22.472Z",
+    "alertTimestamp": "2026-11-05T19:44:18.778Z"
+  },
+  {
+    "match": "Beitar Haifa vs Hapoel Bnei Arara",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.5230632903543229,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      12,
+      32,
+      65
+    ],
+    "timestamp": "2026-11-05T20:34:22.825Z",
+    "alertTimestamp": "2026-11-05T19:44:18.778Z"
   }
 ]
