@@ -1,134 +1,5 @@
 [
   {
-    "match": "Kickers Emden vs Sv Todesfelde",
-    "league": "Regionalliga - Norte",
-    "tier": "AVISO",
-    "probability": 0.9014964019197959,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      29,
-      51,
-      75
-    ],
-    "timestamp": "2026-10-03T18:02:16.712Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
-    "match": "Le Havre (F) vs US Saint-Malo (W)",
-    "league": "Campeonato Francés (F)",
-    "tier": "AVISO",
-    "probability": 0.8950340108880912,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      26,
-      31
-    ],
-    "timestamp": "2026-10-03T18:02:26.787Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
-    "match": "Cd Tedeón vs CD Anaitasuna",
-    "league": "Copa del Rey - Fase preliminar",
-    "tier": "AVISO",
-    "probability": 0.6920267654031703,
-    "minute": 60,
-    "scoreAtAlert": "2-5",
-    "finalScore": "2-5",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y xG estimado no fiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-03T18:02:36.832Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
-    "match": "Genclerbirligi vs Keciorengucu",
-    "league": "Partido Amistoso",
-    "tier": "AVISO",
-    "probability": 0.8982378065214265,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-03T18:02:36.858Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
-    "match": "Fk Rostov (W) vs FK Krasnodar (W)",
-    "league": "Supreme Division Women",
-    "tier": "AVISO",
-    "probability": 0.8979089223135639,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 20, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-03T18:02:36.886Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
-    "match": "Fethiyespor vs Karacabey Birlikspor",
-    "league": "2. Lig",
-    "tier": "AVISO",
-    "probability": 0.5096437909267113,
-    "minute": 79,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, un expulsado y xG estimado. Aún hay urgencia.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      64
-    ],
-    "timestamp": "2026-10-03T18:02:47.094Z",
-    "alertTimestamp": "2026-10-03T16:11:23.549Z"
-  },
-  {
     "match": "Inter Toronto FC vs Cavalry",
     "league": "Canadian Premier League",
     "tier": "AVISO",
@@ -22539,6 +22410,146 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-11-06T19:58:08.512Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "Tapachula vs Zacatepec",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.7000598144944357,
+    "minute": 61,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo suficiente para cambios. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-06T20:08:25.079Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "Chateauroux vs Nimes",
+    "league": "National 1 - Group A",
+    "tier": "AVISO",
+    "probability": 0.5819212894942718,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      24,
+      51
+    ],
+    "timestamp": "2026-11-06T20:28:09.790Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "VfB 03 Hilden vs SV Rödinghausen",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.6011551675067525,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      59,
+      62
+    ],
+    "timestamp": "2026-11-06T20:28:09.979Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "FC Arges Pitesti vs Dinamo Bucuresti",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.5685561161963354,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y ambos equipos con chances de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38,
+      62,
+      91
+    ],
+    "timestamp": "2026-11-06T20:28:10.172Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "Hammarby vs IF Elfsborg",
+    "league": "Allsvenskan",
+    "tier": "AVISO",
+    "probability": 0.6248759554656693,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo dominando en tiros y posesión.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      39,
+      58,
+      65,
+      76,
+      81
+    ],
+    "timestamp": "2026-11-06T20:38:11.362Z",
+    "alertTimestamp": "2026-11-06T19:08:14.437Z"
+  },
+  {
+    "match": "Sunderland Sub21 vs Blackburn Sub21",
+    "league": "Premier League 2 - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.5358214077262243,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      13,
+      47,
+      56
+    ],
+    "timestamp": "2026-11-06T20:58:07.162Z",
     "alertTimestamp": "2026-11-06T19:08:14.437Z"
   }
 ]
