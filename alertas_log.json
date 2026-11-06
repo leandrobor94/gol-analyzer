@@ -1,55 +1,5 @@
 [
   {
-    "match": "Cuiabá vs Ponte Preta",
-    "league": "Brasileirão - Série B",
-    "tier": "AVISO",
-    "probability": 0.8502841370275137,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, modelo da 85% de probabilidad hasta el final. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      26,
-      73
-    ],
-    "timestamp": "2026-10-04T01:41:48.818Z",
-    "alertTimestamp": "2026-10-03T20:10:18.373Z"
-  },
-  {
-    "match": "Forge FC vs HFX Wanderers",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.8831540655288794,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y un equipo con clara superioridad en llegadas.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      78,
-      81,
-      90,
-      94,
-      103
-    ],
-    "timestamp": "2026-10-04T01:41:50.200Z",
-    "alertTimestamp": "2026-10-03T20:21:42.065Z"
-  },
-  {
     "match": "Real Cartagena vs Boca Juniors Cali",
     "league": "Torneo BetPlay Dimayor - Finalización",
     "tier": "AVISO",
@@ -22548,5 +22498,47 @@
     "goalMinutes": [],
     "timestamp": "2026-11-06T21:57:58.617Z",
     "alertTimestamp": "2026-11-06T20:08:23.727Z"
+  },
+  {
+    "match": "Real Aviles vs Extremadura UD",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.5228184703257305,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "5-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un jugador menos, a pesar del xG estimado.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-06T22:27:56.808Z",
+    "alertTimestamp": "2026-11-06T20:18:09.160Z"
+  },
+  {
+    "match": "Famalicão vs Arouca",
+    "league": "Primeira Liga",
+    "tier": "AVISO",
+    "probability": 0.5071259622090662,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      96
+    ],
+    "timestamp": "2026-11-06T22:47:57.359Z",
+    "alertTimestamp": "2026-11-06T20:48:09.143Z"
   }
 ]
