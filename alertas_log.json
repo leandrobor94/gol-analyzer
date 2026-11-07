@@ -1,48 +1,5 @@
 [
   {
-    "match": "Audace Cerignola vs Altamura",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8474419669900197,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-04T20:32:12.931Z",
-    "alertTimestamp": "2026-10-04T18:31:35.766Z"
-  },
-  {
-    "match": "Alvarado vs Defensores Belgrano (VR)",
-    "league": "Federal A - Tercera fase",
-    "tier": "AVISO",
-    "probability": 0.8650393985878725,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      71,
-      94
-    ],
-    "timestamp": "2026-10-04T20:42:37.370Z",
-    "alertTimestamp": "2026-10-04T18:41:35.322Z"
-  },
-  {
     "match": "Bolívar SC vs Monagas SC B",
     "league": "Liga FUTVE 2",
     "tier": "AVISO",
@@ -22589,5 +22546,53 @@
     ],
     "timestamp": "2026-11-07T20:28:36.361Z",
     "alertTimestamp": "2026-11-07T18:38:38.201Z"
+  },
+  {
+    "match": "Saint-Étienne vs Laval",
+    "league": "Ligue 2",
+    "tier": "AVISO",
+    "probability": 0.6321644320144538,
+    "minute": 60,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, xG estimado no confiable, y Saint-Étienne tiene más llegadas.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      46,
+      50
+    ],
+    "timestamp": "2026-11-07T20:58:33.838Z",
+    "alertTimestamp": "2026-11-07T19:08:39.914Z"
+  },
+  {
+    "match": "GV San Jose vs Real Oruro",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.6403408565569704,
+    "minute": 62,
+    "scoreAtAlert": "0-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores. El xG es estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      43,
+      61,
+      66,
+      87
+    ],
+    "timestamp": "2026-11-07T21:08:35.732Z",
+    "alertTimestamp": "2026-11-07T19:08:39.914Z"
   }
 ]
