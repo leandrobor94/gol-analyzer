@@ -1,188 +1,5 @@
 [
   {
-    "match": "Atlético Central vs Linares Deportivo",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8979911946793978,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      62
-    ],
-    "timestamp": "2026-10-04T18:31:35.897Z",
-    "alertTimestamp": "2026-10-04T16:42:32.883Z"
-  },
-  {
-    "match": "NJ/NY Gotham FC vs Angel City",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.8645035167355921,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con pocas llegadas pero una gran chance y xG estimado a favor del visitante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      66,
-      91
-    ],
-    "timestamp": "2026-10-04T19:11:25.877Z",
-    "alertTimestamp": "2026-10-04T17:12:26.078Z"
-  },
-  {
-    "match": "Huracán vs Aldosivi",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5114570523776225,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-10-04T19:41:52.980Z",
-    "alertTimestamp": "2026-10-04T17:51:25.092Z"
-  },
-  {
-    "match": "MS Netanya vs Hapoel Daliat El Karmel",
-    "league": "Division 4 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5076393923710173,
-    "minute": 79,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado 0-0 en el minuto 79, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-04T19:51:46.511Z",
-    "alertTimestamp": "2026-10-04T18:01:42.282Z"
-  },
-  {
-    "match": "Colo Colo (F) vs Deportes Iquique (F)",
-    "league": "Campeonato Femenino - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.8600428407422942,
-    "minute": 20,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de cuartos de final, marcador 0-0, sin xG real. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      23,
-      26,
-      53,
-      56
-    ],
-    "timestamp": "2026-10-04T20:02:13.821Z",
-    "alertTimestamp": "2026-10-04T18:11:25.392Z"
-  },
-  {
-    "match": "Defensores de Glew vs Uribelarrea FC",
-    "league": "Torneo Promocional Amateur - Reducido - Semifinales",
-    "tier": "AVISO",
-    "probability": 0.8951741357825376,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de semifinales, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      26
-    ],
-    "timestamp": "2026-10-04T20:12:21.081Z",
-    "alertTimestamp": "2026-10-04T18:11:25.392Z"
-  },
-  {
-    "match": "CA Lugano vs Argentino Rosario",
-    "league": "Primera C Metropolitana - Zona A",
-    "tier": "AVISO",
-    "probability": 0.8519706643259614,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      10,
-      55,
-      62,
-      79,
-      85
-    ],
-    "timestamp": "2026-10-04T20:12:21.113Z",
-    "alertTimestamp": "2026-10-04T18:11:25.392Z"
-  },
-  {
-    "match": "O'Higgins vs Deportes Concepción",
-    "league": "Copa Chile - Cuartos de Final",
-    "tier": "AVISO",
-    "probability": 0.8957571886540798,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      76,
-      86
-    ],
-    "timestamp": "2026-10-04T20:32:12.869Z",
-    "alertTimestamp": "2026-10-04T18:31:35.766Z"
-  },
-  {
     "match": "Audace Cerignola vs Altamura",
     "league": "Serie C italiana - Regular Season",
     "tier": "AVISO",
@@ -22598,5 +22415,179 @@
     ],
     "timestamp": "2026-11-07T19:28:34.160Z",
     "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Cartagena vs Sant Andreu",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.5604844738267796,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto con un gol de diferencia y un expulsado, a pesar del xG estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-07T19:48:36.084Z",
+    "alertTimestamp": "2026-11-07T17:48:38.104Z"
+  },
+  {
+    "match": "Kisvarda vs Puskas FC Academy",
+    "league": "OTP Bank Liga",
+    "tier": "AVISO",
+    "probability": 0.5444084750002539,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores. El xG no es real.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      66
+    ],
+    "timestamp": "2026-11-07T19:48:36.216Z",
+    "alertTimestamp": "2026-11-07T17:48:38.104Z"
+  },
+  {
+    "match": "Auxerre vs Paris FC",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.6917635742035426,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con xG estimado bajo pero sin una razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      63
+    ],
+    "timestamp": "2026-11-07T19:58:34.076Z",
+    "alertTimestamp": "2026-11-07T18:08:36.425Z"
+  },
+  {
+    "match": "América-PE vs Ipojuca",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.8823216151678577,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-07T20:08:37.185Z",
+    "alertTimestamp": "2026-11-07T18:08:36.425Z"
+  },
+  {
+    "match": "Atlético-PE vs Santa Fé-PE",
+    "league": "Pernambucano",
+    "tier": "AVISO",
+    "probability": 0.8857909876537181,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-07T20:18:55.244Z",
+    "alertTimestamp": "2026-11-07T18:08:36.425Z"
+  },
+  {
+    "match": "Forge FC vs Atlético Ottawa",
+    "league": "Canadian Premier League - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.6329911882760095,
+    "minute": 62,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en semifinales, con un equipo dominando claramente en ocasiones de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      25,
+      50,
+      84,
+      101,
+      103
+    ],
+    "timestamp": "2026-11-07T20:28:36.200Z",
+    "alertTimestamp": "2026-11-07T18:18:37.286Z"
+  },
+  {
+    "match": "AS Real Bamako vs Korofina",
+    "league": "Premiere Division",
+    "tier": "AVISO",
+    "probability": 0.871470077361858,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-07T20:28:36.285Z",
+    "alertTimestamp": "2026-11-07T18:28:36.648Z"
+  },
+  {
+    "match": "Japón Sub17 (F) vs Nigeria Sub17 (F)",
+    "league": "Mundial Sub17 (F) - Final",
+    "tier": "AVISO",
+    "probability": 0.6914981681198153,
+    "minute": 60,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Japón necesita goles. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      47,
+      80
+    ],
+    "timestamp": "2026-11-07T20:28:36.361Z",
+    "alertTimestamp": "2026-11-07T18:38:38.201Z"
   }
 ]
