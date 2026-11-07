@@ -1,124 +1,5 @@
 [
   {
-    "match": "Portland Thorns vs Boston Legacy FC",
-    "league": "NWSL",
-    "tier": "AVISO",
-    "probability": 0.5139184365087516,
-    "minute": 78,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      35,
-      39,
-      59,
-      88,
-      91,
-      93
-    ],
-    "timestamp": "2026-10-04T16:42:50.675Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
-    "match": "Estados Unidos vs México",
-    "league": "Amistoso Internacional",
-    "tier": "AVISO",
-    "probability": 0.8576139581016311,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      28,
-      62,
-      84
-    ],
-    "timestamp": "2026-10-04T16:42:50.751Z",
-    "alertTimestamp": "2026-10-04T02:12:19.396Z"
-  },
-  {
-    "match": "Orange County SC vs Monterey Bay",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8801594198924516,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      5,
-      61,
-      65
-    ],
-    "timestamp": "2026-10-04T16:42:50.805Z",
-    "alertTimestamp": "2026-10-04T02:12:19.396Z"
-  },
-  {
-    "match": "Las Vegas Lights vs San Antonio FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.8862492643897427,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      48
-    ],
-    "timestamp": "2026-10-04T16:43:08.021Z",
-    "alertTimestamp": "2026-10-04T02:41:46.654Z"
-  },
-  {
-    "match": "ASEC Mimosas vs Stella Adjame",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.607706085683279,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-04T17:31:26.199Z",
-    "alertTimestamp": "2026-10-04T16:42:32.883Z"
-  },
-  {
-    "match": "Reggiana vs Spezia Calcio",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5134472026147958,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      75
-    ],
-    "timestamp": "2026-10-04T17:31:26.409Z",
-    "alertTimestamp": "2026-10-04T16:42:32.883Z"
-  },
-  {
     "match": "Atlético Central vs Linares Deportivo",
     "league": "Segunda RFEF",
     "tier": "AVISO",
@@ -22570,6 +22451,152 @@
       87
     ],
     "timestamp": "2026-11-07T17:58:35.198Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Pergolettese vs Renate",
+    "league": "Serie C italiana",
+    "tier": "AVISO",
+    "probability": 0.6182039643576656,
+    "minute": 62,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Renate busca asegurar la victoria. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      34,
+      52,
+      58,
+      79,
+      81
+    ],
+    "timestamp": "2026-11-07T18:38:38.729Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "VFB Oldenburg vs FC St. Pauli II",
+    "league": "Regionalliga - Norte",
+    "tier": "AVISO",
+    "probability": 0.5827662989233015,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      68
+    ],
+    "timestamp": "2026-11-07T18:58:34.181Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Parma vs Bologna",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.6243765405764973,
+    "minute": 67,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Bologna domina con 10 hombres, xG estimado no es fiable, pero las estadísticas de ataque son claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      53,
+      72,
+      81
+    ],
+    "timestamp": "2026-11-07T19:08:42.144Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Maccabi Ramat Hasharon vs Beitar Kfar Saba FC",
+    "league": "Division 4 - Regular Season",
+    "tier": "AVISO",
+    "probability": 0.8956151600665554,
+    "minute": 21,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-4",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "No hay razón concreta para rechazar. El partido está 0-0 y el modelo da alta probabilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      42,
+      47,
+      48,
+      51,
+      87
+    ],
+    "timestamp": "2026-11-07T19:28:34.090Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Osasuna vs Athletic Club",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.5095966808592061,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      84,
+      90
+    ],
+    "timestamp": "2026-11-07T19:28:34.126Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "Nottingham Forest vs Manchester City",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5419923778104021,
+    "minute": 78,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos generando ocasiones, xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      18,
+      52,
+      73
+    ],
+    "timestamp": "2026-11-07T19:28:34.160Z",
     "alertTimestamp": "2026-11-07T17:38:55.344Z"
   }
 ]
