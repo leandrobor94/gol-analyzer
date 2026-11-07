@@ -1,92 +1,5 @@
 [
   {
-    "match": "Real Cartagena vs Boca Juniors Cali",
-    "league": "Torneo BetPlay Dimayor - Finalización",
-    "tier": "AVISO",
-    "probability": 0.7124732013795073,
-    "minute": 60,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      14,
-      19,
-      61
-    ],
-    "timestamp": "2026-10-04T02:51:53.104Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
-    "match": "CD Plaza Amador vs CD Universitario",
-    "league": "Liga Panameña - Apertura - Conferencia Oeste",
-    "tier": "AVISO",
-    "probability": 0.8924270312758289,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      45,
-      61,
-      64
-    ],
-    "timestamp": "2026-10-04T16:42:33.004Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
-    "match": "Grecia vs Santa Cruz PFA",
-    "league": "Liga de Ascenso - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8574449023811401,
-    "minute": 20,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      15
-    ],
-    "timestamp": "2026-10-04T16:42:33.072Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
-    "match": "Nueva Santa Rosa CDF vs Deportivo Sayaxche",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5356140965711915,
-    "minute": 80,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-10-04T16:42:33.125Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
-    "match": "Tijuana (F) vs Atlante (F)",
-    "league": "Liga Femenil - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5345854780376706,
-    "minute": 78,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      23
-    ],
-    "timestamp": "2026-10-04T16:42:33.160Z",
-    "alertTimestamp": "2026-10-04T01:41:25.893Z"
-  },
-  {
     "match": "Portland Thorns vs Boston Legacy FC",
     "league": "NWSL",
     "tier": "AVISO",
@@ -22540,5 +22453,123 @@
     ],
     "timestamp": "2026-11-06T22:47:57.359Z",
     "alertTimestamp": "2026-11-06T20:48:09.143Z"
+  },
+  {
+    "match": "Independiente vs Deportivo Riestra",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5120475658056728,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, xG estimado no confiable, y ambos equipos con pocas llegadas claras.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      86,
+      87
+    ],
+    "timestamp": "2026-11-07T17:38:56.045Z",
+    "alertTimestamp": "2026-11-06T22:17:57.594Z"
+  },
+  {
+    "match": "San Lorenzo vs Platense",
+    "league": "Liga Profesional Argentina - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5129087170342527,
+    "minute": 76,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      22,
+      52
+    ],
+    "timestamp": "2026-11-07T17:38:56.131Z",
+    "alertTimestamp": "2026-11-06T22:17:57.594Z"
+  },
+  {
+    "match": "Operário-PR vs Sport Recife",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.6756809236843629,
+    "minute": 61,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con muchos goles, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      14,
+      38,
+      50,
+      53
+    ],
+    "timestamp": "2026-11-07T17:38:56.255Z",
+    "alertTimestamp": "2026-11-06T22:37:55.677Z"
+  },
+  {
+    "match": "Aliaga vs Muş Spor",
+    "league": "2. Lig",
+    "tier": "AVISO",
+    "probability": 0.5291548777913037,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-07T17:58:35.162Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
+  },
+  {
+    "match": "CF Intercity vs Elche Ilicitano",
+    "league": "Segunda RFEF",
+    "tier": "AVISO",
+    "probability": 0.5112011782923636,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      38,
+      56,
+      78,
+      87
+    ],
+    "timestamp": "2026-11-07T17:58:35.198Z",
+    "alertTimestamp": "2026-11-07T17:38:55.344Z"
   }
 ]
