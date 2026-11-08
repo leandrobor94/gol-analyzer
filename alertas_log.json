@@ -1,129 +1,5 @@
 [
   {
-    "match": "Guatemala vs Surinam",
-    "league": "CONCACAF Liga de Naciones - Liga A - Grupo 2",
-    "tier": "AVISO",
-    "probability": 0.5238334974324808,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido 0-0, minuto 77, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      96
-    ],
-    "timestamp": "2026-10-06T02:06:52.818Z",
-    "alertTimestamp": "2026-10-06T00:06:52.661Z"
-  },
-  {
-    "match": "Arnett Gardens vs Portmore United",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.511343403233205,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T18:09:38.351Z",
-    "alertTimestamp": "2026-10-06T01:06:56.945Z"
-  },
-  {
-    "match": "Celaya FC vs Jaguares De Chiapas",
-    "league": "Primera Premier - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.8478674250344171,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado y sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T18:09:38.404Z",
-    "alertTimestamp": "2026-10-06T02:06:52.075Z"
-  },
-  {
-    "match": "CA Fenix vs CA Atlas",
-    "league": "Primera C Metropolitana - Zona B",
-    "tier": "AVISO",
-    "probability": 0.5166857609438834,
-    "minute": 79,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      76
-    ],
-    "timestamp": "2026-10-06T19:01:14.148Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Unión Santa Fé (Reserva) vs Banfield (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8662220266993834,
-    "minute": 20,
-    "scoreAtAlert": "4-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva con marcador ajustado y xG estimado, no hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T19:49:30.852Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Defensa y Justicia (Reserva) vs Quilmes AC (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8457964330124363,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva, xG estimado no confiable. Marcador 0-0, minutos restantes altos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:00:11.340Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
     "match": "Huracán (Reserva) vs Atlético de Rafaela (Reserva)",
     "league": "Liga Profesional - Reserva - Clausura",
     "tier": "AVISO",
@@ -22597,6 +22473,133 @@
       96
     ],
     "timestamp": "2026-11-08T18:38:36.308Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Es Ben Aknoun vs CR Belouizdad",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5120411918456216,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      51
+    ],
+    "timestamp": "2026-11-08T18:48:36.777Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "JS Saoura vs CS Constantine",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.6020625430076543,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      62
+    ],
+    "timestamp": "2026-11-08T18:58:32.020Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Olympique Khouribga vs Mouloudia Oujda",
+    "league": "Botola 2",
+    "tier": "AVISO",
+    "probability": 0.5827662989233015,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T19:18:34.341Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Cultural Leonesa vs Ponferradina",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.5316680275003779,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un expulsado. xG estimado no es fiable.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T19:18:34.400Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Celta de Vigo vs Levante UD",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.8764372564848143,
+    "minute": 25,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, con un equipo generando más ocasiones de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T19:28:31.543Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Villarreal CF vs Getafe CF",
+    "league": "LaLiga",
+    "tier": "AVISO",
+    "probability": 0.693568025807032,
+    "minute": 60,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con xG estimado y pocas llegadas, pero sin resolución clara.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      80,
+      91
+    ],
+    "timestamp": "2026-11-08T19:28:31.616Z",
     "alertTimestamp": "2026-11-08T17:48:38.767Z"
   }
 ]
