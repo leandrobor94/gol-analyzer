@@ -1,147 +1,5 @@
 [
   {
-    "match": "Huracán (Reserva) vs Atlético de Rafaela (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8560043169115046,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva, xG estimado no confiable, pero el modelo da alta probabilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:00:11.467Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Cambridge United vs Northampton",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.8430181088573373,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      29,
-      51,
-      62
-    ],
-    "timestamp": "2026-10-06T20:00:28.616Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Peterborough vs Ipswich U21",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.8711937843673689,
-    "minute": 20,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, sin goles, y la liga tiene un alto promedio de goles.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      26,
-      28,
-      31,
-      35,
-      51
-    ],
-    "timestamp": "2026-10-06T20:00:28.920Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Accrington vs Salford City",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.608553728658276,
-    "minute": 62,
-    "scoreAtAlert": "0-1",
-    "finalScore": "5-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      51,
-      98,
-      121,
-      121,
-      122,
-      123,
-      123,
-      124,
-      124,
-      125,
-      125
-    ],
-    "timestamp": "2026-10-06T20:09:12.714Z",
-    "alertTimestamp": "2026-10-06T18:09:38.231Z"
-  },
-  {
-    "match": "Unión Minas vs Unión Comercio",
-    "league": "Liga 2 - Ascenso - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.5190627467124379,
-    "minute": 77,
-    "scoreAtAlert": "4-1",
-    "finalScore": "4-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:29:11.680Z",
-    "alertTimestamp": "2026-10-06T18:30:05.437Z"
-  },
-  {
-    "match": "Stockton Town vs Bury",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8996248158895983,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:39:11.560Z",
-    "alertTimestamp": "2026-10-06T18:49:49.537Z"
-  },
-  {
     "match": "Chatham Town vs Leatherhead",
     "league": "7ª División",
     "tier": "AVISO",
@@ -22601,5 +22459,142 @@
     ],
     "timestamp": "2026-11-08T19:28:31.616Z",
     "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Oldham vs Sheffield Wed",
+    "league": "FA Cup - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.5261277650091668,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado en FA Cup, ambos equipos buscan el gol. xG estimado, no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      66,
+      76,
+      110
+    ],
+    "timestamp": "2026-11-08T19:48:31.554Z",
+    "alertTimestamp": "2026-11-08T17:48:38.767Z"
+  },
+  {
+    "match": "Baltika vs Dynamo Makhachkala",
+    "league": "Premier Liga",
+    "tier": "AVISO",
+    "probability": 0.8951007355004983,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y big chance para el visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      4
+    ],
+    "timestamp": "2026-11-08T19:48:31.654Z",
+    "alertTimestamp": "2026-11-08T17:58:33.699Z"
+  },
+  {
+    "match": "El Geish vs Petrol Asyut",
+    "league": "Copa Egipto - 16avos de final",
+    "tier": "AVISO",
+    "probability": 0.5126980492129394,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un jugador menos para el equipo perdedor.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      28
+    ],
+    "timestamp": "2026-11-08T19:58:30.325Z",
+    "alertTimestamp": "2026-11-08T18:08:36.062Z"
+  },
+  {
+    "match": "Besiktas vs Genclerbirligi",
+    "league": "Superliga",
+    "tier": "AVISO",
+    "probability": 0.6506383018943884,
+    "minute": 60,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, a pesar del 2-0 y la roja, el xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      45,
+      85
+    ],
+    "timestamp": "2026-11-08T19:58:30.542Z",
+    "alertTimestamp": "2026-11-08T18:08:36.062Z"
+  },
+  {
+    "match": "AS Far Rabat vs El Jadida",
+    "league": "Botola Pro",
+    "tier": "AVISO",
+    "probability": 0.6917213321913205,
+    "minute": 61,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con goles, un expulsado y xG estimado. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      5,
+      20,
+      36,
+      44
+    ],
+    "timestamp": "2026-11-08T20:08:35.033Z",
+    "alertTimestamp": "2026-11-08T18:08:36.062Z"
+  },
+  {
+    "match": "Lynx FC vs Lions Gibraltar",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.8853149665531566,
+    "minute": 25,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T20:28:31.599Z",
+    "alertTimestamp": "2026-11-08T18:38:34.121Z"
   }
 ]
