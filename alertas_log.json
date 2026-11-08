@@ -1,143 +1,5 @@
 [
   {
-    "match": "Chatham Town vs Leatherhead",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8900824774940265,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 24. No hay razones concretas para rechazar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:39:12.137Z",
-    "alertTimestamp": "2026-10-06T19:01:13.965Z"
-  },
-  {
-    "match": "Warrington Town vs Workington",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8939788263831584,
-    "minute": 23,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      43,
-      45,
-      75
-    ],
-    "timestamp": "2026-10-06T20:49:10.531Z",
-    "alertTimestamp": "2026-10-06T18:49:49.537Z"
-  },
-  {
-    "match": "Cheshunt FC vs Aveley",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8676776174455029,
-    "minute": 22,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª división, 0-0, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      36,
-      58,
-      60
-    ],
-    "timestamp": "2026-10-06T20:49:10.591Z",
-    "alertTimestamp": "2026-10-06T18:49:49.537Z"
-  },
-  {
-    "match": "Quorn vs Ashton United",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.5405563460995588,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado en 7ª división, con 17 minutos restantes y alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      27,
-      64,
-      73,
-      78
-    ],
-    "timestamp": "2026-10-06T20:49:10.658Z",
-    "alertTimestamp": "2026-10-06T18:49:49.537Z"
-  },
-  {
-    "match": "Albania vs San Marino",
-    "league": "Liga de las Naciones - UEFA - Liga C - Grupo 1",
-    "tier": "AVISO",
-    "probability": 0.5117504127545743,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      11,
-      66,
-      93
-    ],
-    "timestamp": "2026-10-06T20:49:10.899Z",
-    "alertTimestamp": "2026-10-06T18:49:49.537Z"
-  },
-  {
-    "match": "Maldon & Tiptree vs Welling Utd",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.8900824774940265,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en 7ª División, 0-0 en el minuto 24. No hay razones claras para rechazar la alerta.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-06T20:49:11.088Z",
-    "alertTimestamp": "2026-10-06T19:01:13.965Z"
-  },
-  {
     "match": "Real Frontera vs Atletico El Vigia",
     "league": "Copa Venezuela",
     "tier": "AVISO",
@@ -22596,5 +22458,142 @@
     "goalMinutes": [],
     "timestamp": "2026-11-08T20:28:31.599Z",
     "alertTimestamp": "2026-11-08T18:38:34.121Z"
+  },
+  {
+    "match": "Leones Negros vs Durango",
+    "league": "Liga de Expansión MX - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.6850947008510734,
+    "minute": 61,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de cuartos de final, el 2-0 no es definitivo y Durango podría buscar un gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      25,
+      40,
+      52
+    ],
+    "timestamp": "2026-11-08T20:48:30.795Z",
+    "alertTimestamp": "2026-11-08T18:08:36.062Z"
+  },
+  {
+    "match": "Montañeses vs Los Cabos United",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8956151600665554,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T20:58:29.390Z",
+    "alertTimestamp": "2026-11-08T17:58:33.699Z"
+  },
+  {
+    "match": "Nacional Potosí vs Real Potosí",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.8554615443368478,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      47
+    ],
+    "timestamp": "2026-11-08T20:58:29.613Z",
+    "alertTimestamp": "2026-11-08T19:08:33.236Z"
+  },
+  {
+    "match": "Marsaxlokk vs Hamrun Spartans",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.869693102719586,
+    "minute": 23,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      18,
+      80,
+      96
+    ],
+    "timestamp": "2026-11-08T21:08:30.049Z",
+    "alertTimestamp": "2026-11-08T19:08:33.236Z"
+  },
+  {
+    "match": "Sporting Escaldes vs Inter Escaldes",
+    "league": "Primera Divisió",
+    "tier": "AVISO",
+    "probability": 0.6305108202192765,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con goles esperados y tiros a puerta. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-08T21:08:30.112Z",
+    "alertTimestamp": "2026-11-08T19:08:33.236Z"
+  },
+  {
+    "match": "Lech Poznan vs Zaglebie Lubin",
+    "league": "Ekstraklasa",
+    "tier": "AVISO",
+    "probability": 0.529631428086617,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      46,
+      52,
+      56,
+      94
+    ],
+    "timestamp": "2026-11-08T21:18:32.100Z",
+    "alertTimestamp": "2026-11-08T19:28:30.933Z"
   }
 ]
