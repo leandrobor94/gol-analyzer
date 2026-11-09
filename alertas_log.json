@@ -1,25 +1,5 @@
 [
   {
-    "match": "Zamora FC vs Club Atletico Barinas",
-    "league": "Copa Venezuela",
-    "tier": "AVISO",
-    "probability": 0.8948175079796583,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con un equipo dominando los tiros a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-07T21:32:39.762Z",
-    "alertTimestamp": "2026-10-07T19:32:31.069Z"
-  },
-  {
     "match": "Rayo Zuliano vs Deportivo Lara",
     "league": "Copa Venezuela",
     "tier": "AVISO",
@@ -22597,5 +22577,27 @@
     "goalMinutes": [],
     "timestamp": "2026-11-08T22:08:28.288Z",
     "alertTimestamp": "2026-11-08T19:58:28.699Z"
+  },
+  {
+    "match": "U. La Calera vs Huachipato",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.6314504658835451,
+    "minute": 61,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, aunque xG estimado, la diferencia de remates es significativa.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      23
+    ],
+    "timestamp": "2026-11-09T22:08:05.301Z",
+    "alertTimestamp": "2026-11-08T20:38:29.890Z"
   }
 ]
