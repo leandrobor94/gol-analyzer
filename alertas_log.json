@@ -1,28 +1,5 @@
 [
   {
-    "match": "Rayo Zuliano vs Deportivo Lara",
-    "league": "Copa Venezuela",
-    "tier": "AVISO",
-    "probability": 0.8965370738266716,
-    "minute": 22,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      80,
-      91
-    ],
-    "timestamp": "2026-10-07T21:42:29.515Z",
-    "alertTimestamp": "2026-10-07T19:42:30.685Z"
-  },
-  {
     "match": "22 de Julio vs El Nacional",
     "league": "Serie B - Fase de grupos - Grupo Descenso",
     "tier": "AVISO",
@@ -22599,5 +22576,25 @@
     ],
     "timestamp": "2026-11-09T22:08:05.301Z",
     "alertTimestamp": "2026-11-08T20:38:29.890Z"
+  },
+  {
+    "match": "Chapelton vs Racing United",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8948971616914241,
+    "minute": 23,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-10T00:08:05.144Z",
+    "alertTimestamp": "2026-11-09T22:08:04.596Z"
   }
 ]
