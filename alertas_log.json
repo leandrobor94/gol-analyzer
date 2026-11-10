@@ -1,33 +1,5 @@
 [
   {
-    "match": "22 de Julio vs El Nacional",
-    "league": "Serie B - Fase de grupos - Grupo Descenso",
-    "tier": "AVISO",
-    "probability": 0.8911922740235938,
-    "minute": 22,
-    "scoreAtAlert": "2-5",
-    "finalScore": "2-5",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 22, sin goles esperados. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      37,
-      39,
-      42,
-      47,
-      78,
-      80,
-      84
-    ],
-    "timestamp": "2026-10-07T21:52:30.952Z",
-    "alertTimestamp": "2026-10-07T20:02:30.015Z"
-  },
-  {
     "match": "AFF Guatemala vs Nueva Santa Rosa CDF",
     "league": "Primera Division - Apertura",
     "tier": "AVISO",
@@ -22596,5 +22568,25 @@
     "goalMinutes": [],
     "timestamp": "2026-11-10T00:08:05.144Z",
     "alertTimestamp": "2026-11-09T22:08:04.596Z"
+  },
+  {
+    "match": "Arnett Gardens vs Waterhouse FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.5228190153931837,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0, con un jugador menos y xG estimado. Alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-10T19:30:15.672Z",
+    "alertTimestamp": "2026-11-10T01:08:04.518Z"
   }
 ]
