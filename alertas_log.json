@@ -1,53 +1,5 @@
 [
   {
-    "match": "One Knoxville vs Chattanooga Red Wolves",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8960497079462816,
-    "minute": 22,
-    "scoreAtAlert": "1-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con tarjeta roja temprana, marcador ajustado y xG estimado no concluyente.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      41,
-      54
-    ],
-    "timestamp": "2026-10-08T18:42:25.661Z",
-    "alertTimestamp": "2026-10-07T23:12:33.103Z"
-  },
-  {
-    "match": "Forge FC vs Pacific",
-    "league": "Canadian Premier League",
-    "tier": "AVISO",
-    "probability": 0.8552898999989652,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      43,
-      50,
-      93
-    ],
-    "timestamp": "2026-10-08T18:42:25.821Z",
-    "alertTimestamp": "2026-10-07T23:12:33.103Z"
-  },
-  {
     "match": "Libertad San Carlos vs Bella Vista",
     "league": "Copa Uruguay - 16avos de final",
     "tier": "AVISO",
@@ -22583,5 +22535,51 @@
     ],
     "timestamp": "2026-11-10T22:00:08.956Z",
     "alertTimestamp": "2026-11-10T20:10:19.312Z"
+  },
+  {
+    "match": "Envigado FC vs Boca Juniors Cali",
+    "league": "Torneo BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8398935908444097,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      16,
+      70
+    ],
+    "timestamp": "2026-11-10T22:30:08.205Z",
+    "alertTimestamp": "2026-11-10T20:40:47.222Z"
+  },
+  {
+    "match": "CD Neo Pipil vs CD Dragon",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.9009631388198236,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      60
+    ],
+    "timestamp": "2026-11-10T23:10:08.526Z",
+    "alertTimestamp": "2026-11-10T21:10:13.608Z"
   }
 ]
