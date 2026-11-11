@@ -1,50 +1,5 @@
 [
   {
-    "match": "Portmore United vs Waterhouse FC",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8449425265728918,
-    "minute": 20,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Early in the match, score 0-0, and model probability is high for a goal.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-08T22:30:58.947Z",
-    "alertTimestamp": "2026-10-08T20:41:24.694Z"
-  },
-  {
-    "match": "Santos vs Flamengo",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8842595850343047,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y una gran ocasión para el visitante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      43,
-      49,
-      82,
-      88
-    ],
-    "timestamp": "2026-10-09T18:13:16.238Z",
-    "alertTimestamp": "2026-10-08T22:30:57.843Z"
-  },
-  {
     "match": "Athletico Paranaense vs Atlético Mineiro",
     "league": "Brasileirão",
     "tier": "AVISO",
@@ -22573,5 +22528,45 @@
     ],
     "timestamp": "2026-11-11T20:55:41.678Z",
     "alertTimestamp": "2026-11-11T19:25:44.909Z"
+  },
+  {
+    "match": "Talleres (Reserva) vs Sarmiento (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5192443006485951,
+    "minute": 77,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con marcador igualado y minutos restantes, sin señal de esterilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-11T21:55:40.443Z",
+    "alertTimestamp": "2026-11-11T20:05:43.236Z"
+  },
+  {
+    "match": "Real Hope FA vs AS Capoise",
+    "league": "Ligue Haitienne",
+    "tier": "AVISO",
+    "probability": 0.8847237835857874,
+    "minute": 26,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-11T22:15:41.152Z",
+    "alertTimestamp": "2026-11-11T20:15:42.353Z"
   }
 ]
