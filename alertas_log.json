@@ -1,75 +1,5 @@
 [
   {
-    "match": "Libertad San Carlos vs Bella Vista",
-    "league": "Copa Uruguay - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.8609681760532936,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      23,
-      26,
-      33,
-      89
-    ],
-    "timestamp": "2026-10-08T18:42:25.964Z",
-    "alertTimestamp": "2026-10-07T23:12:33.103Z"
-  },
-  {
-    "match": "Sarmiento (Reserva) vs Vélez Sarsfield (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5297754651939951,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de reserva con marcador ajustado y tiempo restante. xG estimado, no real.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-08T20:01:35.904Z",
-    "alertTimestamp": "2026-10-08T18:42:05.211Z"
-  },
-  {
-    "match": "Shamrock vs Drogheda Utd",
-    "league": "Liga de Irlanda",
-    "tier": "AVISO",
-    "probability": 0.8905581645307339,
-    "minute": 20,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido en desarrollo, marcador ajustado, y un equipo dominando en llegadas.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      20,
-      42,
-      88
-    ],
-    "timestamp": "2026-10-08T20:51:02.281Z",
-    "alertTimestamp": "2026-10-08T19:11:11.213Z"
-  },
-  {
     "match": "Always Ready vs Nacional Potosí",
     "league": "Copa Paceña",
     "tier": "AVISO",
@@ -22581,5 +22511,69 @@
     ],
     "timestamp": "2026-11-10T23:10:08.526Z",
     "alertTimestamp": "2026-11-10T21:10:13.608Z"
+  },
+  {
+    "match": "Internacional de Bogotá vs América de Cali",
+    "league": "Copa BetPlay Dimayor - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8541626881974884,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con un gol, un expulsado y xG estimado. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      42,
+      44
+    ],
+    "timestamp": "2026-11-11T19:25:45.754Z",
+    "alertTimestamp": "2026-11-10T23:40:07.342Z"
+  },
+  {
+    "match": "Instituto (Reserva) vs San Lorenzo (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5411427143778735,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, con un jugador menos y xG estimado. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-11T19:55:42.891Z",
+    "alertTimestamp": "2026-11-11T19:25:44.909Z"
+  },
+  {
+    "match": "Atlético de Rafaela (Reserva) vs Belgrano (Reserva)",
+    "league": "Liga Profesional - Reserva - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5205974780715745,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de reserva con un gol de diferencia y un expulsado. El xG es estimado.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-11T19:55:43.060Z",
+    "alertTimestamp": "2026-11-11T19:25:44.909Z"
   }
 ]
