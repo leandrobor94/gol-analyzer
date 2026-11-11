@@ -1,30 +1,5 @@
 [
   {
-    "match": "Athletico Paranaense vs Atlético Mineiro",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8902263054124934,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8,
-      27,
-      93,
-      97
-    ],
-    "timestamp": "2026-10-09T18:13:16.906Z",
-    "alertTimestamp": "2026-10-08T23:01:12.362Z"
-  },
-  {
     "match": "Champions Academy vs Academía Costa Del Este",
     "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
     "tier": "AVISO",
@@ -22568,5 +22543,25 @@
     "goalMinutes": [],
     "timestamp": "2026-11-11T22:15:41.152Z",
     "alertTimestamp": "2026-11-11T20:15:42.353Z"
+  },
+  {
+    "match": "CD Vendaval vs CD Once Municipal",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.8916065623337063,
+    "minute": 24,
+    "scoreAtAlert": "1-4",
+    "finalScore": "1-5",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado sin goles, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-11T23:05:41.082Z",
+    "alertTimestamp": "2026-11-11T21:25:41.424Z"
   }
 ]
