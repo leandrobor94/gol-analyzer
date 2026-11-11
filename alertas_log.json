@@ -1,56 +1,5 @@
 [
   {
-    "match": "Always Ready vs Nacional Potosí",
-    "league": "Copa Paceña",
-    "tier": "AVISO",
-    "probability": 0.8822454026933144,
-    "minute": 22,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, y xG estimado no es base para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      14,
-      30,
-      37,
-      57,
-      94
-    ],
-    "timestamp": "2026-10-08T21:01:19.820Z",
-    "alertTimestamp": "2026-10-08T19:01:36.111Z"
-  },
-  {
-    "match": "São Paulo Sub20 vs Athletico-PR Youth",
-    "league": "Copa de Brasil Sub20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8559862917212565,
-    "minute": 21,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de copa, marcador 0-0, modelo da alta probabilidad a gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      36,
-      68,
-      75,
-      84
-    ],
-    "timestamp": "2026-10-08T22:30:58.423Z",
-    "alertTimestamp": "2026-10-08T20:30:59.085Z"
-  },
-  {
     "match": "Portmore United vs Waterhouse FC",
     "league": "Premier League",
     "tier": "AVISO",
@@ -22574,6 +22523,55 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-11-11T19:55:43.060Z",
+    "alertTimestamp": "2026-11-11T19:25:44.909Z"
+  },
+  {
+    "match": "Tirol vs Fortaleza B",
+    "league": "Fares Lopes",
+    "tier": "AVISO",
+    "probability": 0.5231690846109939,
+    "minute": 79,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido no resuelto, aunque el xG es estimado, los tiros a puerta indican actividad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      26,
+      70
+    ],
+    "timestamp": "2026-11-11T20:35:45.810Z",
+    "alertTimestamp": "2026-11-11T19:25:44.909Z"
+  },
+  {
+    "match": "Ucrania Sub17 vs Polonia Sub17",
+    "league": "Clasificatorio Sub-17 - Primera Fase",
+    "tier": "AVISO",
+    "probability": 0.8882163912763317,
+    "minute": 25,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      51,
+      59,
+      71,
+      76
+    ],
+    "timestamp": "2026-11-11T20:55:41.678Z",
     "alertTimestamp": "2026-11-11T19:25:44.909Z"
   }
 ]
