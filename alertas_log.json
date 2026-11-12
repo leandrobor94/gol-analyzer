@@ -1,76 +1,5 @@
 [
   {
-    "match": "FSV Zwickau vs Sv Tasmania Berlin",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.6029849485843597,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      66,
-      94
-    ],
-    "timestamp": "2026-10-09T19:03:15.391Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Galatasaray vs Kasimpasa",
-    "league": "Superliga",
-    "tier": "AVISO",
-    "probability": 0.6688782071399593,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Galatasaray domina con 4 grandes ocasiones y 7 tiros a puerta, a pesar del xG estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      45,
-      68,
-      90,
-      96
-    ],
-    "timestamp": "2026-10-09T19:03:15.673Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "SC Kriens vs FC Wil 1900",
-    "league": "Challenge League",
-    "tier": "AVISO",
-    "probability": 0.5166078602930406,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      61,
-      70
-    ],
-    "timestamp": "2026-10-09T19:23:32.754Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
     "match": "Roda JC Kerkrade vs Jong PSV Eindhoven",
     "league": "Eerste Divisie",
     "tier": "AVISO",
@@ -22565,5 +22494,73 @@
     ],
     "timestamp": "2026-11-12T21:33:34.566Z",
     "alertTimestamp": "2026-11-12T19:43:35.608Z"
+  },
+  {
+    "match": "San Marino vs Bielorrusia",
+    "league": "Liga de las Naciones - UEFA - Liga C - Grupo 1",
+    "tier": "AVISO",
+    "probability": 0.6255121751018601,
+    "minute": 61,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Bielorrusia busca asegurar la victoria.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      17
+    ],
+    "timestamp": "2026-11-12T21:43:34.276Z",
+    "alertTimestamp": "2026-11-12T19:53:36.620Z"
+  },
+  {
+    "match": "Benfica (F) vs Austria Wien (W)",
+    "league": "Liga de Campeones Femenina",
+    "tier": "AVISO",
+    "probability": 0.9010402810477837,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      53,
+      76,
+      93
+    ],
+    "timestamp": "2026-11-12T22:03:35.049Z",
+    "alertTimestamp": "2026-11-12T20:03:35.545Z"
+  },
+  {
+    "match": "AD Izalco vs AD FORFUT",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.5703649500860166,
+    "minute": 77,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con minutos restantes y alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-12T22:33:36.441Z",
+    "alertTimestamp": "2026-11-12T20:43:33.920Z"
   }
 ]
