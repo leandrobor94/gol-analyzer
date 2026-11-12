@@ -1,50 +1,5 @@
 [
   {
-    "match": "VSG Altglienicke vs BFC Dynamo",
-    "league": "Regionalliga - Nordost",
-    "tier": "AVISO",
-    "probability": 0.6029849485843597,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un solo gol de diferencia y 16 minutos restantes. No hay datos de xG reales.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      29
-    ],
-    "timestamp": "2026-10-09T19:03:14.411Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "1. FC Schweinfurt 05 vs SC Eltersdorf",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.6028263454191897,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, minutos finales, y la liga tiene un alto promedio de goles.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      18,
-      46
-    ],
-    "timestamp": "2026-10-09T19:03:14.602Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
     "match": "FSV Zwickau vs Sv Tasmania Berlin",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -22567,6 +22522,48 @@
       63
     ],
     "timestamp": "2026-11-12T20:33:35.028Z",
+    "alertTimestamp": "2026-11-12T19:43:35.608Z"
+  },
+  {
+    "match": "Talleres de Córdoba (F) vs San Luis FC (F)",
+    "league": "Campeonato Femenino - Clausura",
+    "tier": "AVISO",
+    "probability": 0.6279000007346913,
+    "minute": 62,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-12T21:03:36.716Z",
+    "alertTimestamp": "2026-11-12T19:43:35.608Z"
+  },
+  {
+    "match": "Plaza Colonia vs Rentistas",
+    "league": "Segunda Division - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.8409797108396715,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, minuto 20, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20
+    ],
+    "timestamp": "2026-11-12T21:33:34.566Z",
     "alertTimestamp": "2026-11-12T19:43:35.608Z"
   }
 ]
