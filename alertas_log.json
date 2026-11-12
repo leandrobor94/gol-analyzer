@@ -1,73 +1,5 @@
 [
   {
-    "match": "AB Copenhagen vs Aarhus Fremad",
-    "league": "1st Division",
-    "tier": "AVISO",
-    "probability": 0.5351266471888031,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      60
-    ],
-    "timestamp": "2026-10-09T18:52:47.242Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "JS Kabylie vs ASO Chlef",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.6340605761965298,
-    "minute": 62,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un solo gol, xG estimado no fiable, y un equipo sin remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12
-    ],
-    "timestamp": "2026-10-09T18:52:47.443Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Bayern Munich II vs SpVgg Unterhaching",
-    "league": "Regionalliga - Bayern",
-    "tier": "AVISO",
-    "probability": 0.6029849485843597,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que sugieran juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      24,
-      83
-    ],
-    "timestamp": "2026-10-09T19:03:14.218Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
     "match": "VSG Altglienicke vs BFC Dynamo",
     "league": "Regionalliga - Nordost",
     "tier": "AVISO",
@@ -22567,5 +22499,74 @@
     ],
     "timestamp": "2026-11-11T23:55:40.045Z",
     "alertTimestamp": "2026-11-11T22:05:39.637Z"
+  },
+  {
+    "match": "Facilnet vs Belo Jardim",
+    "league": "Pernambucano - Playoffs - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.9011907249005884,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de playoffs, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      47,
+      92
+    ],
+    "timestamp": "2026-11-12T19:43:36.059Z",
+    "alertTimestamp": "2026-11-11T23:05:40.493Z"
+  },
+  {
+    "match": "Central vs Salgueiro",
+    "league": "Pernambucano - Playoffs - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.885972999557083,
+    "minute": 24,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de playoffs, marcador 0-0, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      70,
+      91
+    ],
+    "timestamp": "2026-11-12T19:43:36.112Z",
+    "alertTimestamp": "2026-11-11T23:05:40.493Z"
+  },
+  {
+    "match": "Kimberley Mar Del Plata vs Olimpo",
+    "league": "Federal A - Revalida - Cuarta etapa",
+    "tier": "AVISO",
+    "probability": 0.6006421308504769,
+    "minute": 67,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con marcador ajustado y tiempo restante, a pesar del xG estimado.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      37,
+      63
+    ],
+    "timestamp": "2026-11-12T20:33:35.028Z",
+    "alertTimestamp": "2026-11-12T19:43:35.608Z"
   }
 ]
