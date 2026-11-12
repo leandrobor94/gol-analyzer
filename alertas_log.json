@@ -1,25 +1,5 @@
 [
   {
-    "match": "Champions Academy vs Academía Costa Del Este",
-    "league": "Liga Prom - Apertura - Conferencia Este - Zona Norte",
-    "tier": "AVISO",
-    "probability": 0.9026229656930965,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en etapa temprana, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-09T18:13:17.470Z",
-    "alertTimestamp": "2026-10-08T23:10:58.486Z"
-  },
-  {
     "match": "AB Copenhagen vs Aarhus Fremad",
     "league": "1st Division",
     "tier": "AVISO",
@@ -22563,5 +22543,29 @@
     "goalMinutes": [],
     "timestamp": "2026-11-11T23:05:41.082Z",
     "alertTimestamp": "2026-11-11T21:25:41.424Z"
+  },
+  {
+    "match": "Londrina vs Náutico",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.5548274094651914,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      80,
+      88,
+      91
+    ],
+    "timestamp": "2026-11-11T23:55:40.045Z",
+    "alertTimestamp": "2026-11-11T22:05:39.637Z"
   }
 ]
