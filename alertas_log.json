@@ -1,146 +1,5 @@
 [
   {
-    "match": "Málaga CF vs RCD Espanyol",
-    "league": "LaLiga",
-    "tier": "AVISO",
-    "probability": 0.8998409822716048,
-    "minute": 21,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      13,
-      93
-    ],
-    "timestamp": "2026-10-09T21:01:45.023Z",
-    "alertTimestamp": "2026-10-09T19:03:13.132Z"
-  },
-  {
-    "match": "UD Ibiza vs Real Madrid Castilla",
-    "league": "Primera División RFEF",
-    "tier": "AVISO",
-    "probability": 0.6476422735742998,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, un gol de ventaja, y un equipo sin remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-09T21:01:46.007Z",
-    "alertTimestamp": "2026-10-09T19:14:14.904Z"
-  },
-  {
-    "match": "CD Platense vs Juticalpa",
-    "league": "Liga Nacional - Apertura - Grupo Norte",
-    "tier": "AVISO",
-    "probability": 0.8758455602869227,
-    "minute": 20,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Early in the match, score 0-0, and model probability is high for a goal.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      37,
-      55,
-      64
-    ],
-    "timestamp": "2026-10-10T17:14:34.585Z",
-    "alertTimestamp": "2026-10-09T21:11:43.925Z"
-  },
-  {
-    "match": "Sol de América vs Sportivo Carapeguá",
-    "league": "Division Intermedia",
-    "tier": "AVISO",
-    "probability": 0.8585064151660846,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con un gol, pero con una expulsión temprana que puede cambiar el ritmo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      7,
-      23,
-      32,
-      46,
-      74,
-      95
-    ],
-    "timestamp": "2026-10-10T17:14:35.016Z",
-    "alertTimestamp": "2026-10-09T22:31:52.160Z"
-  },
-  {
-    "match": "Muş Spor vs Kastamonuspor",
-    "league": "2. Lig",
-    "tier": "AVISO",
-    "probability": 0.5130695918082915,
-    "minute": 81,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      5
-    ],
-    "timestamp": "2026-10-10T18:05:16.260Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Uruguay Montevideo Fc vs Colon",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5363564239210459,
-    "minute": 79,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      6,
-      25,
-      54,
-      81
-    ],
-    "timestamp": "2026-10-10T18:05:17.518Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
     "match": "Náxara Cd vs Peña Sport FC",
     "league": "Segunda RFEF",
     "tier": "AVISO",
@@ -22578,5 +22437,134 @@
     ],
     "timestamp": "2026-11-13T20:55:44.033Z",
     "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Caernarfon vs Holywell Town",
+    "league": "Welsh Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8668280881399464,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      21,
+      23,
+      25,
+      65
+    ],
+    "timestamp": "2026-11-13T21:35:43.077Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Gap Connah's Quay vs Mochdre Sports",
+    "league": "Welsh Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8847237835857874,
+    "minute": 26,
+    "scoreAtAlert": "5-0",
+    "finalScore": "5-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-13T21:45:41.553Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Rathfriland Rangers vs H&W Welders",
+    "league": "NIFL Championship",
+    "tier": "AVISO",
+    "probability": 0.9041990449282578,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, sin goles y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-13T21:45:41.764Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Newington Youth Club vs Warrenpoint Town",
+    "league": "NIFL Championship",
+    "tier": "AVISO",
+    "probability": 0.9011907249005884,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-13T21:45:41.862Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Larne FC vs Dungannon Swifts",
+    "league": "Premiership",
+    "tier": "AVISO",
+    "probability": 0.8539069536712186,
+    "minute": 20,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      30,
+      34,
+      59
+    ],
+    "timestamp": "2026-11-13T21:45:42.006Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Penybont vs Cardiff Draconians",
+    "league": "Welsh Cup - Tercera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8603106636876919,
+    "minute": 20,
+    "scoreAtAlert": "6-0",
+    "finalScore": "6-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-13T21:45:42.101Z",
+    "alertTimestamp": "2026-11-13T19:55:43.647Z"
   }
 ]
