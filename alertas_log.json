@@ -1,165 +1,5 @@
 [
   {
-    "match": "Jong AZ Alkmaar vs Den Bosch",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.8894443682546685,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      41
-    ],
-    "timestamp": "2026-10-09T20:02:52.712Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Flamengo/Sp Youth vs RB Bragantino/Sp Youth",
-    "league": "Paulista U20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8996248158895983,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de octavos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-09T20:12:56.746Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Bélgica (F) vs Polonia (F)",
-    "league": "UEFA Women WC Qualifiers - Playoffs",
-    "tier": "AVISO",
-    "probability": 0.5600232994224392,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      48
-    ],
-    "timestamp": "2026-10-09T20:22:19.212Z",
-    "alertTimestamp": "2026-10-09T18:24:16.546Z"
-  },
-  {
-    "match": "Borussia Dortmund vs Werder Bremen",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.8982585732379239,
-    "minute": 22,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, xG estimado no confiable, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      80,
-      85,
-      88,
-      92
-    ],
-    "timestamp": "2026-10-09T20:31:51.650Z",
-    "alertTimestamp": "2026-10-09T18:33:48.023Z"
-  },
-  {
-    "match": "Lens vs Lyon",
-    "league": "Ligue 1",
-    "tier": "AVISO",
-    "probability": 0.6258693552268625,
-    "minute": 67,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Lens domina pero Lyon puede reaccionar. xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      36,
-      76,
-      85
-    ],
-    "timestamp": "2026-10-09T20:42:04.001Z",
-    "alertTimestamp": "2026-10-09T18:52:46.117Z"
-  },
-  {
-    "match": "Haverfordwest vs Caernarfon",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.5418656352400453,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y alto xG estimado para el visitante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      83,
-      85
-    ],
-    "timestamp": "2026-10-09T20:42:04.765Z",
-    "alertTimestamp": "2026-10-09T18:52:46.117Z"
-  },
-  {
-    "match": "Cobh Ramblers vs Kerry",
-    "league": "Division 1",
-    "tier": "AVISO",
-    "probability": 0.6771484197450255,
-    "minute": 60,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Kerry con ventaja pero sin gran volumen de juego. xG estimado, no real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      22,
-      34
-    ],
-    "timestamp": "2026-10-09T20:42:05.529Z",
-    "alertTimestamp": "2026-10-09T18:52:46.117Z"
-  },
-  {
     "match": "SK Beveren vs Lommel United",
     "league": "Jupiler Pro League",
     "tier": "AVISO",
@@ -22571,5 +22411,174 @@
     ],
     "timestamp": "2026-11-13T00:13:34.179Z",
     "alertTimestamp": "2026-11-12T22:13:33.453Z"
+  },
+  {
+    "match": "Estudiantes de La Plata vs Independiente Rivadavia",
+    "league": "Supercopa - Final",
+    "tier": "AVISO",
+    "probability": 0.8886443723330469,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, con chances de gol y sin goles esperados reales.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      55,
+      68,
+      89,
+      95,
+      96
+    ],
+    "timestamp": "2026-11-13T19:25:44.373Z",
+    "alertTimestamp": "2026-11-12T23:03:35.191Z"
+  },
+  {
+    "match": "SpVgg Bayreuth vs Vilzing",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.5690692887867831,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      38,
+      65,
+      94
+    ],
+    "timestamp": "2026-11-13T19:55:44.455Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "TSV Buchbach vs Greuther Fürth II",
+    "league": "Regionalliga - Bayern",
+    "tier": "AVISO",
+    "probability": 0.5566442821989577,
+    "minute": 78,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      90
+    ],
+    "timestamp": "2026-11-13T19:55:44.543Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "FC Roskilde vs Nykobing",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.5303664038165999,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      61,
+      80
+    ],
+    "timestamp": "2026-11-13T19:55:44.724Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Hik Hellerup vs B93 Copenhagen",
+    "league": "1st Division",
+    "tier": "AVISO",
+    "probability": 0.5206832733624631,
+    "minute": 79,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido ajustado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      12,
+      26,
+      30,
+      38
+    ],
+    "timestamp": "2026-11-13T19:55:44.833Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Nantes (W) vs Lens (W)",
+    "league": "Campeonato Francés (F)",
+    "tier": "AVISO",
+    "probability": 0.6559587932025777,
+    "minute": 65,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, marcador ajustado y sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      50,
+      88
+    ],
+    "timestamp": "2026-11-13T20:05:50.595Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Homburg vs FSV Frankfurt",
+    "league": "Regionalliga - Sudwest",
+    "tier": "AVISO",
+    "probability": 0.5501785439496778,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      86
+    ],
+    "timestamp": "2026-11-13T20:05:50.688Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
   }
 ]

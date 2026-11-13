@@ -1,41 +1,71 @@
 {
   "alertedMatches": {
-    "4785187_AVISO": {
-      "timestamp": 1794524615191,
+    "4763132_AVISO": {
+      "timestamp": 1794597943589,
+      "minute": 65,
+      "tier": "AVISO"
+    },
+    "4763966_AVISO": {
+      "timestamp": 1794598547061,
       "minute": 77,
       "tier": "AVISO"
     },
-    "4892111_AVISO": {
-      "timestamp": 1794521014784,
-      "minute": 77,
+    "4763967_AVISO": {
+      "timestamp": 1794598547061,
+      "minute": 78,
       "tier": "AVISO"
     },
-    "4669584_AVISO": {
-      "timestamp": 1794522214853,
+    "4770445_AVISO": {
+      "timestamp": 1794598547061,
+      "minute": 78,
+      "tier": "AVISO"
+    },
+    "4893944_AVISO": {
+      "timestamp": 1794598547061,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4893942_AVISO": {
+      "timestamp": 1794598547061,
+      "minute": 79,
+      "tier": "AVISO"
+    },
+    "4747553_AVISO": {
+      "timestamp": 1794600349839,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4747556_AVISO": {
+      "timestamp": 1794600349839,
+      "minute": 21,
+      "tier": "AVISO"
+    },
+    "4882360_AVISO": {
+      "timestamp": 1794600349839,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4882357_AVISO": {
+      "timestamp": 1794600349839,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4745207_AVISO": {
+      "timestamp": 1794600349839,
+      "minute": 20,
+      "tier": "AVISO"
+    },
+    "4882352_AVISO": {
+      "timestamp": 1794600945531,
       "minute": 26,
-      "tier": "AVISO"
-    },
-    "4783797_AVISO": {
-      "timestamp": 1794522816149,
-      "minute": 77,
-      "tier": "AVISO"
-    },
-    "4736659_AVISO": {
-      "timestamp": 1794529415226,
-      "minute": 63,
-      "tier": "AVISO"
-    },
-    "4744229_AVISO": {
-      "timestamp": 1794526415888,
-      "minute": 77,
       "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 14442,
-    "verified": 14427,
-    "withGoalTimeline": 10365,
+    "total": 14088,
+    "verified": 14031,
+    "withGoalTimeline": 10141,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-11-13T00:23:35.991Z"
+  "lastUpdated": "2026-11-13T20:15:46.412Z"
 }
