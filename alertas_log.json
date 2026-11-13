@@ -1,90 +1,5 @@
 [
   {
-    "match": "Roda JC Kerkrade vs Jong PSV Eindhoven",
-    "league": "Eerste Divisie",
-    "tier": "AVISO",
-    "probability": 0.5122716838733283,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      76,
-      84
-    ],
-    "timestamp": "2026-10-09T19:52:52.178Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Moreirense vs Gil Vicente FC",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.522683653798455,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      90
-    ],
-    "timestamp": "2026-10-09T19:52:52.615Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Portuguesa Santista/Sp Youth vs Corinthians/Sp Youth",
-    "league": "Paulista U20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8965370738266716,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de eliminatoria, marcador 0-0, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-09T20:02:52.268Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
-    "match": "Santo André/Sp Youth vs Juventus/Sp Youth",
-    "league": "Paulista U20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.8965370738266716,
-    "minute": 22,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de octavos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-09T20:02:52.501Z",
-    "alertTimestamp": "2026-10-09T18:13:15.183Z"
-  },
-  {
     "match": "Jong AZ Alkmaar vs Den Bosch",
     "league": "Eerste Divisie",
     "tier": "AVISO",
@@ -22562,5 +22477,99 @@
     "goalMinutes": [],
     "timestamp": "2026-11-12T22:33:36.441Z",
     "alertTimestamp": "2026-11-12T20:43:33.920Z"
+  },
+  {
+    "match": "Atlético Balboa vs CD Inca-Aruba",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8453543448612229,
+    "minute": 21,
+    "scoreAtAlert": "3-1",
+    "finalScore": "4-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y sin datos que justifiquen rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      30,
+      33,
+      49,
+      92
+    ],
+    "timestamp": "2026-11-12T23:43:34.660Z",
+    "alertTimestamp": "2026-11-12T21:33:34.154Z"
+  },
+  {
+    "match": "CD Águila vs Municipal Limeño",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5072870048134218,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos con chances de gol. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      44,
+      97
+    ],
+    "timestamp": "2026-11-12T23:43:34.728Z",
+    "alertTimestamp": "2026-11-12T21:43:33.946Z"
+  },
+  {
+    "match": "Ponte Preta vs Operário-PR",
+    "league": "Brasileirão - Série B",
+    "tier": "AVISO",
+    "probability": 0.8839770492960118,
+    "minute": 26,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y con una gran chance generada por el local.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      72,
+      92
+    ],
+    "timestamp": "2026-11-12T23:53:33.787Z",
+    "alertTimestamp": "2026-11-12T22:03:34.784Z"
+  },
+  {
+    "match": "Aurora FC vs Deportivo Mixco",
+    "league": "Liga Nacional - Apertura",
+    "tier": "AVISO",
+    "probability": 0.5357933710458475,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      45
+    ],
+    "timestamp": "2026-11-13T00:13:34.179Z",
+    "alertTimestamp": "2026-11-12T22:13:33.453Z"
   }
 ]
