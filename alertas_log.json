@@ -1,55 +1,5 @@
 [
   {
-    "match": "SK Beveren vs Lommel United",
-    "league": "Jupiler Pro League",
-    "tier": "AVISO",
-    "probability": 0.5335243466879449,
-    "minute": 77,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alto xG estimado y muchas ocasiones de gol para ambos equipos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      24,
-      41,
-      48,
-      56
-    ],
-    "timestamp": "2026-10-09T20:42:05.729Z",
-    "alertTimestamp": "2026-10-09T18:52:46.117Z"
-  },
-  {
-    "match": "Penybont vs Barry Town",
-    "league": "Cymru Premier",
-    "tier": "AVISO",
-    "probability": 0.6666921845407793,
-    "minute": 60,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y alto volumen de remates a puerta del local.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      18,
-      39,
-      53
-    ],
-    "timestamp": "2026-10-09T20:52:17.509Z",
-    "alertTimestamp": "2026-10-09T18:52:46.117Z"
-  },
-  {
     "match": "Málaga CF vs RCD Espanyol",
     "league": "LaLiga",
     "tier": "AVISO",
@@ -22579,6 +22529,54 @@
       86
     ],
     "timestamp": "2026-11-13T20:05:50.688Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Deportivo Lara vs Zamora FC B",
+    "league": "Liga FUTVE 2 - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5171403519093686,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de cuartos de final con marcador ajustado y tiempo restante. No hay datos de xG reales.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      4,
+      87,
+      93
+    ],
+    "timestamp": "2026-11-13T20:55:43.479Z",
+    "alertTimestamp": "2026-11-13T19:25:43.589Z"
+  },
+  {
+    "match": "Bermuda vs Santa Lucía",
+    "league": "CONCACAF Liga de Naciones - Liga B - Grupo 2",
+    "tier": "AVISO",
+    "probability": 0.5567006616821354,
+    "minute": 77,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      48,
+      54
+    ],
+    "timestamp": "2026-11-13T20:55:44.033Z",
     "alertTimestamp": "2026-11-13T19:25:43.589Z"
   }
 ]
