@@ -1,118 +1,5 @@
 [
   {
-    "match": "Maritimo vs FC Porto",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.8417249752253246,
-    "minute": 20,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y xG estimado, sin evidencia clara de juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      16,
-      42,
-      84
-    ],
-    "timestamp": "2026-10-10T19:02:29.155Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Toronto FC vs CF Montréal",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.9018333448968645,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de la MLS, liga de alto scoring, con marcador 0-0 y alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      51,
-      93,
-      95
-    ],
-    "timestamp": "2026-10-10T19:14:41.667Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Real Jaén vs Villarreal B",
-    "league": "Primera División RFEF",
-    "tier": "AVISO",
-    "probability": 0.8844503061784855,
-    "minute": 23,
-    "scoreAtAlert": "0-1",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, y sin datos de ocasiones claras.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T19:14:41.945Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Botev Plovdiv vs Slavia Sofia",
-    "league": "Liga de Bulgaria",
-    "tier": "AVISO",
-    "probability": 0.8604719916391024,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no es real, sin remates a puerta. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      46
-    ],
-    "timestamp": "2026-10-10T19:14:42.369Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Austria Vienna vs Sturm Graz",
-    "league": "Bundesliga",
-    "tier": "AVISO",
-    "probability": 0.8828145010619208,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado, con chances claras para ambos equipos. No hay razón para rechazar la alerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      46,
-      55
-    ],
-    "timestamp": "2026-10-10T19:32:33.957Z",
-    "alertTimestamp": "2026-10-10T17:33:33.338Z"
-  },
-  {
     "match": "St Joseph's vs Lions Gibraltar",
     "league": "Premier Division",
     "tier": "AVISO",
@@ -22569,5 +22456,107 @@
     "goalMinutes": [],
     "timestamp": "2026-11-14T19:39:51.970Z",
     "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Cournon d'Auvergne vs Chassieu Decines",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.55139045117418,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado en los minutos finales de una copa, alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T19:49:55.328Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "CE Europa vs Sant Andreu",
+    "league": "Primera División RFEF",
+    "tier": "AVISO",
+    "probability": 0.8980909778181014,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T19:59:51.465Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Onze Créateurs vs Stade Malien",
+    "league": "Premiere Division",
+    "tier": "AVISO",
+    "probability": 0.8663554710339988,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T19:59:51.550Z",
+    "alertTimestamp": "2026-11-14T17:59:50.885Z"
+  },
+  {
+    "match": "Ibis vs Ipojuca",
+    "league": "Pernambucano - Playoffs - Final",
+    "tier": "AVISO",
+    "probability": 0.9014370383759833,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de playoffs, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T20:09:51.619Z",
+    "alertTimestamp": "2026-11-14T18:09:52.306Z"
+  },
+  {
+    "match": "Villa Dalmine vs Camioneros",
+    "league": "Primera B Metropolitana - Reducido - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8527031625744418,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminacion directa, marcador 0-0, sin goles esperados reales.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      84
+    ],
+    "timestamp": "2026-11-14T20:39:51.516Z",
+    "alertTimestamp": "2026-11-14T18:29:51.181Z"
   }
 ]
