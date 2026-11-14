@@ -1,48 +1,5 @@
 [
   {
-    "match": "Spezia Calcio vs Gubbio",
-    "league": "Serie C italiana - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.8542612810169452,
-    "minute": 21,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido temprano, marcador ajustado, y el modelo indica alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      3,
-      38
-    ],
-    "timestamp": "2026-10-10T20:22:53.212Z",
-    "alertTimestamp": "2026-10-10T18:34:52.624Z"
-  },
-  {
-    "match": "Maccabi Beer Sheva vs Beitar Ironi Kiryat Gat",
-    "league": "Division 4 - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.9026229656930965,
-    "minute": 20,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T20:34:25.247Z",
-    "alertTimestamp": "2026-10-10T18:13:41.989Z"
-  },
-  {
     "match": "Estados Unidos (F) vs España (F)",
     "league": "Amistosos Femeninos",
     "tier": "AVISO",
@@ -22550,5 +22507,51 @@
     ],
     "timestamp": "2026-11-14T21:29:53.584Z",
     "alertTimestamp": "2026-11-14T19:39:51.432Z"
+  },
+  {
+    "match": "Santa Ana vs AD Sarchi",
+    "league": "Liga de Ascenso - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8545070831393776,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de cuartos de final, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      71,
+      92
+    ],
+    "timestamp": "2026-11-14T22:09:53.370Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Deportivo Pereira vs América de Cali",
+    "league": "Liga BetPlay Dimayor - Clausura",
+    "tier": "AVISO",
+    "probability": 0.6500793453847666,
+    "minute": 63,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores. Aún hay chances.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      27,
+      60
+    ],
+    "timestamp": "2026-11-14T22:29:53.259Z",
+    "alertTimestamp": "2026-11-14T20:39:51.079Z"
   }
 ]
