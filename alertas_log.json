@@ -1,172 +1,5 @@
 [
   {
-    "match": "St Joseph's vs Lions Gibraltar",
-    "league": "Premier Division",
-    "tier": "AVISO",
-    "probability": 0.9017332819483509,
-    "minute": 20,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T19:32:34.636Z",
-    "alertTimestamp": "2026-10-10T17:44:14.278Z"
-  },
-  {
-    "match": "Salamanca UDS vs San Sebastian De Los Reyes",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.8927595413725669,
-    "minute": 21,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, marcador ajustado y volumen de juego aceptable.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      21,
-      24,
-      51,
-      53,
-      79
-    ],
-    "timestamp": "2026-10-10T20:04:21.717Z",
-    "alertTimestamp": "2026-10-10T18:13:41.989Z"
-  },
-  {
-    "match": "Cañoneros Marina vs Club Calor",
-    "league": "Premier A - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.8561592535038921,
-    "minute": 21,
-    "scoreAtAlert": "1-6",
-    "finalScore": "1-7",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin razones claras para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T20:04:21.955Z",
-    "alertTimestamp": "2026-10-10T18:13:41.989Z"
-  },
-  {
-    "match": "Ituzaingó vs Argentino de Quilmes",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8582292508022826,
-    "minute": 21,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      30,
-      55,
-      70,
-      86
-    ],
-    "timestamp": "2026-10-10T20:04:34.389Z",
-    "alertTimestamp": "2026-10-10T18:13:41.989Z"
-  },
-  {
-    "match": "Arsenal de Sarandí vs San Martín Burzaco",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8430413566547718,
-    "minute": 20,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con un xG estimado que no es fiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      49,
-      51,
-      54,
-      61
-    ],
-    "timestamp": "2026-10-10T20:04:34.585Z",
-    "alertTimestamp": "2026-10-10T18:13:41.989Z"
-  },
-  {
-    "match": "NK Olimpija Ljubljana vs Mura 05",
-    "league": "Liga eslovena - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5185385314200518,
-    "minute": 77,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con muchos goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      31,
-      52,
-      54,
-      65,
-      69,
-      78
-    ],
-    "timestamp": "2026-10-10T20:13:33.618Z",
-    "alertTimestamp": "2026-10-10T18:26:04.403Z"
-  },
-  {
-    "match": "Ordino vs Inter Escaldes",
-    "league": "Primera Divisió",
-    "tier": "AVISO",
-    "probability": 0.6228141541383476,
-    "minute": 64,
-    "scoreAtAlert": "0-4",
-    "finalScore": "0-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, Inter Escaldes con buen volumen de juego y xG alto.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      23,
-      26,
-      84
-    ],
-    "timestamp": "2026-10-10T20:22:52.969Z",
-    "alertTimestamp": "2026-10-10T18:34:52.624Z"
-  },
-  {
     "match": "Spezia Calcio vs Gubbio",
     "league": "Serie C italiana - Regular Season",
     "tier": "AVISO",
@@ -22558,5 +22391,164 @@
     ],
     "timestamp": "2026-11-14T20:39:51.516Z",
     "alertTimestamp": "2026-11-14T18:29:51.181Z"
+  },
+  {
+    "match": "RKC Waalwijk vs Den Bosch",
+    "league": "Eerste Divisie",
+    "tier": "AVISO",
+    "probability": 0.8372019182757415,
+    "minute": 20,
+    "scoreAtAlert": "4-0",
+    "finalScore": "4-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, xG estimado no fiable, y volumen de juego indica potencial.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      10,
+      59,
+      74,
+      76
+    ],
+    "timestamp": "2026-11-14T20:49:53.627Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Montenegro Sub17 vs Ucrania Sub17",
+    "league": "Clasificatorio Sub-17 - Primera Fase",
+    "tier": "AVISO",
+    "probability": 0.9041990449282578,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      70
+    ],
+    "timestamp": "2026-11-14T20:59:51.888Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Temperley vs Ciudad De Bolivar",
+    "league": "Primera Nacional - Reducido - Primera Fase - Group 7",
+    "tier": "AVISO",
+    "probability": 0.8382254682121906,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      37,
+      42,
+      76
+    ],
+    "timestamp": "2026-11-14T21:12:13.383Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Recoleta FC (F) vs Sportivo 2 de Mayo (F)",
+    "league": "Copa eFe Femenina - Zona eFe 2",
+    "tier": "AVISO",
+    "probability": 0.8468764572916153,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T21:12:13.663Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Cambrai vs Amiens",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.8870015721437888,
+    "minute": 25,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de copa, marcador ajustado y muchos minutos por jugar. No hay datos que sugieran esterilidad.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7,
+      32,
+      92
+    ],
+    "timestamp": "2026-11-14T21:19:58.372Z",
+    "alertTimestamp": "2026-11-14T19:09:51.920Z"
+  },
+  {
+    "match": "Escocia Sub19 vs Kosovo U19",
+    "league": "Clasificatorio Euro Sub-19 - 2nd Stage - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8647510705195153,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T21:29:53.322Z",
+    "alertTimestamp": "2026-11-14T19:39:51.432Z"
+  },
+  {
+    "match": "Deportivo LSM vs Deutscher",
+    "league": "Divisional C - Torneo Final",
+    "tier": "AVISO",
+    "probability": 0.851974782523346,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      58,
+      72,
+      86
+    ],
+    "timestamp": "2026-11-14T21:29:53.584Z",
+    "alertTimestamp": "2026-11-14T19:39:51.432Z"
   }
 ]
