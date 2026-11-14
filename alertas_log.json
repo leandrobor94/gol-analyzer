@@ -1,140 +1,5 @@
 [
   {
-    "match": "Náxara Cd vs Peña Sport FC",
-    "league": "Segunda RFEF",
-    "tier": "AVISO",
-    "probability": 0.623168745525178,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de cambios.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T18:05:34.770Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Sporting JAX vs Birmingham Legion FC",
-    "league": "USL Championship",
-    "tier": "AVISO",
-    "probability": 0.86832082784238,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con pocas llegadas pero una gran chance para el visitante. El marcador sigue 0-0.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      36
-    ],
-    "timestamp": "2026-10-10T18:35:03.521Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Manchester United vs Tottenham",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.674575058011675,
-    "minute": 64,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con alto xG estimado para el visitante y 3 grandes ocasiones.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      73,
-      92
-    ],
-    "timestamp": "2026-10-10T18:35:31.968Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Maccabi Tel Aviv vs Bnei Sakhnin",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6435484167223791,
-    "minute": 63,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alto xG estimado para el local y dominio claro.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-10T18:35:32.500Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "CD Eldense vs Córdoba CF",
-    "league": "LaLiga 2",
-    "tier": "AVISO",
-    "probability": 0.690391865296607,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, xG estimado no fiable, y Córdoba con más llegadas y ocasiones claras.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      11,
-      62,
-      96
-    ],
-    "timestamp": "2026-10-10T18:35:32.731Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
-    "match": "Al-Ahli Doha vs Al Sailiya",
-    "league": "Liga de Catar",
-    "tier": "AVISO",
-    "probability": 0.8543233418125087,
-    "minute": 21,
-    "scoreAtAlert": "5-0",
-    "finalScore": "5-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con goles, marcador ajustado y muchas llegadas al área. No hay razón para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      16,
-      34,
-      39,
-      48,
-      83
-    ],
-    "timestamp": "2026-10-10T19:02:28.953Z",
-    "alertTimestamp": "2026-10-10T17:14:23.448Z"
-  },
-  {
     "match": "Maritimo vs FC Porto",
     "league": "Primeira Liga",
     "tier": "AVISO",
@@ -22566,5 +22431,143 @@
     "goalMinutes": [],
     "timestamp": "2026-11-13T21:45:42.101Z",
     "alertTimestamp": "2026-11-13T19:55:43.647Z"
+  },
+  {
+    "match": "Asptt Caen vs Chambly",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.5490500519212512,
+    "minute": 78,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de copa, marcador ajustado y minutos finales. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45,
+      48,
+      51,
+      78
+    ],
+    "timestamp": "2026-11-14T19:09:52.346Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Paray vs Villefranche",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.5515140805308213,
+    "minute": 78,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-3",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, con tiempo y probabilidad de gol significativa.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      30,
+      85
+    ],
+    "timestamp": "2026-11-14T19:19:55.389Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Fleetwood Town vs Tranmere",
+    "league": "League Two",
+    "tier": "AVISO",
+    "probability": 0.8667281965483538,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      82
+    ],
+    "timestamp": "2026-11-14T19:29:53.029Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "UD Almería vs Andorra CF",
+    "league": "LaLiga 2",
+    "tier": "AVISO",
+    "probability": 0.8551313744710408,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido igualado, sin goles, con oportunidades claras y xG estimado. No hay razón para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      26,
+      39,
+      66
+    ],
+    "timestamp": "2026-11-14T19:29:53.070Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Saint Omer vs Virois",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.5490500519212512,
+    "minute": 78,
+    "scoreAtAlert": "2-2",
+    "finalScore": "7-6",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, con ambos equipos buscando el gol. No hay razón para no alertar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      19,
+      36
+    ],
+    "timestamp": "2026-11-14T19:29:53.266Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
+  },
+  {
+    "match": "Cobsp St Brieuc vs Rouen",
+    "league": "Copa de Francia - Round of 128",
+    "tier": "AVISO",
+    "probability": 0.5501785439496778,
+    "minute": 78,
+    "scoreAtAlert": "0-0",
+    "finalScore": "3-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles en los últimos minutos, alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-14T19:39:51.970Z",
+    "alertTimestamp": "2026-11-14T17:49:55.446Z"
   }
 ]
