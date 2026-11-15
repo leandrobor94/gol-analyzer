@@ -1,136 +1,5 @@
 [
   {
-    "match": "Portland Hearts of Pine vs Boise",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8968847920795164,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      54,
-      74,
-      94
-    ],
-    "timestamp": "2026-10-11T02:53:35.422Z",
-    "alertTimestamp": "2026-10-10T21:14:10.576Z"
-  },
-  {
-    "match": "Genesis Policía Nacional FC vs CD Olimpia",
-    "league": "Liga Nacional - Apertura - Grupo Norte",
-    "tier": "AVISO",
-    "probability": 0.8992723011680421,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      10
-    ],
-    "timestamp": "2026-10-11T02:53:35.582Z",
-    "alertTimestamp": "2026-10-10T21:14:10.576Z"
-  },
-  {
-    "match": "Orgánica Masachapa vs CD Junior",
-    "league": "Liga de Ascenso - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8478674250344171,
-    "minute": 21,
-    "scoreAtAlert": "3-0",
-    "finalScore": "4-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T02:53:35.738Z",
-    "alertTimestamp": "2026-10-10T21:14:10.576Z"
-  },
-  {
-    "match": "Vasco Da Gama vs Remo",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8944012762429464,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido sin goles, xG estimado no confiable, y sin grandes ocasiones. Aún hay tiempo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T02:53:35.913Z",
-    "alertTimestamp": "2026-10-10T21:14:10.576Z"
-  },
-  {
-    "match": "Union Omaha vs Fort Wayne",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8996248158895983,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 21, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      25
-    ],
-    "timestamp": "2026-10-11T02:53:36.872Z",
-    "alertTimestamp": "2026-10-10T21:22:04.806Z"
-  },
-  {
-    "match": "Racing de Veracruz vs Celaya FC",
-    "league": "Primera Premier - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.862062118679206,
-    "minute": 21,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T02:53:37.242Z",
-    "alertTimestamp": "2026-10-10T21:41:54.417Z"
-  },
-  {
-    "match": "Peñarol vs Progreso",
-    "league": "Liga AUF Uruguaya - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8469572108394154,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      26,
-      92
-    ],
-    "timestamp": "2026-10-11T02:53:37.549Z",
-    "alertTimestamp": "2026-10-10T21:41:54.417Z"
-  },
-  {
     "match": "Alta vs Greenville Triumph Sc",
     "league": "USL League One - Temporada Regular",
     "tier": "AVISO",
@@ -22544,5 +22413,156 @@
     ],
     "timestamp": "2026-11-15T21:30:16.046Z",
     "alertTimestamp": "2026-11-15T19:40:44.914Z"
+  },
+  {
+    "match": "España vs Inglaterra",
+    "league": "Liga de las Naciones - UEFA - Liga A - Grupo 3",
+    "tier": "AVISO",
+    "probability": 0.8551076804252485,
+    "minute": 22,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, con oportunidades claras para el visitante.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45,
+      53,
+      57,
+      65,
+      75
+    ],
+    "timestamp": "2026-11-15T21:50:14.531Z",
+    "alertTimestamp": "2026-11-15T19:50:12.598Z"
+  },
+  {
+    "match": "Gimnasia y Esgrima (Chivilcoy) vs Douglas Haig",
+    "league": "Federal A - Revalida - Cuarta etapa",
+    "tier": "AVISO",
+    "probability": 0.681431803252737,
+    "minute": 63,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, con goles y sin datos que justifiquen rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      22,
+      46,
+      54,
+      84
+    ],
+    "timestamp": "2026-11-15T22:00:44.479Z",
+    "alertTimestamp": "2026-11-15T20:10:12.588Z"
+  },
+  {
+    "match": "Universitario Sub20 vs UDELAS FC",
+    "league": "Liga Prom - Semifinales de Conferencia",
+    "tier": "AVISO",
+    "probability": 0.8364730032836498,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, y el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-15T22:00:45.435Z",
+    "alertTimestamp": "2026-11-15T20:10:12.588Z"
+  },
+  {
+    "match": "Racing United vs Tru-Juice FC",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.6088106491202602,
+    "minute": 69,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con un equipo generando peligro y remates a puerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-15T22:10:11.457Z",
+    "alertTimestamp": "2026-11-15T20:10:12.588Z"
+  },
+  {
+    "match": "Dunbeholden Fc vs Chapelton",
+    "league": "Premier League",
+    "tier": "AVISO",
+    "probability": 0.8642897736906621,
+    "minute": 20,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-15T22:10:11.578Z",
+    "alertTimestamp": "2026-11-15T20:10:12.588Z"
+  },
+  {
+    "match": "Bella Esperanza vs Domingo Dianderas",
+    "league": "Copa Peru - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.9041990449282578,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de Copa Perú, octavos de final, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-15T22:20:36.033Z",
+    "alertTimestamp": "2026-11-15T20:20:48.199Z"
+  },
+  {
+    "match": "San Rafael Cedros vs CD El Vencedor",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.9009631388198236,
+    "minute": 20,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-15T22:30:11.275Z",
+    "alertTimestamp": "2026-11-15T20:40:47.464Z"
   }
 ]
