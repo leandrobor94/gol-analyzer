@@ -1,140 +1,5 @@
 [
   {
-    "match": "Alta vs Greenville Triumph Sc",
-    "league": "USL League One - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.8931648751580666,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      4,
-      36,
-      50,
-      58
-    ],
-    "timestamp": "2026-10-11T17:35:27.100Z",
-    "alertTimestamp": "2026-10-11T02:52:45.910Z"
-  },
-  {
-    "match": "Los Angeles FC vs Vancouver Whitecaps",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.8769477558847584,
-    "minute": 22,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, con un equipo con 10 jugadores. Alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      43,
-      46
-    ],
-    "timestamp": "2026-10-11T17:35:27.280Z",
-    "alertTimestamp": "2026-10-11T02:52:45.910Z"
-  },
-  {
-    "match": "Colorado Rapids vs San Jose Earthquakes",
-    "league": "MLS",
-    "tier": "AVISO",
-    "probability": 0.6386894069378367,
-    "minute": 65,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      27,
-      57
-    ],
-    "timestamp": "2026-10-11T17:35:45.128Z",
-    "alertTimestamp": "2026-10-11T02:52:45.910Z"
-  },
-  {
-    "match": "Sparta Praga vs Pardubice",
-    "league": "Liga checa",
-    "tier": "AVISO",
-    "probability": 0.551486964692685,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Aunque el marcador es 2-0, el xG estimado y las grandes ocasiones sugieren potencial de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      4,
-      51
-    ],
-    "timestamp": "2026-10-11T17:54:25.520Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
-    "match": "Eskisehirspor vs Etimesgut FC",
-    "league": "3. Lig",
-    "tier": "AVISO",
-    "probability": 0.5988962253218333,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      58,
-      95
-    ],
-    "timestamp": "2026-10-11T18:05:34.365Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
-    "match": "Sassuolo vs AC Milan",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.5911230638976244,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas llegadas del visitante y xG estimado no es real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      63,
-      68
-    ],
-    "timestamp": "2026-10-11T18:05:51.625Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
     "match": "Atenas San Carlos vs Miramar Misiones",
     "league": "Segunda Division - Temporada Regular",
     "tier": "AVISO",
@@ -22564,5 +22429,139 @@
     "goalMinutes": [],
     "timestamp": "2026-11-15T22:30:11.275Z",
     "alertTimestamp": "2026-11-15T20:40:47.464Z"
+  },
+  {
+    "match": "Nacional Potosí vs Real Potosí",
+    "league": "Copa Paceña - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8606759890923946,
+    "minute": 20,
+    "scoreAtAlert": "0-2",
+    "finalScore": "0-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      75
+    ],
+    "timestamp": "2026-11-16T21:50:07.315Z",
+    "alertTimestamp": "2026-11-15T21:40:47.026Z"
+  },
+  {
+    "match": "Metapán Reserva vs Luís Ángel Firpo Reserva",
+    "league": "Torneo Reservas - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8597501070548059,
+    "minute": 20,
+    "scoreAtAlert": "5-1",
+    "finalScore": "6-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, sin datos de xG reales para desestimar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-16T21:50:07.421Z",
+    "alertTimestamp": "2026-11-15T21:40:47.026Z"
+  },
+  {
+    "match": "Acámbaro F.C. vs Héroes de Zaci FC",
+    "league": "Premier A - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.9009631388198236,
+    "minute": 20,
+    "scoreAtAlert": "4-1",
+    "finalScore": "5-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con alta probabilidad de gol en los próximos 15 minutos, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      36,
+      40,
+      43,
+      54
+    ],
+    "timestamp": "2026-11-16T21:50:07.673Z",
+    "alertTimestamp": "2026-11-15T22:10:10.657Z"
+  },
+  {
+    "match": "CD Inca-Aruba vs CD Águila",
+    "league": "Primera Division - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8577188307950937,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      94
+    ],
+    "timestamp": "2026-11-16T21:50:07.826Z",
+    "alertTimestamp": "2026-11-15T23:10:09.171Z"
+  },
+  {
+    "match": "Tigres vs Real Cundinamarca",
+    "league": "Torneo BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8445968420028305,
+    "minute": 20,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      9,
+      94
+    ],
+    "timestamp": "2026-11-16T21:50:07.935Z",
+    "alertTimestamp": "2026-11-15T23:10:09.171Z"
+  },
+  {
+    "match": "Santiago Morning vs Deportes Rengo",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.6807441209047352,
+    "minute": 62,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "El partido no está resuelto y el equipo local tiene un alto volumen de juego.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-16T22:29:48.024Z",
+    "alertTimestamp": "2026-11-16T21:49:49.462Z"
   }
 ]
