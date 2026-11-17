@@ -1,31 +1,5 @@
 [
   {
-    "match": "Aris Salonica vs Volos NFC",
-    "league": "Superliga Griega",
-    "tier": "AVISO",
-    "probability": 0.5129261097839771,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, ambos equipos generando ocasiones. La liga tiene un ritmo de goles moderado.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      7,
-      23,
-      43,
-      58,
-      86
-    ],
-    "timestamp": "2026-10-11T18:15:38.984Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
     "match": "Vllaznia vs Dinamo City",
     "league": "Abissnet Superiore",
     "tier": "AVISO",
@@ -22573,5 +22547,29 @@
     ],
     "timestamp": "2026-11-17T00:59:48.112Z",
     "alertTimestamp": "2026-11-16T23:09:48.085Z"
+  },
+  {
+    "match": "New Mexico vs Sacramento Republic",
+    "league": "USL Championship - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8612412684286648,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      52,
+      71,
+      102
+    ],
+    "timestamp": "2026-11-17T20:40:56.221Z",
+    "alertTimestamp": "2026-11-17T01:59:49.170Z"
   }
 ]
