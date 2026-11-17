@@ -1,25 +1,5 @@
 [
   {
-    "match": "Atenas San Carlos vs Miramar Misiones",
-    "league": "Segunda Division - Temporada Regular",
-    "tier": "AVISO",
-    "probability": 0.5601474639805393,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos tiros a puerta y xG estimado. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T18:05:51.803Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
     "match": "Aris Salonica vs Volos NFC",
     "league": "Superliga Griega",
     "tier": "AVISO",
@@ -22563,5 +22543,35 @@
     "goalMinutes": [],
     "timestamp": "2026-11-16T22:29:48.024Z",
     "alertTimestamp": "2026-11-16T21:49:49.462Z"
+  },
+  {
+    "match": "Brasil Sub20 vs Perú Sub20",
+    "league": "Amistoso Internacional Sub20",
+    "tier": "AVISO",
+    "probability": 0.8425855894958988,
+    "minute": 20,
+    "scoreAtAlert": "9-0",
+    "finalScore": "9-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, y modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      23,
+      47,
+      51,
+      56,
+      58,
+      70,
+      76,
+      78
+    ],
+    "timestamp": "2026-11-17T00:59:48.112Z",
+    "alertTimestamp": "2026-11-16T23:09:48.085Z"
   }
 ]
