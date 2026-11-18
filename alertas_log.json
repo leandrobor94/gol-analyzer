@@ -1,48 +1,5 @@
 [
   {
-    "match": "Atlético Balboa (Reserva) vs Cd Fas Reserva",
-    "league": "Torneo Reservas - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5327517783894197,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T19:06:14.487Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
-    "match": "Zamalek SC vs Al Ahly SC",
-    "league": "Primera División de Egipto",
-    "tier": "AVISO",
-    "probability": 0.5229387242646026,
-    "minute": 77,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      39,
-      80
-    ],
-    "timestamp": "2026-10-11T19:06:14.737Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
     "match": "Ferroviária vs Inter de Limeira",
     "league": "Serie C - Segunda Fase - Grupo C",
     "tier": "AVISO",
@@ -22557,5 +22514,48 @@
     ],
     "timestamp": "2026-11-18T00:00:41.503Z",
     "alertTimestamp": "2026-11-17T22:10:16.647Z"
+  },
+  {
+    "match": "Chile vs Colombia",
+    "league": "Amistoso Internacional",
+    "tier": "AVISO",
+    "probability": 0.8599897333028637,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso, pero el modelo indica alta probabilidad de gol. No hay razones para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-18T01:10:18.492Z",
+    "alertTimestamp": "2026-11-17T23:10:15.942Z"
+  },
+  {
+    "match": "Olimpo vs Kimberley Mar Del Plata",
+    "league": "Federal A - Revalida - Cuarta etapa",
+    "tier": "AVISO",
+    "probability": 0.8932499496421508,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido con alta probabilidad de gol, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      1,
+      79
+    ],
+    "timestamp": "2026-11-18T01:20:19.486Z",
+    "alertTimestamp": "2026-11-17T23:20:38.191Z"
   }
 ]
