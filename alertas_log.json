@@ -1,53 +1,5 @@
 [
   {
-    "match": "Argentino Merlo vs Sportivo Italiano",
-    "league": "Primera B Metropolitana",
-    "tier": "AVISO",
-    "probability": 0.8721287011433055,
-    "minute": 23,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      64,
-      80,
-      96
-    ],
-    "timestamp": "2026-10-11T20:05:13.953Z",
-    "alertTimestamp": "2026-10-11T18:05:16.784Z"
-  },
-  {
-    "match": "Al Shabab Riyadh vs Al Taawoun",
-    "league": "Liga Profesional Saudí",
-    "tier": "AVISO",
-    "probability": 0.8742970063020064,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol, a pesar de xG estimado. Al Shabab con 4 grandes ocasiones.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      18,
-      51,
-      85
-    ],
-    "timestamp": "2026-10-11T20:05:14.189Z",
-    "alertTimestamp": "2026-10-11T18:05:16.784Z"
-  },
-  {
     "match": "Atlanta vs San Martín Tucumán",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -22559,5 +22511,45 @@
     ],
     "timestamp": "2026-11-18T22:04:17.764Z",
     "alertTimestamp": "2026-11-18T20:14:21.149Z"
+  },
+  {
+    "match": "AD Izalco vs CD Once Municipal",
+    "league": "Liga de Ascenso - Centro Occidente",
+    "tier": "AVISO",
+    "probability": 0.8970407261351172,
+    "minute": 22,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-18T22:54:18.402Z",
+    "alertTimestamp": "2026-11-18T21:04:19.591Z"
+  },
+  {
+    "match": "CD El Vencedor vs CD Olimpico Litoral",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.8892627641638559,
+    "minute": 24,
+    "scoreAtAlert": "0-3",
+    "finalScore": "0-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-18T23:04:18.911Z",
+    "alertTimestamp": "2026-11-18T21:14:19.426Z"
   }
 ]
