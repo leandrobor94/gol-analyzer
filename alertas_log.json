@@ -1,50 +1,5 @@
 [
   {
-    "match": "ETO FC Győr vs Puskas FC Academy",
-    "league": "OTP Bank Liga",
-    "tier": "AVISO",
-    "probability": 0.5164896996922803,
-    "minute": 77,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, Puskas con ventaja mínima y oportunidades claras.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11
-    ],
-    "timestamp": "2026-10-11T19:06:04.271Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
-    "match": "H2O Purépechas vs Lobos Ulmx",
-    "league": "Primera Premier - Grupo A",
-    "tier": "AVISO",
-    "probability": 0.5360960863848525,
-    "minute": 77,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      17,
-      76
-    ],
-    "timestamp": "2026-10-11T19:06:04.388Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
     "match": "Atlético Balboa (Reserva) vs Cd Fas Reserva",
     "league": "Torneo Reservas - Apertura",
     "tier": "AVISO",
@@ -22554,5 +22509,53 @@
     "goalMinutes": [],
     "timestamp": "2026-11-17T23:00:23.642Z",
     "alertTimestamp": "2026-11-17T21:20:28.617Z"
+  },
+  {
+    "match": "Santos (F) vs São Paulo (F)",
+    "league": "Paulista Feminino - Play-in",
+    "tier": "AVISO",
+    "probability": 0.8325181904396826,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de play-in, marcador ajustado, y xG estimado no es confiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      17,
+      80,
+      84,
+      86
+    ],
+    "timestamp": "2026-11-18T00:00:41.461Z",
+    "alertTimestamp": "2026-11-17T22:10:16.647Z"
+  },
+  {
+    "match": "Atlético/Mg Youth vs São Paulo Sub20",
+    "league": "Copa de Brasil Sub20 - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.6418123459184137,
+    "minute": 60,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales con marcador ajustado y tiempo suficiente para cambios.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      41,
+      77
+    ],
+    "timestamp": "2026-11-18T00:00:41.503Z",
+    "alertTimestamp": "2026-11-17T22:10:16.647Z"
   }
 ]
