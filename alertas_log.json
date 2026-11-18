@@ -1,71 +1,5 @@
 [
   {
-    "match": "Ferroviária vs Inter de Limeira",
-    "league": "Serie C - Segunda Fase - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.5287807981170514,
-    "minute": 76,
-    "scoreAtAlert": "1-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, xG estimado no confiable, y un equipo sin remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      60,
-      86
-    ],
-    "timestamp": "2026-10-11T19:15:35.189Z",
-    "alertTimestamp": "2026-10-11T18:26:32.759Z"
-  },
-  {
-    "match": "Glacis United vs Hound Dogs",
-    "league": "Premier Division",
-    "tier": "AVISO",
-    "probability": 0.8900824774940265,
-    "minute": 24,
-    "scoreAtAlert": "3-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T19:26:33.843Z",
-    "alertTimestamp": "2026-10-11T17:35:26.516Z"
-  },
-  {
-    "match": "Brusque vs Paysandu",
-    "league": "Serie C - Segunda Fase - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.5606266063717429,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      12,
-      72
-    ],
-    "timestamp": "2026-10-11T19:26:33.951Z",
-    "alertTimestamp": "2026-10-11T18:05:16.784Z"
-  },
-  {
     "match": "Atl��tic Club D'escaldes vs Esperanca",
     "league": "Primera Divisió",
     "tier": "AVISO",
@@ -22557,5 +22491,73 @@
     ],
     "timestamp": "2026-11-18T01:20:19.486Z",
     "alertTimestamp": "2026-11-17T23:20:38.191Z"
+  },
+  {
+    "match": "Ecuador vs Bolivia",
+    "league": "Amistoso Internacional",
+    "tier": "AVISO",
+    "probability": 0.8556199640746441,
+    "minute": 20,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido amistoso con alta probabilidad de gol según el modelo, sin razones concretas para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      20,
+      49
+    ],
+    "timestamp": "2026-11-18T20:14:22.281Z",
+    "alertTimestamp": "2026-11-17T23:40:36.988Z"
+  },
+  {
+    "match": "El Salvador vs Saint-Martin",
+    "league": "CONCACAF Liga de Naciones - Play-in",
+    "tier": "AVISO",
+    "probability": 0.8519906908862066,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      45,
+      46,
+      48,
+      83
+    ],
+    "timestamp": "2026-11-18T20:14:23.269Z",
+    "alertTimestamp": "2026-11-18T01:00:41.404Z"
+  },
+  {
+    "match": "Nottingham Forest Sub21 vs Newcastle Sub21",
+    "league": "Premier League Cup",
+    "tier": "AVISO",
+    "probability": 0.5099782949012693,
+    "minute": 76,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con goles, marcador ajustado y un expulsado. El xG es estimado, no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-18T21:04:20.749Z",
+    "alertTimestamp": "2026-11-18T20:14:21.149Z"
   }
 ]
