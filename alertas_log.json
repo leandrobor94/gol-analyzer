@@ -1,28 +1,5 @@
 [
   {
-    "match": "Atl��tic Club D'escaldes vs Esperanca",
-    "league": "Primera Divisió",
-    "tier": "AVISO",
-    "probability": 0.5228343415549093,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      15,
-      93
-    ],
-    "timestamp": "2026-10-11T20:05:13.751Z",
-    "alertTimestamp": "2026-10-11T18:05:16.784Z"
-  },
-  {
     "match": "Argentino Merlo vs Sportivo Italiano",
     "league": "Primera B Metropolitana",
     "tier": "AVISO",
@@ -22558,6 +22535,29 @@
     },
     "goalMinutes": [],
     "timestamp": "2026-11-18T21:04:20.749Z",
+    "alertTimestamp": "2026-11-18T20:14:21.149Z"
+  },
+  {
+    "match": "Alianza Atletico vs FBC Melgar",
+    "league": "Liga 1 - Clausura",
+    "tier": "AVISO",
+    "probability": 0.5023614495569447,
+    "minute": 77,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores. xG estimado no es fiable.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      5,
+      90
+    ],
+    "timestamp": "2026-11-18T22:04:17.764Z",
     "alertTimestamp": "2026-11-18T20:14:21.149Z"
   }
 ]
