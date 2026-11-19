@@ -1,27 +1,5 @@
 [
   {
-    "match": "Atlanta vs San Martín Tucumán",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.8756509052573388,
-    "minute": 21,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en curso, marcador 0-0, sin eventos que justifiquen rechazo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      74
-    ],
-    "timestamp": "2026-10-11T20:05:14.488Z",
-    "alertTimestamp": "2026-10-11T18:05:16.784Z"
-  },
-  {
     "match": "Salus Fc vs Deportivo LSM",
     "league": "Divisional C - Torneo Final",
     "tier": "AVISO",
@@ -22551,5 +22529,25 @@
     "goalMinutes": [],
     "timestamp": "2026-11-18T23:04:18.911Z",
     "alertTimestamp": "2026-11-18T21:14:19.426Z"
+  },
+  {
+    "match": "Saltillo Soccer vs Cañoneros Marina",
+    "league": "Premier A",
+    "tier": "AVISO",
+    "probability": 0.8905180687396982,
+    "minute": 24,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-19T00:14:18.215Z",
+    "alertTimestamp": "2026-11-18T22:14:17.375Z"
   }
 ]
