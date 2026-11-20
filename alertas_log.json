@@ -1,25 +1,5 @@
 [
   {
-    "match": "Coatepeque vs Deportivo Iztapa",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.5504721721733862,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y minutos restantes, sin datos que sugieran juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T20:05:15.042Z",
-    "alertTimestamp": "2026-10-11T18:15:37.826Z"
-  },
-  {
     "match": "Deportivo Madryn vs Chaco For Ever",
     "league": "Primera Nacional",
     "tier": "AVISO",
@@ -22550,5 +22530,29 @@
     ],
     "timestamp": "2026-11-19T21:58:16.766Z",
     "alertTimestamp": "2026-11-19T20:18:17.297Z"
+  },
+  {
+    "match": "Union Magdalena vs Boca Juniors Cali",
+    "league": "Torneo BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.5119476457658602,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia y un jugador menos, lo que aumenta la probabilidad de eventos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      54,
+      77,
+      92
+    ],
+    "timestamp": "2026-11-20T00:28:16.330Z",
+    "alertTimestamp": "2026-11-19T22:38:16.427Z"
   }
 ]
