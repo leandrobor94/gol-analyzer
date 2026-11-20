@@ -1,29 +1,5 @@
 [
   {
-    "match": "Deportivo Madryn vs Chaco For Ever",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.5382828572380599,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos minutos restantes y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      6,
-      14,
-      93
-    ],
-    "timestamp": "2026-10-11T20:05:15.131Z",
-    "alertTimestamp": "2026-10-11T18:15:37.826Z"
-  },
-  {
     "match": "Juventud Unida San Luis vs Sol De América",
     "league": "Federal A - Revalida - Segunda etapa",
     "tier": "AVISO",
@@ -22554,5 +22530,28 @@
     ],
     "timestamp": "2026-11-20T00:28:16.330Z",
     "alertTimestamp": "2026-11-19T22:38:16.427Z"
+  },
+  {
+    "match": "SC Wiedenbrück vs Bochum II",
+    "league": "Regionalliga - West",
+    "tier": "AVISO",
+    "probability": 0.534222551317454,
+    "minute": 79,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con marcador ajustado y tiempo restante, sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      73,
+      90
+    ],
+    "timestamp": "2026-11-20T20:29:54.121Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
   }
 ]
