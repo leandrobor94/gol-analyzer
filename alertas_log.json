@@ -1,53 +1,5 @@
 [
   {
-    "match": "Atlético Goianiense vs Sport Recife",
-    "league": "Brasileirão - Série B",
-    "tier": "AVISO",
-    "probability": 0.5249571696044734,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con un gol de diferencia, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      49,
-      83
-    ],
-    "timestamp": "2026-10-11T21:15:01.433Z",
-    "alertTimestamp": "2026-10-11T19:15:14.160Z"
-  },
-  {
-    "match": "Atletico El Vigia vs Ureña SC",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8900824774940265,
-    "minute": 24,
-    "scoreAtAlert": "1-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      60,
-      67,
-      78,
-      93
-    ],
-    "timestamp": "2026-10-11T21:24:48.313Z",
-    "alertTimestamp": "2026-10-11T19:36:03.882Z"
-  },
-  {
     "match": "Real Frontera vs Puerto Cabello B",
     "league": "Liga FUTVE 2",
     "tier": "AVISO",
@@ -22547,5 +22499,47 @@
     ],
     "timestamp": "2026-11-20T22:29:43.511Z",
     "alertTimestamp": "2026-11-20T20:40:44.696Z"
+  },
+  {
+    "match": "AD SESA vs CD Dragon",
+    "league": "Liga de Ascenso - Centro Oriente",
+    "tier": "AVISO",
+    "probability": 0.5068230487693468,
+    "minute": 80,
+    "scoreAtAlert": "0-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado 0-0 en el minuto 80, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      79
+    ],
+    "timestamp": "2026-11-20T22:59:44.426Z",
+    "alertTimestamp": "2026-11-20T22:29:42.123Z"
+  },
+  {
+    "match": "Huracanes Izcalli vs Gorilas de Juanacatlán",
+    "league": "Premier B - Temporada Regular",
+    "tier": "AVISO",
+    "probability": 0.9017745404616851,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "2-4",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-20T23:39:42.738Z",
+    "alertTimestamp": "2026-11-20T21:49:45.250Z"
   }
 ]
