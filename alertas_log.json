@@ -1,143 +1,5 @@
 [
   {
-    "match": "Juventud Unida San Luis vs Sol De América",
-    "league": "Federal A - Revalida - Segunda etapa",
-    "tier": "AVISO",
-    "probability": 0.8605882469098741,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, modelo da 86% de probabilidad de gol. No hay razón concreta para rechazar.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T20:35:19.418Z",
-    "alertTimestamp": "2026-10-11T18:46:37.247Z"
-  },
-  {
-    "match": "El Linqueño vs Douglas Haig",
-    "league": "Federal A - Revalida - Segunda etapa",
-    "tier": "AVISO",
-    "probability": 0.8564900936857403,
-    "minute": 20,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido parejo, sin goles, y con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T20:35:20.994Z",
-    "alertTimestamp": "2026-10-11T18:46:37.247Z"
-  },
-  {
-    "match": "Paranavaí vs Azuriz",
-    "league": "Copa Paraná",
-    "tier": "AVISO",
-    "probability": 0.5391405901293767,
-    "minute": 76,
-    "scoreAtAlert": "4-2",
-    "finalScore": "4-3",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y minutos restantes. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      19,
-      23,
-      30,
-      37,
-      62,
-      72,
-      86
-    ],
-    "timestamp": "2026-10-11T20:44:52.958Z",
-    "alertTimestamp": "2026-10-11T18:35:07.810Z"
-  },
-  {
-    "match": "Cagliari vs Juventus",
-    "league": "Serie A",
-    "tier": "AVISO",
-    "probability": 0.7102600580255481,
-    "minute": 60,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, marcador ajustado y sin evidencia de juego estéril.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      20,
-      81
-    ],
-    "timestamp": "2026-10-11T20:44:53.171Z",
-    "alertTimestamp": "2026-10-11T18:55:42.981Z"
-  },
-  {
-    "match": "Cipolletti vs Alvarado",
-    "league": "Federal A - Cuarta fase",
-    "tier": "AVISO",
-    "probability": 0.5336210655337252,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, con 2 tarjetas rojas y xG estimado. Alta probabilidad de gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      87
-    ],
-    "timestamp": "2026-10-11T20:55:08.718Z",
-    "alertTimestamp": "2026-10-11T18:46:37.247Z"
-  },
-  {
-    "match": "Morrinhos vs Grêmio Anápolis",
-    "league": "Goiano 2",
-    "tier": "AVISO",
-    "probability": 0.8840645884815344,
-    "minute": 22,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no fiable, volumen de juego bajo pero sin señal de esterilidad.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      14,
-      22,
-      34,
-      43
-    ],
-    "timestamp": "2026-10-11T21:04:22.244Z",
-    "alertTimestamp": "2026-10-11T19:06:03.778Z"
-  },
-  {
     "match": "Racing de Santander vs Valencia CF",
     "league": "LaLiga",
     "tier": "AVISO",
@@ -22552,6 +22414,136 @@
       90
     ],
     "timestamp": "2026-11-20T20:29:54.121Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Cardiff City U21 vs Plymouth Argyle U21",
+    "league": "Premier League Cup",
+    "tier": "AVISO",
+    "probability": 0.49756382397005083,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-20T20:59:51.568Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Bristol City U21 vs Norwich Sub21",
+    "league": "Premier League Cup",
+    "tier": "AVISO",
+    "probability": 0.6556751933133493,
+    "minute": 60,
+    "scoreAtAlert": "2-3",
+    "finalScore": "2-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-20T20:59:52.021Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Racing Club Montevideo vs Central Español",
+    "league": "Liga AUF Uruguaya - Clausura",
+    "tier": "AVISO",
+    "probability": 0.8588068264549388,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador 0-0, sin razones concretas para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      75
+    ],
+    "timestamp": "2026-11-20T21:19:51.815Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Inverness CT vs Ayr Utd",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.6300312352648982,
+    "minute": 62,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con un equipo dominando los remates a puerta.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-20T21:29:50.125Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Bayern Munich vs 1. FC Köln",
+    "league": "Bundesliga",
+    "tier": "AVISO",
+    "probability": 0.8404875740808911,
+    "minute": 20,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado, y un xG estimado que no es concluyente.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      12,
+      37
+    ],
+    "timestamp": "2026-11-20T21:29:50.713Z",
+    "alertTimestamp": "2026-11-20T19:50:04.034Z"
+  },
+  {
+    "match": "Casertana vs Salernitana",
+    "league": "Serie C italiana",
+    "tier": "AVISO",
+    "probability": 0.8353535367795146,
+    "minute": 20,
+    "scoreAtAlert": "1-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      38,
+      71,
+      83,
+      94
+    ],
+    "timestamp": "2026-11-20T21:29:51.084Z",
     "alertTimestamp": "2026-11-20T19:50:04.034Z"
   }
 ]
