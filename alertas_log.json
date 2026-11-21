@@ -1,163 +1,5 @@
 [
   {
-    "match": "Comerciantes vs ADA Jaén",
-    "league": "Liga 2 - Ascenso - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.8566900537782919,
-    "minute": 21,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, minuto 21, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T22:15:23.136Z",
-    "alertTimestamp": "2026-10-11T20:16:07.657Z"
-  },
-  {
-    "match": "Grêmio vs Internacional",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8815497591552097,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      33,
-      73
-    ],
-    "timestamp": "2026-10-12T21:08:17.511Z",
-    "alertTimestamp": "2026-10-11T20:35:18.316Z"
-  },
-  {
-    "match": "Flamengo vs Fluminense",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8685626257626192,
-    "minute": 24,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      65
-    ],
-    "timestamp": "2026-10-12T21:08:17.753Z",
-    "alertTimestamp": "2026-10-11T20:35:18.316Z"
-  },
-  {
-    "match": "Palmeiras vs Corinthians",
-    "league": "Brasileirão",
-    "tier": "AVISO",
-    "probability": 0.8698672865750197,
-    "minute": 24,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      46,
-      46,
-      51,
-      91
-    ],
-    "timestamp": "2026-10-12T21:08:17.980Z",
-    "alertTimestamp": "2026-10-11T20:35:18.316Z"
-  },
-  {
-    "match": "Sport Boys vs Alianza Atletico",
-    "league": "Liga 1 - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5245666908980536,
-    "minute": 77,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": null,
-    "goalMinutes": [
-      16,
-      59,
-      68,
-      93
-    ],
-    "timestamp": "2026-10-12T21:08:18.184Z",
-    "alertTimestamp": "2026-10-11T20:35:18.316Z"
-  },
-  {
-    "match": "Deportivo Lara vs Zamora FC B",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8933571734325116,
-    "minute": 23,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido sin goles, con alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      61,
-      74
-    ],
-    "timestamp": "2026-10-12T21:08:36.038Z",
-    "alertTimestamp": "2026-10-11T21:04:21.747Z"
-  },
-  {
-    "match": "San Pedro vs Comunicaciones FC",
-    "league": "Liga Nacional - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8765877447560482,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, con 73 minutos restantes y un modelo que da 88% de probabilidad de gol.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      37,
-      59,
-      80
-    ],
-    "timestamp": "2026-10-12T21:08:36.233Z",
-    "alertTimestamp": "2026-10-11T21:04:21.747Z"
-  },
-  {
-    "match": "Deportivo Achuapa vs Sacachispas Chiquimula",
-    "league": "Primera Division - Apertura",
-    "tier": "AVISO",
-    "probability": 0.8570324013575235,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-10-12T21:08:36.822Z",
-    "alertTimestamp": "2026-10-11T21:04:21.747Z"
-  },
-  {
     "match": "Jalapa Art vs Managua FC",
     "league": "Liga Primera - Apertura",
     "tier": "AVISO",
@@ -22563,5 +22405,208 @@
     "goalMinutes": [],
     "timestamp": "2026-11-21T20:36:03.896Z",
     "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Parana vs Athletico Paranaense",
+    "league": "Copa Paraná - Final",
+    "tier": "AVISO",
+    "probability": 0.8905180687396982,
+    "minute": 24,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de final, 0-0, sin goles esperados ni chances claras. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      31,
+      60,
+      91,
+      121,
+      121,
+      122,
+      122,
+      123,
+      123,
+      124,
+      124,
+      125,
+      125,
+      126,
+      126,
+      127,
+      127,
+      128,
+      128,
+      129,
+      129,
+      130,
+      130,
+      132
+    ],
+    "timestamp": "2026-11-21T20:55:47.670Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Dinamo Bucuresti vs Petrolul Ploiesti",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.6629451382691078,
+    "minute": 61,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto, Dinamo necesita un gol. xG estimado, no es base para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      57
+    ],
+    "timestamp": "2026-11-21T20:55:47.772Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Petrolina vs América-PE",
+    "league": "Pernambucano - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8835982198010102,
+    "minute": 26,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo sin goles, el modelo indica alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      59
+    ],
+    "timestamp": "2026-11-21T21:15:48.156Z",
+    "alertTimestamp": "2026-11-21T19:05:52.335Z"
+  },
+  {
+    "match": "Lille vs Lyon",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8704830935331855,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con una gran ocasión para el visitante. No hay razón para rechazar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      40
+    ],
+    "timestamp": "2026-11-21T21:45:47.282Z",
+    "alertTimestamp": "2026-11-21T19:45:48.242Z"
+  },
+  {
+    "match": "Lens vs Toulouse",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.8492952730659661,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      47
+    ],
+    "timestamp": "2026-11-21T21:45:47.402Z",
+    "alertTimestamp": "2026-11-21T19:45:48.242Z"
+  },
+  {
+    "match": "Nápoles vs Torino",
+    "league": "Serie A",
+    "tier": "AVISO",
+    "probability": 0.8373475209659473,
+    "minute": 21,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido igualado, sin goles, y con un equipo mostrando iniciativa ofensiva.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      73
+    ],
+    "timestamp": "2026-11-21T21:45:47.532Z",
+    "alertTimestamp": "2026-11-21T19:45:48.242Z"
+  },
+  {
+    "match": "Estrasburgo vs Brest",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.849369314239562,
+    "minute": 21,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en curso, marcador 0-0, sin eventos claros que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      22
+    ],
+    "timestamp": "2026-11-21T21:45:47.644Z",
+    "alertTimestamp": "2026-11-21T19:45:48.242Z"
+  },
+  {
+    "match": "Zulte Waregem vs Royal Antwerp FC",
+    "league": "Jupiler Pro League",
+    "tier": "AVISO",
+    "probability": 0.8608210569962871,
+    "minute": 21,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en desarrollo, marcador ajustado, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      8,
+      46,
+      54,
+      64
+    ],
+    "timestamp": "2026-11-21T21:45:47.746Z",
+    "alertTimestamp": "2026-11-21T19:45:48.242Z"
   }
 ]
