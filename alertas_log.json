@@ -1,170 +1,5 @@
 [
   {
-    "match": "Krasnodar vs Fakel Voronezh",
-    "league": "Copa de Rusia - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.506895587354432,
-    "minute": 80,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido ajustado, con ambos equipos generando tiros a puerta. El marcador es 0-1 y quedan 13 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      69,
-      81
-    ],
-    "timestamp": "2026-10-13T19:46:10.715Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Instituto (Reserva) vs River Plate (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.526739623818939,
-    "minute": 79,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido de reserva con marcador ajustado y alto volumen de remates a puerta. No hay razón para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      15,
-      40,
-      77,
-      80,
-      86
-    ],
-    "timestamp": "2026-10-13T19:56:10.054Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Walsall vs Fulham Sub21",
-    "league": "EFL Trophy",
-    "tier": "AVISO",
-    "probability": 0.5295157622453124,
-    "minute": 77,
-    "scoreAtAlert": "3-2",
-    "finalScore": "3-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol, marcador ajustado y muchos minutos restantes.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      25,
-      30,
-      44,
-      54,
-      71
-    ],
-    "timestamp": "2026-10-13T19:56:10.201Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Al Ahed vs Al Mabarrah",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.6447820706462105,
-    "minute": 60,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-13T19:56:11.321Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Irlanda (F) vs Kazajistán (F)",
-    "league": "UEFA Women WC Qualifiers - Playoffs",
-    "tier": "AVISO",
-    "probability": 0.6121850388908575,
-    "minute": 67,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 70,
-      "reason": "Partido no resuelto, xG estimado no fiable, Irlanda con 9 tiros a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      40,
-      48,
-      70,
-      73
-    ],
-    "timestamp": "2026-10-13T20:26:10.566Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Banks O' Dee vs Motherwell FC B",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.5715452263693976,
-    "minute": 78,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      41,
-      82
-    ],
-    "timestamp": "2026-10-13T20:36:12.509Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Bristol City vs Blackburn Rovers",
-    "league": "Championship",
-    "tier": "AVISO",
-    "probability": 0.864944520110763,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido igualado, sin goles, con un equipo generando oportunidades claras.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      38
-    ],
-    "timestamp": "2026-10-13T20:36:12.675Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Cove Rangers vs Formartine Utd",
     "league": "Challenge Cup",
     "tier": "AVISO",
@@ -22608,5 +22443,161 @@
     ],
     "timestamp": "2026-11-21T22:35:48.675Z",
     "alertTimestamp": "2026-11-21T20:36:02.667Z"
+  },
+  {
+    "match": "Genesis Policía Nacional FC vs Atl. Independiente",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.5229772269440357,
+    "minute": 78,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      49,
+      69,
+      89
+    ],
+    "timestamp": "2026-11-21T22:55:44.875Z",
+    "alertTimestamp": "2026-11-21T21:05:49.816Z"
+  },
+  {
+    "match": "Provincial Ovalle vs Lota Schwager",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.8784641292046845,
+    "minute": 24,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T23:05:45.652Z",
+    "alertTimestamp": "2026-11-21T21:05:49.816Z"
+  },
+  {
+    "match": "Pioneros de Cancún vs Lobos Ulmx",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.5002563290896952,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores. El xG no es real.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T23:05:45.913Z",
+    "alertTimestamp": "2026-11-21T21:05:49.816Z"
+  },
+  {
+    "match": "O'Higgins vs Universidad de Chile",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.870447079382127,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado, sin goles, y con un xG estimado que no es confiable para rechazar.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      76
+    ],
+    "timestamp": "2026-11-21T23:05:46.496Z",
+    "alertTimestamp": "2026-11-21T21:05:49.816Z"
+  },
+  {
+    "match": "FC Dallas vs Portland Timbers",
+    "league": "MLS - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8835982198010102,
+    "minute": 26,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      55,
+      94
+    ],
+    "timestamp": "2026-11-21T23:05:46.706Z",
+    "alertTimestamp": "2026-11-21T21:15:47.458Z"
+  },
+  {
+    "match": "ABB vs Deportivo Aurora",
+    "league": "División Profesional",
+    "tier": "AVISO",
+    "probability": 0.8827080169029616,
+    "minute": 22,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, Deportivo Aurora con ventaja mínima y una gran ocasión.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      6,
+      39,
+      70
+    ],
+    "timestamp": "2026-11-21T23:15:43.888Z",
+    "alertTimestamp": "2026-11-21T21:15:47.458Z"
+  },
+  {
+    "match": "Universidad Católica vs Barcelona SC",
+    "league": "Liga Pro - Primer Hexagonal",
+    "tier": "AVISO",
+    "probability": 0.5152436595121457,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no confiable. No hay razón concreta para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      55
+    ],
+    "timestamp": "2026-11-21T23:35:45.589Z",
+    "alertTimestamp": "2026-11-21T21:35:51.567Z"
   }
 ]
