@@ -1,131 +1,5 @@
 [
   {
-    "match": "Real Frontera vs Puerto Cabello B",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8911498828455142,
-    "minute": 24,
-    "scoreAtAlert": "2-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, sin datos de xG reales para desestimar la alerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      83,
-      88
-    ],
-    "timestamp": "2026-10-11T21:24:48.423Z",
-    "alertTimestamp": "2026-10-11T19:36:03.882Z"
-  },
-  {
-    "match": "Arouca vs Estrela da Amadora",
-    "league": "Primeira Liga",
-    "tier": "AVISO",
-    "probability": 0.5324024871882106,
-    "minute": 77,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      5
-    ],
-    "timestamp": "2026-10-11T21:34:41.447Z",
-    "alertTimestamp": "2026-10-11T19:36:03.882Z"
-  },
-  {
-    "match": "Humaitá vs Club Oriental",
-    "league": "APF Primera C",
-    "tier": "AVISO",
-    "probability": 0.884464047771024,
-    "minute": 23,
-    "scoreAtAlert": "0-5",
-    "finalScore": "8-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T21:54:34.587Z",
-    "alertTimestamp": "2026-10-11T19:06:03.778Z"
-  },
-  {
-    "match": "Platense vs Argentinos Juniors",
-    "league": "Liga Profesional Argentina - Clausura",
-    "tier": "AVISO",
-    "probability": 0.5267855516227489,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      11,
-      70
-    ],
-    "timestamp": "2026-10-11T21:54:34.724Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
-    "match": "Aragua FC vs Mineros De Guayana",
-    "league": "Liga FUTVE 2",
-    "tier": "AVISO",
-    "probability": 0.8966867372589811,
-    "minute": 22,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      12,
-      40,
-      83
-    ],
-    "timestamp": "2026-10-11T22:04:07.849Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
-    "match": "Central Norte vs Ferro Carril Oeste",
-    "league": "Primera Nacional",
-    "tier": "AVISO",
-    "probability": 0.8915327504670859,
-    "minute": 23,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y muchos minutos por jugar. No hay datos que sugieran juego estéril.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      9,
-      23
-    ],
-    "timestamp": "2026-10-11T22:04:07.943Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
     "match": "Cavalier FC vs Montego Bay Utd",
     "league": "Premier League",
     "tier": "AVISO",
@@ -22541,5 +22415,146 @@
     "goalMinutes": [],
     "timestamp": "2026-11-20T23:39:42.738Z",
     "alertTimestamp": "2026-11-20T21:49:45.250Z"
+  },
+  {
+    "match": "Vélez Sarsfield vs Belgrano",
+    "league": "Liga Profesional Argentina - Octavos de final",
+    "tier": "AVISO",
+    "probability": 0.8419311095925821,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "2-2",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido en fase inicial, marcador ajustado y xG estimado no es real. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      11,
+      59,
+      100,
+      110,
+      121,
+      122,
+      123,
+      124
+    ],
+    "timestamp": "2026-11-21T18:55:55.005Z",
+    "alertTimestamp": "2026-11-20T22:59:42.146Z"
+  },
+  {
+    "match": "Club Tijuana Sub21 vs Atlante Sub21",
+    "league": "Liga MX Sub21 - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8875115115602915,
+    "minute": 21,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T18:55:55.707Z",
+    "alertTimestamp": "2026-11-20T23:49:42.000Z"
+  },
+  {
+    "match": "Chapulineros de Oaxaca vs H2O Purépechas",
+    "league": "Primera Premier - Grupo B",
+    "tier": "AVISO",
+    "probability": 0.8432349338896371,
+    "minute": 22,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado, sin datos que justifiquen rechazo.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T18:55:55.818Z",
+    "alertTimestamp": "2026-11-20T23:59:42.634Z"
+  },
+  {
+    "match": "Auckland City vs Napier City Rovers",
+    "league": "National League",
+    "tier": "AVISO",
+    "probability": 0.8455222006429699,
+    "minute": 22,
+    "scoreAtAlert": "3-0",
+    "finalScore": "7-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, aunque el marcador es 2-0, el xG es estimado y no hay datos de grandes ocasiones.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      7,
+      9,
+      22,
+      41,
+      49,
+      55,
+      74,
+      93
+    ],
+    "timestamp": "2026-11-21T18:55:55.936Z",
+    "alertTimestamp": "2026-11-20T23:59:42.634Z"
+  },
+  {
+    "match": "Santiago vs Dragones de Oaxaca",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8915848246902448,
+    "minute": 20,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en etapa temprana, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T18:55:56.045Z",
+    "alertTimestamp": "2026-11-21T00:09:44.568Z"
+  },
+  {
+    "match": "Montrose vs Alloa Athletic",
+    "league": "League One Escocia",
+    "tier": "AVISO",
+    "probability": 0.5273805857150404,
+    "minute": 76,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, minutos finales, y un xG estimado alto para el local.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      22,
+      55
+    ],
+    "timestamp": "2026-11-21T19:25:49.212Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
   }
 ]
