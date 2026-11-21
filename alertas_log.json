@@ -1,78 +1,5 @@
 [
   {
-    "match": "Cavalier FC vs Montego Bay Utd",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8740939682085578,
-    "minute": 22,
-    "scoreAtAlert": "1-3",
-    "finalScore": "1-3",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en desarrollo, marcador ajustado, sin datos que sugieran juego estéril.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T22:04:08.768Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
-    "match": "Envigado FC vs Internacional FC",
-    "league": "Torneo BetPlay Dimayor - Finalización",
-    "tier": "AVISO",
-    "probability": 0.5232543886459261,
-    "minute": 77,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": null,
-    "goalMinutes": [
-      32,
-      95
-    ],
-    "timestamp": "2026-10-11T22:04:08.858Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
-    "match": "Wydad AC vs CODM Meknes",
-    "league": "Botola Pro",
-    "tier": "AVISO",
-    "probability": 0.5132903398824906,
-    "minute": 77,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": null,
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T22:04:09.049Z",
-    "alertTimestamp": "2026-10-11T20:05:13.167Z"
-  },
-  {
-    "match": "Santos FC vs Binacional",
-    "league": "Liga 2 - Descenso - Grupo B",
-    "tier": "AVISO",
-    "probability": 0.8900824774940265,
-    "minute": 24,
-    "scoreAtAlert": "4-0",
-    "finalScore": "4-0",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de descenso, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-11T22:15:23.042Z",
-    "alertTimestamp": "2026-10-11T20:16:07.657Z"
-  },
-  {
     "match": "Comerciantes vs ADA Jaén",
     "league": "Liga 2 - Ascenso - Grupo B",
     "tier": "AVISO",
@@ -22555,6 +22482,86 @@
       55
     ],
     "timestamp": "2026-11-21T19:25:49.212Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Yamoussoukro FC vs Agboville",
+    "league": "Ligue 1",
+    "tier": "AVISO",
+    "probability": 0.5752503675996979,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T19:55:46.734Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Dodoma Jiji vs Fountain Gate",
+    "league": "Ligi Kuu Bara",
+    "tier": "AVISO",
+    "probability": 0.5288760978589928,
+    "minute": 79,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T19:55:46.868Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "College 1975 FC vs Europa FC",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.8835982198010102,
+    "minute": 26,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-2",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T20:25:49.281Z",
+    "alertTimestamp": "2026-11-21T18:55:53.388Z"
+  },
+  {
+    "match": "Derby Académie vs Afrique Football Elite",
+    "league": "Premiere Division",
+    "tier": "AVISO",
+    "probability": 0.8708735698940363,
+    "minute": 22,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, muchos minutos por jugar, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-21T20:36:03.896Z",
     "alertTimestamp": "2026-11-21T18:55:53.388Z"
   }
 ]
