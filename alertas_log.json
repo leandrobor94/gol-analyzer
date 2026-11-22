@@ -1,56 +1,5 @@
 [
   {
-    "match": "Galatasaray vs FC Barcelona",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8947602549214915,
-    "minute": 25,
-    "scoreAtAlert": "1-4",
-    "finalScore": "1-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0, con una gran ocasión y xG estimado para el Barcelona.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      28,
-      43,
-      50,
-      53,
-      65
-    ],
-    "timestamp": "2026-10-13T20:56:01.716Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Villarreal CF vs Nápoles",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8957209292682623,
-    "minute": 26,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido igualado, muchas ocasiones de gol y xG alto a pesar de ser estimado.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      8,
-      23,
-      26,
-      86
-    ],
-    "timestamp": "2026-10-13T20:56:01.918Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Arsenal vs Lille",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22576,5 +22525,49 @@
     "goalMinutes": [],
     "timestamp": "2026-11-22T22:06:08.863Z",
     "alertTimestamp": "2026-11-22T20:05:54.800Z"
+  },
+  {
+    "match": "CD Platense vs Atlético Choloma",
+    "league": "Liga Nacional - Apertura - Grupo Norte",
+    "tier": "AVISO",
+    "probability": 0.5139561272982713,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-22T23:05:52.251Z",
+    "alertTimestamp": "2026-11-22T21:05:52.840Z"
+  },
+  {
+    "match": "Colo Colo vs Universidad Católica",
+    "league": "Liga de Primera",
+    "tier": "AVISO",
+    "probability": 0.8472499970744121,
+    "minute": 21,
+    "scoreAtAlert": "2-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      14,
+      50,
+      89
+    ],
+    "timestamp": "2026-11-22T23:05:52.346Z",
+    "alertTimestamp": "2026-11-22T21:05:52.840Z"
   }
 ]
