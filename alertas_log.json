@@ -1,56 +1,5 @@
 [
   {
-    "match": "Cove Rangers vs Formartine Utd",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.5611147553160549,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido ajustado, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      9,
-      28,
-      50
-    ],
-    "timestamp": "2026-10-13T20:36:12.992Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Stranraer vs Kilmarnock Reserves",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.9097352685494543,
-    "minute": 20,
-    "scoreAtAlert": "3-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido en fase inicial, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      4,
-      23,
-      28,
-      42,
-      80,
-      85
-    ],
-    "timestamp": "2026-10-13T20:46:02.614Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Fraserburgh vs Dundee United B",
     "league": "Challenge Cup",
     "tier": "AVISO",
@@ -22599,5 +22548,50 @@
     ],
     "timestamp": "2026-11-21T23:35:45.589Z",
     "alertTimestamp": "2026-11-21T21:35:51.567Z"
+  },
+  {
+    "match": "Guerreros de Autlán vs Club Calor",
+    "league": "Premier A - Grupo A",
+    "tier": "AVISO",
+    "probability": 0.8835982198010102,
+    "minute": 26,
+    "scoreAtAlert": "0-0",
+    "finalScore": "8-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-22T19:15:53.137Z",
+    "alertTimestamp": "2026-11-21T22:06:04.919Z"
+  },
+  {
+    "match": "Barquisimeto SC vs Ureña SC",
+    "league": "Liga FUTVE 2 - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.5019787742396757,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales con marcador ajustado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      1,
+      77,
+      89,
+      95
+    ],
+    "timestamp": "2026-11-22T19:15:53.249Z",
+    "alertTimestamp": "2026-11-21T22:06:04.919Z"
   }
 ]
