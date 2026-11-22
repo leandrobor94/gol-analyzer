@@ -1,51 +1,5 @@
 [
   {
-    "match": "Fraserburgh vs Dundee United B",
-    "league": "Challenge Cup",
-    "tier": "AVISO",
-    "probability": 0.6056376714964349,
-    "minute": 76,
-    "scoreAtAlert": "2-3",
-    "finalScore": "2-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchos goles en la liga, y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      30,
-      62,
-      68,
-      90
-    ],
-    "timestamp": "2026-10-13T20:46:02.752Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Three Bridges vs Lewes",
-    "league": "7ª División",
-    "tier": "AVISO",
-    "probability": 0.6118391034921508,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado en los minutos finales, alta probabilidad de gol según el modelo.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-13T20:46:03.065Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Cumbernauld Colts vs East Fife",
     "league": "Challenge Cup",
     "tier": "AVISO",
@@ -22593,5 +22547,45 @@
     ],
     "timestamp": "2026-11-22T19:15:53.249Z",
     "alertTimestamp": "2026-11-21T22:06:04.919Z"
+  },
+  {
+    "match": "FC Arges Pitesti vs FCSB",
+    "league": "Liga1",
+    "tier": "AVISO",
+    "probability": 0.5047205907720972,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, muchas llegadas del visitante y chances claras.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-22T20:25:53.363Z",
+    "alertTimestamp": "2026-11-22T19:15:52.486Z"
+  },
+  {
+    "match": "Hound Dogs vs Lynx FC",
+    "league": "Premier Division",
+    "tier": "AVISO",
+    "probability": 0.5281567788001515,
+    "minute": 79,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, ambos equipos tienen chances de gol. No hay razón para no alertar.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-22T20:35:53.399Z",
+    "alertTimestamp": "2026-11-22T19:15:52.486Z"
   }
 ]
