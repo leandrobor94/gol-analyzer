@@ -1,51 +1,5 @@
 [
   {
-    "match": "Arsenal vs Lille",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.6013666481424889,
-    "minute": 69,
-    "scoreAtAlert": "3-0",
-    "finalScore": "3-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 75,
-      "reason": "Partido no resuelto, xG estimado no fiable, y volumen de juego del Arsenal es alto.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      64,
-      67,
-      71
-    ],
-    "timestamp": "2026-10-13T20:56:02.118Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "RB Leipzig vs PSV Eindhoven",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8941339909776024,
-    "minute": 25,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, ambos equipos con oportunidades y remates a puerta.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      75
-    ],
-    "timestamp": "2026-10-13T20:56:02.276Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Atlético de Madrid vs Manchester United",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22569,5 +22523,49 @@
     ],
     "timestamp": "2026-11-22T23:05:52.346Z",
     "alertTimestamp": "2026-11-22T21:05:52.840Z"
+  },
+  {
+    "match": "Nashville SC vs FC Cincinnati",
+    "league": "MLS - Primera Ronda",
+    "tier": "AVISO",
+    "probability": 0.8846978214825787,
+    "minute": 26,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      7
+    ],
+    "timestamp": "2026-11-22T23:25:52.263Z",
+    "alertTimestamp": "2026-11-22T21:25:53.653Z"
+  },
+  {
+    "match": "Liga de Quito vs SD Aucas",
+    "league": "Liga Pro - Primer Hexagonal",
+    "tier": "AVISO",
+    "probability": 0.4972310689055267,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      84
+    ],
+    "timestamp": "2026-11-22T23:25:52.306Z",
+    "alertTimestamp": "2026-11-22T21:35:53.568Z"
   }
 ]
