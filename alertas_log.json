@@ -1,34 +1,5 @@
 [
   {
-    "match": "Haiti (F) vs Australia (F)",
-    "league": "Amistosos Femeninos",
-    "tier": "AVISO",
-    "probability": 0.6951582938745583,
-    "minute": 60,
-    "scoreAtAlert": "1-6",
-    "finalScore": "1-7",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, xG estimado no confiable, y modelo indica alta probabilidad.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      2,
-      3,
-      44,
-      53,
-      65,
-      72,
-      79,
-      89
-    ],
-    "timestamp": "2026-10-13T20:56:03.161Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Inter Milan vs Brujas",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22569,5 +22540,25 @@
     ],
     "timestamp": "2026-11-23T23:38:42.043Z",
     "alertTimestamp": "2026-11-22T23:15:51.362Z"
+  },
+  {
+    "match": "Pitbulls Santa Bárbara FC vs Jicaral Sercoba",
+    "league": "Liga de Ascenso - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.6073190656556848,
+    "minute": 60,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de semifinales empatado sin goles, con un equipo generando peligro.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-24T01:58:41.670Z",
+    "alertTimestamp": "2026-11-24T00:08:41.835Z"
   }
 ]
