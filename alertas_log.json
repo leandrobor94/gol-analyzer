@@ -1,55 +1,5 @@
 [
   {
-    "match": "Atlético de Madrid vs Manchester United",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.8962990296915047,
-    "minute": 24,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      1,
-      79
-    ],
-    "timestamp": "2026-10-13T20:56:02.856Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
-    "match": "Viking vs Bayern Munich",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.5580926664456586,
-    "minute": 78,
-    "scoreAtAlert": "2-3",
-    "finalScore": "3-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con muchos goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      2,
-      38,
-      54,
-      60,
-      71,
-      90
-    ],
-    "timestamp": "2026-10-13T20:56:03.014Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Haiti (F) vs Australia (F)",
     "league": "Amistosos Femeninos",
     "tier": "AVISO",
@@ -22567,5 +22517,57 @@
     ],
     "timestamp": "2026-11-22T23:25:52.306Z",
     "alertTimestamp": "2026-11-22T21:35:53.568Z"
+  },
+  {
+    "match": "Tauro FC vs CD Plaza Amador",
+    "league": "Liga Panameña - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8552070960586707,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinales, marcador 0-0, sin goles esperados reales. No hay razón para rechazar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35,
+      37,
+      54,
+      65
+    ],
+    "timestamp": "2026-11-23T23:38:41.995Z",
+    "alertTimestamp": "2026-11-22T23:15:51.362Z"
+  },
+  {
+    "match": "CD Walter Ferretti vs CS Sébaco",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8892627641638559,
+    "minute": 24,
+    "scoreAtAlert": "2-2",
+    "finalScore": "3-3",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos que justifiquen rechazo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      2,
+      34,
+      40,
+      45,
+      54,
+      72
+    ],
+    "timestamp": "2026-11-23T23:38:42.043Z",
+    "alertTimestamp": "2026-11-22T23:15:51.362Z"
   }
 ]
