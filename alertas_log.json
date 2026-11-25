@@ -1,33 +1,5 @@
 [
   {
-    "match": "Inter Milan vs Brujas",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.5718316114356804,
-    "minute": 77,
-    "scoreAtAlert": "2-4",
-    "finalScore": "3-4",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido abierto con goles, xG alto (aunque estimado) y muchas ocasiones. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      30,
-      44,
-      63,
-      74,
-      81,
-      87,
-      93
-    ],
-    "timestamp": "2026-10-13T21:06:01.932Z",
-    "alertTimestamp": "2026-10-13T19:06:30.528Z"
-  },
-  {
     "match": "Orión FC vs Independiente San Vicente",
     "league": "Liga de Ascenso - Centro Oriente",
     "tier": "AVISO",
@@ -22560,5 +22532,32 @@
     "goalMinutes": [],
     "timestamp": "2026-11-24T01:58:41.670Z",
     "alertTimestamp": "2026-11-24T00:08:41.835Z"
+  },
+  {
+    "match": "Universidad Central FC vs Anzoategui Futbol Club",
+    "league": "Copa Venezuela - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.8422718029988427,
+    "minute": 20,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido igualado en semifinales, sin goles y con alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      121,
+      122,
+      123,
+      123,
+      124,
+      125
+    ],
+    "timestamp": "2026-11-25T01:39:54.209Z",
+    "alertTimestamp": "2026-11-24T23:39:54.465Z"
   }
 ]
