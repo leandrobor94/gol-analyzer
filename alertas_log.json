@@ -1,25 +1,5 @@
 [
   {
-    "match": "CD Once Municipal vs Nacional FC",
-    "league": "Liga de Ascenso - Centro Occidente",
-    "tier": "AVISO",
-    "probability": 0.538712649531465,
-    "minute": 79,
-    "scoreAtAlert": "0-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido 0-0 en el minuto 79 con alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-13T23:06:01.806Z",
-    "alertTimestamp": "2026-10-13T21:26:04.164Z"
-  },
-  {
     "match": "Dynamo Makhachkala vs Zenit",
     "league": "Copa de Rusia - Grupo C",
     "tier": "AVISO",
@@ -22563,6 +22543,26 @@
       74
     ],
     "timestamp": "2026-11-25T21:55:55.795Z",
+    "alertTimestamp": "2026-11-25T21:25:56.729Z"
+  },
+  {
+    "match": "CD Sal y Mar vs CD Once Municipal",
+    "league": "Liga de Ascenso - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8795705822003291,
+    "minute": 22,
+    "scoreAtAlert": "2-2",
+    "finalScore": "2-2",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de cuartos de final, marcador igualado y alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-25T23:05:55.135Z",
     "alertTimestamp": "2026-11-25T21:25:56.729Z"
   }
 ]
