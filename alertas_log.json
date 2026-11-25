@@ -1,69 +1,5 @@
 [
   {
-    "match": "Orión FC vs Independiente San Vicente",
-    "league": "Liga de Ascenso - Centro Oriente",
-    "tier": "AVISO",
-    "probability": 0.8842017349765062,
-    "minute": 25,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-4",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, marcador 0-2 con muchos minutos por jugar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-13T22:56:02.051Z",
-    "alertTimestamp": "2026-10-13T21:26:04.164Z"
-  },
-  {
-    "match": "Venezuela (F) vs Colombia (F)",
-    "league": "Amistosos Femeninos",
-    "tier": "AVISO",
-    "probability": 0.8954692760671159,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": true,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y muchos minutos por jugar. xG no es real.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      19,
-      50,
-      88
-    ],
-    "timestamp": "2026-10-13T23:06:01.544Z",
-    "alertTimestamp": "2026-10-13T21:06:01.203Z"
-  },
-  {
-    "match": "CD Fuerte Aguilares vs CD UES Pumas",
-    "league": "Liga de Ascenso - Centro Occidente",
-    "tier": "AVISO",
-    "probability": 0.8924760339762079,
-    "minute": 25,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-3",
-    "goalAfterAlert": true,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-13T23:06:01.673Z",
-    "alertTimestamp": "2026-10-13T21:06:01.203Z"
-  },
-  {
     "match": "CD Once Municipal vs Nacional FC",
     "league": "Liga de Ascenso - Centro Occidente",
     "tier": "AVISO",
@@ -22559,5 +22495,74 @@
     ],
     "timestamp": "2026-11-25T01:39:54.209Z",
     "alertTimestamp": "2026-11-24T23:39:54.465Z"
+  },
+  {
+    "match": "América de Cali vs Deportivo Cali",
+    "league": "Liga BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8388874002418857,
+    "minute": 21,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido parejo, sin goles, y con xG estimado. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      38,
+      48,
+      51
+    ],
+    "timestamp": "2026-11-25T21:25:57.279Z",
+    "alertTimestamp": "2026-11-25T01:29:53.284Z"
+  },
+  {
+    "match": "Shakhtar Donetsk vs Fenerbahce",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.5203772636267004,
+    "minute": 76,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      56
+    ],
+    "timestamp": "2026-11-25T21:55:55.605Z",
+    "alertTimestamp": "2026-11-25T21:25:56.729Z"
+  },
+  {
+    "match": "Inter Milan vs Stuttgart",
+    "league": "UEFA Champions League",
+    "tier": "AVISO",
+    "probability": 0.49199549432763723,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      57,
+      74
+    ],
+    "timestamp": "2026-11-25T21:55:55.795Z",
+    "alertTimestamp": "2026-11-25T21:25:56.729Z"
   }
 ]
