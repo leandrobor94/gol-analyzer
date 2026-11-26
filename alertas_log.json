@@ -1,145 +1,5 @@
 [
   {
-    "match": "Al Ettifaq vs Kazma SC",
-    "league": "Gulf Club Champions League",
-    "tier": "AVISO",
-    "probability": 0.5318533006740644,
-    "minute": 76,
-    "scoreAtAlert": "2-0",
-    "finalScore": "2-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido con marcador ajustado y tiempo restante, a pesar de xG estimado.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      27
-    ],
-    "timestamp": "2026-10-14T18:03:36.950Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
-    "match": "Paide Linnameeskond vs JK Tammeka Tartu",
-    "league": "Meistriliiga",
-    "tier": "AVISO",
-    "probability": 0.5171581078763322,
-    "minute": 76,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los próximos 15 minutos y muchos tiros a puerta del visitante.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      41,
-      44,
-      93
-    ],
-    "timestamp": "2026-10-14T18:03:37.229Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
-    "match": "Feyenoord vs Como",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.5837928599086165,
-    "minute": 77,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-2",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido abierto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      18,
-      20,
-      52,
-      81,
-      93
-    ],
-    "timestamp": "2026-10-14T18:43:35.378Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
-    "match": "Al Waab vs Umm Salal",
-    "league": "Q League",
-    "tier": "AVISO",
-    "probability": 0.5511981450136492,
-    "minute": 78,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido empatado sin goles, con un jugador menos y xG estimado. Alta probabilidad de gol.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-14T18:53:34.467Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
-    "match": "SC Verl vs SSV Jahn Regensburg",
-    "league": "3. Liga - Regular Season",
-    "tier": "AVISO",
-    "probability": 0.5426974233996252,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      38,
-      43,
-      65,
-      73
-    ],
-    "timestamp": "2026-10-14T18:53:34.943Z",
-    "alertTimestamp": "2026-10-14T17:03:37.927Z"
-  },
-  {
-    "match": "Bryne vs Raufoss",
-    "league": "OBOS-ligaen",
-    "tier": "AVISO",
-    "probability": 0.5263727963551884,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en liga de alto scoring.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      42,
-      64
-    ],
-    "timestamp": "2026-10-14T18:53:35.954Z",
-    "alertTimestamp": "2026-10-14T17:03:37.927Z"
-  },
-  {
     "match": "Eintracht Frankfurt II vs VfR Mannheim",
     "league": "Regionalliga - Sudwest",
     "tier": "AVISO",
@@ -22559,5 +22419,145 @@
     "goalMinutes": [],
     "timestamp": "2026-11-26T01:05:56.088Z",
     "alertTimestamp": "2026-11-25T23:05:54.729Z"
+  },
+  {
+    "match": "Barcelona SC vs Independiente Del Valle",
+    "league": "Liga Pro - Primer Hexagonal",
+    "tier": "AVISO",
+    "probability": 0.497412308262451,
+    "minute": 79,
+    "scoreAtAlert": "0-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      29,
+      77
+    ],
+    "timestamp": "2026-11-26T21:13:06.180Z",
+    "alertTimestamp": "2026-11-26T01:15:54.786Z"
+  },
+  {
+    "match": "Inter Escaldes vs FC Copenhague",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.492366589476528,
+    "minute": 77,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido con 2 expulsiones y xG estimado, pero el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      19,
+      59
+    ],
+    "timestamp": "2026-11-26T21:53:01.907Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "FC Nordsjaelland vs Panathinaikos",
+    "league": "UEFA Conference League",
+    "tier": "AVISO",
+    "probability": 0.4926397939201536,
+    "minute": 76,
+    "scoreAtAlert": "3-2",
+    "finalScore": "3-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, ambos equipos con chances. El xG es estimado, no es un factor decisivo.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      45,
+      55,
+      61,
+      78,
+      80
+    ],
+    "timestamp": "2026-11-26T21:53:02.868Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Torreense vs Celtic",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5136464591383714,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-2",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, minutos finales, y ambos equipos con oportunidades de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      9,
+      19,
+      84
+    ],
+    "timestamp": "2026-11-26T22:03:01.481Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Lyon vs Lillestrom",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.4983558458165112,
+    "minute": 76,
+    "scoreAtAlert": "0-0",
+    "finalScore": "0-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado sin goles, con alta probabilidad de gol en los próximos 15 minutos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-26T22:03:01.926Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Crystal Palace vs Real Sociedad",
+    "league": "UEFA Europa League",
+    "tier": "AVISO",
+    "probability": 0.5029435777867288,
+    "minute": 77,
+    "scoreAtAlert": "2-1",
+    "finalScore": "2-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido empatado, un equipo con 10 jugadores y alto xG estimado. Aún hay urgencia.",
+      "provider": "gemini#1"
+    },
+    "goalMinutes": [
+      66,
+      73,
+      82
+    ],
+    "timestamp": "2026-11-26T22:03:02.335Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
   }
 ]
