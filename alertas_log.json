@@ -1,53 +1,5 @@
 [
   {
-    "match": "Dynamo Makhachkala vs Zenit",
-    "league": "Copa de Rusia - Grupo C",
-    "tier": "AVISO",
-    "probability": 0.6052108985941734,
-    "minute": 76,
-    "scoreAtAlert": "1-2",
-    "finalScore": "1-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol según el modelo.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      5,
-      37,
-      66
-    ],
-    "timestamp": "2026-10-14T17:33:38.522Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
-    "match": "Al Taawoun vs Al Rayyan",
-    "league": "AFC Liga de Campeones 2",
-    "tier": "AVISO",
-    "probability": 0.5151461820532107,
-    "minute": 77,
-    "scoreAtAlert": "2-1",
-    "finalScore": "2-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido ajustado, muchas ocasiones claras para el visitante. No hay razón para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      19,
-      32,
-      38
-    ],
-    "timestamp": "2026-10-14T17:53:36.743Z",
-    "alertTimestamp": "2026-10-14T16:53:34.127Z"
-  },
-  {
     "match": "Al Ettifaq vs Kazma SC",
     "league": "Gulf Club Champions League",
     "tier": "AVISO",
@@ -22564,5 +22516,48 @@
     "goalMinutes": [],
     "timestamp": "2026-11-25T23:05:55.135Z",
     "alertTimestamp": "2026-11-25T21:25:56.729Z"
+  },
+  {
+    "match": "Fortaleza B vs Ceará B",
+    "league": "Fares Lopes - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5011579062580098,
+    "minute": 77,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido con un gol de diferencia, minutos restantes y un expulsado. No hay razón para no alertar.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      42,
+      94
+    ],
+    "timestamp": "2026-11-26T00:26:02.963Z",
+    "alertTimestamp": "2026-11-25T22:05:54.795Z"
+  },
+  {
+    "match": "CD UES Pumas vs CD Olimpico Litoral",
+    "league": "Liga de Ascenso - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8971336689266556,
+    "minute": 22,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-1",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido de cuartos de final, marcador 0-0, alta probabilidad de gol según el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-26T01:05:56.088Z",
+    "alertTimestamp": "2026-11-25T23:05:54.729Z"
   }
 ]
