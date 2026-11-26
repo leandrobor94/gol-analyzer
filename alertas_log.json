@@ -1,50 +1,5 @@
 [
   {
-    "match": "Eintracht Frankfurt II vs VfR Mannheim",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.9042856560112282,
-    "minute": 21,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con alta probabilidad de gol según el modelo, sin datos que contradigan.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      83
-    ],
-    "timestamp": "2026-10-14T19:03:33.788Z",
-    "alertTimestamp": "2026-10-14T17:03:37.927Z"
-  },
-  {
-    "match": "Gzira United vs Mosta FC",
-    "league": "Premier League",
-    "tier": "AVISO",
-    "probability": 0.8566876428420219,
-    "minute": 22,
-    "scoreAtAlert": "0-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido 0-0, xG estimado no confiable, sin grandes ocasiones ni tiros a puerta.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      82,
-      95
-    ],
-    "timestamp": "2026-10-14T19:03:34.066Z",
-    "alertTimestamp": "2026-10-14T17:03:37.927Z"
-  },
-  {
     "match": "Hodd vs Ranheim",
     "league": "OBOS-ligaen",
     "tier": "AVISO",
@@ -22558,6 +22513,46 @@
       82
     ],
     "timestamp": "2026-11-26T22:03:02.335Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Cd Audaz vs AD Izalco",
+    "league": "Liga de Ascenso - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.5777457529374556,
+    "minute": 76,
+    "scoreAtAlert": "1-2",
+    "finalScore": "1-3",
+    "goalAfterAlert": true,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido de cuartos de final con marcador ajustado y alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-26T23:03:01.677Z",
+    "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Atlético Colina vs General Velásquez",
+    "league": "Liga de Segunda - Fase 2",
+    "tier": "AVISO",
+    "probability": 0.8951667391360572,
+    "minute": 20,
+    "scoreAtAlert": "1-3",
+    "finalScore": "1-3",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en desarrollo, marcador ajustado y sin datos de xG reales para desestimar la alerta.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-26T23:03:01.870Z",
     "alertTimestamp": "2026-11-26T21:13:04.081Z"
   }
 ]
