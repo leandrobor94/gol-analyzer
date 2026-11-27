@@ -1,29 +1,5 @@
 [
   {
-    "match": "América-Rn Youth vs Paysandu/Pa Youth",
-    "league": "Copa de Brasil Sub20 - Octavos de final",
-    "tier": "AVISO",
-    "probability": 0.5222238838876939,
-    "minute": 76,
-    "scoreAtAlert": "0-3",
-    "finalScore": "0-3",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido de copa con un equipo con 10 jugadores y marcador 0-2. Aún hay tiempo para un gol.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      37,
-      42,
-      73
-    ],
-    "timestamp": "2026-10-14T20:03:36.359Z",
-    "alertTimestamp": "2026-10-14T18:13:35.108Z"
-  },
-  {
     "match": "Boston River vs CA River Plate",
     "league": "Copa Uruguay - 16avos de final",
     "tier": "AVISO",
@@ -22549,6 +22525,29 @@
       55
     ],
     "timestamp": "2026-11-27T21:45:58.954Z",
+    "alertTimestamp": "2026-11-27T20:56:03.122Z"
+  },
+  {
+    "match": "Southampton vs Middlesbrough",
+    "league": "Championship",
+    "tier": "AVISO",
+    "probability": 0.5231620815819162,
+    "minute": 79,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto, marcador ajustado y xG estimado no concluyente. Hay urgencia.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      59,
+      79
+    ],
+    "timestamp": "2026-11-27T21:55:58.869Z",
     "alertTimestamp": "2026-11-27T20:56:03.122Z"
   }
 ]
