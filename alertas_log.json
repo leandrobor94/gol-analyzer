@@ -1,25 +1,5 @@
 [
   {
-    "match": "Al Shomooa SC vs Al Ittihad",
-    "league": "Premier League - Fase de grupos",
-    "tier": "AVISO",
-    "probability": 0.6116128383739046,
-    "minute": 76,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido no resuelto, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-14T19:13:33.777Z",
-    "alertTimestamp": "2026-10-14T17:23:38.215Z"
-  },
-  {
     "match": "Tigre (Reserva) vs Argentinos Juniors (Reserva)",
     "league": "Liga Profesional - Reserva - Clausura",
     "tier": "AVISO",
@@ -22546,5 +22526,30 @@
     "goalMinutes": [],
     "timestamp": "2026-11-27T00:03:00.127Z",
     "alertTimestamp": "2026-11-26T22:02:59.675Z"
+  },
+  {
+    "match": "São Paulo vs Remo",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.8491079239171756,
+    "minute": 22,
+    "scoreAtAlert": "2-1",
+    "finalScore": "3-1",
+    "goalAfterAlert": true,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido empatado, sin goles, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      39,
+      55,
+      87,
+      95
+    ],
+    "timestamp": "2026-11-27T01:02:59.717Z",
+    "alertTimestamp": "2026-11-26T23:03:00.432Z"
   }
 ]
