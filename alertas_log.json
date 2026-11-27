@@ -1,25 +1,5 @@
 [
   {
-    "match": "Tigre (Reserva) vs Argentinos Juniors (Reserva)",
-    "league": "Liga Profesional - Reserva - Clausura",
-    "tier": "AVISO",
-    "probability": 0.8741432144399847,
-    "minute": 24,
-    "scoreAtAlert": "0-1",
-    "finalScore": "0-1",
-    "goalAfterAlert": false,
-    "goalWithin15": null,
-    "ai": {
-      "pass": true,
-      "confidence": 90,
-      "reason": "Partido de reserva 0-0, xG estimado no confiable. No hay razón concreta para rechazar.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [],
-    "timestamp": "2026-10-14T19:53:33.860Z",
-    "alertTimestamp": "2026-10-14T18:03:35.483Z"
-  },
-  {
     "match": "Flamengo Sub20 vs Criciúma/Sc Youth",
     "league": "Copa de Brasil Sub20 - Octavos de final",
     "tier": "AVISO",
@@ -22550,6 +22530,28 @@
       95
     ],
     "timestamp": "2026-11-27T01:02:59.717Z",
+    "alertTimestamp": "2026-11-26T23:03:00.432Z"
+  },
+  {
+    "match": "Treze-PB vs Nacional De Patos",
+    "league": "Copa Paraíba - Semifinales",
+    "tier": "AVISO",
+    "probability": 0.5022146046769019,
+    "minute": 76,
+    "scoreAtAlert": "1-0",
+    "finalScore": "1-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de semifinal con marcador ajustado y tiempo restante. xG estimado no es fiable.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      29
+    ],
+    "timestamp": "2026-11-27T01:13:00.130Z",
     "alertTimestamp": "2026-11-26T23:03:00.432Z"
   }
 ]
