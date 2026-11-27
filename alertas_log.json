@@ -1,53 +1,5 @@
 [
   {
-    "match": "Hodd vs Ranheim",
-    "league": "OBOS-ligaen",
-    "tier": "AVISO",
-    "probability": 0.5463833144345032,
-    "minute": 76,
-    "scoreAtAlert": "1-1",
-    "finalScore": "1-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, marcador ajustado y xG estimado no es fiable para rechazar.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      51,
-      85
-    ],
-    "timestamp": "2026-10-14T19:03:34.202Z",
-    "alertTimestamp": "2026-10-14T17:03:37.927Z"
-  },
-  {
-    "match": "1. FC Kaiserslautern II vs FSV Frankfurt",
-    "league": "Regionalliga - Sudwest",
-    "tier": "AVISO",
-    "probability": 0.6092231571658457,
-    "minute": 76,
-    "scoreAtAlert": "2-2",
-    "finalScore": "2-2",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, alta probabilidad de gol en los últimos minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      11,
-      17,
-      29,
-      37
-    ],
-    "timestamp": "2026-10-14T19:03:34.890Z",
-    "alertTimestamp": "2026-10-14T17:13:34.681Z"
-  },
-  {
     "match": "Al Shomooa SC vs Al Ittihad",
     "league": "Premier League - Fase de grupos",
     "tier": "AVISO",
@@ -22554,5 +22506,45 @@
     "goalMinutes": [],
     "timestamp": "2026-11-26T23:03:01.870Z",
     "alertTimestamp": "2026-11-26T21:13:04.081Z"
+  },
+  {
+    "match": "Jalapa Art vs San Marcos FC",
+    "league": "Liga Primera - Apertura",
+    "tier": "AVISO",
+    "probability": 0.8939147745101184,
+    "minute": 23,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido 0-0, con alta probabilidad de gol según el modelo, sin datos que contradigan.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-26T23:53:00.634Z",
+    "alertTimestamp": "2026-11-26T22:02:59.675Z"
+  },
+  {
+    "match": "Tirol vs Guarani de Juazeiro",
+    "league": "Fares Lopes - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8724950614378257,
+    "minute": 21,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": null,
+    "ai": {
+      "pass": true,
+      "confidence": 70,
+      "reason": "Partido en cuartos de final, el 2-0 no es definitivo y el modelo da alta probabilidad.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [],
+    "timestamp": "2026-11-27T00:03:00.127Z",
+    "alertTimestamp": "2026-11-26T22:02:59.675Z"
   }
 ]
