@@ -1,33 +1,5 @@
 [
   {
-    "match": "Boston River vs CA River Plate",
-    "league": "Copa Uruguay - 16avos de final",
-    "tier": "AVISO",
-    "probability": 0.5126401441059347,
-    "minute": 76,
-    "scoreAtAlert": "0-0",
-    "finalScore": "0-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado sin goles, alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      121,
-      121,
-      123,
-      123,
-      124,
-      125,
-      125
-    ],
-    "timestamp": "2026-10-14T20:43:32.404Z",
-    "alertTimestamp": "2026-10-14T18:43:34.606Z"
-  },
-  {
     "match": "Aston Villa vs Fenerbahce",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22549,5 +22521,29 @@
     ],
     "timestamp": "2026-11-27T21:55:58.869Z",
     "alertTimestamp": "2026-11-27T20:56:03.122Z"
+  },
+  {
+    "match": "Deportivo Cuenca vs Manta",
+    "league": "Liga Pro - Hexagonal del Descenso",
+    "tier": "AVISO",
+    "probability": 0.8760426492638194,
+    "minute": 26,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": true,
+    "ai": {
+      "pass": true,
+      "confidence": 90,
+      "reason": "Partido no resuelto, xG estimado no confiable, y un equipo domina sin goles.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      25,
+      79,
+      90
+    ],
+    "timestamp": "2026-11-27T23:25:59.423Z",
+    "alertTimestamp": "2026-11-27T21:36:00.706Z"
   }
 ]

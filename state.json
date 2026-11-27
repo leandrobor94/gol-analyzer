@@ -16,8 +16,8 @@
       "tier": "AVISO"
     },
     "4856504_AVISO": {
-      "timestamp": 1795816558206,
-      "minute": 26,
+      "timestamp": 1795820157924,
+      "minute": 67,
       "tier": "AVISO"
     },
     "4894701_AVISO": {
@@ -29,13 +29,18 @@
       "timestamp": 1795818358304,
       "minute": 25,
       "tier": "AVISO"
+    },
+    "4894297_AVISO": {
+      "timestamp": 1795821958819,
+      "minute": 23,
+      "tier": "AVISO"
     }
   },
   "counters": {
-    "total": 12473,
-    "verified": 12462,
-    "withGoalTimeline": 9133,
+    "total": 12481,
+    "verified": 12463,
+    "withGoalTimeline": 9134,
     "modelVersion": 5
   },
-  "lastUpdated": "2026-11-27T22:45:58.273Z"
+  "lastUpdated": "2026-11-27T23:45:59.195Z"
 }
