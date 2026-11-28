@@ -1,56 +1,5 @@
 [
   {
-    "match": "Aston Villa vs Fenerbahce",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9018641557299526,
-    "minute": 23,
-    "scoreAtAlert": "5-0",
-    "finalScore": "6-0",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 80,
-      "reason": "Partido abierto, xG estimado no fiable, y 2 grandes ocasiones para el visitante.",
-      "provider": "gemini#3"
-    },
-    "goalMinutes": [
-      12,
-      31,
-      39,
-      68,
-      72,
-      90
-    ],
-    "timestamp": "2026-10-14T20:53:31.817Z",
-    "alertTimestamp": "2026-10-14T19:03:33.139Z"
-  },
-  {
-    "match": "Slovan Bratislava vs Stuttgart",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9061855197835591,
-    "minute": 24,
-    "scoreAtAlert": "0-2",
-    "finalScore": "0-3",
-    "goalAfterAlert": true,
-    "goalWithin15": true,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas chances de gol y xG estimado alto para el visitante.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      29,
-      65,
-      90
-    ],
-    "timestamp": "2026-10-14T20:53:32.013Z",
-    "alertTimestamp": "2026-10-14T19:03:33.139Z"
-  },
-  {
     "match": "Bodo Glimt vs Borussia Dortmund",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22545,5 +22494,51 @@
     ],
     "timestamp": "2026-11-27T23:25:59.423Z",
     "alertTimestamp": "2026-11-27T21:36:00.706Z"
+  },
+  {
+    "match": "Jamaica (F) vs Costa Rica (F)",
+    "league": "Campeonato CONCACAF W - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8711460969014919,
+    "minute": 25,
+    "scoreAtAlert": "3-0",
+    "finalScore": "3-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminación directa, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#3"
+    },
+    "goalMinutes": [
+      16,
+      59,
+      65
+    ],
+    "timestamp": "2026-11-28T00:05:58.430Z",
+    "alertTimestamp": "2026-11-27T22:05:57.538Z"
+  },
+  {
+    "match": "Atlanta vs Ciudad De Bolivar",
+    "league": "Primera Nacional - Reducido - Cuartos de Final",
+    "tier": "AVISO",
+    "probability": 0.8971336689266556,
+    "minute": 22,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de eliminacion directa, sin goles y con alta probabilidad de gol segun el modelo.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      35
+    ],
+    "timestamp": "2026-11-28T00:05:58.528Z",
+    "alertTimestamp": "2026-11-27T22:05:57.538Z"
   }
 ]
