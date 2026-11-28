@@ -1,79 +1,5 @@
 [
   {
-    "match": "Bodo Glimt vs Borussia Dortmund",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.6489951355708211,
-    "minute": 67,
-    "scoreAtAlert": "1-0",
-    "finalScore": "1-0",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con marcador ajustado, muchas chances de gol para el local. El xG es estimado, pero las grandes chances no.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      52
-    ],
-    "timestamp": "2026-10-14T20:53:32.170Z",
-    "alertTimestamp": "2026-10-14T19:03:33.139Z"
-  },
-  {
-    "match": "Manchester City vs PSG",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.9015964867785263,
-    "minute": 21,
-    "scoreAtAlert": "2-4",
-    "finalScore": "2-4",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido con goles, marcador ajustado y alta probabilidad de gol en los próximos 15 minutos.",
-      "provider": "gemini#1"
-    },
-    "goalMinutes": [
-      13,
-      15,
-      32,
-      53,
-      62,
-      75
-    ],
-    "timestamp": "2026-10-14T21:03:58.825Z",
-    "alertTimestamp": "2026-10-14T19:03:33.139Z"
-  },
-  {
-    "match": "Shakhtar Donetsk vs AEK Atenas",
-    "league": "UEFA Champions League",
-    "tier": "AVISO",
-    "probability": 0.6164715403993116,
-    "minute": 76,
-    "scoreAtAlert": "3-1",
-    "finalScore": "3-1",
-    "goalAfterAlert": false,
-    "goalWithin15": false,
-    "ai": {
-      "pass": true,
-      "confidence": 85,
-      "reason": "Partido empatado, muchas ocasiones de gol y xG estimado alto para ambos equipos.",
-      "provider": "gemini#2"
-    },
-    "goalMinutes": [
-      28,
-      34,
-      80,
-      86
-    ],
-    "timestamp": "2026-10-14T21:03:58.972Z",
-    "alertTimestamp": "2026-10-14T19:03:33.139Z"
-  },
-  {
     "match": "Real Betis vs FC Porto",
     "league": "UEFA Champions League",
     "tier": "AVISO",
@@ -22540,5 +22466,73 @@
     ],
     "timestamp": "2026-11-28T00:05:58.528Z",
     "alertTimestamp": "2026-11-27T22:05:57.538Z"
+  },
+  {
+    "match": "Vila Nova vs Atlético Goianiense",
+    "league": "Brasileirão - Série B - Playoffs ascenso",
+    "tier": "AVISO",
+    "probability": 0.8475735490297736,
+    "minute": 23,
+    "scoreAtAlert": "2-0",
+    "finalScore": "2-0",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido de playoffs, marcador 0-0, y el modelo predice alta probabilidad de gol.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      53,
+      77
+    ],
+    "timestamp": "2026-11-28T01:05:59.235Z",
+    "alertTimestamp": "2026-11-27T23:05:59.117Z"
+  },
+  {
+    "match": "Fluminense vs Cruzeiro",
+    "league": "Brasileirão",
+    "tier": "AVISO",
+    "probability": 0.49212470750999965,
+    "minute": 77,
+    "scoreAtAlert": "0-1",
+    "finalScore": "0-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 85,
+      "reason": "Partido abierto con un gol de diferencia y un equipo con 10 jugadores, lo que aumenta la probabilidad de eventos.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      3
+    ],
+    "timestamp": "2026-11-28T01:05:59.501Z",
+    "alertTimestamp": "2026-11-27T23:05:59.117Z"
+  },
+  {
+    "match": "Deportivo Cali vs Atlético Bucaramanga",
+    "league": "Liga BetPlay Dimayor - Cuadrangulares",
+    "tier": "AVISO",
+    "probability": 0.8351230978047781,
+    "minute": 21,
+    "scoreAtAlert": "1-1",
+    "finalScore": "1-1",
+    "goalAfterAlert": false,
+    "goalWithin15": false,
+    "ai": {
+      "pass": true,
+      "confidence": 80,
+      "reason": "Partido en fase inicial, marcador ajustado y sin evidencia de juego estéril.",
+      "provider": "gemini#2"
+    },
+    "goalMinutes": [
+      14,
+      51
+    ],
+    "timestamp": "2026-11-28T01:35:58.986Z",
+    "alertTimestamp": "2026-11-27T23:35:59.094Z"
   }
 ]
